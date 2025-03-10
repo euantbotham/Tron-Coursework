@@ -8,7 +8,7 @@ public:
     {
 
     }
-    virtual void virtDrawTileAt(
+    void virtDrawTileAt(
         BaseEngine* pEngine,
         DrawingSurface* pSurface,
         int iMapX, int iMapY,

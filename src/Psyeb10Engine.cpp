@@ -5,11 +5,17 @@
 
 void Psyeb10Engine::virtSetupBackgroundBuffer()
 {
+	//TODO add lines to make a grid
 	this->drawBackgroundRectangle(350, 100, 950, 700, 0x2C3E50);
 
 	//background text
 	this->drawBackgroundString(100, 100, "hello world", 0x0000FF, 0);
 
+	for (int i = 0; i < 30; i++)
+		for (int j = 0; j < 30; j++)
+			tm.setMapValue(i, j, 1);
+	tm.setTopLeftPositionOnScreen(350, 100);
+	tm.drawAllTiles(this, getBackgroundSurface());
 }
 
 
