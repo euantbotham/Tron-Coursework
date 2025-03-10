@@ -13,7 +13,7 @@ void Psyeb10Engine::virtSetupBackgroundBuffer()
 
 	for (int i = 0; i < 30; i++)
 		for (int j = 0; j < 30; j++)
-			tm.setMapValue(i, j, 1);
+			tm.setMapValue(i, j, 0);
 	tm.setTopLeftPositionOnScreen(350, 100);
 	tm.drawAllTiles(this, getBackgroundSurface());
 }

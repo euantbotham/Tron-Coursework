@@ -1,6 +1,6 @@
  CourseworkBase2020
 
- Timestamp is 67cf1aff (Mon Mar 10 17:01:51 2025)
+ Timestamp is 67cf7622 (Mon Mar 10 23:30:42 2025)
 
  Preferred load address is 00400000
 
@@ -72,12 +72,14 @@
  0000:00000000       ___volatile_metadata       00000000     <absolute>
  0000:00000000       ___x64_code_ranges_to_entry_points 00000000     <absolute>
  0000:00000000       ___x64_code_ranges_to_entry_points_count 00000000     <absolute>
- 0000:00000048       ___safe_se_handler_count   00000048     <absolute>
+ 0000:00000047       ___safe_se_handler_count   00000047     <absolute>
  0000:00000100       ___guard_flags             00000100     <absolute>
  0000:00000000       ___ImageBase               00400000     <linker-defined>
  0001:00002850       ?virtSetupBackgroundBuffer@DraggingDemo@@UAEXXZ 00403850 f   DraggingDemo.obj
  0001:00002990       ?virtInitialiseObjects@DraggingDemo@@UAEHXZ 00403990 f   DraggingDemo.obj
  0001:00002bf0       ?virtKeyDown@DraggingDemo@@UAEXH@Z 00403bf0 f   DraggingDemo.obj
+ 0001:00002c18       ___RTDynamicCast           00403c18 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:00002c20       ?virtDrawTileAt@Psyeb10TileManager@@UBEXPAVBaseEngine@@PAVDrawingSurface@@HHHH@Z 00403c20 f   Psyeb10TileManager.obj
  0001:00002d10       ??$?0$$V@?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@@Z 00403d10 f i DraggingDemo.obj
  0001:00002d40       ??$?0$$V@?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@@Z 00403d40 f i DraggingDemo.obj
  0001:00002d70       ??$?0$$V@?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@@Z 00403d70 f i DraggingDemo.obj
@@ -593,6 +595,10 @@
  0001:0000fbb0       ?getRealRedrawMinY@DrawingSurface@@QAEHXZ 00410bb0 f   DrawingSurface.obj
  0001:0000fc00       ?getRealRedrawMaxX@DrawingSurface@@QAEHXZ 00410c00 f   DrawingSurface.obj
  0001:0000fc50       ?getRealRedrawMaxY@DrawingSurface@@QAEHXZ 00410c50 f   DrawingSurface.obj
+ 0001:0000fca0       ??0MainCharacter@@QAE@PAVBaseEngine@@@Z 00410ca0 f   MainCharacter.obj
+ 0001:0000fd20       ?virtDoUpdate@MainCharacter@@UAEXH@Z 00410d20 f   MainCharacter.obj
+ 0001:0000fe50       ?virtDraw@MainCharacter@@UAEXXZ 00410e50 f   MainCharacter.obj
+ 0001:0000fea0       ?virtKeyDown@MainCharacter@@UAEXH@Z 00410ea0 f   MainCharacter.obj
  0001:00010860       ??$move@AAH@std@@YA$$QAHAAH@Z 00411860 f i DrawingSurface.obj
  0001:00010870       ??$move@AAN@std@@YA$$QANAAN@Z 00411870 f i DrawingSurface.obj
  0001:00010880       ??$swap@H$0A@@std@@YAXAAH0@Z 00411880 f i DrawingSurface.obj
@@ -670,10 +676,6 @@
  0001:000128d0       ?setXShift@ImagePixelMappingShiftXY@@QAEXN@Z 004138d0 f i ImageMappingDemo.obj
  0001:000128f0       ?setYShift@ImagePixelMappingShiftXY@@QAEXN@Z 004138f0 f i ImageMappingDemo.obj
  0001:00012910       ?virtDraw@MappableImageObject@@UAEXXZ 00413910 f i ImageMappingDemo.obj
- 0001:000129a0       ??0MainCharacter@@QAE@PAVBaseEngine@@@Z 004139a0 f   MainCharacter.obj
- 0001:00012a80       ?virtDoUpdate@MainCharacter@@UAEXH@Z 00413a80 f   MainCharacter.obj
- 0001:00012af0       ?virtDraw@MainCharacter@@UAEXXZ 00413af0 f   MainCharacter.obj
- 0001:00012b40       ?virtKeyDown@MainCharacter@@UAEXH@Z 00413b40 f   MainCharacter.obj
  0001:00012cc0       ??1MainCharacter@@UAE@XZ   00413cc0 f i MainCharacter.obj
  0001:00012ce0       ??_EMainCharacter@@UAEPAXI@Z 00413ce0 f i MainCharacter.obj
  0001:00012ce0       ??_GMainCharacter@@UAEPAXI@Z 00413ce0 f i MainCharacter.obj
@@ -848,7 +850,6 @@
  0001:00018c50       ?drawBackgroundString@BaseEngine@@QAEXHHPBDIPAVFont@@@Z 00419c50 f i Psyeb10Engine.obj
  0001:00018c90       ?drawForegroundString@BaseEngine@@QAEXHHPBDIPAVFont@@@Z 00419c90 f i Psyeb10Engine.obj
  0001:00018cd0       ?notifyObjectsAboutKeys@BaseEngine@@QAEX_N@Z 00419cd0 f i Psyeb10Engine.obj
- 0001:00018cf0       ?virtDrawTileAt@Psyeb10TileManager@@UBEXPAVBaseEngine@@PAVDrawingSurface@@HHHH@Z 00419cf0 f   Psyeb10TileManager.obj
  0001:00018d60       ?changePixelColour@ImagePixelMapping@@UAE_NHHAAHPAVDrawingSurface@@@Z 00419d60 f i SimpleImage.obj
  0001:00018d80       ?mapCoordinates@CroppedImagePixelMapping@@UAE_NAAN0ABVSimpleImage@@@Z 00419d80 f i SimpleImage.obj
  0001:00018e20       ??0SimpleImage@@QAE@XZ     00419e20 f   SimpleImage.obj
@@ -1543,6 +1544,7 @@
  0003:000001c8       ??_R0?AVexception@std@@@8  004351c8     DraggingDemo.obj
  0003:000001ec       ??_R0?AVbad_array_new_length@std@@@8 004351ec     DraggingDemo.obj
  0003:0000021c       ??_R0?AVbad_alloc@std@@@8  0043521c     DraggingDemo.obj
+ 0003:00000238       ??_R0?AVPsyeb10Engine@@@8  00435238     MainCharacter.obj
  0003:00000340       ??_R0?AV_Ref_count_base@std@@@8 00435340     DraggingDemo.obj
  0003:00000368       ??_R0?AVDragableBaseClassObject@@@8 00435368     DraggingDemo.obj
  0003:00000398       ??_R0?AVDisplayableObject@@@8 00435398     DraggingDemo.obj
@@ -1558,7 +1560,6 @@
  0003:00000520       ??_R0?AVMainCharacter@@@8  00435520     MainCharacter.obj
  0003:00000544       ??_R0?AVTileManager@@@8    00435544     mainfunction.obj
  0003:00000564       ??_R0?AVPsyeb10TileManager@@@8 00435564     mainfunction.obj
- 0003:0000058c       ??_R0?AVPsyeb10Engine@@@8  0043558c     mainfunction.obj
  0003:000005b0       ??_R0?AVMyObjectB@@@8      004355b0     MyDemoA.obj
  0003:000005cc       ??_R0?AVImagePixelMapping@@@8 004355cc     SimpleImage.obj
  0003:000005f4       ??_R0?AVCroppedImagePixelMapping@@@8 004355f4     SimpleImage.obj
@@ -1672,7 +1673,8 @@
  0004:0000024c       __imp____std_type_info_destroy_list 0043624c     vcruntimed:VCRUNTIME140D.dll
  0004:00000250       __imp__memcmp              00436250     vcruntimed:VCRUNTIME140D.dll
  0004:00000254       __imp____current_exception_context 00436254     vcruntimed:VCRUNTIME140D.dll
- 0004:00000258       \177VCRUNTIME140D_NULL_THUNK_DATA 00436258     vcruntimed:VCRUNTIME140D.dll
+ 0004:00000258       __imp____RTDynamicCast     00436258     vcruntimed:VCRUNTIME140D.dll
+ 0004:0000025c       \177VCRUNTIME140D_NULL_THUNK_DATA 0043625c     vcruntimed:VCRUNTIME140D.dll
  0004:0000028c       __imp___configure_narrow_argv 0043628c     ucrtd:ucrtbased.dll
  0004:00000290       __imp___initialize_narrow_environment 00436290     ucrtd:ucrtbased.dll
  0004:00000294       __imp___get_initial_narrow_environment 00436294     ucrtd:ucrtbased.dll
@@ -1965,16 +1967,6 @@
  0000:00000000       _volmd                     00400000     ImageMappingDemo.obj
  0000:00000000       _volmd                     00400000     ImageMappingDemo.obj
  0000:00000000       _volmd                     00400000     ImageMappingDemo.obj
- 0002:fffd7000       __catchsym$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$3 00400000     MainCharacter.obj
- 0002:fffd7000       __ehfuncinfo$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 00400000     MainCharacter.obj
- 0001:fffff000       __ehhandler$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 00400000 f   MainCharacter.obj
- 0001:fffff000       __unwindfunclet$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$2 00400000 f   MainCharacter.obj
- 0001:fffff000       __unwindfunclet$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z$0 00400000 f   MainCharacter.obj
- 0002:fffd7000       __unwindtable$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 00400000     MainCharacter.obj
- 0000:00000000       _volmd                     00400000     MainCharacter.obj
- 0000:00000000       _volmd                     00400000     MainCharacter.obj
- 0000:00000000       _volmd                     00400000     MainCharacter.obj
- 0000:00000000       _volmd                     00400000     MainCharacter.obj
  0002:fffd7000       __ehfuncinfo$??$_Deallocate@$07@std@@YAXPAXI@Z 00400000     MazeDemoMain.obj
  0001:fffff000       __ehhandler$??$_Deallocate@$07@std@@YAXPAXI@Z 00400000 f   MazeDemoMain.obj
  0001:fffff000       __unwindfunclet$??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEXIABU_Value_init_tag@1@@Z$0 00400000 f   MazeDemoMain.obj
@@ -2427,6 +2419,7 @@
  0000:fffc6000       .debug$S                   00400000     vcruntimed:VCRUNTIME140D.dll
  0000:fffc6000       .debug$S                   00400000     vcruntimed:VCRUNTIME140D.dll
  0000:fffc6000       .debug$S                   00400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffc6000       .debug$S                   00400000     vcruntimed:VCRUNTIME140D.dll
  0000:fffc8004       __guard_fids__             00400004     MSVCRTD:exe_main.obj
  0002:fffd7008       __ehfuncinfo$??$_Uninitialized_value_construct_n@V?$allocator@PAVDisplayableObject@@@std@@@std@@YAPAPAVDisplayableObject@@PAPAV1@IAAV?$allocator@PAVDisplayableObject@@@0@@Z 00400008     BaseEngine.obj
  0002:fffd7008       __ehfuncinfo$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 00400008     BouncingBall.obj
@@ -2462,7 +2455,6 @@
  0001:fffff008       __unwindfunclet$??0DragableImageObject@@QAE@HHPAVBaseEngine@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N2@Z$1 00400008 f   ImageMappingDemo.obj
  0001:fffff008       __unwindfunclet$?getImagePtrbyURL@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@_N1@Z$1 00400008 f   ImageMappingDemo.obj
  0001:fffff008       __unwindfunclet$?loadAsNew@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@@Z$1 00400008 f   ImageMappingDemo.obj
- 0002:fffd7008       __ehfuncinfo$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 00400008     MainCharacter.obj
  0002:fffd7008       __ehfuncinfo$??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEXIABU_Value_init_tag@1@@Z 00400008     MazeDemoMain.obj
  0002:fffd7008       __ehfuncinfo$??$_Uninitialized_move@PAPAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@YAPAPAVDisplayableObject@@QAPAV1@0PAPAV1@AAV?$allocator@PAVDisplayableObject@@@0@@Z 00400008     MazeDemoMain.obj
  0002:fffd7008       __ehfuncinfo$??$_Uninitialized_value_construct_n@V?$allocator@PAVDisplayableObject@@@std@@@std@@YAPAPAVDisplayableObject@@PAPAV1@IAAV?$allocator@PAVDisplayableObject@@@0@@Z 00400008     MazeDemoMain.obj
@@ -2569,8 +2561,6 @@
  0001:fffff00d       __ehhandler$?_Alloc_sentinel_and_proxy@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IAEXXZ 0040000d f   ImageMappingDemo.obj
  0001:fffff00d       __ehhandler$?getImagebyURL@ImageManager@@QAE?AVSimpleImage@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N1@Z 0040000d f   ImageMappingDemo.obj
  0001:fffff00d       __ehhandler$?loadImage@RawImageData@@QAE_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HHHHH_N@Z 0040000d f   ImageMappingDemo.obj
- 0001:fffff00d       __ehhandler$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 0040000d f   MainCharacter.obj
- 0001:fffff00d       __ehhandler$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 0040000d f   MainCharacter.obj
  0001:fffff00d       __ehhandler$??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEXIABU_Value_init_tag@1@@Z 0040000d f   MazeDemoMain.obj
  0001:fffff00d       __ehhandler$??$_Uninitialized_move@PAPAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@YAPAPAVDisplayableObject@@QAPAV1@0PAPAV1@AAV?$allocator@PAVDisplayableObject@@@0@@Z 0040000d f   MazeDemoMain.obj
  0001:fffff00d       __ehhandler$??$_Uninitialized_value_construct_n@V?$allocator@PAVDisplayableObject@@@std@@@std@@YAPAPAVDisplayableObject@@PAPAV1@IAAV?$allocator@PAVDisplayableObject@@@0@@Z 0040000d f   MazeDemoMain.obj
@@ -2648,7 +2638,6 @@
  0002:fffd7010       __tryblocktable$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z 00400010     ImageMappingDemo.obj
  0001:fffff010       __unwindfunclet$??0DragableImageObject@@QAE@HHPAVBaseEngine@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N2@Z$2 00400010 f   ImageMappingDemo.obj
  0001:fffff010       __unwindfunclet$?getImagePtrbyURL@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@_N1@Z$9 00400010 f   ImageMappingDemo.obj
- 0002:fffd7010       __tryblocktable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00400010     MainCharacter.obj
  0002:fffd7010       __ehfuncinfo$??$?0VRawImageData@@$0A@@?$shared_ptr@VRawImageData@@@std@@QAE@PAVRawImageData@@@Z 00400010     MyDemoA.obj
  0002:fffd7010       __ehfuncinfo$?loadAsNew@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@@Z 00400010     MyDemoA.obj
  0002:fffd7010       __tryblocktable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00400010     MyDemoA.obj
@@ -2697,7 +2686,6 @@
  0002:fffd7024       __unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00400024     ImageMappingDemo.obj
  0002:fffd7024       __unwindtable$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z 00400024     ImageMappingDemo.obj
  0002:fffd7024       __unwindtable$?getImagePtrbyURL@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@_N1@Z 00400024     ImageMappingDemo.obj
- 0002:fffd7024       __unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00400024     MainCharacter.obj
  0002:fffd7024       __unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00400024     MyDemoA.obj
  0002:fffd7024       __unwindtable$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z 00400024     MyDemoA.obj
  0002:fffd7024       __unwindtable$?getImagePtrbyURL@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@_N1@Z 00400024     MyDemoA.obj
@@ -2722,7 +2710,6 @@
  0002:fffd703c       __ehfuncinfo$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 0040003c     FlashingDemo.obj
  0002:fffd703c       __ehfuncinfo$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 0040003c     ImageMappingDemo.obj
  0002:fffd703c       __ehfuncinfo$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z 0040003c     ImageMappingDemo.obj
- 0002:fffd703c       __ehfuncinfo$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 0040003c     MainCharacter.obj
  0002:fffd703c       __ehfuncinfo$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 0040003c     MyDemoA.obj
  0002:fffd703c       __ehfuncinfo$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z 0040003c     MyDemoA.obj
  0002:fffd703c       __ehfuncinfo$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 0040003c     SimpleDemo.obj
@@ -2739,7 +2726,6 @@
  0001:fffff273       __catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0 00400273 f   DrawingSurface.obj
  0001:fffff273       __catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0 00400273 f   FlashingDemo.obj
  0001:fffff273       __catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0 00400273 f   ImageMappingDemo.obj
- 0001:fffff273       __catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0 00400273 f   MainCharacter.obj
  0001:fffff273       __catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0 00400273 f   MyDemoA.obj
  0001:fffff273       __catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0 00400273 f   SimpleDemo.obj
  0001:fffff273       __catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0 00400273 f   SimpleImage.obj
@@ -2748,14 +2734,14 @@
  0001:00002970       $LN17                      00403970     DraggingDemo.obj
  0001:000037f3       __catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0 004047f3 f i DraggingDemo.obj
  0001:00005019       __catch$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z$0 00406019 f i DraggingDemo.obj
+ 0001:0000ff4c       $LN11                      00410f4c     MainCharacter.obj
+ 0001:0000ff60       $LN10                      00410f60     MainCharacter.obj
  0001:0001117c       $LN41                      0041217c     FlashingDemo.obj
  0001:00011194       $LN42                      00412194     FlashingDemo.obj
  0001:000111ac       $LN43                      004121ac     FlashingDemo.obj
  0001:000111c4       $LN44                      004121c4     FlashingDemo.obj
  0001:00011290       $LN9                       00412290     FlashingDemo.obj
  0001:00011bd0       $LN15                      00412bd0     ImageMappingDemo.obj
- 0001:00012bec       $LN11                      00413bec     MainCharacter.obj
- 0001:00012c00       $LN10                      00413c00     MainCharacter.obj
  0001:00012d60       _time                      00413d60 f   mainfunction.obj
  0001:000147d0       $LN46                      004157d0     BaseEngine.obj
  0001:00014c60       ??R<lambda_fc8dd791f88d4728d8634e8f76ffd231>@@QBE@PAVDisplayableObject@@@Z 00415c60 f   BaseEngine.obj
@@ -2898,8 +2884,6 @@
  0001:000258e0       __ehhandler$?virtInitialiseObjects@ImageMappingDemo@@UAEHXZ 004268e0 f   ImageMappingDemo.obj
  0001:00025920       __unwindfunclet$??0MappableImageObject@@QAE@PAVImagePixelMapping@@HHPAVBaseEngine@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N3@Z$0 00426920 f   ImageMappingDemo.obj
  0001:0002592d       __ehhandler$??0MappableImageObject@@QAE@PAVImagePixelMapping@@HHPAVBaseEngine@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N3@Z 0042692d f   ImageMappingDemo.obj
- 0001:00025960       __unwindfunclet$??0MainCharacter@@QAE@PAVBaseEngine@@@Z$0 00426960 f   MainCharacter.obj
- 0001:0002596d       __ehhandler$??0MainCharacter@@QAE@PAVBaseEngine@@@Z 0042696d f   MainCharacter.obj
  0001:000259a0       __unwindfunclet$?doProgram@@YAHHQAPAD@Z$0 004269a0 f   mainfunction.obj
  0001:000259b0       __ehhandler$?doProgram@@YAHHQAPAD@Z 004269b0 f   mainfunction.obj
  0001:000259f0       __ehhandler$??$_Freenode@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@PAU01@@Z 004269f0 f   mainfunction.obj
@@ -3047,35 +3031,34 @@
  0002:00002b38       $SG104221                  0042bb38     ImageMappingDemo.obj
  0002:00002c00       $SG104222                  0042bc00     ImageMappingDemo.obj
  0002:00002c04       $SG104223                  0042bc04     ImageMappingDemo.obj
- 0002:00002d80       $SG91933                   0042bd80     MainCharacter.obj
- 0002:00002d88       $SG103200                  0042bd88     MainCharacter.obj
- 0002:00002d9c       $SG103201                  0042bd9c     MainCharacter.obj
- 0002:00002da0       $SG103202                  0042bda0     MainCharacter.obj
- 0002:00002e08       $SG103203                  0042be08     MainCharacter.obj
- 0002:00002ecc       $SG103204                  0042becc     MainCharacter.obj
- 0002:00002ed0       $SG103205                  0042bed0     MainCharacter.obj
- 0002:00002ef8       $SG103265                  0042bef8     MainCharacter.obj
- 0002:00002f5c       $SG103507                  0042bf5c     MainCharacter.obj
- 0002:00002f78       $SG103508                  0042bf78     MainCharacter.obj
- 0002:00002f80       $SG103509                  0042bf80     MainCharacter.obj
- 0002:00002fe8       $SG103510                  0042bfe8     MainCharacter.obj
- 0002:000030b0       $SG103511                  0042c0b0     MainCharacter.obj
- 0002:000030b4       $SG103512                  0042c0b4     MainCharacter.obj
- 0002:00003200       $SG93307                   0042c200     mainfunction.obj
- 0002:00003230       $SG93308                   0042c230     mainfunction.obj
- 0002:00003248       $SG104562                  0042c248     mainfunction.obj
- 0002:0000325c       $SG104563                  0042c25c     mainfunction.obj
- 0002:00003260       $SG104564                  0042c260     mainfunction.obj
- 0002:000032c8       $SG104565                  0042c2c8     mainfunction.obj
- 0002:0000338c       $SG104566                  0042c38c     mainfunction.obj
- 0002:00003390       $SG104567                  0042c390     mainfunction.obj
- 0002:000033b8       $SG104627                  0042c3b8     mainfunction.obj
- 0002:0000341c       $SG104869                  0042c41c     mainfunction.obj
- 0002:00003438       $SG104870                  0042c438     mainfunction.obj
- 0002:00003440       $SG104871                  0042c440     mainfunction.obj
- 0002:000034a8       $SG104872                  0042c4a8     mainfunction.obj
- 0002:00003570       $SG104873                  0042c570     mainfunction.obj
- 0002:00003574       $SG104874                  0042c574     mainfunction.obj
+ 0002:00002d80       $SG103394                  0042bd80     MainCharacter.obj
+ 0002:00002d94       $SG103395                  0042bd94     MainCharacter.obj
+ 0002:00002d98       $SG103396                  0042bd98     MainCharacter.obj
+ 0002:00002e00       $SG103397                  0042be00     MainCharacter.obj
+ 0002:00002ec4       $SG103398                  0042bec4     MainCharacter.obj
+ 0002:00002ec8       $SG103399                  0042bec8     MainCharacter.obj
+ 0002:00002ef0       $SG103459                  0042bef0     MainCharacter.obj
+ 0002:00002f54       $SG103701                  0042bf54     MainCharacter.obj
+ 0002:00002f70       $SG103702                  0042bf70     MainCharacter.obj
+ 0002:00002f78       $SG103703                  0042bf78     MainCharacter.obj
+ 0002:00002fe0       $SG103704                  0042bfe0     MainCharacter.obj
+ 0002:000030a8       $SG103705                  0042c0a8     MainCharacter.obj
+ 0002:000030ac       $SG103706                  0042c0ac     MainCharacter.obj
+ 0002:00003200       $SG93336                   0042c200     mainfunction.obj
+ 0002:00003230       $SG93337                   0042c230     mainfunction.obj
+ 0002:00003248       $SG104591                  0042c248     mainfunction.obj
+ 0002:0000325c       $SG104592                  0042c25c     mainfunction.obj
+ 0002:00003260       $SG104593                  0042c260     mainfunction.obj
+ 0002:000032c8       $SG104594                  0042c2c8     mainfunction.obj
+ 0002:0000338c       $SG104595                  0042c38c     mainfunction.obj
+ 0002:00003390       $SG104596                  0042c390     mainfunction.obj
+ 0002:000033b8       $SG104656                  0042c3b8     mainfunction.obj
+ 0002:0000341c       $SG104898                  0042c41c     mainfunction.obj
+ 0002:00003438       $SG104899                  0042c438     mainfunction.obj
+ 0002:00003440       $SG104900                  0042c440     mainfunction.obj
+ 0002:000034a8       $SG104901                  0042c4a8     mainfunction.obj
+ 0002:00003570       $SG104902                  0042c570     mainfunction.obj
+ 0002:00003574       $SG104903                  0042c574     mainfunction.obj
  0002:00003750       $SG148631                  0042c750     BaseEngine.obj
  0002:00003780       $SG148664                  0042c780     BaseEngine.obj
  0002:00003798       $SG160387                  0042c798     BaseEngine.obj
@@ -3170,19 +3153,19 @@
  0002:000058b8       $SG103716                  0042e8b8     Psyeb10Engine.obj
  0002:00005980       $SG103717                  0042e980     Psyeb10Engine.obj
  0002:00005984       $SG103718                  0042e984     Psyeb10Engine.obj
- 0002:00005a70       $SG103310                  0042ea70     Psyeb10TileManager.obj
- 0002:00005a84       $SG103311                  0042ea84     Psyeb10TileManager.obj
- 0002:00005a88       $SG103312                  0042ea88     Psyeb10TileManager.obj
- 0002:00005af0       $SG103313                  0042eaf0     Psyeb10TileManager.obj
- 0002:00005bb4       $SG103314                  0042ebb4     Psyeb10TileManager.obj
- 0002:00005bb8       $SG103315                  0042ebb8     Psyeb10TileManager.obj
- 0002:00005be0       $SG103375                  0042ebe0     Psyeb10TileManager.obj
- 0002:00005c44       $SG103617                  0042ec44     Psyeb10TileManager.obj
- 0002:00005c60       $SG103618                  0042ec60     Psyeb10TileManager.obj
- 0002:00005c68       $SG103619                  0042ec68     Psyeb10TileManager.obj
- 0002:00005cd0       $SG103620                  0042ecd0     Psyeb10TileManager.obj
- 0002:00005d98       $SG103621                  0042ed98     Psyeb10TileManager.obj
- 0002:00005d9c       $SG103622                  0042ed9c     Psyeb10TileManager.obj
+ 0002:00005a70       $SG103314                  0042ea70     Psyeb10TileManager.obj
+ 0002:00005a84       $SG103315                  0042ea84     Psyeb10TileManager.obj
+ 0002:00005a88       $SG103316                  0042ea88     Psyeb10TileManager.obj
+ 0002:00005af0       $SG103317                  0042eaf0     Psyeb10TileManager.obj
+ 0002:00005bb4       $SG103318                  0042ebb4     Psyeb10TileManager.obj
+ 0002:00005bb8       $SG103319                  0042ebb8     Psyeb10TileManager.obj
+ 0002:00005be0       $SG103379                  0042ebe0     Psyeb10TileManager.obj
+ 0002:00005c44       $SG103621                  0042ec44     Psyeb10TileManager.obj
+ 0002:00005c60       $SG103622                  0042ec60     Psyeb10TileManager.obj
+ 0002:00005c68       $SG103623                  0042ec68     Psyeb10TileManager.obj
+ 0002:00005cd0       $SG103624                  0042ecd0     Psyeb10TileManager.obj
+ 0002:00005d98       $SG103625                  0042ed98     Psyeb10TileManager.obj
+ 0002:00005d9c       $SG103626                  0042ed9c     Psyeb10TileManager.obj
  0002:00005e98       $SG103640                  0042ee98     SimpleImage.obj
  0002:00005eac       $SG103641                  0042eeac     SimpleImage.obj
  0002:00005eb0       $SG103642                  0042eeb0     SimpleImage.obj
@@ -3423,8 +3406,6 @@
  0002:0000b3d0       __unwindtable$?virtInitialiseObjects@ImageMappingDemo@@UAEHXZ 004343d0     ImageMappingDemo.obj
  0002:0000b400       __unwindtable$??0MappableImageObject@@QAE@PAVImagePixelMapping@@HHPAVBaseEngine@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N3@Z 00434400     ImageMappingDemo.obj
  0002:0000b408       __ehfuncinfo$??0MappableImageObject@@QAE@PAVImagePixelMapping@@HHPAVBaseEngine@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N3@Z 00434408     ImageMappingDemo.obj
- 0002:0000b430       __unwindtable$??0MainCharacter@@QAE@PAVBaseEngine@@@Z 00434430     MainCharacter.obj
- 0002:0000b438       __ehfuncinfo$??0MainCharacter@@QAE@PAVBaseEngine@@@Z 00434438     MainCharacter.obj
  0002:0000b460       __unwindtable$??0Psyeb10Engine@@QAE@XZ 00434460     mainfunction.obj
  0002:0000b468       __ehfuncinfo$??0Psyeb10Engine@@QAE@XZ 00434468     mainfunction.obj
  0002:0000b490       __unwindtable$?doProgram@@YAHHQAPAD@Z 00434490     mainfunction.obj
