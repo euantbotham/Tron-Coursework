@@ -6,14 +6,32 @@
 #include <sstream>
 #include <string>
 
+
 void Psyeb10Engine::virtSetupBackgroundBuffer()
 {
 	//TODO add lines to make a grid
-	this->drawBackgroundRectangle(350, 100, 950, 700, 0x2C3E50);
+	// grey walls
+	this->drawBackgroundRectangle(325, 75, 975, 725, 0x2C3E50);
 
+	//Blue background
+	this->drawBackgroundRectangle(350, 100, 950, 700, 0x000822);
+
+	//Grid vert lines for background
+	for (int i = 0; i < 14; i++)
+	{
+		this->drawBackgroundThickLine(gridstartX + 50 * i, gridstartY+1, gridstartX  + 50 * i, gridEndY-1, 0x000000, 2);
+	}
+	
+	//Grid horizontal lines for background
+	for (int i = 0; i < 14; i++)
+	{
+		this->drawBackgroundThickLine(gridstartX + 1, gridstartY + 50 *i, gridEndX -1, gridstartY + 50 * i, 0x000000, 2);
+	}
+	
 	//background text
-	this->drawBackgroundString(100, 100, "hello world", 0x0000FF, 0);
+	this->drawBackgroundString(600, 50, "TRON", 0x0000FF, 0);
 
+	//Setup tile manager
 	for (int i = 0; i < 120; i++)
 		for (int j = 0; j < 120; j++)
 			tm.setMapValue(i, j, 0);
