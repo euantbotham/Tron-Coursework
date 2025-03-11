@@ -31,6 +31,12 @@
     <Filter Include="Source Files\More advanced demos">
       <UniqueIdentifier>{427592e9-3a23-441e-8895-59b91fa3c6af}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\psyeb10Demos">
+      <UniqueIdentifier>{d746f6a3-5bb4-4454-be84-8581426b8fc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\psyeb10Demos">
+      <UniqueIdentifier>{6165dd9d-108a-4e61-9baf-98cbca27c3fa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h">
@@ -126,15 +132,6 @@
     <ClInclude Include="ExampleFilterPointClasses.h">
       <Filter>Header Files\More advanced demos</Filter>
     </ClInclude>
-    <ClInclude Include="MyDemoA.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MyTileManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MyObjectB.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Psyeb10Engine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -142,6 +139,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Psyeb10TileManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyDemoA.h">
+      <Filter>Header Files\psyeb10Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="MyObjectB.h">
+      <Filter>Header Files\psyeb10Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="MyTileManager.h">
+      <Filter>Header Files\psyeb10Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="Psyeb10Enemy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Psyeb10Bike.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -200,15 +212,6 @@
     <ClCompile Include="ZoomingDemo.cpp">
       <Filter>Source Files\More advanced demos</Filter>
     </ClCompile>
-    <ClCompile Include="MyDemoA.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MyTileManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MyObjectB.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Psyeb10Engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -216,6 +219,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Psyeb10TileManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyDemoA.cpp">
+      <Filter>Source Files\psyeb10Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="MyObjectB.cpp">
+      <Filter>Source Files\psyeb10Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="MyTileManager.cpp">
+      <Filter>Source Files\psyeb10Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="Psyeb10Enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Psyeb10Bike.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

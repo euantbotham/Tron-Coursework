@@ -8,8 +8,8 @@
 MainCharacter::MainCharacter(BaseEngine* pEngine) : DisplayableObject(650, 400, pEngine, 20, 20, true)
 {
 	//std::cout << "here" << std::endl;
-	speedX = 1;
-	speedY = 0;
+	speedX = 0;
+	speedY = -1;
 	lastTileX = -1;
 	lastTileY = -1;
 	engine = dynamic_cast<Psyeb10Engine*>(getEngine());
