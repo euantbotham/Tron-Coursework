@@ -4,23 +4,21 @@
 #include <iostream>
 #include "SimpleImage.h"
 #include "Psyeb10Engine.h"
-#define MAXSPEED = 2.0
 
 MainCharacter::MainCharacter(BaseEngine* pEngine) : DisplayableObject(100, 200, pEngine, 20, 20, true)
 {
 	//std::cout << "here" << std::endl;
-	posX = 100;
-	posY = 200;
-	car_direction = 1;
 	speedX = 1;
 	speedY = 0;
+	lastTileX = -1;
+	lastTileY = -1;
+	engine = dynamic_cast<Psyeb10Engine*>(getEngine());
 }
 
 
 //TODO current direction issues need to account that
 void MainCharacter::virtDoUpdate(int iCurrentTime)
 {	
-	Psyeb10Engine* engine = dynamic_cast<Psyeb10Engine*>(getEngine());
 	//std::cout << iCurrentTime << std::endl;
 	if (engine->tm.isValidTilePosition( getXCentre(),  getYCentre()))
 	{
@@ -28,18 +26,20 @@ void MainCharacter::virtDoUpdate(int iCurrentTime)
 		int mapY = engine->tm.getMapYForScreenY(getYCentre()); // Which row?
 		int value = engine->tm.getMapValue(mapX, mapY); // Current value?
 		// If square has not been painted on
-		if (value == 0)
+		if (value == 0 && !(mapX == lastTileX && mapY == lastTileY))
 		{
 			engine->tm.setAndRedrawMapValueAt(mapX, mapY, 1, engine, engine->getBackgroundSurface());
+			lastTileX = mapX;
+			lastTileY = mapY;
+		}
+		else if (value != 0 &&!(mapX == lastTileX && mapY == lastTileY)) {
+			//TODO add game death logic here
+			std::cout << "GAME OVER!" << std::endl;
 		}
 	}
-	
-	
-	posY += speedY;
-	posX += speedX;
 
-	m_iCurrentScreenX = (int)posX;
-	m_iCurrentScreenY = (int) posY;
+	m_iCurrentScreenX += speedX;
+	m_iCurrentScreenY += speedY;
 	// Ensure that the objects get redrawn on the display
 	this->redrawDisplay();
 }

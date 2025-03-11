@@ -11,8 +11,8 @@ void Psyeb10Engine::virtSetupBackgroundBuffer()
 	//background text
 	this->drawBackgroundString(100, 100, "hello world", 0x0000FF, 0);
 
-	for (int i = 0; i < 30; i++)
-		for (int j = 0; j < 30; j++)
+	for (int i = 0; i < 120; i++)
+		for (int j = 0; j < 120; j++)
 			tm.setMapValue(i, j, 0);
 	tm.setTopLeftPositionOnScreen(350, 100);
 	tm.drawAllTiles(this, getBackgroundSurface());
