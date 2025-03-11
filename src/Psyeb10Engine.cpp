@@ -5,6 +5,7 @@
 #include "Psyeb10TileManager.h"
 #include <sstream>
 #include <string>
+#include "Psyeb10Enemy.h"
 
 
 void Psyeb10Engine::virtSetupBackgroundBuffer()
@@ -57,6 +58,7 @@ int Psyeb10Engine::virtInitialiseObjects()
 	destroyOldObjects(true);
 	createObjectArray(1);
 	storeObjectInArray(0, new MainCharacter(this));
+	appendObjectToArray(new Psyeb10Enemy(this));
 	setAllObjectsVisible(true);
 	return 0;
 }
@@ -68,8 +70,13 @@ void Psyeb10Engine::resetGame()
 	virtSetupBackgroundBuffer();
 	unlockBackgroundForDrawing();
 	redrawDisplay();
+	
+	//Reset bikes to start positions
 	DisplayableObject* bike1 = getDisplayableObject(0);
 	bike1->setPosition(650, 400);
+
+	DisplayableObject* bike2 = getDisplayableObject(1);
+	bike2->setPosition(500, 150);
 	//TODO add death reset for AI
 
 }

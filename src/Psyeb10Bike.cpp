@@ -3,7 +3,7 @@
 
 Psyeb10Bike::Psyeb10Bike(int xStart, int yStart, 
 	BaseEngine* pEngine, int iWidth, int iHeight, 
-	bool useTopLeftFor00 = true) : DisplayableObject(xStart, yStart, pEngine, iWidth, iHeight, useTopLeftFor00)
+	bool useTopLeftFor00) : DisplayableObject(xStart, yStart, pEngine, iWidth, iHeight, useTopLeftFor00)
 {
 	// Set last tiles to -1
 	lastTileX = -1;

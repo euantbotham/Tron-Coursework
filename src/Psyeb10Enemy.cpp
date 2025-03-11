@@ -1,10 +1,10 @@
 #include "header.h"
 #include "Psyeb10Enemy.h"
 #include "Psyeb10Engine.h"
-Psyeb10Enemy::Psyeb10Enemy(BaseEngine* pEngine) : DisplayableObject(0,0,pEngine, 20,20,true)
+Psyeb10Enemy::Psyeb10Enemy(BaseEngine* pEngine) : DisplayableObject(500,150,pEngine, 20,20,true)
 {
 	speedX = 0;
-	speedY = -1;
+	speedY = 1;
 	lastTileX = -1;
 	lastTileY = -1;
 	engine = dynamic_cast<Psyeb10Engine*>(pEngine);
@@ -20,13 +20,17 @@ void Psyeb10Enemy::virtDoUpdate(int iCurrentTime)
 		// If square has not been painted on
 		if (value == 0 && !(mapX == lastTileX && mapY == lastTileY))
 		{
-			engine->tm.setAndRedrawMapValueAt(mapX, mapY, 1, engine, engine->getBackgroundSurface());
+			engine->tm.setAndRedrawMapValueAt(mapX, mapY, 2, engine, engine->getBackgroundSurface());
 			lastTileX = mapX;
 			lastTileY = mapY;
 		}
 		else if (value != 0 && !(mapX == lastTileX && mapY == lastTileY)) {
 			//TODO add death logic for enemy, Eventually make class so they both a sub of it 
 			// Make a new function for subclasses and get this to just call them, make it virt.
+
+
+			//Add logic to increase score
+			engine->resetGame();
 		}
 	}
 
@@ -38,5 +42,25 @@ void Psyeb10Enemy::virtDoUpdate(int iCurrentTime)
 
 void Psyeb10Enemy::virtDraw()
 {
-
+	getEngine()->drawForegroundRectangle(
+		m_iCurrentScreenX, m_iCurrentScreenY,
+		m_iCurrentScreenX + m_iDrawWidth - 1,
+		m_iCurrentScreenY + m_iDrawHeight - 1,
+		0xFFD700);
+	getEngine()->drawForegroundRectangle(m_iCurrentScreenX, m_iCurrentScreenY,
+		m_iCurrentScreenX + 3,
+		m_iCurrentScreenY + 3,
+		0x000000);
+	getEngine()->drawForegroundRectangle(m_iCurrentScreenX + m_iDrawWidth - 4, m_iCurrentScreenY,
+		m_iCurrentScreenX + m_iDrawWidth - 1,
+		m_iCurrentScreenY + 3,
+		0x000000);
+	getEngine()->drawForegroundRectangle(m_iCurrentScreenX, m_iCurrentScreenY + m_iDrawHeight - 4,
+		m_iCurrentScreenX + 3,
+		m_iCurrentScreenY + m_iDrawHeight - 1,
+		0x000000);
+	getEngine()->drawForegroundRectangle(m_iCurrentScreenX + m_iDrawWidth - 4, m_iCurrentScreenY + m_iDrawHeight - 4,
+		m_iCurrentScreenX + m_iDrawWidth - 1,
+		m_iCurrentScreenY + m_iDrawHeight - 1,
+		0x000000);
 }

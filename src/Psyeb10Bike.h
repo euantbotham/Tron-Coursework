@@ -8,7 +8,7 @@ class Psyeb10Bike :
     public DisplayableObject
 {
 public:
-    Psyeb10Bike(int xStart, int yStart, BaseEngine* pEngine, int iWidth, int iHeight, bool useTopLeftFor00 = true);
+    Psyeb10Bike(int xStart, int yStart, BaseEngine* pEngine, int iWidth, int iHeight, bool useTopLeftFor00);
     void virtDoUpdate(int iCurrentTime) override;
     void virtDraw() override;
     virtual void virtHandleDeath();
