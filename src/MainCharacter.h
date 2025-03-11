@@ -14,6 +14,8 @@ public:
     void virtDoUpdate(int iCurrentTime) override;
     void virtDraw() override;
     void virtKeyDown(int iKeyCode) override;
+    int getLives();
+    void setLives(int newLives);
     
 protected:
     int speedX;
@@ -25,6 +27,8 @@ protected:
 
     //Pointer to Subclass to access the tile manager
     Psyeb10Engine* engine;
+
+    int lives;
 
 };
 

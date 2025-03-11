@@ -12,7 +12,9 @@ public:
     void virtSetupBackgroundBuffer() override;
     void virtDrawStringsOnTop() override;
     int virtInitialiseObjects() override;
+    void resetGame();
 protected:
     Psyeb10TileManager tm;
+    int playerLives;
 };
 

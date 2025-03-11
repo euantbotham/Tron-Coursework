@@ -5,7 +5,7 @@
 #include "SimpleImage.h"
 #include "Psyeb10Engine.h"
 
-MainCharacter::MainCharacter(BaseEngine* pEngine) : DisplayableObject(100, 200, pEngine, 20, 20, true)
+MainCharacter::MainCharacter(BaseEngine* pEngine) : DisplayableObject(650, 400, pEngine, 20, 20, true)
 {
 	//std::cout << "here" << std::endl;
 	speedX = 1;
@@ -13,6 +13,7 @@ MainCharacter::MainCharacter(BaseEngine* pEngine) : DisplayableObject(100, 200, 
 	lastTileX = -1;
 	lastTileY = -1;
 	engine = dynamic_cast<Psyeb10Engine*>(getEngine());
+	lives = 3;
 }
 
 
@@ -33,8 +34,8 @@ void MainCharacter::virtDoUpdate(int iCurrentTime)
 			lastTileY = mapY;
 		}
 		else if (value != 0 &&!(mapX == lastTileX && mapY == lastTileY)) {
-			//TODO add game death logic here
-			std::cout << "GAME OVER!" << std::endl;
+			lives--;
+			engine->resetGame();
 		}
 	}
 
@@ -50,7 +51,23 @@ void MainCharacter::virtDraw()
 		m_iCurrentScreenX, m_iCurrentScreenY,
 		m_iCurrentScreenX + m_iDrawWidth - 1,
 		m_iCurrentScreenY + m_iDrawHeight - 1,
-		0xffffff);
+		0x0000ff);
+	getEngine()->drawForegroundRectangle(m_iCurrentScreenX, m_iCurrentScreenY,
+		m_iCurrentScreenX + 3,
+		m_iCurrentScreenY + 3,
+		0x000000);
+	getEngine()->drawForegroundRectangle(m_iCurrentScreenX +m_iDrawWidth -4, m_iCurrentScreenY,
+		m_iCurrentScreenX + m_iDrawWidth -1,
+		m_iCurrentScreenY + 3,
+		0x000000);
+	getEngine()->drawForegroundRectangle(m_iCurrentScreenX, m_iCurrentScreenY + m_iDrawHeight -4,
+		m_iCurrentScreenX + 3,
+		m_iCurrentScreenY + m_iDrawHeight - 1,
+		0x000000);
+	getEngine()->drawForegroundRectangle(m_iCurrentScreenX + m_iDrawWidth - 4, m_iCurrentScreenY + m_iDrawHeight - 4,
+		m_iCurrentScreenX + m_iDrawWidth - 1,
+		m_iCurrentScreenY + m_iDrawHeight - 1,
+		0x000000);
 }
 
 
@@ -79,4 +96,15 @@ void MainCharacter::virtKeyDown(int iKeyCode)
 		break;
 	}
 	
+}
+
+
+int MainCharacter::getLives()
+{
+	return this->lives;
+}
+
+void MainCharacter::setLives(int newLives)
+{
+	this->lives = newLives;
 }

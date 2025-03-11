@@ -2,6 +2,9 @@
 #include "Psyeb10Engine.h"
 #include "MyObjectB.h"
 #include "MainCharacter.h"
+#include "Psyeb10TileManager.h"
+#include <sstream>
+#include <string>
 
 void Psyeb10Engine::virtSetupBackgroundBuffer()
 {
@@ -21,7 +24,11 @@ void Psyeb10Engine::virtSetupBackgroundBuffer()
 
 void Psyeb10Engine::virtDrawStringsOnTop()
 {
-	this->drawForegroundString(200, 200, "Lives : ", 0x0000FF, 0);
+	MainCharacter* mC = dynamic_cast<MainCharacter*>(getDisplayableObject(0));
+	std::stringstream p1Lives;
+	p1Lives << "lives : " << mC->getLives();
+	std::string livesMessage = p1Lives.str();
+	this->drawForegroundString(200, 200, livesMessage.c_str(), 0x0000FF,0 );
 }
 
 
@@ -34,4 +41,17 @@ int Psyeb10Engine::virtInitialiseObjects()
 	storeObjectInArray(0, new MainCharacter(this));
 	setAllObjectsVisible(true);
 	return 0;
+}
+
+//Function to reset the game state after each death
+void Psyeb10Engine::resetGame()
+{
+	lockBackgroundForDrawing();
+	virtSetupBackgroundBuffer();
+	unlockBackgroundForDrawing();
+	redrawDisplay();
+	DisplayableObject* bike1 = getDisplayableObject(0);
+	bike1->setPosition(650, 400);
+	//TODO add death reset for AI
+
 }
