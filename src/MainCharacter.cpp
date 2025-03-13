@@ -36,6 +36,10 @@ void MainCharacter::virtDoUpdate(int iCurrentTime)
 		else if (value != 0 &&!(mapX == lastTileX && mapY == lastTileY)) {
 			lives--;
 			engine->resetGame();
+			
+			// Change this as does not work when both die
+			speedX = 0;
+			speedY = -1;
 		}
 	}
 

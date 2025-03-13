@@ -12,6 +12,7 @@ public:
     Psyeb10Enemy(BaseEngine* engine);
     void virtDoUpdate(int iCurrentTime) override;
     void virtDraw() override;
+    bool isValidMove(int x, int y);
 protected:
     int speedX;
     int speedY;
