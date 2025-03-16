@@ -8,10 +8,17 @@ Psyeb10Enemy::Psyeb10Enemy(BaseEngine* pEngine) : DisplayableObject(500,150,pEng
 	lastTileX = -1;
 	lastTileY = -1;
 	engine = dynamic_cast<Psyeb10Engine*>(pEngine);
+	isPaused = false;
 }
 
 void Psyeb10Enemy::virtDoUpdate(int iCurrentTime)
 {
+	if (isPaused)
+	{
+		return;
+	}
+	
+	
 	if (engine->tm.isValidTilePosition(getXCentre(), getYCentre()))
 	{
 		int mapX = engine->tm.getMapXForScreenX(getXCentre()); // Which column?
@@ -100,4 +107,10 @@ bool Psyeb10Enemy::isValidMove(int x, int y) {
 		}
 	}
 	return false;
+}
+
+
+void Psyeb10Enemy::setPaused(bool paused)
+{
+	isPaused = paused;
 }

@@ -15,12 +15,17 @@ MainCharacter::MainCharacter(BaseEngine* pEngine) : DisplayableObject(650, 400, 
 	lastTileY = -1;
 	engine = dynamic_cast<Psyeb10Engine*>(getEngine());
 	lives = 3;
+	isPaused = false;
 }
 
 
 //TODO current direction issues need to account that
 void MainCharacter::virtDoUpdate(int iCurrentTime)
 {	
+
+	// Don't update if paused
+	if (isPaused)
+		return;
 	//std::cout << iCurrentTime << std::endl;
 	//Checks valid tile and sets a value for it
 	if (engine->tm.isValidTilePosition( getXCentre(),  getYCentre()))
@@ -123,4 +128,9 @@ int MainCharacter::getLives()
 void MainCharacter::setLives(int newLives)
 {
 	this->lives = newLives;
+}
+
+void MainCharacter::setPaused(bool paused)
+{
+	isPaused = paused;
 }

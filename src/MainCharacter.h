@@ -16,6 +16,8 @@ public:
     void virtKeyDown(int iKeyCode) override;
     int getLives();
     void setLives(int newLives);
+
+    void setPaused(bool paused);
     
 protected:
     int speedX;
@@ -29,6 +31,8 @@ protected:
     Psyeb10Engine* engine;
 
     int lives;
+
+    bool isPaused;
 
 };
 

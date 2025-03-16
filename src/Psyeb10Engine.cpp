@@ -86,3 +86,20 @@ void Psyeb10Engine::resetGame()
 	//TODO add death reset for AI
 
 }
+
+void Psyeb10Engine::virtMouseDown(int iButton, int iX, int iY)
+{
+	if (iButton == SDL_BUTTON_RIGHT)
+	{
+		if (this->isPaused()) {
+			this->unpause();
+			dynamic_cast<MainCharacter*>(getDisplayableObject(0))->setPaused(false);
+			dynamic_cast<Psyeb10Enemy*>(getDisplayableObject(1))->setPaused(false);
+		}
+		else {
+			this->pause();
+			dynamic_cast<MainCharacter*>(getDisplayableObject(0))->setPaused(true);
+			dynamic_cast<Psyeb10Enemy*>(getDisplayableObject(1))->setPaused(true);
+		}
+	}
+}

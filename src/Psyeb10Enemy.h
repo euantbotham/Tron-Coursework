@@ -13,6 +13,7 @@ public:
     void virtDoUpdate(int iCurrentTime) override;
     void virtDraw() override;
     bool isValidMove(int x, int y);
+    void setPaused(bool paused);
 protected:
     int speedX;
     int speedY;
@@ -23,5 +24,7 @@ protected:
 
     //Pointer to Subclass to access the tile manager
     Psyeb10Engine* engine;
+
+    bool isPaused;
 };
 

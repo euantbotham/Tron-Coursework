@@ -1,6 +1,6 @@
  CourseworkBase2020
 
- Timestamp is 67d5c91d (Sat Mar 15 18:38:21 2025)
+ Timestamp is 67d70c0a (Sun Mar 16 17:36:10 2025)
 
  Preferred load address is 00400000
 
@@ -685,10 +685,11 @@
  0001:00012b00       ?virtDraw@MappableImageObject@@UAEXXZ 00413b00 f i ImageMappingDemo.obj
  0001:00012b90       ??0MainCharacter@@QAE@PAVBaseEngine@@@Z 00413b90 f   MainCharacter.obj
  0001:00012c60       ?virtDoUpdate@MainCharacter@@UAEXH@Z 00413c60 f   MainCharacter.obj
- 0001:00012e60       ?virtDraw@MainCharacter@@UAEXXZ 00413e60 f   MainCharacter.obj
- 0001:00012fc0       ?virtKeyDown@MainCharacter@@UAEXH@Z 00413fc0 f   MainCharacter.obj
- 0001:00013080       ?getLives@MainCharacter@@QAEHXZ 00414080 f   MainCharacter.obj
- 0001:000130a0       ?setLives@MainCharacter@@QAEXH@Z 004140a0 f   MainCharacter.obj
+ 0001:00012e70       ?virtDraw@MainCharacter@@UAEXXZ 00413e70 f   MainCharacter.obj
+ 0001:00012fd0       ?virtKeyDown@MainCharacter@@UAEXH@Z 00413fd0 f   MainCharacter.obj
+ 0001:00013090       ?getLives@MainCharacter@@QAEHXZ 00414090 f   MainCharacter.obj
+ 0001:000130b0       ?setLives@MainCharacter@@QAEXH@Z 004140b0 f   MainCharacter.obj
+ 0001:000130d0       ?setPaused@MainCharacter@@QAEX_N@Z 004140d0 f   MainCharacter.obj
  0001:00013200       ??1MainCharacter@@UAE@XZ   00414200 f i MainCharacter.obj
  0001:00013220       ??A?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QBEABQAVDisplayableObject@@I@Z 00414220 f i MainCharacter.obj
  0001:000132d0       ??_EMainCharacter@@UAEPAXI@Z 004142d0 f i MainCharacter.obj
@@ -853,15 +854,17 @@
  0001:00019030       ??_GPsyeb10Bike@@UAEPAXI@Z 0041a030 f i Psyeb10Bike.obj
  0001:00019070       ??0Psyeb10Enemy@@QAE@PAVBaseEngine@@@Z 0041a070 f   Psyeb10Enemy.obj
  0001:00019130       ?virtDoUpdate@Psyeb10Enemy@@UAEXH@Z 0041a130 f   Psyeb10Enemy.obj
- 0001:000193c0       ?virtDraw@Psyeb10Enemy@@UAEXXZ 0041a3c0 f   Psyeb10Enemy.obj
- 0001:00019520       ?isValidMove@Psyeb10Enemy@@QAE_NHH@Z 0041a520 f   Psyeb10Enemy.obj
+ 0001:000193d0       ?virtDraw@Psyeb10Enemy@@UAEXXZ 0041a3d0 f   Psyeb10Enemy.obj
+ 0001:00019530       ?isValidMove@Psyeb10Enemy@@QAE_NHH@Z 0041a530 f   Psyeb10Enemy.obj
+ 0001:000195c0       ?setPaused@Psyeb10Enemy@@QAEX_N@Z 0041a5c0 f   Psyeb10Enemy.obj
  0001:00019700       ??1Psyeb10Enemy@@UAE@XZ    0041a700 f i Psyeb10Enemy.obj
  0001:00019720       ??_EPsyeb10Enemy@@UAEPAXI@Z 0041a720 f i Psyeb10Enemy.obj
  0001:00019720       ??_GPsyeb10Enemy@@UAEPAXI@Z 0041a720 f i Psyeb10Enemy.obj
  0001:00019760       ?virtSetupBackgroundBuffer@Psyeb10Engine@@UAEXXZ 0041a760 f   Psyeb10Engine.obj
  0001:00019990       ?virtDrawStringsOnTop@Psyeb10Engine@@UAEXXZ 0041a990 f   Psyeb10Engine.obj
  0001:00019a90       ?virtInitialiseObjects@Psyeb10Engine@@UAEHXZ 0041aa90 f   Psyeb10Engine.obj
- 0001:00019ba0       ?resetGame@Psyeb10Engine@@QAEXXZ 0041aba0 f   Psyeb10Engine.obj
+ 0001:00019ba0       ?virtMouseDown@Psyeb10Engine@@UAEXHHH@Z 0041aba0 f   Psyeb10Engine.obj
+ 0001:00019c90       ?resetGame@Psyeb10Engine@@QAEXXZ 0041ac90 f   Psyeb10Engine.obj
  0001:00019d50       ??$?0ABV?$allocator@D@std@@$$V@?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABV?$allocator@D@1@@Z 0041ad50 f i Psyeb10Engine.obj
  0001:00019d80       ??$_Construct_in_place@PAVDisplayableObject@@ABQAV1@@std@@YAXAAPAVDisplayableObject@@ABQAV1@@Z 0041ad80 f i Psyeb10Engine.obj
  0001:00019dd0       ??$_Emplace_back_with_unused_capacity@ABQAVDisplayableObject@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEAAPAVDisplayableObject@@ABQAV2@@Z 0041add0 f i Psyeb10Engine.obj
@@ -3094,8 +3097,8 @@
  0001:000113b4       $LN44                      004123b4     FlashingDemo.obj
  0001:00011480       $LN9                       00412480     FlashingDemo.obj
  0001:00011dc0       $LN15                      00412dc0     ImageMappingDemo.obj
- 0001:0001304c       $LN11                      0041404c     MainCharacter.obj
- 0001:00013060       $LN10                      00414060     MainCharacter.obj
+ 0001:0001305c       $LN11                      0041405c     MainCharacter.obj
+ 0001:00013070       $LN10                      00414070     MainCharacter.obj
  0001:000136a0       _time                      004146a0 f   mainfunction.obj
  0001:00014da0       $LN46                      00415da0     BaseEngine.obj
  0001:00015230       ??R<lambda_fc8dd791f88d4728d8634e8f76ffd231>@@QBE@PAVDisplayableObject@@@Z 00416230 f   BaseEngine.obj
@@ -3403,34 +3406,34 @@
  0002:00002b38       $SG104221                  0042db38     ImageMappingDemo.obj
  0002:00002c00       $SG104222                  0042dc00     ImageMappingDemo.obj
  0002:00002c04       $SG104223                  0042dc04     ImageMappingDemo.obj
- 0002:00002d80       $SG103504                  0042dd80     MainCharacter.obj
- 0002:00002d94       $SG103505                  0042dd94     MainCharacter.obj
- 0002:00002d98       $SG103506                  0042dd98     MainCharacter.obj
- 0002:00002e00       $SG103507                  0042de00     MainCharacter.obj
- 0002:00002ec4       $SG103508                  0042dec4     MainCharacter.obj
- 0002:00002ec8       $SG103509                  0042dec8     MainCharacter.obj
- 0002:00002ef0       $SG103569                  0042def0     MainCharacter.obj
- 0002:00002f54       $SG103811                  0042df54     MainCharacter.obj
- 0002:00002f70       $SG103812                  0042df70     MainCharacter.obj
- 0002:00002f78       $SG103813                  0042df78     MainCharacter.obj
- 0002:00002fe0       $SG103814                  0042dfe0     MainCharacter.obj
- 0002:000030a8       $SG103815                  0042e0a8     MainCharacter.obj
- 0002:000030ac       $SG103816                  0042e0ac     MainCharacter.obj
- 0002:000031d8       $SG93410                   0042e1d8     mainfunction.obj
- 0002:00003208       $SG93411                   0042e208     mainfunction.obj
- 0002:00003220       $SG104663                  0042e220     mainfunction.obj
- 0002:00003234       $SG104664                  0042e234     mainfunction.obj
- 0002:00003238       $SG104665                  0042e238     mainfunction.obj
- 0002:000032a0       $SG104666                  0042e2a0     mainfunction.obj
- 0002:00003364       $SG104667                  0042e364     mainfunction.obj
- 0002:00003368       $SG104668                  0042e368     mainfunction.obj
- 0002:00003390       $SG104728                  0042e390     mainfunction.obj
- 0002:000033f4       $SG104970                  0042e3f4     mainfunction.obj
- 0002:00003410       $SG104971                  0042e410     mainfunction.obj
- 0002:00003418       $SG104972                  0042e418     mainfunction.obj
- 0002:00003480       $SG104973                  0042e480     mainfunction.obj
- 0002:00003548       $SG104974                  0042e548     mainfunction.obj
- 0002:0000354c       $SG104975                  0042e54c     mainfunction.obj
+ 0002:00002d80       $SG103519                  0042dd80     MainCharacter.obj
+ 0002:00002d94       $SG103520                  0042dd94     MainCharacter.obj
+ 0002:00002d98       $SG103521                  0042dd98     MainCharacter.obj
+ 0002:00002e00       $SG103522                  0042de00     MainCharacter.obj
+ 0002:00002ec4       $SG103523                  0042dec4     MainCharacter.obj
+ 0002:00002ec8       $SG103524                  0042dec8     MainCharacter.obj
+ 0002:00002ef0       $SG103584                  0042def0     MainCharacter.obj
+ 0002:00002f54       $SG103826                  0042df54     MainCharacter.obj
+ 0002:00002f70       $SG103827                  0042df70     MainCharacter.obj
+ 0002:00002f78       $SG103828                  0042df78     MainCharacter.obj
+ 0002:00002fe0       $SG103829                  0042dfe0     MainCharacter.obj
+ 0002:000030a8       $SG103830                  0042e0a8     MainCharacter.obj
+ 0002:000030ac       $SG103831                  0042e0ac     MainCharacter.obj
+ 0002:000031d8       $SG93420                   0042e1d8     mainfunction.obj
+ 0002:00003208       $SG93421                   0042e208     mainfunction.obj
+ 0002:00003220       $SG104673                  0042e220     mainfunction.obj
+ 0002:00003234       $SG104674                  0042e234     mainfunction.obj
+ 0002:00003238       $SG104675                  0042e238     mainfunction.obj
+ 0002:000032a0       $SG104676                  0042e2a0     mainfunction.obj
+ 0002:00003364       $SG104677                  0042e364     mainfunction.obj
+ 0002:00003368       $SG104678                  0042e368     mainfunction.obj
+ 0002:00003390       $SG104738                  0042e390     mainfunction.obj
+ 0002:000033f4       $SG104980                  0042e3f4     mainfunction.obj
+ 0002:00003410       $SG104981                  0042e410     mainfunction.obj
+ 0002:00003418       $SG104982                  0042e418     mainfunction.obj
+ 0002:00003480       $SG104983                  0042e480     mainfunction.obj
+ 0002:00003548       $SG104984                  0042e548     mainfunction.obj
+ 0002:0000354c       $SG104985                  0042e54c     mainfunction.obj
  0002:00003640       $SG148631                  0042e640     BaseEngine.obj
  0002:00003670       $SG148664                  0042e670     BaseEngine.obj
  0002:00003688       $SG160387                  0042e688     BaseEngine.obj
@@ -3510,48 +3513,48 @@
  0002:00005378       $SG103624                  00430378     MyTileManager.obj
  0002:00005440       $SG103625                  00430440     MyTileManager.obj
  0002:00005444       $SG103626                  00430444     MyTileManager.obj
- 0002:00005530       $SG103463                  00430530     Psyeb10Bike.obj
- 0002:00005544       $SG103464                  00430544     Psyeb10Bike.obj
- 0002:00005548       $SG103465                  00430548     Psyeb10Bike.obj
- 0002:000055b0       $SG103466                  004305b0     Psyeb10Bike.obj
- 0002:00005674       $SG103467                  00430674     Psyeb10Bike.obj
- 0002:00005678       $SG103468                  00430678     Psyeb10Bike.obj
- 0002:000056a0       $SG103528                  004306a0     Psyeb10Bike.obj
- 0002:00005704       $SG103770                  00430704     Psyeb10Bike.obj
- 0002:00005720       $SG103771                  00430720     Psyeb10Bike.obj
- 0002:00005728       $SG103772                  00430728     Psyeb10Bike.obj
- 0002:00005790       $SG103773                  00430790     Psyeb10Bike.obj
- 0002:00005858       $SG103774                  00430858     Psyeb10Bike.obj
- 0002:0000585c       $SG103775                  0043085c     Psyeb10Bike.obj
- 0002:00005990       $SG103474                  00430990     Psyeb10Enemy.obj
- 0002:000059a4       $SG103475                  004309a4     Psyeb10Enemy.obj
- 0002:000059a8       $SG103476                  004309a8     Psyeb10Enemy.obj
- 0002:00005a10       $SG103477                  00430a10     Psyeb10Enemy.obj
- 0002:00005ad4       $SG103478                  00430ad4     Psyeb10Enemy.obj
- 0002:00005ad8       $SG103479                  00430ad8     Psyeb10Enemy.obj
- 0002:00005b00       $SG103539                  00430b00     Psyeb10Enemy.obj
- 0002:00005b64       $SG103781                  00430b64     Psyeb10Enemy.obj
- 0002:00005b80       $SG103782                  00430b80     Psyeb10Enemy.obj
- 0002:00005b88       $SG103783                  00430b88     Psyeb10Enemy.obj
- 0002:00005bf0       $SG103784                  00430bf0     Psyeb10Enemy.obj
- 0002:00005cb8       $SG103785                  00430cb8     Psyeb10Enemy.obj
- 0002:00005cbc       $SG103786                  00430cbc     Psyeb10Enemy.obj
- 0002:00005de8       $SG92470                   00430de8     Psyeb10Engine.obj
- 0002:00005dec       $SG92471                   00430dec     Psyeb10Engine.obj
- 0002:00005dfc       $SG92648                   00430dfc     Psyeb10Engine.obj
- 0002:00005e08       $SG104396                  00430e08     Psyeb10Engine.obj
- 0002:00005e1c       $SG104397                  00430e1c     Psyeb10Engine.obj
- 0002:00005e20       $SG104398                  00430e20     Psyeb10Engine.obj
- 0002:00005e88       $SG104399                  00430e88     Psyeb10Engine.obj
- 0002:00005f4c       $SG104400                  00430f4c     Psyeb10Engine.obj
- 0002:00005f50       $SG104401                  00430f50     Psyeb10Engine.obj
- 0002:00005f78       $SG104462                  00430f78     Psyeb10Engine.obj
- 0002:00005fdc       $SG104697                  00430fdc     Psyeb10Engine.obj
- 0002:00005ff8       $SG104698                  00430ff8     Psyeb10Engine.obj
- 0002:00006000       $SG104699                  00431000     Psyeb10Engine.obj
- 0002:00006068       $SG104700                  00431068     Psyeb10Engine.obj
- 0002:00006130       $SG104701                  00431130     Psyeb10Engine.obj
- 0002:00006134       $SG104702                  00431134     Psyeb10Engine.obj
+ 0002:00005530       $SG103473                  00430530     Psyeb10Bike.obj
+ 0002:00005544       $SG103474                  00430544     Psyeb10Bike.obj
+ 0002:00005548       $SG103475                  00430548     Psyeb10Bike.obj
+ 0002:000055b0       $SG103476                  004305b0     Psyeb10Bike.obj
+ 0002:00005674       $SG103477                  00430674     Psyeb10Bike.obj
+ 0002:00005678       $SG103478                  00430678     Psyeb10Bike.obj
+ 0002:000056a0       $SG103538                  004306a0     Psyeb10Bike.obj
+ 0002:00005704       $SG103780                  00430704     Psyeb10Bike.obj
+ 0002:00005720       $SG103781                  00430720     Psyeb10Bike.obj
+ 0002:00005728       $SG103782                  00430728     Psyeb10Bike.obj
+ 0002:00005790       $SG103783                  00430790     Psyeb10Bike.obj
+ 0002:00005858       $SG103784                  00430858     Psyeb10Bike.obj
+ 0002:0000585c       $SG103785                  0043085c     Psyeb10Bike.obj
+ 0002:00005990       $SG103489                  00430990     Psyeb10Enemy.obj
+ 0002:000059a4       $SG103490                  004309a4     Psyeb10Enemy.obj
+ 0002:000059a8       $SG103491                  004309a8     Psyeb10Enemy.obj
+ 0002:00005a10       $SG103492                  00430a10     Psyeb10Enemy.obj
+ 0002:00005ad4       $SG103493                  00430ad4     Psyeb10Enemy.obj
+ 0002:00005ad8       $SG103494                  00430ad8     Psyeb10Enemy.obj
+ 0002:00005b00       $SG103554                  00430b00     Psyeb10Enemy.obj
+ 0002:00005b64       $SG103796                  00430b64     Psyeb10Enemy.obj
+ 0002:00005b80       $SG103797                  00430b80     Psyeb10Enemy.obj
+ 0002:00005b88       $SG103798                  00430b88     Psyeb10Enemy.obj
+ 0002:00005bf0       $SG103799                  00430bf0     Psyeb10Enemy.obj
+ 0002:00005cb8       $SG103800                  00430cb8     Psyeb10Enemy.obj
+ 0002:00005cbc       $SG103801                  00430cbc     Psyeb10Enemy.obj
+ 0002:00005de8       $SG92480                   00430de8     Psyeb10Engine.obj
+ 0002:00005dec       $SG92481                   00430dec     Psyeb10Engine.obj
+ 0002:00005dfc       $SG92658                   00430dfc     Psyeb10Engine.obj
+ 0002:00005e08       $SG104420                  00430e08     Psyeb10Engine.obj
+ 0002:00005e1c       $SG104421                  00430e1c     Psyeb10Engine.obj
+ 0002:00005e20       $SG104422                  00430e20     Psyeb10Engine.obj
+ 0002:00005e88       $SG104423                  00430e88     Psyeb10Engine.obj
+ 0002:00005f4c       $SG104424                  00430f4c     Psyeb10Engine.obj
+ 0002:00005f50       $SG104425                  00430f50     Psyeb10Engine.obj
+ 0002:00005f78       $SG104486                  00430f78     Psyeb10Engine.obj
+ 0002:00005fdc       $SG104721                  00430fdc     Psyeb10Engine.obj
+ 0002:00005ff8       $SG104722                  00430ff8     Psyeb10Engine.obj
+ 0002:00006000       $SG104723                  00431000     Psyeb10Engine.obj
+ 0002:00006068       $SG104724                  00431068     Psyeb10Engine.obj
+ 0002:00006130       $SG104725                  00431130     Psyeb10Engine.obj
+ 0002:00006134       $SG104726                  00431134     Psyeb10Engine.obj
  0002:00006290       $SG103314                  00431290     Psyeb10TileManager.obj
  0002:000062a4       $SG103315                  004312a4     Psyeb10TileManager.obj
  0002:000062a8       $SG103316                  004312a8     Psyeb10TileManager.obj

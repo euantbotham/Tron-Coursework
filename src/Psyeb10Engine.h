@@ -20,6 +20,7 @@ public:
     void virtSetupBackgroundBuffer() override;
     void virtDrawStringsOnTop() override;
     int virtInitialiseObjects() override;
+    void virtMouseDown(int iButton, int iX, int iY) override;
     void resetGame();
 protected:
     Psyeb10TileManager tm;
