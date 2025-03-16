@@ -6,7 +6,8 @@
 #include <sstream>
 #include <string>
 #include "Psyeb10Enemy.h"
-
+#include "SimpleImage.h"
+#include "ImageManager.h"
 
 void Psyeb10Engine::virtSetupBackgroundBuffer()
 {
@@ -30,9 +31,14 @@ void Psyeb10Engine::virtSetupBackgroundBuffer()
 	}
 	
 	//background text
-	this->drawBackgroundString(600, 50, "TRON", 0x0000FF, 0);
+	this->drawBackgroundString(710, 25, "C++", 0x57E2F9, 0);
 
-	//Setup tile manager
+
+	// Background Image used as game logo
+	SimpleImage image = ImageManager::loadImage("TronLogo.png", true);
+	image.renderImage(getBackgroundSurface(), 0, 0, 575, 20, image.getWidth(), image.getHeight());
+
+	//Setup tile managerW
 	for (int i = 0; i < 120; i++)
 		for (int j = 0; j < 120; j++)
 			tm.setMapValue(i, j, 0);
