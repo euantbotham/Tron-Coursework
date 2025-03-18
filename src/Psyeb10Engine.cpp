@@ -61,13 +61,13 @@ void Psyeb10Engine::virtDrawStringsOnTop()
 	std::stringstream p1Lives, p1Score;
 	p1Lives << "lives : " << mC->getLives();
 	std::string livesMessage = p1Lives.str();
-	this->drawForegroundString(200, 200, livesMessage.c_str(), 0x0000FF,0 );
+	this->drawForegroundString(875, 20, livesMessage.c_str(), 0x57E2F9,0 );
 	
 	
 	p1Score << "SCORE : " << gameScore;
 	livesMessage = p1Score.str();
 
-	this->drawForegroundString(0, 0, livesMessage.c_str(), 0x0000FF, 0);
+	this->drawForegroundString(300, 20, livesMessage.c_str(), 0x57E2F9, 0);
 }
 
 

@@ -1,6 +1,6 @@
 #include "header.h"
 #include "Psyeb10Bike.h"
-
+//Ignore this class it will be used in my part 2 of the CW as for now I left it in so the code runs but no object is created from this class.
 Psyeb10Bike::Psyeb10Bike(int xStart, int yStart, 
 	BaseEngine* pEngine, int iWidth, int iHeight, 
 	bool useTopLeftFor00) : DisplayableObject(xStart, yStart, pEngine, iWidth, iHeight, useTopLeftFor00)
