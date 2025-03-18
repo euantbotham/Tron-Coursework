@@ -9,6 +9,14 @@
 #include "SimpleImage.h"
 #include "ImageManager.h"
 
+Psyeb10Engine::Psyeb10Engine()
+{
+	gameScore = 0;
+	lastTick = -1;
+}
+
+
+
 void Psyeb10Engine::virtSetupBackgroundBuffer()
 {
 	//TODO add lines to make a grid
@@ -50,10 +58,16 @@ void Psyeb10Engine::virtSetupBackgroundBuffer()
 void Psyeb10Engine::virtDrawStringsOnTop()
 {
 	MainCharacter* mC = dynamic_cast<MainCharacter*>(getDisplayableObject(0));
-	std::stringstream p1Lives;
+	std::stringstream p1Lives, p1Score;
 	p1Lives << "lives : " << mC->getLives();
 	std::string livesMessage = p1Lives.str();
 	this->drawForegroundString(200, 200, livesMessage.c_str(), 0x0000FF,0 );
+	
+	
+	p1Score << "SCORE : " << gameScore;
+	livesMessage = p1Score.str();
+
+	this->drawForegroundString(0, 0, livesMessage.c_str(), 0x0000FF, 0);
 }
 
 
@@ -101,5 +115,16 @@ void Psyeb10Engine::virtMouseDown(int iButton, int iX, int iY)
 			dynamic_cast<MainCharacter*>(getDisplayableObject(0))->setPaused(true);
 			dynamic_cast<Psyeb10Enemy*>(getDisplayableObject(1))->setPaused(true);
 		}
+	}
+}
+
+void Psyeb10Engine::virtMainLoopPreUpdate()
+{
+	
+	int time = this->getModifiedTime()/1000;
+	if (time > lastTick)
+	{
+		lastTick = time;
+		gameScore += 10;
 	}
 }

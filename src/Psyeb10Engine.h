@@ -17,16 +17,20 @@ class Psyeb10Engine :
     friend class Psyeb10Enemy;
     friend class Psyeb10Bike;
 public:
+    Psyeb10Engine();
     void virtSetupBackgroundBuffer() override;
     void virtDrawStringsOnTop() override;
     int virtInitialiseObjects() override;
     void virtMouseDown(int iButton, int iX, int iY) override;
     void resetGame();
+    void virtMainLoopPreUpdate();
 protected:
     Psyeb10TileManager tm;
     const int gridstartX = 350;
     const int gridstartY = 100;
     const int gridEndX = 950;
     const int gridEndY = 700;
+    int gameScore;
+    int lastTick;
 };
 
