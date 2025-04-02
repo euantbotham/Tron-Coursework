@@ -8,6 +8,7 @@
 #include "Psyeb10Enemy.h"
 #include "SimpleImage.h"
 #include "ImageManager.h"
+#include "ExampleObjects.h"
 
 Psyeb10Engine::Psyeb10Engine()
 {
@@ -43,8 +44,8 @@ void Psyeb10Engine::virtSetupBackgroundBuffer()
 
 
 	// Background Image used as game logo
-	SimpleImage image = ImageManager::loadImage("TronLogo.png", true);
-	image.renderImage(getBackgroundSurface(), 0, 0, 575, 20, image.getWidth(), image.getHeight());
+	SimpleImage image = ImageManager::loadImage("MainCharacter.png", true);
+	image.renderImageWithMask(getBackgroundSurface(), 0, 0, 575, 20, image.getWidth(), image.getHeight());
 
 	//Setup tile managerW
 	for (int i = 0; i < 120; i++)

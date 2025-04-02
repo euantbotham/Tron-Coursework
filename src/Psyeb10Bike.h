@@ -8,10 +8,12 @@ class Psyeb10Bike :
     public DisplayableObject
 {
 public:
-    Psyeb10Bike(int xStart, int yStart, BaseEngine* pEngine, int iWidth, int iHeight, bool useTopLeftFor00);
+    Psyeb10Bike(int xStart, int yStart, BaseEngine* pEngine, int iWidth, int iHeigh);
     void virtDoUpdate(int iCurrentTime) override;
     void virtDraw() override;
     virtual void virtHandleDeath();
+    virtual void virtPostMoveLogic();
+    void setPaused(bool paused);
 protected:
     int speedX;
     int speedY;
@@ -22,6 +24,9 @@ protected:
 
     //Pointer to Subclass to access the tile manager
     Psyeb10Engine* engine;
+
+    //Stores if object game is paused
+    bool isPaused;
 };
 
 

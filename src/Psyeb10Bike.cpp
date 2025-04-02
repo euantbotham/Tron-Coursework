@@ -2,12 +2,15 @@
 #include "Psyeb10Bike.h"
 //Ignore this class it will be used in my part 2 of the CW as for now I left it in so the code runs but no object is created from this class.
 Psyeb10Bike::Psyeb10Bike(int xStart, int yStart,
-	BaseEngine* pEngine, int iWidth, int iHeight, 
-	bool useTopLeftFor00) : DisplayableObject(xStart, yStart, pEngine, iWidth, iHeight, useTopLeftFor00)
-{
+	BaseEngine* pEngine, int iWidth, int iHeight) : DisplayableObject(xStart, yStart, pEngine, iWidth, iHeight, true){
 	// Set last tiles to -1
 	lastTileX = -1;
 	lastTileY = -1;
+
+	speedX = 0;
+	speedY = 0;
+
+	isPaused = false;
 
 	//Cast so can access specific features
 	engine = dynamic_cast<Psyeb10Engine*>(getEngine());
@@ -16,6 +19,13 @@ Psyeb10Bike::Psyeb10Bike(int xStart, int yStart,
 
 void Psyeb10Bike::virtDoUpdate(int iCurrentTime)
 {
+
+	if (isPaused)
+	{
+		return;
+	}
+
+
 	//std::cout << iCurrentTime << std::endl;
 	if (engine->tm.isValidTilePosition(getXCentre(), getYCentre()))
 	{
@@ -36,6 +46,8 @@ void Psyeb10Bike::virtDoUpdate(int iCurrentTime)
 
 	m_iCurrentScreenX += speedX;
 	m_iCurrentScreenY += speedY;
+
+	virtPostMoveLogic();
 	// Ensure that the objects get redrawn on the display
 	this->redrawDisplay();
 }
@@ -48,4 +60,13 @@ void Psyeb10Bike::virtDraw()
 //Handle death function for each bike, meant to be overriden
 void Psyeb10Bike::virtHandleDeath()
 {
+}
+
+// Logic that can be ran after each move on the grid
+void Psyeb10Bike::virtPostMoveLogic()
+{
+}
+
+void Psyeb10Bike::setPaused(bool paused) {
+	isPaused = paused;
 }
