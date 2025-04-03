@@ -129,3 +129,8 @@ void Psyeb10Engine::virtMainLoopPreUpdate()
 		gameScore += 10;
 	}
 }
+
+Psyeb10TileManager* Psyeb10Engine::getTileManager()
+{
+	return &tm;
+}

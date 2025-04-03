@@ -1,5 +1,6 @@
 #include "header.h"
 #include "Psyeb10Bike.h"
+#include "Psyeb10Engine.h"
 //Ignore this class it will be used in my part 2 of the CW as for now I left it in so the code runs but no object is created from this class.
 Psyeb10Bike::Psyeb10Bike(int xStart, int yStart,
 	BaseEngine* pEngine, int iWidth, int iHeight) : DisplayableObject(xStart, yStart, pEngine, iWidth, iHeight, true){
@@ -26,7 +27,6 @@ void Psyeb10Bike::virtDoUpdate(int iCurrentTime)
 	}
 
 
-	//std::cout << iCurrentTime << std::endl;
 	if (engine->tm.isValidTilePosition(getXCentre(), getYCentre()))
 	{
 		int mapX = engine->tm.getMapXForScreenX(getXCentre()); // Which column?
@@ -35,7 +35,8 @@ void Psyeb10Bike::virtDoUpdate(int iCurrentTime)
 		// If square has not been painted on
 		if (value == 0 && !(mapX == lastTileX && mapY == lastTileY))
 		{
-			engine->tm.setAndRedrawMapValueAt(mapX, mapY, 1, engine, engine->getBackgroundSurface());
+			// Update this so it can be fixed later
+			engine->tm.setAndRedrawMapValueAt(mapX, mapY, 2, engine, engine->getBackgroundSurface());
 			lastTileX = mapX;
 			lastTileY = mapY;
 		}
@@ -48,8 +49,6 @@ void Psyeb10Bike::virtDoUpdate(int iCurrentTime)
 	m_iCurrentScreenY += speedY;
 
 	virtPostMoveLogic();
-	// Ensure that the objects get redrawn on the display
-	this->redrawDisplay();
 }
 
 void Psyeb10Bike::virtDraw()

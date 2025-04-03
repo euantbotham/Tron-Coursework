@@ -1,7 +1,10 @@
 #include "header.h"
 #include "Psyeb10Enemy.h"
 #include "Psyeb10Engine.h"
-Psyeb10Enemy::Psyeb10Enemy(BaseEngine* pEngine) : DisplayableObject(500,150,pEngine, 20,20,true)
+#include "DisplayableObject.h"
+#include "Psyeb10TileManager.h"
+#include <iostream>
+Psyeb10Enemy::Psyeb10Enemy(BaseEngine* pEngine) : Psyeb10Bike(500,150,pEngine, 20,20)
 {
 	speedX = 0;
 	speedY = 1;
@@ -11,64 +14,6 @@ Psyeb10Enemy::Psyeb10Enemy(BaseEngine* pEngine) : DisplayableObject(500,150,pEng
 	isPaused = false;
 }
 
-void Psyeb10Enemy::virtDoUpdate(int iCurrentTime)
-{
-	if (isPaused)
-	{
-		return;
-	}
-	
-	
-	if (engine->tm.isValidTilePosition(getXCentre(), getYCentre()))
-	{
-		int mapX = engine->tm.getMapXForScreenX(getXCentre()); // Which column?
-		int mapY = engine->tm.getMapYForScreenY(getYCentre()); // Which row?
-		int value = engine->tm.getMapValue(mapX, mapY); // Current value?
-		// If square has not been painted on and landed on a new tile
-		if (value == 0 && !(mapX == lastTileX && mapY == lastTileY))
-		{
-			engine->tm.setAndRedrawMapValueAt(mapX, mapY, 2, engine, engine->getBackgroundSurface());
-			lastTileX = mapX;
-			lastTileY = mapY;
-			// If next move is invalid
-			if (!(isValidMove(getXCentre() + 15*speedX, getYCentre()+15*speedY))) {
-				// If moving up or down
-				if (speedX == 0) {
-					if (isValidMove(getXCentre() + 15, getYCentre())) {
-						speedX = 1;
-						speedY = 0;
-					}
-					else if (isValidMove(getXCentre() - 15, getYCentre())) {
-						speedX = -1;
-						speedY = 0;
-					}
-				}// If moving left to right
-				else {
-					if (isValidMove(getXCentre(), getYCentre()+ 15)) {
-						speedX = 0;
-						speedY = 1;
-					}
-					else if (isValidMove(getXCentre(), getYCentre()-15)) {
-						speedX = 0;
-						speedY = -1;
-					}
-				}
-			}
-		}
-		else if (value != 0 && !(mapX == lastTileX && mapY == lastTileY)) {
-			//TODO add death logic for enemy, Eventually make class so they both a sub of it 
-			// Make a new function for subclasses and get this to just call them, make it virt.
-			//Add logic to increase score
-			engine->resetGame();
-			speedX = 0;
-			speedY = 1;
-		}
-	}
-	m_iCurrentScreenX += speedX;
-	m_iCurrentScreenY += speedY;
-	// Ensure that the objects get redrawn on the display
-	this->redrawDisplay();
-}
 
 void Psyeb10Enemy::virtDraw()
 {
@@ -96,12 +41,44 @@ void Psyeb10Enemy::virtDraw()
 }
 
 
+
+void Psyeb10Enemy::virtPostMoveLogic()
+{
+	// Ensure that the objects get redrawn on the display
+	this->redrawDisplay();
+	// If next move is invalid
+	if (!(this->isValidMove(this->getXCentre() + 15 * speedX, this->getYCentre() + 15 * speedY))) {
+		// If moving up or down
+		if (speedX == 0) {
+			if (isValidMove(getXCentre() + 15, getYCentre())) {
+				speedX = 1;
+				speedY = 0;
+			}
+			else if (isValidMove(getXCentre() - 15, getYCentre())) {
+				speedX = -1;
+				speedY = 0;
+			}
+		}// If moving left to right
+		else {
+			if (isValidMove(getXCentre(), getYCentre() + 15)) {
+				speedX = 0;
+				speedY = 1;
+			}
+			else if (isValidMove(getXCentre(), getYCentre() - 15)) {
+				speedX = 0;
+				speedY = -1;
+			}
+		}
+	}
+}
+
 bool Psyeb10Enemy::isValidMove(int x, int y) {
-	if (engine->tm.isValidTilePosition(x, y)) {
+	if (engine->getTileManager()->isValidTilePosition(x, y)) {
+		//return true;
 		int mapX, mapY, tileVal;
-		mapX = engine->tm.getMapXForScreenX(x);
-		mapY = engine->tm.getMapYForScreenY(y);
-		tileVal = (engine->tm.getMapValue(mapX, mapY));
+		mapX = engine->getTileManager()->getMapXForScreenX(x);
+		mapY = engine->getTileManager()->getMapYForScreenY(y);
+		tileVal = (engine->getTileManager()->getMapValue(mapX, mapY));
 		if (tileVal == 0) {
 			return true;
 		}
@@ -110,7 +87,13 @@ bool Psyeb10Enemy::isValidMove(int x, int y) {
 }
 
 
-void Psyeb10Enemy::setPaused(bool paused)
+
+void Psyeb10Enemy::virtHandleDeath() 
 {
-	isPaused = paused;
+	//TODO add death logic for enemy, Eventually make class so they both a sub of it 
+	// Make a new function for subclasses and get this to just call them, make it virt.
+	//Add logic to increase score
+	engine->resetGame();
+	speedX = 0;
+	speedY = 1;
 }
