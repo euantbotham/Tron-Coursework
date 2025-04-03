@@ -1,65 +1,18 @@
 #include "header.h"
 #include "MainCharacter.h"
-#include "BaseEngine.h"
-#include <iostream>
-#include "SimpleImage.h"
 #include "Psyeb10Engine.h"
+#include "SimpleImage.h"
 #include "UtilCollisionDetection.h"
 
-MainCharacter::MainCharacter(BaseEngine* pEngine) : DisplayableObject(650, 400, pEngine, 20, 20, true)
+MainCharacter::MainCharacter(BaseEngine* pEngine) : Psyeb10Bike(650, 400, pEngine, 20, 20, 1)
 {
-	//std::cout << "here" << std::endl;
 	speedX = 0;
 	speedY = -1;
-	lastTileX = -1;
-	lastTileY = -1;
-	engine = dynamic_cast<Psyeb10Engine*>(getEngine());
 	lives = 3;
-	isPaused = false;
 }
 
 
-//TODO current direction issues need to account that
-void MainCharacter::virtDoUpdate(int iCurrentTime)
-{	
-	// Don't update if paused
-	if (isPaused)
-		return;
-	//std::cout << iCurrentTime << std::endl;
-	//Checks valid tile and sets a value for it
-	if (engine->tm.isValidTilePosition( getXCentre(),  getYCentre()))
-	{
-		int mapX = engine->tm.getMapXForScreenX(getXCentre()); // Which column?
-		int mapY = engine->tm.getMapYForScreenY(getYCentre()); // Which row?
-		int value = engine->tm.getMapValue(mapX, mapY); // Current value?
-		// If square has not been painted on
-		if (value == 0 && !(mapX == lastTileX && mapY == lastTileY))
-		{
-			engine->tm.setAndRedrawMapValueAt(mapX, mapY, 1, engine, engine->getBackgroundSurface());
-			lastTileX = mapX;
-			lastTileY = mapY;
-		}
-		else if (value != 0 &&!(mapX == lastTileX && mapY == lastTileY)) {
-			lives--;
-			engine->resetGame();
-			
-			// Change this as does not work when both die
-			speedX = 0;
-			speedY = -1;
-		}
-	}
-	//Check object collisions if so reset the game and don't decrement lives as is a crash
-	DisplayableObject* enemy = engine->getDisplayableObject(1);
-	// Both objects are 20 by 20 rectangles so + and - 10 used to find bounds 
-	if (CollisionDetection::checkRectangles(getXCentre() - 10, getXCentre() + 10, getYCentre() - 10, getYCentre() + 10,
-		enemy->getXCentre() - 10, enemy->getXCentre() + 10, enemy->getYCentre() - 10, enemy->getYCentre() + 10)) {
-		engine->resetGame();
-	}
-	m_iCurrentScreenX += speedX;
-	m_iCurrentScreenY += speedY;
-	// Ensure that the objects get redrawn on the display
-	this->redrawDisplay();
-}
+
 
 void MainCharacter::virtDraw()
 {
@@ -91,7 +44,7 @@ void MainCharacter::virtDraw()
 void MainCharacter::virtKeyDown(int iKeyCode)
 {
 	switch (iKeyCode) {
-	// Add change image here too.
+	//TODO Add change image here too.
 	case SDLK_w:
 		speedY = -1;
 		speedX = 0;
@@ -125,7 +78,23 @@ void MainCharacter::setLives(int newLives)
 	this->lives = newLives;
 }
 
-void MainCharacter::setPaused(bool paused)
+void MainCharacter::virtPostMoveLogic()
 {
-	isPaused = paused;
+	//Check object collisions if so reset the game and don't decrement lives as is a crash
+	DisplayableObject* enemy = engine->getDisplayableObject(1);
+	// Both objects are 20 by 20 rectangles so + and - 10 used to find bounds 
+	if (CollisionDetection::checkRectangles(getXCentre() - 10, getXCentre() + 10, getYCentre() - 10, getYCentre() + 10,
+		enemy->getXCentre() - 10, enemy->getXCentre() + 10, enemy->getYCentre() - 10, enemy->getYCentre() + 10)) {
+		engine->resetGame();
+	}
+}
+
+void MainCharacter::virtHandleDeath()
+{
+	lives--;
+	engine->resetGame();
+
+	//TODO Change this as does not work when both die
+	speedX = 0;
+	speedY = -1;
 }

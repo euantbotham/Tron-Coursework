@@ -40,8 +40,6 @@ void Psyeb10Enemy::virtDraw()
 
 void Psyeb10Enemy::virtPostMoveLogic()
 {
-	// Ensure that the objects get redrawn on the display
-	this->redrawDisplay();
 	// If next move is invalid
 	if (!(this->isValidMove(this->getXCentre() + 15 * speedX, this->getYCentre() + 15 * speedY))) {
 		// If moving up or down

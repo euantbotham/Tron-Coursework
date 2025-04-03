@@ -14,7 +14,7 @@ public:
     void virtDoUpdate(int iCurrentTime) override;
     //TODO see if this can be removed
     virtual void virtDraw() override;
-    
+    virtual void virtKeyDown(int iKeyCode) override;
     virtual void virtHandleDeath();
     virtual void virtPostMoveLogic();
     void setPaused(bool paused);

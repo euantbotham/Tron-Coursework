@@ -28,16 +28,16 @@ void Psyeb10Bike::virtDoUpdate(int iCurrentTime)
 	}
 
 	// TODO update code so no longer needs to be a friend class
-	if (engine->tm.isValidTilePosition(getXCentre(), getYCentre()))
+	if (engine->getTileManager()->isValidTilePosition(getXCentre(), getYCentre()))
 	{
-		int mapX = engine->tm.getMapXForScreenX(getXCentre()); // Which column?
-		int mapY = engine->tm.getMapYForScreenY(getYCentre()); // Which row?
-		int value = engine->tm.getMapValue(mapX, mapY); // Current value?
+		int mapX = engine->getTileManager()->getMapXForScreenX(getXCentre()); // Which column?
+		int mapY = engine->getTileManager()->getMapYForScreenY(getYCentre()); // Which row?
+		int value = engine->getTileManager()->getMapValue(mapX, mapY); // Current value?
 		// If square has not been painted on
 		if (value == 0 && !(mapX == lastTileX && mapY == lastTileY))
 		{
 			// Update this so it can be fixed later
-			engine->tm.setAndRedrawMapValueAt(mapX, mapY, this->bikeValue, engine, engine->getBackgroundSurface());
+			engine->getTileManager()->setAndRedrawMapValueAt(mapX, mapY, this->bikeValue, engine, engine->getBackgroundSurface());
 			lastTileX = mapX;
 			lastTileY = mapY;
 		}
@@ -48,6 +48,9 @@ void Psyeb10Bike::virtDoUpdate(int iCurrentTime)
 
 	m_iCurrentScreenX += speedX;
 	m_iCurrentScreenY += speedY;
+
+	// Ensure that the objects get redrawn on the display
+	this->redrawDisplay();
 
 	virtPostMoveLogic();
 }
@@ -69,4 +72,8 @@ void Psyeb10Bike::virtPostMoveLogic()
 
 void Psyeb10Bike::setPaused(bool paused) {
 	isPaused = paused;
+}
+
+void Psyeb10Bike::virtKeyDown(int iKeyCode)
+{
 }

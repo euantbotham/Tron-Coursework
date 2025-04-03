@@ -1,20 +1,18 @@
 #pragma once
 #include "BaseEngine.h"
 #include "Psyeb10TileManager.h"
-#include "MainCharacter.h"
-#include "Psyeb10Bike.h"
 
 
 //TODO remove other classes when fully subclassed
-class MainCharacter;
+//class MainCharacter;
 //class Psyeb10Enemy;
-class Psyeb10Bike;
+//class Psyeb10Bike;
 class Psyeb10Engine :
     public BaseEngine
 {
-    friend class MainCharacter;
+    //friend class MainCharacter;
     //friend class Psyeb10Enemy;
-    friend class Psyeb10Bike;
+    //friend class Psyeb10Bike;
 public:
     Psyeb10Engine();
     void virtSetupBackgroundBuffer() override;
