@@ -10,9 +10,11 @@ class Psyeb10Bike:
     public DisplayableObject
 {
 public:
-    Psyeb10Bike(int xStart, int yStart, BaseEngine* pEngine, int iWidth, int iHeigh);
+    Psyeb10Bike(int xStart, int yStart, BaseEngine* pEngine, int iWidth, int iHeigh, int bikeVal);
     void virtDoUpdate(int iCurrentTime) override;
+    //TODO see if this can be removed
     virtual void virtDraw() override;
+    
     virtual void virtHandleDeath();
     virtual void virtPostMoveLogic();
     void setPaused(bool paused);
@@ -29,6 +31,9 @@ protected:
 
     //Stores if object game is paused
     bool isPaused;
+
+    // An integer used to assign a value to the tile manager
+    int bikeValue;
 };
 
 

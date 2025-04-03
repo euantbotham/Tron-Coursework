@@ -4,14 +4,10 @@
 #include "DisplayableObject.h"
 #include "Psyeb10TileManager.h"
 #include <iostream>
-Psyeb10Enemy::Psyeb10Enemy(BaseEngine* pEngine) : Psyeb10Bike(500,150,pEngine, 20,20)
+Psyeb10Enemy::Psyeb10Enemy(BaseEngine* pEngine) : Psyeb10Bike(500,150,pEngine, 20,20, 2)
 {
 	speedX = 0;
 	speedY = 1;
-	lastTileX = -1;
-	lastTileY = -1;
-	engine = dynamic_cast<Psyeb10Engine*>(pEngine);
-	isPaused = false;
 }
 
 
