@@ -22,6 +22,11 @@ void pauseState::mainLoopPreUpdate()
 
 void pauseState::mouseDown(int iButton, int iX, int iY)
 {
+	if (iButton == SDL_BUTTON_RIGHT)
+	{
+		engine->unpause();
+		engine->setState();
+	}
 }
 
 

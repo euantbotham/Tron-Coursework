@@ -18,8 +18,8 @@ public:
 		this->engine = engineParam;
 		gameScore = 0;
 		lastTick = -1;
-		mainChar = NULL;
-		enemy = NULL;
+		mainChar = nullptr;
+		enemy = nullptr;
 	}
 	void enter() override;
 	void foreGroundStrings() override;

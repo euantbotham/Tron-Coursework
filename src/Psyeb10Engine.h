@@ -7,8 +7,6 @@
 //#include "pauseState.h"
 
 class Psyeb10States;
-//class gameState;
-//class pauseState;
 
 class Psyeb10Engine :
     public BaseEngine
@@ -22,11 +20,12 @@ public:
     void resetGame();
     void virtMainLoopPreUpdate();
     void virtCleanUp() override;
+    void setState(Psyeb10States* state);
     void setState();
     Psyeb10TileManager* getTileManager();
 protected:
     Psyeb10States* currentState;
-    //gameState* game;
-    //pauseState* pause;
+    // Used to store a second state if needed
+    Psyeb10States* secondState;
 };
 

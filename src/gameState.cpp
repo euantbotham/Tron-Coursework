@@ -3,6 +3,7 @@
 #include <sstream>
 #include <string>
 #include "Psyeb10Enemy.h"
+#include "pauseState.h"
 
 void gameState::enter()
 {
@@ -30,7 +31,7 @@ void gameState::enter()
 
 
 	// Background Image used as game logo
-	SimpleImage image = ImageManager::loadImage("MainCharacter.png", true);
+	SimpleImage image = ImageManager::loadImage("MainCharacter.png", false);
 	image.renderImageWithMask(engine->getBackgroundSurface(), 0, 0, 575, 20, image.getWidth(), image.getHeight());
 
 	//Setup tile managerW
@@ -97,7 +98,7 @@ void gameState::mouseDown(int iButton, int iX, int iY) {
 			engine->pause();
 			this->mainChar->setPaused(true);
 			this->enemy->setPaused(true);
-			engine->setState();
+			engine->setState(new pauseState(engine));
 		}
 	}
 }

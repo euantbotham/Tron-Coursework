@@ -14,6 +14,7 @@ public:
 	virtual void reset();
 	virtual void mouseDown(int iButton, int iX, int iY);
 	virtual void mainLoopPreUpdate();
+	virtual ~Psyeb10States() {}
 protected:
 	Psyeb10Engine* engine;
 };

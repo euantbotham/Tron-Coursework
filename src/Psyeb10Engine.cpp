@@ -16,10 +16,8 @@
 Psyeb10Engine::Psyeb10Engine()
 {
 	// Could potentially make this a smart pointer
-	//game = new gameState(this);
 	currentState = new gameState(this);
-	//this->pause = new pauseState(this);
-	
+	secondState = nullptr;
 }
 
 
@@ -68,10 +66,33 @@ Psyeb10TileManager* Psyeb10Engine::getTileManager()
 
 void Psyeb10Engine::virtCleanUp() {
 	delete currentState;
+	
+	if (secondState != nullptr)
+		delete secondState;
+	
 }
 
-void Psyeb10Engine::setState() {
-	this->currentState = new pauseState(this);
+void Psyeb10Engine::setState(Psyeb10States* state ) {
+	
+	secondState = currentState;
+	// Remove objects from array
+	destroyOldObjects(true);
+	this->currentState = state;
+	lockBackgroundForDrawing();
+	this->currentState->enter();
+	unlockBackgroundForDrawing();
+	redrawDisplay();
+}
+
+
+void Psyeb10Engine::setState()
+{
+	// Remove objects from array
+	delete this->currentState;
+	destroyOldObjects(true);
+	this->currentState = secondState;
+	secondState = nullptr;
+	currentState->initObjects();
 	lockBackgroundForDrawing();
 	this->currentState->enter();
 	unlockBackgroundForDrawing();
