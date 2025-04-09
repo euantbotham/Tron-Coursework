@@ -3,6 +3,7 @@
 #include <sstream>
 #include <string>
 #include "Psyeb10Enemy.h"
+
 void gameState::enter()
 {
 	//TODO add lines to make a grid
@@ -96,6 +97,7 @@ void gameState::mouseDown(int iButton, int iX, int iY) {
 			engine->pause();
 			this->mainChar->setPaused(true);
 			this->enemy->setPaused(true);
+			engine->setState();
 		}
 	}
 }

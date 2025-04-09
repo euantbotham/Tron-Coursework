@@ -101,6 +101,7 @@
     <ClInclude Include="MyDemoA.h" />
     <ClInclude Include="MyObjectB.h" />
     <ClInclude Include="MyTileManager.h" />
+    <ClInclude Include="pauseState.h" />
     <ClInclude Include="Psyeb10Bike.h" />
     <ClInclude Include="Psyeb10Enemy.h" />
     <ClInclude Include="Psyeb10Engine.h" />
@@ -149,6 +150,7 @@
     <ClCompile Include="MyDemoA.cpp" />
     <ClCompile Include="MyObjectB.cpp" />
     <ClCompile Include="MyTileManager.cpp" />
+    <ClCompile Include="pauseState.cpp" />
     <ClCompile Include="Psyeb10Bike.cpp" />
     <ClCompile Include="Psyeb10Enemy.cpp" />
     <ClCompile Include="Psyeb10Engine.cpp" />

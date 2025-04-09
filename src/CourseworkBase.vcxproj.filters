@@ -37,6 +37,12 @@
     <Filter Include="Header Files\psyeb10Demos">
       <UniqueIdentifier>{6165dd9d-108a-4e61-9baf-98cbca27c3fa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\states">
+      <UniqueIdentifier>{2a378c46-c170-494b-98db-517f929e0668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\states">
+      <UniqueIdentifier>{44b039b0-785f-4c4c-ba06-337940f03390}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h">
@@ -156,11 +162,14 @@
     <ClInclude Include="Psyeb10Bike.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Psyeb10States.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="pauseState.h">
+      <Filter>Header Files\states</Filter>
     </ClInclude>
     <ClInclude Include="gameState.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\states</Filter>
+    </ClInclude>
+    <ClInclude Include="Psyeb10States.h">
+      <Filter>Header Files\states</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -243,10 +252,13 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Psyeb10States.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\states</Filter>
     </ClCompile>
     <ClCompile Include="gameState.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\states</Filter>
+    </ClCompile>
+    <ClCompile Include="pauseState.cpp">
+      <Filter>Source Files\states</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

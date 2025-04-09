@@ -1,9 +1,14 @@
 #pragma once
+#include "header.h"
 #include "BaseEngine.h"
-#include "Psyeb10TileManager.h"
 #include "Psyeb10States.h"
+#include "Psyeb10TileManager.h"
+//#include "gameState.h"
+//#include "pauseState.h"
 
-class gameState;
+class Psyeb10States;
+//class gameState;
+//class pauseState;
 
 class Psyeb10Engine :
     public BaseEngine
@@ -17,8 +22,11 @@ public:
     void resetGame();
     void virtMainLoopPreUpdate();
     void virtCleanUp() override;
+    void setState();
     Psyeb10TileManager* getTileManager();
 protected:
-    gameState* currentState;
+    Psyeb10States* currentState;
+    //gameState* game;
+    //pauseState* pause;
 };
 

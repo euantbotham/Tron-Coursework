@@ -6,6 +6,10 @@
 #include "MainCharacter.h"
 #include "Psyeb10Enemy.h"
 
+class Psyeb10Engine;
+class MainCharacter;
+class Psyeb10Enemy;
+
 class gameState : public Psyeb10States
 {
 public:
@@ -14,13 +18,15 @@ public:
 		this->engine = engineParam;
 		gameScore = 0;
 		lastTick = -1;
+		mainChar = NULL;
+		enemy = NULL;
 	}
-	void enter();
+	void enter() override;
 	void foreGroundStrings() override;
 	void initObjects() override;
 	void reset() override;
 	void mouseDown(int iButton, int iX, int iY) override;
-	void mainLoopPreUpdate();
+	void mainLoopPreUpdate() override;
 	Psyeb10TileManager* getTileManager();
 
 protected:

@@ -1,3 +1,4 @@
+#pragma once
 #include "header.h"
 #include "Psyeb10Engine.h"
 #include "MyObjectB.h"
@@ -10,10 +11,15 @@
 #include "ImageManager.h"
 #include "Psyeb10States.h"
 #include "gameState.h"
+#include "pauseState.h"
 
 Psyeb10Engine::Psyeb10Engine()
 {
+	// Could potentially make this a smart pointer
+	//game = new gameState(this);
 	currentState = new gameState(this);
+	//this->pause = new pauseState(this);
+	
 }
 
 
@@ -55,10 +61,19 @@ void Psyeb10Engine::virtMainLoopPreUpdate()
 
 Psyeb10TileManager* Psyeb10Engine::getTileManager()
 {
-	return currentState->getTileManager();
+	//TODO Fix this later see which states need tile managers, if all then its good
+	return dynamic_cast<gameState*>(currentState)->getTileManager();
 }
 
 
 void Psyeb10Engine::virtCleanUp() {
 	delete currentState;
+}
+
+void Psyeb10Engine::setState() {
+	this->currentState = new pauseState(this);
+	lockBackgroundForDrawing();
+	this->currentState->enter();
+	unlockBackgroundForDrawing();
+	redrawDisplay();
 }
