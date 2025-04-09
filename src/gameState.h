@@ -27,6 +27,9 @@ public:
 	void reset() override;
 	void mouseDown(int iButton, int iX, int iY) override;
 	void mainLoopPreUpdate() override;
+	void reEntry()override;
+
+	void drawBackground();
 	Psyeb10TileManager* getTileManager();
 
 protected:

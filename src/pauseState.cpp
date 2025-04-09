@@ -33,3 +33,7 @@ void pauseState::mouseDown(int iButton, int iX, int iY)
 void pauseState::reset()
 {
 }
+
+void pauseState::reEntry()
+{
+}

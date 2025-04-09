@@ -24,3 +24,7 @@ void Psyeb10States::mouseDown(int iButton, int iX, int iY)
 void Psyeb10States::reset()
 {
 }
+
+void Psyeb10States::reEntry()
+{
+}

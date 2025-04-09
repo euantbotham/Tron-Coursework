@@ -7,34 +7,10 @@
 
 void gameState::enter()
 {
-	//TODO add lines to make a grid
-	// grey walls
-	engine->drawBackgroundRectangle(325, 75, 975, 725, 0x2C3E50);
+	// Setu background grid drawing
+	drawBackground();
 
-	//Blue background
-	engine->drawBackgroundRectangle(350, 100, 950, 700, 0x000822);
-
-	//Grid vert lines for background
-	for (int i = 0; i < 14; i++)
-	{
-		engine->drawBackgroundThickLine(gridstartX + 50 * i, gridstartY + 1, gridstartX + 50 * i, gridEndY - 1, 0x000000, 2);
-	}
-
-	//Grid horizontal lines for background
-	for (int i = 0; i < 14; i++)
-	{
-		engine->drawBackgroundThickLine(gridstartX + 1, gridstartY + 50 * i, gridEndX - 1, gridstartY + 50 * i, 0x000000, 2);
-	}
-
-	//background text
-	engine->drawBackgroundString(710, 25, "C++", 0x57E2F9, 0);
-
-
-	// Background Image used as game logo
-	SimpleImage image = ImageManager::loadImage("MainCharacter.png", false);
-	image.renderImageWithMask(engine->getBackgroundSurface(), 0, 0, 575, 20, image.getWidth(), image.getHeight());
-
-	//Setup tile managerW
+	//Setup tile manager
 	for (int i = 0; i < 120; i++)
 		for (int j = 0; j < 120; j++)
 			tm.setMapValue(i, j, 0);
@@ -57,6 +33,8 @@ void gameState::foreGroundStrings()
 	engine->drawForegroundString(300, 20, livesMessage.c_str(), 0x57E2F9, 0);
 }
 
+
+//TODO fix memory leak when game is terminated during pause due to mainchar and enemy
 void gameState::initObjects()
 {
 	engine->notifyObjectsAboutKeys(true);
@@ -89,17 +67,18 @@ void gameState::reset()
 void gameState::mouseDown(int iButton, int iX, int iY) {
 	if (iButton == SDL_BUTTON_RIGHT)
 	{
+		/*
 		if (engine->isPaused()) {
 			engine->unpause();
 			this->mainChar->setPaused(false);
 			this->enemy->setPaused(false);
-		}
-		else {
+		}*/
+		//else {
 			engine->pause();
 			this->mainChar->setPaused(true);
 			this->enemy->setPaused(true);
 			engine->setState(new pauseState(engine));
-		}
+		//}
 	}
 }
 
@@ -114,4 +93,48 @@ void gameState::mainLoopPreUpdate() {
 
 Psyeb10TileManager* gameState::getTileManager() {
 	return &tm;
+}
+
+void gameState::reEntry()
+{
+	drawBackground();
+	engine->createObjectArray(1);
+	engine->storeObjectInArray(0, mainChar);
+	engine->appendObjectToArray(enemy);
+	mainChar->setPaused(false);
+	enemy->setPaused(false);
+	tm.drawAllTiles(engine, engine->getBackgroundSurface());
+}
+
+
+void gameState::drawBackground()
+{
+	//set all to black initally
+	engine->fillBackground(0x000000);
+	//TODO add lines to make a grid
+	// grey walls
+	engine->drawBackgroundRectangle(325, 75, 975, 725, 0x2C3E50);
+
+	//Blue background
+	engine->drawBackgroundRectangle(350, 100, 950, 700, 0x000822);
+
+	//Grid vert lines for background
+	for (int i = 0; i < 13; i++)
+	{
+		engine->drawBackgroundThickLine(gridstartX + 50 * i, gridstartY + 1, gridstartX + 50 * i, gridEndY - 1, 0x000000, 2);
+	}
+
+	//Grid horizontal lines for background
+	for (int i = 0; i < 13; i++)
+	{
+		engine->drawBackgroundThickLine(gridstartX + 1, gridstartY + 50 * i, gridEndX - 1, gridstartY + 50 * i, 0x000000, 2);
+	}
+
+	//background text
+	engine->drawBackgroundString(710, 25, "C++", 0x57E2F9, 0);
+
+
+	// Background Image used as game logo
+	SimpleImage image = ImageManager::loadImage("MainCharacter.png", true);
+	image.renderImageWithMask(engine->getBackgroundSurface(), 0, 0, 575, 20, image.getWidth(), image.getHeight());
 }

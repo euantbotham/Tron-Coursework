@@ -9,6 +9,7 @@ class Psyeb10States
 {
 public:
 	virtual void enter();
+	virtual void reEntry();
 	virtual void foreGroundStrings();
 	virtual void initObjects();
 	virtual void reset();
