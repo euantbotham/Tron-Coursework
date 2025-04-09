@@ -1,7 +1,9 @@
 #pragma once
 #include "BaseEngine.h"
 #include "Psyeb10TileManager.h"
+#include "Psyeb10States.h"
 
+class gameState;
 
 class Psyeb10Engine :
     public BaseEngine
@@ -16,12 +18,6 @@ public:
     void virtMainLoopPreUpdate();
     Psyeb10TileManager* getTileManager();
 protected:
-    const int gridstartX = 350;
-    const int gridstartY = 100;
-    const int gridEndX = 950;
-    const int gridEndY = 700;
-    int gameScore;
-    int lastTick;
-    Psyeb10TileManager tm;
+    gameState* currentState;
 };
 

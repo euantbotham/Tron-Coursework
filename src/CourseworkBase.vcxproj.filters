@@ -159,6 +159,9 @@
     <ClInclude Include="Psyeb10States.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="gameState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mainfunction.cpp">
@@ -240,6 +243,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Psyeb10States.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gameState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
