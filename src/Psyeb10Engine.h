@@ -3,16 +3,9 @@
 #include "Psyeb10TileManager.h"
 
 
-//TODO remove other classes when fully subclassed
-//class MainCharacter;
-//class Psyeb10Enemy;
-//class Psyeb10Bike;
 class Psyeb10Engine :
     public BaseEngine
 {
-    //friend class MainCharacter;
-    //friend class Psyeb10Enemy;
-    //friend class Psyeb10Bike;
 public:
     Psyeb10Engine();
     void virtSetupBackgroundBuffer() override;

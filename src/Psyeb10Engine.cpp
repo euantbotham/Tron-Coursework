@@ -8,7 +8,6 @@
 #include "Psyeb10Enemy.h"
 #include "SimpleImage.h"
 #include "ImageManager.h"
-#include "ExampleObjects.h"
 
 Psyeb10Engine::Psyeb10Engine()
 {
