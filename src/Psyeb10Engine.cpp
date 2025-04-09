@@ -57,3 +57,8 @@ Psyeb10TileManager* Psyeb10Engine::getTileManager()
 {
 	return currentState->getTileManager();
 }
+
+
+void Psyeb10Engine::virtCleanUp() {
+	delete currentState;
+}

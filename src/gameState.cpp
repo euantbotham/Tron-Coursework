@@ -43,9 +43,8 @@ void gameState::enter()
 
 void gameState::foreGroundStrings()
 {
-	MainCharacter* mC = dynamic_cast<MainCharacter*>(engine->getDisplayableObject(0));
 	std::stringstream p1Lives, p1Score;
-	p1Lives << "lives : " << mC->getLives();
+	p1Lives << "lives : " << mainChar->getLives();
 	std::string livesMessage = p1Lives.str();
 	engine->drawForegroundString(875, 20, livesMessage.c_str(), 0x57E2F9, 0);
 
@@ -62,8 +61,10 @@ void gameState::initObjects()
 	engine->drawableObjectsChanged();
 	engine->destroyOldObjects(true);
 	engine->createObjectArray(1);
-	engine->storeObjectInArray(0, new MainCharacter(engine));
-	engine->appendObjectToArray(new Psyeb10Enemy(engine));
+	this->mainChar = new MainCharacter(engine);
+	engine->storeObjectInArray(0, mainChar);
+	this->enemy = new Psyeb10Enemy(engine);
+	engine->appendObjectToArray(enemy);
 	engine->setAllObjectsVisible(true);
 }
 
@@ -88,13 +89,13 @@ void gameState::mouseDown(int iButton, int iX, int iY) {
 	{
 		if (engine->isPaused()) {
 			engine->unpause();
-			dynamic_cast<MainCharacter*>(engine->getDisplayableObject(0))->setPaused(false);
-			dynamic_cast<Psyeb10Enemy*>(engine->getDisplayableObject(1))->setPaused(false);
+			this->mainChar->setPaused(false);
+			this->enemy->setPaused(false);
 		}
 		else {
 			engine->pause();
-			dynamic_cast<MainCharacter*>(engine->getDisplayableObject(0))->setPaused(true);
-			dynamic_cast<Psyeb10Enemy*>(engine->getDisplayableObject(1))->setPaused(true);
+			this->mainChar->setPaused(true);
+			this->enemy->setPaused(true);
 		}
 	}
 }

@@ -16,6 +16,7 @@ public:
     void virtMouseDown(int iButton, int iX, int iY) override;
     void resetGame();
     void virtMainLoopPreUpdate();
+    void virtCleanUp() override;
     Psyeb10TileManager* getTileManager();
 protected:
     gameState* currentState;

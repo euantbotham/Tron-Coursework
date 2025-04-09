@@ -3,6 +3,8 @@
 #include "Psyeb10States.h"
 #include "Psyeb10Engine.h"
 #include "Psyeb10TileManager.h"
+#include "MainCharacter.h"
+#include "Psyeb10Enemy.h"
 
 class gameState : public Psyeb10States
 {
@@ -29,6 +31,8 @@ protected:
 	int gameScore;
 	int lastTick;
 	Psyeb10TileManager tm;
+	MainCharacter* mainChar;
+	Psyeb10Enemy* enemy;
 };
 
 
