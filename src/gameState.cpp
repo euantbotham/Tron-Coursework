@@ -5,6 +5,7 @@
 #include "Psyeb10Enemy.h"
 #include "pauseState.h"
 
+
 void gameState::enter()
 {
 	// Setu background grid drawing
@@ -16,6 +17,7 @@ void gameState::enter()
 			tm.setMapValue(i, j, 0);
 	tm.setTopLeftPositionOnScreen(350, 100);
 	tm.drawAllTiles(engine, engine->getBackgroundSurface());
+	this->isDisplayed = true;
 }
 
 
@@ -34,7 +36,6 @@ void gameState::foreGroundStrings()
 }
 
 
-//TODO fix memory leak when game is terminated during pause due to mainchar and enemy
 void gameState::initObjects()
 {
 	engine->notifyObjectsAboutKeys(true);
@@ -67,18 +68,12 @@ void gameState::reset()
 void gameState::mouseDown(int iButton, int iX, int iY) {
 	if (iButton == SDL_BUTTON_RIGHT)
 	{
-		/*
-		if (engine->isPaused()) {
-			engine->unpause();
-			this->mainChar->setPaused(false);
-			this->enemy->setPaused(false);
-		}*/
-		//else {
-			engine->pause();
-			this->mainChar->setPaused(true);
-			this->enemy->setPaused(true);
-			engine->setState(new pauseState(engine));
-		//}
+		engine->pause();
+		this->mainChar->setPaused(true);
+		this->enemy->setPaused(true);
+		this->isDisplayed = false;
+		engine->setState(new pauseState(engine));
+	
 	}
 }
 
@@ -104,6 +99,7 @@ void gameState::reEntry()
 	mainChar->setPaused(false);
 	enemy->setPaused(false);
 	tm.drawAllTiles(engine, engine->getBackgroundSurface());
+	this->isDisplayed = true;
 }
 
 
@@ -137,4 +133,14 @@ void gameState::drawBackground()
 	// Background Image used as game logo
 	SimpleImage image = ImageManager::loadImage("MainCharacter.png", true);
 	image.renderImageWithMask(engine->getBackgroundSurface(), 0, 0, 575, 20, image.getWidth(), image.getHeight());
+}
+
+
+gameState::~gameState()
+{
+	// delete mainchar and enemy if not currently helf in displayable object container
+	if (!(this->isDisplayed)) {
+		delete mainChar;
+		delete enemy;
+	}
 }

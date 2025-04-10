@@ -7,8 +7,8 @@
 #include "Psyeb10Enemy.h"
 
 class Psyeb10Engine;
-class MainCharacter;
-class Psyeb10Enemy;
+//class MainCharacter;
+//class Psyeb10Enemy;
 
 class gameState : public Psyeb10States
 {
@@ -20,6 +20,7 @@ public:
 		lastTick = -1;
 		mainChar = nullptr;
 		enemy = nullptr;
+		isDisplayed = false;
 	}
 	void enter() override;
 	void foreGroundStrings() override;
@@ -31,6 +32,7 @@ public:
 
 	void drawBackground();
 	Psyeb10TileManager* getTileManager();
+	~gameState();
 
 protected:
 	const int gridstartX = 350;
@@ -42,6 +44,6 @@ protected:
 	Psyeb10TileManager tm;
 	MainCharacter* mainChar;
 	Psyeb10Enemy* enemy;
+	bool isDisplayed;
 };
-
 

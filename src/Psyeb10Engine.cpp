@@ -76,7 +76,7 @@ void Psyeb10Engine::setState(Psyeb10States* state ) {
 	
 	secondState = currentState;
 	// Remove objects from array
-	destroyOldObjects(false);
+	clearContents();
 	this->currentState = state;
 	lockBackgroundForDrawing();
 	this->currentState->enter();
@@ -89,7 +89,7 @@ void Psyeb10Engine::setState()
 {
 	// Remove objects from array
 	delete this->currentState;
-	destroyOldObjects(false);
+	clearContents();
 	this->currentState = secondState;
 	secondState = nullptr;
 	lockBackgroundForDrawing();
