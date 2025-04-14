@@ -6,7 +6,7 @@ class menuTileManager :
 {
 public:
     menuTileManager() : TileManager(0, 0, 1, 1) {}
-    menuTileManager(int xsize, int ysize, int rows, int columns) : TileManager(xsize, ysize, rows, columns) 
+    menuTileManager(int ysize, int xsize, int rows, int columns) : TileManager(ysize, xsize, rows, columns) 
     {
 
     }

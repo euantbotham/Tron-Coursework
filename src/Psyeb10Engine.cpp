@@ -21,7 +21,6 @@ Psyeb10Engine::Psyeb10Engine()
 }
 
 
-
 void Psyeb10Engine::virtSetupBackgroundBuffer()
 {
 	currentState->enter();
