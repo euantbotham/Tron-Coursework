@@ -26,6 +26,20 @@ void pauseState::initObjects()
 
 void pauseState::mainLoopPreUpdate()
 {
+	int mx, my, tx, ty;
+	mx = engine->getCurrentMouseX();
+	my = engine->getCurrentMouseY();
+	// If mouse hovers over tile notify tile manager
+	if (tm.isValidTilePosition(mx, my)) {
+		tx = tm.getMapXForScreenX(mx);
+		ty = tm.getMapYForScreenY(my);
+		tm.tileSelected(engine, engine->getForegroundSurface(), tx, ty);
+		
+	}
+	else {
+		// Notify if not over tile
+		tm.tileSelected(engine, engine->getForegroundSurface(), -1, -1);
+	}
 }
 
 void pauseState::mouseDown(int iButton, int iX, int iY)

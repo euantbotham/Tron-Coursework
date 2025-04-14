@@ -3,7 +3,6 @@
 #include <iostream>
 #include "MyObjectB.h"
 
-
 void MyDemoA::virtSetupBackgroundBuffer()
 {
 	fillBackground(0x000000);

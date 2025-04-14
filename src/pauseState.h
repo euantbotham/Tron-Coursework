@@ -8,7 +8,7 @@ class pauseState :
     public Psyeb10States
 {
 public:
-	pauseState(Psyeb10Engine* engineParam) : tm(50,150,1,5) {
+	pauseState(Psyeb10Engine* engineParam) : tm(50,250,1,5) {
 		this->engine = engineParam;
 		
 	}
