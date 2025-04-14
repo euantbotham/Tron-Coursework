@@ -171,6 +171,9 @@
     <ClInclude Include="Psyeb10States.h">
       <Filter>Header Files\states</Filter>
     </ClInclude>
+    <ClInclude Include="menuTileManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mainfunction.cpp">
@@ -259,6 +262,9 @@
     </ClCompile>
     <ClCompile Include="pauseState.cpp">
       <Filter>Source Files\states</Filter>
+    </ClCompile>
+    <ClCompile Include="menuTileManager.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

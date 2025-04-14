@@ -98,6 +98,7 @@
     <ClInclude Include="gameState.h" />
     <ClInclude Include="ImageMappingDemo.h" />
     <ClInclude Include="MainCharacter.h" />
+    <ClInclude Include="menuTileManager.h" />
     <ClInclude Include="MyDemoA.h" />
     <ClInclude Include="MyObjectB.h" />
     <ClInclude Include="MyTileManager.h" />
@@ -147,6 +148,7 @@
     <ClCompile Include="BaseEngine.cpp" />
     <ClCompile Include="DisplayableObject.cpp" />
     <ClCompile Include="FontManager.cpp" />
+    <ClCompile Include="menuTileManager.cpp" />
     <ClCompile Include="MyDemoA.cpp" />
     <ClCompile Include="MyObjectB.cpp" />
     <ClCompile Include="MyTileManager.cpp" />
