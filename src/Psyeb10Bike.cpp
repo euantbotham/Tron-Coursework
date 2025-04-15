@@ -40,6 +40,7 @@ void Psyeb10Bike::virtDoUpdate(int iCurrentTime)
 			engine->getTileManager()->setAndRedrawMapValueAt(mapX, mapY, this->bikeValue, engine, engine->getBackgroundSurface());
 			lastTileX = mapX;
 			lastTileY = mapY;
+			virtPostMoveLogic();
 		}
 		else if (value != 0 && !(mapX == lastTileX && mapY == lastTileY)) {
 			virtHandleDeath();
@@ -52,7 +53,6 @@ void Psyeb10Bike::virtDoUpdate(int iCurrentTime)
 	// Ensure that the objects get redrawn on the display
 	this->redrawDisplay();
 
-	virtPostMoveLogic();
 }
 
 void Psyeb10Bike::virtDraw()

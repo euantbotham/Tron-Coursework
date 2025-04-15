@@ -4,6 +4,10 @@
 #include "DisplayableObject.h"
 #include "Psyeb10TileManager.h"
 #include <iostream>
+#include <queue>
+#include <set>
+#include <utility>  // for std::pair
+#include <vector>
 Psyeb10Enemy::Psyeb10Enemy(BaseEngine* pEngine) : Psyeb10Bike(500,150,pEngine, 20,20, 2)
 {
 	speedX = 0;
@@ -37,7 +41,7 @@ void Psyeb10Enemy::virtDraw()
 }
 
 
-
+/*
 void Psyeb10Enemy::virtPostMoveLogic()
 {
 	// If next move is invalid
@@ -79,7 +83,7 @@ bool Psyeb10Enemy::isValidMove(int x, int y) {
 	}
 	return false;
 }
-
+*/
 
 
 void Psyeb10Enemy::virtHandleDeath() 
@@ -90,4 +94,378 @@ void Psyeb10Enemy::virtHandleDeath()
 	engine->resetGame();
 	speedX = 0;
 	speedY = 1;
+}
+
+
+/*
+void Psyeb10Enemy::changeDirection(int direction)
+{
+	switch (direction) {
+	case 0: // Up
+		speedX = 0;
+		speedY = -1;
+		break;
+	case 1: // Right
+		speedX = 1;
+		speedY = 0;
+		break;
+	case 2: // Down
+		speedX = 0;
+		speedY = 1;
+		break;
+	case 3: // Left
+		speedX = -1;
+		speedY = 0;
+		break;
+	}
+}
+*/
+void Psyeb10Enemy::virtPostMoveLogic()
+{
+    // Get player position
+    DisplayableObject* pPlayerObject = engine->getDisplayableObject(0); // Assuming player is the first object
+    int playerX = pPlayerObject->getXCentre();
+    int playerY = pPlayerObject->getYCentre();
+
+    // Look ahead in current direction
+    bool canContinue = isValidMove(getXCentre() + 5 * speedX, getYCentre() + 5 * speedY);
+
+    // If can continue in current direction, do some strategic thinking
+    if (canContinue) {
+        // Check if we should change direction based on strategy
+        decideStrategicDirection(playerX, playerY);
+    }
+    else {
+        // Need to turn - find best direction using floodFill
+        int bestDirection = findBestDirection();
+
+        // Apply the direction change
+        changeDirection(bestDirection);
+    }
+}
+
+// Strategic decision making - when to change direction even if current path is valid
+void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
+{
+    // Random chance to be unpredictable (5%)
+    if (rand() % 100 < 5) {
+        int newDirection = rand() % 4;
+        // Only change if the new direction is valid
+        int newX = getXCentre() + (newDirection == 1 ? 5 : (newDirection == 3 ? -5 : 0));
+        int newY = getYCentre() + (newDirection == 2 ? 5 : (newDirection == 0 ? -5 : 0));
+        if (isValidMove(newX, newY)) {
+            changeDirection(newDirection);
+            return;
+        }
+    }
+
+    // Distance to player
+    int distX = playerX - getXCentre();
+    int distY = playerY - getYCentre();
+
+    // Current direction
+    int currentDirection = -1;
+    if (speedX == 0 && speedY == -1) currentDirection = 0; // Up
+    if (speedX == 1 && speedY == 0) currentDirection = 1;  // Right
+    if (speedX == 0 && speedY == 1) currentDirection = 2;  // Down
+    if (speedX == -1 && speedY == 0) currentDirection = 3; // Left
+
+    // Look ahead further
+    bool twoStepsValid = isValidMove(getXCentre() + 10 * speedX, getYCentre() + 10 * speedY);
+    bool threeStepsValid = isValidMove(getXCentre() + 15 * speedX, getYCentre() + 15 * speedY);
+
+    // If we're heading for a dead end, try to turn early
+    if (!twoStepsValid || !threeStepsValid) {
+        int bestDirection = findBestDirection();
+        changeDirection(bestDirection);
+        return;
+    }
+
+    // Check if current path leads to a small area compared to alternatives
+    int currentMapX = engine->getTileManager()->getMapXForScreenX(getXCentre() + 5 * speedX);
+    int currentMapY = engine->getTileManager()->getMapYForScreenY(getYCentre() + 5 * speedY);
+    int currentSpaceSize = floodFill(currentMapX, currentMapY, 2000); // Increased max tiles due to smaller tile size
+
+    // Check if there's a significantly better direction
+    std::vector<std::pair<int, int>> directions = {
+        {0, -1}, {1, 0}, {0, 1}, {-1, 0}
+    };
+
+    for (int i = 0; i < 4; i++) {
+        // Skip current direction
+        if (i == currentDirection) continue;
+
+        int testX = getXCentre() + 5 * directions[i].first;
+        int testY = getYCentre() + 5 * directions[i].second;
+
+        if (isValidMove(testX, testY)) {
+            int testMapX = engine->getTileManager()->getMapXForScreenX(testX);
+            int testMapY = engine->getTileManager()->getMapYForScreenY(testY);
+            int testSpaceSize = floodFill(testMapX, testMapY, 2000);
+
+            // If this direction has significantly more space (30% more), consider changing
+            if (testSpaceSize > currentSpaceSize * 1.3) {
+                changeDirection(i);
+                return;
+            }
+        }
+    }
+
+    // Try to intercept or cut off player (25% chance if player is not too far)
+    if (rand() % 100 < 25 && abs(distX) < 200 && abs(distY) < 200) {
+        int interceptDirection = calculateInterceptDirection(playerX, playerY);
+        if (interceptDirection != -1 && interceptDirection != currentDirection) {
+            int newX = getXCentre() + (interceptDirection == 1 ? 5 : (interceptDirection == 3 ? -5 : 0));
+            int newY = getYCentre() + (interceptDirection == 2 ? 5 : (interceptDirection == 0 ? -5 : 0));
+            if (isValidMove(newX, newY)) {
+                changeDirection(interceptDirection);
+                return;
+            }
+        }
+    }
+
+    // Sometimes try to move toward player for pursuit (20% chance if player is far)
+    if (rand() % 100 < 20 && (abs(distX) > 100 || abs(distY) > 100)) {
+        // Decide whether to prioritize X or Y movement toward player
+        if (abs(distX) > abs(distY)) {
+            // Move horizontally toward player
+            if (distX > 0 && isValidMove(getXCentre() + 5, getYCentre())) {
+                speedX = 1;
+                speedY = 0;
+            }
+            else if (distX < 0 && isValidMove(getXCentre() - 5, getYCentre())) {
+                speedX = -1;
+                speedY = 0;
+            }
+        }
+        else {
+            // Move vertically toward player
+            if (distY > 0 && isValidMove(getXCentre(), getYCentre() + 5)) {
+                speedX = 0;
+                speedY = 1;
+            }
+            else if (distY < 0 && isValidMove(getXCentre(), getYCentre() - 5)) {
+                speedX = 0;
+                speedY = -1;
+            }
+        }
+    }
+}
+
+// Calculate direction to intercept player
+int Psyeb10Enemy::calculateInterceptDirection(int playerX, int playerY)
+{
+    // Determine player movement direction based on trail
+    // This is a simplified version - you'd need to track player's actual direction
+
+    // For now, just try to cut player off by moving perpendicular to line between us
+    int dx = playerX - getXCentre();
+    int dy = playerY - getYCentre();
+
+    // We try to choose a perpendicular direction
+    if (abs(dx) > abs(dy)) {
+        // Player is more horizontal from us, so try vertical movement
+        if (dy > 0 && isValidMove(getXCentre(), getYCentre() + 5)) {
+            return 2; // Down
+        }
+        else if (isValidMove(getXCentre(), getYCentre() - 5)) {
+            return 0; // Up
+        }
+    }
+    else {
+        // Player is more vertical from us, so try horizontal movement
+        if (dx > 0 && isValidMove(getXCentre() + 5, getYCentre())) {
+            return 1; // Right
+        }
+        else if (isValidMove(getXCentre() - 5, getYCentre())) {
+            return 3; // Left
+        }
+    }
+
+    return -1; // No good intercept direction
+}
+
+// Find the best direction to turn using floodFill
+int Psyeb10Enemy::findBestDirection()
+{
+    // Each direction: 0 = up, 1 = right, 2 = down, 3 = left
+    std::vector<std::pair<int, int>> directions = {
+        {0, -1}, {1, 0}, {0, 1}, {-1, 0}
+    };
+
+    int bestDirection = -1;
+    int maxSpace = -1;
+
+    // For each direction, use floodFill to determine available space
+    for (int i = 0; i < 4; i++) {
+        int nextX = getXCentre() + 5 * directions[i].first;
+        int nextY = getYCentre() + 5 * directions[i].second;
+
+        if (isValidMove(nextX, nextY)) {
+            // Convert to map coordinates
+            int mapX = engine->getTileManager()->getMapXForScreenX(nextX);
+            int mapY = engine->getTileManager()->getMapYForScreenY(nextY);
+
+            // Use floodFill to count available space
+            int availableSpace = floodFill(mapX, mapY, 2000);
+
+            // Apply additional scoring factors:
+
+            // 1. Favor directions leading away from walls
+            availableSpace = adjustScoreForWallProximity(availableSpace, nextX, nextY, directions[i].first, directions[i].second);
+
+            // 2. Consider directions that might lead toward player (with low weight)
+            DisplayableObject* pPlayerObject = engine->getDisplayableObject(0);
+            int playerX = pPlayerObject->getXCentre();
+            int playerY = pPlayerObject->getYCentre();
+            availableSpace = adjustScoreForPlayerProximity(availableSpace, nextX, nextY, playerX, playerY);
+
+            if (availableSpace > maxSpace) {
+                maxSpace = availableSpace;
+                bestDirection = i;
+            }
+        }
+    }
+
+    // If no valid moves, return current direction (will crash)
+    if (bestDirection == -1) {
+        if (speedX == 0 && speedY == -1) return 0;
+        if (speedX == 1 && speedY == 0) return 1;
+        if (speedX == 0 && speedY == 1) return 2;
+        if (speedX == -1 && speedY == 0) return 3;
+        return 2; // Default to down
+    }
+
+    return bestDirection;
+}
+
+// Adjust space score based on wall proximity
+int Psyeb10Enemy::adjustScoreForWallProximity(int baseScore, int x, int y, int dirX, int dirY)
+{
+    int wallPenalty = 0;
+
+    // Check for walls on sides of this path
+    int perpDirX = -dirY; // Perpendicular direction
+    int perpDirY = dirX;
+
+    // Left wall check
+    if (!isValidMove(x + 5 * perpDirX, y + 5 * perpDirY)) {
+        wallPenalty += 5;
+    }
+
+    // Right wall check
+    if (!isValidMove(x - 5 * perpDirX, y - 5 * perpDirY)) {
+        wallPenalty += 5;
+    }
+
+    // Prefer directions with space on both sides
+    return baseScore - wallPenalty;
+}
+
+// Adjust score based on player position (slight preference to directions toward player)
+int Psyeb10Enemy::adjustScoreForPlayerProximity(int baseScore, int x, int y, int playerX, int playerY)
+{
+    // Calculate vector to player
+    int toPlayerX = playerX - x;
+    int toPlayerY = playerY - y;
+
+    // Calculate distance to player
+    double distToPlayer = sqrt(toPlayerX * toPlayerX + toPlayerY * toPlayerY);
+
+    // Small bonus for directions that get closer to player
+    if (distToPlayer < 300) {
+        return baseScore + 3;
+    }
+
+    return baseScore;
+}
+
+// Improved floodFill implementation for 120x120 grid with direct tile coordinates
+int Psyeb10Enemy::floodFill(int startMapX, int startMapY, int maxTiles) {
+    std::queue<std::pair<int, int>> q;
+    std::set<std::pair<int, int>> visited;
+
+    // Ensure coordinates are within the valid range
+    if (startMapX < 0 || startMapX >= 120 || startMapY < 0 || startMapY >= 120) {
+        return 0;
+    }
+
+    q.push(std::make_pair(startMapX, startMapY));
+    visited.insert(std::make_pair(startMapX, startMapY));
+
+    int count = 0;
+
+    // Directions: right, left, down, up
+    std::vector<std::pair<int, int>> directions = {
+        {1, 0}, {-1, 0}, {0, 1}, {0, -1}
+    };
+
+    while (!q.empty() && count < maxTiles) {
+        std::pair<int, int> current = q.front();
+        q.pop();
+        count++;
+
+        for (const auto& dir : directions) {
+            int nx = current.first + dir.first;
+            int ny = current.second + dir.second;
+
+            // Check boundaries directly
+            if (nx < 0 || nx >= 120 || ny < 0 || ny >= 120) {
+                continue;
+            }
+
+            // Create a pair for the new coordinates
+            std::pair<int, int> nextPos = std::make_pair(nx, ny);
+
+            // Check if we've already visited this tile
+            if (visited.find(nextPos) == visited.end()) {
+                // Check if the tile is valid and free (value = 0)
+                if (engine->getTileManager()->getMapValue(nx, ny) == 0) {
+                    q.push(nextPos);
+                    visited.insert(nextPos);
+                }
+            }
+        }
+    }
+
+    return count;
+}
+
+// Helper to change direction based on a direction code
+void Psyeb10Enemy::changeDirection(int direction)
+{
+    switch (direction) {
+    case 0: // Up
+        speedX = 0;
+        speedY = -1;
+        break;
+    case 1: // Right
+        speedX = 1;
+        speedY = 0;
+        break;
+    case 2: // Down
+        speedX = 0;
+        speedY = 1;
+        break;
+    case 3: // Left
+        speedX = -1;
+        speedY = 0;
+        break;
+    }
+}
+
+// Update the isValidMove function to work with 5x5 tiles
+bool Psyeb10Enemy::isValidMove(int x, int y) {
+    // Convert screen coordinates to map coordinates
+    int mapX = engine->getTileManager()->getMapXForScreenX(x);
+    int mapY = engine->getTileManager()->getMapYForScreenY(y);
+
+    // Check if coordinates are within map boundaries
+    if (mapX >= 0 && mapX < 120 && mapY >= 0 && mapY < 120) {
+        // Check if the tile is free (value = 0)
+        if (engine->getTileManager()->getMapValue(mapX, mapY) == 0) {
+            return true;
+        }
+    }
+    return false;
 }
