@@ -20,39 +20,39 @@ void menuTileManager::drawTileBox(
     // Fill background
     pSurface->drawRectangle(
         iStartPositionScreenX,
-        iStartPositionScreenY,
+        iStartPositionScreenY + 5,
         iStartPositionScreenX + getTileWidth() - 1,
-        iStartPositionScreenY + getTileHeight() - 1,
+        iStartPositionScreenY + getTileHeight() - 6,
         backgroundColor);
 
     // Draw border lines
     // Top Line
     pSurface->drawLine(
         iStartPositionScreenX,
-        iStartPositionScreenY,
+        iStartPositionScreenY + 5,
         iStartPositionScreenX + getTileWidth() - 1,
-        iStartPositionScreenY,
+        iStartPositionScreenY + 5,
         borderColor);
     // Left side
     pSurface->drawLine(
         iStartPositionScreenX,
-        iStartPositionScreenY,
+        iStartPositionScreenY + 5,
         iStartPositionScreenX,
-        iStartPositionScreenY + getTileHeight() - 1,
+        iStartPositionScreenY + getTileHeight() - 6,
         borderColor);
     // Right side
     pSurface->drawLine(
         iStartPositionScreenX + getTileWidth() - 1,
-        iStartPositionScreenY,
+        iStartPositionScreenY + 5,
         iStartPositionScreenX + getTileWidth() - 1,
-        iStartPositionScreenY + getTileHeight() - 1,
+        iStartPositionScreenY + getTileHeight() - 6,
         borderColor);
     // Bottom line
     pSurface->drawLine(
         iStartPositionScreenX,
-        iStartPositionScreenY + getTileHeight() - 1,
+        iStartPositionScreenY + getTileHeight() - 6,
         iStartPositionScreenX + getTileWidth() - 1,
-        iStartPositionScreenY + getTileHeight() - 1,
+        iStartPositionScreenY + getTileHeight() - 6,
         borderColor);
 }
 

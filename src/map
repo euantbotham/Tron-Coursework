@@ -1,6 +1,6 @@
  CourseworkBase2020
 
- Timestamp is 67fd8fe2 (Mon Apr 14 23:44:50 2025)
+ Timestamp is 67fe4020 (Tue Apr 15 12:16:48 2025)
 
  Preferred load address is 00400000
 
@@ -932,12 +932,12 @@
  0001:0001bdf0       ?virtDoUpdate@MyObjectB@@UAEXH@Z 0041cdf0 f   MyObjectB.obj
  0001:0001bfb0       ?virtDrawTileAt@MyTileManager@@UBEXPAVBaseEngine@@PAVDrawingSurface@@HHHH@Z 0041cfb0 f   MyTileManager.obj
  0001:0001c050       ?enter@pauseState@@UAEXXZ  0041d050 f   pauseState.obj
- 0001:0001c080       ?foreGroundStrings@pauseState@@UAEXXZ 0041d080 f   pauseState.obj
- 0001:0001c0d0       ?initObjects@pauseState@@UAEXXZ 0041d0d0 f   pauseState.obj
- 0001:0001c0e0       ?reset@pauseState@@UAEXXZ  0041d0e0 f   pauseState.obj
- 0001:0001c0f0       ?mouseDown@pauseState@@UAEXHHH@Z 0041d0f0 f   pauseState.obj
- 0001:0001c190       ?mainLoopPreUpdate@pauseState@@UAEXXZ 0041d190 f   pauseState.obj
- 0001:0001c250       ?reEntry@pauseState@@UAEXXZ 0041d250 f   pauseState.obj
+ 0001:0001c0a0       ?foreGroundStrings@pauseState@@UAEXXZ 0041d0a0 f   pauseState.obj
+ 0001:0001c0f0       ?initObjects@pauseState@@UAEXXZ 0041d0f0 f   pauseState.obj
+ 0001:0001c100       ?reset@pauseState@@UAEXXZ  0041d100 f   pauseState.obj
+ 0001:0001c110       ?mouseDown@pauseState@@UAEXHHH@Z 0041d110 f   pauseState.obj
+ 0001:0001c1b0       ?mainLoopPreUpdate@pauseState@@UAEXXZ 0041d1b0 f   pauseState.obj
+ 0001:0001c270       ?reEntry@pauseState@@UAEXXZ 0041d270 f   pauseState.obj
  0001:0001c280       ?getCurrentMouseX@BaseEngine@@QBEHXZ 0041d280 f i pauseState.obj
  0001:0001c2a0       ?getCurrentMouseY@BaseEngine@@QBEHXZ 0041d2a0 f i pauseState.obj
  0001:0001c2c0       ?unpause@BaseEngine@@QAEXXZ 0041d2c0 f i pauseState.obj

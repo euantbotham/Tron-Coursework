@@ -7,14 +7,14 @@
 void pauseState::enter()
 {
 	//engine->fillBackground(0x00FF00);
-	engine->drawBackgroundString(400, 400, "Game Paused", 0x000000, 0);
 	
-
+	engine->drawBackgroundRectangle(475, 150, 825, 575, 0x000000);
+	engine->drawBackgroundString(525, 200, "Game Paused", 0x57E2F9, 0);
 }
 
 void pauseState::foreGroundStrings()
 {
-	tm.setTopLeftPositionOnScreen(350, 100);
+	tm.setTopLeftPositionOnScreen(525, 250);
 	tm.setMapValue(0, 0, 1);
 	tm.drawAllTiles(engine, engine->getForegroundSurface());
 }
