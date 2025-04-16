@@ -93,7 +93,6 @@ void Psyeb10Enemy::virtPostMoveLogic()
     }
 }
 
-
 void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
 {
     // Current direction
@@ -106,7 +105,7 @@ void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
     // Check if current path leads to a small area compared to alternatives
     int currentMapX = engine->getTileManager()->getMapXForScreenX(getXCentre() + 5 * speedX);
     int currentMapY = engine->getTileManager()->getMapYForScreenY(getYCentre() + 5 * speedY);
-    int currentSpaceSize = floodFill(currentMapX, currentMapY, speedX, speedY, 15, 2000); // Increased parameters
+    int currentSpaceSize = floodFill(currentMapX, currentMapY, speedX, speedY, 15, 2000);
 
     // Check if there's a significantly better direction
     std::vector<std::pair<int, int>> directions = {
@@ -151,37 +150,79 @@ void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
             << " (score " << bestSpaceSize << ")" << std::endl;
 
         changeDirection(bestMove);
+        return; // Exit early - prioritize open space over player chasing
     }
-    else {
-        // Check if we should consider the player's position
+
+    // Only consider player chasing if current path has plenty of space
+    // This prevents suicide moves
+    if (currentSpaceSize > 200) { // Must have substantial space ahead to consider chasing
         // Distance to player
         int distX = playerX - getXCentre();
         int distY = playerY - getYCentre();
         double distToPlayer = sqrt(distX * distX + distY * distY);
 
-        // If player is within chase range and we have open space ahead
-        if (distToPlayer < 200 && currentSpaceSize > 100) {
-            // Consider turning toward player
-            int chaseDir = -1;
-
+        // Player must be within chase range but not too close
+        if (distToPlayer < 180 && distToPlayer > 50) {
             // Determine which direction would move closer to player
+            int horizontalDir = (distX > 0) ? 1 : 3; // Right or Left
+            int verticalDir = (distY > 0) ? 2 : 0;   // Down or Up
+
+            // Choose the best direction based on available space
+            int chaseDirs[2] = { -1, -1 };
+
+            // Check which axis (horizontal or vertical) has the player further away
             if (abs(distX) > abs(distY)) {
-                // Prioritize horizontal movement
-                chaseDir = (distX > 0) ? 1 : 3; // Right or Left
+                chaseDirs[0] = horizontalDir; // Primary chase direction
+                chaseDirs[1] = verticalDir;   // Secondary chase direction
             }
             else {
-                // Prioritize vertical movement
-                chaseDir = (distY > 0) ? 2 : 0; // Down or Up
+                chaseDirs[0] = verticalDir;   // Primary chase direction
+                chaseDirs[1] = horizontalDir; // Secondary chase direction
             }
 
-            // Only change if this direction is valid and not current direction
-            if (chaseDir != currentDirection &&
-                chaseDir != (currentDirection + 2) % 4 && // Not reverse direction
-                directionScores[chaseDir] > 0) { // We already checked this direction
+            // Try primary chase direction first, then secondary
+            for (int i = 0; i < 2; i++) {
+                int chaseDir = chaseDirs[i];
 
-                std::cout << "Chasing player: changing to direction " << chaseDir << std::endl;
-                changeDirection(chaseDir);
+                // Skip if this is current direction or reverse of current
+                if (chaseDir == currentDirection || chaseDir == (currentDirection + 2) % 4) {
+                    continue;
+                }
+
+                // Verify this direction has been evaluated and has good space
+                if (directionScores[chaseDir] > 0) {
+                    // CRITICAL: Only chase if this direction has at least 75% of the space 
+                    // of the current direction to avoid boxing in
+                    if (directionScores[chaseDir] >= currentSpaceSize * 0.85) {
+                        std::cout << "Safe player chase: Dir " << currentDirection
+                            << " -> Dir " << chaseDir
+                            << " (space: " << directionScores[chaseDir]
+                            << " vs current: " << currentSpaceSize << ")" << std::endl;
+
+                            changeDirection(chaseDir);
+                            return;
+                    }
+                }
             }
+        }
+    }
+
+    // Random direction change occasionally (5% chance) if we have good space ahead
+    // This adds unpredictability and helps avoid getting stuck in patterns
+    if (currentSpaceSize > 300 && (rand() % 100 < 5)) {
+        // Pick a random direction that's not current or reverse
+        std::vector<int> possibleDirs;
+        for (int i = 0; i < 4; i++) {
+            if (i != currentDirection && i != (currentDirection + 2) % 4 &&
+                directionScores[i] >= currentSpaceSize * 0.6) { // Must have decent space
+                possibleDirs.push_back(i);
+            }
+        }
+
+        if (!possibleDirs.empty()) {
+            int randomDir = possibleDirs[rand() % possibleDirs.size()];
+            std::cout << "Random direction change for unpredictability: " << randomDir << std::endl;
+            changeDirection(randomDir);
         }
     }
 }

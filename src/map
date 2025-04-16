@@ -1,6 +1,6 @@
  CourseworkBase2020
 
- Timestamp is 67ffe534 (Wed Apr 16 18:13:24 2025)
+ Timestamp is 67ffee7e (Wed Apr 16 18:53:02 2025)
 
  Preferred load address is 00400000
 
@@ -72,33 +72,31 @@
  0000:00000000       ___volatile_metadata       00000000     <absolute>
  0000:00000000       ___x64_code_ranges_to_entry_points 00000000     <absolute>
  0000:00000000       ___x64_code_ranges_to_entry_points_count 00000000     <absolute>
- 0000:00000061       ___safe_se_handler_count   00000061     <absolute>
+ 0000:00000065       ___safe_se_handler_count   00000065     <absolute>
  0000:00000100       ___guard_flags             00000100     <absolute>
  0000:00000000       ___ImageBase               00400000     <linker-defined>
  0001:00003940       ?virtSetupBackgroundBuffer@DraggingDemo@@UAEXXZ 00404940 f   DraggingDemo.obj
  0001:00003a80       ?virtInitialiseObjects@DraggingDemo@@UAEHXZ 00404a80 f   DraggingDemo.obj
  0001:00003ce0       ?virtKeyDown@DraggingDemo@@UAEXH@Z 00404ce0 f   DraggingDemo.obj
- 0001:00003d10       ??$_Get_unwrapped@PBU?$pair@HH@std@@@std@@YA?A_T$$QAPBU?$pair@HH@0@@Z 00404d10 f i Psyeb10Enemy.obj
- 0001:00003d20       ??$forward@AAPAU?$pair@HH@std@@@std@@YAAAPAU?$pair@HH@0@AAPAU10@@Z 00404d20 f i Psyeb10Enemy.obj
- 0001:00003d30       ??1?$queue@U?$pair@HH@std@@V?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@2@@std@@QAE@XZ 00404d30 f i Psyeb10Enemy.obj
- 0001:00003d50       ??$forward@U?$pair@HH@std@@@std@@YA$$QAU?$pair@HH@0@AAU10@@Z 00404d50 f i Psyeb10Enemy.obj
- 0001:00003d60       ?_Xlen@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@CAXXZ 00404d60 f i Psyeb10Enemy.obj
- 0001:00003d70       ??$max@H@std@@YAABHABH0@Z  00404d70 f i Psyeb10Enemy.obj
- 0001:00003da0       ?_Xlength@?$vector@HV?$allocator@H@std@@@std@@CAXXZ 00404da0 f i Psyeb10Enemy.obj
- 0001:00003db0       ??$?0U?$pair@HH@std@@@?$allocator@PAU?$pair@HH@std@@@std@@QAE@ABV?$allocator@U?$pair@HH@std@@@1@@Z 00404db0 f i Psyeb10Enemy.obj
- 0001:00003dc0       ??$construct@HABH@?$_Default_allocator_traits@V?$allocator@H@std@@@std@@SAXAAV?$allocator@H@1@QAHABH@Z 00404dc0 f i Psyeb10Enemy.obj
- 0001:00003df0       ?_Xlength@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@CAXXZ 00404df0 f i Psyeb10Enemy.obj
+ 0001:00003d10       ?max_size@?$_Default_allocator_traits@V?$allocator@H@std@@@std@@SAIABV?$allocator@H@2@@Z 00404d10 f i Psyeb10Enemy.obj
+ 0001:00003d20       ??$addressof@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@YAPAV?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@0@AAV10@@Z 00404d20 f i Psyeb10Enemy.obj
+ 0001:00003d30       ?_Mysize@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEAAIXZ 00404d30 f i Psyeb10Enemy.obj
+ 0001:00003d50       ??$forward@AAPAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@YAAAPAU?$_Tree_node@U?$pair@HH@std@@PAX@0@AAPAU10@@Z 00404d50 f i Psyeb10Enemy.obj
+ 0001:00003d60       ??0?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@QAE@$$QAV01@@Z 00404d60 f i Psyeb10Enemy.obj
+ 0001:00003d80       ?max_size@?$_Default_allocator_traits@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@SAIABV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@2@@Z 00404d80 f i Psyeb10Enemy.obj
+ 0001:00003d90       ??$_Copy_memmove_tail@PAH@std@@YAPAHQBDQAHII@Z 00404d90 f i Psyeb10Enemy.obj
+ 0001:00003dd0       ?max_size@?$_Default_allocator_traits@V?$allocator@U?$pair@HH@std@@@std@@@std@@SAIABV?$allocator@U?$pair@HH@std@@@2@@Z 00404dd0 f i Psyeb10Enemy.obj
+ 0001:00003de0       ?_Get_data@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEAAV?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@2@XZ 00404de0 f i Psyeb10Enemy.obj
  0001:00003e00       ??$?0$$V@?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@@Z 00404e00 f i DraggingDemo.obj
  0001:00003e30       ??$?0$$V@?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@@Z 00404e30 f i DraggingDemo.obj
  0001:00003e60       ??$?0$$V@?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@@Z 00404e60 f i DraggingDemo.obj
  0001:00003e90       ??$?0AAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@_N$0A@@?$pair@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@_N@std@@QAE@AAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@1@$$QA_N@Z 00404e90 f i DraggingDemo.obj
- 0001:00003ed0       ?begin@?$initializer_list@U?$pair@HH@std@@@std@@QBEPBU?$pair@HH@2@XZ 00404ed0 f i Psyeb10Enemy.obj
  0001:00003ee0       ??$?0AAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@_N$0A@@?$pair@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@_N@std@@QAE@AAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@1@$$QA_N@Z 00404ee0 f i DraggingDemo.obj
- 0001:00003f20       ?max_size@?$_Default_allocator_traits@V?$allocator@H@std@@@std@@SAIABV?$allocator@H@2@@Z 00404f20 f i Psyeb10Enemy.obj
+ 0001:00003f20       ?_Xlen@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@CAXXZ 00404f20 f i Psyeb10Enemy.obj
  0001:00003f30       ??$?0AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAV?$shared_ptr@VRawImageData@@@1@$0A@@?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@QAE@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@AAV?$shared_ptr@VRawImageData@@@1@@Z 00404f30 f i DraggingDemo.obj
- 0001:00003f70       ?max_size@?$_Default_allocator_traits@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@SAIABV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@2@@Z 00404f70 f i Psyeb10Enemy.obj
+ 0001:00003f70       ?_Xlength@?$vector@HV?$allocator@H@std@@@std@@CAXXZ 00404f70 f i Psyeb10Enemy.obj
  0001:00003f80       ??$?0AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAV?$weak_ptr@VRawImageData@@@1@$0A@@?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@QAE@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@AAV?$weak_ptr@VRawImageData@@@1@@Z 00404f80 f i DraggingDemo.obj
- 0001:00003fc0       ?max_size@?$_Default_allocator_traits@V?$allocator@U?$pair@HH@std@@@std@@@std@@SAIABV?$allocator@U?$pair@HH@std@@@2@@Z 00404fc0 f i Psyeb10Enemy.obj
+ 0001:00003fc0       ?_Xlength@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@CAXXZ 00404fc0 f i Psyeb10Enemy.obj
  0001:00003fd0       ??$?0ABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@U_Zero_then_variadic_args_t@1@@?$_Compressed_pair@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@V?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@2@$00@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@$$QAU_Zero_then_variadic_args_t@1@@Z 00404fd0 f i DraggingDemo.obj
  0001:00004020       ??$?0ABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@U_Zero_then_variadic_args_t@1@@?$_Compressed_pair@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@V?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@2@$00@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@$$QAU_Zero_then_variadic_args_t@1@@Z 00405020 f i DraggingDemo.obj
  0001:00004070       ??$?0D@?$allocator@U_Container_proxy@std@@@std@@QAE@ABV?$allocator@D@1@@Z 00405070 f i DraggingDemo.obj
@@ -107,24 +105,25 @@
  0001:00004130       ??$?0U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@?$allocator@U_Container_proxy@std@@@std@@QAE@ABV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@@Z 00405130 f i DraggingDemo.obj
  0001:00004150       ??$?0U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@?$allocator@U_Container_proxy@std@@@std@@QAE@ABV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@@Z 00405150 f i DraggingDemo.obj
  0001:00004170       ??$?0U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@1@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@1@@Z 00405170 f i DraggingDemo.obj
- 0001:00004250       ??$forward@ABV?$allocator@U?$pair@HH@std@@@std@@@std@@YAABV?$allocator@U?$pair@HH@std@@@0@ABV10@@Z 00405250 f i Psyeb10Enemy.obj
- 0001:00004260       ??1?$set@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@@std@@QAE@XZ 00405260 f i Psyeb10Enemy.obj
+ 0001:00004250       ??$destroy@U?$pair@HH@std@@@?$_Default_allocator_traits@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@QAU?$pair@HH@1@@Z 00405250 f i Psyeb10Enemy.obj
+ 0001:00004260       ?_Mysize@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@ABEABIXZ 00405260 f i Psyeb10Enemy.obj
  0001:00004280       ??$?0U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@1@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@@Z 00405280 f i DraggingDemo.obj
- 0001:00004360       ??0?$_Tree_unchecked_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@U_Iterator_base12@2@@std@@QAE@$$QAV01@@Z 00405360 f i Psyeb10Enemy.obj
+ 0001:00004370       ?_Orphan_all@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXXZ 00405370 f i Psyeb10Enemy.obj
  0001:00004390       ??$?0V?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@AB_N$0A@@?$pair@V?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@_N@std@@QAE@$$QAV?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@@1@AB_N@Z 00405390 f i DraggingDemo.obj
  0001:000043e0       ??$?0V?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@AB_N$0A@@?$pair@V?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@_N@std@@QAE@$$QAV?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@1@AB_N@Z 004053e0 f i DraggingDemo.obj
  0001:00004430       ??$?0V?$allocator@D@std@@$$V@?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@$$QAV?$allocator@D@1@@Z 00405430 f i DraggingDemo.obj
  0001:00004460       ??$?0V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@1@$0A@@?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@QAE@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@1@@Z 00405460 f i DraggingDemo.obj
  0001:000044c0       ??$?0V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@1@$0A@@?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@QAE@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@@Z 004054c0 f i DraggingDemo.obj
  0001:00004520       ??$?0VRawImageData@@$0A@@?$shared_ptr@VRawImageData@@@std@@QAE@PAVRawImageData@@@Z 00405520 f i DraggingDemo.obj
- 0001:000045e0       ?_Getal@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@ABEABV?$allocator@U?$pair@HH@std@@@2@XZ 004055e0 f i Psyeb10Enemy.obj
+ 0001:000045e0       ??_EPsyeb10Enemy@@UAEPAXI@Z 004055e0 f i Psyeb10Enemy.obj
+ 0001:000045e0       ??_GPsyeb10Enemy@@UAEPAXI@Z 004055e0 f i Psyeb10Enemy.obj
  0001:00004610       ??$?0VRawImageData@@$0A@@?$weak_ptr@VRawImageData@@@std@@QAE@ABV?$shared_ptr@VRawImageData@@@1@@Z 00405610 f i DraggingDemo.obj
  0001:00004640       ??$?6DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z 00405640 f i DraggingDemo.obj
  0001:00004670       ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00405670 f i DraggingDemo.obj
- 0001:00004960       ??$_Allocate_at_least_helper@V?$allocator@U?$pair@HH@std@@@std@@@std@@YAPAU?$pair@HH@0@AAV?$allocator@U?$pair@HH@std@@@0@AAI@Z 00405960 f i Psyeb10Enemy.obj
- 0001:00004980       ?_Unchecked_begin@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEPAU?$pair@HH@2@XZ 00405980 f i Psyeb10Enemy.obj
- 0001:000049a0       ??$_Freenode0@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@HH@std@@PAX@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU01@@Z 004059a0 f i Psyeb10Enemy.obj
- 0001:000049f0       ?_Unchecked_end@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEPAU?$pair@HH@2@XZ 004059f0 f i Psyeb10Enemy.obj
+ 0001:00004960       ??$_Allocate_at_least_helper@V?$allocator@PAU?$pair@HH@std@@@std@@@std@@YAPAPAU?$pair@HH@0@AAV?$allocator@PAU?$pair@HH@std@@@0@AAI@Z 00405960 f i Psyeb10Enemy.obj
+ 0001:00004980       ?_Myoff@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEAAIXZ 00405980 f i Psyeb10Enemy.obj
+ 0001:000049a0       ??$_Erase_tree@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@QAEXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@HH@std@@PAX@1@@Z 004059a0 f i Psyeb10Enemy.obj
+ 0001:000049f0       ?_Myoff@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@ABEABIXZ 004059f0 f i Psyeb10Enemy.obj
  0001:00004a10       ??$?9VRawImageData@@@std@@YA_NABV?$shared_ptr@VRawImageData@@@0@$$T@Z 00405a10 f i DraggingDemo.obj
  0001:00004a50       ??$?CVRawImageData@@$0A@@?$shared_ptr@VRawImageData@@@std@@QBEPAVRawImageData@@XZ 00405a50 f i DraggingDemo.obj
  0001:00004a70       ??$?MDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@0@Z 00405a70 f i DraggingDemo.obj
@@ -134,17 +133,18 @@
  0001:00004b70       ??$_Allocate_at_least_helper@V?$allocator@PAVDisplayableObject@@@std@@@std@@YAPAPAVDisplayableObject@@AAV?$allocator@PAVDisplayableObject@@@0@AAI@Z 00405b70 f i DraggingDemo.obj
  0001:00004b90       ??$_Allocate_for_capacity@$0A@@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@CAPADAAV?$allocator@D@1@AAI@Z 00405b90 f i DraggingDemo.obj
  0001:00004be0       ??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPAXI@Z 00405be0 f i DraggingDemo.obj
- 0001:00004ca0       ?allocate@?$allocator@H@std@@QAEPAHI@Z 00405ca0 f i Psyeb10Enemy.obj
+ 0001:00004ca0       ?_Release@?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAEPAU?$_Tree_node@U?$pair@HH@std@@PAX@2@XZ 00405ca0 f i Psyeb10Enemy.obj
  0001:00004cd0       ??$_Buyheadnode@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@SAPAU01@AAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@@Z 00405cd0 f i DraggingDemo.obj
- 0001:00004d30       ?deallocate@?$_Default_allocator_traits@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@2@QAU?$_Tree_node@U?$pair@HH@std@@PAX@2@I@Z 00405d30 f i Psyeb10Enemy.obj
+ 0001:00004d30       ?_Release@?$_Uninitialized_backout@PAPAU?$pair@HH@std@@@std@@QAEPAPAU?$pair@HH@2@XZ 00405d30 f i Psyeb10Enemy.obj
  0001:00004d50       ??$_Buyheadnode@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@SAPAU01@AAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@@Z 00405d50 f i DraggingDemo.obj
  0001:00004db0       ?empty@?$queue@U?$pair@HH@std@@V?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@2@@std@@QBE_NXZ 00405db0 f i Psyeb10Enemy.obj
  0001:00004dd0       ??$_Construct@$00PBD@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXQBDI@Z 00405dd0 f i DraggingDemo.obj
- 0001:00004f70       ?_Release@?$_Uninitialized_backout_al@V?$allocator@H@std@@@std@@QAEPAHXZ 00405f70 f i Psyeb10Enemy.obj
- 0001:00004f90       ?allocate@?$allocator@PAU?$pair@HH@std@@@std@@QAEPAPAU?$pair@HH@2@I@Z 00405f90 f i Psyeb10Enemy.obj
+ 0001:00004f70       ?_Getblock@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@ABEHI@Z 00405f70 f i Psyeb10Enemy.obj
+ 0001:00004fa0       ??$forward@ABQAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@YAABQAU?$_Tree_node@U?$pair@HH@std@@PAX@0@ABQAU10@@Z 00405fa0 f i Psyeb10Enemy.obj
+ 0001:00004fb0       ?end@?$initializer_list@U?$pair@HH@std@@@std@@QBEPBU?$pair@HH@2@XZ 00405fb0 f i Psyeb10Enemy.obj
  0001:00004fd0       ??$_Construct@$01PBD@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXQBDI@Z 00405fd0 f i DraggingDemo.obj
- 0001:00005130       ??0?$allocator@H@std@@QAE@XZ 00406130 f i Psyeb10Enemy.obj
- 0001:00005140       ??1?$vector@HV?$allocator@H@std@@@std@@QAE@XZ 00406140 f i Psyeb10Enemy.obj
+ 0001:00005130       ??$construct@U?$pair@HH@std@@U12@@?$_Default_allocator_traits@V?$allocator@U?$pair@HH@std@@@std@@@std@@SAXAAV?$allocator@U?$pair@HH@std@@@1@QAU?$pair@HH@1@$$QAU31@@Z 00406130 f i Psyeb10Enemy.obj
+ 0001:00005170       ?_Get_first@?$_Compressed_pair@V?$allocator@H@std@@V?$_Vector_val@U?$_Simple_types@H@std@@@2@$00@std@@QAEAAV?$allocator@H@2@XZ 00406170 f i Psyeb10Enemy.obj
  0001:00005190       ??$_Construct_from_weak@VRawImageData@@@?$_Ptr_base@VRawImageData@@@std@@IAE_NABV?$weak_ptr@VRawImageData@@@1@@Z 00406190 f i DraggingDemo.obj
  0001:000051f0       ??$_Construct_in_place@PADAAPAD@std@@YAXAAPAD0@Z 004061f0 f i DraggingDemo.obj
  0001:00005240       ??$_Construct_in_place@PADABQAD@std@@YAXAAPADABQAD@Z 00406240 f i DraggingDemo.obj
@@ -156,29 +156,30 @@
  0001:00005420       ??$_Convert_size@II@std@@YAII@Z 00406420 f i DraggingDemo.obj
  0001:00005430       ??$_Copy_construct_from@VRawImageData@@@?$_Ptr_base@VRawImageData@@@std@@IAEXABV?$shared_ptr@VRawImageData@@@1@@Z 00406430 f i DraggingDemo.obj
  0001:00005470       ??$_Copy_memmove@PAPAVDisplayableObject@@PAPAV1@@std@@YAPAPAVDisplayableObject@@PAPAV1@00@Z 00406470 f i DraggingDemo.obj
- 0001:000054e0       ?end@?$initializer_list@U?$pair@HH@std@@@std@@QBEPBU?$pair@HH@2@XZ 004064e0 f i Psyeb10Enemy.obj
+ 0001:000054e0       ?front@?$queue@U?$pair@HH@std@@V?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@2@@std@@QAEAAU?$pair@HH@2@XZ 004064e0 f i Psyeb10Enemy.obj
  0001:00005500       ??$_Copy_memmove_tail@PAPAVDisplayableObject@@@std@@YAPAPAVDisplayableObject@@QBDQAPAV1@II@Z 00406500 f i DraggingDemo.obj
  0001:00005550       ??$_Deallocate@$07@std@@YAXPAXI@Z 00406550 f i DraggingDemo.obj
- 0001:000055b0       ??0?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@QAE@XZ 004065b0 f i Psyeb10Enemy.obj
+ 0001:000055b0       ?pop@?$queue@U?$pair@HH@std@@V?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@2@@std@@QAEXXZ 004065b0 f i Psyeb10Enemy.obj
  0001:000055d0       ??$_Deallocate_plain@V?$allocator@U_Container_proxy@std@@@std@@@std@@YAXAAV?$allocator@U_Container_proxy@std@@@0@QAU_Container_proxy@0@@Z 004065d0 f i DraggingDemo.obj
  0001:000055f0       ??$_Debug_lt_pred@ABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@ABV32@@std@@YA_NABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@0@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@1@Z 004065f0 f i DraggingDemo.obj
- 0001:00005680       ??0?$_Uninitialized_backout_al@V?$allocator@U?$pair@HH@std@@@std@@@std@@QAE@PAU?$pair@HH@1@AAV?$allocator@U?$pair@HH@std@@@1@@Z 00406680 f i Psyeb10Enemy.obj
+ 0001:00005680       ??$sqrt@H$0A@@@YANH@Z      00406680 f i Psyeb10Enemy.obj
  0001:000056b0       ??$_Delete_plain_internal@V?$allocator@U_Container_proxy@std@@@std@@@std@@YAXAAV?$allocator@U_Container_proxy@std@@@0@QAU_Container_proxy@0@@Z 004066b0 f i DraggingDemo.obj
  0001:000056d0       ??$_Destroy_in_place@PAD@std@@YAXAAPAD@Z 004066d0 f i DraggingDemo.obj
  0001:000056e0       ??$_Destroy_in_place@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@YAXAAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@0@@Z 004066e0 f i DraggingDemo.obj
  0001:000056f0       ??$_Destroy_in_place@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@YAXAAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@0@@Z 004066f0 f i DraggingDemo.obj
  0001:00005700       ??$_Destroy_range@V?$allocator@PAVDisplayableObject@@@std@@@std@@YAXPAPAVDisplayableObject@@QAPAV1@AAV?$allocator@PAVDisplayableObject@@@0@@Z 00406700 f i DraggingDemo.obj
  0001:00005710       ??$_Emplace@U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IAE?AU?$pair@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@_N@1@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@1@@Z 00406710 f i DraggingDemo.obj
- 0001:00005800       ?allocate@?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@QAEPAU?$_Tree_node@U?$pair@HH@std@@PAX@2@I@Z 00406800 f i Psyeb10Enemy.obj
+ 0001:00005800       ?_Subscript@?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@std@@QAEAAU?$pair@HH@2@I@Z 00406800 f i Psyeb10Enemy.obj
  0001:00005840       ??$_Emplace@U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IAE?AU?$pair@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@_N@1@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@@Z 00406840 f i DraggingDemo.obj
- 0001:00005930       ??$construct@U?$pair@HH@std@@ABU12@@?$_Default_allocator_traits@V?$allocator@U?$pair@HH@std@@@std@@@std@@SAXAAV?$allocator@U?$pair@HH@std@@@1@QAU?$pair@HH@1@ABU31@@Z 00406930 f i Psyeb10Enemy.obj
+ 0001:00005940       ??$move@AAPAH@std@@YA$$QAPAHAAPAH@Z 00406940 f i Psyeb10Enemy.obj
+ 0001:00005950       ?push_back@?$vector@HV?$allocator@H@std@@@std@@QAEXABH@Z 00406950 f i Psyeb10Enemy.obj
  0001:00005970       ??$_Emplace_back@$$V@?$_Uninitialized_backout_al@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAEXXZ 00406970 f i DraggingDemo.obj
  0001:000059c0       ??$_Emplace_back@PAVDisplayableObject@@@?$_Uninitialized_backout_al@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAEX$$QAPAVDisplayableObject@@@Z 004069c0 f i DraggingDemo.obj
  0001:00005a20       ??$_Erase_head@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@@Z 00406a20 f i DraggingDemo.obj
  0001:00005a70       ??$_Erase_tree@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@1@@Z 00406a70 f i DraggingDemo.obj
  0001:00005ad0       ??$_Find@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@ABEPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@1@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z 00406ad0 f i DraggingDemo.obj
  0001:00005b30       ??$_Find_lower_bound@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IBE?AU?$_Tree_find_result@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z 00406b30 f i DraggingDemo.obj
- 0001:00005bf0       ?allocate@?$allocator@U?$pair@HH@std@@@std@@QAEPAU?$pair@HH@2@I@Z 00406bf0 f i Psyeb10Enemy.obj
+ 0001:00005bf0       ?_Subscript@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEAAU?$pair@HH@2@I@Z 00406bf0 f i Psyeb10Enemy.obj
  0001:00005c20       ??$_Find_lower_bound@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IBE?AU?$_Tree_find_result@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z 00406c20 f i DraggingDemo.obj
  0001:00005ce0       ?empty@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QBE_NXZ 00406ce0 f i Psyeb10Enemy.obj
  0001:00005d10       ??$_Freenode0@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@PAU01@@Z 00406d10 f i DraggingDemo.obj
@@ -189,9 +190,10 @@
  0001:00005e90       ??$_Get_size_of_n@$0DE@@std@@YAII@Z 00406e90 f i DraggingDemo.obj
  0001:00005ed0       ??$_Get_unwrapped@ABQAPAVDisplayableObject@@@std@@YA?A_TABQAPAVDisplayableObject@@@Z 00406ed0 f i DraggingDemo.obj
  0001:00005ee0       ??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z 00406ee0 f i DraggingDemo.obj
- 0001:00006180       ??$min@H@std@@YAABHABH0@Z  00407180 f i Psyeb10Enemy.obj
- 0001:000061b0       ??$forward@AAPAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@YAAAPAU?$_Tree_node@U?$pair@HH@std@@PAX@0@AAPAU10@@Z 004071b0 f i Psyeb10Enemy.obj
- 0001:000061c0       ??0?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z 004071c0 f i Psyeb10Enemy.obj
+ 0001:00006180       ?end@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@2@XZ 00407180 f i Psyeb10Enemy.obj
+ 0001:000061b0       ??$addressof@U?$pair@HH@std@@@std@@YAPAU?$pair@HH@0@AAU10@@Z 004071b0 f i Psyeb10Enemy.obj
+ 0001:000061c0       ?_Orphan_range@?$vector@HV?$allocator@H@std@@@std@@ABEXPAH0@Z 004071c0 f i Psyeb10Enemy.obj
+ 0001:000061f0       ??0?$_Tree_unchecked_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@U_Iterator_base12@2@@std@@QAE@$$QAV01@@Z 004071f0 f i Psyeb10Enemy.obj
  0001:00006220       ??$_Kfn@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@SAABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@ABU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@1@@Z 00407220 f i DraggingDemo.obj
  0001:00006230       ??$_Kfn@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@SAABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@ABU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@@Z 00407230 f i DraggingDemo.obj
  0001:00006240       ??$_Lower_bound_duplicate@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IBE_NQAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@1@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z 00407240 f i DraggingDemo.obj
@@ -199,10 +201,10 @@
  0001:00006320       ??$_Max_limit@H@std@@YAHXZ 00407320 f i DraggingDemo.obj
  0001:00006340       ??$_Move_construct_from@VRawImageData@@@?$_Ptr_base@VRawImageData@@@std@@IAEX$$QAV01@@Z 00407340 f i DraggingDemo.obj
  0001:00006390       ??$_Resize@U_Value_init_tag@std@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEXIABU_Value_init_tag@1@@Z 00407390 f i DraggingDemo.obj
- 0001:00006490       ?end@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@2@XZ 00407490 f i Psyeb10Enemy.obj
+ 0001:00006490       ?push@?$queue@U?$pair@HH@std@@V?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@2@@std@@QAEX$$QAU?$pair@HH@2@@Z 00407490 f i Psyeb10Enemy.obj
  0001:000064c0       ??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEXIABU_Value_init_tag@1@@Z 004074c0 f i DraggingDemo.obj
- 0001:00006600       ??0?$initializer_list@U?$pair@HH@std@@@std@@QAE@PBU?$pair@HH@1@0@Z 00407600 f i Psyeb10Enemy.obj
- 0001:00006630       ?front@?$queue@U?$pair@HH@std@@V?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@2@@std@@QAEAAU?$pair@HH@2@XZ 00407630 f i Psyeb10Enemy.obj
+ 0001:00006600       ??0?$_Tree_unchecked_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@U_Iterator_base12@2@@std@@QAE@PAU?$_Tree_node@U?$pair@HH@std@@PAX@1@PBV?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@1@@Z 00407600 f i Psyeb10Enemy.obj
+ 0001:00006630       ?_Unchecked_end@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEPAU?$pair@HH@2@XZ 00407630 f i Psyeb10Enemy.obj
  0001:00006650       ??$_Set_ptr_rep_and_enable_shared@VRawImageData@@@?$shared_ptr@VRawImageData@@@std@@AAEXQAVRawImageData@@QAV_Ref_count_base@1@@Z 00407650 f i DraggingDemo.obj
  0001:00006680       ??$_To_address@PAPAVDisplayableObject@@@std@@YA?A_PABQAPAVDisplayableObject@@@Z 00407680 f i DraggingDemo.obj
  0001:00006690       ??$_Traits_compare@U?$char_traits@D@std@@@std@@YAHQBDI0I@Z 00407690 f i DraggingDemo.obj
@@ -210,9 +212,10 @@
  0001:00006710       ??$_Unfancy@PAVDisplayableObject@@@std@@YAPAPAVDisplayableObject@@PAPAV1@@Z 00407710 f i DraggingDemo.obj
  0001:00006720       ??$_Unfancy@U_Container_proxy@std@@@std@@YAPAU_Container_proxy@0@PAU10@@Z 00407720 f i DraggingDemo.obj
  0001:00006730       ??$_Uninitialized_move@PAPAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@YAPAPAVDisplayableObject@@QAPAV1@0PAPAV1@AAV?$allocator@PAVDisplayableObject@@@0@@Z 00407730 f i DraggingDemo.obj
- 0001:00006810       ??$construct@U?$pair@HH@std@@U12@@?$_Default_allocator_traits@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@QAU?$pair@HH@1@$$QAU31@@Z 00407810 f i Psyeb10Enemy.obj
+ 0001:00006810       ??0?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@std@@QAE@XZ 00407810 f i Psyeb10Enemy.obj
  0001:00006850       ??$_Uninitialized_value_construct_n@V?$allocator@PAVDisplayableObject@@@std@@@std@@YAPAPAVDisplayableObject@@PAPAV1@IAAV?$allocator@PAVDisplayableObject@@@0@@Z 00407850 f i DraggingDemo.obj
- 0001:00006910       ?pop@?$queue@U?$pair@HH@std@@V?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@2@@std@@QAEXXZ 00407910 f i Psyeb10Enemy.obj
+ 0001:00006910       ?begin@?$initializer_list@U?$pair@HH@std@@@std@@QBEPBU?$pair@HH@2@XZ 00407910 f i Psyeb10Enemy.obj
+ 0001:00006920       ?size@?$initializer_list@U?$pair@HH@std@@@std@@QBEIXZ 00407920 f i Psyeb10Enemy.obj
  0001:00006940       ??$_Weakly_construct_from@VRawImageData@@@?$_Ptr_base@VRawImageData@@@std@@IAEXABV01@@Z 00407940 f i DraggingDemo.obj
  0001:00006990       ??$_Zero_range@PAPAVDisplayableObject@@@std@@YAPAPAVDisplayableObject@@QAPAV1@0@Z 00407990 f i DraggingDemo.obj
  0001:000069e0       ??$addressof@$$CBV?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@YAPBV?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@0@ABV10@@Z 004079e0 f i DraggingDemo.obj
@@ -235,12 +238,10 @@
  0001:00006bc0       ??$destroy@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@?$_Default_allocator_traits@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@QAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@1@@Z 00407bc0 f i DraggingDemo.obj
  0001:00006be0       ??$destroy@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@?$_Default_allocator_traits@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@QAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@@Z 00407be0 f i DraggingDemo.obj
  0001:00006c00       ??$emplace@U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@_N@1@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@1@@Z 00407c00 f i DraggingDemo.obj
- 0001:00006c70       ??0?$queue@U?$pair@HH@std@@V?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@2@@std@@QAE@XZ 00407c70 f i Psyeb10Enemy.obj
  0001:00006c90       ??$emplace@U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@_N@1@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@@Z 00407c90 f i DraggingDemo.obj
- 0001:00006d00       ?size@?$initializer_list@U?$pair@HH@std@@@std@@QBEIXZ 00407d00 f i Psyeb10Enemy.obj
  0001:00006d20       ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z 00407d20 f i DraggingDemo.obj
  0001:00006d60       ??$erase@V?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@$0A@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@1@V21@@Z 00407d60 f i DraggingDemo.obj
- 0001:00006e70       ??$construct@U?$pair@HH@std@@U12@@?$_Default_allocator_traits@V?$allocator@U?$pair@HH@std@@@std@@@std@@SAXAAV?$allocator@U?$pair@HH@std@@@1@QAU?$pair@HH@1@$$QAU31@@Z 00407e70 f i Psyeb10Enemy.obj
+ 0001:00006e70       ??$_Uninitialized_value_construct_n_unchecked1@PAPAU?$pair@HH@std@@I@std@@YAPAPAU?$pair@HH@0@PAPAU10@I@Z 00407e70 f i Psyeb10Enemy.obj
  0001:00006eb0       ??$exchange@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@$$T@std@@YAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@0@AAPAU10@$$QA$$T@Z 00407eb0 f i DraggingDemo.obj
  0001:00006ee0       ??$exchange@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@$$T@std@@YAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@0@AAPAU10@$$QA$$T@Z 00407ee0 f i DraggingDemo.obj
  0001:00006f10       ??$exchange@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@AAPAU12@@std@@YAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@0@AAPAU10@0@Z 00407f10 f i DraggingDemo.obj
@@ -329,12 +330,12 @@
  0001:00007e40       ??0DragableBaseClassObject@@QAE@HHPAVBaseEngine@@HH_N@Z 00408e40 f i DraggingDemo.obj
  0001:00007ed0       ??0DragableBaseClassObject@@QAE@PAVBaseEngine@@HH_N@Z 00408ed0 f i DraggingDemo.obj
  0001:00007f50       ??0DragableImageObject@@QAE@HHPAVBaseEngine@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N2@Z 00408f50 f i DraggingDemo.obj
- 0001:000080a0       ??$?MHHHH@std@@YA_NABU?$pair@HH@0@0@Z 004090a0 f i Psyeb10Enemy.obj
+ 0001:000080a0       ??$?0V?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@AB_N$0A@@?$pair@V?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@_N@std@@QAE@$$QAV?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@1@AB_N@Z 004090a0 f i Psyeb10Enemy.obj
  0001:000080f0       ??0DragableObject@@QAE@HHPAVBaseEngine@@HH_N1@Z 004090f0 f i DraggingDemo.obj
  0001:000081a0       ??0DragableObject@@QAE@PAVBaseEngine@@HH_N1@Z 004091a0 f i DraggingDemo.obj
  0001:00008250       ??0ImageManager@@QAE@XZ    00409250 f i DraggingDemo.obj
  0001:000082c0       ??0ImageObject@@QAE@HHPAVBaseEngine@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N2@Z 004092c0 f i DraggingDemo.obj
- 0001:00008400       ??0?$_Vector_val@U?$_Simple_types@U?$pair@HH@std@@@std@@@std@@QAE@XZ 00409400 f i Psyeb10Enemy.obj
+ 0001:00008400       ??0?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z 00409400 f i Psyeb10Enemy.obj
  0001:00008450       ??0RawImageData@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 00409450 f i DraggingDemo.obj
  0001:00008500       ??0_Basic_container_proxy_ptr12@std@@IAE@XZ 00409500 f i DraggingDemo.obj
  0001:00008520       ??0_Bxty@?$_String_val@U?$_Simple_types@D@std@@@std@@QAE@XZ 00409520 f i DraggingDemo.obj
@@ -351,7 +352,7 @@
  0001:00008760       ??0exception@std@@QAE@ABV01@@Z 00409760 f i DraggingDemo.obj
  0001:000087b0       ??0exception@std@@QAE@QBDH@Z 004097b0 f i DraggingDemo.obj
  0001:000087f0       ??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 004097f0 f i DraggingDemo.obj
- 0001:000088c0       ?push@?$queue@U?$pair@HH@std@@V?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@2@@std@@QAEX$$QAU?$pair@HH@2@@Z 004098c0 f i Psyeb10Enemy.obj
+ 0001:000088c0       ??$forward@ABU?$less@U?$pair@HH@std@@@std@@@std@@YAABU?$less@U?$pair@HH@std@@@0@ABU10@@Z 004098c0 f i Psyeb10Enemy.obj
  0001:000088f0       ??1?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@XZ 004098f0 f i DraggingDemo.obj
  0001:00008930       ??1?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@XZ 00409930 f i DraggingDemo.obj
  0001:00008970       ??1?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QAE@XZ 00409970 f i DraggingDemo.obj
@@ -367,6 +368,7 @@
  0001:00008b40       ??1?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@XZ 00409b40 f i DraggingDemo.obj
  0001:00008be0       ?push_back@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEX$$QAU?$pair@HH@2@@Z 00409be0 f i Psyeb10Enemy.obj
  0001:00008c10       ??1?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@XZ 00409c10 f i DraggingDemo.obj
+ 0001:00008cb0       ??$_Fill_zero_memset@PAH@std@@YAXPAHI@Z 00409cb0 f i Psyeb10Enemy.obj
  0001:00008ce0       ??1?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@XZ 00409ce0 f i DraggingDemo.obj
  0001:00008d00       ??1?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@XZ 00409d00 f i DraggingDemo.obj
  0001:00008d20       ??1?$_Tree_unchecked_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@U_Iterator_base12@2@@std@@QAE@XZ 00409d20 f i DraggingDemo.obj
@@ -405,6 +407,7 @@
  0001:000094c0       ??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QBE_NXZ 0040a4c0 f i DraggingDemo.obj
  0001:000094e0       ??C?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@QBEPAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@XZ 0040a4e0 f i DraggingDemo.obj
  0001:00009510       ??D?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@QBEABU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@XZ 0040a510 f i DraggingDemo.obj
+ 0001:000095f0       ??$_Get_size_of_n@$0BI@@std@@YAII@Z 0040a5f0 f i Psyeb10Enemy.obj
  0001:00009620       ??D?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@QBEAAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@XZ 0040a620 f i DraggingDemo.obj
  0001:00009640       ??E?$_Tree_unchecked_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@U_Iterator_base0@2@@std@@QAEAAV01@XZ 0040a640 f i DraggingDemo.obj
  0001:000096d0       ??R?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@QBE_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@0@Z 0040a6d0 f i DraggingDemo.obj
@@ -429,15 +432,15 @@
  0001:00009980       ??_Gexception@std@@UAEPAXI@Z 0040a980 f i DraggingDemo.obj
  0001:000099c0       ?_Activate_SSO_buffer@?$_String_val@U?$_Simple_types@D@std@@@std@@QAEXXZ 0040a9c0 f i DraggingDemo.obj
  0001:000099d0       ?_Adjust_manually_vector_aligned@std@@YAXAAPAXAAI@Z 0040a9d0 f i DraggingDemo.obj
- 0001:00009ae0       ??9?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@QBE_NABV01@@Z 0040aae0 f i Psyeb10Enemy.obj
+ 0001:00009ae0       ?_Allocate@?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAEXXZ 0040aae0 f i Psyeb10Enemy.obj
  0001:00009b20       ?_Adopt@_Iterator_base0@std@@QAEXPBX@Z 0040ab20 f i DraggingDemo.obj
  0001:00009b30       ?_Adopt@_Iterator_base12@std@@QAEXPBU_Container_base12@2@@Z 0040ab30 f i DraggingDemo.obj
  0001:00009b50       ?_Adopt_locked@_Iterator_base12@std@@AAEXPBU_Container_base12@2@@Z 0040ab50 f i DraggingDemo.obj
  0001:00009b90       ?_Adopt_unlocked@_Iterator_base12@std@@AAEXPBU_Container_base12@2@@Z 0040ab90 f i DraggingDemo.obj
  0001:00009c10       ?_Alloc_sentinel_and_proxy@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IAEXXZ 0040ac10 f i DraggingDemo.obj
- 0001:00009cb0       ?_Kfn@?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@SAABU?$pair@HH@2@ABU32@@Z 0040acb0 f i Psyeb10Enemy.obj
+ 0001:00009cb0       ?_Get_first@?$_Compressed_pair@V?$allocator@U?$pair@HH@std@@@std@@V?$_Vector_val@U?$_Simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QAEAAV?$allocator@U?$pair@HH@std@@@2@XZ 0040acb0 f i Psyeb10Enemy.obj
  0001:00009ce0       ?_Alloc_sentinel_and_proxy@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IAEXXZ 0040ace0 f i DraggingDemo.obj
- 0001:00009d80       ?_Mysize@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEAAIXZ 0040ad80 f i Psyeb10Enemy.obj
+ 0001:00009d80       ?_Getal@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@ABEABV?$allocator@U?$pair@HH@std@@@2@XZ 0040ad80 f i Psyeb10Enemy.obj
  0001:00009db0       ?_Allocate@?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAEXXZ 0040adb0 f i DraggingDemo.obj
  0001:00009de0       ?_Allocate@?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAEXXZ 0040ade0 f i DraggingDemo.obj
  0001:00009e10       ?_Allocate@_Default_allocate_traits@std@@SAPAXI@Z 0040ae10 f i DraggingDemo.obj
@@ -459,9 +462,11 @@
  0001:0000a300       ?_Extract@?$_In_place_key_extract_map_impl@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@2@@std@@SAABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@ABU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@2@@Z 0040b300 f i DraggingDemo.obj
  0001:0000a310       ?_Extract@?$_In_place_key_extract_map_impl@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@2@@std@@SAABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@ABU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@2@@Z 0040b310 f i DraggingDemo.obj
  0001:0000a320       ?_Extract@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@2@V?$_Tree_unchecked_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@U_Iterator_base0@2@@2@@Z 0040b320 f i DraggingDemo.obj
- 0001:0000a750       ?find@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@2@ABU?$pair@HH@2@@Z 0040b750 f i Psyeb10Enemy.obj
- 0001:0000a790       ??$_Copy_memmove@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAPAPAU?$pair@HH@0@PAPAU10@00@Z 0040b790 f i Psyeb10Enemy.obj
- 0001:0000a800       ??1?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAE@XZ 0040b800 f i Psyeb10Enemy.obj
+ 0001:0000a750       ?empty@?$vector@HV?$allocator@H@std@@@std@@QBE_NXZ 0040b750 f i Psyeb10Enemy.obj
+ 0001:0000a790       ??$_Destroy_range@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAXPAPAU?$pair@HH@0@QAPAU10@@Z 0040b790 f i Psyeb10Enemy.obj
+ 0001:0000a7a0       ?size@?$vector@HV?$allocator@H@std@@@std@@QBEIXZ 0040b7a0 f i Psyeb10Enemy.obj
+ 0001:0000a7d0       ??1?$_Tidy_guard@V?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@@std@@QAE@XZ 0040b7d0 f i Psyeb10Enemy.obj
+ 0001:0000a820       ??$_Copy_memmove_tail@PAU?$pair@HH@std@@@std@@YAPAU?$pair@HH@0@QBDQAU10@II@Z 0040b820 f i Psyeb10Enemy.obj
  0001:0000a860       ?_Get_deleter@_Ref_count_base@std@@UBEPAXABVtype_info@@@Z 0040b860 f i DraggingDemo.obj
  0001:0000a880       ?_Get_first@?$_Compressed_pair@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@V?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@2@$00@2@$00@std@@QBEABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@XZ 0040b880 f i DraggingDemo.obj
  0001:0000a8a0       ?_Get_first@?$_Compressed_pair@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@V?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@2@$00@2@$00@std@@QBEABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@XZ 0040b8a0 f i DraggingDemo.obj
@@ -493,10 +498,11 @@
  0001:0000ac10       ?_Incref_nz@_Ref_count_base@std@@QAE_NXZ 0040bc10 f i DraggingDemo.obj
  0001:0000ac80       ?_Incwref@_Ref_count_base@std@@QAEXXZ 0040bc80 f i DraggingDemo.obj
  0001:0000aca0       ?_Insert_node@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@2@U?$_Tree_id@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@2@QAU32@@Z 0040bca0 f i DraggingDemo.obj
- 0001:0000aeb0       ??$insert@$0A@$0A@@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@_N@1@$$QAU?$pair@HH@1@@Z 0040beb0 f i Psyeb10Enemy.obj
+ 0001:0000aec0       ??0?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@QAE@ABU?$less@U?$pair@HH@std@@@1@@Z 0040bec0 f i Psyeb10Enemy.obj
+ 0001:0000af00       ??1?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@XZ 0040bf00 f i Psyeb10Enemy.obj
  0001:0000af30       ?_Insert_node@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@2@U?$_Tree_id@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@2@QAU32@@Z 0040bf30 f i DraggingDemo.obj
- 0001:0000b140       ??0?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@QAE@PAU?$_Tree_node@U?$pair@HH@std@@PAX@1@PBV?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@1@@Z 0040c140 f i Psyeb10Enemy.obj
- 0001:0000b170       ?_Address_subscript@?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@std@@QAEPAU?$pair@HH@2@I@Z 0040c170 f i Psyeb10Enemy.obj
+ 0001:0000b140       ??$max@H@std@@YAABHABH0@Z  0040c140 f i Psyeb10Enemy.obj
+ 0001:0000b170       ??1?$_Uninitialized_backout_al@V?$allocator@U?$pair@HH@std@@@std@@@std@@QAE@XZ 0040c170 f i Psyeb10Enemy.obj
  0001:0000b1c0       ?_Large_mode_engaged@?$_String_val@U?$_Simple_types@D@std@@@std@@QBE_NXZ 0040c1c0 f i DraggingDemo.obj
  0001:0000b200       ?_Lrotate@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEXPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@2@@Z 0040c200 f i DraggingDemo.obj
  0001:0000b2c0       ?_Lrotate@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEXPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@2@@Z 0040c2c0 f i DraggingDemo.obj
@@ -524,7 +530,7 @@
  0001:0000bae0       ?_Swap_proxy_and_iterators_unlocked@_Container_base12@std@@AAEXAAU12@@Z 0040cae0 f i DraggingDemo.obj
  0001:0000bb40       ?_Switch_to_buf@_Bxty@?$_String_val@U?$_Simple_types@D@std@@@std@@QAEXXZ 0040cb40 f i DraggingDemo.obj
  0001:0000bb60       ?_Take_contents@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXAAV12@@Z 0040cb60 f i DraggingDemo.obj
- 0001:0000bce0       ??$_Buyheadnode@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@HH@std@@PAX@std@@SAPAU01@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z 0040cce0 f i Psyeb10Enemy.obj
+ 0001:0000bd00       ??$_Copy_memmove_tail@PAPAU?$pair@HH@std@@@std@@YAPAPAU?$pair@HH@0@QBDQAPAU10@II@Z 0040cd00 f i Psyeb10Enemy.obj
  0001:0000bd40       ?_Throw_bad_array_new_length@std@@YAXXZ 0040cd40 f i DraggingDemo.obj
  0001:0000bd70       ?_Throw_tree_length_error@std@@YAXXZ 0040cd70 f i DraggingDemo.obj
  0001:0000bd90       ?_Tidy_deallocate@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXXZ 0040cd90 f i DraggingDemo.obj
@@ -573,8 +579,8 @@
  0001:0000c8e0       ?getHeight@RawImageData@@QBEHXZ 0040d8e0 f i DraggingDemo.obj
  0001:0000c900       ?getHeight@SimpleImage@@QBEHXZ 0040d900 f i DraggingDemo.obj
  0001:0000c930       ?getImagePtrbyURL@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@_N1@Z 0040d930 f i DraggingDemo.obj
- 0001:0000cca0       ??$_Emplace_back@ABH@?$_Uninitialized_backout_al@V?$allocator@H@std@@@std@@QAEXABH@Z 0040dca0 f i Psyeb10Enemy.obj
- 0001:0000ccf0       ??$_Freenode@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@HH@std@@PAX@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU01@@Z 0040dcf0 f i Psyeb10Enemy.obj
+ 0001:0000ccb0       ??0?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAE@XZ 0040dcb0 f i Psyeb10Enemy.obj
+ 0001:0000ccf0       ??$_Emplace_one_at_back@ABH@?$vector@HV?$allocator@H@std@@@std@@AAEAAHABH@Z 0040dcf0 f i Psyeb10Enemy.obj
  0001:0000cd70       ?getImagebyURL@ImageManager@@QAE?AVSimpleImage@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N1@Z 0040dd70 f i DraggingDemo.obj
  0001:0000ce40       ?getIntsPerWindowRow@DrawingSurface@@QBEIXZ 0040de40 f i DraggingDemo.obj
  0001:0000ce60       ?getSurfaceHeight@DrawingSurface@@QBEHXZ 0040de60 f i DraggingDemo.obj
@@ -588,10 +594,10 @@
  0001:0000d010       ?isVisible@DisplayableObject@@QBE_NXZ 0040e010 f i DraggingDemo.obj
  0001:0000d030       ?length@?$_Narrow_char_traits@DH@std@@SAIQBD@Z 0040e030 f i DraggingDemo.obj
  0001:0000d050       ?loadAsNew@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@@Z 0040e050 f i DraggingDemo.obj
- 0001:0000d1d0       ?max_size@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@QBEIXZ 0040e1d0 f i Psyeb10Enemy.obj
+ 0001:0000d1d0       ?allocate@?$allocator@H@std@@QAEPAHI@Z 0040e1d0 f i Psyeb10Enemy.obj
  0001:0000d220       ?loadImage@RawImageData@@QAE_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HHHHH_N@Z 0040e220 f i DraggingDemo.obj
- 0001:0000d4b0       ??$forward@V?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@@std@@YA$$QAV?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@0@AAV10@@Z 0040e4b0 f i Psyeb10Enemy.obj
- 0001:0000d4e0       ??$_Adl_verify_range@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAXABQAPAU?$pair@HH@0@0@Z 0040e4e0 f i Psyeb10Enemy.obj
+ 0001:0000d4b0       ??$forward@AAPAU?$pair@HH@std@@@std@@YAAAPAU?$pair@HH@0@AAPAU10@@Z 0040e4b0 f i Psyeb10Enemy.obj
+ 0001:0000d4e0       ??$?MHHHH@std@@YA_NABU?$pair@HH@0@0@Z 0040e4e0 f i Psyeb10Enemy.obj
  0001:0000d550       ?lock@?$weak_ptr@VRawImageData@@@std@@QBE?AV?$shared_ptr@VRawImageData@@@2@XZ 0040e550 f i DraggingDemo.obj
  0001:0000d5a0       ?max_size@?$_Default_allocator_traits@V?$allocator@D@std@@@std@@SAIABV?$allocator@D@2@@Z 0040e5a0 f i DraggingDemo.obj
  0001:0000d5b0       ?max_size@?$_Default_allocator_traits@V?$allocator@PAVDisplayableObject@@@std@@@std@@SAIABV?$allocator@PAVDisplayableObject@@@2@@Z 0040e5b0 f i DraggingDemo.obj
@@ -659,39 +665,44 @@
  0001:00010ca0       ?getRealRedrawMinY@DrawingSurface@@QAEHXZ 00411ca0 f   DrawingSurface.obj
  0001:00010cf0       ?getRealRedrawMaxX@DrawingSurface@@QAEHXZ 00411cf0 f   DrawingSurface.obj
  0001:00010d40       ?getRealRedrawMaxY@DrawingSurface@@QAEHXZ 00411d40 f   DrawingSurface.obj
- 0001:00010d90       ??$_Allocate_at_least_helper@V?$allocator@PAU?$pair@HH@std@@@std@@@std@@YAPAPAU?$pair@HH@0@AAV?$allocator@PAU?$pair@HH@std@@@0@AAI@Z 00411d90 f i Psyeb10Enemy.obj
- 0001:00010dd0       ??0?$set@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@@std@@QAE@XZ 00411dd0 f i Psyeb10Enemy.obj
- 0001:00010df0       ?deallocate@?$allocator@H@std@@QAEXQAHI@Z 00411df0 f i Psyeb10Enemy.obj
- 0001:00010e70       ??$_Destroy_range@V?$allocator@U?$pair@HH@std@@@std@@@std@@YAXPAU?$pair@HH@0@QAU10@AAV?$allocator@U?$pair@HH@std@@@0@@Z 00411e70 f i Psyeb10Enemy.obj
- 0001:00010eb0       ??0?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAE@V?$initializer_list@U?$pair@HH@std@@@1@ABV?$allocator@U?$pair@HH@std@@@1@@Z 00411eb0 f i Psyeb10Enemy.obj
- 0001:00010f10       ?max_size@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QBEIXZ 00411f10 f i Psyeb10Enemy.obj
- 0001:00010f60       ??$_Get_unwrapped@ABQAPAU?$pair@HH@std@@@std@@YA?A_TABQAPAU?$pair@HH@0@@Z 00411f60 f i Psyeb10Enemy.obj
- 0001:00010f70       ??1?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@QAE@XZ 00411f70 f i Psyeb10Enemy.obj
- 0001:00010fd0       ?_Lrotate@?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@QAEXPAU?$_Tree_node@U?$pair@HH@std@@PAX@2@@Z 00411fd0 f i Psyeb10Enemy.obj
- 0001:00011090       ??$?0PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@_N$0A@@?$pair@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@_N@std@@QAE@$$QAPAU?$_Tree_node@U?$pair@HH@std@@PAX@1@$$QA_N@Z 00412090 f i Psyeb10Enemy.obj
- 0001:000110d0       ??$_Copy_memmove@PBU?$pair@HH@std@@PAU12@@std@@YAPAU?$pair@HH@0@PBU10@0PAU10@@Z 004120d0 f i Psyeb10Enemy.obj
- 0001:00011140       ?max_size@?$vector@HV?$allocator@H@std@@@std@@QBEIXZ 00412140 f i Psyeb10Enemy.obj
- 0001:00011180       ??$move@AAPAPAU?$pair@HH@std@@@std@@YA$$QAPAPAU?$pair@HH@0@AAPAPAU10@@Z 00412180 f i Psyeb10Enemy.obj
- 0001:000111b0       ?_Get_first@?$_Compressed_pair@V?$allocator@U?$pair@HH@std@@@std@@V?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QBEABV?$allocator@U?$pair@HH@std@@@2@XZ 004121b0 f i Psyeb10Enemy.obj
- 0001:000111c0       ?_Orphan_off@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@ABEXI@Z 004121c0 f i Psyeb10Enemy.obj
- 0001:000112a0       ??$move@AAPAU?$pair@HH@std@@@std@@YA$$QAPAU?$pair@HH@0@AAPAU10@@Z 004122a0 f i Psyeb10Enemy.obj
- 0001:000112d0       ?_Getal@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAEAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@2@XZ 004122d0 f i Psyeb10Enemy.obj
- 0001:000112f0       ?deallocate@?$allocator@PAU?$pair@HH@std@@@std@@QAEXQAPAU?$pair@HH@2@I@Z 004122f0 f i Psyeb10Enemy.obj
- 0001:00011370       ??$move@AAPBU?$pair@HH@std@@@std@@YA$$QAPBU?$pair@HH@0@AAPBU10@@Z 00412370 f i Psyeb10Enemy.obj
- 0001:000113a0       ??$_Construct_in_place@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@AAPAU12@@std@@YAXAAPAU?$_Tree_node@U?$pair@HH@std@@PAX@0@0@Z 004123a0 f i Psyeb10Enemy.obj
- 0001:000113e0       ??$_Construct_n@ABH@?$vector@HV?$allocator@H@std@@@std@@AAEXIABH@Z 004123e0 f i Psyeb10Enemy.obj
- 0001:000114d0       ??$move@AAU?$pair@HH@std@@@std@@YA$$QAU?$pair@HH@0@AAU10@@Z 004124d0 f i Psyeb10Enemy.obj
- 0001:000114e0       ??$uninitialized_copy@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAPAPAU?$pair@HH@0@QAPAU10@0PAPAU10@@Z 004124e0 f i Psyeb10Enemy.obj
- 0001:00011570       ??0?$allocator@U?$pair@HH@std@@@std@@QAE@XZ 00412570 f i Psyeb10Enemy.obj
- 0001:00011580       ?max_size@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QBEIXZ 00412580 f i Psyeb10Enemy.obj
- 0001:000115e0       ??1?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@QAE@XZ 004125e0 f i Psyeb10Enemy.obj
- 0001:00011640       ??1?$_Tree_unchecked_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@U_Iterator_base12@2@@std@@QAE@XZ 00412640 f i Psyeb10Enemy.obj
- 0001:00011670       ?_Get_scary@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IBEPBV?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@2@XZ 00412670 f i Psyeb10Enemy.obj
- 0001:00011690       ?_Reset_map@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXXZ 00412690 f i Psyeb10Enemy.obj
- 0001:00011760       ??$?0AAHAAH$0A@@?$pair@HH@std@@QAE@AAH0@Z 00412760 f i Psyeb10Enemy.obj
- 0001:000117a0       ??$?0AAPAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@_N$0A@@?$pair@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@_N@std@@QAE@AAPAU?$_Tree_node@U?$pair@HH@std@@PAX@1@$$QA_N@Z 004127a0 f i Psyeb10Enemy.obj
- 0001:00011820       ??$_Destroy_range@V?$allocator@H@std@@@std@@YAXPAHQAHAAV?$allocator@H@0@@Z 00412820 f i Psyeb10Enemy.obj
- 0001:00011830       ??$_Uninitialized_copy@PBU?$pair@HH@std@@PBU12@V?$allocator@U?$pair@HH@std@@@2@@std@@YAPAU?$pair@HH@0@PBU10@0PAU10@AAV?$allocator@U?$pair@HH@std@@@0@@Z 00412830 f i Psyeb10Enemy.obj
+ 0001:00010d90       ??$_Allocate_at_least_helper@V?$allocator@H@std@@@std@@YAPAHAAV?$allocator@H@0@AAI@Z 00411d90 f i Psyeb10Enemy.obj
+ 0001:00010db0       ??$_Buyheadnode@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@HH@std@@PAX@std@@SAPAU01@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z 00411db0 f i Psyeb10Enemy.obj
+ 0001:00010e10       ?_Tidy@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXXZ 00411e10 f i Psyeb10Enemy.obj
+ 0001:00010e70       ??$_Destroy_in_place@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@YAXAAPAU?$_Tree_node@U?$pair@HH@std@@PAX@0@@Z 00411e70 f i Psyeb10Enemy.obj
+ 0001:00010eb0       ??0?$_Uninitialized_backout@PAPAU?$pair@HH@std@@@std@@QAE@PAPAU?$pair@HH@1@@Z 00411eb0 f i Psyeb10Enemy.obj
+ 0001:00010ee0       ??1?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@QAE@XZ 00411ee0 f i Psyeb10Enemy.obj
+ 0001:00010f40       ??0?$_Vector_val@U?$_Simple_types@U?$pair@HH@std@@@std@@@std@@QAE@XZ 00411f40 f i Psyeb10Enemy.obj
+ 0001:00010f80       ?find@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@2@ABU?$pair@HH@2@@Z 00411f80 f i Psyeb10Enemy.obj
+ 0001:00010ff0       ?allocate@?$allocator@PAU?$pair@HH@std@@@std@@QAEPAPAU?$pair@HH@2@I@Z 00411ff0 f i Psyeb10Enemy.obj
+ 0001:00011020       ?max_size@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@QBEIXZ 00412020 f i Psyeb10Enemy.obj
+ 0001:00011090       ??$?0HH$0A@@?$pair@HH@std@@QAE@$$QAH0@Z 00412090 f i Psyeb10Enemy.obj
+ 0001:000110f0       ??$_Erase_head@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@QAEXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z 004120f0 f i Psyeb10Enemy.obj
+ 0001:00011140       ?allocate@?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@QAEPAU?$_Tree_node@U?$pair@HH@std@@PAX@2@I@Z 00412140 f i Psyeb10Enemy.obj
+ 0001:00011180       ??$forward@ABU?$pair@HH@std@@@std@@YAABU?$pair@HH@0@ABU10@@Z 00412180 f i Psyeb10Enemy.obj
+ 0001:000111a0       ??$forward@ABH@std@@YAABHABH@Z 004121a0 f i Psyeb10Enemy.obj
+ 0001:000111b0       ?max_size@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QBEIXZ 004121b0 f i Psyeb10Enemy.obj
+ 0001:00011220       ??$_Destroy_range@V?$allocator@H@std@@@std@@YAXPAHQAHAAV?$allocator@H@0@@Z 00412220 f i Psyeb10Enemy.obj
+ 0001:00011230       ?max_size@?$vector@HV?$allocator@H@std@@@std@@QBEIXZ 00412230 f i Psyeb10Enemy.obj
+ 0001:000112a0       ??$forward@ABV?$allocator@H@std@@@std@@YAABV?$allocator@H@0@ABV10@@Z 004122a0 f i Psyeb10Enemy.obj
+ 0001:000112e0       ??$forward@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@YA$$QAPAU?$_Tree_node@U?$pair@HH@std@@PAX@0@AAPAU10@@Z 004122e0 f i Psyeb10Enemy.obj
+ 0001:000112f0       ?deallocate@?$allocator@U?$pair@HH@std@@@std@@QAEXQAU?$pair@HH@2@I@Z 004122f0 f i Psyeb10Enemy.obj
+ 0001:00011370       ??$forward@ABV?$allocator@U?$pair@HH@std@@@std@@@std@@YAABV?$allocator@U?$pair@HH@std@@@0@ABV10@@Z 00412370 f i Psyeb10Enemy.obj
+ 0001:00011380       ??$_Zero_range@PAPAU?$pair@HH@std@@@std@@YAPAPAU?$pair@HH@0@QAPAU10@0@Z 00412380 f i Psyeb10Enemy.obj
+ 0001:000113e0       ??1?$_Tidy_guard@V?$vector@HV?$allocator@H@std@@@std@@@std@@QAE@XZ 004123e0 f i Psyeb10Enemy.obj
+ 0001:00011400       ?max_size@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QBEIXZ 00412400 f i Psyeb10Enemy.obj
+ 0001:00011450       ??0?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z 00412450 f i Psyeb10Enemy.obj
+ 0001:000114d0       ??$forward@H@std@@YA$$QAHAAH@Z 004124d0 f i Psyeb10Enemy.obj
+ 0001:000114e0       ??$_Copy_memmove@PAHPAH@std@@YAPAHPAH00@Z 004124e0 f i Psyeb10Enemy.obj
+ 0001:00011580       ?allocate@?$allocator@U?$pair@HH@std@@@std@@QAEPAU?$pair@HH@2@I@Z 00412580 f i Psyeb10Enemy.obj
+ 0001:000115e0       ??0?$allocator@H@std@@QAE@XZ 004125e0 f i Psyeb10Enemy.obj
+ 0001:00011600       ??$?0ABU?$less@U?$pair@HH@std@@@std@@U_Zero_then_variadic_args_t@1@@?$_Compressed_pair@U?$less@U?$pair@HH@std@@@std@@V?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@2@$00@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABU?$less@U?$pair@HH@std@@@1@$$QAU_Zero_then_variadic_args_t@1@@Z 00412600 f i Psyeb10Enemy.obj
+ 0001:00011640       ??$_Debug_lt_pred@ABU?$less@U?$pair@HH@std@@@std@@ABU?$pair@HH@2@ABU32@@std@@YA_NABU?$less@U?$pair@HH@std@@@0@ABU?$pair@HH@0@1@Z 00412640 f i Psyeb10Enemy.obj
+ 0001:000116f0       ??0?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAE@V?$initializer_list@U?$pair@HH@std@@@1@ABV?$allocator@U?$pair@HH@std@@@1@@Z 004126f0 f i Psyeb10Enemy.obj
+ 0001:00011760       ??$?0$$V@?$_Compressed_pair@V?$allocator@U?$pair@HH@std@@@std@@V?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@@Z 00412760 f i Psyeb10Enemy.obj
+ 0001:000117a0       ??$?0AAHAAH$0A@@?$pair@HH@std@@QAE@AAH0@Z 004127a0 f i Psyeb10Enemy.obj
+ 0001:00011800       ??1_Reallocation_guard@?$vector@HV?$allocator@H@std@@@std@@QAE@XZ 00412800 f i Psyeb10Enemy.obj
+ 0001:00011850       ?_Orphan_range_locked@?$vector@HV?$allocator@H@std@@@std@@ABEXPAH0@Z 00412850 f i Psyeb10Enemy.obj
+ 0001:000118d0       ?deallocate@?$allocator@H@std@@QAEXQAHI@Z 004128d0 f i Psyeb10Enemy.obj
  0001:00011950       ??$move@AAH@std@@YA$$QAHAAH@Z 00412950 f i DrawingSurface.obj
  0001:00011960       ??$move@AAN@std@@YA$$QANAAN@Z 00412960 f i DrawingSurface.obj
  0001:00011970       ??$swap@H$0A@@std@@YAXAAH0@Z 00412970 f i DrawingSurface.obj
@@ -718,9 +729,9 @@
  0001:00011e30       ?virtSetupBackgroundBuffer@FlashingDemo@@UAEXXZ 00412e30 f   FlashingDemo.obj
  0001:000122d0       ?virtMainLoopDoBeforeUpdate@FlashingDemo@@UAEXXZ 004132d0 f   FlashingDemo.obj
  0001:00012390       ?virtCreateSurfaces@FlashingDemo@@UAEXXZ 00413390 f   FlashingDemo.obj
- 0001:00012400       ??$_Debug_lt_pred@ABU?$less@U?$pair@HH@std@@@std@@ABU?$pair@HH@2@ABU32@@std@@YA_NABU?$less@U?$pair@HH@std@@@0@ABU?$pair@HH@0@1@Z 00413400 f i Psyeb10Enemy.obj
- 0001:000124a0       ??$_Construct_in_place@PAU?$pair@HH@std@@AAPAU12@@std@@YAXAAPAU?$pair@HH@0@0@Z 004134a0 f i Psyeb10Enemy.obj
- 0001:000124e0       ??$_Uninitialized_copy_unchecked@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAPAPAU?$pair@HH@0@PAPAU10@QAPAU10@0@Z 004134e0 f i Psyeb10Enemy.obj
+ 0001:00012400       ??$_Copy_memmove@PBU?$pair@HH@std@@PAU12@@std@@YAPAU?$pair@HH@0@PBU10@0PAU10@@Z 00413400 f i Psyeb10Enemy.obj
+ 0001:000124a0       ??$_Construct_in_place@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@AAPAU12@@std@@YAXAAPAU?$_Tree_node@U?$pair@HH@std@@PAX@0@0@Z 004134a0 f i Psyeb10Enemy.obj
+ 0001:00012540       ??$min@H@std@@YAABHABH0@Z  00413540 f i Psyeb10Enemy.obj
  0001:000125c0       ??1DrawingSurface@@QAE@XZ  004135c0 f i FlashingDemo.obj
  0001:000125e0       ??_EFlashingDemo@@UAEPAXI@Z 004135e0 f i FlashingDemo.obj
  0001:000125e0       ??_GFlashingDemo@@UAEPAXI@Z 004135e0 f i FlashingDemo.obj
@@ -728,7 +739,7 @@
  0001:00012650       ?copyBackgroundPixels@BaseEngine@@UAEXHHHH@Z 00413650 f i FlashingDemo.obj
  0001:000126a0       ?createSurface@DrawingSurface@@QAEXHH@Z 004136a0 f i FlashingDemo.obj
  0001:000126f0       ?destroyOldObjects@DisplayableObjectContainer@@UAEX_N@Z 004136f0 f i FlashingDemo.obj
- 0001:000127b0       ??1?$_Uninitialized_backout@PAPAU?$pair@HH@std@@@std@@QAE@XZ 004137b0 f i Psyeb10Enemy.obj
+ 0001:000127b0       ??0?$initializer_list@U?$pair@HH@std@@@std@@QAE@PBU?$pair@HH@1@0@Z 004137b0 f i Psyeb10Enemy.obj
  0001:000127e0       ?fillBackground@BaseEngine@@UAEXI@Z 004137e0 f i FlashingDemo.obj
  0001:00012810       ?fillSurface@DrawingSurface@@QAEXI@Z 00413810 f i FlashingDemo.obj
  0001:000128b0       ?filter@BaseEngine@@UAE_NPAVDrawingSurface@@AAH1AAI_N@Z 004138b0 f i FlashingDemo.obj
@@ -762,19 +773,20 @@
  0001:00013150       ?drawBackground@gameState@@QAEXXZ 00414150 f   gameState.obj
  0001:00013320       ?getTileManager@gameState@@QAEPAVPsyeb10TileManager@@XZ 00414320 f   gameState.obj
  0001:00013340       ??1gameState@@UAE@XZ       00414340 f   gameState.obj
- 0001:000133d0       ??$_Is_all_bits_zero@H@std@@YA_NABH@Z 004143d0 f i Psyeb10Enemy.obj
- 0001:00013410       ??1?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@XZ 00414410 f i Psyeb10Enemy.obj
- 0001:000134b0       ??8?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@QBE_NABV01@@Z 004144b0 f i Psyeb10Enemy.obj
- 0001:00013550       ?_Map@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEAAPAPAU?$pair@HH@2@XZ 00414550 f i Psyeb10Enemy.obj
+ 0001:000133d0       ??$_Allocate_at_least_helper@V?$allocator@U?$pair@HH@std@@@std@@@std@@YAPAU?$pair@HH@0@AAV?$allocator@U?$pair@HH@std@@@0@AAI@Z 004143d0 f i Psyeb10Enemy.obj
+ 0001:00013440       ??1?$_Tree_unchecked_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@U_Iterator_base12@2@@std@@QAE@XZ 00414440 f i Psyeb10Enemy.obj
+ 0001:000134d0       ?_Address_subscript@?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@std@@QAEPAU?$pair@HH@2@I@Z 004144d0 f i Psyeb10Enemy.obj
+ 0001:00013550       ?_Get_scary@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAEPAV?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@2@XZ 00414550 f i Psyeb10Enemy.obj
+ 0001:00013570       ??$_Find@U?$pair@HH@std@@@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@ABEPAU?$_Tree_node@U?$pair@HH@std@@PAX@1@ABU?$pair@HH@1@@Z 00414570 f i Psyeb10Enemy.obj
  0001:000135d0       ??$?0ABV?$allocator@D@std@@$$V@?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABV?$allocator@D@1@@Z 004145d0 f i gameState.obj
  0001:00013600       ??$_Construct_in_place@PAVDisplayableObject@@ABQAV1@@std@@YAXAAPAVDisplayableObject@@ABQAV1@@Z 00414600 f i gameState.obj
  0001:00013650       ??$_Emplace_back_with_unused_capacity@ABQAVDisplayableObject@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEAAPAVDisplayableObject@@ABQAV2@@Z 00414650 f i gameState.obj
  0001:000136d0       ??$_Emplace_one_at_back@ABQAVDisplayableObject@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEAAPAVDisplayableObject@@ABQAV2@@Z 004146d0 f i gameState.obj
  0001:00013750       ??$_Emplace_reallocate@ABQAVDisplayableObject@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEPAPAVDisplayableObject@@QAPAV2@ABQAV2@@Z 00414750 f i gameState.obj
- 0001:00013940       ??0?$_Tree_unchecked_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@U_Iterator_base12@2@@std@@QAE@PAU?$_Tree_node@U?$pair@HH@std@@PAX@1@PBV?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@1@@Z 00414940 f i Psyeb10Enemy.obj
+ 0001:00013940       ??$move@AAPAPAU?$pair@HH@std@@@std@@YA$$QAPAPAU?$pair@HH@0@AAPAPAU10@@Z 00414940 f i Psyeb10Enemy.obj
  0001:000139a0       ??$_Pocma@V?$allocator@D@std@@@std@@YAXAAV?$allocator@D@0@0@Z 004149a0 f i gameState.obj
  0001:000139c0       ??$_Reallocate_for@V<lambda_9366063389c5f42a00a5088cf24e69de>@@PBD@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEAAV01@IV<lambda_9366063389c5f42a00a5088cf24e69de>@@PBD@Z 004149c0 f i gameState.obj
- 0001:00013a90       ??1?$_Tidy_guard@V?$vector@HV?$allocator@H@std@@@std@@@std@@QAE@XZ 00414a90 f i Psyeb10Enemy.obj
+ 0001:00013a90       ??0?$_Uninitialized_backout_al@V?$allocator@U?$pair@HH@std@@@std@@@std@@QAE@PAU?$pair@HH@1@AAV?$allocator@U?$pair@HH@std@@@1@@Z 00414a90 f i Psyeb10Enemy.obj
  0001:00013ad0       ??$addressof@$$CBV?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@YAPBV?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@0@ABV10@@Z 00414ad0 f i gameState.obj
  0001:00013ae0       ??$addressof@D@std@@YAPADAAD@Z 00414ae0 f i gameState.obj
  0001:00013af0       ??$addressof@PAVDisplayableObject@@@std@@YAPAPAVDisplayableObject@@AAPAV1@@Z 00414af0 f i gameState.obj
@@ -852,15 +864,15 @@
  0001:00015240       ?not_eof@?$_Narrow_char_traits@DH@std@@SAHH@Z 00416240 f i gameState.obj
  0001:00015290       ?notifyObjectsAboutKeys@BaseEngine@@QAEX_N@Z 00416290 f i gameState.obj
  0001:000152b0       ?overflow@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAEHH@Z 004162b0 f i gameState.obj
- 0001:000154d0       ??0?$_Uninitialized_backout_al@V?$allocator@H@std@@@std@@QAE@PAHAAV?$allocator@H@1@@Z 004164d0 f i Psyeb10Enemy.obj
+ 0001:000154d0       ??$move@AAU?$pair@HH@std@@@std@@YA$$QAU?$pair@HH@0@AAU10@@Z 004164d0 f i Psyeb10Enemy.obj
  0001:00015530       ?pause@BaseEngine@@QAEXXZ  00416530 f i gameState.obj
  0001:00015560       ?pbackfail@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAEHH@Z 00416560 f i gameState.obj
  0001:00015670       ?pointer_to@?$pointer_traits@PAD@std@@SAPADAAD@Z 00416670 f i gameState.obj
  0001:00015690       ?push_back@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAEXABQAVDisplayableObject@@@Z 00416690 f i gameState.obj
  0001:000156b0       ?seekoff@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@_JHH@Z 004166b0 f i gameState.obj
- 0001:00015950       ??$forward@ABU?$less@U?$pair@HH@std@@@std@@@std@@YAABU?$less@U?$pair@HH@std@@@0@ABU10@@Z 00416950 f i Psyeb10Enemy.obj
+ 0001:00015950       ??$construct@U?$pair@HH@std@@ABU12@@?$_Default_allocator_traits@V?$allocator@U?$pair@HH@std@@@std@@@std@@SAXAAV?$allocator@U?$pair@HH@std@@@1@QAU?$pair@HH@1@ABU31@@Z 00416950 f i Psyeb10Enemy.obj
  0001:000159c0       ?seekpos@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@V32@H@Z 004169c0 f i gameState.obj
- 0001:00015b80       ??$forward@ABU?$pair@HH@std@@@std@@YAABU?$pair@HH@0@ABU10@@Z 00416b80 f i Psyeb10Enemy.obj
+ 0001:00015b80       ??$construct@U?$pair@HH@std@@U12@@?$_Default_allocator_traits@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@QAU?$pair@HH@1@$$QAU31@@Z 00416b80 f i Psyeb10Enemy.obj
  0001:00015bf0       ?setAllObjectsVisible@DisplayableObjectContainer@@QBEX_N@Z 00416bf0 f i gameState.obj
  0001:00015cf0       ?setMapSize@TileManager@@QAEXHH@Z 00416cf0 f i gameState.obj
  0001:00015da0       ?setMapValue@TileManager@@QAEHHHH@Z 00416da0 f i gameState.obj
@@ -876,10 +888,10 @@
  0001:00016500       ?virtKeyDown@ImageMappingDemo@@UAEXH@Z 00417500 f   ImageMappingDemo.obj
  0001:00016530       ?virtMainLoopDoBeforeUpdate@ImageMappingDemo@@UAEXXZ 00417530 f   ImageMappingDemo.obj
  0001:000165c0       ?mapCoordinates@ImageMappingDemo@@UAE_NAAN0ABVSimpleImage@@@Z 004175c0 f   ImageMappingDemo.obj
- 0001:00016850       ?_Orphan_all@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXXZ 00417850 f i Psyeb10Enemy.obj
- 0001:000168e0       ?_Getal@?$vector@HV?$allocator@H@std@@@std@@AAEAAV?$allocator@H@2@XZ 004178e0 f i Psyeb10Enemy.obj
- 0001:00016900       ?deallocate@?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@QAEXQAU?$_Tree_node@U?$pair@HH@std@@PAX@2@I@Z 00417900 f i Psyeb10Enemy.obj
- 0001:00016980       ??A?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEAAU?$pair@HH@1@I@Z 00417980 f i Psyeb10Enemy.obj
+ 0001:00016850       ?_Getal@?$vector@HV?$allocator@H@std@@@std@@ABEABV?$allocator@H@2@XZ 00417850 f i Psyeb10Enemy.obj
+ 0001:00016870       ??$_Emplace_back_with_unused_capacity@ABH@?$vector@HV?$allocator@H@std@@@std@@AAEAAHABH@Z 00417870 f i Psyeb10Enemy.obj
+ 0001:00016930       ?_Release@?$_Uninitialized_backout_al@V?$allocator@H@std@@@std@@QAEPAHXZ 00417930 f i Psyeb10Enemy.obj
+ 0001:000169b0       ?_Unchecked_begin@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEPAU?$pair@HH@2@XZ 004179b0 f i Psyeb10Enemy.obj
  0001:00016a30       ??0MappableImageObject@@QAE@PAVImagePixelMapping@@HHPAVBaseEngine@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N3@Z 00417a30 f i ImageMappingDemo.obj
  0001:00016af0       ??1MappableImageObject@@UAE@XZ 00417af0 f i ImageMappingDemo.obj
  0001:00016b10       ??_EMappableImageObject@@UAEPAXI@Z 00417b10 f i ImageMappingDemo.obj
@@ -903,8 +915,8 @@
  0001:000171e0       ?setLives@MainCharacter@@QAEXH@Z 004181e0 f   MainCharacter.obj
  0001:00017200       ?virtPostMoveLogic@MainCharacter@@UAEXXZ 00418200 f   MainCharacter.obj
  0001:000172a0       ?virtHandleDeath@MainCharacter@@UAEXXZ 004182a0 f   MainCharacter.obj
- 0001:000172e0       ??$?0ABV?$allocator@H@std@@$$V@?$_Compressed_pair@V?$allocator@H@std@@V?$_Vector_val@U?$_Simple_types@H@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABV?$allocator@H@1@@Z 004182e0 f i Psyeb10Enemy.obj
- 0001:00017310       ?_Alloc_sentinel_and_proxy@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAEXXZ 00418310 f i Psyeb10Enemy.obj
+ 0001:000172e0       ?front@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEAAU?$pair@HH@2@XZ 004182e0 f i Psyeb10Enemy.obj
+ 0001:00017360       ?_Calculate_growth@?$vector@HV?$allocator@H@std@@@std@@ABEII@Z 00418360 f i Psyeb10Enemy.obj
  0001:000173c0       ??1MainCharacter@@UAE@XZ   004183c0 f i MainCharacter.obj
  0001:000173e0       ??1Psyeb10Bike@@UAE@XZ     004183e0 f i MainCharacter.obj
  0001:00017400       ??_EMainCharacter@@UAEPAXI@Z 00418400 f i MainCharacter.obj
@@ -915,7 +927,7 @@
  0001:00017500       ?getYCentre@DisplayableObject@@QBEHXZ 00418500 f i MainCharacter.obj
  0001:00017550       _SDL_main                  00418550 f   mainfunction.obj
  0001:00017590       ?doProgram@@YAHHQAPAD@Z    00418590 f   mainfunction.obj
- 0001:00017680       ??0?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAE@XZ 00418680 f i Psyeb10Enemy.obj
+ 0001:00017680       ??0?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@QAE@PAU?$_Tree_node@U?$pair@HH@std@@PAX@1@PBV?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@1@@Z 00418680 f i Psyeb10Enemy.obj
  0001:000176d0       ??$_Erase_head@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@@Z 004186d0 f i mainfunction.obj
  0001:00017720       ??$_Erase_tree@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@1@@Z 00418720 f i mainfunction.obj
  0001:00017780       ??$_Freenode0@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@PAU01@@Z 00418780 f i mainfunction.obj
@@ -957,15 +969,18 @@
  0001:00018d30       ?drawAllObjects@BaseEngine@@UAEXXZ 00419d30 f   BaseEngine.obj
  0001:00018ef0       ?updateAllObjects@BaseEngine@@UAEXH@Z 00419ef0 f   BaseEngine.obj
  0001:000190c0       _mydebug                   0041a0c0 f   BaseEngine.obj
- 0001:000192e0       ?_Buy_raw@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXI@Z 0041a2e0 f i Psyeb10Enemy.obj
- 0001:00019350       ?_Tidy@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXXZ 0041a350 f i Psyeb10Enemy.obj
- 0001:000193f0       ?deallocate@?$allocator@U?$pair@HH@std@@@std@@QAEXQAU?$pair@HH@2@I@Z 0041a3f0 f i Psyeb10Enemy.obj
- 0001:00019470       ?front@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEAAU?$pair@HH@2@XZ 0041a470 f i Psyeb10Enemy.obj
- 0001:00019520       ??0?$vector@HV?$allocator@H@std@@@std@@QAE@IABHABV?$allocator@H@1@@Z 0041a520 f i Psyeb10Enemy.obj
- 0001:00019560       ?_Subscript@?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@std@@QAEAAU?$pair@HH@2@I@Z 0041a560 f i Psyeb10Enemy.obj
- 0001:000195a0       ?pop_back@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEXXZ 0041a5a0 f i Psyeb10Enemy.obj
- 0001:00019700       ??$_To_address@PAPAU?$pair@HH@std@@@std@@YA?A_PABQAPAU?$pair@HH@0@@Z 0041a700 f i Psyeb10Enemy.obj
- 0001:000197e0       ??$?0U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@?$allocator@U_Container_proxy@std@@@std@@QAE@ABV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z 0041a7e0 f i Psyeb10Enemy.obj
+ 0001:000192e0       ??1?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAE@XZ 0041a2e0 f i Psyeb10Enemy.obj
+ 0001:00019370       ?_Orphan_range_unlocked@?$vector@HV?$allocator@H@std@@@std@@ABEXPAH0@Z 0041a370 f i Psyeb10Enemy.obj
+ 0001:000193e0       ?deallocate@?$allocator@PAU?$pair@HH@std@@@std@@QAEXQAPAU?$pair@HH@2@I@Z 0041a3e0 f i Psyeb10Enemy.obj
+ 0001:00019490       ?deallocate@?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@QAEXQAU?$_Tree_node@U?$pair@HH@std@@PAX@2@I@Z 0041a490 f i Psyeb10Enemy.obj
+ 0001:00019520       ??0?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@QAE@XZ 0041a520 f i Psyeb10Enemy.obj
+ 0001:00019560       ?_Kfn@?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@SAABU?$pair@HH@2@ABU32@@Z 0041a560 f i Psyeb10Enemy.obj
+ 0001:000195b0       ??$_Seek_wrapped@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAXAAPAPAU?$pair@HH@0@$$QAPAPAU10@@Z 0041a5b0 f i Psyeb10Enemy.obj
+ 0001:000195d0       ??$_Uninitialized_copy@PBU?$pair@HH@std@@PBU12@V?$allocator@U?$pair@HH@std@@@2@@std@@YAPAU?$pair@HH@0@PBU10@0PAU10@AAV?$allocator@U?$pair@HH@std@@@0@@Z 0041a5d0 f i Psyeb10Enemy.obj
+ 0001:00019700       ??$_Get_unwrapped@ABQAH@std@@YA?A_TABQAH@Z 0041a700 f i Psyeb10Enemy.obj
+ 0001:00019750       ??1?$vector@HV?$allocator@H@std@@@std@@QAE@XZ 0041a750 f i Psyeb10Enemy.obj
+ 0001:000197e0       ??$?0PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@_N$0A@@?$pair@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@_N@std@@QAE@$$QAPAU?$_Tree_node@U?$pair@HH@std@@PAX@1@$$QA_N@Z 0041a7e0 f i Psyeb10Enemy.obj
+ 0001:00019840       ?_Release@?$_Uninitialized_backout_al@V?$allocator@U?$pair@HH@std@@@std@@@std@@QAEPAU?$pair@HH@2@XZ 0041a840 f i Psyeb10Enemy.obj
  0001:000198d0       ??$?0ABV?$allocator@PAVDisplayableObject@@@std@@$$V@?$_Compressed_pair@V?$allocator@PAVDisplayableObject@@@std@@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABV?$allocator@PAVDisplayableObject@@@1@@Z 0041a8d0 f i BaseEngine.obj
  0001:00019900       ??$?0PAVDisplayableObject@@@?$allocator@U_Container_proxy@std@@@std@@QAE@ABV?$allocator@PAVDisplayableObject@@@1@@Z 0041a900 f i BaseEngine.obj
  0001:00019920       ??$_Adl_verify_range@V?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@V12@@std@@YAXABV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@0@0@Z 0041a920 f i BaseEngine.obj
@@ -1006,7 +1021,7 @@
  0001:0001a700       ?setHasActed@DisplayableObject@@QAEX_N@Z 0041b700 f i BaseEngine.obj
  0001:0001a720       ?setTimeToAct@BaseEngine@@QAEXH@Z 0041b720 f i BaseEngine.obj
  0001:0001a750       ?symbolToKeycode@BaseEngine@@SAHH@Z 0041b750 f i BaseEngine.obj
- 0001:0001ab40       ??$_Destroy_in_place@PAU?$pair@HH@std@@@std@@YAXAAPAU?$pair@HH@0@@Z 0041bb40 f i Psyeb10Enemy.obj
+ 0001:0001ab80       ??$_Uninitialized_fill_n@V?$allocator@H@std@@@std@@YAPAHPAHIABHAAV?$allocator@H@0@@Z 0041bb80 f i Psyeb10Enemy.obj
  0001:0001ac40       ?virtMainLoopDoBeforeUpdate@BaseEngine@@UAEXXZ 0041bc40 f i BaseEngine.obj
  0001:0001ac50       _fprintf                   0041bc50 f i BaseEngine.obj
  0001:0001ac90       ??0DisplayableObject@@QAE@PAVBaseEngine@@HH_N@Z 0041bc90 f   DisplayableObject.obj
@@ -1018,7 +1033,7 @@
  0001:0001af10       ?redrawRectangle@DisplayableObject@@QAEXXZ 0041bf10 f   DisplayableObject.obj
  0001:0001af50       ?virtIsObjectInRedrawArea@DisplayableObject@@QAE_NXZ 0041bf50 f   DisplayableObject.obj
  0001:0001aff0       ?fixPosition@DisplayableObject@@QAEXXZ 0041bff0 f   DisplayableObject.obj
- 0001:0001b0c0       ??$_Destroy_range@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAXPAPAU?$pair@HH@0@QAPAU10@@Z 0041c0c0 f i Psyeb10Enemy.obj
+ 0001:0001b0d0       ??$_Construct_n@ABH@?$vector@HV?$allocator@H@std@@@std@@AAEXIABH@Z 0041c0d0 f i Psyeb10Enemy.obj
  0001:0001b1c0       ??_EDisplayableObject@@UAEPAXI@Z 0041c1c0 f i DisplayableObject.obj
  0001:0001b1c0       ??_GDisplayableObject@@UAEPAXI@Z 0041c1c0 f i DisplayableObject.obj
  0001:0001b200       ?convertVirtualPixelToClickedXPosition@BaseEngine@@QAEHH@Z 0041c200 f i DisplayableObject.obj
@@ -1031,7 +1046,8 @@
  0001:0001b500       ??1FontManager@@QAE@XZ     0041c500 f   FontManager.obj
  0001:0001b570       ?getFont@FontManager@@QAEPAVFont@@PBDH@Z 0041c570 f   FontManager.obj
  0001:0001b710       ?loadFonts@FontManager@@QAEXXZ 0041c710 f   FontManager.obj
- 0001:0001b780       ??$_Erase_head@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@QAEXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z 0041c780 f i Psyeb10Enemy.obj
+ 0001:0001b780       ??$_Emplace_back@AAPAU?$pair@HH@std@@@?$_Uninitialized_backout@PAPAU?$pair@HH@std@@@std@@QAEXAAPAU?$pair@HH@1@@Z 0041c780 f i Psyeb10Enemy.obj
+ 0001:0001b7c0       ?_Buy_raw@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXI@Z 0041c7c0 f i Psyeb10Enemy.obj
  0001:0001b840       ??$growArrayOfObjects@PAVFont@@@@YAPAPAVFont@@PAPAV0@AAHH@Z 0041c840 f i FontManager.obj
  0001:0001b8f0       ??0Font@@QAE@PBDH@Z        0041c8f0 f i FontManager.obj
  0001:0001b970       ??1Font@@QAE@XZ            0041c970 f i FontManager.obj
@@ -1041,7 +1057,9 @@
  0001:0001ba70       ?virtDrawTileAt@menuTileManager@@UBEXPAVBaseEngine@@PAVDrawingSurface@@HHHH@Z 0041ca70 f   menuTileManager.obj
  0001:0001bbf0       ?tileSelected@menuTileManager@@QAEXPAVBaseEngine@@PAVDrawingSurface@@HH@Z 0041cbf0 f   menuTileManager.obj
  0001:0001bc30       ?drawTileBox@menuTileManager@@QBEXPAVBaseEngine@@PAVDrawingSurface@@HH_N@Z 0041cc30 f   menuTileManager.obj
- 0001:0001be30       ??$forward@PBU?$pair@HH@std@@@std@@YA$$QAPBU?$pair@HH@0@AAPBU10@@Z 0041ce30 f i Psyeb10Enemy.obj
+ 0001:0001be30       ??$forward@AAH@std@@YAAAHAAH@Z 0041ce30 f i Psyeb10Enemy.obj
+ 0001:0001be80       ??0?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@QAE@XZ 0041ce80 f i Psyeb10Enemy.obj
+ 0001:0001be90       ??A?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEAAU?$pair@HH@1@I@Z 0041ce90 f i Psyeb10Enemy.obj
  0001:0001bf20       ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ 0041cf20 f i menuTileManager.obj
  0001:0001bf90       ??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@QBD@Z 0041cf90 f i menuTileManager.obj
  0001:0001bfb0       ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@QBD@Z 0041cfb0 f i menuTileManager.obj
@@ -1052,7 +1070,7 @@
  0001:0001c2b0       ?virtMouseDown@MyDemoA@@UAEXHHH@Z 0041d2b0 f   MyDemoA.obj
  0001:0001c400       ?virtKeyDown@MyDemoA@@UAEXH@Z 0041d400 f   MyDemoA.obj
  0001:0001c450       ?virtInitialiseObjects@MyDemoA@@UAEHXZ 0041d450 f   MyDemoA.obj
- 0001:0001c510       ??$_To_address@PAH@std@@YA?A_PABQAH@Z 0041d510 f i Psyeb10Enemy.obj
+ 0001:0001c590       ??1?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@QAE@XZ 0041d590 f i Psyeb10Enemy.obj
  0001:0001c630       ??0MyObjectB@@QAE@PAVBaseEngine@@@Z 0041d630 f i MyDemoA.obj
  0001:0001c680       ??1MyObjectB@@UAE@XZ       0041d680 f i MyDemoA.obj
  0001:0001c6a0       ??_EMyObjectB@@UAEPAXI@Z   0041d6a0 f i MyDemoA.obj
@@ -1072,7 +1090,7 @@
  0001:0001cc20       ?mouseDown@pauseState@@UAEXHHH@Z 0041dc20 f   pauseState.obj
  0001:0001ccc0       ?mainLoopPreUpdate@pauseState@@UAEXXZ 0041dcc0 f   pauseState.obj
  0001:0001cd80       ?reEntry@pauseState@@UAEXXZ 0041dd80 f   pauseState.obj
- 0001:0001cd90       ??1?$_Tidy_guard@V?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@@std@@QAE@XZ 0041dd90 f i Psyeb10Enemy.obj
+ 0001:0001cd90       ??0?$_Vector_val@U?$_Simple_types@H@std@@@std@@QAE@XZ 0041dd90 f i Psyeb10Enemy.obj
  0001:0001ce20       ?getCurrentMouseX@BaseEngine@@QBEHXZ 0041de20 f i pauseState.obj
  0001:0001ce40       ?getCurrentMouseY@BaseEngine@@QBEHXZ 0041de40 f i pauseState.obj
  0001:0001ce60       ?unpause@BaseEngine@@QAEXXZ 0041de60 f i pauseState.obj
@@ -1083,131 +1101,125 @@
  0001:0001d110       ?virtHandleDeath@Psyeb10Bike@@UAEXXZ 0041e110 f   Psyeb10Bike.obj
  0001:0001d120       ?virtPostMoveLogic@Psyeb10Bike@@UAEXXZ 0041e120 f   Psyeb10Bike.obj
  0001:0001d130       ?setPaused@Psyeb10Bike@@QAEX_N@Z 0041e130 f   Psyeb10Bike.obj
- 0001:0001d150       ??0?$_Vector_val@U?$_Simple_types@H@std@@@std@@QAE@XZ 0041e150 f i Psyeb10Enemy.obj
+ 0001:0001d150       ??$uninitialized_copy@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAPAPAU?$pair@HH@0@QAPAU10@0PAPAU10@@Z 0041e150 f i Psyeb10Enemy.obj
  0001:0001d1f0       ??_EPsyeb10Bike@@UAEPAXI@Z 0041e1f0 f i Psyeb10Bike.obj
  0001:0001d1f0       ??_GPsyeb10Bike@@UAEPAXI@Z 0041e1f0 f i Psyeb10Bike.obj
- 0001:0001d220       ?_Buy_raw@?$vector@HV?$allocator@H@std@@@std@@AAEXI@Z 0041e220 f i Psyeb10Enemy.obj
- 0001:0001d290       ?_Insert_node@?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@QAEPAU?$_Tree_node@U?$pair@HH@std@@PAX@2@U?$_Tree_id@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@@2@QAU32@@Z 0041e290 f i Psyeb10Enemy.obj
- 0001:0001d4e0       ?_Subscript@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEAAU?$pair@HH@2@I@Z 0041e4e0 f i Psyeb10Enemy.obj
- 0001:0001d510       ?pop_front@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEXXZ 0041e510 f i Psyeb10Enemy.obj
- 0001:0001d6f0       ??$_Emplace@U?$pair@HH@std@@@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAE?AU?$pair@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@_N@1@$$QAU?$pair@HH@1@@Z 0041e6f0 f i Psyeb10Enemy.obj
- 0001:0001d820       ??$_Emplace_back@AAPAU?$pair@HH@std@@@?$_Uninitialized_backout@PAPAU?$pair@HH@std@@@std@@QAEXAAPAU?$pair@HH@1@@Z 0041e820 f i Psyeb10Enemy.obj
- 0001:0001d950       ??1?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@XZ 0041e950 f i Psyeb10Enemy.obj
- 0001:0001d9f0       ??1?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@XZ 0041e9f0 f i Psyeb10Enemy.obj
- 0001:0001da90       ??1?$_Uninitialized_backout_al@V?$allocator@H@std@@@std@@QAE@XZ 0041ea90 f i Psyeb10Enemy.obj
- 0001:0001db00       ?_Extract@?$_In_place_key_extract_set_impl@U?$pair@HH@std@@U12@@std@@SAABU?$pair@HH@2@ABU32@@Z 0041eb00 f i Psyeb10Enemy.obj
- 0001:0001dba0       ??$_Construct_n@PBU?$pair@HH@std@@PBU12@@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXI$$QAPBU?$pair@HH@1@0@Z 0041eba0 f i Psyeb10Enemy.obj
- 0001:0001ddc0       ?_Get_data@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEAAV?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@2@XZ 0041edc0 f i Psyeb10Enemy.obj
- 0001:0001dde0       ??$_Emplace_back_internal@U?$pair@HH@std@@@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEX$$QAU?$pair@HH@1@@Z 0041ede0 f i Psyeb10Enemy.obj
- 0001:0001dfd0       ?_Get_first@?$_Compressed_pair@U?$less@U?$pair@HH@std@@@std@@V?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@2@$00@2@$00@std@@QBEABU?$less@U?$pair@HH@std@@@2@XZ 0041efd0 f i Psyeb10Enemy.obj
- 0001:0001e070       ?_Get_scary@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAEPAV?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@2@XZ 0041f070 f i Psyeb10Enemy.obj
- 0001:0001e140       ?_Getal@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEAAV?$allocator@U?$pair@HH@std@@@2@XZ 0041f140 f i Psyeb10Enemy.obj
- 0001:0001e200       ?_Getal@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@ABEABV?$allocator@U?$pair@HH@std@@@2@XZ 0041f200 f i Psyeb10Enemy.obj
- 0001:0001e2a0       ?_Mapsize@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEAAIXZ 0041f2a0 f i Psyeb10Enemy.obj
- 0001:0001e320       ?_Myoff@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEAAIXZ 0041f320 f i Psyeb10Enemy.obj
- 0001:0001e3a0       ?_Myoff@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@ABEABIXZ 0041f3a0 f i Psyeb10Enemy.obj
- 0001:0001e460       ?_Release@?$_Uninitialized_backout@PAPAU?$pair@HH@std@@@std@@QAEPAPAU?$pair@HH@2@XZ 0041f460 f i Psyeb10Enemy.obj
- 0001:0001e4e0       ?_Tidy@?$vector@HV?$allocator@H@std@@@std@@AAEXXZ 0041f4e0 f i Psyeb10Enemy.obj
- 0001:0001e620       ?_Growmap@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXI@Z 0041f620 f i Psyeb10Enemy.obj
- 0001:0001f420       ??$?0$$V@?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@@Z 00420420 f i Psyeb10Enemy.obj
- 0001:0001f470       ??$?0$$V@?$_Compressed_pair@V?$allocator@U?$pair@HH@std@@@std@@V?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@@Z 00420470 f i Psyeb10Enemy.obj
- 0001:0001f500       ??$?0ABU?$less@U?$pair@HH@std@@@std@@U_Zero_then_variadic_args_t@1@@?$_Compressed_pair@U?$less@U?$pair@HH@std@@@std@@V?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@2@$00@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABU?$less@U?$pair@HH@std@@@1@$$QAU_Zero_then_variadic_args_t@1@@Z 00420500 f i Psyeb10Enemy.obj
- 0001:0001f5a0       ??$?0ABV?$allocator@U?$pair@HH@std@@@std@@$$V@?$_Compressed_pair@V?$allocator@U?$pair@HH@std@@@std@@V?$_Vector_val@U?$_Simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABV?$allocator@U?$pair@HH@std@@@1@@Z 004205a0 f i Psyeb10Enemy.obj
- 0001:0001f5f0       ??$?0H@?$allocator@U_Container_proxy@std@@@std@@QAE@ABV?$allocator@H@1@@Z 004205f0 f i Psyeb10Enemy.obj
- 0001:0001f640       ??$?0HH$0A@@?$pair@HH@std@@QAE@$$QAH0@Z 00420640 f i Psyeb10Enemy.obj
- 0001:0001f750       ??$?0U?$pair@HH@std@@@?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@HH@std@@PAX@1@$$QAU?$pair@HH@1@@Z 00420750 f i Psyeb10Enemy.obj
- 0001:0001f890       ??$?0U?$pair@HH@std@@@?$allocator@U_Container_proxy@std@@@std@@QAE@ABV?$allocator@U?$pair@HH@std@@@1@@Z 00420890 f i Psyeb10Enemy.obj
- 0001:0001f9c0       ??$?0V?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@AB_N$0A@@?$pair@V?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@_N@std@@QAE@$$QAV?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@1@AB_N@Z 004209c0 f i Psyeb10Enemy.obj
- 0001:0001fb70       ??$_Allocate_at_least_helper@V?$allocator@H@std@@@std@@YAPAHAAV?$allocator@H@0@AAI@Z 00420b70 f i Psyeb10Enemy.obj
- 0001:0001fcd0       ??$_Construct_in_place@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@ABQAU12@@std@@YAXAAPAU?$_Tree_node@U?$pair@HH@std@@PAX@0@ABQAU10@@Z 00420cd0 f i Psyeb10Enemy.obj
- 0001:0001fec0       ??$_Copy_memmove_tail@PAPAU?$pair@HH@std@@@std@@YAPAPAU?$pair@HH@0@QBDQAPAU10@II@Z 00420ec0 f i Psyeb10Enemy.obj
- 0001:0001ff10       ??$_Copy_memmove_tail@PAU?$pair@HH@std@@@std@@YAPAU?$pair@HH@0@QBDQAU10@II@Z 00420f10 f i Psyeb10Enemy.obj
- 0001:0001ffb0       ??$_Destroy_in_place@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@YAXAAPAU?$_Tree_node@U?$pair@HH@std@@PAX@0@@Z 00420fb0 f i Psyeb10Enemy.obj
- 0001:00020270       ??$_Emplace_back@ABU?$pair@HH@std@@@?$_Uninitialized_backout_al@V?$allocator@U?$pair@HH@std@@@std@@@std@@QAEXABU?$pair@HH@1@@Z 00421270 f i Psyeb10Enemy.obj
- 0001:00020360       ??$_Erase_tree@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@QAEXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@HH@std@@PAX@1@@Z 00421360 f i Psyeb10Enemy.obj
- 0001:000203b0       ??$_Fill_zero_memset@PAH@std@@YAXPAHI@Z 004213b0 f i Psyeb10Enemy.obj
- 0001:000204e0       ??$_Find@U?$pair@HH@std@@@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@ABEPAU?$_Tree_node@U?$pair@HH@std@@PAX@1@ABU?$pair@HH@1@@Z 004214e0 f i Psyeb10Enemy.obj
- 0001:00020570       ??$_Find_lower_bound@U?$pair@HH@std@@@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IBE?AU?$_Tree_find_result@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@ABU?$pair@HH@1@@Z 00421570 f i Psyeb10Enemy.obj
- 0001:000206a0       ??$_Get_size_of_n@$0BI@@std@@YAII@Z 004216a0 f i Psyeb10Enemy.obj
- 0001:00020780       ??$_Get_unwrapped_n@AAPAPAU?$pair@HH@std@@H@std@@YA?A_TAAPAPAU?$pair@HH@0@H@Z 00421780 f i Psyeb10Enemy.obj
- 0001:00020790       ??$_Idl_distance@PAPAU?$pair@HH@std@@PAPAU12@@std@@YA?A_PABQAPAU?$pair@HH@0@0@Z 00421790 f i Psyeb10Enemy.obj
- 0001:000207b0       ??$_Lower_bound_duplicate@U?$pair@HH@std@@@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IBE_NQAU?$_Tree_node@U?$pair@HH@std@@PAX@1@ABU?$pair@HH@1@@Z 004217b0 f i Psyeb10Enemy.obj
- 0001:000208e0       ??$_Seek_wrapped@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAXAAPAPAU?$pair@HH@0@$$QAPAPAU10@@Z 004218e0 f i Psyeb10Enemy.obj
- 0001:00020ac0       ??$_To_address@PAU?$pair@HH@std@@@std@@YA?A_PABQAU?$pair@HH@0@@Z 00421ac0 f i Psyeb10Enemy.obj
- 0001:00020c40       ??$_To_address@PBU?$pair@HH@std@@@std@@YA?A_PABQBU?$pair@HH@0@@Z 00421c40 f i Psyeb10Enemy.obj
- 0001:00020dc0       ??$_Unfancy@H@std@@YAPAHPAH@Z 00421dc0 f i Psyeb10Enemy.obj
- 0001:00020e10       ??$_Unfancy@U?$pair@HH@std@@@std@@YAPAU?$pair@HH@0@PAU10@@Z 00421e10 f i Psyeb10Enemy.obj
- 0001:00020e60       ??$_Unfancy_maybe_null@U?$pair@HH@std@@@std@@YAPAU?$pair@HH@0@PAU10@@Z 00421e60 f i Psyeb10Enemy.obj
- 0001:00020f80       ??$_Uninitialized_fill_n@V?$allocator@H@std@@@std@@YAPAHPAHIABHAAV?$allocator@H@0@@Z 00421f80 f i Psyeb10Enemy.obj
- 0001:00021070       ??$_Uninitialized_value_construct_n_unchecked1@PAPAU?$pair@HH@std@@I@std@@YAPAPAU?$pair@HH@0@PAPAU10@I@Z 00422070 f i Psyeb10Enemy.obj
- 0001:00021160       ??$_Zero_range@PAPAU?$pair@HH@std@@@std@@YAPAPAU?$pair@HH@0@QAPAU10@0@Z 00422160 f i Psyeb10Enemy.obj
- 0001:000211c0       ??$addressof@$$CBV?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@YAPBV?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@0@ABV10@@Z 004221c0 f i Psyeb10Enemy.obj
- 0001:00021220       ??$addressof@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@YAPAPAU?$_Tree_node@U?$pair@HH@std@@PAX@0@AAPAU10@@Z 00422220 f i Psyeb10Enemy.obj
- 0001:000212a0       ??$addressof@PAU?$pair@HH@std@@@std@@YAPAPAU?$pair@HH@0@AAPAU10@@Z 004222a0 f i Psyeb10Enemy.obj
- 0001:00021320       ??$addressof@U?$pair@HH@std@@@std@@YAPAU?$pair@HH@0@AAU10@@Z 00422320 f i Psyeb10Enemy.obj
- 0001:00021360       ??$addressof@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@YAPAV?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@0@AAV10@@Z 00422360 f i Psyeb10Enemy.obj
- 0001:000213f0       ??$destroy@U?$pair@HH@std@@@?$_Default_allocator_traits@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@QAU?$pair@HH@1@@Z 004223f0 f i Psyeb10Enemy.obj
- 0001:00021400       ??$destroy@U?$pair@HH@std@@@?$_Default_allocator_traits@V?$allocator@U?$pair@HH@std@@@std@@@std@@SAXAAV?$allocator@U?$pair@HH@std@@@1@QAU?$pair@HH@1@@Z 00422400 f i Psyeb10Enemy.obj
- 0001:00021470       ??$exchange@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@$$T@std@@YAPAU?$_Tree_node@U?$pair@HH@std@@PAX@0@AAPAU10@$$QA$$T@Z 00422470 f i Psyeb10Enemy.obj
- 0001:000214e0       ??$exchange@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@AAPAU12@@std@@YAPAU?$_Tree_node@U?$pair@HH@std@@PAX@0@AAPAU10@0@Z 004224e0 f i Psyeb10Enemy.obj
- 0001:00021500       ??$forward@AAH@std@@YAAAHAAH@Z 00422500 f i Psyeb10Enemy.obj
- 0001:00021530       ??$forward@ABH@std@@YAABHABH@Z 00422530 f i Psyeb10Enemy.obj
- 0001:00021660       ??$forward@ABQAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@YAABQAU?$_Tree_node@U?$pair@HH@std@@PAX@0@ABQAU10@@Z 00422660 f i Psyeb10Enemy.obj
- 0001:000217b0       ??$forward@ABV?$allocator@H@std@@@std@@YAABV?$allocator@H@0@ABV10@@Z 004227b0 f i Psyeb10Enemy.obj
- 0001:000217d0       ??$forward@H@std@@YA$$QAHAAH@Z 004227d0 f i Psyeb10Enemy.obj
- 0001:00021920       ??$forward@PAPAU?$pair@HH@std@@@std@@YA$$QAPAPAU?$pair@HH@0@AAPAPAU10@@Z 00422920 f i Psyeb10Enemy.obj
- 0001:000219f0       ??$forward@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@YA$$QAPAU?$_Tree_node@U?$pair@HH@std@@PAX@0@AAPAU10@@Z 004229f0 f i Psyeb10Enemy.obj
- 0001:00021b00       ??$sqrt@H$0A@@@YANH@Z      00422b00 f i Psyeb10Enemy.obj
- 0001:00021c00       ??0?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z 00422c00 f i Psyeb10Enemy.obj
- 0001:00021c40       ??0?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@std@@QAE@XZ 00422c40 f i Psyeb10Enemy.obj
- 0001:00021c80       ??0?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@QAE@ABU?$less@U?$pair@HH@std@@@1@@Z 00422c80 f i Psyeb10Enemy.obj
- 0001:00021cc0       ??0?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@QAE@$$QAV01@@Z 00422cc0 f i Psyeb10Enemy.obj
- 0001:00021d60       ??0?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@QAE@XZ 00422d60 f i Psyeb10Enemy.obj
- 0001:00021d90       ??0?$_Uninitialized_backout@PAPAU?$pair@HH@std@@@std@@QAE@PAPAU?$pair@HH@1@@Z 00422d90 f i Psyeb10Enemy.obj
- 0001:00021f70       ??1?$_Uninitialized_backout_al@V?$allocator@U?$pair@HH@std@@@std@@@std@@QAE@XZ 00422f70 f i Psyeb10Enemy.obj
- 0001:00021fa0       ??1?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAE@XZ 00422fa0 f i Psyeb10Enemy.obj
- 0001:00022030       ??1?$pair@V?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@_N@std@@QAE@XZ 00423030 f i Psyeb10Enemy.obj
- 0001:000220f0       ??1Psyeb10Enemy@@UAE@XZ    004230f0 f i Psyeb10Enemy.obj
- 0001:00022130       ??A?$vector@HV?$allocator@H@std@@@std@@QAEAAHI@Z 00423130 f i Psyeb10Enemy.obj
- 0001:00022210       ??R?$less@U?$pair@HH@std@@@std@@QBE_NABU?$pair@HH@1@0@Z 00423210 f i Psyeb10Enemy.obj
- 0001:00022240       ??_EPsyeb10Enemy@@UAEPAXI@Z 00423240 f i Psyeb10Enemy.obj
- 0001:00022240       ??_GPsyeb10Enemy@@UAEPAXI@Z 00423240 f i Psyeb10Enemy.obj
- 0001:00022310       ?_Allocate@?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAEXXZ 00423310 f i Psyeb10Enemy.obj
- 0001:00022340       ?_Buy_nonzero@?$vector@HV?$allocator@H@std@@@std@@AAEXI@Z 00423340 f i Psyeb10Enemy.obj
- 0001:00022370       ?_Buy_nonzero@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXI@Z 00423370 f i Psyeb10Enemy.obj
- 0001:000224b0       ?_Check_grow_by_1@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAEXXZ 004234b0 f i Psyeb10Enemy.obj
- 0001:00022570       ?_Get_data@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@ABEABV?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@2@XZ 00423570 f i Psyeb10Enemy.obj
- 0001:000225e0       ?_Get_first@?$_Compressed_pair@V?$allocator@H@std@@V?$_Vector_val@U?$_Simple_types@H@std@@@2@$00@std@@QAEAAV?$allocator@H@2@XZ 004235e0 f i Psyeb10Enemy.obj
- 0001:00022630       ?_Get_first@?$_Compressed_pair@V?$allocator@H@std@@V?$_Vector_val@U?$_Simple_types@H@std@@@2@$00@std@@QBEABV?$allocator@H@2@XZ 00423630 f i Psyeb10Enemy.obj
- 0001:00022650       ?_Get_first@?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QAEAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@2@XZ 00423650 f i Psyeb10Enemy.obj
- 0001:00022670       ?_Get_first@?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QBEABV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@2@XZ 00423670 f i Psyeb10Enemy.obj
- 0001:00022690       ?_Get_first@?$_Compressed_pair@V?$allocator@U?$pair@HH@std@@@std@@V?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QAEAAV?$allocator@U?$pair@HH@std@@@2@XZ 00423690 f i Psyeb10Enemy.obj
- 0001:00022710       ?_Get_first@?$_Compressed_pair@V?$allocator@U?$pair@HH@std@@@std@@V?$_Vector_val@U?$_Simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QAEAAV?$allocator@U?$pair@HH@std@@@2@XZ 00423710 f i Psyeb10Enemy.obj
- 0001:00022740       ?_Get_first@?$_Compressed_pair@V?$allocator@U?$pair@HH@std@@@std@@V?$_Vector_val@U?$_Simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QBEABV?$allocator@U?$pair@HH@std@@@2@XZ 00423740 f i Psyeb10Enemy.obj
- 0001:000227e0       ?_Getal@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IBEABV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@2@XZ 004237e0 f i Psyeb10Enemy.obj
- 0001:00022910       ?_Getal@?$vector@HV?$allocator@H@std@@@std@@ABEABV?$allocator@H@2@XZ 00423910 f i Psyeb10Enemy.obj
- 0001:00022940       ?_Getal@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEAAV?$allocator@U?$pair@HH@std@@@2@XZ 00423940 f i Psyeb10Enemy.obj
- 0001:00022a20       ?_Getblock@?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@std@@QBEHI@Z 00423a20 f i Psyeb10Enemy.obj
- 0001:00022a40       ?_Getblock@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@ABEHI@Z 00423a40 f i Psyeb10Enemy.obj
- 0001:00022b10       ?_Getcomp@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IBEABU?$less@U?$pair@HH@std@@@2@XZ 00423b10 f i Psyeb10Enemy.obj
- 0001:00022ca0       ?_Map_distance@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@ABEHXZ 00423ca0 f i Psyeb10Enemy.obj
- 0001:00022d90       ?_Mysize@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@ABEABIXZ 00423d90 f i Psyeb10Enemy.obj
- 0001:00022ee0       ?_Release@?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAEPAU?$_Tree_node@U?$pair@HH@std@@PAX@2@XZ 00423ee0 f i Psyeb10Enemy.obj
- 0001:00022fa0       ?_Release@?$_Uninitialized_backout_al@V?$allocator@U?$pair@HH@std@@@std@@@std@@QAEPAU?$pair@HH@2@XZ 00423fa0 f i Psyeb10Enemy.obj
- 0001:00023080       ?_Rrotate@?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@QAEXPAU?$_Tree_node@U?$pair@HH@std@@PAX@2@@Z 00424080 f i Psyeb10Enemy.obj
- 0001:000231f0       ?_Tidy@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXXZ 004241f0 f i Psyeb10Enemy.obj
- 0001:00023450       ??0Psyeb10Enemy@@QAE@PAVBaseEngine@@@Z 00424450 f   Psyeb10Enemy.obj
- 0001:000234a0       ?virtDraw@Psyeb10Enemy@@UAEXXZ 004244a0 f   Psyeb10Enemy.obj
- 0001:00023600       ?isValidMove@Psyeb10Enemy@@QAE_NHH@Z 00424600 f   Psyeb10Enemy.obj
- 0001:00023680       ?virtHandleDeath@Psyeb10Enemy@@UAEXXZ 00424680 f   Psyeb10Enemy.obj
- 0001:000236b0       ?virtPostMoveLogic@Psyeb10Enemy@@UAEXXZ 004246b0 f   Psyeb10Enemy.obj
- 0001:00023800       ?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z 00424800 f   Psyeb10Enemy.obj
- 0001:00023da0       ?findBestDirection@Psyeb10Enemy@@AAEHXZ 00424da0 f   Psyeb10Enemy.obj
- 0001:00024230       ?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 00425230 f   Psyeb10Enemy.obj
- 0001:000248a0       ?changeDirection@Psyeb10Enemy@@AAEXH@Z 004258a0 f   Psyeb10Enemy.obj
- 0001:00024930       ?calculateInterceptDirection@Psyeb10Enemy@@AAEHHH@Z 00425930 f   Psyeb10Enemy.obj
- 0001:00024a40       ?adjustScoreForPlayerProximity@Psyeb10Enemy@@AAEHHHHHH@Z 00425a40 f   Psyeb10Enemy.obj
- 0001:00024aa0       ?adjustScoreForWallProximity@Psyeb10Enemy@@AAEHHHHHH@Z 00425aa0 f   Psyeb10Enemy.obj
+ 0001:0001d2a0       ??$_Uninitialized_copy_unchecked@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAPAPAU?$pair@HH@0@PAPAU10@QAPAU10@0@Z 0041e2a0 f i Psyeb10Enemy.obj
+ 0001:0001d340       ?_Map_distance@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@ABEHXZ 0041e340 f i Psyeb10Enemy.obj
+ 0001:0001d3e0       ?_Mapsize@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEAAIXZ 0041e3e0 f i Psyeb10Enemy.obj
+ 0001:0001d490       ?_Get_first@?$_Compressed_pair@V?$allocator@U?$pair@HH@std@@@std@@V?$_Vector_val@U?$_Simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QBEABV?$allocator@U?$pair@HH@std@@@2@XZ 0041e490 f i Psyeb10Enemy.obj
+ 0001:0001d4a0       ?_Lrotate@?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@QAEXPAU?$_Tree_node@U?$pair@HH@std@@PAX@2@@Z 0041e4a0 f i Psyeb10Enemy.obj
+ 0001:0001d580       ??$_Find_lower_bound@U?$pair@HH@std@@@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IBE?AU?$_Tree_find_result@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@ABU?$pair@HH@1@@Z 0041e580 f i Psyeb10Enemy.obj
+ 0001:0001d680       ??1?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAE@XZ 0041e680 f i Psyeb10Enemy.obj
+ 0001:0001d6d0       ?_Tidy@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXXZ 0041e6d0 f i Psyeb10Enemy.obj
+ 0001:0001d790       ??1?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@XZ 0041e790 f i Psyeb10Enemy.obj
+ 0001:0001d890       ??8?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@QBE_NABV01@@Z 0041e890 f i Psyeb10Enemy.obj
+ 0001:0001d950       ??0?$_Uninitialized_backout_al@V?$allocator@H@std@@@std@@QAE@PAHAAV?$allocator@H@1@@Z 0041e950 f i Psyeb10Enemy.obj
+ 0001:0001d9f0       ??0?$allocator@U?$pair@HH@std@@@std@@QAE@XZ 0041e9f0 f i Psyeb10Enemy.obj
+ 0001:0001da90       ??0?$queue@U?$pair@HH@std@@V?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@2@@std@@QAE@XZ 0041ea90 f i Psyeb10Enemy.obj
+ 0001:0001db30       ??$_Construct_in_place@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@ABQAU12@@std@@YAXAAPAU?$_Tree_node@U?$pair@HH@std@@PAX@0@ABQAU10@@Z 0041eb30 f i Psyeb10Enemy.obj
+ 0001:0001db70       ?_Alloc_sentinel_and_proxy@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAEXXZ 0041eb70 f i Psyeb10Enemy.obj
+ 0001:0001dc10       ??$_Lower_bound_duplicate@U?$pair@HH@std@@@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IBE_NQAU?$_Tree_node@U?$pair@HH@std@@PAX@1@ABU?$pair@HH@1@@Z 0041ec10 f i Psyeb10Enemy.obj
+ 0001:0001dd20       ??$?0U?$pair@HH@std@@@?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@HH@std@@PAX@1@$$QAU?$pair@HH@1@@Z 0041ed20 f i Psyeb10Enemy.obj
+ 0001:0001de00       ?_Orphan_off@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@ABEXI@Z 0041ee00 f i Psyeb10Enemy.obj
+ 0001:0001dee0       ??$_Uninitialized_move@PAHV?$allocator@H@std@@@std@@YAPAHQAH0PAHAAV?$allocator@H@0@@Z 0041eee0 f i Psyeb10Enemy.obj
+ 0001:0001dfd0       ??A?$vector@HV?$allocator@H@std@@@std@@QAEAAHI@Z 0041efd0 f i Psyeb10Enemy.obj
+ 0001:0001e070       ?_Buy_raw@?$vector@HV?$allocator@H@std@@@std@@AAEXI@Z 0041f070 f i Psyeb10Enemy.obj
+ 0001:0001e140       ?_Check_grow_by_1@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAEXXZ 0041f140 f i Psyeb10Enemy.obj
+ 0001:0001e200       ?_Extract@?$_In_place_key_extract_set_impl@U?$pair@HH@std@@U12@@std@@SAABU?$pair@HH@2@ABU32@@Z 0041f200 f i Psyeb10Enemy.obj
+ 0001:0001e2a0       ?_Getal@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAEAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@2@XZ 0041f2a0 f i Psyeb10Enemy.obj
+ 0001:0001e320       ?_Getal@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IBEABV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@2@XZ 0041f320 f i Psyeb10Enemy.obj
+ 0001:0001e3a0       ?_Getal@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEAAV?$allocator@U?$pair@HH@std@@@2@XZ 0041f3a0 f i Psyeb10Enemy.obj
+ 0001:0001e3c0       ?_Rrotate@?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@QAEXPAU?$_Tree_node@U?$pair@HH@std@@PAX@2@@Z 0041f3c0 f i Psyeb10Enemy.obj
+ 0001:0001e460       ?_Getblock@?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@std@@QBEHI@Z 0041f460 f i Psyeb10Enemy.obj
+ 0001:0001e500       ?_Reset_map@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXXZ 0041f500 f i Psyeb10Enemy.obj
+ 0001:0001e5c0       ?pop_back@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEXXZ 0041f5c0 f i Psyeb10Enemy.obj
+ 0001:0001e710       ?_Getal@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEAAV?$allocator@U?$pair@HH@std@@@2@XZ 0041f710 f i Psyeb10Enemy.obj
+ 0001:0001e730       ?pop_front@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEXXZ 0041f730 f i Psyeb10Enemy.obj
+ 0001:0001e8f0       ?_Tidy@?$vector@HV?$allocator@H@std@@@std@@AAEXXZ 0041f8f0 f i Psyeb10Enemy.obj
+ 0001:0001e9d0       ??$_Construct_n@PBU?$pair@HH@std@@PBU12@@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXI$$QAPBU?$pair@HH@1@0@Z 0041f9d0 f i Psyeb10Enemy.obj
+ 0001:0001eae0       ?capacity@?$vector@HV?$allocator@H@std@@@std@@QBEIXZ 0041fae0 f i Psyeb10Enemy.obj
+ 0001:0001ec80       ??$_Construct_in_place@PAU?$pair@HH@std@@AAPAU12@@std@@YAXAAPAU?$pair@HH@0@0@Z 0041fc80 f i Psyeb10Enemy.obj
+ 0001:0001ed80       ??$_Destroy_in_place@PAU?$pair@HH@std@@@std@@YAXAAPAU?$pair@HH@0@@Z 0041fd80 f i Psyeb10Enemy.obj
+ 0001:0001ee70       ??$_Emplace@U?$pair@HH@std@@@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAE?AU?$pair@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@_N@1@$$QAU?$pair@HH@1@@Z 0041fe70 f i Psyeb10Enemy.obj
+ 0001:0001f070       ?deallocate@?$_Default_allocator_traits@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@2@QAU?$_Tree_node@U?$pair@HH@std@@PAX@2@I@Z 00420070 f i Psyeb10Enemy.obj
+ 0001:0001f420       ??$?0$$V@?$_Compressed_pair@V?$allocator@H@std@@V?$_Vector_val@U?$_Simple_types@H@std@@@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@@Z 00420420 f i Psyeb10Enemy.obj
+ 0001:0001f470       ??$?0$$V@?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@@Z 00420470 f i Psyeb10Enemy.obj
+ 0001:0001f500       ??$?0AAPAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@_N$0A@@?$pair@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@_N@std@@QAE@AAPAU?$_Tree_node@U?$pair@HH@std@@PAX@1@$$QA_N@Z 00420500 f i Psyeb10Enemy.obj
+ 0001:0001f5a0       ??$?0ABV?$allocator@H@std@@$$V@?$_Compressed_pair@V?$allocator@H@std@@V?$_Vector_val@U?$_Simple_types@H@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABV?$allocator@H@1@@Z 004205a0 f i Psyeb10Enemy.obj
+ 0001:0001f5f0       ??$?0ABV?$allocator@U?$pair@HH@std@@@std@@$$V@?$_Compressed_pair@V?$allocator@U?$pair@HH@std@@@std@@V?$_Vector_val@U?$_Simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABV?$allocator@U?$pair@HH@std@@@1@@Z 004205f0 f i Psyeb10Enemy.obj
+ 0001:0001f640       ??$?0H@?$allocator@U_Container_proxy@std@@@std@@QAE@ABV?$allocator@H@1@@Z 00420640 f i Psyeb10Enemy.obj
+ 0001:0001f750       ??$?0U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@?$allocator@U_Container_proxy@std@@@std@@QAE@ABV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z 00420750 f i Psyeb10Enemy.obj
+ 0001:0001f890       ??$?0U?$pair@HH@std@@@?$allocator@PAU?$pair@HH@std@@@std@@QAE@ABV?$allocator@U?$pair@HH@std@@@1@@Z 00420890 f i Psyeb10Enemy.obj
+ 0001:0001f9c0       ??$?0U?$pair@HH@std@@@?$allocator@U_Container_proxy@std@@@std@@QAE@ABV?$allocator@U?$pair@HH@std@@@1@@Z 004209c0 f i Psyeb10Enemy.obj
+ 0001:0001fb70       ??$_Adl_verify_range@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAXABQAPAU?$pair@HH@0@0@Z 00420b70 f i Psyeb10Enemy.obj
+ 0001:0001fcd0       ??$_Construct_in_place@HABH@std@@YAXAAHABH@Z 00420cd0 f i Psyeb10Enemy.obj
+ 0001:0001fd10       ??$_Emplace_reallocate@ABH@?$vector@HV?$allocator@H@std@@@std@@AAEPAHQAHABH@Z 00420d10 f i Psyeb10Enemy.obj
+ 0001:0001ff10       ??$_Copy_memmove@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAPAPAU?$pair@HH@0@PAPAU10@00@Z 00420f10 f i Psyeb10Enemy.obj
+ 0001:0001ffd0       ?_Insert_node@?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@QAEPAU?$_Tree_node@U?$pair@HH@std@@PAX@2@U?$_Tree_id@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@@2@QAU32@@Z 00420fd0 f i Psyeb10Enemy.obj
+ 0001:00020270       ??$_Destroy_range@V?$allocator@U?$pair@HH@std@@@std@@@std@@YAXPAU?$pair@HH@0@QAU10@AAV?$allocator@U?$pair@HH@std@@@0@@Z 00421270 f i Psyeb10Enemy.obj
+ 0001:00020360       ??$_Emplace_back@ABH@?$_Uninitialized_backout_al@V?$allocator@H@std@@@std@@QAEXABH@Z 00421360 f i Psyeb10Enemy.obj
+ 0001:000203b0       ??$_Emplace_back@ABU?$pair@HH@std@@@?$_Uninitialized_backout_al@V?$allocator@U?$pair@HH@std@@@std@@@std@@QAEXABU?$pair@HH@1@@Z 004213b0 f i Psyeb10Enemy.obj
+ 0001:000204e0       ??$_Emplace_back@H@?$_Uninitialized_backout_al@V?$allocator@H@std@@@std@@QAEX$$QAH@Z 004214e0 f i Psyeb10Enemy.obj
+ 0001:00020570       ??$_Emplace_back_internal@U?$pair@HH@std@@@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEX$$QAU?$pair@HH@1@@Z 00421570 f i Psyeb10Enemy.obj
+ 0001:000207b0       ??$_Freenode0@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@HH@std@@PAX@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU01@@Z 004217b0 f i Psyeb10Enemy.obj
+ 0001:000208e0       ??$_Freenode@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@HH@std@@PAX@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU01@@Z 004218e0 f i Psyeb10Enemy.obj
+ 0001:00020ac0       ??$_Get_unwrapped@ABQAPAU?$pair@HH@std@@@std@@YA?A_TABQAPAU?$pair@HH@0@@Z 00421ac0 f i Psyeb10Enemy.obj
+ 0001:00020c40       ??$_Get_unwrapped@PBU?$pair@HH@std@@@std@@YA?A_T$$QAPBU?$pair@HH@0@@Z 00421c40 f i Psyeb10Enemy.obj
+ 0001:00020dc0       ??$_Get_unwrapped_n@AAPAPAU?$pair@HH@std@@H@std@@YA?A_TAAPAPAU?$pair@HH@0@H@Z 00421dc0 f i Psyeb10Enemy.obj
+ 0001:00020e10       ??$_Idl_distance@PAPAU?$pair@HH@std@@PAPAU12@@std@@YA?A_PABQAPAU?$pair@HH@0@0@Z 00421e10 f i Psyeb10Enemy.obj
+ 0001:00020e60       ??$_Is_all_bits_zero@H@std@@YA_NABH@Z 00421e60 f i Psyeb10Enemy.obj
+ 0001:00020f80       ??$_To_address@PAH@std@@YA?A_PABQAH@Z 00421f80 f i Psyeb10Enemy.obj
+ 0001:00021070       ??$_To_address@PAPAU?$pair@HH@std@@@std@@YA?A_PABQAPAU?$pair@HH@0@@Z 00422070 f i Psyeb10Enemy.obj
+ 0001:00021160       ??$_To_address@PAU?$pair@HH@std@@@std@@YA?A_PABQAU?$pair@HH@0@@Z 00422160 f i Psyeb10Enemy.obj
+ 0001:000211c0       ??$_To_address@PBU?$pair@HH@std@@@std@@YA?A_PABQBU?$pair@HH@0@@Z 004221c0 f i Psyeb10Enemy.obj
+ 0001:00021220       ??$_Unfancy@H@std@@YAPAHPAH@Z 00422220 f i Psyeb10Enemy.obj
+ 0001:000212a0       ??$_Unfancy@U?$pair@HH@std@@@std@@YAPAU?$pair@HH@0@PAU10@@Z 004222a0 f i Psyeb10Enemy.obj
+ 0001:00021320       ??$_Unfancy_maybe_null@U?$pair@HH@std@@@std@@YAPAU?$pair@HH@0@PAU10@@Z 00422320 f i Psyeb10Enemy.obj
+ 0001:00021400       ??$addressof@$$CBV?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@YAPBV?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@0@ABV10@@Z 00422400 f i Psyeb10Enemy.obj
+ 0001:00021470       ??$addressof@H@std@@YAPAHAAH@Z 00422470 f i Psyeb10Enemy.obj
+ 0001:000214e0       ??$addressof@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@YAPAPAU?$_Tree_node@U?$pair@HH@std@@PAX@0@AAPAU10@@Z 004224e0 f i Psyeb10Enemy.obj
+ 0001:00021500       ??$addressof@PAU?$pair@HH@std@@@std@@YAPAPAU?$pair@HH@0@AAPAU10@@Z 00422500 f i Psyeb10Enemy.obj
+ 0001:00021530       ??$construct@HABH@?$_Default_allocator_traits@V?$allocator@H@std@@@std@@SAXAAV?$allocator@H@1@QAHABH@Z 00422530 f i Psyeb10Enemy.obj
+ 0001:00021660       ??$construct@HH@?$_Default_allocator_traits@V?$allocator@H@std@@@std@@SAXAAV?$allocator@H@1@QAH$$QAH@Z 00422660 f i Psyeb10Enemy.obj
+ 0001:000217d0       ??$destroy@U?$pair@HH@std@@@?$_Default_allocator_traits@V?$allocator@U?$pair@HH@std@@@std@@@std@@SAXAAV?$allocator@U?$pair@HH@std@@@1@QAU?$pair@HH@1@@Z 004227d0 f i Psyeb10Enemy.obj
+ 0001:00021920       ??$exchange@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@$$T@std@@YAPAU?$_Tree_node@U?$pair@HH@std@@PAX@0@AAPAU10@$$QA$$T@Z 00422920 f i Psyeb10Enemy.obj
+ 0001:000219f0       ??$exchange@PAU?$_Tree_node@U?$pair@HH@std@@PAX@std@@AAPAU12@@std@@YAPAU?$_Tree_node@U?$pair@HH@std@@PAX@0@AAPAU10@0@Z 004229f0 f i Psyeb10Enemy.obj
+ 0001:00021b00       ??$forward@PAPAU?$pair@HH@std@@@std@@YA$$QAPAPAU?$pair@HH@0@AAPAPAU10@@Z 00422b00 f i Psyeb10Enemy.obj
+ 0001:00021c00       ??$forward@PBU?$pair@HH@std@@@std@@YA$$QAPBU?$pair@HH@0@AAPBU10@@Z 00422c00 f i Psyeb10Enemy.obj
+ 0001:00021c40       ??$forward@U?$pair@HH@std@@@std@@YA$$QAU?$pair@HH@0@AAU10@@Z 00422c40 f i Psyeb10Enemy.obj
+ 0001:00021c80       ??$forward@V?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@@std@@YA$$QAV?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@0@AAV10@@Z 00422c80 f i Psyeb10Enemy.obj
+ 0001:00021cc0       ??$insert@$0A@$0A@@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@_N@1@$$QAU?$pair@HH@1@@Z 00422cc0 f i Psyeb10Enemy.obj
+ 0001:00021d60       ??$move@AAPAU?$pair@HH@std@@@std@@YA$$QAPAU?$pair@HH@0@AAPAU10@@Z 00422d60 f i Psyeb10Enemy.obj
+ 0001:00021d90       ??$move@AAPBU?$pair@HH@std@@@std@@YA$$QAPBU?$pair@HH@0@AAPBU10@@Z 00422d90 f i Psyeb10Enemy.obj
+ 0001:00021f70       ??0?$set@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@@std@@QAE@XZ 00422f70 f i Psyeb10Enemy.obj
+ 0001:00021fa0       ??0?$vector@HV?$allocator@H@std@@@std@@QAE@IABHABV?$allocator@H@1@@Z 00422fa0 f i Psyeb10Enemy.obj
+ 0001:00022030       ??0?$vector@HV?$allocator@H@std@@@std@@QAE@XZ 00423030 f i Psyeb10Enemy.obj
+ 0001:00022130       ??1?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@XZ 00423130 f i Psyeb10Enemy.obj
+ 0001:00022210       ??1?$_Uninitialized_backout@PAPAU?$pair@HH@std@@@std@@QAE@XZ 00423210 f i Psyeb10Enemy.obj
+ 0001:00022240       ??1?$_Uninitialized_backout_al@V?$allocator@H@std@@@std@@QAE@XZ 00423240 f i Psyeb10Enemy.obj
+ 0001:00022310       ??1?$pair@V?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@_N@std@@QAE@XZ 00423310 f i Psyeb10Enemy.obj
+ 0001:00022340       ??1?$queue@U?$pair@HH@std@@V?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@2@@std@@QAE@XZ 00423340 f i Psyeb10Enemy.obj
+ 0001:00022370       ??1?$set@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@@std@@QAE@XZ 00423370 f i Psyeb10Enemy.obj
+ 0001:000224b0       ??1Psyeb10Enemy@@UAE@XZ    004234b0 f i Psyeb10Enemy.obj
+ 0001:00022570       ??9?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@std@@@std@@QBE_NABV01@@Z 00423570 f i Psyeb10Enemy.obj
+ 0001:00022630       ??R?$less@U?$pair@HH@std@@@std@@QBE_NABU?$pair@HH@1@0@Z 00423630 f i Psyeb10Enemy.obj
+ 0001:00022710       ?_Buy_nonzero@?$vector@HV?$allocator@H@std@@@std@@AAEXI@Z 00423710 f i Psyeb10Enemy.obj
+ 0001:00022740       ?_Buy_nonzero@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXI@Z 00423740 f i Psyeb10Enemy.obj
+ 0001:000227e0       ?_Change_array@?$vector@HV?$allocator@H@std@@@std@@AAEXQAHII@Z 004237e0 f i Psyeb10Enemy.obj
+ 0001:00022910       ?_Get_data@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@ABEABV?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@2@XZ 00423910 f i Psyeb10Enemy.obj
+ 0001:00022940       ?_Get_first@?$_Compressed_pair@U?$less@U?$pair@HH@std@@@std@@V?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@2@$00@2@$00@std@@QBEABU?$less@U?$pair@HH@std@@@2@XZ 00423940 f i Psyeb10Enemy.obj
+ 0001:00022a20       ?_Get_first@?$_Compressed_pair@V?$allocator@H@std@@V?$_Vector_val@U?$_Simple_types@H@std@@@2@$00@std@@QBEABV?$allocator@H@2@XZ 00423a20 f i Psyeb10Enemy.obj
+ 0001:00022a40       ?_Get_first@?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QAEAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@2@XZ 00423a40 f i Psyeb10Enemy.obj
+ 0001:00022b10       ?_Get_first@?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QBEABV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@2@XZ 00423b10 f i Psyeb10Enemy.obj
+ 0001:00022ca0       ?_Get_scary@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IBEPBV?$_Tree_val@U?$_Tree_simple_types@U?$pair@HH@std@@@std@@@2@XZ 00423ca0 f i Psyeb10Enemy.obj
+ 0001:00022d90       ?_Getal@?$vector@HV?$allocator@H@std@@@std@@AAEAAV?$allocator@H@2@XZ 00423d90 f i Psyeb10Enemy.obj
+ 0001:00022ee0       ?_Getal@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@ABEABV?$allocator@U?$pair@HH@std@@@2@XZ 00423ee0 f i Psyeb10Enemy.obj
+ 0001:00022fa0       ?_Getcomp@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IBEABU?$less@U?$pair@HH@std@@@2@XZ 00423fa0 f i Psyeb10Enemy.obj
+ 0001:00022fc0       ?_Get_first@?$_Compressed_pair@V?$allocator@U?$pair@HH@std@@@std@@V?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QBEABV?$allocator@U?$pair@HH@std@@@2@XZ 00423fc0 f i Psyeb10Enemy.obj
+ 0001:000231f0       ?_Map@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEAAPAPAU?$pair@HH@2@XZ 004241f0 f i Psyeb10Enemy.obj
+ 0001:00023240       ?_Growmap@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXI@Z 00424240 f i Psyeb10Enemy.obj
+ 0001:00024b20       ?_Get_first@?$_Compressed_pair@V?$allocator@U?$pair@HH@std@@@std@@V?$_Deque_val@U?$_Deque_simple_types@U?$pair@HH@std@@@std@@@2@$00@std@@QAEAAV?$allocator@U?$pair@HH@std@@@2@XZ 00425b20 f i Psyeb10Enemy.obj
  0001:00025460       ??0Psyeb10Engine@@QAE@XZ   00426460 f   Psyeb10Engine.obj
  0001:00025520       ?virtSetupBackgroundBuffer@Psyeb10Engine@@UAEXXZ 00426520 f   Psyeb10Engine.obj
  0001:00025550       ?virtDrawStringsOnTop@Psyeb10Engine@@UAEXXZ 00426550 f   Psyeb10Engine.obj
@@ -1634,6 +1646,18 @@
  0001:0002f400       __is_c_termination_complete 00430400 f   MSVCRTD:ucrt_stubs.obj
  0001:0002f410       __filter_x86_sse2_floating_point_exception 00430410 f   MSVCRTD:x86_exception_filter.obj
  0001:0002f410       __filter_x86_sse2_floating_point_exception_default 00430410 f   MSVCRTD:x86_exception_filter.obj
+ 0001:0002f550       ??0Psyeb10Enemy@@QAE@PAVBaseEngine@@@Z 00430550 f   Psyeb10Enemy.obj
+ 0001:0002f5a0       ?virtDraw@Psyeb10Enemy@@UAEXXZ 004305a0 f   Psyeb10Enemy.obj
+ 0001:0002f700       ?isValidMove@Psyeb10Enemy@@QAE_NHH@Z 00430700 f   Psyeb10Enemy.obj
+ 0001:0002f780       ?virtHandleDeath@Psyeb10Enemy@@UAEXXZ 00430780 f   Psyeb10Enemy.obj
+ 0001:0002f7b0       ?virtPostMoveLogic@Psyeb10Enemy@@UAEXXZ 004307b0 f   Psyeb10Enemy.obj
+ 0001:0002f900       ?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z 00430900 f   Psyeb10Enemy.obj
+ 0001:00030170       ?findBestDirection@Psyeb10Enemy@@AAEHXZ 00431170 f   Psyeb10Enemy.obj
+ 0001:00030600       ?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 00431600 f   Psyeb10Enemy.obj
+ 0001:00030c70       ?changeDirection@Psyeb10Enemy@@AAEXH@Z 00431c70 f   Psyeb10Enemy.obj
+ 0001:00030d00       ?calculateInterceptDirection@Psyeb10Enemy@@AAEHHH@Z 00431d00 f   Psyeb10Enemy.obj
+ 0001:00030e10       ?adjustScoreForPlayerProximity@Psyeb10Enemy@@AAEHHHHHH@Z 00431e10 f   Psyeb10Enemy.obj
+ 0001:00030e70       ?adjustScoreForWallProximity@Psyeb10Enemy@@AAEHHHHHH@Z 00431e70 f   Psyeb10Enemy.obj
  0002:00000000       ___xc_a                    00436000     MSVCRTD:initializers.obj
  0002:00000208       ___xc_z                    00436208     MSVCRTD:initializers.obj
  0002:0000030c       ___xi_a                    0043630c     MSVCRTD:initializers.obj
@@ -1642,7 +1666,9 @@
  0002:00000820       ___xp_z                    00436820     MSVCRTD:initializers.obj
  0002:00000924       ___xt_a                    00436924     MSVCRTD:initializers.obj
  0002:00000a28       ___xt_z                    00436a28     MSVCRTD:initializers.obj
- 0002:00000eb0       __real@4072c00000000000    00436eb0     Psyeb10Enemy.obj
+ 0002:00000eb0       __real@3feb333333333333    00436eb0     Psyeb10Enemy.obj
+ 0002:00000eb8       __real@3ff4cccccccccccd    00436eb8     Psyeb10Enemy.obj
+ 0002:00000ec0       __real@4072c00000000000    00436ec0     Psyeb10Enemy.obj
  0002:00000f64       ??_7exception@std@@6B@     00436f64     DraggingDemo.obj
  0002:00000f70       ??_C@_0BC@EOODALEL@Unknown?5exception@ 00436f70     DraggingDemo.obj
  0002:00000f8c       ??_7bad_alloc@std@@6B@     00436f8c     DraggingDemo.obj
@@ -1759,7 +1785,7 @@
  0002:00006edc       ??_C@_0BH@BANGMCFP@_Allocsize?5?$DO?$DN?5_Newsize@ 0043cedc     Psyeb10Enemy.obj
  0002:00006ef8       ??_C@_1DC@MABCNPLG@?$AA?$CC?$AA_?$AAA?$AAl?$AAl?$AAo?$AAc?$AAs?$AAi?$AAz?$AAe?$AA?5?$AA?$DO?$AA?$DN?$AA?5@ 0043cef8     Psyeb10Enemy.obj
  0002:00006f34       ??_C@_0BC@KBDMBKEH@deque?$DMT?$DO?5too?5long@ 0043cf34     Psyeb10Enemy.obj
- 0002:00006f50       __real@3ff4cccccccccccd    0043cf50     Psyeb10Enemy.obj
+ 0002:00006f50       __real@3fe3333333333333    0043cf50     Psyeb10Enemy.obj
  0002:00007378       ??_7Psyeb10TileManager@@6B@ 0043d378     Psyeb10Engine.obj
  0002:00007388       ??_7Psyeb10Engine@@6BDisplayableObjectContainer@@@ 0043d388     Psyeb10Engine.obj
  0002:00007434       ??_7Psyeb10Engine@@6BFilterPoints@@@ 0043d434     Psyeb10Engine.obj
@@ -2621,6 +2647,10 @@
  0001:fffff000       __unwindfunclet$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$2 00400000 f   Psyeb10Enemy.obj
  0001:fffff000       __unwindfunclet$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z$0 00400000 f   Psyeb10Enemy.obj
  0002:fffca000       __unwindtable$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 00400000     Psyeb10Enemy.obj
+ 0000:00000000       _volmd                     00400000     Psyeb10Enemy.obj
+ 0000:00000000       _volmd                     00400000     Psyeb10Enemy.obj
+ 0000:00000000       _volmd                     00400000     Psyeb10Enemy.obj
+ 0000:00000000       _volmd                     00400000     Psyeb10Enemy.obj
  0000:00000000       _volmd                     00400000     Psyeb10Enemy.obj
  0000:00000000       _volmd                     00400000     Psyeb10Enemy.obj
  0000:00000000       _volmd                     00400000     Psyeb10Enemy.obj
@@ -3537,7 +3567,6 @@
  0001:0001aa90       $LN54                      0041ba90     BaseEngine.obj
  0001:0001bbe0       $LN15                      0041cbe0     menuTileManager.obj
  0001:0001c290       $LN25                      0041d290     MyDemoA.obj
- 0001:0002491c       $LN9                       0042591c     Psyeb10Enemy.obj
  0001:00026f00       $LN17                      00427f00     SimpleDemo.obj
  0001:00027b70       $LN17                      00428b70     StarfieldDemo.obj
  0001:00028344       $LN23                      00429344     BouncingBall.obj
@@ -3562,13 +3591,14 @@
  0001:0002e3c0       ___castguard_slow_path_compat_check 0042f3c0 f   MSVCRTD:guard_support.obj
  0001:0002f090       _ParseCommandLine          00430090 f   SDL2main:SDL_windows_main.obj
  0001:0002f1f0       _main_getcmdline           004301f0 f   SDL2main:SDL_windows_main.obj
+ 0001:00030cec       $LN9                       00431cec     Psyeb10Enemy.obj
  0001:00031ff0       __unwindfunclet$?virtInitialiseObjects@DraggingDemo@@UAEHXZ$0 00432ff0 f   DraggingDemo.obj
  0001:00031fff       __unwindfunclet$?virtInitialiseObjects@DraggingDemo@@UAEHXZ$1 00432fff f   DraggingDemo.obj
  0001:0003200e       __unwindfunclet$?virtInitialiseObjects@DraggingDemo@@UAEHXZ$2 0043300e f   DraggingDemo.obj
  0001:0003201d       __unwindfunclet$?virtInitialiseObjects@DraggingDemo@@UAEHXZ$3 0043301d f   DraggingDemo.obj
  0001:0003202c       __unwindfunclet$?virtInitialiseObjects@DraggingDemo@@UAEHXZ$5 0043302c f   DraggingDemo.obj
  0001:00032040       __ehhandler$?virtInitialiseObjects@DraggingDemo@@UAEHXZ 00433040 f   DraggingDemo.obj
- 0001:00032060       __ehhandler$?pop_back@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEXXZ 00433060 f   Psyeb10Enemy.obj
+ 0001:00032060       __ehhandler$??0?$vector@HV?$allocator@H@std@@@std@@QAE@XZ 00433060 f   Psyeb10Enemy.obj
  0001:00032080       __unwindfunclet$??$?0U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@1@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@1@@Z$0 00433080 f   DraggingDemo.obj
  0001:0003208d       __ehhandler$??$?0U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@1@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@1@@Z 0043308d f   DraggingDemo.obj
  0001:000320c0       __unwindfunclet$??$?0U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@1@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@@Z$0 004330c0 f   DraggingDemo.obj
@@ -3662,7 +3692,8 @@
  0001:00032ab1       __ehhandler$?mouseDown@gameState@@UAEXHHH@Z 00433ab1 f   gameState.obj
  0001:00032ace       __unwindfunclet$?drawBackground@gameState@@QAEXXZ$1 00433ace f   gameState.obj
  0001:00032adb       __ehhandler$?drawBackground@gameState@@QAEXXZ 00433adb f   gameState.obj
- 0001:00032b00       __ehhandler$?pop_front@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEXXZ 00433b00 f   Psyeb10Enemy.obj
+ 0001:00032b00       __ehhandler$??1?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@XZ 00433b00 f   Psyeb10Enemy.obj
+ 0001:00032b20       __ehhandler$?pop_back@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEXXZ 00433b20 f   Psyeb10Enemy.obj
  0001:00032b40       __unwindfunclet$??$_Emplace_reallocate@ABQAVDisplayableObject@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEPAPAVDisplayableObject@@QAPAV2@ABQAV2@@Z$0 00433b40 f   gameState.obj
  0001:00032b4d       __ehhandler$??$_Emplace_reallocate@ABQAVDisplayableObject@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEPAPAVDisplayableObject@@QAPAV2@ABQAV2@@Z 00433b4d f   gameState.obj
  0001:00032b80       __ehhandler$??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@ABV?$allocator@D@1@@Z 00433b80 f   gameState.obj
@@ -3684,6 +3715,7 @@
  0001:00032d4d       __unwindfunclet$?virtInitialiseObjects@ImageMappingDemo@@UAEHXZ$6 00433d4d f   ImageMappingDemo.obj
  0001:00032d5c       __unwindfunclet$?virtInitialiseObjects@ImageMappingDemo@@UAEHXZ$8 00433d5c f   ImageMappingDemo.obj
  0001:00032d70       __ehhandler$?virtInitialiseObjects@ImageMappingDemo@@UAEHXZ 00433d70 f   ImageMappingDemo.obj
+ 0001:00032d90       __ehhandler$?pop_front@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEXXZ 00433d90 f   Psyeb10Enemy.obj
  0001:00032db0       __unwindfunclet$??0MappableImageObject@@QAE@PAVImagePixelMapping@@HHPAVBaseEngine@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N3@Z$0 00433db0 f   ImageMappingDemo.obj
  0001:00032dbd       __ehhandler$??0MappableImageObject@@QAE@PAVImagePixelMapping@@HHPAVBaseEngine@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N3@Z 00433dbd f   ImageMappingDemo.obj
  0001:00032df0       __unwindfunclet$?doProgram@@YAHHQAPAD@Z$0 00433df0 f   mainfunction.obj
@@ -3699,6 +3731,8 @@
  0001:00032ee8       __unwindfunclet$?updateAllObjects@BaseEngine@@UAEXH@Z$0 00433ee8 f   BaseEngine.obj
  0001:00032ef0       __unwindfunclet$?updateAllObjects@BaseEngine@@UAEXH@Z$3 00433ef0 f   BaseEngine.obj
  0001:00032efd       __ehhandler$?updateAllObjects@BaseEngine@@UAEXH@Z 00433efd f   BaseEngine.obj
+ 0001:00032f20       __unwindfunclet$?_Alloc_sentinel_and_proxy@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAEXXZ$0 00433f20 f   Psyeb10Enemy.obj
+ 0001:00032f2d       __ehhandler$?_Alloc_sentinel_and_proxy@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAEXXZ 00433f2d f   Psyeb10Enemy.obj
  0001:00032f50       __unwindfunclet$??$_Construct_n@$$V@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEXI@Z$0 00433f50 f   BaseEngine.obj
  0001:00032f58       __unwindfunclet$??$_Construct_n@$$V@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEXI@Z$1 00433f58 f   BaseEngine.obj
  0001:00032f65       __ehhandler$??$_Construct_n@$$V@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEXI@Z 00433f65 f   BaseEngine.obj
@@ -3731,14 +3765,17 @@
  0001:0003324d       __ehhandler$??0Psyeb10Bike@@QAE@HHPAVBaseEngine@@HHH@Z 0043424d f   Psyeb10Bike.obj
  0001:00033280       __unwindfunclet$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z$0 00434280 f   Psyeb10Enemy.obj
  0001:0003328b       __unwindfunclet$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z$1 0043428b f   Psyeb10Enemy.obj
- 0001:0003329b       __ehhandler$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z 0043429b f   Psyeb10Enemy.obj
- 0001:000332c5       __unwindfunclet$?findBestDirection@Psyeb10Enemy@@AAEHXZ$0 004342c5 f   Psyeb10Enemy.obj
- 0001:000332d2       __ehhandler$?findBestDirection@Psyeb10Enemy@@AAEHXZ 004342d2 f   Psyeb10Enemy.obj
- 0001:000332fc       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$0 004342fc f   Psyeb10Enemy.obj
- 0001:00033307       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$1 00434307 f   Psyeb10Enemy.obj
- 0001:00033312       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$3 00434312 f   Psyeb10Enemy.obj
- 0001:0003331d       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$4 0043431d f   Psyeb10Enemy.obj
- 0001:0003332d       __ehhandler$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 0043432d f   Psyeb10Enemy.obj
+ 0001:00033296       __unwindfunclet$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z$2 00434296 f   Psyeb10Enemy.obj
+ 0001:000332a6       __ehhandler$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z 004342a6 f   Psyeb10Enemy.obj
+ 0001:000332d0       __unwindfunclet$?findBestDirection@Psyeb10Enemy@@AAEHXZ$0 004342d0 f   Psyeb10Enemy.obj
+ 0001:000332dd       __ehhandler$?findBestDirection@Psyeb10Enemy@@AAEHXZ 004342dd f   Psyeb10Enemy.obj
+ 0001:00033307       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$0 00434307 f   Psyeb10Enemy.obj
+ 0001:00033312       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$1 00434312 f   Psyeb10Enemy.obj
+ 0001:0003331d       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$3 0043431d f   Psyeb10Enemy.obj
+ 0001:00033328       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$4 00434328 f   Psyeb10Enemy.obj
+ 0001:00033338       __ehhandler$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 00434338 f   Psyeb10Enemy.obj
+ 0001:00033370       __unwindfunclet$?_Orphan_range_locked@?$vector@HV?$allocator@H@std@@@std@@ABEXPAH0@Z$0 00434370 f   Psyeb10Enemy.obj
+ 0001:0003337e       __ehhandler$?_Orphan_range_locked@?$vector@HV?$allocator@H@std@@@std@@ABEXPAH0@Z 0043437e f   Psyeb10Enemy.obj
  0001:000333e0       __unwindfunclet$??$?0U?$pair@HH@std@@@?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@HH@std@@PAX@1@$$QAU?$pair@HH@1@@Z$0 004343e0 f   Psyeb10Enemy.obj
  0001:000333ed       __ehhandler$??$?0U?$pair@HH@std@@@?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@HH@std@@PAX@1@$$QAU?$pair@HH@1@@Z 004343ed f   Psyeb10Enemy.obj
  0001:00033410       __unwindfunclet$??$_Construct_n@ABH@?$vector@HV?$allocator@H@std@@@std@@AAEXIABH@Z$0 00434410 f   Psyeb10Enemy.obj
@@ -3747,18 +3784,19 @@
  0001:00033450       __unwindfunclet$??$_Construct_n@PBU?$pair@HH@std@@PBU12@@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXI$$QAPBU?$pair@HH@1@0@Z$0 00434450 f   Psyeb10Enemy.obj
  0001:00033458       __unwindfunclet$??$_Construct_n@PBU?$pair@HH@std@@PBU12@@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXI$$QAPBU?$pair@HH@1@0@Z$1 00434458 f   Psyeb10Enemy.obj
  0001:00033465       __ehhandler$??$_Construct_n@PBU?$pair@HH@std@@PBU12@@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXI$$QAPBU?$pair@HH@1@0@Z 00434465 f   Psyeb10Enemy.obj
- 0001:00033490       __ehhandler$??$_Freenode@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@HH@std@@PAX@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU01@@Z 00434490 f   Psyeb10Enemy.obj
- 0001:000334d0       __unwindfunclet$??$_Uninitialized_copy@PBU?$pair@HH@std@@PBU12@V?$allocator@U?$pair@HH@std@@@2@@std@@YAPAU?$pair@HH@0@PBU10@0PAU10@AAV?$allocator@U?$pair@HH@std@@@0@@Z$0 004344d0 f   Psyeb10Enemy.obj
- 0001:000334dd       __ehhandler$??$_Uninitialized_copy@PBU?$pair@HH@std@@PBU12@V?$allocator@U?$pair@HH@std@@@2@@std@@YAPAU?$pair@HH@0@PBU10@0PAU10@AAV?$allocator@U?$pair@HH@std@@@0@@Z 004344dd f   Psyeb10Enemy.obj
- 0001:00033500       __unwindfunclet$??$_Uninitialized_copy_unchecked@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAPAPAU?$pair@HH@0@PAPAU10@QAPAU10@0@Z$0 00434500 f   Psyeb10Enemy.obj
- 0001:0003350d       __ehhandler$??$_Uninitialized_copy_unchecked@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAPAPAU?$pair@HH@0@PAPAU10@QAPAU10@0@Z 0043450d f   Psyeb10Enemy.obj
- 0001:00033540       __unwindfunclet$??$_Uninitialized_fill_n@V?$allocator@H@std@@@std@@YAPAHPAHIABHAAV?$allocator@H@0@@Z$0 00434540 f   Psyeb10Enemy.obj
- 0001:0003354d       __ehhandler$??$_Uninitialized_fill_n@V?$allocator@H@std@@@std@@YAPAHPAHIABHAAV?$allocator@H@0@@Z 0043454d f   Psyeb10Enemy.obj
- 0001:00033580       __unwindfunclet$??0?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z$0 00434580 f   Psyeb10Enemy.obj
- 0001:0003358d       __ehhandler$??0?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z 0043458d f   Psyeb10Enemy.obj
- 0001:000335b0       __ehhandler$??1?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@XZ 004345b0 f   Psyeb10Enemy.obj
- 0001:000335e0       __unwindfunclet$?_Alloc_sentinel_and_proxy@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAEXXZ$0 004345e0 f   Psyeb10Enemy.obj
- 0001:000335ed       __ehhandler$?_Alloc_sentinel_and_proxy@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAEXXZ 004345ed f   Psyeb10Enemy.obj
+ 0001:00033490       __unwindfunclet$??$_Emplace_reallocate@ABH@?$vector@HV?$allocator@H@std@@@std@@AAEPAHQAHABH@Z$0 00434490 f   Psyeb10Enemy.obj
+ 0001:0003349d       __ehhandler$??$_Emplace_reallocate@ABH@?$vector@HV?$allocator@H@std@@@std@@AAEPAHQAHABH@Z 0043449d f   Psyeb10Enemy.obj
+ 0001:000334d0       __ehhandler$??$_Freenode@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@HH@std@@PAX@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU01@@Z 004344d0 f   Psyeb10Enemy.obj
+ 0001:00033500       __unwindfunclet$??$_Uninitialized_copy@PBU?$pair@HH@std@@PBU12@V?$allocator@U?$pair@HH@std@@@2@@std@@YAPAU?$pair@HH@0@PBU10@0PAU10@AAV?$allocator@U?$pair@HH@std@@@0@@Z$0 00434500 f   Psyeb10Enemy.obj
+ 0001:0003350d       __ehhandler$??$_Uninitialized_copy@PBU?$pair@HH@std@@PBU12@V?$allocator@U?$pair@HH@std@@@2@@std@@YAPAU?$pair@HH@0@PBU10@0PAU10@AAV?$allocator@U?$pair@HH@std@@@0@@Z 0043450d f   Psyeb10Enemy.obj
+ 0001:00033540       __unwindfunclet$??$_Uninitialized_copy_unchecked@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAPAPAU?$pair@HH@0@PAPAU10@QAPAU10@0@Z$0 00434540 f   Psyeb10Enemy.obj
+ 0001:0003354d       __ehhandler$??$_Uninitialized_copy_unchecked@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAPAPAU?$pair@HH@0@PAPAU10@QAPAU10@0@Z 0043454d f   Psyeb10Enemy.obj
+ 0001:00033580       __unwindfunclet$??$_Uninitialized_fill_n@V?$allocator@H@std@@@std@@YAPAHPAHIABHAAV?$allocator@H@0@@Z$0 00434580 f   Psyeb10Enemy.obj
+ 0001:0003358d       __ehhandler$??$_Uninitialized_fill_n@V?$allocator@H@std@@@std@@YAPAHPAHIABHAAV?$allocator@H@0@@Z 0043458d f   Psyeb10Enemy.obj
+ 0001:000335b0       __unwindfunclet$??$_Uninitialized_move@PAHV?$allocator@H@std@@@std@@YAPAHQAH0PAHAAV?$allocator@H@0@@Z$0 004345b0 f   Psyeb10Enemy.obj
+ 0001:000335bd       __ehhandler$??$_Uninitialized_move@PAHV?$allocator@H@std@@@std@@YAPAHQAH0PAHAAV?$allocator@H@0@@Z 004345bd f   Psyeb10Enemy.obj
+ 0001:000335e0       __unwindfunclet$??0?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z$0 004345e0 f   Psyeb10Enemy.obj
+ 0001:000335ed       __ehhandler$??0?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z 004345ed f   Psyeb10Enemy.obj
  0001:00033820       __unwindfunclet$??0Psyeb10Engine@@QAE@XZ$0 00434820 f   Psyeb10Engine.obj
  0001:00033828       __unwindfunclet$??0Psyeb10Engine@@QAE@XZ$1 00434828 f   Psyeb10Engine.obj
  0001:0003383c       __ehhandler$??0Psyeb10Engine@@QAE@XZ 0043483c f   Psyeb10Engine.obj
@@ -4032,27 +4070,32 @@
  0002:00006650       $SG103770                  0043c650     Psyeb10Bike.obj
  0002:00006654       $SG103771                  0043c654     Psyeb10Bike.obj
  0002:00006788       $SG93566                   0043c788     Psyeb10Enemy.obj
- 0002:000067b4       $SG110746                  0043c7b4     Psyeb10Enemy.obj
- 0002:000067c8       $SG110747                  0043c7c8     Psyeb10Enemy.obj
- 0002:000067d0       $SG110748                  0043c7d0     Psyeb10Enemy.obj
- 0002:00006838       $SG110749                  0043c838     Psyeb10Enemy.obj
- 0002:000068fc       $SG110750                  0043c8fc     Psyeb10Enemy.obj
- 0002:00006900       $SG110751                  0043c900     Psyeb10Enemy.obj
- 0002:00006928       $SG110923                  0043c928     Psyeb10Enemy.obj
- 0002:0000698c       $SG111316                  0043c98c     Psyeb10Enemy.obj
- 0002:000069a8       $SG111317                  0043c9a8     Psyeb10Enemy.obj
- 0002:000069b0       $SG111318                  0043c9b0     Psyeb10Enemy.obj
- 0002:00006a18       $SG111319                  0043ca18     Psyeb10Enemy.obj
- 0002:00006ae0       $SG111320                  0043cae0     Psyeb10Enemy.obj
- 0002:00006ae4       $SG111321                  0043cae4     Psyeb10Enemy.obj
- 0002:00006b1c       $SG95018                   0043cb1c     Psyeb10Enemy.obj
- 0002:00006b20       $SG95019                   0043cb20     Psyeb10Enemy.obj
- 0002:00006b2c       $SG95020                   0043cb2c     Psyeb10Enemy.obj
- 0002:00006b38       $SG95021                   0043cb38     Psyeb10Enemy.obj
- 0002:00006b44       $SG95022                   0043cb44     Psyeb10Enemy.obj
- 0002:00006b68       $SG95027                   0043cb68     Psyeb10Enemy.obj
- 0002:00006b90       $SG95107                   0043cb90     Psyeb10Enemy.obj
- 0002:00006ba4       $SG95108                   0043cba4     Psyeb10Enemy.obj
+ 0002:000067b4       $SG110927                  0043c7b4     Psyeb10Enemy.obj
+ 0002:000067c8       $SG110928                  0043c7c8     Psyeb10Enemy.obj
+ 0002:000067d0       $SG110929                  0043c7d0     Psyeb10Enemy.obj
+ 0002:00006838       $SG110930                  0043c838     Psyeb10Enemy.obj
+ 0002:000068fc       $SG110931                  0043c8fc     Psyeb10Enemy.obj
+ 0002:00006900       $SG110932                  0043c900     Psyeb10Enemy.obj
+ 0002:00006928       $SG111104                  0043c928     Psyeb10Enemy.obj
+ 0002:0000698c       $SG95047                   0043c98c     Psyeb10Enemy.obj
+ 0002:00006990       $SG95048                   0043c990     Psyeb10Enemy.obj
+ 0002:0000699c       $SG95049                   0043c99c     Psyeb10Enemy.obj
+ 0002:000069a8       $SG95050                   0043c9a8     Psyeb10Enemy.obj
+ 0002:000069b4       $SG95051                   0043c9b4     Psyeb10Enemy.obj
+ 0002:000069d8       $SG95060                   0043c9d8     Psyeb10Enemy.obj
+ 0002:000069dc       $SG95061                   0043c9dc     Psyeb10Enemy.obj
+ 0002:000069ec       $SG95062                   0043c9ec     Psyeb10Enemy.obj
+ 0002:000069f8       $SG95063                   0043c9f8     Psyeb10Enemy.obj
+ 0002:00006a04       $SG95064                   0043ca04     Psyeb10Enemy.obj
+ 0002:00006a1c       $SG95068                   0043ca1c     Psyeb10Enemy.obj
+ 0002:00006a4c       $SG95148                   0043ca4c     Psyeb10Enemy.obj
+ 0002:00006a60       $SG95149                   0043ca60     Psyeb10Enemy.obj
+ 0002:00006a74       $SG111616                  0043ca74     Psyeb10Enemy.obj
+ 0002:00006a90       $SG111617                  0043ca90     Psyeb10Enemy.obj
+ 0002:00006a98       $SG111618                  0043ca98     Psyeb10Enemy.obj
+ 0002:00006b00       $SG111619                  0043cb00     Psyeb10Enemy.obj
+ 0002:00006bc8       $SG111620                  0043cbc8     Psyeb10Enemy.obj
+ 0002:00006bcc       $SG111621                  0043cbcc     Psyeb10Enemy.obj
  0002:00006f60       $SG103939                  0043cf60     Psyeb10Engine.obj
  0002:00006f74       $SG103940                  0043cf74     Psyeb10Engine.obj
  0002:00006f78       $SG103941                  0043cf78     Psyeb10Engine.obj
@@ -4386,32 +4429,39 @@
  0002:0000de4c       __ehfuncinfo$?virtSetupBackgroundBuffer@MyDemoA@@UAEXXZ 00443e4c     MyDemoA.obj
  0002:0000de78       __unwindtable$??0Psyeb10Bike@@QAE@HHPAVBaseEngine@@HHH@Z 00443e78     Psyeb10Bike.obj
  0002:0000de80       __ehfuncinfo$??0Psyeb10Bike@@QAE@HHPAVBaseEngine@@HHH@Z 00443e80     Psyeb10Bike.obj
- 0002:0000dea4       __unwindtable$??$_Uninitialized_copy@PBU?$pair@HH@std@@PBU12@V?$allocator@U?$pair@HH@std@@@2@@std@@YAPAU?$pair@HH@0@PBU10@0PAU10@AAV?$allocator@U?$pair@HH@std@@@0@@Z 00443ea4     Psyeb10Enemy.obj
- 0002:0000deac       __ehfuncinfo$??$_Uninitialized_copy@PBU?$pair@HH@std@@PBU12@V?$allocator@U?$pair@HH@std@@@2@@std@@YAPAU?$pair@HH@0@PBU10@0PAU10@AAV?$allocator@U?$pair@HH@std@@@0@@Z 00443eac     Psyeb10Enemy.obj
- 0002:0000ded0       __ehfuncinfo$??$_Freenode@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@HH@std@@PAX@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU01@@Z 00443ed0     Psyeb10Enemy.obj
- 0002:0000def4       __unwindtable$??$_Uninitialized_copy_unchecked@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAPAPAU?$pair@HH@0@PAPAU10@QAPAU10@0@Z 00443ef4     Psyeb10Enemy.obj
- 0002:0000defc       __ehfuncinfo$??$_Uninitialized_copy_unchecked@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAPAPAU?$pair@HH@0@PAPAU10@QAPAU10@0@Z 00443efc     Psyeb10Enemy.obj
- 0002:0000df44       __unwindtable$??$_Construct_n@ABH@?$vector@HV?$allocator@H@std@@@std@@AAEXIABH@Z 00443f44     Psyeb10Enemy.obj
- 0002:0000df54       __ehfuncinfo$??$_Construct_n@ABH@?$vector@HV?$allocator@H@std@@@std@@AAEXIABH@Z 00443f54     Psyeb10Enemy.obj
- 0002:0000df8c       __ehfuncinfo$?pop_front@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEXXZ 00443f8c     Psyeb10Enemy.obj
- 0002:0000dfb4       __ehfuncinfo$?pop_back@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEXXZ 00443fb4     Psyeb10Enemy.obj
- 0002:0000dfdc       __unwindtable$?_Alloc_sentinel_and_proxy@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAEXXZ 00443fdc     Psyeb10Enemy.obj
- 0002:0000dfe4       __ehfuncinfo$?_Alloc_sentinel_and_proxy@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAEXXZ 00443fe4     Psyeb10Enemy.obj
- 0002:0000e03c       __unwindtable$??$_Construct_n@PBU?$pair@HH@std@@PBU12@@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXI$$QAPBU?$pair@HH@1@0@Z 0044403c     Psyeb10Enemy.obj
- 0002:0000e04c       __ehfuncinfo$??$_Construct_n@PBU?$pair@HH@std@@PBU12@@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXI$$QAPBU?$pair@HH@1@0@Z 0044404c     Psyeb10Enemy.obj
- 0002:0000e078       __unwindtable$??$_Uninitialized_fill_n@V?$allocator@H@std@@@std@@YAPAHPAHIABHAAV?$allocator@H@0@@Z 00444078     Psyeb10Enemy.obj
- 0002:0000e080       __ehfuncinfo$??$_Uninitialized_fill_n@V?$allocator@H@std@@@std@@YAPAHPAHIABHAAV?$allocator@H@0@@Z 00444080     Psyeb10Enemy.obj
- 0002:0000e0d0       __unwindtable$??0?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z 004440d0     Psyeb10Enemy.obj
- 0002:0000e0d8       __ehfuncinfo$??0?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z 004440d8     Psyeb10Enemy.obj
- 0002:0000e100       __ehfuncinfo$??1?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@XZ 00444100     Psyeb10Enemy.obj
- 0002:0000e130       __unwindtable$??$?0U?$pair@HH@std@@@?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@HH@std@@PAX@1@$$QAU?$pair@HH@1@@Z 00444130     Psyeb10Enemy.obj
- 0002:0000e138       __ehfuncinfo$??$?0U?$pair@HH@std@@@?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@HH@std@@PAX@1@$$QAU?$pair@HH@1@@Z 00444138     Psyeb10Enemy.obj
+ 0002:0000dea4       __ehfuncinfo$??$_Freenode@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@HH@std@@PAX@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU01@@Z 00443ea4     Psyeb10Enemy.obj
+ 0002:0000dec8       __unwindtable$?_Orphan_range_locked@?$vector@HV?$allocator@H@std@@@std@@ABEXPAH0@Z 00443ec8     Psyeb10Enemy.obj
+ 0002:0000ded0       __ehfuncinfo$?_Orphan_range_locked@?$vector@HV?$allocator@H@std@@@std@@ABEXPAH0@Z 00443ed0     Psyeb10Enemy.obj
+ 0002:0000def4       __unwindtable$??$_Construct_n@ABH@?$vector@HV?$allocator@H@std@@@std@@AAEXIABH@Z 00443ef4     Psyeb10Enemy.obj
+ 0002:0000df04       __ehfuncinfo$??$_Construct_n@ABH@?$vector@HV?$allocator@H@std@@@std@@AAEXIABH@Z 00443f04     Psyeb10Enemy.obj
+ 0002:0000df44       __ehfuncinfo$?pop_back@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEXXZ 00443f44     Psyeb10Enemy.obj
+ 0002:0000df8c       __ehfuncinfo$??0?$vector@HV?$allocator@H@std@@@std@@QAE@XZ 00443f8c     Psyeb10Enemy.obj
+ 0002:0000dfd4       __ehfuncinfo$?pop_front@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEXXZ 00443fd4     Psyeb10Enemy.obj
+ 0002:0000e000       __unwindtable$??$_Construct_n@PBU?$pair@HH@std@@PBU12@@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXI$$QAPBU?$pair@HH@1@0@Z 00444000     Psyeb10Enemy.obj
+ 0002:0000e010       __ehfuncinfo$??$_Construct_n@PBU?$pair@HH@std@@PBU12@@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXI$$QAPBU?$pair@HH@1@0@Z 00444010     Psyeb10Enemy.obj
+ 0002:0000e034       __unwindtable$?_Alloc_sentinel_and_proxy@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAEXXZ 00444034     Psyeb10Enemy.obj
+ 0002:0000e03c       __ehfuncinfo$?_Alloc_sentinel_and_proxy@?$_Tree@V?$_Tset_traits@U?$pair@HH@std@@U?$less@U?$pair@HH@std@@@2@V?$allocator@U?$pair@HH@std@@@2@$0A@@std@@@std@@IAEXXZ 0044403c     Psyeb10Enemy.obj
+ 0002:0000e068       __unwindtable$??0?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z 00444068     Psyeb10Enemy.obj
+ 0002:0000e070       __ehfuncinfo$??0?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@@Z 00444070     Psyeb10Enemy.obj
+ 0002:0000e0a4       __ehfuncinfo$??1?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@XZ 004440a4     Psyeb10Enemy.obj
+ 0002:0000e0d0       __unwindtable$??$_Emplace_reallocate@ABH@?$vector@HV?$allocator@H@std@@@std@@AAEPAHQAHABH@Z 004440d0     Psyeb10Enemy.obj
+ 0002:0000e0d8       __ehfuncinfo$??$_Emplace_reallocate@ABH@?$vector@HV?$allocator@H@std@@@std@@AAEPAHQAHABH@Z 004440d8     Psyeb10Enemy.obj
+ 0002:0000e100       __unwindtable$??$_Uninitialized_fill_n@V?$allocator@H@std@@@std@@YAPAHPAHIABHAAV?$allocator@H@0@@Z 00444100     Psyeb10Enemy.obj
+ 0002:0000e108       __ehfuncinfo$??$_Uninitialized_fill_n@V?$allocator@H@std@@@std@@YAPAHPAHIABHAAV?$allocator@H@0@@Z 00444108     Psyeb10Enemy.obj
+ 0002:0000e130       __unwindtable$??$_Uninitialized_copy@PBU?$pair@HH@std@@PBU12@V?$allocator@U?$pair@HH@std@@@2@@std@@YAPAU?$pair@HH@0@PBU10@0PAU10@AAV?$allocator@U?$pair@HH@std@@@0@@Z 00444130     Psyeb10Enemy.obj
+ 0002:0000e138       __ehfuncinfo$??$_Uninitialized_copy@PBU?$pair@HH@std@@PBU12@V?$allocator@U?$pair@HH@std@@@2@@std@@YAPAU?$pair@HH@0@PBU10@0PAU10@AAV?$allocator@U?$pair@HH@std@@@0@@Z 00444138     Psyeb10Enemy.obj
+ 0002:0000e15c       __unwindtable$??$?0U?$pair@HH@std@@@?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@HH@std@@PAX@1@$$QAU?$pair@HH@1@@Z 0044415c     Psyeb10Enemy.obj
+ 0002:0000e164       __ehfuncinfo$??$?0U?$pair@HH@std@@@?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@HH@std@@PAX@1@$$QAU?$pair@HH@1@@Z 00444164     Psyeb10Enemy.obj
  0002:0000e18c       __unwindtable$?findBestDirection@Psyeb10Enemy@@AAEHXZ 0044418c     Psyeb10Enemy.obj
  0002:0000e194       __unwindtable$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z 00444194     Psyeb10Enemy.obj
- 0002:0000e1a4       __unwindtable$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 004441a4     Psyeb10Enemy.obj
- 0002:0000e1c4       __ehfuncinfo$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 004441c4     Psyeb10Enemy.obj
- 0002:0000e1e8       __ehfuncinfo$?findBestDirection@Psyeb10Enemy@@AAEHXZ 004441e8     Psyeb10Enemy.obj
- 0002:0000e20c       __ehfuncinfo$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z 0044420c     Psyeb10Enemy.obj
+ 0002:0000e1ac       __unwindtable$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 004441ac     Psyeb10Enemy.obj
+ 0002:0000e1cc       __ehfuncinfo$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 004441cc     Psyeb10Enemy.obj
+ 0002:0000e1f0       __ehfuncinfo$?findBestDirection@Psyeb10Enemy@@AAEHXZ 004441f0     Psyeb10Enemy.obj
+ 0002:0000e214       __ehfuncinfo$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z 00444214     Psyeb10Enemy.obj
+ 0002:0000e238       __unwindtable$??$_Uninitialized_move@PAHV?$allocator@H@std@@@std@@YAPAHQAH0PAHAAV?$allocator@H@0@@Z 00444238     Psyeb10Enemy.obj
+ 0002:0000e240       __ehfuncinfo$??$_Uninitialized_move@PAHV?$allocator@H@std@@@std@@YAPAHQAH0PAHAAV?$allocator@H@0@@Z 00444240     Psyeb10Enemy.obj
+ 0002:0000e264       __unwindtable$??$_Uninitialized_copy_unchecked@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAPAPAU?$pair@HH@0@PAPAU10@QAPAU10@0@Z 00444264     Psyeb10Enemy.obj
+ 0002:0000e26c       __ehfuncinfo$??$_Uninitialized_copy_unchecked@PAPAU?$pair@HH@std@@PAPAU12@@std@@YAPAPAU?$pair@HH@0@PAPAU10@QAPAU10@0@Z 0044426c     Psyeb10Enemy.obj
  0002:0000e2e8       __unwindtable$??0Psyeb10Engine@@QAE@XZ 004442e8     Psyeb10Engine.obj
  0002:0000e2f8       __ehfuncinfo$??0Psyeb10Engine@@QAE@XZ 004442f8     Psyeb10Engine.obj
  0002:0000e324       __unwindtable$??0gameState@@QAE@PAVPsyeb10Engine@@@Z 00444324     Psyeb10Engine.obj
