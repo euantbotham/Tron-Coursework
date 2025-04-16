@@ -1,6 +1,6 @@
  CourseworkBase2020
 
- Timestamp is 67fff185 (Wed Apr 16 19:05:57 2025)
+ Timestamp is 67fffb8d (Wed Apr 16 19:48:45 2025)
 
  Preferred load address is 00400000
 
@@ -78,6 +78,7 @@
  0001:00003940       ?virtSetupBackgroundBuffer@DraggingDemo@@UAEXXZ 00404940 f   DraggingDemo.obj
  0001:00003a80       ?virtInitialiseObjects@DraggingDemo@@UAEHXZ 00404a80 f   DraggingDemo.obj
  0001:00003ce0       ?virtKeyDown@DraggingDemo@@UAEXH@Z 00404ce0 f   DraggingDemo.obj
+ 0001:00003d08       ??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@N@Z 00404d08 f   msvcprtd:MSVCP140D.dll
  0001:00003d10       ?_Get_first@?$_Compressed_pair@V?$allocator@N@std@@V?$_Vector_val@U?$_Simple_types@N@std@@@2@$00@std@@QBEABV?$allocator@N@2@XZ 00404d10 f i Psyeb10Enemy.obj
  0001:00003d20       ??$_Unfancy@I@std@@YAPAIPAI@Z 00404d20 f i Psyeb10Enemy.obj
  0001:00003d30       ?_Getal@?$vector@HV?$allocator@H@std@@@std@@ABEABV?$allocator@H@2@XZ 00404d30 f i Psyeb10Enemy.obj
@@ -1752,13 +1753,13 @@
  0001:0002f700       ?isValidMove@Psyeb10Enemy@@QAE_NHH@Z 00430700 f   Psyeb10Enemy.obj
  0001:0002f780       ?virtHandleDeath@Psyeb10Enemy@@UAEXXZ 00430780 f   Psyeb10Enemy.obj
  0001:0002f7b0       ?virtPostMoveLogic@Psyeb10Enemy@@UAEXXZ 004307b0 f   Psyeb10Enemy.obj
- 0001:0002f900       ?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z 00430900 f   Psyeb10Enemy.obj
- 0001:00030340       ?findBestDirection@Psyeb10Enemy@@AAEHXZ 00431340 f   Psyeb10Enemy.obj
- 0001:000307d0       ?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 004317d0 f   Psyeb10Enemy.obj
- 0001:00030e40       ?changeDirection@Psyeb10Enemy@@AAEXH@Z 00431e40 f   Psyeb10Enemy.obj
- 0001:00030ed0       ?calculateInterceptDirection@Psyeb10Enemy@@AAEHHH@Z 00431ed0 f   Psyeb10Enemy.obj
- 0001:00030fe0       ?adjustScoreForPlayerProximity@Psyeb10Enemy@@AAEHHHHHH@Z 00431fe0 f   Psyeb10Enemy.obj
- 0001:00031040       ?adjustScoreForWallProximity@Psyeb10Enemy@@AAEHHHHHH@Z 00432040 f   Psyeb10Enemy.obj
+ 0001:0002f8e0       ?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z 004308e0 f   Psyeb10Enemy.obj
+ 0001:00030110       ?findBestDirection@Psyeb10Enemy@@AAEHXZ 00431110 f   Psyeb10Enemy.obj
+ 0001:000307b0       ?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 004317b0 f   Psyeb10Enemy.obj
+ 0001:00030e20       ?changeDirection@Psyeb10Enemy@@AAEXH@Z 00431e20 f   Psyeb10Enemy.obj
+ 0001:00030eb0       ?calculateInterceptDirection@Psyeb10Enemy@@AAEHHH@Z 00431eb0 f   Psyeb10Enemy.obj
+ 0001:00030fc0       ?adjustScoreForPlayerProximity@Psyeb10Enemy@@AAEHHHHHH@Z 00431fc0 f   Psyeb10Enemy.obj
+ 0001:00031020       ?adjustScoreForWallProximity@Psyeb10Enemy@@AAEHHHHHH@Z 00432020 f   Psyeb10Enemy.obj
  0002:00000000       ___xc_a                    00436000     MSVCRTD:initializers.obj
  0002:00000208       ___xc_z                    00436208     MSVCRTD:initializers.obj
  0002:0000030c       ___xi_a                    0043630c     MSVCRTD:initializers.obj
@@ -1771,7 +1772,7 @@
  0002:00000ec8       ??_C@_0CE@FFEOOBMH@vector?$DMbool?$DO?5subscript?5out?5of?5r@ 00436ec8     Psyeb10Enemy.obj
  0002:00000eec       ??_C@_0DL@EIIPGNKA@cannot?5dereference?5value?9initia@ 00436eec     Psyeb10Enemy.obj
  0002:00000f28       ??_C@_0CK@FLJLFEAD@vector?$DMbool?$DO?5iterator?5not?5deref@ 00436f28     Psyeb10Enemy.obj
- 0002:00000f58       __real@3feccccccccccccd    00436f58     Psyeb10Enemy.obj
+ 0002:00000f58       __real@3fee666666666666    00436f58     Psyeb10Enemy.obj
  0002:00000f64       ??_7exception@std@@6B@     00436f64     DraggingDemo.obj
  0002:00000f70       ??_C@_0BC@EOODALEL@Unknown?5exception@ 00436f70     DraggingDemo.obj
  0002:00000f8c       ??_7bad_alloc@std@@6B@     00436f8c     DraggingDemo.obj
@@ -1788,20 +1789,20 @@
  0002:00001170       __real@3ff0cccccccccccd    00437170     Psyeb10Enemy.obj
  0002:00001178       ??_C@_0BJ@LFDBABJJ@ITERATOR?5LIST?5CORRUPTED?$CB@ 00437178     DraggingDemo.obj
  0002:00001198       ??_C@_1DG@PLBPCAEM@?$AA?$CC?$AAI?$AAT?$AAE?$AAR?$AAA?$AAT?$AAO?$AAR?$AA?5?$AAL?$AAI?$AAS?$AAT?$AA?5@ 00437198     DraggingDemo.obj
- 0002:000011d0       __real@3ff2666666666666    004371d0     Psyeb10Enemy.obj
+ 0002:000011d0       __real@4051800000000000    004371d0     Psyeb10Enemy.obj
  0002:000011d8       ??_C@_0BA@JFNIOLAK@string?5too?5long@ 004371d8     DraggingDemo.obj
  0002:000011ec       ??_C@_0CN@GHCLOPHF@Error?5in?5setting?5pixel?9?5should?5@ 004371ec     DraggingDemo.obj
- 0002:00001220       __real@4051800000000000    00437220     Psyeb10Enemy.obj
+ 0002:00001220       __real@4064000000000000    00437220     Psyeb10Enemy.obj
  0002:00001228       ??_C@_0JM@GIEKPEHN@WARNING?3?5Attempted?5write?5to?5sur@ 00437228     DraggingDemo.obj
  0002:000012c4       ??_C@_0BH@BANGMCFP@_Allocsize?5?$DO?$DN?5_Newsize@ 004372c4     Psyeb10Enemy.obj
  0002:000012e4       ??_C@_0BB@GCADKGJO@map?1set?5too?5long@ 004372e4     DraggingDemo.obj
  0002:000012f8       ??_C@_0DC@BNOGMHFL@Error?5creating?5surface?5in?5RawIm@ 004372f8     DraggingDemo.obj
  0002:00001334       ??_C@_0BD@IFIGDDIC@?7?7?$CL?$CL?$CL?5Load?5image?3?5@ 00437334     DraggingDemo.obj
  0002:0000134c       ??_C@_0DJ@OJEPJEDH@ImageManager?3?3getImagePtrbyURL?$CI@ 0043734c     DraggingDemo.obj
- 0002:00001388       __real@4064000000000000    00437388     Psyeb10Enemy.obj
+ 0002:00001388       __real@4072c00000000000    00437388     Psyeb10Enemy.obj
  0002:00001390       ??_C@_0BJ@LOCNEGOL@Failed?5to?5load?5image?5?$CFs?6@ 00437390     DraggingDemo.obj
  0002:000013b4       ??_7DragableBaseClassObject@@6B@ 004373b4     DraggingDemo.obj
- 0002:000013f8       __real@4072c00000000000    004373f8     Psyeb10Enemy.obj
+ 0002:000013f8       __real@bff0000000000000    004373f8     Psyeb10Enemy.obj
  0002:0000140c       ??_7DragableObject@@6B@    0043740c     DraggingDemo.obj
  0002:00001464       ??_7DragableImageObject@@6B@ 00437464     DraggingDemo.obj
  0002:000014bc       ??_7ImageObject@@6B@       004374bc     DraggingDemo.obj
@@ -2289,7 +2290,8 @@
  0004:0000012c       __imp_?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD0@Z 0044712c     msvcprtd:MSVCP140D.dll
  0004:00000130       __imp_?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z 00447130     msvcprtd:MSVCP140D.dll
  0004:00000134       __imp_?_Pninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEPADXZ 00447134     msvcprtd:MSVCP140D.dll
- 0004:00000138       \177MSVCP140D_NULL_THUNK_DATA 00447138     msvcprtd:MSVCP140D.dll
+ 0004:00000138       __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@N@Z 00447138     msvcprtd:MSVCP140D.dll
+ 0004:0000013c       \177MSVCP140D_NULL_THUNK_DATA 0044713c     msvcprtd:MSVCP140D.dll
  0004:00000188       __imp__SDL_UpperBlitScaled 00447188     SDL2:SDL2.dll
  0004:0000018c       __imp__SDL_SetClipRect     0044718c     SDL2:SDL2.dll
  0004:00000190       __imp__SDL_Quit            00447190     SDL2:SDL2.dll
@@ -2760,22 +2762,13 @@
  0000:00000000       _volmd                     00400000     MyDemoA.obj
  0000:00000000       _volmd                     00400000     Psyeb10Bike.obj
  0002:fffca000       __catchsym$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$3 00400000     Psyeb10Enemy.obj
- 0002:fffca000       __catchsym$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z$3 00400000     Psyeb10Enemy.obj
  0002:fffca000       __ehfuncinfo$??$_Deallocate@$07@std@@YAXPAXI@Z 00400000     Psyeb10Enemy.obj
  0002:fffca000       __ehfuncinfo$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 00400000     Psyeb10Enemy.obj
  0001:fffff000       __ehhandler$??$_Deallocate@$07@std@@YAXPAXI@Z 00400000 f   Psyeb10Enemy.obj
  0001:fffff000       __ehhandler$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 00400000 f   Psyeb10Enemy.obj
  0001:fffff000       __unwindfunclet$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$2 00400000 f   Psyeb10Enemy.obj
- 0001:fffff000       __unwindfunclet$??$_Construct@$00PBD@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXQBDI@Z$0 00400000 f   Psyeb10Enemy.obj
- 0001:fffff000       __unwindfunclet$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z$2 00400000 f   Psyeb10Enemy.obj
- 0001:fffff000       __unwindfunclet$??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z$0 00400000 f   Psyeb10Enemy.obj
  0001:fffff000       __unwindfunclet$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z$0 00400000 f   Psyeb10Enemy.obj
- 0002:fffca000       __unwindtable$??$_Construct@$00PBD@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXQBDI@Z 00400000     Psyeb10Enemy.obj
- 0002:fffca000       __unwindtable$??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z 00400000     Psyeb10Enemy.obj
  0002:fffca000       __unwindtable$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 00400000     Psyeb10Enemy.obj
- 0000:00000000       _volmd                     00400000     Psyeb10Enemy.obj
- 0000:00000000       _volmd                     00400000     Psyeb10Enemy.obj
- 0000:00000000       _volmd                     00400000     Psyeb10Enemy.obj
  0000:00000000       _volmd                     00400000     Psyeb10Enemy.obj
  0000:00000000       _volmd                     00400000     Psyeb10Enemy.obj
  0000:00000000       _volmd                     00400000     Psyeb10Enemy.obj
@@ -3256,6 +3249,7 @@
  0000:fffb5000       .debug$S                   00400000     msvcprtd:MSVCP140D.dll
  0000:fffb5000       .debug$S                   00400000     msvcprtd:MSVCP140D.dll
  0000:fffb5000       .debug$S                   00400000     msvcprtd:MSVCP140D.dll
+ 0000:fffb5000       .debug$S                   00400000     msvcprtd:MSVCP140D.dll
  0000:fffb5000       .debug$S                   00400000     vcruntimed:VCRUNTIME140D.dll
  0000:fffb5000       .debug$S                   00400000     vcruntimed:VCRUNTIME140D.dll
  0000:fffb5000       .debug$S                   00400000     vcruntimed:VCRUNTIME140D.dll
@@ -3335,8 +3329,6 @@
  0001:fffff008       __unwindfunclet$?getImagePtrbyURL@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@_N1@Z$1 00400008 f   MyDemoA.obj
  0001:fffff008       __unwindfunclet$?loadAsNew@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@@Z$1 00400008 f   MyDemoA.obj
  0001:fffff008       __unwindfunclet$?loadImage@ImageManager@@SA?AVSimpleImage@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N@Z$1 00400008 f   MyDemoA.obj
- 0002:fffca008       __ehfuncinfo$??$_Construct@$00PBD@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXQBDI@Z 00400008     Psyeb10Enemy.obj
- 0002:fffca008       __ehfuncinfo$??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z 00400008     Psyeb10Enemy.obj
  0002:fffca008       __ehfuncinfo$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 00400008     Psyeb10Enemy.obj
  0002:fffca008       __ehfuncinfo$??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEXIABU_Value_init_tag@1@@Z 00400008     Psyeb10Engine.obj
  0002:fffca008       __ehfuncinfo$??$_Uninitialized_move@PAPAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@YAPAPAVDisplayableObject@@QAPAV1@0PAPAV1@AAV?$allocator@PAVDisplayableObject@@@0@@Z 00400008     Psyeb10Engine.obj
@@ -3466,9 +3458,6 @@
  0001:fffff00d       __ehhandler$?loadImage@RawImageData@@QAE_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HHHHH_N@Z 0040000d f   MyDemoA.obj
  0001:fffff00d       __ehhandler$?setAllObjectsVisible@DisplayableObjectContainer@@QBEX_N@Z 0040000d f   MyDemoA.obj
  0001:fffff00d       __ehhandler$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 0040000d f   Psyeb10Enemy.obj
- 0001:fffff00d       __ehhandler$??$_Construct@$00PBD@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXQBDI@Z 0040000d f   Psyeb10Enemy.obj
- 0001:fffff00d       __ehhandler$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z 0040000d f   Psyeb10Enemy.obj
- 0001:fffff00d       __ehhandler$??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z 0040000d f   Psyeb10Enemy.obj
  0001:fffff00d       __ehhandler$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 0040000d f   Psyeb10Enemy.obj
  0001:fffff00d       __ehhandler$??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEXIABU_Value_init_tag@1@@Z 0040000d f   Psyeb10Engine.obj
  0001:fffff00d       __ehhandler$??$_Uninitialized_move@PAPAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@YAPAPAVDisplayableObject@@QAPAV1@0PAPAV1@AAV?$allocator@PAVDisplayableObject@@@0@@Z 0040000d f   Psyeb10Engine.obj
@@ -3551,7 +3540,6 @@
  0002:fffca010       __tryblocktable$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z 00400010     MyDemoA.obj
  0001:fffff010       __unwindfunclet$?getImagePtrbyURL@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@_N1@Z$9 00400010 f   MyDemoA.obj
  0002:fffca010       __tryblocktable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00400010     Psyeb10Enemy.obj
- 0002:fffca010       __tryblocktable$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z 00400010     Psyeb10Enemy.obj
  0000:00000010       _volmd                     00400010     Psyeb10Enemy.obj
  0002:fffca010       __tryblocktable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00400010     SimpleDemo.obj
  0002:fffca010       __tryblocktable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00400010     SimpleImage.obj
@@ -3614,7 +3602,6 @@
  0002:fffca024       __unwindtable$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z 00400024     MyDemoA.obj
  0002:fffca024       __unwindtable$?getImagePtrbyURL@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@_N1@Z 00400024     MyDemoA.obj
  0002:fffca024       __unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00400024     Psyeb10Enemy.obj
- 0002:fffca024       __unwindtable$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z 00400024     Psyeb10Enemy.obj
  0002:fffca024       __unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00400024     SimpleDemo.obj
  0002:fffca024       __unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00400024     SimpleImage.obj
  0002:fffca024       __unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00400024     StarfieldDemo.obj
@@ -3647,7 +3634,6 @@
  0002:fffca03c       __ehfuncinfo$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 0040003c     MyDemoA.obj
  0002:fffca03c       __ehfuncinfo$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z 0040003c     MyDemoA.obj
  0002:fffca03c       __ehfuncinfo$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 0040003c     Psyeb10Enemy.obj
- 0002:fffca03c       __ehfuncinfo$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z 0040003c     Psyeb10Enemy.obj
  0002:fffca03c       __ehfuncinfo$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 0040003c     SimpleDemo.obj
  0002:fffca03c       __ehfuncinfo$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 0040003c     SimpleImage.obj
  0002:fffca03c       __ehfuncinfo$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 0040003c     StarfieldDemo.obj
@@ -3659,7 +3645,6 @@
  0000:00000050       _volmd                     00400050     Psyeb10Enemy.obj
  0001:fffff229       __catch$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z$0 00400229 f   ImageMappingDemo.obj
  0001:fffff229       __catch$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z$0 00400229 f   MyDemoA.obj
- 0001:fffff229       __catch$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z$0 00400229 f   Psyeb10Enemy.obj
  0001:fffff229       __catch$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z$0 00400229 f   ZoomingDemo.obj
  0001:fffff229       __catch$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z$0 00400229 f   gameState.obj
  0001:fffff273       __catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0 00400273 f   BouncingBall.obj
@@ -3733,7 +3718,7 @@
  0001:0002e3c0       ___castguard_slow_path_compat_check 0042f3c0 f   MSVCRTD:guard_support.obj
  0001:0002f090       _ParseCommandLine          00430090 f   SDL2main:SDL_windows_main.obj
  0001:0002f1f0       _main_getcmdline           004301f0 f   SDL2main:SDL_windows_main.obj
- 0001:00030ebc       $LN9                       00431ebc     Psyeb10Enemy.obj
+ 0001:00030e9c       $LN9                       00431e9c     Psyeb10Enemy.obj
  0001:00031ff0       __unwindfunclet$?virtInitialiseObjects@DraggingDemo@@UAEHXZ$0 00432ff0 f   DraggingDemo.obj
  0001:00031fff       __unwindfunclet$?virtInitialiseObjects@DraggingDemo@@UAEHXZ$1 00432fff f   DraggingDemo.obj
  0001:0003200e       __unwindfunclet$?virtInitialiseObjects@DraggingDemo@@UAEHXZ$2 0043300e f   DraggingDemo.obj
@@ -3909,15 +3894,14 @@
  0001:0003327b       __unwindfunclet$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z$1 0043427b f   Psyeb10Enemy.obj
  0001:00033286       __unwindfunclet$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z$2 00434286 f   Psyeb10Enemy.obj
  0001:00033291       __unwindfunclet$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z$5 00434291 f   Psyeb10Enemy.obj
- 0001:0003329c       __unwindfunclet$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z$8 0043429c f   Psyeb10Enemy.obj
- 0001:000332a9       __ehhandler$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z 004342a9 f   Psyeb10Enemy.obj
- 0001:000332d3       __unwindfunclet$?findBestDirection@Psyeb10Enemy@@AAEHXZ$0 004342d3 f   Psyeb10Enemy.obj
- 0001:000332e0       __ehhandler$?findBestDirection@Psyeb10Enemy@@AAEHXZ 004342e0 f   Psyeb10Enemy.obj
- 0001:0003330a       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$0 0043430a f   Psyeb10Enemy.obj
- 0001:00033315       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$1 00434315 f   Psyeb10Enemy.obj
- 0001:00033320       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$3 00434320 f   Psyeb10Enemy.obj
- 0001:0003332b       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$4 0043432b f   Psyeb10Enemy.obj
- 0001:0003333b       __ehhandler$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 0043433b f   Psyeb10Enemy.obj
+ 0001:000332a1       __ehhandler$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z 004342a1 f   Psyeb10Enemy.obj
+ 0001:000332cb       __unwindfunclet$?findBestDirection@Psyeb10Enemy@@AAEHXZ$0 004342cb f   Psyeb10Enemy.obj
+ 0001:000332d8       __ehhandler$?findBestDirection@Psyeb10Enemy@@AAEHXZ 004342d8 f   Psyeb10Enemy.obj
+ 0001:00033302       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$0 00434302 f   Psyeb10Enemy.obj
+ 0001:0003330d       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$1 0043430d f   Psyeb10Enemy.obj
+ 0001:00033318       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$3 00434318 f   Psyeb10Enemy.obj
+ 0001:00033323       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$4 00434323 f   Psyeb10Enemy.obj
+ 0001:00033333       __ehhandler$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 00434333 f   Psyeb10Enemy.obj
  0001:00033370       __unwindfunclet$??0?$vector@_NV?$allocator@_N@std@@@std@@QAE@IAB_NABV?$allocator@_N@1@@Z$0 00434370 f   Psyeb10Enemy.obj
  0001:0003337d       __ehhandler$??0?$vector@_NV?$allocator@_N@std@@@std@@QAE@IAB_NABV?$allocator@_N@1@@Z 0043437d f   Psyeb10Enemy.obj
  0001:000333a0       __unwindfunclet$??$_Construct_n@PBU?$pair@HH@std@@PBU12@@?$vector@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@AAEXI$$QAPBU?$pair@HH@1@0@Z$0 004343a0 f   Psyeb10Enemy.obj
@@ -4223,30 +4207,28 @@
  0002:00006588       $SG103769                  0043c588     Psyeb10Bike.obj
  0002:00006650       $SG103770                  0043c650     Psyeb10Bike.obj
  0002:00006654       $SG103771                  0043c654     Psyeb10Bike.obj
- 0002:00006788       $SG114699                  0043c788     Psyeb10Enemy.obj
- 0002:000067a4       $SG114700                  0043c7a4     Psyeb10Enemy.obj
- 0002:000067a8       $SG114701                  0043c7a8     Psyeb10Enemy.obj
- 0002:0000680c       $SG114703                  0043c80c     Psyeb10Enemy.obj
- 0002:00006810       $SG114702                  0043c810     Psyeb10Enemy.obj
- 0002:000068d8       $SG114704                  0043c8d8     Psyeb10Enemy.obj
- 0002:00006910       $SG93566                   0043c910     Psyeb10Enemy.obj
- 0002:0000693c       $SG96644                   0043c93c     Psyeb10Enemy.obj
- 0002:00006948       $SG96648                   0043c948     Psyeb10Enemy.obj
- 0002:00006958       $SG96650                   0043c958     Psyeb10Enemy.obj
- 0002:00006968       $SG96651                   0043c968     Psyeb10Enemy.obj
- 0002:0000696c       $SG96652                   0043c96c     Psyeb10Enemy.obj
- 0002:00006978       $SG96653                   0043c978     Psyeb10Enemy.obj
- 0002:00006984       $SG96654                   0043c984     Psyeb10Enemy.obj
- 0002:00006990       $SG96655                   0043c990     Psyeb10Enemy.obj
- 0002:000069a8       $SG96739                   0043c9a8     Psyeb10Enemy.obj
- 0002:000069bc       $SG96740                   0043c9bc     Psyeb10Enemy.obj
- 0002:000069d0       $SG114111                  0043c9d0     Psyeb10Enemy.obj
- 0002:000069e4       $SG114112                  0043c9e4     Psyeb10Enemy.obj
- 0002:000069e8       $SG114113                  0043c9e8     Psyeb10Enemy.obj
- 0002:00006a50       $SG114114                  0043ca50     Psyeb10Enemy.obj
- 0002:00006b14       $SG114115                  0043cb14     Psyeb10Enemy.obj
- 0002:00006b18       $SG114116                  0043cb18     Psyeb10Enemy.obj
- 0002:00006b40       $SG114284                  0043cb40     Psyeb10Enemy.obj
+ 0002:00006788       $SG96635                   0043c788     Psyeb10Enemy.obj
+ 0002:0000678c       $SG96636                   0043c78c     Psyeb10Enemy.obj
+ 0002:00006798       $SG96637                   0043c798     Psyeb10Enemy.obj
+ 0002:000067a4       $SG96638                   0043c7a4     Psyeb10Enemy.obj
+ 0002:000067bc       $SG96735                   0043c7bc     Psyeb10Enemy.obj
+ 0002:000067dc       $SG96742                   0043c7dc     Psyeb10Enemy.obj
+ 0002:00006810       $SG96747                   0043c810     Psyeb10Enemy.obj
+ 0002:00006850       $SG96749                   0043c850     Psyeb10Enemy.obj
+ 0002:00006860       $SG96750                   0043c860     Psyeb10Enemy.obj
+ 0002:00006874       $SG114036                  0043c874     Psyeb10Enemy.obj
+ 0002:00006888       $SG114037                  0043c888     Psyeb10Enemy.obj
+ 0002:00006890       $SG114038                  0043c890     Psyeb10Enemy.obj
+ 0002:000068f8       $SG114039                  0043c8f8     Psyeb10Enemy.obj
+ 0002:000069bc       $SG114040                  0043c9bc     Psyeb10Enemy.obj
+ 0002:000069c0       $SG114041                  0043c9c0     Psyeb10Enemy.obj
+ 0002:000069e8       $SG114209                  0043c9e8     Psyeb10Enemy.obj
+ 0002:00006a4c       $SG114624                  0043ca4c     Psyeb10Enemy.obj
+ 0002:00006a68       $SG114625                  0043ca68     Psyeb10Enemy.obj
+ 0002:00006a70       $SG114626                  0043ca70     Psyeb10Enemy.obj
+ 0002:00006ad8       $SG114627                  0043cad8     Psyeb10Enemy.obj
+ 0002:00006ba0       $SG114628                  0043cba0     Psyeb10Enemy.obj
+ 0002:00006ba4       $SG114629                  0043cba4     Psyeb10Enemy.obj
  0002:00006f60       $SG103939                  0043cf60     Psyeb10Engine.obj
  0002:00006f74       $SG103940                  0043cf74     Psyeb10Engine.obj
  0002:00006f78       $SG103941                  0043cf78     Psyeb10Engine.obj
@@ -4643,10 +4625,10 @@
  0002:0000e5f0       __sehtable$___scrt_is_nonwritable_in_current_image 004445f0     MSVCRTD:utility.obj
  0002:0000e630       __unwindtable$?findBestDirection@Psyeb10Enemy@@AAEHXZ 00444630     Psyeb10Enemy.obj
  0002:0000e638       __unwindtable$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 00444638     Psyeb10Enemy.obj
- 0002:0000e658       __ehfuncinfo$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 00444658     Psyeb10Enemy.obj
- 0002:0000e67c       __ehfuncinfo$?findBestDirection@Psyeb10Enemy@@AAEHXZ 0044467c     Psyeb10Enemy.obj
- 0002:0000e6a0       __ehfuncinfo$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z 004446a0     Psyeb10Enemy.obj
- 0002:0000e6c4       __unwindtable$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z 004446c4     Psyeb10Enemy.obj
+ 0002:0000e658       __unwindtable$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z 00444658     Psyeb10Enemy.obj
+ 0002:0000e678       __ehfuncinfo$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 00444678     Psyeb10Enemy.obj
+ 0002:0000e69c       __ehfuncinfo$?findBestDirection@Psyeb10Enemy@@AAEHXZ 0044469c     Psyeb10Enemy.obj
+ 0002:0000e6c0       __ehfuncinfo$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z 004446c0     Psyeb10Enemy.obj
  0003:00000000       ?firstClick@?1??handleEvent@BaseEngine@@QAE_NPATSDL_Event@@@Z@4_NA 00445000     BaseEngine.obj
  0003:00000004       ?nullMapping@@3VCroppedImagePixelMapping@@A 00445004     SimpleImage.obj
  0003:00000bf4       ?strategicCoolDown@?1??virtPostMoveLogic@Psyeb10Enemy@@UAEXXZ@4HA 00445bf4     Psyeb10Enemy.obj
