@@ -1,4 +1,4 @@
-#include "header.h"
+﻿#include "header.h"
 #include "Psyeb10Enemy.h"
 #include "Psyeb10Engine.h"
 #include "DisplayableObject.h"
@@ -41,49 +41,7 @@ void Psyeb10Enemy::virtDraw()
 }
 
 
-/*
-void Psyeb10Enemy::virtPostMoveLogic()
-{
-	// If next move is invalid
-	if (!(this->isValidMove(this->getXCentre() + 15 * speedX, this->getYCentre() + 15 * speedY))) {
-		// If moving up or down
-		if (speedX == 0) {
-			if (isValidMove(getXCentre() + 15, getYCentre())) {
-				speedX = 1;
-				speedY = 0;
-			}
-			else if (isValidMove(getXCentre() - 15, getYCentre())) {
-				speedX = -1;
-				speedY = 0;
-			}
-		}// If moving left to right
-		else {
-			if (isValidMove(getXCentre(), getYCentre() + 15)) {
-				speedX = 0;
-				speedY = 1;
-			}
-			else if (isValidMove(getXCentre(), getYCentre() - 15)) {
-				speedX = 0;
-				speedY = -1;
-			}
-		}
-	}
-}
 
-bool Psyeb10Enemy::isValidMove(int x, int y) {
-	if (engine->getTileManager()->isValidTilePosition(x, y)) {
-		//return true;
-		int mapX, mapY, tileVal;
-		mapX = engine->getTileManager()->getMapXForScreenX(x);
-		mapY = engine->getTileManager()->getMapYForScreenY(y);
-		tileVal = (engine->getTileManager()->getMapValue(mapX, mapY));
-		if (tileVal == 0) {
-			return true;
-		}
-	}
-	return false;
-}
-*/
 
 
 void Psyeb10Enemy::virtHandleDeath() 
@@ -97,31 +55,10 @@ void Psyeb10Enemy::virtHandleDeath()
 }
 
 
-/*
-void Psyeb10Enemy::changeDirection(int direction)
-{
-	switch (direction) {
-	case 0: // Up
-		speedX = 0;
-		speedY = -1;
-		break;
-	case 1: // Right
-		speedX = 1;
-		speedY = 0;
-		break;
-	case 2: // Down
-		speedX = 0;
-		speedY = 1;
-		break;
-	case 3: // Left
-		speedX = -1;
-		speedY = 0;
-		break;
-	}
-}
-*/
 void Psyeb10Enemy::virtPostMoveLogic()
 {
+    static int strategicCoolDown = 0; // cooldown counter so doesn't update every tile.
+
     // Get player position
     DisplayableObject* pPlayerObject = engine->getDisplayableObject(0); // Assuming player is the first object
     int playerX = pPlayerObject->getXCentre();
@@ -130,15 +67,27 @@ void Psyeb10Enemy::virtPostMoveLogic()
     // Look ahead in current direction
     bool canContinue = isValidMove(getXCentre() + 5 * speedX, getYCentre() + 5 * speedY);
 
-    // If can continue in current direction, do some strategic thinking
-    if (canContinue) {
-        // Check if we should change direction based on strategy
-        decideStrategicDirection(playerX, playerY);
+    // Look ahead further
+    bool twoStepsValid = isValidMove(getXCentre() + 10 * speedX, getYCentre() + 10 * speedY);
+    bool threeStepsValid = isValidMove(getXCentre() + 15 * speedX, getYCentre() + 15 * speedY);
+
+    
+
+    // If can continue in current direction for 3 steps, do some strategic thinking
+    if (canContinue && twoStepsValid && threeStepsValid) {
+        if (strategicCoolDown <= 0) {
+            // Check if we should change direction based on strategy
+            decideStrategicDirection(playerX, playerY);
+            strategicCoolDown = 3; // Reset cooldown
+		}
+		else {
+			strategicCoolDown--;
+            }
     }
     else {
         // Need to turn - find best direction using floodFill
         int bestDirection = findBestDirection();
-
+		std::cout << "changind direction due to invalid moves: " << std::endl;
         // Apply the direction change
         changeDirection(bestDirection);
     }
@@ -147,8 +96,9 @@ void Psyeb10Enemy::virtPostMoveLogic()
 // Strategic decision making - when to change direction even if current path is valid
 void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
 {
-    // Random chance to be unpredictable (5%)
-    if (rand() % 100 < 5) {
+    // Random chance to be unpredictable (0.5%)
+    if (rand() % 1000 < 5) {
+		std::cout << "Random direction change" << std::endl;
         int newDirection = rand() % 4;
         // Only change if the new direction is valid
         int newX = getXCentre() + (newDirection == 1 ? 5 : (newDirection == 3 ? -5 : 0));
@@ -170,27 +120,19 @@ void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
     if (speedX == 0 && speedY == 1) currentDirection = 2;  // Down
     if (speedX == -1 && speedY == 0) currentDirection = 3; // Left
 
-    // Look ahead further
-    bool twoStepsValid = isValidMove(getXCentre() + 10 * speedX, getYCentre() + 10 * speedY);
-    bool threeStepsValid = isValidMove(getXCentre() + 15 * speedX, getYCentre() + 15 * speedY);
-
-    // If we're heading for a dead end, try to turn early
-    if (!twoStepsValid || !threeStepsValid) {
-        int bestDirection = findBestDirection();
-        changeDirection(bestDirection);
-        return;
-    }
-
+  
     // Check if current path leads to a small area compared to alternatives
     int currentMapX = engine->getTileManager()->getMapXForScreenX(getXCentre() + 5 * speedX);
     int currentMapY = engine->getTileManager()->getMapYForScreenY(getYCentre() + 5 * speedY);
-    int currentSpaceSize = floodFill(currentMapX, currentMapY, 2000); // Increased max tiles due to smaller tile size
+    int currentSpaceSize = floodFill(currentMapX, currentMapY,speedX, speedY, 10,  2000); // Increased max tiles due to smaller tile size
 
     // Check if there's a significantly better direction
     std::vector<std::pair<int, int>> directions = {
         {0, -1}, {1, 0}, {0, 1}, {-1, 0}
     };
 
+    int bestMove = currentDirection;
+    int bestSpaceSize = currentSpaceSize;
     for (int i = 0; i < 4; i++) {
         // Skip current direction
         if (i == currentDirection) continue;
@@ -201,29 +143,39 @@ void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
         if (isValidMove(testX, testY)) {
             int testMapX = engine->getTileManager()->getMapXForScreenX(testX);
             int testMapY = engine->getTileManager()->getMapYForScreenY(testY);
-            int testSpaceSize = floodFill(testMapX, testMapY, 2000);
+            int testSpaceSize = floodFill(testMapX, testMapY,directions[i].first, directions[i].second, 10,  2000);
 
-            // If this direction has significantly more space (30% more), consider changing
-            if (testSpaceSize > currentSpaceSize * 1.3) {
-                changeDirection(i);
-                return;
+            // Saves the best direction
+            if (testSpaceSize > bestSpaceSize) {
+				bestMove = i;   
+                bestSpaceSize = testSpaceSize;
             }
         }
     }
 
-    // Try to intercept or cut off player (25% chance if player is not too far)
-    if (rand() % 100 < 25 && abs(distX) < 200 && abs(distY) < 200) {
+    // If this direction has significantly more space (30% more),
+    if (bestSpaceSize > currentSpaceSize * 1.3) {
+        // Change direction to the best move
+        changeDirection(bestMove);
+    }
+
+
+
+    // Try to intercept or cut off player (10% chance if player is not too far)
+    if (rand() % 100 < 10 && abs(distX) < 200 && abs(distY) < 200) {
         int interceptDirection = calculateInterceptDirection(playerX, playerY);
         if (interceptDirection != -1 && interceptDirection != currentDirection) {
             int newX = getXCentre() + (interceptDirection == 1 ? 5 : (interceptDirection == 3 ? -5 : 0));
             int newY = getYCentre() + (interceptDirection == 2 ? 5 : (interceptDirection == 0 ? -5 : 0));
             if (isValidMove(newX, newY)) {
+				std::cout << "Changing direction to intercept player" << std::endl;
                 changeDirection(interceptDirection);
                 return;
             }
         }
     }
 
+    /*
     // Sometimes try to move toward player for pursuit (20% chance if player is far)
     if (rand() % 100 < 20 && (abs(distX) > 100 || abs(distY) > 100)) {
         // Decide whether to prioritize X or Y movement toward player
@@ -249,7 +201,9 @@ void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
                 speedY = -1;
             }
         }
+    
     }
+*/
 }
 
 // Calculate direction to intercept player
@@ -307,7 +261,7 @@ int Psyeb10Enemy::findBestDirection()
             int mapY = engine->getTileManager()->getMapYForScreenY(nextY);
 
             // Use floodFill to count available space
-            int availableSpace = floodFill(mapX, mapY, 2000);
+            int availableSpace = floodFill(mapX, mapY,directions[i].first, directions[i].second, 3, 500);
 
             // Apply additional scoring factors:
 
@@ -340,6 +294,7 @@ int Psyeb10Enemy::findBestDirection()
 }
 
 // Adjust space score based on wall proximity
+//TODO this does not acc check the wall
 int Psyeb10Enemy::adjustScoreForWallProximity(int baseScore, int x, int y, int dirX, int dirY)
 {
     int wallPenalty = 0;
@@ -380,22 +335,24 @@ int Psyeb10Enemy::adjustScoreForPlayerProximity(int baseScore, int x, int y, int
     return baseScore;
 }
 
-// Improved floodFill implementation for 120x120 grid with direct tile coordinates
-int Psyeb10Enemy::floodFill(int startMapX, int startMapY, int maxTiles) {
+int Psyeb10Enemy::floodFill(int startMapX, int startMapY, int dirX, int dirY, int maxScope, int maxTiles) {
+	//int maxScope = 7; //max scope for tunnel vision
+    
     std::queue<std::pair<int, int>> q;
     std::set<std::pair<int, int>> visited;
 
-    // Ensure coordinates are within the valid range
-    if (startMapX < 0 || startMapX >= 120 || startMapY < 0 || startMapY >= 120) {
-        return 0;
-    }
+    int firstX = startMapX + dirX;
+    int firstY = startMapY + dirY;
 
-    q.push(std::make_pair(startMapX, startMapY));
-    visited.insert(std::make_pair(startMapX, startMapY));
+    // Make sure the first tile in the direction is valid
+    if (firstX < 0 || firstX >= 120 || firstY < 0 || firstY >= 120) return 0;
+    if (engine->getTileManager()->getMapValue(firstX, firstY) != 0) return 0;
+
+    q.push({ firstX, firstY });
+    visited.insert({ firstX, firstY });
 
     int count = 0;
 
-    // Directions: right, left, down, up
     std::vector<std::pair<int, int>> directions = {
         {1, 0}, {-1, 0}, {0, 1}, {0, -1}
     };
@@ -405,31 +362,39 @@ int Psyeb10Enemy::floodFill(int startMapX, int startMapY, int maxTiles) {
         q.pop();
         count++;
 
-        for (const auto& dir : directions) {
-            int nx = current.first + dir.first;
-            int ny = current.second + dir.second;
+        for (auto& d : directions) {
+            int nx = current.first + d.first;
+            int ny = current.second + d.second;
 
-            // Check boundaries directly
-            if (nx < 0 || nx >= 120 || ny < 0 || ny >= 120) {
-                continue;
-            }
+            std::pair<int, int> next = { nx, ny };
 
-            // Create a pair for the new coordinates
-            std::pair<int, int> nextPos = std::make_pair(nx, ny);
+            // Skip if out of bounds
+            if (nx < 0 || nx >= 120 || ny < 0 || ny >= 120) continue;
+            if (visited.find(next) != visited.end()) continue;
+            visited.insert(next);
+            if (engine->getTileManager()->getMapValue(nx, ny) != 0) continue;
 
-            // Check if we've already visited this tile
-            if (visited.find(nextPos) == visited.end()) {
-                // Check if the tile is valid and free (value = 0)
-                if (engine->getTileManager()->getMapValue(nx, ny) == 0) {
-                    q.push(nextPos);
-                    visited.insert(nextPos);
-                }
-            }
+            // Constrain movement: do not go behind the starting tile
+            // For dirX (horizontal movement)
+            if (dirX > 0 && nx < startMapX) continue;
+            if (dirX < 0 && nx > startMapX) continue;
+
+            // For dirY (vertical movement)
+            if (dirY > 0 && ny < startMapY) continue;
+            if (dirY < 0 && ny > startMapY) continue;
+
+            // checks scope to ensure it chooses best path
+            if (dirX != 0 && std::abs(ny - startMapY) > maxScope) continue;
+            if (dirY != 0 && std::abs(nx - startMapX) > maxScope) continue;
+
+
+            q.push(next);
         }
     }
 
     return count;
 }
+
 
 // Helper to change direction based on a direction code
 void Psyeb10Enemy::changeDirection(int direction)
