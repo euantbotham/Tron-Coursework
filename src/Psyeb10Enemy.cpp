@@ -95,6 +95,8 @@ void Psyeb10Enemy::virtPostMoveLogic()
 
 void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
 {
+  
+
     // Current direction
     int currentDirection = -1;
     if (speedX == 0 && speedY == -1) currentDirection = 0; // Up
@@ -102,128 +104,113 @@ void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
     if (speedX == 0 && speedY == 1) currentDirection = 2;  // Down
     if (speedX == -1 && speedY == 0) currentDirection = 3; // Left
 
-    // Check if current path leads to a small area compared to alternatives
+    // Check current path space
     int currentMapX = engine->getTileManager()->getMapXForScreenX(getXCentre() + 5 * speedX);
     int currentMapY = engine->getTileManager()->getMapYForScreenY(getYCentre() + 5 * speedY);
     int currentSpaceSize = floodFill(currentMapX, currentMapY, speedX, speedY, 15, 2000);
 
-    // Check if there's a significantly better direction
+    // Evaluate all potential directions
     std::vector<std::pair<int, int>> directions = {
         {0, -1}, {1, 0}, {0, 1}, {-1, 0}
     };
 
-    int bestMove = currentDirection;
-    int bestSpaceSize = currentSpaceSize;
-    bool foundBetterDirection = false;
-
-    // Store all direction scores for logging
+    // Store all direction scores and validity
     std::vector<int> directionScores(4, 0);
+    std::vector<bool> validDirection(4, false);
     directionScores[currentDirection] = currentSpaceSize;
+    validDirection[currentDirection] = true;
 
+    // Player distance metrics
+    int distX = playerX - getXCentre();
+    int distY = playerY - getYCentre();
+    double distToPlayer = sqrt(distX * distX + distY * distY);
+    bool playerInRange = (distToPlayer < 160 && distToPlayer > 70); // Narrower chase range
+
+    // Determine chase direction preferences
+    int horizontalChaseDir = (distX > 0) ? 1 : 3; // Right or Left
+    int verticalChaseDir = (distY > 0) ? 2 : 0;   // Down or Up
+
+    // Calculate desirability score for all directions
     for (int i = 0; i < 4; i++) {
-        // Skip current direction and reverse direction (already evaluated)
-        if (i == currentDirection || i == (currentDirection + 2) % 4) continue;
+        // Skip reverse direction (prevents immediate backward movement)
+        if (i == (currentDirection + 2) % 4) continue;
 
+        // Check if this move is valid
         int testX = getXCentre() + 5 * directions[i].first;
         int testY = getYCentre() + 5 * directions[i].second;
 
         if (isValidMove(testX, testY)) {
+            validDirection[i] = true;
             int testMapX = engine->getTileManager()->getMapXForScreenX(testX);
             int testMapY = engine->getTileManager()->getMapYForScreenY(testY);
             int testSpaceSize = floodFill(testMapX, testMapY, directions[i].first, directions[i].second, 15, 2000);
-
             directionScores[i] = testSpaceSize;
-
-            // Save the best direction
-            if (testSpaceSize > bestSpaceSize * 1.3) { // Only 30% better is enough to change
-                bestMove = i;
-                bestSpaceSize = testSpaceSize;
-                foundBetterDirection = true;
-            }
         }
     }
 
-    // If we found a significantly better direction, change to it
-    if (foundBetterDirection) {
-        std::cout << "Strategic direction change: Dir " << currentDirection
-            << " (score " << currentSpaceSize << ") -> Dir " << bestMove
-            << " (score " << bestSpaceSize << ")" << std::endl;
+    // Create composite scores that balance space and chase factors
+    std::vector<double> compositeScores(4, 0.0);
+    for (int i = 0; i < 4; i++) {
+        if (!validDirection[i]) continue;
 
-        changeDirection(bestMove);
-        return; // Exit early - prioritize open space over player chasing
-    }
+        // Base score is the space score
+        compositeScores[i] = directionScores[i];
 
-    // Only consider player chasing if current path has plenty of space
-    // This prevents suicide moves
-    if (currentSpaceSize > 200) { // Must have substantial space ahead to consider chasing
-        // Distance to player
-        int distX = playerX - getXCentre();
-        int distY = playerY - getYCentre();
-        double distToPlayer = sqrt(distX * distX + distY * distY);
-
-        // Player must be within chase range but not too close
-        if (distToPlayer < 180 && distToPlayer > 50) {
-            // Determine which direction would move closer to player
-            int horizontalDir = (distX > 0) ? 1 : 3; // Right or Left
-            int verticalDir = (distY > 0) ? 2 : 0;   // Down or Up
-
-            // Choose the best direction based on available space
-            int chaseDirs[2] = { -1, -1 };
-
-            // Check which axis (horizontal or vertical) has the player further away
-            if (abs(distX) > abs(distY)) {
-                chaseDirs[0] = horizontalDir; // Primary chase direction
-                chaseDirs[1] = verticalDir;   // Secondary chase direction
-            }
-            else {
-                chaseDirs[0] = verticalDir;   // Primary chase direction
-                chaseDirs[1] = horizontalDir; // Secondary chase direction
-            }
-
-            // Try primary chase direction first, then secondary
-            for (int i = 0; i < 2; i++) {
-                int chaseDir = chaseDirs[i];
-
-                // Skip if this is current direction or reverse of current
-                if (chaseDir == currentDirection || chaseDir == (currentDirection + 2) % 4) {
-                    continue;
+        // Only add chase bonus if this direction has good space
+        if (playerInRange && directionScores[i] >= currentSpaceSize * 0.9) {
+            // Add chase bonus - only 30% of the time to make behavior less predictable
+            if (rand() % 100 < 30) {
+                // Primary chase direction bonus
+                if ((abs(distX) > abs(distY) && (i == horizontalChaseDir)) ||
+                    (abs(distX) <= abs(distY) && (i == verticalChaseDir))) {
+                    compositeScores[i] *= 1.15; // 15% bonus, much more conservative
                 }
-
-                // Verify this direction has been evaluated and has good space
-                if (directionScores[chaseDir] > 0) {
-                    // CRITICAL: Only chase if this direction has at least 75% of the space 
-                    // of the current direction to avoid boxing in
-                    if (directionScores[chaseDir] >= currentSpaceSize * 0.85) {
-                        std::cout << "Safe player chase: Dir " << currentDirection
-                            << " -> Dir " << chaseDir
-                            << " (space: " << directionScores[chaseDir]
-                            << " vs current: " << currentSpaceSize << ")" << std::endl;
-
-                            changeDirection(chaseDir);
-                            return;
-                    }
+                // Secondary chase direction smaller bonus
+                else if ((abs(distX) > abs(distY) && (i == verticalChaseDir)) ||
+                    (abs(distX) <= abs(distY) && (i == horizontalChaseDir))) {
+                    compositeScores[i] *= 1.05; // 5% bonus
                 }
             }
         }
+
+        // Random movement bonus (3% chance) for unpredictability
+        if (i != currentDirection && rand() % 100 < 3) {
+            compositeScores[i] *= 1.1; // 10% random bonus
+        }
+
+        // Prefer staying in current direction slightly (momentum)
+        if (i == currentDirection) {
+            compositeScores[i] *= 1.05; // 5% same direction bonus
+        }
     }
 
-    // Random direction change occasionally (5% chance) if we have good space ahead
-    // This adds unpredictability and helps avoid getting stuck in patterns
-    if (currentSpaceSize > 300 && (rand() % 100 < 5)) {
-        // Pick a random direction that's not current or reverse
-        std::vector<int> possibleDirs;
-        for (int i = 0; i < 4; i++) {
-            if (i != currentDirection && i != (currentDirection + 2) % 4 &&
-                directionScores[i] >= currentSpaceSize * 0.6) { // Must have decent space
-                possibleDirs.push_back(i);
-            }
+    // Find best direction based on composite score
+    int bestDirection = currentDirection;
+    double bestScore = compositeScores[currentDirection];
+
+    for (int i = 0; i < 4; i++) {
+        if (validDirection[i] && compositeScores[i] > bestScore) {
+            bestDirection = i;
+            bestScore = compositeScores[i];
+        }
+    }
+
+    // Only change direction if we found a better one
+    if (bestDirection != currentDirection) {
+        // Log with reason
+        std::string reason = "Strategic";
+        if (playerInRange && (bestDirection == horizontalChaseDir || bestDirection == verticalChaseDir)) {
+            reason = "Player chase";
+        }
+        else if (rand() % 100 < 3) {
+            reason = "Random movement";
         }
 
-        if (!possibleDirs.empty()) {
-            int randomDir = possibleDirs[rand() % possibleDirs.size()];
-            std::cout << "Random direction change for unpredictability: " << randomDir << std::endl;
-            changeDirection(randomDir);
-        }
+        std::cout << reason << " direction change: Dir " << currentDirection
+            << " (score " << directionScores[currentDirection] << ") -> Dir " << bestDirection
+            << " (score " << directionScores[bestDirection] << ")" << std::endl;
+
+        changeDirection(bestDirection);
     }
 }
 
@@ -324,7 +311,7 @@ int Psyeb10Enemy::findBestDirection()
     }
 
     // Log the chosen direction and available space for debugging
-    std::cout << "Chose direction " << bestDirection << " with space score " << maxSpace << std::endl;
+    std::cout << "BAD ALGO DID IT " << bestDirection << " with space score " << maxSpace << std::endl;
 
     return bestDirection;
 }
