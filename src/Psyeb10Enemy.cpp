@@ -93,27 +93,9 @@ void Psyeb10Enemy::virtPostMoveLogic()
     }
 }
 
-// Strategic decision making - when to change direction even if current path is valid
+
 void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
 {
-    // Random chance to be unpredictable (0.5%)
-    /*
-    if (rand() % 1000 < 5) {
-		std::cout << "Random direction change" << std::endl;
-        int newDirection = rand() % 4;
-        // Only change if the new direction is valid
-        int newX = getXCentre() + (newDirection == 1 ? 5 : (newDirection == 3 ? -5 : 0));
-        int newY = getYCentre() + (newDirection == 2 ? 5 : (newDirection == 0 ? -5 : 0));
-        if (isValidMove(newX, newY)) {
-            changeDirection(newDirection);
-            return;
-        }
-    }
-    */
-    // Distance to player
-    int distX = playerX - getXCentre();
-    int distY = playerY - getYCentre();
-
     // Current direction
     int currentDirection = -1;
     if (speedX == 0 && speedY == -1) currentDirection = 0; // Up
@@ -121,11 +103,10 @@ void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
     if (speedX == 0 && speedY == 1) currentDirection = 2;  // Down
     if (speedX == -1 && speedY == 0) currentDirection = 3; // Left
 
-  
     // Check if current path leads to a small area compared to alternatives
     int currentMapX = engine->getTileManager()->getMapXForScreenX(getXCentre() + 5 * speedX);
     int currentMapY = engine->getTileManager()->getMapYForScreenY(getYCentre() + 5 * speedY);
-    int currentSpaceSize = floodFill(currentMapX, currentMapY,speedX, speedY, 10,  1000); // Increased max tiles due to smaller tile size
+    int currentSpaceSize = floodFill(currentMapX, currentMapY, speedX, speedY, 15, 2000); // Increased parameters
 
     // Check if there's a significantly better direction
     std::vector<std::pair<int, int>> directions = {
@@ -134,9 +115,15 @@ void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
 
     int bestMove = currentDirection;
     int bestSpaceSize = currentSpaceSize;
+    bool foundBetterDirection = false;
+
+    // Store all direction scores for logging
+    std::vector<int> directionScores(4, 0);
+    directionScores[currentDirection] = currentSpaceSize;
+
     for (int i = 0; i < 4; i++) {
-        // Skip current direction
-        if (i == currentDirection) continue;
+        // Skip current direction and reverse direction (already evaluated)
+        if (i == currentDirection || i == (currentDirection + 2) % 4) continue;
 
         int testX = getXCentre() + 5 * directions[i].first;
         int testY = getYCentre() + 5 * directions[i].second;
@@ -144,69 +131,59 @@ void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
         if (isValidMove(testX, testY)) {
             int testMapX = engine->getTileManager()->getMapXForScreenX(testX);
             int testMapY = engine->getTileManager()->getMapYForScreenY(testY);
-            int testSpaceSize = floodFill(testMapX, testMapY,directions[i].first, directions[i].second, 10,  1000);
+            int testSpaceSize = floodFill(testMapX, testMapY, directions[i].first, directions[i].second, 15, 2000);
 
-            // Saves the best direction
-            if (testSpaceSize > bestSpaceSize) {
-				bestMove = i;   
+            directionScores[i] = testSpaceSize;
+
+            // Save the best direction
+            if (testSpaceSize > bestSpaceSize * 1.3) { // Only 30% better is enough to change
+                bestMove = i;
                 bestSpaceSize = testSpaceSize;
+                foundBetterDirection = true;
             }
         }
     }
 
-    // If this direction has significantly more space (100% more),
-    if (bestSpaceSize > currentSpaceSize * 2) {
-        // Change direction to the best move
-        std::cout << "changed direction due to flood fill" << std::endl;
+    // If we found a significantly better direction, change to it
+    if (foundBetterDirection) {
+        std::cout << "Strategic direction change: Dir " << currentDirection
+            << " (score " << currentSpaceSize << ") -> Dir " << bestMove
+            << " (score " << bestSpaceSize << ")" << std::endl;
+
         changeDirection(bestMove);
-        return;
     }
+    else {
+        // Check if we should consider the player's position
+        // Distance to player
+        int distX = playerX - getXCentre();
+        int distY = playerY - getYCentre();
+        double distToPlayer = sqrt(distX * distX + distY * distY);
 
+        // If player is within chase range and we have open space ahead
+        if (distToPlayer < 200 && currentSpaceSize > 100) {
+            // Consider turning toward player
+            int chaseDir = -1;
 
-    /*
-    // Try to intercept or cut off player (10% chance if player is not too far)
-    if (rand() % 100 < 10 && abs(distX) < 200 && abs(distY) < 200) {
-        int interceptDirection = calculateInterceptDirection(playerX, playerY);
-        if (interceptDirection != -1 && interceptDirection != currentDirection) {
-            int newX = getXCentre() + (interceptDirection == 1 ? 5 : (interceptDirection == 3 ? -5 : 0));
-            int newY = getYCentre() + (interceptDirection == 2 ? 5 : (interceptDirection == 0 ? -5 : 0));
-            if (isValidMove(newX, newY)) {
-				std::cout << "Changing direction to intercept player" << std::endl;
-                changeDirection(interceptDirection);
-                return;
+            // Determine which direction would move closer to player
+            if (abs(distX) > abs(distY)) {
+                // Prioritize horizontal movement
+                chaseDir = (distX > 0) ? 1 : 3; // Right or Left
+            }
+            else {
+                // Prioritize vertical movement
+                chaseDir = (distY > 0) ? 2 : 0; // Down or Up
+            }
+
+            // Only change if this direction is valid and not current direction
+            if (chaseDir != currentDirection &&
+                chaseDir != (currentDirection + 2) % 4 && // Not reverse direction
+                directionScores[chaseDir] > 0) { // We already checked this direction
+
+                std::cout << "Chasing player: changing to direction " << chaseDir << std::endl;
+                changeDirection(chaseDir);
             }
         }
     }
-    */
-    /*
-    // Sometimes try to move toward player for pursuit (20% chance if player is far)
-    if (rand() % 100 < 20 && (abs(distX) > 100 || abs(distY) > 100)) {
-        // Decide whether to prioritize X or Y movement toward player
-        if (abs(distX) > abs(distY)) {
-            // Move horizontally toward player
-            if (distX > 0 && isValidMove(getXCentre() + 5, getYCentre())) {
-                speedX = 1;
-                speedY = 0;
-            }
-            else if (distX < 0 && isValidMove(getXCentre() - 5, getYCentre())) {
-                speedX = -1;
-                speedY = 0;
-            }
-        }
-        else {
-            // Move vertically toward player
-            if (distY > 0 && isValidMove(getXCentre(), getYCentre() + 5)) {
-                speedX = 0;
-                speedY = 1;
-            }
-            else if (distY < 0 && isValidMove(getXCentre(), getYCentre() - 5)) {
-                speedX = 0;
-                speedY = -1;
-            }
-        }
-    
-    }
-*/
 }
 
 // Calculate direction to intercept player
@@ -242,7 +219,6 @@ int Psyeb10Enemy::calculateInterceptDirection(int playerX, int playerY)
     return -1; // No good intercept direction
 }
 
-// Find the best direction to turn using floodFill
 int Psyeb10Enemy::findBestDirection()
 {
     // Each direction: 0 = up, 1 = right, 2 = down, 3 = left
@@ -252,6 +228,13 @@ int Psyeb10Enemy::findBestDirection()
 
     int bestDirection = -1;
     int maxSpace = -1;
+
+    // Get current direction
+    int currentDirection = -1;
+    if (speedX == 0 && speedY == -1) currentDirection = 0; // Up
+    if (speedX == 1 && speedY == 0) currentDirection = 1;  // Right
+    if (speedX == 0 && speedY == 1) currentDirection = 2;  // Down
+    if (speedX == -1 && speedY == 0) currentDirection = 3; // Left
 
     // For each direction, use floodFill to determine available space
     for (int i = 0; i < 4; i++) {
@@ -263,20 +246,26 @@ int Psyeb10Enemy::findBestDirection()
             int mapX = engine->getTileManager()->getMapXForScreenX(nextX);
             int mapY = engine->getTileManager()->getMapYForScreenY(nextY);
 
-            // Use floodFill to count available space
-            int availableSpace = floodFill(mapX, mapY,directions[i].first, directions[i].second, 5, 1000);
+            // Increase maxScope parameter to allow wider exploration
+            int availableSpace = floodFill(mapX, mapY, directions[i].first, directions[i].second, 10, 1500);
 
-            // Apply additional scoring factors:
+            // Bonus for continuing in same direction (avoids erratic movement)
+            if (i == currentDirection) {
+                availableSpace = availableSpace * 1.1; // 10% bonus for current direction
+            }
 
-            // 1. Favor directions leading away from walls
-            //availableSpace = adjustScoreForWallProximity(availableSpace, nextX, nextY, directions[i].first, directions[i].second);
+            // Penalty for complete direction reversal (avoids ping-pong movement)
+            if ((i + 2) % 4 == currentDirection) {
+                availableSpace = availableSpace * 0.8; // 20% penalty for reversing
+            }
 
-            // 2. Consider directions that might lead toward player (with low weight)
+            // Consider directions that might lead toward player (with low weight)
             DisplayableObject* pPlayerObject = engine->getDisplayableObject(0);
             int playerX = pPlayerObject->getXCentre();
             int playerY = pPlayerObject->getYCentre();
             availableSpace = adjustScoreForPlayerProximity(availableSpace, nextX, nextY, playerX, playerY);
 
+            // Track the best option
             if (availableSpace > maxSpace) {
                 maxSpace = availableSpace;
                 bestDirection = i;
@@ -292,6 +281,9 @@ int Psyeb10Enemy::findBestDirection()
         if (speedX == -1 && speedY == 0) return 3;
         return 2; // Default to down
     }
+
+    // Log the chosen direction and available space for debugging
+    std::cout << "Chose direction " << bestDirection << " with space score " << maxSpace << std::endl;
 
     return bestDirection;
 }
@@ -339,10 +331,10 @@ int Psyeb10Enemy::adjustScoreForPlayerProximity(int baseScore, int x, int y, int
 }
 
 int Psyeb10Enemy::floodFill(int startMapX, int startMapY, int dirX, int dirY, int maxScope, int maxTiles) {
-    
     std::queue<std::pair<int, int>> q;
     std::set<std::pair<int, int>> visited;
 
+    // Check the first tile in the intended direction
     int firstX = startMapX + dirX;
     int firstY = startMapY + dirY;
 
@@ -354,6 +346,10 @@ int Psyeb10Enemy::floodFill(int startMapX, int startMapY, int dirX, int dirY, in
     visited.insert({ firstX, firstY });
 
     int count = 0;
+    int maxWidth = 0;  // Track the maximum width of the open space
+    int maxHeight = 0; // Track the maximum height of the open space
+    int minX = firstX, maxX = firstX;
+    int minY = firstY, maxY = firstY;
 
     std::vector<std::pair<int, int>> directions = {
         {1, 0}, {-1, 0}, {0, 1}, {0, -1}
@@ -364,37 +360,71 @@ int Psyeb10Enemy::floodFill(int startMapX, int startMapY, int dirX, int dirY, in
         q.pop();
         count++;
 
+        // Update the boundaries of discovered open space
+        minX = std::min(minX, current.first);
+        maxX = std::max(maxX, current.first);
+        minY = std::min(minY, current.second);
+        maxY = std::max(maxY, current.second);
+
         for (auto& d : directions) {
             int nx = current.first + d.first;
             int ny = current.second + d.second;
 
-            std::pair<int, int> next = { nx, ny };
-
-            // Skip if out of bounds
+            // Skip if out of bounds or already visited
             if (nx < 0 || nx >= 120 || ny < 0 || ny >= 120) continue;
-            if (visited.find(next) != visited.end()) continue;
-            visited.insert(next);
+            if (visited.find({ nx, ny }) != visited.end()) continue;
+
+            // Skip if tile is not empty
             if (engine->getTileManager()->getMapValue(nx, ny) != 0) continue;
 
-            // Constrain movement: do not go behind the starting tile
-            // For dirX (horizontal movement)
-            if (dirX > 0 && nx < startMapX) continue;
-            if (dirX < 0 && nx > startMapX) continue;
+            // Mark as visited
+            visited.insert({ nx, ny });
 
-            // For dirY (vertical movement)
-            if (dirY > 0 && ny < startMapY) continue;
-            if (dirY < 0 && ny > startMapY) continue;
+            // Use a more relaxed constraint to allow exploration of more open space
+            // Only restrict going backwards in primary direction of movement
+            if (dirX > 0 && nx < startMapX - maxScope) continue;
+            if (dirX < 0 && nx > startMapX + maxScope) continue;
+            if (dirY > 0 && ny < startMapY - maxScope) continue;
+            if (dirY < 0 && ny > startMapY + maxScope) continue;
 
-            // checks scope to ensure it chooses best path
-            if (dirX != 0 && (std::abs(ny - startMapY) > maxScope || std::abs(ny - startMapY) >= std::abs(nx - startMapX) * 3)) continue;
-            if (dirY != 0 && (std::abs(nx - startMapX) > maxScope || std::abs(nx - startMapX) >= std::abs(ny - startMapY) * 3)) continue;
+            // Allow wider exploration perpendicular to movement direction
+            // Increased scope multiplier to explore more widely
+            int perpendicularScope = maxScope * 4;
+            if (dirX != 0 && std::abs(ny - startMapY) > perpendicularScope) continue;
+            if (dirY != 0 && std::abs(nx - startMapX) > perpendicularScope) continue;
 
-
-            q.push(next);
+            q.push({ nx, ny });
         }
     }
 
-    return count;
+    // Calculate dimensions of the open space
+    int width = maxX - minX + 1;
+    int height = maxY - minY + 1;
+    int openArea = width * height;
+
+    // Calculate a weighted score that favors both:
+    // 1. Total tiles discovered (count)
+    // 2. The dimensions of the open area (to prefer wide open spaces)
+    int weightedScore = count;
+
+    // Bonus for large open areas (avoid narrow corridors)
+    if (width > 5 && height > 5) {
+        weightedScore += (width * height) / 20; // Add bonus based on area size
+    }
+
+    // Penalty for very narrow paths
+    if (width <= 2 || height <= 2) {
+        weightedScore = weightedScore / 2; // Reduce score for narrow paths
+    }
+
+    // If we found many tiles but in a very constrained space, this might be a trap
+    float density = float(count) / (width * height);
+    if (density > 0.8 && openArea < 100) {
+        // This might be a small enclosed area - penalize
+        weightedScore -= 20;
+    }
+
+    return std::max(1, weightedScore); // Ensure we return at least 1 if path is valid
 }
 
 
