@@ -1,6 +1,6 @@
  CourseworkBase2020
 
- Timestamp is 67ffa3f9 (Wed Apr 16 13:35:05 2025)
+ Timestamp is 67ffb02a (Wed Apr 16 14:27:06 2025)
 
  Preferred load address is 00400000
 
@@ -1598,12 +1598,12 @@
  0001:00026ec0       ?virtHandleDeath@Psyeb10Enemy@@UAEXXZ 00427ec0 f   Psyeb10Enemy.obj
  0001:00026ef0       ?virtPostMoveLogic@Psyeb10Enemy@@UAEXXZ 00427ef0 f   Psyeb10Enemy.obj
  0001:00027040       ?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z 00428040 f   Psyeb10Enemy.obj
- 0001:00027620       ?findBestDirection@Psyeb10Enemy@@AAEHXZ 00428620 f   Psyeb10Enemy.obj
- 0001:000279e0       ?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 004289e0 f   Psyeb10Enemy.obj
- 0001:00027ea0       ?changeDirection@Psyeb10Enemy@@AAEXH@Z 00428ea0 f   Psyeb10Enemy.obj
- 0001:00027f30       ?calculateInterceptDirection@Psyeb10Enemy@@AAEHHH@Z 00428f30 f   Psyeb10Enemy.obj
- 0001:00028040       ?adjustScoreForPlayerProximity@Psyeb10Enemy@@AAEHHHHHH@Z 00429040 f   Psyeb10Enemy.obj
- 0001:000280a0       ?adjustScoreForWallProximity@Psyeb10Enemy@@AAEHHHHHH@Z 004290a0 f   Psyeb10Enemy.obj
+ 0001:000273d0       ?findBestDirection@Psyeb10Enemy@@AAEHXZ 004283d0 f   Psyeb10Enemy.obj
+ 0001:00027750       ?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 00428750 f   Psyeb10Enemy.obj
+ 0001:00027c60       ?changeDirection@Psyeb10Enemy@@AAEXH@Z 00428c60 f   Psyeb10Enemy.obj
+ 0001:00027cf0       ?calculateInterceptDirection@Psyeb10Enemy@@AAEHHH@Z 00428cf0 f   Psyeb10Enemy.obj
+ 0001:00027e00       ?adjustScoreForPlayerProximity@Psyeb10Enemy@@AAEHHHHHH@Z 00428e00 f   Psyeb10Enemy.obj
+ 0001:00027e60       ?adjustScoreForWallProximity@Psyeb10Enemy@@AAEHHHHHH@Z 00428e60 f   Psyeb10Enemy.obj
  0002:00000000       ___xc_a                    0042d000     MSVCRTD:initializers.obj
  0002:00000208       ___xc_z                    0042d208     MSVCRTD:initializers.obj
  0002:0000030c       ___xi_a                    0042d30c     MSVCRTD:initializers.obj
@@ -1628,7 +1628,6 @@
  0002:0000111c       ??_C@_0BO@PEOHNLIM@front?$CI?$CJ?5called?5on?5empty?5deque@ 0042e11c     Psyeb10Enemy.obj
  0002:00001144       ??_C@_11LOCGONAA@@         0042e144     DraggingDemo.obj
  0002:00001148       ??_C@_1CG@JNLFBNGN@?$AA?$CC?$AAi?$AAn?$AAv?$AAa?$AAl?$AAi?$AAd?$AA?5?$AAa?$AAr?$AAg?$AAu?$AAm?$AAe@ 0042e148     DraggingDemo.obj
- 0002:00001170       __real@3ff4cccccccccccd    0042e170     Psyeb10Enemy.obj
  0002:00001178       ??_C@_0BJ@LFDBABJJ@ITERATOR?5LIST?5CORRUPTED?$CB@ 0042e178     DraggingDemo.obj
  0002:00001198       ??_C@_1DG@PLBPCAEM@?$AA?$CC?$AAI?$AAT?$AAE?$AAR?$AAA?$AAT?$AAO?$AAR?$AA?5?$AAL?$AAI?$AAS?$AAT?$AA?5@ 0042e198     DraggingDemo.obj
  0002:000011d8       ??_C@_0BA@JFNIOLAK@string?5too?5long@ 0042e1d8     DraggingDemo.obj
@@ -3530,7 +3529,7 @@
  0001:00025b10       ___castguard_slow_path_compat_check 00426b10 f   MSVCRTD:guard_support.obj
  0001:000267d0       _ParseCommandLine          004277d0 f   SDL2main:SDL_windows_main.obj
  0001:00026930       _main_getcmdline           00427930 f   SDL2main:SDL_windows_main.obj
- 0001:00027f1c       $LN9                       00428f1c     Psyeb10Enemy.obj
+ 0001:00027cdc       $LN9                       00428cdc     Psyeb10Enemy.obj
  0001:00029160       __unwindfunclet$?virtInitialiseObjects@DraggingDemo@@UAEHXZ$0 0042a160 f   DraggingDemo.obj
  0001:0002916f       __unwindfunclet$?virtInitialiseObjects@DraggingDemo@@UAEHXZ$1 0042a16f f   DraggingDemo.obj
  0001:0002917e       __unwindfunclet$?virtInitialiseObjects@DraggingDemo@@UAEHXZ$2 0042a17e f   DraggingDemo.obj
@@ -3996,22 +3995,21 @@
  0002:000065e0       $SG103769                  004335e0     Psyeb10Bike.obj
  0002:000066a8       $SG103770                  004336a8     Psyeb10Bike.obj
  0002:000066ac       $SG103771                  004336ac     Psyeb10Bike.obj
- 0002:000067e0       $SG109654                  004337e0     Psyeb10Enemy.obj
- 0002:000067f4       $SG109655                  004337f4     Psyeb10Enemy.obj
- 0002:000067f8       $SG109656                  004337f8     Psyeb10Enemy.obj
- 0002:00006860       $SG109657                  00433860     Psyeb10Enemy.obj
- 0002:00006924       $SG109658                  00433924     Psyeb10Enemy.obj
- 0002:00006928       $SG109659                  00433928     Psyeb10Enemy.obj
- 0002:00006950       $SG109831                  00433950     Psyeb10Enemy.obj
+ 0002:000067e0       $SG109642                  004337e0     Psyeb10Enemy.obj
+ 0002:000067f4       $SG109643                  004337f4     Psyeb10Enemy.obj
+ 0002:000067f8       $SG109644                  004337f8     Psyeb10Enemy.obj
+ 0002:00006860       $SG109645                  00433860     Psyeb10Enemy.obj
+ 0002:00006924       $SG109646                  00433924     Psyeb10Enemy.obj
+ 0002:00006928       $SG109647                  00433928     Psyeb10Enemy.obj
+ 0002:00006950       $SG109819                  00433950     Psyeb10Enemy.obj
  0002:000069b4       $SG93566                   004339b4     Psyeb10Enemy.obj
- 0002:000069e0       $SG110213                  004339e0     Psyeb10Enemy.obj
- 0002:000069fc       $SG110214                  004339fc     Psyeb10Enemy.obj
- 0002:00006a00       $SG110215                  00433a00     Psyeb10Enemy.obj
- 0002:00006a68       $SG110216                  00433a68     Psyeb10Enemy.obj
- 0002:00006b30       $SG110217                  00433b30     Psyeb10Enemy.obj
- 0002:00006b34       $SG110218                  00433b34     Psyeb10Enemy.obj
- 0002:00006b6c       $SG94389                   00433b6c     Psyeb10Enemy.obj
- 0002:00006b84       $SG94402                   00433b84     Psyeb10Enemy.obj
+ 0002:000069e0       $SG110201                  004339e0     Psyeb10Enemy.obj
+ 0002:000069fc       $SG110202                  004339fc     Psyeb10Enemy.obj
+ 0002:00006a00       $SG110203                  00433a00     Psyeb10Enemy.obj
+ 0002:00006a68       $SG110204                  00433a68     Psyeb10Enemy.obj
+ 0002:00006b30       $SG110205                  00433b30     Psyeb10Enemy.obj
+ 0002:00006b34       $SG110206                  00433b34     Psyeb10Enemy.obj
+ 0002:00006b6c       $SG94388                   00433b6c     Psyeb10Enemy.obj
  0002:00006c40       $SG103939                  00433c40     Psyeb10Engine.obj
  0002:00006c54       $SG103940                  00433c54     Psyeb10Engine.obj
  0002:00006c58       $SG103941                  00433c58     Psyeb10Engine.obj

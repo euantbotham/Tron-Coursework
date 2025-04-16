@@ -97,6 +97,7 @@ void Psyeb10Enemy::virtPostMoveLogic()
 void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
 {
     // Random chance to be unpredictable (0.5%)
+    /*
     if (rand() % 1000 < 5) {
 		std::cout << "Random direction change" << std::endl;
         int newDirection = rand() % 4;
@@ -108,7 +109,7 @@ void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
             return;
         }
     }
-
+    */
     // Distance to player
     int distX = playerX - getXCentre();
     int distY = playerY - getYCentre();
@@ -124,7 +125,7 @@ void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
     // Check if current path leads to a small area compared to alternatives
     int currentMapX = engine->getTileManager()->getMapXForScreenX(getXCentre() + 5 * speedX);
     int currentMapY = engine->getTileManager()->getMapYForScreenY(getYCentre() + 5 * speedY);
-    int currentSpaceSize = floodFill(currentMapX, currentMapY,speedX, speedY, 10,  2000); // Increased max tiles due to smaller tile size
+    int currentSpaceSize = floodFill(currentMapX, currentMapY,speedX, speedY, 10,  1000); // Increased max tiles due to smaller tile size
 
     // Check if there's a significantly better direction
     std::vector<std::pair<int, int>> directions = {
@@ -143,7 +144,7 @@ void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
         if (isValidMove(testX, testY)) {
             int testMapX = engine->getTileManager()->getMapXForScreenX(testX);
             int testMapY = engine->getTileManager()->getMapYForScreenY(testY);
-            int testSpaceSize = floodFill(testMapX, testMapY,directions[i].first, directions[i].second, 10,  2000);
+            int testSpaceSize = floodFill(testMapX, testMapY,directions[i].first, directions[i].second, 10,  1000);
 
             // Saves the best direction
             if (testSpaceSize > bestSpaceSize) {
@@ -153,14 +154,16 @@ void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
         }
     }
 
-    // If this direction has significantly more space (30% more),
-    if (bestSpaceSize > currentSpaceSize * 1.3) {
+    // If this direction has significantly more space (100% more),
+    if (bestSpaceSize > currentSpaceSize * 2) {
         // Change direction to the best move
+        std::cout << "changed direction due to flood fill" << std::endl;
         changeDirection(bestMove);
+        return;
     }
 
 
-
+    /*
     // Try to intercept or cut off player (10% chance if player is not too far)
     if (rand() % 100 < 10 && abs(distX) < 200 && abs(distY) < 200) {
         int interceptDirection = calculateInterceptDirection(playerX, playerY);
@@ -174,7 +177,7 @@ void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
             }
         }
     }
-
+    */
     /*
     // Sometimes try to move toward player for pursuit (20% chance if player is far)
     if (rand() % 100 < 20 && (abs(distX) > 100 || abs(distY) > 100)) {
@@ -261,12 +264,12 @@ int Psyeb10Enemy::findBestDirection()
             int mapY = engine->getTileManager()->getMapYForScreenY(nextY);
 
             // Use floodFill to count available space
-            int availableSpace = floodFill(mapX, mapY,directions[i].first, directions[i].second, 3, 500);
+            int availableSpace = floodFill(mapX, mapY,directions[i].first, directions[i].second, 5, 1000);
 
             // Apply additional scoring factors:
 
             // 1. Favor directions leading away from walls
-            availableSpace = adjustScoreForWallProximity(availableSpace, nextX, nextY, directions[i].first, directions[i].second);
+            //availableSpace = adjustScoreForWallProximity(availableSpace, nextX, nextY, directions[i].first, directions[i].second);
 
             // 2. Consider directions that might lead toward player (with low weight)
             DisplayableObject* pPlayerObject = engine->getDisplayableObject(0);
@@ -336,7 +339,6 @@ int Psyeb10Enemy::adjustScoreForPlayerProximity(int baseScore, int x, int y, int
 }
 
 int Psyeb10Enemy::floodFill(int startMapX, int startMapY, int dirX, int dirY, int maxScope, int maxTiles) {
-	//int maxScope = 7; //max scope for tunnel vision
     
     std::queue<std::pair<int, int>> q;
     std::set<std::pair<int, int>> visited;
@@ -384,8 +386,8 @@ int Psyeb10Enemy::floodFill(int startMapX, int startMapY, int dirX, int dirY, in
             if (dirY < 0 && ny > startMapY) continue;
 
             // checks scope to ensure it chooses best path
-            if (dirX != 0 && std::abs(ny - startMapY) > maxScope) continue;
-            if (dirY != 0 && std::abs(nx - startMapX) > maxScope) continue;
+            if (dirX != 0 && (std::abs(ny - startMapY) > maxScope || std::abs(ny - startMapY) >= std::abs(nx - startMapX) * 3)) continue;
+            if (dirY != 0 && (std::abs(nx - startMapX) > maxScope || std::abs(nx - startMapX) >= std::abs(ny - startMapY) * 3)) continue;
 
 
             q.push(next);
@@ -428,7 +430,7 @@ bool Psyeb10Enemy::isValidMove(int x, int y) {
     // Check if coordinates are within map boundaries
     if (mapX >= 0 && mapX < 120 && mapY >= 0 && mapY < 120) {
         // Check if the tile is free (value = 0)
-        if (engine->getTileManager()->getMapValue(mapX, mapY) == 0) {
+        if (engine->getTileManager()->getMapValue(mapX, mapY) <= 0) {
             return true;
         }
     }
