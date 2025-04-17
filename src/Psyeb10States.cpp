@@ -32,3 +32,9 @@ void Psyeb10States::reEntry()
 Psyeb10TileManager* Psyeb10States::getTileManager() {
 	return &tm;
 }
+
+
+void Psyeb10States::copyAllBackgroundBuffer()
+{
+	engine->getForegroundSurface()->copyEntireSurface(engine->getBackgroundSurface());
+}

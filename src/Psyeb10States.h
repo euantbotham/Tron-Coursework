@@ -17,6 +17,9 @@ public:
 	virtual void mainLoopPreUpdate();
 	virtual ~Psyeb10States() {}
 	Psyeb10TileManager* getTileManager();
+	
+	// Maybe rewrite this better later
+	virtual void copyAllBackgroundBuffer();
 protected:
 	Psyeb10Engine* engine;
 	Psyeb10TileManager tm;

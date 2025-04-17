@@ -1,6 +1,12 @@
 #pragma once
 #include "header.h"
 #include "TileManager.h"
+/* used to store the graphics for the menu,
+1 = Resume game,
+2 = Save game and quit,
+3 = save and main menu,
+4 = quit game
+*/
 class menuTileManager :
     public TileManager
 {

@@ -23,6 +23,7 @@ public:
     void setState();
     Psyeb10TileManager* getTileManager();
     Psyeb10States* getState(int stateNum);
+    void copyAllBackgroundBuffer()override;
 protected:
     Psyeb10States* currentState;
     // Used to store a second state if needed

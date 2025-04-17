@@ -19,8 +19,12 @@ void pauseState::enter()
 void pauseState::foreGroundStrings()
 {
 	tm.setTopLeftPositionOnScreen(525, 250);
+	//Resume game
 	tm.setMapValue(0, 0, 1);
+	// Save game and quit
 	tm.setMapValue(0, 1, 2);
+	// Quit game
+	tm.setMapValue(0, 2, 4);
 	tm.drawAllTiles(engine, engine->getForegroundSurface());
 }
 
@@ -66,9 +70,16 @@ void pauseState::mouseDown(int iButton, int iX, int iY)
 				saveGame();
 				engine->setExitWithCode(0);
 			}
+			else if (tm.getMapValue(x, y) == 4)
+			{
+				engine->setExitWithCode(0);
+			}
+			else
+			{
+				std::cout << "Not ready" << std::endl;
+			}
 		}
 	}
-	
 	
 	if (iButton == SDL_BUTTON_RIGHT)
 	{
@@ -151,6 +162,4 @@ void pauseState::saveGame()
 
 	statsFile.close();
 	std::cout << "Game stats saved to game_stats.txt!" << std::endl;
-
-
 }
