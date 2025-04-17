@@ -77,3 +77,11 @@ void Psyeb10Bike::setPaused(bool paused) {
 void Psyeb10Bike::virtKeyDown(int iKeyCode)
 {
 }
+
+int Psyeb10Bike::getSpeedX() {
+	return speedX;
+}
+
+int Psyeb10Bike::getSpeedY() {
+	return speedY;
+}

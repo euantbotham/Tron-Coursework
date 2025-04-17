@@ -141,3 +141,15 @@ gameState::~gameState()
 		delete enemy;
 	}
 }
+
+MainCharacter* gameState::getmainChar() {
+	return mainChar;
+}
+
+Psyeb10Enemy* gameState::getEnemy() {
+	return enemy;
+}
+
+int gameState::getGameScore() {
+	return gameScore;
+}

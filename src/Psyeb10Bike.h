@@ -18,6 +18,8 @@ public:
     virtual void virtHandleDeath();
     virtual void virtPostMoveLogic();
     void setPaused(bool paused);
+    int getSpeedX();
+    int getSpeedY();
 protected:
     int speedX;
     int speedY;

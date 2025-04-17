@@ -4,7 +4,9 @@
 #include <iostream>
 #include <fstream> 
 #include "Psyeb10TileManager.h"
-
+#include "gameState.h"
+#include "Psyeb10Bike.h"
+#include "MainCharacter.h"
 
 void pauseState::enter()
 {
@@ -86,7 +88,7 @@ void pauseState::reEntry()
 
 void pauseState::saveGame()
 {
-	Psyeb10TileManager* saveGameTM = engine->getState(0)->getTileManager();
+	Psyeb10TileManager* saveGameTM = engine->getState(1)->getTileManager();
 	if (!saveGameTM) {
 		std::cerr << "Error: TileManager is null or invalid!" << std::endl;
 		return;
@@ -112,4 +114,43 @@ void pauseState::saveGame()
 	}
 	outFile.close();
 	std::cout << "Game saved to tile_data.csv!" << std::endl;
+
+	// Save game stats to game_stats.txt
+	std::ofstream statsFile("game_stats.txt");
+	if (!statsFile.is_open()) {
+		std::cerr << "Error: Could not open game_stats.txt for writing!" << std::endl;
+		return;
+	}
+
+	gameState* game = dynamic_cast<gameState*>(engine->getState(1));
+	if (!game) {
+		std::cerr << "Error: gameState is null or invalid!" << std::endl;
+		return;
+	}
+
+	// Save main character stats
+	MainCharacter* mainChar = game->getmainChar();
+	if (mainChar) {
+		statsFile << "# Main Character\n";
+		statsFile << "Position: " << mainChar->getXCentre() << "," << mainChar->getYCentre() << "\n";
+		statsFile << "Speed: " << mainChar->getSpeedX() << "," << mainChar->getSpeedY() << "\n";
+		statsFile << "Lives: " << mainChar->getLives() << "\n";
+	}
+
+	// Save enemy stats
+	Psyeb10Bike* enemy = game->getEnemy();
+	if (enemy) {
+		statsFile << "# Enemy\n";
+		statsFile << "Position: " << enemy->getXCentre() << "," << enemy->getYCentre() << "\n";
+		statsFile << "Speed: " << enemy->getSpeedX() << "," << enemy->getSpeedY() << "\n";
+	}
+
+	// Save game state stats
+	statsFile << "# Game State\n";
+	statsFile << "Score: " << game->getGameScore() << "\n";
+
+	statsFile.close();
+	std::cout << "Game stats saved to game_stats.txt!" << std::endl;
+
+
 }

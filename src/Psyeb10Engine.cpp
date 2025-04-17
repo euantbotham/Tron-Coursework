@@ -104,10 +104,10 @@ Psyeb10States* Psyeb10Engine::getState(int stateNum) {
 	}
 	else {
 		if (!secondState) {
-			return secondState;
+			return nullptr;
 		}
 		else {
-			return nullptr;
+			return this->secondState;
 		}
 	}
 }
