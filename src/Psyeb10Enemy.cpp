@@ -187,38 +187,6 @@ void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
     }
 }
 
-// Calculate direction to intercept player
-int Psyeb10Enemy::calculateInterceptDirection(int playerX, int playerY)
-{
-    // Determine player movement direction based on trail
-    // This is a simplified version - you'd need to track player's actual direction
-
-    // For now, just try to cut player off by moving perpendicular to line between us
-    int dx = playerX - getXCentre();
-    int dy = playerY - getYCentre();
-
-    // We try to choose a perpendicular direction
-    if (abs(dx) > abs(dy)) {
-        // Player is more horizontal from us, so try vertical movement
-        if (dy > 0 && isValidMove(getXCentre(), getYCentre() + 5)) {
-            return 2; // Down
-        }
-        else if (isValidMove(getXCentre(), getYCentre() - 5)) {
-            return 0; // Up
-        }
-    }
-    else {
-        // Player is more vertical from us, so try horizontal movement
-        if (dx > 0 && isValidMove(getXCentre() + 5, getYCentre())) {
-            return 1; // Right
-        }
-        else if (isValidMove(getXCentre() - 5, getYCentre())) {
-            return 3; // Left
-        }
-    }
-
-    return -1; // No good intercept direction
-}
 
 int Psyeb10Enemy::findBestDirection()
 {
@@ -281,8 +249,6 @@ int Psyeb10Enemy::findBestDirection()
                 score *= 1.1; // 10% bonus for staying in the same direction
             }
 
-            // Add small bonus for moving toward the player
-            score = adjustScoreForPlayerProximity(score, nextX, nextY, playerX, playerY);
 
             // Add randomness to escape patterns (10% chance)
             if (rand() % 100 < 10) {
@@ -331,47 +297,6 @@ int Psyeb10Enemy::findBestDirection()
     return bestDirection;
 }
 
-// Adjust space score based on wall proximity
-//TODO this does not acc check the wall
-int Psyeb10Enemy::adjustScoreForWallProximity(int baseScore, int x, int y, int dirX, int dirY)
-{
-    int wallPenalty = 0;
-
-    // Check for walls on sides of this path
-    int perpDirX = -dirY; // Perpendicular direction
-    int perpDirY = dirX;
-
-    // Left wall check
-    if (!isValidMove(x + 5 * perpDirX, y + 5 * perpDirY)) {
-        wallPenalty += 5;
-    }
-
-    // Right wall check
-    if (!isValidMove(x - 5 * perpDirX, y - 5 * perpDirY)) {
-        wallPenalty += 5;
-    }
-
-    // Prefer directions with space on both sides
-    return baseScore - wallPenalty;
-}
-
-// Adjust score based on player position (slight preference to directions toward player)
-int Psyeb10Enemy::adjustScoreForPlayerProximity(int baseScore, int x, int y, int playerX, int playerY)
-{
-    // Calculate vector to player
-    int toPlayerX = playerX - x;
-    int toPlayerY = playerY - y;
-
-    // Calculate distance to player
-    double distToPlayer = sqrt(toPlayerX * toPlayerX + toPlayerY * toPlayerY);
-
-    // Small bonus for directions that get closer to player
-    if (distToPlayer < 300) {
-        return baseScore + 3;
-    }
-
-    return baseScore;
-}
 
 int Psyeb10Enemy::floodFill(int startMapX, int startMapY, int dirX, int dirY, int maxScope, int maxTiles) {
     std::queue<std::pair<int, int>> q;

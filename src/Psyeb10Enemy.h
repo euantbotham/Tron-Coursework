@@ -20,8 +20,5 @@ private:
     int findBestDirection();
     int floodFill(int startMapX, int startMapY, int dirX, int dirY, int maxScope, int maxTiles);
     void changeDirection(int direction);
-	int calculateInterceptDirection(int playerX, int playerY);
-	int adjustScoreForPlayerProximity(int baseScore, int x, int y, int playerX, int playerY);
-	int adjustScoreForWallProximity(int baseScore, int x, int y, int dirX, int dirY);
 };
 
