@@ -22,6 +22,7 @@ public:
     void setState(Psyeb10States* state);
     void setState();
     Psyeb10TileManager* getTileManager();
+    Psyeb10States* getState(int stateNum);
 protected:
     Psyeb10States* currentState;
     // Used to store a second state if needed

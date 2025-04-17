@@ -96,3 +96,18 @@ void Psyeb10Engine::setState()
 	unlockBackgroundForDrawing();
 	redrawDisplay();
 }
+
+
+Psyeb10States* Psyeb10Engine::getState(int stateNum) {
+	if (stateNum == 0) {
+		return this->currentState;
+	}
+	else {
+		if (!secondState) {
+			return secondState;
+		}
+		else {
+			return nullptr;
+		}
+	}
+}

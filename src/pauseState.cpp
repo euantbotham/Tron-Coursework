@@ -2,6 +2,8 @@
 #include "header.h"
 #include "pauseState.h"
 #include <iostream>
+#include <fstream> 
+#include "Psyeb10TileManager.h"
 
 
 void pauseState::enter()
@@ -16,6 +18,7 @@ void pauseState::foreGroundStrings()
 {
 	tm.setTopLeftPositionOnScreen(525, 250);
 	tm.setMapValue(0, 0, 1);
+	tm.setMapValue(0, 1, 2);
 	tm.drawAllTiles(engine, engine->getForegroundSurface());
 }
 
@@ -56,6 +59,11 @@ void pauseState::mouseDown(int iButton, int iX, int iY)
 				engine->unpause();
 				engine->setState();
 			}
+			else if (tm.getMapValue(x, y) == 2)
+			{
+				saveGame();
+				engine->setExitWithCode(0);
+			}
 		}
 	}
 	
@@ -74,4 +82,34 @@ void pauseState::reset()
 
 void pauseState::reEntry()
 {
+}
+
+void pauseState::saveGame()
+{
+	Psyeb10TileManager* saveGameTM = engine->getState(0)->getTileManager();
+	if (!saveGameTM) {
+		std::cerr << "Error: TileManager is null or invalid!" << std::endl;
+		return;
+	}
+
+	std::ofstream outFile("tile_data.csv");
+	if (!outFile.is_open()) {
+		std::cerr << "Error: Could not open file for writing!" << std::endl;
+		return;
+	}
+
+	const int width = saveGameTM->getMapWidth();
+	const int height = saveGameTM->getMapHeight();
+
+	for (int y = 0; y < height; ++y) {
+		for (int x = 0; x < width; ++x) {
+			outFile << saveGameTM->getMapValue(x, y);
+			if (x < width - 1) {
+				outFile << ",";
+			}
+		}
+		outFile << "\n";
+	}
+	outFile.close();
+	std::cout << "Game saved to tile_data.csv!" << std::endl;
 }

@@ -19,8 +19,10 @@ public:
 	void mouseDown(int iButton, int iX, int iY) override;
 	void mainLoopPreUpdate() override;
 	void reEntry() override;
-
 protected:
 	menuTileManager tm;
+
+private:
+	void saveGame();
 };
 

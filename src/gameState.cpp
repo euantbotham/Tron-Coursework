@@ -86,9 +86,6 @@ void gameState::mainLoopPreUpdate() {
 	}
 }
 
-Psyeb10TileManager* gameState::getTileManager() {
-	return &tm;
-}
 
 void gameState::reEntry()
 {

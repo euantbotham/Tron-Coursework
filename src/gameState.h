@@ -29,11 +29,8 @@ public:
 	void mouseDown(int iButton, int iX, int iY) override;
 	void mainLoopPreUpdate() override;
 	void reEntry()override;
-
 	void drawBackground();
-	Psyeb10TileManager* getTileManager();
 	~gameState();
-
 protected:
 	const int gridstartX = 350;
 	const int gridstartY = 100;
@@ -41,7 +38,6 @@ protected:
 	const int gridEndY = 700;
 	int gameScore;
 	int lastTick;
-	Psyeb10TileManager tm;
 	MainCharacter* mainChar;
 	Psyeb10Enemy* enemy;
 	bool isDisplayed;

@@ -28,3 +28,7 @@ void Psyeb10States::reset()
 void Psyeb10States::reEntry()
 {
 }
+
+Psyeb10TileManager* Psyeb10States::getTileManager() {
+	return &tm;
+}

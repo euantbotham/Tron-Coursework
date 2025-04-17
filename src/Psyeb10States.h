@@ -16,6 +16,8 @@ public:
 	virtual void mouseDown(int iButton, int iX, int iY);
 	virtual void mainLoopPreUpdate();
 	virtual ~Psyeb10States() {}
+	Psyeb10TileManager* getTileManager();
 protected:
 	Psyeb10Engine* engine;
+	Psyeb10TileManager tm;
 };
