@@ -26,62 +26,52 @@ void gameSetupState::enter()
     // Subtle highlight color (slightly lighter)
     const unsigned int highlightColor = 0x1A2635;
 
-    // Create just 2 surfaces for a very subtle toggle effect
-    for (int i = 0; i < 2; ++i) {
+    // Create and initialize frames for animation
+    for (int i = 0; i < 30; ++i) { // More frames for smoother animation
         DrawingSurface* surface = new DrawingSurface(engine);
         surface->createSurface(screenWidth, screenHeight);
         surface->mySDLLockSurface();
 
-        // Fill background with base color
-        surface->drawRectangle(0, 0, screenWidth, screenHeight, baseColor);
+        // Fill background with very dark blue
+        surface->drawRectangle(0, 0, screenWidth, screenHeight, 0x080C10);
 
-        // Animation offset for flowing effect
-        int offset = i * 5; // Subtle movement
+        // Animation phase (0.0 to 1.0)
+        float phase = i / 30.0f;
 
-        // Draw the grid on the surface
-        for (int row = 0; row < rows + 1; ++row) {
-            // Horizontal lines with flowing effect
-            int y = row * tileHeight;
-            // Varying opacity based on position and frame
-            int intensity = 60 + 20 * sin((row + i) * 0.3);
-            unsigned int lineColor = (intensity << 16) | (intensity << 8) | intensity;
+        // Draw cells
+        for (int row = 0; row < rows; ++row) {
+            for (int col = 0; col < columns; ++col) {
+                // Base color for all cells (very dark blue-gray)
+                unsigned int cellColor = 0x101820;
 
-            // Draw horizontal line
-            surface->drawLine(0, y, screenWidth, y, lineColor);
-            if ((row + i) % 5 == 0) {
-                // Slightly thicker line every 5 tiles
-                surface->drawLine(0, y + 1, screenWidth, y + 1, lineColor);
-            }
-        }
-
-        for (int col = 0; col < columns + 1; ++col) {
-            // Vertical lines with flowing effect
-            int x = col * tileWidth;
-            // Varying opacity based on position and frame
-            int intensity = 60 + 20 * sin((col + i) * 0.3);
-            unsigned int lineColor = (intensity << 16) | (intensity << 8) | intensity;
-
-            // Draw vertical line
-            surface->drawLine(x, 0, x, screenHeight, lineColor);
-            if ((col + i) % 5 == 0) {
-                // Slightly thicker line every 5 tiles
-                surface->drawLine(x + 1, 0, x + 1, screenHeight, lineColor);
-            }
-        }
-
-        // Add subtle diagonal highlights using small lines instead of points
-        for (int j = 0; j < screenWidth + screenHeight; j += 120) {
-            int diagonalPos = (j + offset * 3) % (screenWidth + screenHeight);
-
-            // Draw diagonal highlights using very short lines
-            for (int k = 0; k < screenHeight; k += 50) {
-                int x1 = diagonalPos - k;
-                int y1 = k;
-                if (x1 >= 0 && x1 < screenWidth) {
-                    // Draw tiny line segments instead of points
-                    surface->drawLine(x1, y1, x1 + 1, y1, 0x303A4A);
+                // Very subtle highlighting based on a moving wave pattern
+                float wave = sin(row * 0.2 + col * 0.2 + phase * 6.28318f);
+                if (wave > 0.7) {
+                    // Very slightly lighter for highlighted cells
+                    cellColor = 0x141C24;
                 }
+
+                // Draw the cell
+                surface->drawRectangle(
+                    col * tileWidth, row * tileHeight,
+                    (col + 1) * tileWidth - 1, (row + 1) * tileHeight - 1,
+                    cellColor);
             }
+        }
+
+        // Draw grid lines separately - consistent darkness
+        unsigned int lineColor = 0x202830; // Slightly lighter than cells
+
+        // Draw horizontal grid lines
+        for (int row = 0; row <= rows; ++row) {
+            int y = row * tileHeight;
+            surface->drawLine(0, y, screenWidth, y, lineColor);
+        }
+
+        // Draw vertical grid lines
+        for (int col = 0; col <= columns; ++col) {
+            int x = col * tileWidth;
+            surface->drawLine(x, 0, x, screenHeight, lineColor);
         }
 
         // Store the surface
@@ -121,7 +111,7 @@ void gameSetupState::mainLoopPreUpdate()
 
     // Only change frame when the tick count is high enough
     if (animationDelay == 0) {
-        animationDelay = 30;
+        animationDelay = 2;
         currentFrame = (currentFrame + 1) % surfaces.size(); // Toggle between 0 and 1
         engine->setBackgroundSurface(surfaces[currentFrame]);
         engine->redrawDisplay();
