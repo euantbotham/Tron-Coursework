@@ -21,7 +21,6 @@ public:
 private:
 	std::vector<DrawingSurface*> surfaces; // Store multiple drawing surfaces
 	int currentFrame = 0;                  // Current frame index
-	int animationDelay = 10000;                // Delay between frame switches
-	int tick = 0;                          // Tick counter for delay
+	int animationDelay = 30; 
 };
 

@@ -7,7 +7,6 @@ public:
 	mainMenuState(Psyeb10Engine* engineParam)  {
 		this->engine = engineParam;
 		screenOffsetX = 0;
-		tick = 0;
 	}
 	void enter() override;
 	void foreGroundStrings() override;
@@ -22,6 +21,5 @@ public:
 
 private:
 	int screenOffsetX;
-	int tick;
 };
 

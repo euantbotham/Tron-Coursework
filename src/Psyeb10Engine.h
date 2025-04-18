@@ -17,7 +17,7 @@ public:
     int virtInitialiseObjects() override;
     void virtMouseDown(int iButton, int iX, int iY) override;
     void resetGame();
-    void virtMainLoopPreUpdate();
+    void virtMainLoopDoBeforeUpdate() override;
     void virtCleanUp() override;
     void setState(Psyeb10States* state);
     void setState();

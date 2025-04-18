@@ -2,6 +2,12 @@
 
 void gameSetupState::enter()
 {
+    // Reset animation counters
+    currentFrame = 0;
+
+    // Set a very high animation delay (will be used as-is)
+    animationDelay = 30; // Try with a reasonable value that won't be overwritten
+
     // Fill the background with black
     engine->fillBackground(0x000000);
 
@@ -20,8 +26,8 @@ void gameSetupState::enter()
     // Subtle highlight color (slightly lighter)
     const unsigned int highlightColor = 0x1A2635;
 
-    // Create and initialize frames for animation
-    for (int i = 0; i < 10; ++i) {
+    // Create just 2 surfaces for a very subtle toggle effect
+    for (int i = 0; i < 2; ++i) {
         DrawingSurface* surface = new DrawingSurface(engine);
         surface->createSurface(screenWidth, screenHeight);
         surface->mySDLLockSurface();
@@ -40,7 +46,7 @@ void gameSetupState::enter()
             int intensity = 60 + 20 * sin((row + i) * 0.3);
             unsigned int lineColor = (intensity << 16) | (intensity << 8) | intensity;
 
-            // Draw horizontal line with varying thickness
+            // Draw horizontal line
             surface->drawLine(0, y, screenWidth, y, lineColor);
             if ((row + i) % 5 == 0) {
                 // Slightly thicker line every 5 tiles
@@ -55,37 +61,33 @@ void gameSetupState::enter()
             int intensity = 60 + 20 * sin((col + i) * 0.3);
             unsigned int lineColor = (intensity << 16) | (intensity << 8) | intensity;
 
-            // Draw vertical line with varying thickness
+            // Draw vertical line
             surface->drawLine(x, 0, x, screenHeight, lineColor);
             if ((col + i) % 5 == 0) {
                 // Slightly thicker line every 5 tiles
                 surface->drawLine(x + 1, 0, x + 1, screenHeight, lineColor);
             }
         }
-        /*
-        // Add subtle diagonal highlights that shift across frames
-        for (int j = 0; j < screenWidth + screenHeight; j += 100) {
-            int diagonalPos = (j + offset * 2) % (screenWidth + screenHeight);
-            // Draw faint diagonal lines
-            for (int k = 0; k < screenHeight; k += 5) {
+
+        // Add subtle diagonal highlights using small lines instead of points
+        for (int j = 0; j < screenWidth + screenHeight; j += 120) {
+            int diagonalPos = (j + offset * 3) % (screenWidth + screenHeight);
+
+            // Draw diagonal highlights using very short lines
+            for (int k = 0; k < screenHeight; k += 50) {
                 int x1 = diagonalPos - k;
                 int y1 = k;
                 if (x1 >= 0 && x1 < screenWidth) {
-                    // Subtle highlight with low opacity
-                    surface->drawPoint(x1, y1, 0x303A4A);
+                    // Draw tiny line segments instead of points
+                    surface->drawLine(x1, y1, x1 + 1, y1, 0x303A4A);
                 }
             }
         }
-        */
+
         // Store the surface
         surfaces.push_back(surface);
         surface->mySDLUnlockSurface();
     }
-
-    // Set animation parameters
-    animationDelay = 8;  // Slower animation for subtlety
-    tick = 0;
-    currentFrame = 0;
 
     // Set the first surface as the background
     engine->setBackgroundSurface(surfaces[0]);
@@ -93,44 +95,55 @@ void gameSetupState::enter()
 
 void gameSetupState::foreGroundStrings()
 {
-
+    // Empty implementation
 }
 
 void gameSetupState::initObjects()
 {
+    // Empty implementation  
 }
 
 void gameSetupState::reset()
 {
+    // Empty implementation
 }
 
 void gameSetupState::mouseDown(int iButton, int iX, int iY)
 {
+    // Empty implementation
 }
 
 void gameSetupState::mainLoopPreUpdate()
 {
-    // Increment tick and switch frame after delay
-    if (++tick >= animationDelay) {
-        tick = 0; // Reset tick
-        currentFrame = (currentFrame + 1) % surfaces.size(); // Move to the next frame
-        engine->setBackgroundSurface(surfaces[currentFrame]); // Switch background surface
-        engine->redrawDisplay(); // Redraw the display
+    // Only increment the tick counter, don't reset it
+
+
+
+    // Only change frame when the tick count is high enough
+    if (animationDelay == 0) {
+        animationDelay = 30;
+        currentFrame = (currentFrame + 1) % surfaces.size(); // Toggle between 0 and 1
+        engine->setBackgroundSurface(surfaces[currentFrame]);
+        engine->redrawDisplay();
+    }
+    else {
+        animationDelay--; // Decrease the delay
     }
 }
 
 void gameSetupState::reEntry()
 {
+    // Empty implementation
 }
 
 void gameSetupState::keyPressed(int iKeyCode)
 {
-
+    // Empty implementation
 }
 
-// Don't forget to clean up surfaces in the destructor
 gameSetupState::~gameSetupState()
 {
+    // Clean up surfaces
     for (auto surface : surfaces) {
         delete surface;
     }

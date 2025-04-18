@@ -30,12 +30,9 @@ void mainMenuState::enter()
 
 void mainMenuState::mainLoopPreUpdate()
 {
-    if (tick == 0) {
         screenOffsetX = (screenOffsetX + 1) % engine->getWindowWidth();
         engine->redrawDisplay();
-        tick = 1000;
-    }else
-		tick--;
+    
     
 }
 

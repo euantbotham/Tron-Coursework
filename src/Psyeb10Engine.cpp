@@ -18,7 +18,7 @@
 Psyeb10Engine::Psyeb10Engine()
 {
 	// Could potentially make this a smart pointer
-	currentState = new gameSetupState(this);
+	currentState = new mainMenuState(this);
 	secondState = nullptr;
 }
 
@@ -53,7 +53,7 @@ void Psyeb10Engine::virtMouseDown(int iButton, int iX, int iY)
 	currentState->mouseDown(iButton, iX, iY);
 }
 
-void Psyeb10Engine::virtMainLoopPreUpdate()
+void Psyeb10Engine::virtMainLoopDoBeforeUpdate()
 {
 	currentState->mainLoopPreUpdate();
 }
