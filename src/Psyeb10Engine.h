@@ -24,6 +24,7 @@ public:
     Psyeb10TileManager* getTileManager();
     Psyeb10States* getState(int stateNum);
     void copyAllBackgroundBuffer()override;
+    void virtKeyDown(int iKeyCode) override;
 protected:
     Psyeb10States* currentState;
     // Used to store a second state if needed

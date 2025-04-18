@@ -38,3 +38,8 @@ void Psyeb10States::copyAllBackgroundBuffer()
 {
 	engine->getForegroundSurface()->copyEntireSurface(engine->getBackgroundSurface());
 }
+
+void Psyeb10States::keyPressed(int iKeyCode)
+{
+	// Handle key press events here in override
+}

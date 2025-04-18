@@ -79,6 +79,7 @@ void Psyeb10Engine::setState(Psyeb10States* state ) {
 	clearContents();
 	this->currentState = state;
 	lockBackgroundForDrawing();
+	this->currentState->initObjects();
 	this->currentState->enter();
 	unlockBackgroundForDrawing();
 	redrawDisplay();
@@ -117,4 +118,9 @@ Psyeb10States* Psyeb10Engine::getState(int stateNum) {
 void Psyeb10Engine::copyAllBackgroundBuffer()
 {
 	currentState->copyAllBackgroundBuffer();
+}
+
+void Psyeb10Engine::virtKeyDown(int iKeyCode)
+{
+	currentState->keyPressed(iKeyCode);
 }

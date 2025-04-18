@@ -1,4 +1,6 @@
 #include "mainMenuState.h"
+#include "gameState.h"
+#include "pauseState.h"
 
 void mainMenuState::enter()
 {
@@ -28,14 +30,38 @@ void mainMenuState::enter()
 
 void mainMenuState::mainLoopPreUpdate()
 {
-    screenOffsetX = (screenOffsetX + 1) % engine->getWindowWidth();
-    engine->redrawDisplay();
+    if (tick == 0) {
+        screenOffsetX = (screenOffsetX + 1) % engine->getWindowWidth();
+        engine->redrawDisplay();
+        tick = 1000;
+    }else
+		tick--;
+    
 }
 
 
 
 void mainMenuState::foreGroundStrings()
 {
+    // Load the image
+    SimpleImage image = ImageManager::loadImage("Tron.png", true);
+
+    // Get the screen dimensions
+    int screenWidth = engine->getWindowWidth();
+    int screenHeight = engine->getWindowHeight();
+
+    // Get the image dimensions
+    int imageWidth = image.getWidth();
+    int imageHeight = image.getHeight();
+
+    // Calculate the top-left position to center the image
+    int xPosition = (screenWidth / 2) - (imageWidth / 2);
+    int yPosition = (screenHeight / 2) - (imageHeight / 2);
+
+    // Render the image at the calculated position
+    image.renderImageWithMask(engine->getForegroundSurface(), 0, 0, xPosition, yPosition, imageWidth, imageHeight);
+
+	engine->drawForegroundString(xPosition + imageWidth/3, yPosition + imageHeight + 50, "Press any key to start", 0x57E2F9, 0);
 }
 
 void mainMenuState::initObjects()
@@ -58,4 +84,12 @@ void mainMenuState::copyAllBackgroundBuffer()
 {
 	engine->getForegroundSurface()->copyRectangleFrom(engine->getBackgroundSurface(), 0, 0, engine->getWindowWidth(), engine->getWindowHeight(), screenOffsetX, 0);
 	engine->getForegroundSurface()->copyRectangleFrom(engine->getBackgroundSurface(), engine->getWindowWidth() -screenOffsetX, 0, engine->getWindowWidth(), engine->getWindowHeight(),screenOffsetX - engine->getWindowWidth(), 0);
+}
+
+
+//Set the state to the game state when a key is pressed
+void mainMenuState::keyPressed(int iKeyCode)
+{
+	engine->setState(new gameState(engine));
+    
 }
