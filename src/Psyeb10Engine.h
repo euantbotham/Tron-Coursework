@@ -25,6 +25,8 @@ public:
     Psyeb10States* getState(int stateNum);
     void copyAllBackgroundBuffer()override;
     void virtKeyDown(int iKeyCode) override;
+    const int tronBlue = 0x57E2F9;
+    void setBackgroundSurface(DrawingSurface* surface);
 protected:
     Psyeb10States* currentState;
     // Used to store a second state if needed

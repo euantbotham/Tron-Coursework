@@ -1,6 +1,6 @@
 #include "mainMenuState.h"
 #include "gameState.h"
-#include "pauseState.h"
+#include "gameSetupState.h"
 
 void mainMenuState::enter()
 {
@@ -90,6 +90,6 @@ void mainMenuState::copyAllBackgroundBuffer()
 //Set the state to the game state when a key is pressed
 void mainMenuState::keyPressed(int iKeyCode)
 {
-	engine->setState(new gameState(engine));
+	engine->setState(new gameSetupState(engine));
     
 }

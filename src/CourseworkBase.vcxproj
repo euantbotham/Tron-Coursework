@@ -95,6 +95,7 @@
   <ItemGroup>
     <ClInclude Include="DraggingDemo.h" />
     <ClInclude Include="FlashingDemo.h" />
+    <ClInclude Include="gameSetupState.h" />
     <ClInclude Include="gameState.h" />
     <ClInclude Include="ImageMappingDemo.h" />
     <ClInclude Include="MainCharacter.h" />
@@ -142,6 +143,7 @@
     <ClCompile Include="DraggingDemo.cpp" />
     <ClCompile Include="DrawingSurface.cpp" />
     <ClCompile Include="FlashingDemo.cpp" />
+    <ClCompile Include="gameSetupState.cpp" />
     <ClCompile Include="gameState.cpp" />
     <ClCompile Include="ImageMappingDemo.cpp" />
     <ClCompile Include="MainCharacter.cpp" />

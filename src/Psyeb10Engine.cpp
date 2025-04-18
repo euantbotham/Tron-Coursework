@@ -13,11 +13,12 @@
 #include "gameState.h"
 #include "pauseState.h"
 #include "mainMenuState.h"
+#include "gameSetupState.h"
 
 Psyeb10Engine::Psyeb10Engine()
 {
 	// Could potentially make this a smart pointer
-	currentState = new mainMenuState(this);
+	currentState = new gameSetupState(this);
 	secondState = nullptr;
 }
 
@@ -123,4 +124,8 @@ void Psyeb10Engine::copyAllBackgroundBuffer()
 void Psyeb10Engine::virtKeyDown(int iKeyCode)
 {
 	currentState->keyPressed(iKeyCode);
+}
+
+void Psyeb10Engine::setBackgroundSurface(DrawingSurface* surface) {
+	m_pBackgroundSurface = surface;
 }
