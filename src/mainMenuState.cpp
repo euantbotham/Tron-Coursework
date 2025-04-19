@@ -26,14 +26,14 @@ void mainMenuState::enter()
     for (int y = gridStartY; y <= gridEndY; y += cellSize) {
         engine->drawBackgroundThickLine(gridStartX, y, gridEndX, y, 0x000000, 2);
     }
+
+    loadAndPlayMusic("TronMusic.wav");
 }
 
 void mainMenuState::mainLoopPreUpdate()
 {
         screenOffsetX = (screenOffsetX + 1) % engine->getWindowWidth();
         engine->redrawDisplay();
-    
-    
 }
 
 
@@ -89,4 +89,62 @@ void mainMenuState::keyPressed(int iKeyCode)
 {
 	engine->setState(new gameSetupState(engine));
     
+}
+
+
+void mainMenuState::loadAndPlayMusic(const char* filename)
+{
+    // Initialize audio subsystem if not already done
+    if (SDL_GetCurrentAudioDriver() == NULL) {
+        if (SDL_InitSubSystem(SDL_INIT_AUDIO) < 0) {
+            std::cerr << "SDL audio initialization failed: " << SDL_GetError() << std::endl;
+            audioLoaded = false;
+            return;
+        }
+    }
+
+    // Load the WAV file
+    if (SDL_LoadWAV(filename, &wavSpec, &wavBuffer, &wavLength) == NULL) {
+        std::cerr << "Failed to load WAV file: " << SDL_GetError() << std::endl;
+        audioLoaded = false;
+        return;
+    }
+
+    // Open audio device
+    audioDevice = SDL_OpenAudioDevice(NULL, 0, &wavSpec, NULL, 0);
+    if (audioDevice == 0) {
+        std::cerr << "Failed to open audio device: " << SDL_GetError() << std::endl;
+        SDL_FreeWAV(wavBuffer);
+        audioLoaded = false;
+        return;
+    }
+
+    // Play the audio
+    if (SDL_QueueAudio(audioDevice, wavBuffer, wavLength) < 0) {
+        std::cerr << "Failed to queue audio: " << SDL_GetError() << std::endl;
+        SDL_CloseAudioDevice(audioDevice);
+        SDL_FreeWAV(wavBuffer);
+        audioLoaded = false;
+        return;
+    }
+
+    // Start playing
+    SDL_PauseAudioDevice(audioDevice, 0);
+    audioLoaded = true;
+}
+
+
+void mainMenuState::cleanupAudio()
+{
+    if (audioLoaded) {
+        SDL_PauseAudioDevice(audioDevice, 1);
+        SDL_CloseAudioDevice(audioDevice);
+        SDL_FreeWAV(wavBuffer);
+        audioLoaded = false;
+    }
+}
+
+mainMenuState::~mainMenuState()
+{
+    cleanupAudio();
 }
