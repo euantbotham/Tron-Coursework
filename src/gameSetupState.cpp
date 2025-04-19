@@ -125,7 +125,7 @@ void gameSetupState::mouseDown(int iButton, int iX, int iY)
                     engine->setBackgroundSurface(previousSurface);
                 }
                 // New Game
-                engine->setState(new gameState(engine));
+                engine->setState(new gameState(engine), false, true);
 
             }
             else if (selectedOption == 5) {
@@ -182,7 +182,7 @@ void gameSetupState::keyPressed(int iKeyCode)
     if (previousSurface != nullptr) {
         engine->setBackgroundSurface(previousSurface);
     }
-    engine->setState(new gameState(engine)); // Switch to main menu state
+    engine->setState(new gameState(engine), false, true); // Switch to main menu state
 	engine->redrawDisplay();
 }
 

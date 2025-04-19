@@ -87,8 +87,7 @@ void mainMenuState::copyAllBackgroundBuffer()
 //Set the state to the game state when a key is pressed
 void mainMenuState::keyPressed(int iKeyCode)
 {
-	engine->setState(new gameSetupState(engine));
-    
+	engine->setState(new gameSetupState(engine), false, true);
 }
 
 

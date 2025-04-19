@@ -73,17 +73,24 @@ void Psyeb10Engine::virtCleanUp() {
 	
 }
 
-void Psyeb10Engine::setState(Psyeb10States* state ) {
+void Psyeb10Engine::setState(Psyeb10States* state , bool keepOldState, bool initState) {
 	
-	delete secondState;
-	secondState = currentState;
+	if (keepOldState) {
+		delete secondState;
+		secondState = currentState;
+	}
+	else {
+		delete currentState;
+	}
 	// Remove objects from array
 	clearContents();
 	this->currentState = state;
-	lockBackgroundForDrawing();
-	this->currentState->initObjects();
-	this->currentState->enter();
-	unlockBackgroundForDrawing();
+	if (initState) {
+		lockBackgroundForDrawing();
+		this->currentState->initObjects();
+		this->currentState->enter();
+		unlockBackgroundForDrawing();
+	}
 	redrawDisplay();
 }
 

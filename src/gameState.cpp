@@ -72,7 +72,7 @@ void gameState::mouseDown(int iButton, int iX, int iY) {
 		this->mainChar->setPaused(true);
 		this->enemy->setPaused(true);
 		this->isDisplayed = false;
-		engine->setState(new pauseState(engine));
+		engine->setState(new pauseState(engine), true , true);
 	
 	}
 }

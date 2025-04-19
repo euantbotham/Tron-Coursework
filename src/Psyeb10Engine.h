@@ -19,7 +19,7 @@ public:
     void resetGame();
     void virtMainLoopDoBeforeUpdate() override;
     void virtCleanUp() override;
-    void setState(Psyeb10States* state);
+    void setState(Psyeb10States* state, bool keepOldState, bool initState);
     void setState();
     Psyeb10TileManager* getTileManager();
     Psyeb10States* getState(int stateNum);

@@ -1,9 +1,9 @@
 # Main Character
-Position: 660,315
-Speed: 0,-1
+Position: 807,547
+Speed: 1,0
 Lives: 3
 # Enemy
-Position: 510,255
-Speed: 0,1
+Position: 622,680
+Speed: 1,0
 # Game State
-Score: 20
+Score: 80
