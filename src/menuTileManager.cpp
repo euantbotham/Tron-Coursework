@@ -81,6 +81,18 @@ void menuTileManager::virtDrawTileAt(
     case 4:
         text = "Quit Game";
         break;
+	case 5:
+		text = "Load Game";
+		break;
+	case 6:
+		text = "Settings";
+		break;
+	case 7:
+		text = "New Game";
+		break;
+	case 8:
+		text = "Quit";
+		break;
     default:
         text = "Not Ready";
         break;

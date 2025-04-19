@@ -82,11 +82,23 @@ void gameSetupState::enter()
 
     // Set the first surface as the background
     engine->setBackgroundSurface(surfaces[0]);
+
+    //Setup the menu tile manager
+    tm.setTopLeftPositionOnScreen(525, 250);
+    tm.setMapSize(1, 3); // 1 column, 3 rows
+    // Define menu options
+    tm.setMapValue(0, 0, 7); // New Game
+    tm.setMapValue(0, 1, 5); // Load Game
+    tm.setMapValue(0, 2, 6); // Settings
 }
 
 void gameSetupState::foreGroundStrings()
 {
-    // Empty implementation
+    engine->drawForegroundString(525, 200, "Game Setup", engine->tronBlue);
+    tm.drawAllTiles(engine, engine->getForegroundSurface());
+
+
+
 }
 
 void gameSetupState::initObjects()
@@ -101,12 +113,50 @@ void gameSetupState::reset()
 
 void gameSetupState::mouseDown(int iButton, int iX, int iY)
 {
-    // Empty implementation
+    if (iButton == SDL_BUTTON_LEFT) {
+        if (tm.isValidTilePosition(iX, iY)) {
+            int tx = tm.getMapXForScreenX(iX);
+            int ty = tm.getMapYForScreenY(iY);
+
+            // Perform actions based on the selected tile
+            int selectedOption = tm.getMapValue(tx, ty);
+            if (selectedOption == 7) {
+                if (previousSurface != nullptr) {
+                    engine->setBackgroundSurface(previousSurface);
+                }
+                // New Game
+                engine->setState(new gameState(engine));
+
+            }
+            else if (selectedOption == 5) {
+                // Load Game
+                std::cout << "Load Game selected!" << std::endl;
+                // Add load game logic here
+            }
+            else if (selectedOption == 6) {
+                // Settings
+                std::cout << "Settings selected!" << std::endl;
+                // Add settings logic here
+            }
+        }
+    }
 }
 
 void gameSetupState::mainLoopPreUpdate()
 {
-    // Only increment the tick counter, don't reset it
+    // Menu Tile update
+    int mx = engine->getCurrentMouseX();
+    int my = engine->getCurrentMouseY();
+
+    // Highlight the tile if the mouse hovers over it
+    if (tm.isValidTilePosition(mx, my)) {
+        int tx = tm.getMapXForScreenX(mx);
+        int ty = tm.getMapYForScreenY(my);
+        tm.tileSelected(engine, engine->getForegroundSurface(), tx, ty);
+    }
+    else {
+        tm.tileSelected(engine, engine->getForegroundSurface(), -1, -1);
+    }
 
 
 
@@ -143,5 +193,6 @@ gameSetupState::~gameSetupState()
         delete surface;
     }
     surfaces.clear();
+    
 	
 }

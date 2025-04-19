@@ -2,11 +2,12 @@
 #include "header.h"
 #include "Psyeb10States.h"
 #include <vector>
+#include "menuTileManager.h"
 class gameSetupState :
     public Psyeb10States
 {
 public:
-	gameSetupState(Psyeb10Engine* engineParam){
+	gameSetupState(Psyeb10Engine* engineParam) :tm(50, 250, 1, 3) {
 		this->engine = engineParam;
 	}
 	void enter() override;
@@ -23,5 +24,6 @@ private:
 	int currentFrame = 0;                  // Current frame index
 	int animationDelay = 0; 
 	DrawingSurface* previousSurface = nullptr; // Store the previous surface
+	menuTileManager tm;
 };
 
