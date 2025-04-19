@@ -21,6 +21,7 @@ public:
 private:
 	std::vector<DrawingSurface*> surfaces; // Store multiple drawing surfaces
 	int currentFrame = 0;                  // Current frame index
-	int animationDelay = 30; 
+	int animationDelay = 0; 
+	DrawingSurface* previousSurface = nullptr; // Store the previous surface
 };
 

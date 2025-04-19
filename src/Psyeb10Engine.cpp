@@ -75,6 +75,7 @@ void Psyeb10Engine::virtCleanUp() {
 
 void Psyeb10Engine::setState(Psyeb10States* state ) {
 	
+	delete secondState;
 	secondState = currentState;
 	// Remove objects from array
 	clearContents();

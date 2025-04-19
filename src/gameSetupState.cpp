@@ -1,7 +1,8 @@
 #include "gameSetupState.h"
-
+#include"gameState.h"
 void gameSetupState::enter()
 {
+	previousSurface = engine->getBackgroundSurface(); // Store the previous surface
     // Reset animation counters
     currentFrame = 0;
 
@@ -128,7 +129,11 @@ void gameSetupState::reEntry()
 
 void gameSetupState::keyPressed(int iKeyCode)
 {
-    // Empty implementation
+    if (previousSurface != nullptr) {
+        engine->setBackgroundSurface(previousSurface);
+    }
+    engine->setState(new gameState(engine)); // Switch to main menu state
+	engine->redrawDisplay();
 }
 
 gameSetupState::~gameSetupState()
@@ -138,4 +143,5 @@ gameSetupState::~gameSetupState()
         delete surface;
     }
     surfaces.clear();
+	
 }
