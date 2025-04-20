@@ -198,23 +198,28 @@ bool gameState::loadGame() {
 	while (std::getline(statsFile, line)) {
 		if (line.find("# Main Character") != std::string::npos) {
 			// Read main character stats
-			int x, y, speedX, speedY, lives;
+			int x, y, speedX, speedY, lives, lastX, lastY;
 			statsFile >> lineKey >> x >> y;
 			statsFile >> lineKey >> speedX >> speedY;
 			statsFile >> lineKey >> lives;
+			statsFile >> lineKey >> lastX >> lastY;
+			std::cout << lastX << " " << lastY << std::endl;
 
-			mainChar->setPosition(x, y);
+			mainChar->setPosition(x - mainChar->getDrawWidth()/2, y - mainChar->getDrawHeight()/2);
 			mainChar->setSpeed(speedX, speedY);
 			mainChar->setLives(lives);
+			mainChar->setLastTiles(lastX, lastY);
 		}
 		else if (line.find("# Enemy") != std::string::npos) {
 			// Read enemy stats
-			int x, y, speedX, speedY;
+			int x, y, speedX, speedY, lastX, lastY;
 			statsFile >> lineKey >> x >> y;
 			statsFile >> lineKey >> speedX >> speedY;
-
-			enemy->setPosition(x, y);
+			statsFile >> lineKey >> lastX >> lastY;
+			// Have to reverse engineer this so they are drawn in the right place
+			enemy->setPosition(x - enemy->getDrawWidth()/2, y- enemy->getDrawHeight()/2);
 			enemy->setSpeed(speedX, speedY);
+			enemy->setLastTiles(lastX, lastY);
 		}
 		else if (line.find("# Game State") != std::string::npos) {
 			// Read game state stats

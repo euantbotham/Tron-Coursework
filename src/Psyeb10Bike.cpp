@@ -90,3 +90,16 @@ void Psyeb10Bike::setSpeed(int x, int y) {
 	this->speedX = x;
 	this->speedY = y;
 }
+
+int Psyeb10Bike::getLastTileX() const {
+	return lastTileX;
+}
+
+int Psyeb10Bike::getLastTileY() const {
+	return lastTileY;
+}
+
+void Psyeb10Bike::setLastTiles(int x, int y) {
+	this->lastTileX = x;
+	this->lastTileY = y;
+}

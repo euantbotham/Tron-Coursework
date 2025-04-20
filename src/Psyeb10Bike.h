@@ -21,6 +21,9 @@ public:
     int getSpeedX();
     int getSpeedY();
     void setSpeed(int x, int y);
+	int getLastTileX() const;
+	int getLastTileY() const;
+	void setLastTiles(int x, int y);   
 protected:
     int speedX;
     int speedY;

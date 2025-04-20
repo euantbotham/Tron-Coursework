@@ -143,17 +143,21 @@ void pauseState::saveGame()
 	MainCharacter* mainChar = game->getmainChar();
 	if (mainChar) {
 		statsFile << "# Main Character\n";
-		statsFile << "Position: " << mainChar->getXCentre() << "," << mainChar->getYCentre() << "\n";
-		statsFile << "Speed: " << mainChar->getSpeedX() << "," << mainChar->getSpeedY() << "\n";
+		statsFile << "Position: " << mainChar->getXCentre() << " " << mainChar->getYCentre() << "\n";
+		statsFile << "Speed: " << mainChar->getSpeedX() << " " << mainChar->getSpeedY() << "\n";
 		statsFile << "Lives: " << mainChar->getLives() << "\n";
+		// Can't have spaces due to how the file is read
+		statsFile << "LastTiles: " << mainChar->getLastTileX() << " " << mainChar->getLastTileY() << "\n";
 	}
 
 	// Save enemy stats
 	Psyeb10Bike* enemy = game->getEnemy();
 	if (enemy) {
 		statsFile << "# Enemy\n";
-		statsFile << "Position: " << enemy->getXCentre() << "," << enemy->getYCentre() << "\n";
-		statsFile << "Speed: " << enemy->getSpeedX() << "," << enemy->getSpeedY() << "\n";
+		statsFile << "Position: " << enemy->getXCentre() <<  " " << enemy->getYCentre() << "\n";
+		statsFile << "Speed: " << enemy->getSpeedX() << " " << enemy->getSpeedY() << "\n";
+		// Can't have spaces due to how the file is read
+		statsFile << "LastTiles: " << enemy->getLastTileX() << " " << enemy->getLastTileY() << "\n";
 	}
 
 	// Save game state stats

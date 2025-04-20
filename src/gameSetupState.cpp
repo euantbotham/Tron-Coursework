@@ -129,6 +129,7 @@ void gameSetupState::mouseDown(int iButton, int iX, int iY)
 
             }
             else if (selectedOption == 5) {
+				//Set previous surface to the current background
                 if (previousSurface != nullptr) {
                     engine->setBackgroundSurface(previousSurface);
                 }
