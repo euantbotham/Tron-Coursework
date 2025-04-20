@@ -2,6 +2,7 @@
 #include "MainCharacter.h"
 #include <sstream>
 #include <string>
+#include <fstream>
 #include "Psyeb10Enemy.h"
 #include "pauseState.h"
 
@@ -142,14 +143,94 @@ gameState::~gameState()
 	}
 }
 
-MainCharacter* gameState::getmainChar() {
+MainCharacter* gameState::getmainChar()const {
 	return mainChar;
 }
 
-Psyeb10Enemy* gameState::getEnemy() {
+Psyeb10Enemy* gameState::getEnemy() const{
 	return enemy;
 }
 
-int gameState::getGameScore() {
+int gameState::getGameScore()const {
 	return gameScore;
+}
+
+
+bool gameState::loadGame() {
+	// Open the tile data file
+	std::ifstream tileFile("tile_data.csv");
+	if (!tileFile.is_open()) {
+		std::cerr << "Error: Could not open tile_data.csv for reading!" << std::endl;
+		return false;
+	}
+
+	// Read the tile data and populate the TileManager
+	int width = tm.getMapWidth();
+	int height = tm.getMapHeight();
+	int y = 0;
+
+	std::string line;
+	while (std::getline(tileFile, line) && y < height) {
+		std::stringstream ss(line);
+		std::string value;
+		int x = 0;
+
+		while (std::getline(ss, value, ',') && x < width) {
+			int tileValue = std::stoi(value);
+			tm.setMapValue(x, y, tileValue);
+			x++;
+		}
+		y++;
+	}
+	tileFile.close();
+
+
+
+	// Open the game stats file
+	std::ifstream statsFile("game_stats.txt");
+	if (!statsFile.is_open()) {
+		std::cerr << "Error: Could not open game_stats.txt for reading!" << std::endl;
+		return false;
+	}
+
+	// Read and restore game stats
+	std::string lineKey;
+	while (std::getline(statsFile, line)) {
+		if (line.find("# Main Character") != std::string::npos) {
+			// Read main character stats
+			int x, y, speedX, speedY, lives;
+			statsFile >> lineKey >> x >> y;
+			statsFile >> lineKey >> speedX >> speedY;
+			statsFile >> lineKey >> lives;
+
+			mainChar->setPosition(x, y);
+			mainChar->setSpeed(speedX, speedY);
+			mainChar->setLives(lives);
+		}
+		else if (line.find("# Enemy") != std::string::npos) {
+			// Read enemy stats
+			int x, y, speedX, speedY;
+			statsFile >> lineKey >> x >> y;
+			statsFile >> lineKey >> speedX >> speedY;
+
+			enemy->setPosition(x, y);
+			enemy->setSpeed(speedX, speedY);
+		}
+		else if (line.find("# Game State") != std::string::npos) {
+			// Read game state stats
+			int score;
+			statsFile >> lineKey >> score;
+			gameScore = score;
+		}
+	}
+	statsFile.close();
+
+	// Redraw the tiles to the background
+	drawBackground();
+	tm.setTopLeftPositionOnScreen(350, 100);
+	tm.drawAllTiles(engine, engine->getBackgroundSurface());
+	this->isDisplayed = true;
+
+	std::cout << "Game loaded successfully!" << std::endl;
+	return true;
 }

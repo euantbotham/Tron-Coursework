@@ -32,7 +32,7 @@ void mainMenuState::enter()
 
 void mainMenuState::mainLoopPreUpdate()
 {
-        screenOffsetX = (screenOffsetX + 1) % engine->getWindowWidth();
+        screenOffsetX = (screenOffsetX + 2) % engine->getWindowWidth();
         engine->redrawDisplay();
 }
 

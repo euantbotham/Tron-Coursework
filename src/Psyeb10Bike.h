@@ -20,6 +20,7 @@ public:
     void setPaused(bool paused);
     int getSpeedX();
     int getSpeedY();
+    void setSpeed(int x, int y);
 protected:
     int speedX;
     int speedY;

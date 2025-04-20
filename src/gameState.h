@@ -31,9 +31,10 @@ public:
 	void reEntry()override;
 	void drawBackground();
 	~gameState();
-	MainCharacter* getmainChar();
-	Psyeb10Enemy* getEnemy();
-	int getGameScore();
+	MainCharacter* getmainChar() const;
+	Psyeb10Enemy* getEnemy() const;
+	int getGameScore() const;
+	bool loadGame();
 protected:
 	const int gridstartX = 350;
 	const int gridstartY = 100;

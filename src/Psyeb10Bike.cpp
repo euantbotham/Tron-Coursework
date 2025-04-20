@@ -85,3 +85,8 @@ int Psyeb10Bike::getSpeedX() {
 int Psyeb10Bike::getSpeedY() {
 	return speedY;
 }
+
+void Psyeb10Bike::setSpeed(int x, int y) {
+	this->speedX = x;
+	this->speedY = y;
+}

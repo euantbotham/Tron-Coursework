@@ -129,7 +129,26 @@ void gameSetupState::mouseDown(int iButton, int iX, int iY)
 
             }
             else if (selectedOption == 5) {
+                if (previousSurface != nullptr) {
+                    engine->setBackgroundSurface(previousSurface);
+                }
                 // Load Game
+				std::cout << "button clicked" << std::endl;
+                gameState* game = new gameState(engine);
+				std::cout << "Loading game..." << std::endl;
+                engine->lockBackgroundForDrawing();
+                game->initObjects();
+				std::cout << "Game objects initialized!" << std::endl;
+                if (game->loadGame()){
+                    engine->unlockBackgroundForDrawing();
+                    engine->setState(game, false, false);
+                }
+                else {
+                    engine->unlockBackgroundForDrawing();
+                    delete game;
+                    std::cerr << "Error Loading game" << std::endl;
+                }
+          
                 std::cout << "Load Game selected!" << std::endl;
                 // Add load game logic here
             }
@@ -179,11 +198,7 @@ void gameSetupState::reEntry()
 
 void gameSetupState::keyPressed(int iKeyCode)
 {
-    if (previousSurface != nullptr) {
-        engine->setBackgroundSurface(previousSurface);
-    }
-    engine->setState(new gameState(engine), false, true); // Switch to main menu state
-	engine->redrawDisplay();
+    //do Nothing
 }
 
 gameSetupState::~gameSetupState()
