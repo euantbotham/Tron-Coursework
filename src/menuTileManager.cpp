@@ -114,6 +114,40 @@ void menuTileManager::virtDrawTileAt(
         text.c_str(),
         isSelected ? 0xFFA500 : 0x57E2F9, // Use regular cyan color for text
         NULL);
+
+    // Draw the save game image if the map value corresponds to "Save and Quit"
+    if (iMapValue == 2) {
+        SimpleImage saveGameImage;
+        if (isSelected) {
+            saveGameImage = ImageManager::loadImage("saveLogoHighlighted.png", true);
+        }
+        else {
+			saveGameImage = ImageManager::loadImage("saveLogo.png", true);  
+        }
+        saveGameImage.renderImageWithMask(
+            pSurface,
+            0, 0, // Source position in the image (top-left corner)
+            iStartPositionScreenX + 210, 
+            iStartPositionScreenY + 7, 
+            saveGameImage.getWidth(), saveGameImage.getHeight() // Width and height of the image to render
+        );
+	}
+    else if (iMapValue == 4) {
+        SimpleImage saveGameImage;
+        if (isSelected) {
+            saveGameImage = ImageManager::loadImage("exitLogoHighlighted.png", true);
+        }
+        else {
+            saveGameImage = ImageManager::loadImage("exitLogo.png", true);
+        }
+        saveGameImage.renderImageWithMask(
+            pSurface,
+            0, 0, // Source position in the image (top-left corner)
+            iStartPositionScreenX + 210,
+            iStartPositionScreenY + 7,
+            saveGameImage.getWidth(), saveGameImage.getHeight() // Width and height of the image to render
+        );
+    }
 }
 
 void menuTileManager::tileSelected(
