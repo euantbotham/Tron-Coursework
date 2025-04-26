@@ -1,5 +1,6 @@
 #pragma once
 #include "header.h"
+#include "header.h"
 #include "Psyeb10Engine.h"
 #include "Psyeb10TileManager.h"
 
@@ -18,6 +19,7 @@ public:
 	virtual ~Psyeb10States() {}
 	virtual void keyPressed(int iKeyCode);
 	Psyeb10TileManager* getTileManager();
+	virtual void keyUp(int iKeyCode);
 	
 	// Maybe rewrite this better later
 	virtual void copyAllBackgroundBuffer();

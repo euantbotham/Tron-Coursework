@@ -1,11 +1,11 @@
 # Main Character
-Position: 692 355
+Position: 756 380
 Speed: 0 1
 Lives: 2
-LastTiles: 68 50
+LastTiles: 81 55
 # Enemy
-Position: 510 293
+Position: 510 321
 Speed: 0 1
-LastTiles: 32 38
+LastTiles: 32 44
 # Game State
-Score: 250
+Score: 620

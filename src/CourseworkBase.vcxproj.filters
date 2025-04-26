@@ -180,6 +180,12 @@
     <ClInclude Include="gameSetupState.h">
       <Filter>Header Files\states</Filter>
     </ClInclude>
+    <ClInclude Include="scoreBoardState.h">
+      <Filter>Header Files\states</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreBoardFilterPoints.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mainfunction.cpp">
@@ -277,6 +283,12 @@
     </ClCompile>
     <ClCompile Include="gameSetupState.cpp">
       <Filter>Source Files\states</Filter>
+    </ClCompile>
+    <ClCompile Include="scoreBoardState.cpp">
+      <Filter>Source Files\states</Filter>
+    </ClCompile>
+    <ClCompile Include="scoreBoardFilterPoints.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

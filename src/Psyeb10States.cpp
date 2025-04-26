@@ -43,3 +43,7 @@ void Psyeb10States::keyPressed(int iKeyCode)
 {
 	// Handle key press events here in override
 }
+
+void Psyeb10States::keyUp(int iKeyCode) {
+	// Handle event when key up
+}

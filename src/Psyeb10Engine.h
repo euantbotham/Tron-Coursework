@@ -27,6 +27,7 @@ public:
     void virtKeyDown(int iKeyCode) override;
     const int tronBlue = 0x57E2F9;
     void setBackgroundSurface(DrawingSurface* surface);
+	void virtKeyUp(int iKeyCode) override;
 protected:
     Psyeb10States* currentState;
     // Used to store a second state if needed

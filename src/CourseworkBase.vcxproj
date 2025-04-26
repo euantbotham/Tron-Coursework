@@ -110,6 +110,8 @@
     <ClInclude Include="Psyeb10Engine.h" />
     <ClInclude Include="Psyeb10States.h" />
     <ClInclude Include="Psyeb10TileManager.h" />
+    <ClInclude Include="scoreBoardFilterPoints.h" />
+    <ClInclude Include="scoreBoardState.h" />
     <ClInclude Include="SimpleFlashingDragableImageObject.h" />
     <ClInclude Include="StarfieldDemo.h" />
     <ClInclude Include="UtilCollisionDetection.h" />
@@ -162,6 +164,8 @@
     <ClCompile Include="Psyeb10Engine.cpp" />
     <ClCompile Include="Psyeb10States.cpp" />
     <ClCompile Include="Psyeb10TileManager.cpp" />
+    <ClCompile Include="scoreBoardFilterPoints.cpp" />
+    <ClCompile Include="scoreBoardState.cpp" />
     <ClCompile Include="SimpleImage.cpp" />
     <ClCompile Include="SimpleDemo.cpp" />
     <ClCompile Include="StarfieldDemo.cpp" />
