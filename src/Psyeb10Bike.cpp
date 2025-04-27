@@ -16,6 +16,9 @@ Psyeb10Bike::Psyeb10Bike(int xStart, int yStart,
 	engine = dynamic_cast<Psyeb10Engine*>(getEngine());
 	
 	this->bikeValue = bikeVal;
+
+	currentFrame = 0;
+	lastFrameTime = 0;
 }
 
 
@@ -57,7 +60,15 @@ void Psyeb10Bike::virtDoUpdate(int iCurrentTime)
 
 void Psyeb10Bike::virtDraw()
 {
-	//here
+	// cycle through the images in the vector
+	if (engine->getModifiedTime() - lastFrameTime > 150)
+	{
+		currentFrame = (currentFrame + 1) % animationImages.size();
+		lastFrameTime = engine->getModifiedTime();
+	}
+	// Draw the current frame of the animation
+	animationImages[currentFrame].renderImageApplyingMapping(getEngine(), getEngine()->getForegroundSurface(), m_iCurrentScreenX - 20,
+		m_iCurrentScreenY - 20, animationImages[currentFrame].getWidth(), animationImages[currentFrame].getHeight(), &rotation);
 }
 
 //Handle death function for each bike, meant to be overriden

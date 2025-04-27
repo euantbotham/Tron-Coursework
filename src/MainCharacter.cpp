@@ -3,55 +3,34 @@
 #include "Psyeb10Engine.h"
 #include "SimpleImage.h"
 #include "UtilCollisionDetection.h"
+#include <vector>
 
 MainCharacter::MainCharacter(BaseEngine* pEngine) : Psyeb10Bike(650, 400, pEngine, 20, 20, 1)
 {
 	speedX = 0;
 	speedY = -1;
 	lives = 3;
-	image = ImageManager::loadImage("MainCharacter.png", true);
-	image.setTransparencyColour(0);
+	//image = ImageManager::loadImage("MainChar.png", true);
+	//image.setTransparencyColour(0);
+	for (int i = 1; i <= 6; ++i) {
+		std::string imageName = "MainChar" + std::to_string(i) + ".png";
+		SimpleImage image = ImageManager::loadImage(imageName, false);
+		image.setTransparencyColour(0); // Set transparency color if needed
+		animationImages.push_back(image); // Add the image to the vector
+		
+	}
 }
 
 
 
 
-void MainCharacter::virtDraw()
-{
-	//image.renderImageWithMask(getEngine()->getForegroundSurface(), 0, 0, m_iCurrentScreenX - 30, m_iCurrentScreenY, image.getWidth(), image.getHeight());
-	image.renderImageApplyingMapping(getEngine(), getEngine()->getForegroundSurface(), m_iCurrentScreenX - 30, m_iCurrentScreenY - 35, image.getWidth(), image.getHeight(), &rotation);
-	//rotation.setTurn(rotation.None);
-	/*
-	getEngine()->drawForegroundRectangle(
-		m_iCurrentScreenX, m_iCurrentScreenY,
-		m_iCurrentScreenX + m_iDrawWidth - 1,
-		m_iCurrentScreenY + m_iDrawHeight - 1,
-		0x0000ff);
-	getEngine()->drawForegroundRectangle(m_iCurrentScreenX, m_iCurrentScreenY,
-		m_iCurrentScreenX + 3,
-		m_iCurrentScreenY + 3,
-		0x000000);
-	getEngine()->drawForegroundRectangle(m_iCurrentScreenX +m_iDrawWidth -4, m_iCurrentScreenY,
-		m_iCurrentScreenX + m_iDrawWidth -1,
-		m_iCurrentScreenY + 3,
-		0x000000);
-	getEngine()->drawForegroundRectangle(m_iCurrentScreenX, m_iCurrentScreenY + m_iDrawHeight -4,
-		m_iCurrentScreenX + 3,
-		m_iCurrentScreenY + m_iDrawHeight - 1,
-		0x000000);
-	getEngine()->drawForegroundRectangle(m_iCurrentScreenX + m_iDrawWidth - 4, m_iCurrentScreenY + m_iDrawHeight - 4,
-		m_iCurrentScreenX + m_iDrawWidth - 1,
-		m_iCurrentScreenY + m_iDrawHeight - 1,
-		0x000000);
-		*/
-}
+
 
 
 
 void MainCharacter::virtKeyDown(int iKeyCode)
 {
 	switch (iKeyCode) {
-	//TODO Add change image here too.
 	case SDLK_w:
 		rotation << rotation.Up;
 		speedY = -1;

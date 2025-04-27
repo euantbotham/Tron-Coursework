@@ -12,35 +12,16 @@ Psyeb10Enemy::Psyeb10Enemy(BaseEngine* pEngine) : Psyeb10Bike(500,150,pEngine, 2
 {
 	speedX = 0;
 	speedY = 1;
+	rotation << rotation.Down;
+
+    for (int i = 1; i <= 6; ++i) {
+        std::string imageName = "enemy" + std::to_string(i) + ".png";
+        SimpleImage image = ImageManager::loadImage(imageName, false);
+        image.setTransparencyColour(0); // Set transparency color if needed
+        animationImages.push_back(image); // Add the image to the vector
+
+    }
 }
-
-
-void Psyeb10Enemy::virtDraw()
-{
-	getEngine()->drawForegroundRectangle(
-		m_iCurrentScreenX, m_iCurrentScreenY,
-		m_iCurrentScreenX + m_iDrawWidth - 1,
-		m_iCurrentScreenY + m_iDrawHeight - 1,
-		0xFFD700);
-	getEngine()->drawForegroundRectangle(m_iCurrentScreenX, m_iCurrentScreenY,
-		m_iCurrentScreenX + 3,
-		m_iCurrentScreenY + 3,
-		0x000000);
-	getEngine()->drawForegroundRectangle(m_iCurrentScreenX + m_iDrawWidth - 4, m_iCurrentScreenY,
-		m_iCurrentScreenX + m_iDrawWidth - 1,
-		m_iCurrentScreenY + 3,
-		0x000000);
-	getEngine()->drawForegroundRectangle(m_iCurrentScreenX, m_iCurrentScreenY + m_iDrawHeight - 4,
-		m_iCurrentScreenX + 3,
-		m_iCurrentScreenY + m_iDrawHeight - 1,
-		0x000000);
-	getEngine()->drawForegroundRectangle(m_iCurrentScreenX + m_iDrawWidth - 4, m_iCurrentScreenY + m_iDrawHeight - 4,
-		m_iCurrentScreenX + m_iDrawWidth - 1,
-		m_iCurrentScreenY + m_iDrawHeight - 1,
-		0x000000);
-}
-
-
 
 
 
@@ -401,18 +382,22 @@ void Psyeb10Enemy::changeDirection(int direction)
 {
     switch (direction) {
     case 0: // Up
+        rotation << rotation.Up;
         speedX = 0;
         speedY = -1;
         break;
     case 1: // Right
+		rotation << rotation.Right;
         speedX = 1;
         speedY = 0;
         break;
     case 2: // Down
+		rotation << rotation.Down;
         speedX = 0;
         speedY = 1;
         break;
     case 3: // Left
+		rotation << rotation.Left;
         speedX = -1;
         speedY = 0;
         break;

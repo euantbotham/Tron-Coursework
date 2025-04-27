@@ -3,6 +3,8 @@
 #include "Psyeb10Engine.h"
 #include "DisplayableObject.h"
 #include "Psyeb10TileManager.h"
+#include "ImageManager.h"
+#include "ImagePixelMappingRotate90.h"
 //Ignore this class it will be used in my part 2 of the CW as for now I left it in so the code runs but no object is created from this class.
 class Psyeb10Engine;
 
@@ -13,11 +15,11 @@ public:
     Psyeb10Bike(int xStart, int yStart, BaseEngine* pEngine, int iWidth, int iHeigh, int bikeVal);
     void virtDoUpdate(int iCurrentTime) override;
     //TODO see if this can be removed
-    virtual void virtDraw() override;
     virtual void virtKeyDown(int iKeyCode) override;
     virtual void virtHandleDeath();
     virtual void virtPostMoveLogic();
     void setPaused(bool paused);
+	void virtDraw() override;
     int getSpeedX();
     int getSpeedY();
     void setSpeed(int x, int y);
@@ -40,6 +42,11 @@ protected:
 
     // An integer used to assign a value to the tile manager
     int bikeValue;
+
+    ImagePixelMappingRotate90 rotation;
+    std::vector<SimpleImage> animationImages;
+    int lastFrameTime;
+    int currentFrame;
 };
 
 

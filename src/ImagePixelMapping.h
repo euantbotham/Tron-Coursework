@@ -1,7 +1,7 @@
 #pragma once
 
 #include "SimpleImage.h"
-
+#include "DrawingSurface.h"
 /*
 This supports a class which can map coordinates and pixel colours of an image when drawing it
 It can be used for things like rotating or shifting images, or changing the colours of an image - e.g. for transparency.
