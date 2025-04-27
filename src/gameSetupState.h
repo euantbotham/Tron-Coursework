@@ -3,6 +3,7 @@
 #include "Psyeb10States.h"
 #include <vector>
 #include "menuTileManager.h"
+#include <thread>
 class gameSetupState :
     public Psyeb10States
 {
@@ -25,5 +26,11 @@ private:
 	int animationDelay = 0; 
 	DrawingSurface* previousSurface = nullptr; // Store the previous surface
 	menuTileManager tm;
+
+
+	std::thread backgroundThread;
+
+	// Private method for the thread to use
+	void generateAnimationFrames();
 };
 

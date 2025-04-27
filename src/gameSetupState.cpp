@@ -1,5 +1,6 @@
 #include "gameSetupState.h"
 #include"gameState.h"
+#include <thread>
 void gameSetupState::enter()
 {
 	previousSurface = engine->getBackgroundSurface(); // Store the previous surface
@@ -27,6 +28,16 @@ void gameSetupState::enter()
     // Subtle highlight color (slightly lighter)
     const unsigned int highlightColor = 0x1A2635;
 
+	surfaces.reserve(30); // Reserve space for 30 frames
+
+	// Precompute wave base values for all cells for efficiency
+    std::vector<std::vector<float>> waveBase(rows, std::vector<float>(columns));
+    for (int row = 0; row < rows; ++row) {
+        for (int col = 0; col < columns; ++col) {
+            waveBase[row][col] = row * 0.2f + col * 0.2f;
+        }
+    }
+
     // Create and initialize frames for animation
     for (int i = 0; i < 30; ++i) { // More frames for smoother animation
         DrawingSurface* surface = new DrawingSurface(engine);
@@ -42,11 +53,12 @@ void gameSetupState::enter()
         // Draw cells
         for (int row = 0; row < rows; ++row) {
             for (int col = 0; col < columns; ++col) {
+                
                 // Base color for all cells (very dark blue-gray)
                 unsigned int cellColor = 0x101820;
 
                 // Very subtle highlighting based on a moving wave pattern
-                float wave = sin(row * 0.2 + col * 0.2 + phase * 6.28318f);
+                float wave = sin(waveBase[row][col] + phase * 6.28318f);
                 if (wave > 0.7) {
                     // Very slightly lighter for highlighted cells
                     cellColor = 0x141C24;

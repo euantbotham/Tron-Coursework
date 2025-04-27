@@ -1,6 +1,6 @@
  CourseworkBase2020
 
- Timestamp is 680e13ee (Sun Apr 27 12:24:30 2025)
+ Timestamp is 680e346e (Sun Apr 27 14:43:10 2025)
 
  Preferred load address is 00400000
 
@@ -75,25 +75,35 @@
  0000:00000000       ___volatile_metadata       00000000     <absolute>
  0000:00000000       ___x64_code_ranges_to_entry_points 00000000     <absolute>
  0000:00000000       ___x64_code_ranges_to_entry_points_count 00000000     <absolute>
- 0000:000000bb       ___safe_se_handler_count   000000bb     <absolute>
+ 0000:000000c8       ___safe_se_handler_count   000000c8     <absolute>
  0000:00000100       ___guard_flags             00000100     <absolute>
  0000:00000000       ___ImageBase               00400000     <linker-defined>
  0001:00006e20       ?virtSetupBackgroundBuffer@DraggingDemo@@UAEXXZ 00407e20 f   DraggingDemo.obj
  0001:00006f60       ?virtInitialiseObjects@DraggingDemo@@UAEHXZ 00407f60 f   DraggingDemo.obj
  0001:000071c0       ?virtKeyDown@DraggingDemo@@UAEXH@Z 004081c0 f   DraggingDemo.obj
+ 0001:000071e8       __beginthreadex            004081e8 f   ucrtd:ucrtbased.dll
  0001:000071f0       ??0?$_Vector_val@U?$_Simple_types@VSimpleImage@@@std@@@std@@QAE@XZ 004081f0 f i Psyeb10Bike.obj
+ 0001:00007224       ?_Throw_Cpp_error@std@@YAXH@Z 00408224 f   msvcprtd:MSVCP140D.dll
+ 0001:0000722a       __Cnd_do_broadcast_at_thread_exit 0040822a f   msvcprtd:MSVCP140D.dll
  0001:00007230       ??0?$allocator@VSimpleImage@@@std@@QAE@XZ 00408230 f i Psyeb10Bike.obj
  0001:00007240       ??0?$vector@VSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@QAE@XZ 00408240 f i Psyeb10Bike.obj
+ 0001:000072a8       __Thrd_id                  004082a8 f   msvcprtd:MSVCP140D.dll
  0001:000072b0       ??_EPsyeb10Bike@@UAEPAXI@Z 004082b0 f i Psyeb10Bike.obj
  0001:000072b0       ??_GPsyeb10Bike@@UAEPAXI@Z 004082b0 f i Psyeb10Bike.obj
  0001:000072e0       ??$?0$$V@?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@@Z 004082e0 f i DraggingDemo.obj
+ 0001:00007301       __Thrd_join                00408301 f   msvcprtd:MSVCP140D.dll
  0001:00007310       ??$?0$$V@?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@@Z 00408310 f i DraggingDemo.obj
  0001:00007340       ??$?0$$V@?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@@Z 00408340 f i DraggingDemo.obj
  0001:00007370       ??$?0AAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@_N$0A@@?$pair@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@_N@std@@QAE@AAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@1@$$QA_N@Z 00408370 f i DraggingDemo.obj
+ 0001:000073b0       ?get@?$unique_ptr@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@U?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@2@@std@@QBEPAV?$tuple@P8gameSetupState@@AEXXZPAV1@@2@XZ 004083b0 f i gameSetupState.obj
  0001:000073c0       ??$?0AAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@_N$0A@@?$pair@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@_N@std@@QAE@AAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@1@$$QA_N@Z 004083c0 f i DraggingDemo.obj
+ 0001:00007400       ?max_size@?$_Default_allocator_traits@V?$allocator@M@std@@@std@@SAIABV?$allocator@M@2@@Z 00408400 f i gameSetupState.obj
  0001:00007410       ??$?0AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAV?$shared_ptr@VRawImageData@@@1@$0A@@?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@QAE@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@AAV?$shared_ptr@VRawImageData@@@1@@Z 00408410 f i DraggingDemo.obj
+ 0001:00007450       ?max_size@?$_Default_allocator_traits@V?$allocator@PAVDrawingSurface@@@std@@@std@@SAIABV?$allocator@PAVDrawingSurface@@@2@@Z 00408450 f i gameSetupState.obj
  0001:00007460       ??$?0AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAV?$weak_ptr@VRawImageData@@@1@$0A@@?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@QAE@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@AAV?$weak_ptr@VRawImageData@@@1@@Z 00408460 f i DraggingDemo.obj
+ 0001:000074a0       ?max_size@?$_Default_allocator_traits@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@SAIABV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@Z 004084a0 f i gameSetupState.obj
  0001:000074b0       ??$?0ABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@U_Zero_then_variadic_args_t@1@@?$_Compressed_pair@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@V?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@2@$00@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@$$QAU_Zero_then_variadic_args_t@1@@Z 004084b0 f i DraggingDemo.obj
+ 0001:000074f0       ?select_on_container_copy_construction@?$_Default_allocator_traits@V?$allocator@M@std@@@std@@SA?AV?$allocator@M@2@ABV32@@Z 004084f0 f i gameSetupState.obj
  0001:00007500       ??$?0ABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@U_Zero_then_variadic_args_t@1@@?$_Compressed_pair@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@V?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@2@$00@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@$$QAU_Zero_then_variadic_args_t@1@@Z 00408500 f i DraggingDemo.obj
  0001:00007550       ??$?0D@?$allocator@U_Container_proxy@std@@@std@@QAE@ABV?$allocator@D@1@@Z 00408550 f i DraggingDemo.obj
  0001:00007570       ??$?0PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@_N$0A@@?$pair@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@_N@std@@QAE@$$QAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@1@$$QA_N@Z 00408570 f i DraggingDemo.obj
@@ -110,6 +120,7 @@
  0001:00007940       ??$?0V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@1@$0A@@?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@QAE@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@1@@Z 00408940 f i DraggingDemo.obj
  0001:000079a0       ??$?0V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@1@$0A@@?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@QAE@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@@Z 004089a0 f i DraggingDemo.obj
  0001:00007a00       ??$?0VRawImageData@@$0A@@?$shared_ptr@VRawImageData@@@std@@QAE@PAVRawImageData@@@Z 00408a00 f i DraggingDemo.obj
+ 0001:00007ac0       ?clearContents@DisplayableObjectContainer@@QAEXXZ 00408ac0 f i Psyeb10Engine.obj
  0001:00007af0       ??$?0VRawImageData@@$0A@@?$weak_ptr@VRawImageData@@@std@@QAE@ABV?$shared_ptr@VRawImageData@@@1@@Z 00408af0 f i DraggingDemo.obj
  0001:00007b20       ??$?6DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z 00408b20 f i DraggingDemo.obj
  0001:00007b50       ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00408b50 f i DraggingDemo.obj
@@ -124,8 +135,11 @@
  0001:00008050       ??$_Allocate_at_least_helper@V?$allocator@PAVDisplayableObject@@@std@@@std@@YAPAPAVDisplayableObject@@AAV?$allocator@PAVDisplayableObject@@@0@AAI@Z 00409050 f i DraggingDemo.obj
  0001:00008070       ??$_Allocate_for_capacity@$0A@@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@CAPADAAV?$allocator@D@1@AAI@Z 00409070 f i DraggingDemo.obj
  0001:000080c0       ??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPAXI@Z 004090c0 f i DraggingDemo.obj
+ 0001:00008180       ??$?0AAPAV?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@?$_Compressed_pair@U?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@std@@PAV?$tuple@P8gameSetupState@@AEXXZPAV1@@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@AAPAV?$tuple@P8gameSetupState@@AEXXZPAV1@@1@@Z 00409180 f i gameSetupState.obj
  0001:000081b0       ??$_Buyheadnode@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@SAPAU01@AAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@@Z 004091b0 f i DraggingDemo.obj
+ 0001:00008210       ??$move@AAPAM@std@@YA$$QAPAMAAPAM@Z 00409210 f i gameSetupState.obj
  0001:00008230       ??$_Buyheadnode@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@SAPAU01@AAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@@Z 00409230 f i DraggingDemo.obj
+ 0001:00008290       ??$move@AAPAPAVDrawingSurface@@@std@@YA$$QAPAPAVDrawingSurface@@AAPAPAV1@@Z 00409290 f i gameSetupState.obj
  0001:000082b0       ??$_Construct@$00PBD@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXQBDI@Z 004092b0 f i DraggingDemo.obj
  0001:00008450       ??1?$vector@VSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@QAE@XZ 00409450 f i MainCharacter.obj
  0001:000084b0       ??$_Construct@$01PBD@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXQBDI@Z 004094b0 f i DraggingDemo.obj
@@ -141,8 +155,10 @@
  0001:00008900       ??$_Convert_size@II@std@@YAII@Z 00409900 f i DraggingDemo.obj
  0001:00008910       ??$_Copy_construct_from@VRawImageData@@@?$_Ptr_base@VRawImageData@@@std@@IAEXABV?$shared_ptr@VRawImageData@@@1@@Z 00409910 f i DraggingDemo.obj
  0001:00008950       ??$_Copy_memmove@PAPAVDisplayableObject@@PAPAV1@@std@@YAPAPAVDisplayableObject@@PAPAV1@00@Z 00409950 f i DraggingDemo.obj
+ 0001:000089c0       ??1Psyeb10States@@UAE@XZ   004099c0 f i gameSetupState.obj
  0001:000089e0       ??$_Copy_memmove_tail@PAPAVDisplayableObject@@@std@@YAPAPAVDisplayableObject@@QBDQAPAV1@II@Z 004099e0 f i DraggingDemo.obj
  0001:00008a30       ??$_Deallocate@$07@std@@YAXPAXI@Z 00409a30 f i DraggingDemo.obj
+ 0001:00008a90       ??1Psyeb10TileManager@@UAE@XZ 00409a90 f i gameSetupState.obj
  0001:00008ab0       ??$_Deallocate_plain@V?$allocator@U_Container_proxy@std@@@std@@@std@@YAXAAV?$allocator@U_Container_proxy@std@@@0@QAU_Container_proxy@0@@Z 00409ab0 f i DraggingDemo.obj
  0001:00008ad0       ??$_Debug_lt_pred@ABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@ABV32@@std@@YA_NABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@0@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@1@Z 00409ad0 f i DraggingDemo.obj
  0001:00008b60       ?size@?$vector@VSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@QBEIXZ 00409b60 f i Psyeb10Bike.obj
@@ -155,13 +171,17 @@
  0001:00008ce0       ?insert@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@IQBD@Z 00409ce0 f i MainCharacter.obj
  0001:00008d20       ??$_Emplace@U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IAE?AU?$pair@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@_N@1@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@@Z 00409d20 f i DraggingDemo.obj
  0001:00008e10       ?push_back@?$vector@VSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@QAEXABVSimpleImage@@@Z 00409e10 f i MainCharacter.obj
+ 0001:00008e30       ?_Release@?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QAEPAMXZ 00409e30 f i gameSetupState.obj
  0001:00008e50       ??$_Emplace_back@$$V@?$_Uninitialized_backout_al@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAEXXZ 00409e50 f i DraggingDemo.obj
  0001:00008ea0       ??$_Emplace_back@PAVDisplayableObject@@@?$_Uninitialized_backout_al@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAEX$$QAPAVDisplayableObject@@@Z 00409ea0 f i DraggingDemo.obj
  0001:00008f00       ??$_Erase_head@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@@Z 00409f00 f i DraggingDemo.obj
  0001:00008f50       ??$_Erase_tree@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@1@@Z 00409f50 f i DraggingDemo.obj
  0001:00008fb0       ??$_Find@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@ABEPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@1@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z 00409fb0 f i DraggingDemo.obj
  0001:00009010       ??$_Find_lower_bound@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IBE?AU?$_Tree_find_result@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z 0040a010 f i DraggingDemo.obj
+ 0001:000090d0       ??$?0ABV?$allocator@M@std@@$$V@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABV?$allocator@M@1@@Z 0040a0d0 f i gameSetupState.obj
  0001:00009100       ??$_Find_lower_bound@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IBE?AU?$_Tree_find_result@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z 0040a100 f i DraggingDemo.obj
+ 0001:000091c0       ??$_To_address@PAPAVDrawingSurface@@@std@@YA?A_PABQAPAVDrawingSurface@@@Z 0040a1c0 f i gameSetupState.obj
+ 0001:000091d0       ?_Release@?$_Uninitialized_backout_al@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAEPAPAVDrawingSurface@@XZ 0040a1d0 f i gameSetupState.obj
  0001:000091f0       ??$_Freenode0@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@PAU01@@Z 0040a1f0 f i DraggingDemo.obj
  0001:00009250       ??$_Freenode@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@PAU01@@Z 0040a250 f i DraggingDemo.obj
  0001:000092d0       ??$_Get_size_of_n@$00@std@@YAII@Z 0040a2d0 f i DraggingDemo.obj
@@ -171,6 +191,8 @@
  0001:000093b0       ??$_Get_unwrapped@ABQAPAVDisplayableObject@@@std@@YA?A_TABQAPAVDisplayableObject@@@Z 0040a3b0 f i DraggingDemo.obj
  0001:000093c0       ??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z 0040a3c0 f i DraggingDemo.obj
  0001:00009660       ??$_Destroy_range@V?$allocator@VSimpleImage@@@std@@@std@@YAXPAVSimpleImage@@QAV1@AAV?$allocator@VSimpleImage@@@0@@Z 0040a660 f i MainCharacter.obj
+ 0001:000096d0       ??$_Unfancy@M@std@@YAPAMPAM@Z 0040a6d0 f i gameSetupState.obj
+ 0001:000096e0       ?_Unchecked_end@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAEPAPAVDrawingSurface@@XZ 0040a6e0 f i gameSetupState.obj
  0001:00009700       ??$_Kfn@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@SAABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@ABU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@1@@Z 0040a700 f i DraggingDemo.obj
  0001:00009710       ??$_Kfn@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@SAABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@ABU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@@Z 0040a710 f i DraggingDemo.obj
  0001:00009720       ??$_Lower_bound_duplicate@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IBE_NQAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@1@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z 0040a720 f i DraggingDemo.obj
@@ -178,6 +200,8 @@
  0001:00009800       ??$_Max_limit@H@std@@YAHXZ 0040a800 f i DraggingDemo.obj
  0001:00009820       ??$_Move_construct_from@VRawImageData@@@?$_Ptr_base@VRawImageData@@@std@@IAEX$$QAV01@@Z 0040a820 f i DraggingDemo.obj
  0001:00009870       ??$_Resize@U_Value_init_tag@std@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEXIABU_Value_init_tag@1@@Z 0040a870 f i DraggingDemo.obj
+ 0001:00009970       ??$_Unfancy@PAVDrawingSurface@@@std@@YAPAPAVDrawingSurface@@PAPAV1@@Z 0040a970 f i gameSetupState.obj
+ 0001:00009980       ?getBackgroundSurface@BaseEngine@@QAEPAVDrawingSurface@@XZ 0040a980 f i gameSetupState.obj
  0001:000099a0       ??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEXIABU_Value_init_tag@1@@Z 0040a9a0 f i DraggingDemo.obj
  0001:00009ae0       ?checkRectangles@CollisionDetection@@SA_NHHHHHHHH@Z 0040aae0 f i MainCharacter.obj
  0001:00009b30       ??$_Set_ptr_rep_and_enable_shared@VRawImageData@@@?$shared_ptr@VRawImageData@@@std@@AAEXQAVRawImageData@@QAV_Ref_count_base@1@@Z 0040ab30 f i DraggingDemo.obj
@@ -187,7 +211,9 @@
  0001:00009bf0       ??$_Unfancy@PAVDisplayableObject@@@std@@YAPAPAVDisplayableObject@@PAPAV1@@Z 0040abf0 f i DraggingDemo.obj
  0001:00009c00       ??$_Unfancy@U_Container_proxy@std@@@std@@YAPAU_Container_proxy@0@PAU10@@Z 0040ac00 f i DraggingDemo.obj
  0001:00009c10       ??$_Uninitialized_move@PAPAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@YAPAPAVDisplayableObject@@QAPAV1@0PAPAV1@AAV?$allocator@PAVDisplayableObject@@@0@@Z 0040ac10 f i DraggingDemo.obj
+ 0001:00009cf0       ??$?0V?$allocator@M@std@@$$V@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@$$QAV?$allocator@M@1@@Z 0040acf0 f i gameSetupState.obj
  0001:00009d30       ??$_Uninitialized_value_construct_n@V?$allocator@PAVDisplayableObject@@@std@@@std@@YAPAPAVDisplayableObject@@PAPAV1@IAAV?$allocator@PAVDisplayableObject@@@0@@Z 0040ad30 f i DraggingDemo.obj
+ 0001:00009df0       ??$exchange@PAU_Container_proxy@std@@$$T@std@@YAPAU_Container_proxy@0@AAPAU10@$$QA$$T@Z 0040adf0 f i gameSetupState.obj
  0001:00009e20       ??$_Weakly_construct_from@VRawImageData@@@?$_Ptr_base@VRawImageData@@@std@@IAEXABV01@@Z 0040ae20 f i DraggingDemo.obj
  0001:00009e70       ??$_Zero_range@PAPAVDisplayableObject@@@std@@YAPAPAVDisplayableObject@@QAPAV1@0@Z 0040ae70 f i DraggingDemo.obj
  0001:00009ec0       ??$addressof@$$CBV?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@YAPBV?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@0@ABV10@@Z 0040aec0 f i DraggingDemo.obj
@@ -210,9 +236,12 @@
  0001:0000a0a0       ??$destroy@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@?$_Default_allocator_traits@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@QAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@1@@Z 0040b0a0 f i DraggingDemo.obj
  0001:0000a0c0       ??$destroy@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@?$_Default_allocator_traits@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@QAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@@Z 0040b0c0 f i DraggingDemo.obj
  0001:0000a0e0       ??$emplace@U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@_N@1@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@1@@Z 0040b0e0 f i DraggingDemo.obj
+ 0001:0000a150       ?getCurrentMouseX@BaseEngine@@QBEHXZ 0040b150 f i gameSetupState.obj
  0001:0000a170       ??$emplace@U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@_N@1@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@@Z 0040b170 f i DraggingDemo.obj
+ 0001:0000a1e0       ?getCurrentMouseY@BaseEngine@@QBEHXZ 0040b1e0 f i gameSetupState.obj
  0001:0000a200       ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z 0040b200 f i DraggingDemo.obj
  0001:0000a240       ??$erase@V?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@$0A@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@1@V21@@Z 0040b240 f i DraggingDemo.obj
+ 0001:0000a350       ??$_Construct_in_place@PAVDrawingSurface@@ABQAV1@@std@@YAXAAPAVDrawingSurface@@ABQAV1@@Z 0040b350 f i gameSetupState.obj
  0001:0000a390       ??$exchange@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@$$T@std@@YAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@0@AAPAU10@$$QA$$T@Z 0040b390 f i DraggingDemo.obj
  0001:0000a3c0       ??$exchange@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@$$T@std@@YAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@0@AAPAU10@$$QA$$T@Z 0040b3c0 f i DraggingDemo.obj
  0001:0000a3f0       ??$exchange@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@AAPAU12@@std@@YAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@0@AAPAU10@0@Z 0040b3f0 f i DraggingDemo.obj
@@ -273,7 +302,9 @@
  0001:0000ab80       ??0?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@QAE@ABV01@@Z 0040bb80 f i DraggingDemo.obj
  0001:0000abb0       ??0?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@QAE@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@1@PBV?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@1@@Z 0040bbb0 f i DraggingDemo.obj
  0001:0000abe0       ??0?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@@Z 0040bbe0 f i DraggingDemo.obj
+ 0001:0000ac40       ??1menuTileManager@@UAE@XZ 0040bc40 f i gameSetupState.obj
  0001:0000ac60       ??0?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@@Z 0040bc60 f i DraggingDemo.obj
+ 0001:0000acc0       ?getTileHeight@TileManager@@QBEHXZ 0040bcc0 f i gameSetupState.obj
  0001:0000ace0       ??0?$_Tree_unchecked_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@U_Iterator_base12@2@@std@@QAE@$$QAV01@@Z 0040bce0 f i DraggingDemo.obj
  0001:0000ad20       ??0?$_Tree_unchecked_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@U_Iterator_base12@2@@std@@QAE@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@1@PBV?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@1@@Z 0040bd20 f i DraggingDemo.obj
  0001:0000ad60       ??0?$_Tree_unchecked_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@U_Iterator_base0@2@@std@@QAE@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@1@PBV?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@1@@Z 0040bd60 f i DraggingDemo.obj
@@ -288,8 +319,11 @@
  0001:0000af60       ??0?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@QAE@XZ 0040bf60 f i DraggingDemo.obj
  0001:0000af80       ??0?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@QAE@XZ 0040bf80 f i DraggingDemo.obj
  0001:0000afa0       ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@$$QAV01@@Z 0040bfa0 f i DraggingDemo.obj
+ 0001:0000b030       ?getTileWidth@TileManager@@QBEHXZ 0040c030 f i gameSetupState.obj
  0001:0000b050       ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@ABV01@@Z 0040c050 f i DraggingDemo.obj
+ 0001:0000b0e0       ?get_deleter@?$unique_ptr@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@U?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@2@@std@@QAEAAU?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@2@XZ 0040c0e0 f i gameSetupState.obj
  0001:0000b100       ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z 0040c100 f i DraggingDemo.obj
+ 0001:0000b180       ?lockBackgroundForDrawing@BaseEngine@@QAEXXZ 0040c180 f i gameSetupState.obj
  0001:0000b1a0       ??0?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@2@@std@@QAE@XZ 0040c1a0 f i DraggingDemo.obj
  0001:0000b1d0       ??0?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@@std@@QAE@XZ 0040c1d0 f i DraggingDemo.obj
  0001:0000b200       ??0?$shared_ptr@VRawImageData@@@std@@QAE@$$QAV01@@Z 0040c200 f i DraggingDemo.obj
@@ -299,13 +333,19 @@
  0001:0000b2b0       ??0?$weak_ptr@VRawImageData@@@std@@QAE@$$QAV01@@Z 0040c2b0 f i DraggingDemo.obj
  0001:0000b2f0       ??0?$weak_ptr@VRawImageData@@@std@@QAE@ABV01@@Z 0040c2f0 f i DraggingDemo.obj
  0001:0000b320       ??0DragableBaseClassObject@@QAE@HHPAVBaseEngine@@HH_N@Z 0040c320 f i DraggingDemo.obj
+ 0001:0000b390       ?push_back@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAEXABQAVDrawingSurface@@@Z 0040c390 f i gameSetupState.obj
  0001:0000b3b0       ??0DragableBaseClassObject@@QAE@PAVBaseEngine@@HH_N@Z 0040c3b0 f i DraggingDemo.obj
  0001:0000b430       ??0DragableImageObject@@QAE@HHPAVBaseEngine@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N2@Z 0040c430 f i DraggingDemo.obj
+ 0001:0000b580       ??$_Copy_memmove_tail@PAPAVDrawingSurface@@@std@@YAPAPAVDrawingSurface@@QBDQAPAV1@II@Z 0040c580 f i gameSetupState.obj
  0001:0000b5d0       ??0DragableObject@@QAE@HHPAVBaseEngine@@HH_N1@Z 0040c5d0 f i DraggingDemo.obj
+ 0001:0000b660       ?setTopLeftPositionOnScreen@TileManager@@QAEXHH@Z 0040c660 f i gameSetupState.obj
  0001:0000b680       ??0DragableObject@@QAE@PAVBaseEngine@@HH_N1@Z 0040c680 f i DraggingDemo.obj
+ 0001:0000b710       ?unlockBackgroundForDrawing@BaseEngine@@QAEXXZ 0040c710 f i gameSetupState.obj
  0001:0000b730       ??0ImageManager@@QAE@XZ    0040c730 f i DraggingDemo.obj
  0001:0000b7a0       ??0ImageObject@@QAE@HHPAVBaseEngine@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N2@Z 0040c7a0 f i DraggingDemo.obj
+ 0001:0000b8e0       ??$_Emplace_back@$$V@?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QAEXXZ 0040c8e0 f i gameSetupState.obj
  0001:0000b930       ??0RawImageData@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 0040c930 f i DraggingDemo.obj
+ 0001:0000b9c0       ?_Get_first@?$_Compressed_pair@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@V?$_Vector_val@U?$_Simple_types@V?$vector@MV?$allocator@M@std@@@std@@@std@@@2@$00@std@@QAEAAV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@XZ 0040c9c0 f i gameSetupState.obj
  0001:0000b9e0       ??0_Basic_container_proxy_ptr12@std@@IAE@XZ 0040c9e0 f i DraggingDemo.obj
  0001:0000ba00       ??0_Bxty@?$_String_val@U?$_Simple_types@D@std@@@std@@QAE@XZ 0040ca00 f i DraggingDemo.obj
  0001:0000ba30       ??0_Container_base12@std@@QAE@XZ 0040ca30 f i DraggingDemo.obj
@@ -321,6 +361,7 @@
  0001:0000bc40       ??0exception@std@@QAE@ABV01@@Z 0040cc40 f i DraggingDemo.obj
  0001:0000bc90       ??0exception@std@@QAE@QBDH@Z 0040cc90 f i DraggingDemo.obj
  0001:0000bcd0       ??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 0040ccd0 f i DraggingDemo.obj
+ 0001:0000bda0       ??$exchange@PAV?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@$$T@std@@YAPAV?$tuple@P8gameSetupState@@AEXXZPAV1@@0@AAPAV10@$$QA$$T@Z 0040cda0 f i gameSetupState.obj
  0001:0000bdd0       ??1?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@XZ 0040cdd0 f i DraggingDemo.obj
  0001:0000be10       ??1?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@XZ 0040ce10 f i DraggingDemo.obj
  0001:0000be50       ??1?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QAE@XZ 0040ce50 f i DraggingDemo.obj
@@ -334,7 +375,9 @@
  0001:0000bfe0       ??1?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@QAE@XZ 0040cfe0 f i DraggingDemo.obj
  0001:0000c000       ??1?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@QAE@XZ 0040d000 f i DraggingDemo.obj
  0001:0000c020       ??1?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@XZ 0040d020 f i DraggingDemo.obj
+ 0001:0000c0c0       ??$forward@ABV?$vector@MV?$allocator@M@std@@@std@@@std@@YAABV?$vector@MV?$allocator@M@std@@@0@ABV10@@Z 0040d0c0 f i gameSetupState.obj
  0001:0000c0f0       ??1?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@XZ 0040d0f0 f i DraggingDemo.obj
+ 0001:0000c190       ??$forward@P8gameSetupState@@AEXXZ@std@@YA$$QAP8gameSetupState@@AEXXZAAP81@AEXXZ@Z 0040d190 f i gameSetupState.obj
  0001:0000c1c0       ??1?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@XZ 0040d1c0 f i DraggingDemo.obj
  0001:0000c1e0       ??1?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@XZ 0040d1e0 f i DraggingDemo.obj
  0001:0000c200       ??1?$_Tree_unchecked_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@U_Iterator_base12@2@@std@@QAE@XZ 0040d200 f i DraggingDemo.obj
@@ -355,12 +398,14 @@
  0001:0000c490       ??1DragableObject@@UAE@XZ  0040d490 f i DraggingDemo.obj
  0001:0000c4b0       ??1ImageObject@@UAE@XZ     0040d4b0 f i DraggingDemo.obj
  0001:0000c4e0       ??1RawImageData@@QAE@XZ    0040d4e0 f i DraggingDemo.obj
+ 0001:0000c530       ?_Get_first@?$_Compressed_pair@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@V?$_Vector_val@U?$_Simple_types@V?$vector@MV?$allocator@M@std@@@std@@@std@@@2@$00@std@@QBEABV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@XZ 0040d530 f i gameSetupState.obj
  0001:0000c550       ??1SimpleImage@@QAE@XZ     0040d550 f i DraggingDemo.obj
  0001:0000c5a0       ??1_Bxty@?$_String_val@U?$_Simple_types@D@std@@@std@@QAE@XZ 0040d5a0 f i DraggingDemo.obj
  0001:0000c5b0       ??1_Iterator_base12@std@@QAE@XZ 0040d5b0 f i DraggingDemo.obj
  0001:0000c5d0       ??1_Reallocation_guard@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAE@XZ 0040d5d0 f i DraggingDemo.obj
  0001:0000c630       ??1_Ref_count_base@std@@UAE@XZ 0040d630 f i DraggingDemo.obj
  0001:0000c640       ??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 0040d640 f i DraggingDemo.obj
+ 0001:0000c6b0       ?_Getal@?$vector@MV?$allocator@M@std@@@std@@AAEAAV?$allocator@M@2@XZ 0040d6b0 f i gameSetupState.obj
  0001:0000c6d0       ??1bad_alloc@std@@UAE@XZ   0040d6d0 f i DraggingDemo.obj
  0001:0000c6f0       ??1bad_array_new_length@std@@UAE@XZ 0040d6f0 f i DraggingDemo.obj
  0001:0000c710       ??1exception@std@@UAE@XZ   0040d710 f i DraggingDemo.obj
@@ -368,11 +413,14 @@
  0001:0000c7a0       ??2@YAPAXIPAX@Z            0040d7a0 f i DraggingDemo.obj
  0001:0000c7b0       ??4_Iterator_base12@std@@QAEAAU01@ABU01@@Z 0040d7b0 f i DraggingDemo.obj
  0001:0000c7e0       ??8?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@QBE_NABV01@@Z 0040d7e0 f i DraggingDemo.obj
+ 0001:0000c880       ?_Getal@?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@AAEAAV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@XZ 0040d880 f i gameSetupState.obj
  0001:0000c8a0       ??9?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@QBE_NABV01@@Z 0040d8a0 f i DraggingDemo.obj
  0001:0000c8f0       ??A?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAEAAPAVDisplayableObject@@I@Z 0040d8f0 f i DraggingDemo.obj
+ 0001:0000c980       ?_Getal@?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@ABEABV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@XZ 0040d980 f i gameSetupState.obj
  0001:0000c9a0       ??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QBE_NXZ 0040d9a0 f i DraggingDemo.obj
  0001:0000c9c0       ??C?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@QBEPAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@XZ 0040d9c0 f i DraggingDemo.obj
  0001:0000c9f0       ??D?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@QBEABU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@XZ 0040d9f0 f i DraggingDemo.obj
+ 0001:0000cad0       ??$get@$0A@P8gameSetupState@@AEXXZPAV1@@std@@YAAAP8gameSetupState@@AEXXZAAV?$tuple@P8gameSetupState@@AEXXZPAV1@@0@@Z 0040dad0 f i gameSetupState.obj
  0001:0000cb00       ??D?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@QBEAAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@1@XZ 0040db00 f i DraggingDemo.obj
  0001:0000cb20       ??E?$_Tree_unchecked_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@U_Iterator_base0@2@@std@@QAEAAV01@XZ 0040db20 f i DraggingDemo.obj
  0001:0000cbb0       ??R?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@QBE_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@0@Z 0040dbb0 f i DraggingDemo.obj
@@ -397,12 +445,15 @@
  0001:0000ce60       ??_Gexception@std@@UAEPAXI@Z 0040de60 f i DraggingDemo.obj
  0001:0000cea0       ?_Activate_SSO_buffer@?$_String_val@U?$_Simple_types@D@std@@@std@@QAEXXZ 0040dea0 f i DraggingDemo.obj
  0001:0000ceb0       ?_Adjust_manually_vector_aligned@std@@YAXAAPAXAAI@Z 0040deb0 f i DraggingDemo.obj
+ 0001:0000cfc0       ??$exchange@U_Thrd_t@@U1@@std@@YA?AU_Thrd_t@@AAU1@$$QAU1@@Z 0040dfc0 f i gameSetupState.obj
  0001:0000d000       ?_Adopt@_Iterator_base0@std@@QAEXPBX@Z 0040e000 f i DraggingDemo.obj
  0001:0000d010       ?_Adopt@_Iterator_base12@std@@QAEXPBU_Container_base12@2@@Z 0040e010 f i DraggingDemo.obj
  0001:0000d030       ?_Adopt_locked@_Iterator_base12@std@@AAEXPBU_Container_base12@2@@Z 0040e030 f i DraggingDemo.obj
  0001:0000d070       ?_Adopt_unlocked@_Iterator_base12@std@@AAEXPBU_Container_base12@2@@Z 0040e070 f i DraggingDemo.obj
  0001:0000d0f0       ?_Alloc_sentinel_and_proxy@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IAEXXZ 0040e0f0 f i DraggingDemo.obj
+ 0001:0000d190       ??0?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QAE@PAMAAV?$allocator@M@1@@Z 0040e190 f i gameSetupState.obj
  0001:0000d1c0       ?_Alloc_sentinel_and_proxy@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IAEXXZ 0040e1c0 f i DraggingDemo.obj
+ 0001:0000d260       ??0?$allocator@M@std@@QAE@XZ 0040e260 f i gameSetupState.obj
  0001:0000d290       ?_Allocate@?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAEXXZ 0040e290 f i DraggingDemo.obj
  0001:0000d2c0       ?_Allocate@?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAEXXZ 0040e2c0 f i DraggingDemo.obj
  0001:0000d2f0       ?_Allocate@_Default_allocate_traits@std@@SAPAXI@Z 0040e2f0 f i DraggingDemo.obj
@@ -411,6 +462,7 @@
  0001:0000d3a0       ?_Calculate_growth@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@CAIIII@Z 0040e3a0 f i DraggingDemo.obj
  0001:0000d410       ?_Calculate_growth@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@ABEII@Z 0040e410 f i DraggingDemo.obj
  0001:0000d480       ?_Change_array@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEXQAPAVDisplayableObject@@II@Z 0040e480 f i DraggingDemo.obj
+ 0001:0000d530       ?_Xlength@?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@CAXXZ 0040e530 f i gameSetupState.obj
  0001:0000d550       ?_Check_grow_by_1@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IAEXXZ 0040e550 f i DraggingDemo.obj
  0001:0000d590       ?_Check_grow_by_1@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IAEXXZ 0040e590 f i DraggingDemo.obj
  0001:0000d5d0       ?_Deallocate_for_capacity@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@CAXAAV?$allocator@D@2@QADI@Z 0040e5d0 f i DraggingDemo.obj
@@ -425,6 +477,7 @@
  0001:0000d7f0       ?_Extract@?$_In_place_key_extract_map_impl@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@2@@std@@SAABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@ABU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@2@@Z 0040e7f0 f i DraggingDemo.obj
  0001:0000d800       ?_Extract@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@2@V?$_Tree_unchecked_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@U_Iterator_base0@2@@2@@Z 0040e800 f i DraggingDemo.obj
  0001:0000dc30       ??$?0PAD$0A@@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PAD0ABV?$allocator@D@1@@Z 0040ec30 f i MainCharacter.obj
+ 0001:0000dcf0       ??$_Emplace_back@AAM@?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QAEXAAM@Z 0040ecf0 f i gameSetupState.obj
  0001:0000dd40       ?_Get_deleter@_Ref_count_base@std@@UBEPAXABVtype_info@@@Z 0040ed40 f i DraggingDemo.obj
  0001:0000dd60       ?_Get_first@?$_Compressed_pair@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@V?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@2@$00@2@$00@std@@QBEABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@XZ 0040ed60 f i DraggingDemo.obj
  0001:0000dd80       ?_Get_first@?$_Compressed_pair@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@V?$_Compressed_pair@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@2@$00@2@$00@std@@QBEABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@XZ 0040ed80 f i DraggingDemo.obj
@@ -459,8 +512,10 @@
  0001:0000e390       ??$_Emplace_back_with_unused_capacity@ABVSimpleImage@@@?$vector@VSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@AAEAAVSimpleImage@@ABV2@@Z 0040f390 f i MainCharacter.obj
  0001:0000e410       ?_Insert_node@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@2@U?$_Tree_id@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@2@QAU32@@Z 0040f410 f i DraggingDemo.obj
  0001:0000e620       ??R<lambda_ab246b20b9526e2ef7792587e4298a77>@@QBE@QADQBDI1I@Z 0040f620 f i MainCharacter.obj
+ 0001:0000e680       ??$_Allocate_at_least_helper@V?$allocator@M@std@@@std@@YAPAMAAV?$allocator@M@0@AAI@Z 0040f680 f i gameSetupState.obj
  0001:0000e6a0       ?_Large_mode_engaged@?$_String_val@U?$_Simple_types@D@std@@@std@@QBE_NXZ 0040f6a0 f i DraggingDemo.obj
  0001:0000e6e0       ?_Lrotate@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEXPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@2@@Z 0040f6e0 f i DraggingDemo.obj
+ 0001:0000e780       ??$_Allocate_at_least_helper@V?$allocator@PAVDrawingSurface@@@std@@@std@@YAPAPAVDrawingSurface@@AAV?$allocator@PAVDrawingSurface@@@0@AAI@Z 0040f780 f i gameSetupState.obj
  0001:0000e7a0       ?_Lrotate@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEXPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@2@@Z 0040f7a0 f i DraggingDemo.obj
  0001:0000e860       ?_Max@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@SAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@2@PAU32@@Z 0040f860 f i DraggingDemo.obj
  0001:0000e890       ?_Min@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@SAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@2@PAU32@@Z 0040f890 f i DraggingDemo.obj
@@ -470,6 +525,7 @@
  0001:0000e970       ?_Orphan_all_unlocked_v3@_Container_base12@std@@AAEXXZ 0040f970 f i DraggingDemo.obj
  0001:0000e9e0       ?_Orphan_me_locked_v3@_Iterator_base12@std@@AAEXXZ 0040f9e0 f i DraggingDemo.obj
  0001:0000ea20       ?_Orphan_me_unlocked_v3@_Iterator_base12@std@@AAEXXZ 0040fa20 f i DraggingDemo.obj
+ 0001:0000ead0       ??0?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@QAE@XZ 0040fad0 f i gameSetupState.obj
  0001:0000eb00       ?_Orphan_ptr@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEXQAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@2@@Z 0040fb00 f i DraggingDemo.obj
  0001:0000ebb0       ?_Orphan_range@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@ABEXPAPAVDisplayableObject@@0@Z 0040fbb0 f i DraggingDemo.obj
  0001:0000ebe0       ?_Orphan_range_locked@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@ABEXPAPAVDisplayableObject@@0@Z 0040fbe0 f i DraggingDemo.obj
@@ -479,7 +535,9 @@
  0001:0000ed50       ?_Release@?$_Uninitialized_backout_al@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAEPAPAVDisplayableObject@@XZ 0040fd50 f i DraggingDemo.obj
  0001:0000ed80       ?_Release@_Basic_container_proxy_ptr12@std@@QAEXXZ 0040fd80 f i DraggingDemo.obj
  0001:0000eda0       ?_Rrotate@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEXPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@2@@Z 0040fda0 f i DraggingDemo.obj
+ 0001:0000ee40       ??1?$_Uninitialized_backout_al@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@QAE@XZ 0040fe40 f i gameSetupState.obj
  0001:0000ee70       ?_Rrotate@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEXPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@2@@Z 0040fe70 f i DraggingDemo.obj
+ 0001:0000ef10       ??1?$unique_ptr@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@U?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@2@@std@@QAE@XZ 0040ff10 f i gameSetupState.obj
  0001:0000ef40       ?_Swap_proxy_and_iterators@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXAAV12@@Z 0040ff40 f i DraggingDemo.obj
  0001:0000ef60       ?_Swap_proxy_and_iterators@_Container_base12@std@@QAEXAAU12@@Z 0040ff60 f i DraggingDemo.obj
  0001:0000ef80       ?_Swap_proxy_and_iterators_locked@_Container_base12@std@@AAEXAAU12@@Z 0040ff80 f i DraggingDemo.obj
@@ -488,9 +546,11 @@
  0001:0000f040       ?_Take_contents@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXAAV12@@Z 00410040 f i DraggingDemo.obj
  0001:0000f1c0       ??_EMainCharacter@@UAEPAXI@Z 004101c0 f i MainCharacter.obj
  0001:0000f1c0       ??_GMainCharacter@@UAEPAXI@Z 004101c0 f i MainCharacter.obj
+ 0001:0000f1f0       ??1_Simple_reallocation_guard@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAE@XZ 004101f0 f i gameSetupState.obj
  0001:0000f220       ?_Throw_bad_array_new_length@std@@YAXXZ 00410220 f i DraggingDemo.obj
  0001:0000f250       ?_Throw_tree_length_error@std@@YAXXZ 00410250 f i DraggingDemo.obj
  0001:0000f270       ?_Tidy_deallocate@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXXZ 00410270 f i DraggingDemo.obj
+ 0001:0000f300       ??0Psyeb10States@@QAE@XZ   00410300 f i gameSetupState.obj
  0001:0000f330       ?_Unwrapped@?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@std@@QBE?AV?$_Tree_unchecked_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@@2@XZ 00410330 f i DraggingDemo.obj
  0001:0000f370       ?_Use_count@_Ref_count_base@std@@QBEJXZ 00410370 f i DraggingDemo.obj
  0001:0000f390       ?_Xlen_string@std@@YAXXZ   00410390 f i DraggingDemo.obj
@@ -551,8 +611,12 @@
  0001:000104f0       ?isVisible@DisplayableObject@@QBE_NXZ 004114f0 f i DraggingDemo.obj
  0001:00010510       ?length@?$_Narrow_char_traits@DH@std@@SAIQBD@Z 00411510 f i DraggingDemo.obj
  0001:00010530       ?loadAsNew@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@@Z 00411530 f i DraggingDemo.obj
+ 0001:000106b0       ??$forward@AAM@std@@YAAAMAAM@Z 004116b0 f i gameSetupState.obj
+ 0001:000106c0       ??0?$_Uninitialized_backout_al@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAE@PAPAVDrawingSurface@@AAV?$allocator@PAVDrawingSurface@@@1@@Z 004116c0 f i gameSetupState.obj
  0001:00010700       ?loadImage@RawImageData@@QAE_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HHHHH_N@Z 00411700 f i DraggingDemo.obj
  0001:00010990       ??R<lambda_4d79bb85f269e6e8002a4599002d832c>@@QBE@QADQBDII1I@Z 00411990 f i MainCharacter.obj
+ 0001:000109f0       ??$forward@ABV?$allocator@M@std@@@std@@YAABV?$allocator@M@0@ABV10@@Z 004119f0 f i gameSetupState.obj
+ 0001:00010a00       ??1thread@std@@QAE@XZ      00411a00 f i gameSetupState.obj
  0001:00010a30       ?lock@?$weak_ptr@VRawImageData@@@std@@QBE?AV?$shared_ptr@VRawImageData@@@2@XZ 00411a30 f i DraggingDemo.obj
  0001:00010a80       ?max_size@?$_Default_allocator_traits@V?$allocator@D@std@@@std@@SAIABV?$allocator@D@2@@Z 00411a80 f i DraggingDemo.obj
  0001:00010a90       ?max_size@?$_Default_allocator_traits@V?$allocator@PAVDisplayableObject@@@std@@@std@@SAIABV?$allocator@PAVDisplayableObject@@@2@@Z 00411a90 f i DraggingDemo.obj
@@ -626,15 +690,24 @@
  0001:00014720       ??$_Uninitialized_move@PAVSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@YAPAVSimpleImage@@QAV1@0PAV1@AAV?$allocator@VSimpleImage@@@0@@Z 00415720 f i MainCharacter.obj
  0001:000147e0       ?_Get_first@?$_Compressed_pair@V?$allocator@VSimpleImage@@@std@@V?$_Vector_val@U?$_Simple_types@VSimpleImage@@@std@@@2@$00@std@@QAEAAV?$allocator@VSimpleImage@@@2@XZ 004157e0 f i MainCharacter.obj
  0001:000147f0       ?_Orphan_range_locked@?$vector@VSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@ABEXPAVSimpleImage@@0@Z 004157f0 f i MainCharacter.obj
+ 0001:00014860       ??0Psyeb10TileManager@@QAE@XZ 00415860 f i gameSetupState.obj
  0001:00014890       ?_Orphan_range_unlocked@?$vector@VSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@ABEXPAVSimpleImage@@0@Z 00415890 f i MainCharacter.obj
  0001:00014900       ?_Release@?$_Uninitialized_backout_al@V?$allocator@VSimpleImage@@@std@@@std@@QAEPAVSimpleImage@@XZ 00415900 f i MainCharacter.obj
+ 0001:00014920       ??$invoke@P8gameSetupState@@AEXXZPAV1@$$V@std@@YAX$$QAP8gameSetupState@@AEXXZ$$QAPAV1@@Z 00415920 f i gameSetupState.obj
+ 0001:00014940       ??R?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@std@@QBEXPAV?$tuple@P8gameSetupState@@AEXXZPAV1@@1@@Z 00415940 f i gameSetupState.obj
  0001:00014970       ?_Xlength@?$vector@VSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@CAXXZ 00415970 f i MainCharacter.obj
  0001:00014980       ?deallocate@?$allocator@VSimpleImage@@@std@@QAEXQAVSimpleImage@@I@Z 00415980 f i MainCharacter.obj
  0001:00014a10       ?getXCentre@DisplayableObject@@QBEHXZ 00415a10 f i MainCharacter.obj
+ 0001:00014a40       ??0?$vector@MV?$allocator@M@std@@@std@@QAE@IABV?$allocator@M@1@@Z 00415a40 f i gameSetupState.obj
  0001:00014a90       ?max_size@?$_Default_allocator_traits@V?$allocator@VSimpleImage@@@std@@@std@@SAIABV?$allocator@VSimpleImage@@@2@@Z 00415a90 f i MainCharacter.obj
+ 0001:00014aa0       ??0mainMenuState@@QAE@PAVPsyeb10Engine@@@Z 00415aa0 f i Psyeb10Engine.obj
+ 0001:00014b40       ?clear@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAEXXZ 00415b40 f i Psyeb10Engine.obj
  0001:00014bb0       ??A?$vector@VSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@QAEAAVSimpleImage@@I@Z 00415bb0 f i Psyeb10Bike.obj
  0001:00014c40       ?_Tidy@?$vector@VSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@AAEXXZ 00415c40 f i MainCharacter.obj
  0001:00014ce0       ?append@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@QBDI@Z 00415ce0 f i MainCharacter.obj
+ 0001:00014d80       ??$?0U_Exact_args_t@std@@P8gameSetupState@@AEXXZPAV2@$0A@@?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@QAE@U_Exact_args_t@1@$$QAP8gameSetupState@@AEXXZ$$QAPAV3@@Z 00415d80 f i gameSetupState.obj
+ 0001:00014df0       ??$move@AAPAVDrawingSurface@@@std@@YA$$QAPAVDrawingSurface@@AAPAV1@@Z 00415df0 f i gameSetupState.obj
+ 0001:00014e00       ??_G?$vector@MV?$allocator@M@std@@@std@@QAEPAXI@Z 00415e00 f i gameSetupState.obj
  0001:00014e30       ??$move@AAH@std@@YA$$QAHAAH@Z 00415e30 f i DrawingSurface.obj
  0001:00014e40       ??$move@AAN@std@@YA$$QANAAN@Z 00415e40 f i DrawingSurface.obj
  0001:00014e50       ??$swap@H$0A@@std@@YAXAAH0@Z 00415e50 f i DrawingSurface.obj
@@ -662,6 +735,10 @@
  0001:000157b0       ?virtMainLoopDoBeforeUpdate@FlashingDemo@@UAEXXZ 004167b0 f   FlashingDemo.obj
  0001:00015870       ?virtCreateSurfaces@FlashingDemo@@UAEXXZ 00416870 f   FlashingDemo.obj
  0001:000158e0       ?insert@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@IQBDI@Z 004168e0 f i MainCharacter.obj
+ 0001:00015a00       ??$_Allocate_at_least_helper@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@YAPAV?$vector@MV?$allocator@M@std@@@0@AAV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@0@AAI@Z 00416a00 f i gameSetupState.obj
+ 0001:00015a20       ??$_Emplace_back@ABV?$vector@MV?$allocator@M@std@@@std@@@?$_Uninitialized_backout_al@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@QAEXABV?$vector@MV?$allocator@M@std@@@1@@Z 00416a20 f i gameSetupState.obj
+ 0001:00015a70       ??_ETileManager@@UAEPAXI@Z 00416a70 f i gameSetupState.obj
+ 0001:00015a70       ??_GTileManager@@UAEPAXI@Z 00416a70 f i gameSetupState.obj
  0001:00015aa0       ??1DrawingSurface@@QAE@XZ  00416aa0 f i FlashingDemo.obj
  0001:00015ac0       ??_EFlashingDemo@@UAEPAXI@Z 00416ac0 f i FlashingDemo.obj
  0001:00015ac0       ??_GFlashingDemo@@UAEPAXI@Z 00416ac0 f i FlashingDemo.obj
@@ -669,6 +746,8 @@
  0001:00015b30       ?copyBackgroundPixels@BaseEngine@@UAEXHHHH@Z 00416b30 f i FlashingDemo.obj
  0001:00015b80       ?createSurface@DrawingSurface@@QAEXHH@Z 00416b80 f i FlashingDemo.obj
  0001:00015bd0       ?destroyOldObjects@DisplayableObjectContainer@@UAEX_N@Z 00416bd0 f i FlashingDemo.obj
+ 0001:00015c90       ??_EgameSetupState@@UAEPAXI@Z 00416c90 f i gameSetupState.obj
+ 0001:00015c90       ??_GgameSetupState@@UAEPAXI@Z 00416c90 f i gameSetupState.obj
  0001:00015cc0       ?fillBackground@BaseEngine@@UAEXI@Z 00416cc0 f i FlashingDemo.obj
  0001:00015cf0       ?fillSurface@DrawingSurface@@QAEXI@Z 00416cf0 f i FlashingDemo.obj
  0001:00015d90       ?filter@BaseEngine@@UAE_NPAVDrawingSurface@@AAH1AAI_N@Z 00416d90 f i FlashingDemo.obj
@@ -692,99 +771,106 @@
  0001:00016080       ?virtRealMouseDown@BaseEngine@@UAEXHHH@Z 00417080 f i FlashingDemo.obj
  0001:00016090       ?virtRealMouseUp@BaseEngine@@UAEXHHH@Z 00417090 f i FlashingDemo.obj
  0001:000160a0       ?virtTouchEvent@BaseEngine@@UAEXHH_J0MMMMM@Z 004170a0 f i FlashingDemo.obj
- 0001:000160b0       ?enter@gameSetupState@@UAEXXZ 004170b0 f   gameSetupState.obj
- 0001:00016460       ?foreGroundStrings@gameSetupState@@UAEXXZ 00417460 f   gameSetupState.obj
- 0001:000164c0       ?initObjects@gameSetupState@@UAEXXZ 004174c0 f   gameSetupState.obj
- 0001:000164d0       ?reset@gameSetupState@@UAEXXZ 004174d0 f   gameSetupState.obj
- 0001:000164e0       ?mouseDown@gameSetupState@@UAEXHHH@Z 004174e0 f   gameSetupState.obj
- 0001:000167c0       ?mainLoopPreUpdate@gameSetupState@@UAEXXZ 004177c0 f   gameSetupState.obj
- 0001:000168f0       ?reEntry@gameSetupState@@UAEXXZ 004178f0 f   gameSetupState.obj
- 0001:00016900       ?keyPressed@gameSetupState@@UAEXH@Z 00417900 f   gameSetupState.obj
- 0001:00016910       ??1gameSetupState@@UAE@XZ  00417910 f   gameSetupState.obj
- 0001:00016bf0       ??$?0PAVDrawingSurface@@@?$allocator@U_Container_proxy@std@@@std@@QAE@ABV?$allocator@PAVDrawingSurface@@@1@@Z 00417bf0 f i gameSetupState.obj
- 0001:00016c10       ??$_Allocate_at_least_helper@V?$allocator@PAVDrawingSurface@@@std@@@std@@YAPAPAVDrawingSurface@@AAV?$allocator@PAVDrawingSurface@@@0@AAI@Z 00417c10 f i gameSetupState.obj
- 0001:00016c30       ??$_Construct_in_place@PAVDrawingSurface@@ABQAV1@@std@@YAXAAPAVDrawingSurface@@ABQAV1@@Z 00417c30 f i gameSetupState.obj
- 0001:00016c80       ??$_Copy_memmove@PAPAVDrawingSurface@@PAPAV1@@std@@YAPAPAVDrawingSurface@@PAPAV1@00@Z 00417c80 f i gameSetupState.obj
- 0001:00016d10       ??$_Copy_memmove_tail@PAPAVDrawingSurface@@@std@@YAPAPAVDrawingSurface@@QBDQAPAV1@II@Z 00417d10 f i gameSetupState.obj
- 0001:00016d60       ??$_Destroy_range@V?$allocator@PAVDrawingSurface@@@std@@@std@@YAXPAPAVDrawingSurface@@QAPAV1@AAV?$allocator@PAVDrawingSurface@@@0@@Z 00417d60 f i gameSetupState.obj
- 0001:00016d70       ??$_Emplace_back@PAVDrawingSurface@@@?$_Uninitialized_backout_al@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAEX$$QAPAVDrawingSurface@@@Z 00417d70 f i gameSetupState.obj
- 0001:00016dd0       ??$_Emplace_back_with_unused_capacity@ABQAVDrawingSurface@@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEAAPAVDrawingSurface@@ABQAV2@@Z 00417dd0 f i gameSetupState.obj
- 0001:00016e50       ??$_Emplace_one_at_back@ABQAVDrawingSurface@@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEAAPAVDrawingSurface@@ABQAV2@@Z 00417e50 f i gameSetupState.obj
- 0001:00016ed0       ??$_Emplace_reallocate@ABQAVDrawingSurface@@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEPAPAVDrawingSurface@@QAPAV2@ABQAV2@@Z 00417ed0 f i gameSetupState.obj
- 0001:00017120       ??$_Get_unwrapped@ABQAPAVDrawingSurface@@@std@@YA?A_TABQAPAVDrawingSurface@@@Z 00418120 f i gameSetupState.obj
- 0001:00017130       ??$_To_address@PAPAVDrawingSurface@@@std@@YA?A_PABQAPAVDrawingSurface@@@Z 00418130 f i gameSetupState.obj
- 0001:00017140       ??$_Unfancy@PAVDrawingSurface@@@std@@YAPAPAVDrawingSurface@@PAPAV1@@Z 00418140 f i gameSetupState.obj
- 0001:00017150       ??$_Unfancy_maybe_null@PAVDrawingSurface@@@std@@YAPAPAVDrawingSurface@@PAPAV1@@Z 00418150 f i gameSetupState.obj
- 0001:00017160       ??$_Uninitialized_move@PAPAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@YAPAPAVDrawingSurface@@QAPAV1@0PAPAV1@AAV?$allocator@PAVDrawingSurface@@@0@@Z 00418160 f i gameSetupState.obj
- 0001:00017280       ??$addressof@PAVDrawingSurface@@@std@@YAPAPAVDrawingSurface@@AAPAV1@@Z 00418280 f i gameSetupState.obj
- 0001:00017290       ??$construct@PAVDrawingSurface@@ABQAV1@@?$_Default_allocator_traits@V?$allocator@PAVDrawingSurface@@@std@@@std@@SAXAAV?$allocator@PAVDrawingSurface@@@1@QAPAVDrawingSurface@@ABQAV3@@Z 00418290 f i gameSetupState.obj
- 0001:000172d0       ??$construct@PAVDrawingSurface@@PAV1@@?$_Default_allocator_traits@V?$allocator@PAVDrawingSurface@@@std@@@std@@SAXAAV?$allocator@PAVDrawingSurface@@@1@QAPAVDrawingSurface@@$$QAPAV3@@Z 004182d0 f i gameSetupState.obj
- 0001:00017310       ??$exchange@PAU_Container_proxy@std@@$$T@std@@YAPAU_Container_proxy@0@AAPAU10@$$QA$$T@Z 00418310 f i gameSetupState.obj
- 0001:00017340       ??$forward@ABQAVDrawingSurface@@@std@@YAABQAVDrawingSurface@@ABQAV1@@Z 00418340 f i gameSetupState.obj
- 0001:00017350       ??$forward@PAVDrawingSurface@@@std@@YA$$QAPAVDrawingSurface@@AAPAV1@@Z 00418350 f i gameSetupState.obj
- 0001:00017360       ??$move@AAPAPAVDrawingSurface@@@std@@YA$$QAPAPAVDrawingSurface@@AAPAPAV1@@Z 00418360 f i gameSetupState.obj
- 0001:00017370       ??$move@AAPAVDrawingSurface@@@std@@YA$$QAPAVDrawingSurface@@AAPAV1@@Z 00418370 f i gameSetupState.obj
- 0001:00017380       ??0?$_Uninitialized_backout_al@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAE@PAPAVDrawingSurface@@AAV?$allocator@PAVDrawingSurface@@@1@@Z 00418380 f i gameSetupState.obj
- 0001:000173c0       ??0Psyeb10States@@QAE@XZ   004183c0 f i gameSetupState.obj
- 0001:000173f0       ??0Psyeb10TileManager@@QAE@XZ 004183f0 f i gameSetupState.obj
- 0001:00017420       ??0TileManager@@QAE@HHHH@Z 00418420 f i gameSetupState.obj
- 0001:000174b0       ??0gameState@@QAE@PAVPsyeb10Engine@@@Z 004184b0 f i gameSetupState.obj
- 0001:00017560       ??1?$_Uninitialized_backout_al@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAE@XZ 00418560 f i gameSetupState.obj
- 0001:00017590       ??1?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAE@XZ 00418590 f i gameSetupState.obj
- 0001:00017600       ??1Psyeb10States@@UAE@XZ   00418600 f i gameSetupState.obj
- 0001:00017630       ??1Psyeb10TileManager@@UAE@XZ 00418630 f i gameSetupState.obj
- 0001:00017650       ??1TileManager@@UAE@XZ     00418650 f i gameSetupState.obj
- 0001:000176a0       ??1_Reallocation_guard@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAE@XZ 004186a0 f i gameSetupState.obj
- 0001:00017700       ??1menuTileManager@@UAE@XZ 00418700 f i gameSetupState.obj
- 0001:00017720       ??A?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAEAAPAVDrawingSurface@@I@Z 00418720 f i gameSetupState.obj
- 0001:000177d0       ??_GDrawingSurface@@QAEPAXI@Z 004187d0 f i gameSetupState.obj
- 0001:00017810       ??_EPsyeb10States@@UAEPAXI@Z 00418810 f i gameSetupState.obj
- 0001:00017810       ??_GPsyeb10States@@UAEPAXI@Z 00418810 f i gameSetupState.obj
- 0001:00017850       ??_EPsyeb10TileManager@@UAEPAXI@Z 00418850 f i gameSetupState.obj
- 0001:00017850       ??_GPsyeb10TileManager@@UAEPAXI@Z 00418850 f i gameSetupState.obj
- 0001:00017890       ??_ETileManager@@UAEPAXI@Z 00418890 f i gameSetupState.obj
- 0001:00017890       ??_GTileManager@@UAEPAXI@Z 00418890 f i gameSetupState.obj
- 0001:000178d0       ??_EgameSetupState@@UAEPAXI@Z 004188d0 f i gameSetupState.obj
- 0001:000178d0       ??_GgameSetupState@@UAEPAXI@Z 004188d0 f i gameSetupState.obj
- 0001:00017910       ??_EgameState@@UAEPAXI@Z   00418910 f i gameSetupState.obj
- 0001:00017910       ??_GgameState@@UAEPAXI@Z   00418910 f i gameSetupState.obj
- 0001:00017950       ?_Calculate_growth@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEII@Z 00418950 f i gameSetupState.obj
- 0001:000179c0       ?_Change_array@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEXQAPAVDrawingSurface@@II@Z 004189c0 f i gameSetupState.obj
- 0001:00017a90       ?_Get_first@?$_Compressed_pair@V?$allocator@PAVDrawingSurface@@@std@@V?$_Vector_val@U?$_Simple_types@PAVDrawingSurface@@@std@@@2@$00@std@@QAEAAV?$allocator@PAVDrawingSurface@@@2@XZ 00418a90 f i gameSetupState.obj
- 0001:00017ab0       ?_Get_first@?$_Compressed_pair@V?$allocator@PAVDrawingSurface@@@std@@V?$_Vector_val@U?$_Simple_types@PAVDrawingSurface@@@std@@@2@$00@std@@QBEABV?$allocator@PAVDrawingSurface@@@2@XZ 00418ab0 f i gameSetupState.obj
- 0001:00017ad0       ?_Getal@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEAAV?$allocator@PAVDrawingSurface@@@2@XZ 00418ad0 f i gameSetupState.obj
- 0001:00017af0       ?_Getal@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEABV?$allocator@PAVDrawingSurface@@@2@XZ 00418af0 f i gameSetupState.obj
- 0001:00017b10       ?_Orphan_range@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEXPAPAVDrawingSurface@@0@Z 00418b10 f i gameSetupState.obj
- 0001:00017b40       ?_Orphan_range_locked@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEXPAPAVDrawingSurface@@0@Z 00418b40 f i gameSetupState.obj
- 0001:00017bd0       ?_Orphan_range_unlocked@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEXPAPAVDrawingSurface@@0@Z 00418bd0 f i gameSetupState.obj
- 0001:00017c50       ?_Release@?$_Uninitialized_backout_al@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAEPAPAVDrawingSurface@@XZ 00418c50 f i gameSetupState.obj
- 0001:00017c80       ?_Tidy@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEXXZ 00418c80 f i gameSetupState.obj
- 0001:00017d40       ?_Unchecked_begin@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAEPAPAVDrawingSurface@@XZ 00418d40 f i gameSetupState.obj
- 0001:00017d60       ?_Unchecked_end@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAEPAPAVDrawingSurface@@XZ 00418d60 f i gameSetupState.obj
- 0001:00017d80       ?_Xlength@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@CAXXZ 00418d80 f i gameSetupState.obj
- 0001:00017da0       ?allocate@?$allocator@PAVDrawingSurface@@@std@@QAEPAPAVDrawingSurface@@I@Z 00418da0 f i gameSetupState.obj
- 0001:00017dd0       ?capacity@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QBEIXZ 00418dd0 f i gameSetupState.obj
- 0001:00017e00       ?clear@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAEXXZ 00418e00 f i gameSetupState.obj
- 0001:00017e80       ?deallocate@?$allocator@PAVDrawingSurface@@@std@@QAEXQAPAVDrawingSurface@@I@Z 00418e80 f i gameSetupState.obj
- 0001:00017f20       ?drawForegroundString@BaseEngine@@QAEXHHPBDIPAVFont@@@Z 00418f20 f i gameSetupState.obj
- 0001:00017f60       ?getBackgroundSurface@BaseEngine@@QAEPAVDrawingSurface@@XZ 00418f60 f i gameSetupState.obj
- 0001:00017f80       ?getCurrentMouseX@BaseEngine@@QBEHXZ 00418f80 f i gameSetupState.obj
- 0001:00017fa0       ?getCurrentMouseY@BaseEngine@@QBEHXZ 00418fa0 f i gameSetupState.obj
- 0001:00017fc0       ?getMapValue@TileManager@@QBEHHH@Z 00418fc0 f i gameSetupState.obj
- 0001:00017ff0       ?getMapXForScreenX@TileManager@@QBEHH@Z 00418ff0 f i gameSetupState.obj
- 0001:00018020       ?getMapYForScreenY@TileManager@@QBEHH@Z 00419020 f i gameSetupState.obj
- 0001:00018050       ?getTileHeight@TileManager@@QBEHXZ 00419050 f i gameSetupState.obj
- 0001:00018070       ?getTileWidth@TileManager@@QBEHXZ 00419070 f i gameSetupState.obj
- 0001:00018090       ?isValidTilePosition@TileManager@@QBE_NHH@Z 00419090 f i gameSetupState.obj
- 0001:00018120       ?lockBackgroundForDrawing@BaseEngine@@QAEXXZ 00419120 f i gameSetupState.obj
- 0001:00018140       ?max_size@?$_Default_allocator_traits@V?$allocator@PAVDrawingSurface@@@std@@@std@@SAIABV?$allocator@PAVDrawingSurface@@@2@@Z 00419140 f i gameSetupState.obj
- 0001:00018150       ?max_size@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QBEIXZ 00419150 f i gameSetupState.obj
- 0001:000181a0       ?push_back@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAEXABQAVDrawingSurface@@@Z 004191a0 f i gameSetupState.obj
- 0001:000181c0       ?setMapSize@TileManager@@QAEXHH@Z 004191c0 f i gameSetupState.obj
- 0001:00018270       ?setMapValue@TileManager@@QAEHHHH@Z 00419270 f i gameSetupState.obj
- 0001:000182b0       ?setTopLeftPositionOnScreen@TileManager@@QAEXHH@Z 004192b0 f i gameSetupState.obj
- 0001:000182e0       ?size@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QBEIXZ 004192e0 f i gameSetupState.obj
- 0001:00018310       ?unlockBackgroundForDrawing@BaseEngine@@QAEXXZ 00419310 f i gameSetupState.obj
+ 0001:000160b0       ?size@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QBEIXZ 004170b0 f i gameSetupState.obj
+ 0001:000160e0       _sinf                      004170e0 f i gameSetupState.obj
+ 0001:00016a60       ??$?0ABV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@$$V@?$_Compressed_pair@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@V?$_Vector_val@U?$_Simple_types@V?$vector@MV?$allocator@M@std@@@std@@@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@1@@Z 00417a60 f i gameSetupState.obj
+ 0001:00016a90       ??$?0U?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@std@@$0A@@?$unique_ptr@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@U?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@2@@std@@QAE@PAV?$tuple@P8gameSetupState@@AEXXZPAV1@@1@@Z 00417a90 f i gameSetupState.obj
+ 0001:00016ac0       ??$_Destroy_range@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@YAXPAV?$vector@MV?$allocator@M@std@@@0@QAV10@AAV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@0@@Z 00417ac0 f i gameSetupState.obj
+ 0001:00016b30       ??$_Zero_range@PAM@std@@YAPAMQAM0@Z 00417b30 f i gameSetupState.obj
+ 0001:00016b70       ??$_Copy_memmove@PAMPAM@std@@YAPAMPAM00@Z 00417b70 f i gameSetupState.obj
+ 0001:00016be0       ??$move@AAP8gameSetupState@@AEXXZ@std@@YA$$QAP8gameSetupState@@AEXXZAAP81@AEXXZ@Z 00417be0 f i gameSetupState.obj
+ 0001:00016bf0       ??0?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@QAE@IABV?$vector@MV?$allocator@M@std@@@1@ABV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@1@@Z 00417bf0 f i gameSetupState.obj
+ 0001:00016c30       ?allocate@?$allocator@M@std@@QAEPAMI@Z 00417c30 f i gameSetupState.obj
+ 0001:00016c80       ??$?0M@?$allocator@U_Container_proxy@std@@@std@@QAE@ABV?$allocator@M@1@@Z 00417c80 f i gameSetupState.obj
+ 0001:00016c90       ??$_Copy_memmove@PAPAVDrawingSurface@@PAPAV1@@std@@YAPAPAVDrawingSurface@@PAPAV1@00@Z 00417c90 f i gameSetupState.obj
+ 0001:00016d10       ??$?0P8gameSetupState@@AEXXZ@?$_Tuple_val@P8gameSetupState@@AEXXZ@std@@QAE@$$QAP8gameSetupState@@AEXXZ@Z 00417d10 f i gameSetupState.obj
+ 0001:00016d40       ??$?0P8gameSetupState@@AEXXZPAV0@$0A@@thread@std@@QAE@$$QAP8gameSetupState@@AEXXZ$$QAPAV2@@Z 00417d40 f i gameSetupState.obj
+ 0001:00016d80       ?allocate@?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@QAEPAV?$vector@MV?$allocator@M@std@@@2@I@Z 00417d80 f i gameSetupState.obj
+ 0001:00016dd0       ??$?0PAVDrawingSurface@@@?$allocator@U_Container_proxy@std@@@std@@QAE@ABV?$allocator@PAVDrawingSurface@@@1@@Z 00417dd0 f i gameSetupState.obj
+ 0001:00016df0       ??$move@AAPAVgameSetupState@@@std@@YA$$QAPAVgameSetupState@@AAPAV1@@Z 00417df0 f i gameSetupState.obj
+ 0001:00016e00       ??1TileManager@@UAE@XZ     00417e00 f i gameSetupState.obj
+ 0001:00016e40       ??$?0PAVgameSetupState@@@?$_Tuple_val@PAVgameSetupState@@@std@@QAE@$$QAPAVgameSetupState@@@Z 00417e40 f i gameSetupState.obj
+ 0001:00016e70       ??1?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QAE@XZ 00417e70 f i gameSetupState.obj
+ 0001:00016ea0       ??_EgameState@@UAEPAXI@Z   00417ea0 f i gameSetupState.obj
+ 0001:00016ea0       ??_GgameState@@UAEPAXI@Z   00417ea0 f i gameSetupState.obj
+ 0001:00016ed0       ??$construct@M$$V@?$_Default_allocator_traits@V?$allocator@M@std@@@std@@SAXAAV?$allocator@M@1@QAM@Z 00417ed0 f i gameSetupState.obj
+ 0001:00016f10       ??$?0U?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@std@@PAV?$tuple@P8gameSetupState@@AEXXZPAV1@@1@@?$_Compressed_pair@U?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@std@@PAV?$tuple@P8gameSetupState@@AEXXZPAV1@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@$$QAU?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@1@$$QAPAV?$tuple@P8gameSetupState@@AEXXZPAV1@@1@@Z 00417f10 f i gameSetupState.obj
+ 0001:00016f40       ??$_Emplace_back@PAVDrawingSurface@@@?$_Uninitialized_backout_al@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAEX$$QAPAVDrawingSurface@@@Z 00417f40 f i gameSetupState.obj
+ 0001:00016f90       ??$_Emplace_back_with_unused_capacity@ABQAVDrawingSurface@@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEAAPAVDrawingSurface@@ABQAV2@@Z 00417f90 f i gameSetupState.obj
+ 0001:00017010       ??$?0U_Exact_args_t@std@@$0A@@?$tuple@$$V@std@@QAE@U_Exact_args_t@1@@Z 00418010 f i gameSetupState.obj
+ 0001:00017020       ??$_Invoke@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@$0A@$00@thread@std@@CGIPAX@Z 00418020 f i gameSetupState.obj
+ 0001:000170c0       ??$construct@PAVDrawingSurface@@PAV1@@?$_Default_allocator_traits@V?$allocator@PAVDrawingSurface@@@std@@@std@@SAXAAV?$allocator@PAVDrawingSurface@@@1@QAPAVDrawingSurface@@$$QAPAV3@@Z 004180c0 f i gameSetupState.obj
+ 0001:000170f0       ??$forward@ABQAVDrawingSurface@@@std@@YAABQAVDrawingSurface@@ABQAV1@@Z 004180f0 f i gameSetupState.obj
+ 0001:00017100       ??1?$vector@MV?$allocator@M@std@@@std@@QAE@XZ 00418100 f i gameSetupState.obj
+ 0001:00017160       ??$?0U_Exact_args_t@std@@PAVgameSetupState@@$$V$0A@@?$tuple@PAVgameSetupState@@@std@@QAE@U_Exact_args_t@1@$$QAPAVgameSetupState@@@Z 00418160 f i gameSetupState.obj
+ 0001:000171a0       ??$_Uninitialized_fill_n@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@YAPAV?$vector@MV?$allocator@M@std@@@0@PAV10@IABV10@AAV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@0@@Z 004181a0 f i gameSetupState.obj
+ 0001:00017230       ??$construct@V?$vector@MV?$allocator@M@std@@@std@@ABV12@@?$_Default_allocator_traits@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@SAXAAV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@1@QAV?$vector@MV?$allocator@M@std@@@1@ABV31@@Z 00418230 f i gameSetupState.obj
+ 0001:00017260       ?drawForegroundString@BaseEngine@@QAEXHHPBDIPAVFont@@@Z 00418260 f i gameSetupState.obj
+ 0001:00017290       ??$?0V?$vector@MV?$allocator@M@std@@@std@@@?$allocator@U_Container_proxy@std@@@std@@QAE@ABV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@1@@Z 00418290 f i gameSetupState.obj
+ 0001:000172a0       ?_Buy_nonzero@?$vector@MV?$allocator@M@std@@@std@@AAEXI@Z 004182a0 f i gameSetupState.obj
+ 0001:000172d0       ?getMapValue@TileManager@@QBEHHH@Z 004182d0 f i gameSetupState.obj
+ 0001:00017320       ??$_Destroy_range@V?$allocator@PAVDrawingSurface@@@std@@@std@@YAXPAPAVDrawingSurface@@QAPAV1@AAV?$allocator@PAVDrawingSurface@@@0@@Z 00418320 f i gameSetupState.obj
+ 0001:00017330       ??$_Uninitialized_move@PAPAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@YAPAPAVDrawingSurface@@QAPAV1@0PAPAV1@AAV?$allocator@PAVDrawingSurface@@@0@@Z 00418330 f i gameSetupState.obj
+ 0001:00017410       ??$forward@PAV?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@std@@YA$$QAPAV?$tuple@P8gameSetupState@@AEXXZPAV1@@0@AAPAV10@@Z 00418410 f i gameSetupState.obj
+ 0001:00017420       ??1?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAE@XZ 00418420 f i gameSetupState.obj
+ 0001:00017480       ?_Get_first@?$_Compressed_pair@V?$allocator@PAVDrawingSurface@@@std@@V?$_Vector_val@U?$_Simple_types@PAVDrawingSurface@@@std@@@2@$00@std@@QBEABV?$allocator@PAVDrawingSurface@@@2@XZ 00418480 f i gameSetupState.obj
+ 0001:00017490       ?getMapXForScreenX@TileManager@@QBEHH@Z 00418490 f i gameSetupState.obj
+ 0001:000174c0       ??$forward@PAVDrawingSurface@@@std@@YA$$QAPAVDrawingSurface@@AAPAV1@@Z 004184c0 f i gameSetupState.obj
+ 0001:000174d0       ??$make_unique@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@P8gameSetupState@@AEXXZPAV3@$0A@@std@@YA?AV?$unique_ptr@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@U?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@2@@0@$$QAP8gameSetupState@@AEXXZ$$QAPAV2@@Z 004184d0 f i gameSetupState.obj
+ 0001:00017560       ??$_Destroy_range@V?$allocator@M@std@@@std@@YAXPAMQAMAAV?$allocator@M@0@@Z 00418560 f i gameSetupState.obj
+ 0001:00017570       ??0?$_Uninitialized_backout_al@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@QAE@PAV?$vector@MV?$allocator@M@std@@@1@AAV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@1@@Z 00418570 f i gameSetupState.obj
+ 0001:000175a0       ??0?$vector@MV?$allocator@M@std@@@std@@QAE@ABV01@@Z 004185a0 f i gameSetupState.obj
+ 0001:00017610       ??1?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@QAE@XZ 00418610 f i gameSetupState.obj
+ 0001:00017660       ?_Getal@?$vector@MV?$allocator@M@std@@@std@@ABEABV?$allocator@M@2@XZ 00418660 f i gameSetupState.obj
+ 0001:00017680       ?getMapYForScreenY@TileManager@@QBEHH@Z 00418680 f i gameSetupState.obj
+ 0001:000176b0       ?_Getal@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEAAV?$allocator@PAVDrawingSurface@@@2@XZ 004186b0 f i gameSetupState.obj
+ 0001:000176e0       ??1_Reallocation_guard@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAE@XZ 004186e0 f i gameSetupState.obj
+ 0001:00017730       ??$_Get_unwrapped@ABQAPAVDrawingSurface@@@std@@YA?A_TABQAPAVDrawingSurface@@@Z 00418730 f i gameSetupState.obj
+ 0001:00017740       ??$_Uninitialized_value_construct_n@V?$allocator@M@std@@@std@@YAPAMPAMIAAV?$allocator@M@0@@Z 00418740 f i gameSetupState.obj
+ 0001:00017810       ??$_Get_unwrapped@PAM@std@@YA?A_T$$QAPAM@Z 00418810 f i gameSetupState.obj
+ 0001:00017820       ??$_Reallocate@$0A@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEXAAI@Z 00418820 f i gameSetupState.obj
+ 0001:00017920       ?_Getal@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEABV?$allocator@PAVDrawingSurface@@@2@XZ 00418920 f i gameSetupState.obj
+ 0001:00017950       ?_Buy_nonzero@?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@AAEXI@Z 00418950 f i gameSetupState.obj
+ 0001:00017990       ?_Xlength@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@CAXXZ 00418990 f i gameSetupState.obj
+ 0001:000179c0       ??$_To_address@PAM@std@@YA?A_PABQAM@Z 004189c0 f i gameSetupState.obj
+ 0001:000179f0       ??0?$_Vector_val@U?$_Simple_types@M@std@@@std@@QAE@XZ 004189f0 f i gameSetupState.obj
+ 0001:00017a30       ?joinable@thread@std@@QBE_NXZ 00418a30 f i gameSetupState.obj
+ 0001:00017a80       ??1?$_Tidy_guard@V?$vector@MV?$allocator@M@std@@@std@@@std@@QAE@XZ 00418a80 f i gameSetupState.obj
+ 0001:00017aa0       ?max_size@?$vector@MV?$allocator@M@std@@@std@@QBEIXZ 00418aa0 f i gameSetupState.obj
+ 0001:00017af0       ??$_Unfancy@V?$vector@MV?$allocator@M@std@@@std@@@std@@YAPAV?$vector@MV?$allocator@M@std@@@0@PAV10@@Z 00418af0 f i gameSetupState.obj
+ 0001:00017b10       ??$_Unfancy_maybe_null@PAVDrawingSurface@@@std@@YAPAPAVDrawingSurface@@PAPAV1@@Z 00418b10 f i gameSetupState.obj
+ 0001:00017b20       ?release@?$unique_ptr@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@U?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@2@@std@@QAEPAV?$tuple@P8gameSetupState@@AEXXZPAV1@@2@XZ 00418b20 f i gameSetupState.obj
+ 0001:00017b50       ??1?$_Tidy_guard@V?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@@std@@QAE@XZ 00418b50 f i gameSetupState.obj
+ 0001:00017b70       ??4thread@std@@QAEAAV01@$$QAV01@@Z 00418b70 f i gameSetupState.obj
+ 0001:00017be0       ??A?$vector@MV?$allocator@M@std@@@std@@QAEAAMI@Z 00418be0 f i gameSetupState.obj
+ 0001:00017c90       ??0?$_Vector_val@U?$_Simple_types@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@QAE@XZ 00418c90 f i gameSetupState.obj
+ 0001:00017cd0       ??0TileManager@@QAE@HHHH@Z 00418cd0 f i gameSetupState.obj
+ 0001:00017d60       ??$addressof@PAVDrawingSurface@@@std@@YAPAPAVDrawingSurface@@AAPAV1@@Z 00418d60 f i gameSetupState.obj
+ 0001:00017d70       ?setMapValue@TileManager@@QAEHHHH@Z 00418d70 f i gameSetupState.obj
+ 0001:00017da0       ??$construct@MAAM@?$_Default_allocator_traits@V?$allocator@M@std@@@std@@SAXAAV?$allocator@M@1@QAMAAM@Z 00418da0 f i gameSetupState.obj
+ 0001:00017dd0       ??$construct@PAVDrawingSurface@@ABQAV1@@?$_Default_allocator_traits@V?$allocator@PAVDrawingSurface@@@std@@@std@@SAXAAV?$allocator@PAVDrawingSurface@@@1@QAPAVDrawingSurface@@ABQAV3@@Z 00418dd0 f i gameSetupState.obj
+ 0001:00017e00       ??A?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAEAAPAVDrawingSurface@@I@Z 00418e00 f i gameSetupState.obj
+ 0001:00017e90       ?_Get_first@?$_Compressed_pair@U?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@std@@PAV?$tuple@P8gameSetupState@@AEXXZPAV1@@2@$00@std@@QAEAAU?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@2@XZ 00418e90 f i gameSetupState.obj
+ 0001:00017ea0       ?_Orphan_range_locked@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEXPAPAVDrawingSurface@@0@Z 00418ea0 f i gameSetupState.obj
+ 0001:00017f20       ??$destroy@V?$vector@MV?$allocator@M@std@@@std@@@?$_Default_allocator_traits@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@SAXAAV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@1@QAV?$vector@MV?$allocator@M@std@@@1@@Z 00418f20 f i gameSetupState.obj
+ 0001:00017f50       ??_GDrawingSurface@@QAEPAXI@Z 00418f50 f i gameSetupState.obj
+ 0001:00017f80       ?_Buy_raw@?$vector@MV?$allocator@M@std@@@std@@AAEXI@Z 00418f80 f i gameSetupState.obj
+ 0001:00017ff0       ??$forward@AAPAV?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@std@@YAAAPAV?$tuple@P8gameSetupState@@AEXXZPAV1@@0@AAPAV10@@Z 00418ff0 f i gameSetupState.obj
+ 0001:00018020       ??$forward@ABQAM@std@@YAABQAMABQAM@Z 00419020 f i gameSetupState.obj
+ 0001:00018030       ?_Release@?$_Uninitialized_backout_al@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@QAEPAV?$vector@MV?$allocator@M@std@@@2@XZ 00419030 f i gameSetupState.obj
+ 0001:00018050       ?max_size@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QBEIXZ 00419050 f i gameSetupState.obj
+ 0001:00018090       ??$forward@ABV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@YAABV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@0@ABV10@@Z 00419090 f i gameSetupState.obj
+ 0001:000180a0       ?sin@@YAMM@Z               004190a0 f i gameSetupState.obj
+ 0001:000180d0       ??1?$_Uninitialized_backout_al@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAE@XZ 004190d0 f i gameSetupState.obj
+ 0001:00018100       ?_Buy_raw@?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@AAEXI@Z 00419100 f i gameSetupState.obj
+ 0001:00018170       ?max_size@?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@QBEIXZ 00419170 f i gameSetupState.obj
+ 0001:000181c0       ??$forward@PAVgameSetupState@@@std@@YA$$QAPAVgameSetupState@@AAPAV1@@Z 004191c0 f i gameSetupState.obj
+ 0001:000181e0       ?_Get_first@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QAEAAV?$allocator@M@2@XZ 004191e0 f i gameSetupState.obj
+ 0001:000181f0       ?_Orphan_range_unlocked@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEXPAPAVDrawingSurface@@0@Z 004191f0 f i gameSetupState.obj
+ 0001:00018270       ??$forward@U?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@std@@@std@@YA$$QAU?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@0@AAU10@@Z 00419270 f i gameSetupState.obj
+ 0001:000182b0       ??$forward@V?$allocator@M@std@@@std@@YA$$QAV?$allocator@M@0@AAV10@@Z 004192b0 f i gameSetupState.obj
+ 0001:000182e0       ??$get@$00P8gameSetupState@@AEXXZPAV1@@std@@YAAAPAVgameSetupState@@AAV?$tuple@P8gameSetupState@@AEXXZPAV1@@0@@Z 004192e0 f i gameSetupState.obj
+ 0001:000182f0       ?reserve@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAEXI@Z 004192f0 f i gameSetupState.obj
  0001:00018330       ?enter@gameState@@UAEXXZ   00419330 f   gameState.obj
  0001:000183d0       ?foreGroundStrings@gameState@@UAEXXZ 004193d0 f   gameState.obj
  0001:00018540       ?initObjects@gameState@@UAEXXZ 00419540 f   gameState.obj
@@ -798,22 +884,38 @@
  0001:00018b30       ?getEnemy@gameState@@QBEPAVPsyeb10Enemy@@XZ 00419b30 f   gameState.obj
  0001:00018b50       ?getGameScore@gameState@@QBEHXZ 00419b50 f   gameState.obj
  0001:00018b70       ?loadGame@gameState@@QAE_NXZ 00419b70 f   gameState.obj
+ 0001:000191f0       ??$_Copy_memmove_tail@PAM@std@@YAPAMQBDQAMII@Z 0041a1f0 f i gameSetupState.obj
+ 0001:00019230       ??$_Start@P8gameSetupState@@AEXXZPAV1@@thread@std@@AAEX$$QAP8gameSetupState@@AEXXZ$$QAPAV2@@Z 0041a230 f i gameSetupState.obj
+ 0001:00019320       ??0gameState@@QAE@PAVPsyeb10Engine@@@Z 0041a320 f i gameSetupState.obj
+ 0001:000193c0       ??$_Emplace_one_at_back@ABQAVDrawingSurface@@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEAAPAVDrawingSurface@@ABQAV2@@Z 0041a3c0 f i gameSetupState.obj
+ 0001:00019420       ??A?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@QAEAAV?$vector@MV?$allocator@M@std@@@1@I@Z 0041a420 f i gameSetupState.obj
+ 0001:000194d0       ??_EPsyeb10States@@UAEPAXI@Z 0041a4d0 f i gameSetupState.obj
+ 0001:000194d0       ??_GPsyeb10States@@UAEPAXI@Z 0041a4d0 f i gameSetupState.obj
+ 0001:00019500       ?_Calculate_growth@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEII@Z 0041a500 f i gameSetupState.obj
+ 0001:00019570       ?allocate@?$allocator@PAVDrawingSurface@@@std@@QAEPAPAVDrawingSurface@@I@Z 0041a570 f i gameSetupState.obj
  0001:000195a0       ??$?0AAPAV_Facet_base@std@@@?$_Compressed_pair@U?$default_delete@V_Facet_base@std@@@std@@PAV_Facet_base@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@AAPAV_Facet_base@1@@Z 0041a5a0 f i gameState.obj
  0001:000195d0       ??$?0ABV?$allocator@D@std@@$$V@?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABV?$allocator@D@1@@Z 0041a5d0 f i gameState.obj
  0001:00019600       ??$?0U?$default_delete@V_Facet_base@std@@@std@@$0A@@?$unique_ptr@V_Facet_base@std@@U?$default_delete@V_Facet_base@std@@@2@@std@@QAE@PAV_Facet_base@1@@Z 0041a600 f i gameState.obj
  0001:00019630       ??$?5DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z 0041a630 f i gameState.obj
+ 0001:000198b0       ??_EPsyeb10TileManager@@UAEPAXI@Z 0041a8b0 f i gameSetupState.obj
+ 0001:000198b0       ??_GPsyeb10TileManager@@UAEPAXI@Z 0041a8b0 f i gameSetupState.obj
+ 0001:000198e0       ?clear@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAEXXZ 0041a8e0 f i gameSetupState.obj
  0001:00019950       ??$_Construct_in_place@PAVDisplayableObject@@ABQAV1@@std@@YAXAAPAVDisplayableObject@@ABQAV1@@Z 0041a950 f i gameState.obj
  0001:000199a0       ??$_Emplace_back_with_unused_capacity@ABQAVDisplayableObject@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEAAPAVDisplayableObject@@ABQAV2@@Z 0041a9a0 f i gameState.obj
  0001:00019a20       ??$_Emplace_one_at_back@ABQAVDisplayableObject@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEAAPAVDisplayableObject@@ABQAV2@@Z 0041aa20 f i gameState.obj
  0001:00019aa0       ??$_Emplace_reallocate@ABQAVDisplayableObject@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEPAPAVDisplayableObject@@QAPAV2@ABQAV2@@Z 0041aaa0 f i gameState.obj
+ 0001:00019c70       ?_Get_first@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QBEABV?$allocator@M@2@XZ 0041ac70 f i gameSetupState.obj
+ 0001:00019c80       ?isValidTilePosition@TileManager@@QBE_NHH@Z 0041ac80 f i gameSetupState.obj
  0001:00019cf0       ??$_Fgetc@D@std@@YA_NAADPAU_iobuf@@@Z 0041acf0 f i gameState.obj
  0001:00019d30       ??$_Fputc@D@std@@YA_NDPAU_iobuf@@@Z 0041ad30 f i gameState.obj
  0001:00019d70       ??$_Get_index@$0A@@id@locale@std@@QAEIXZ 0041ad70 f i gameState.obj
  0001:00019de0       ??$_Pocma@V?$allocator@D@std@@@std@@YAXAAV?$allocator@D@0@0@Z 0041ade0 f i gameState.obj
  0001:00019e00       ??$_Reallocate_for@V<lambda_9366063389c5f42a00a5088cf24e69de>@@PBD@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEAAV01@IV<lambda_9366063389c5f42a00a5088cf24e69de>@@PBD@Z 0041ae00 f i gameState.obj
  0001:00019f10       ??$_Reallocate_grow_by@V<lambda_15711c68e099a15a58f4d77303cb286d>@@D@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEAAV01@IV<lambda_15711c68e099a15a58f4d77303cb286d>@@D@Z 0041af10 f i gameState.obj
+ 0001:0001a030       ?_Unchecked_begin@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAEPAPAVDrawingSurface@@XZ 0041b030 f i gameSetupState.obj
  0001:0001a080       ??$_Search_vectorized@$$CBD$$CBD@std@@YAPBDQBD00I@Z 0041b080 f i gameState.obj
  0001:0001a0a0       ??$_Traits_find@U?$char_traits@D@std@@@std@@YAIQBDII0I@Z 0041b0a0 f i gameState.obj
+ 0001:0001a190       ?capacity@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QBEIXZ 0041b190 f i gameSetupState.obj
  0001:0001a1d0       ??$_Ungetc@D@std@@YA_NABDPAU_iobuf@@@Z 0041b1d0 f i gameState.obj
  0001:0001a220       ??$addressof@$$CBV?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@YAPBV?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@0@ABV10@@Z 0041b220 f i gameState.obj
  0001:0001a230       ??$addressof@$$CBV?$codecvt@DDU_Mbstatet@@@std@@@std@@YAPBV?$codecvt@DDU_Mbstatet@@@0@ABV10@@Z 0041b230 f i gameState.obj
@@ -828,11 +930,14 @@
  0001:0001a310       ??$forward@ABQAVDisplayableObject@@@std@@YAABQAVDisplayableObject@@ABQAV1@@Z 0041b310 f i gameState.obj
  0001:0001a320       ??$forward@ABV?$allocator@D@std@@@std@@YAABV?$allocator@D@0@ABV10@@Z 0041b320 f i gameState.obj
  0001:0001a330       ??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@$$QAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@D@Z 0041b330 f i gameState.obj
+ 0001:0001a530       ?_Orphan_range@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEXPAPAVDrawingSurface@@0@Z 0041b530 f i gameSetupState.obj
  0001:0001a5a0       ??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z 0041b5a0 f i gameState.obj
  0001:0001a5f0       ??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@D@Z 0041b5f0 f i gameState.obj
  0001:0001a620       ??$max@PAD@std@@YAABQADABQAD0@Z 0041b620 f i gameState.obj
  0001:0001a660       ??$move@AAV?$basic_istream@DU?$char_traits@D@std@@@std@@@std@@YA$$QAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@@Z 0041b660 f i gameState.obj
  0001:0001a670       ??$use_facet@V?$codecvt@DDU_Mbstatet@@@std@@@std@@YAABV?$codecvt@DDU_Mbstatet@@@0@ABVlocale@0@@Z 0041b670 f i gameState.obj
+ 0001:0001a780       ??_EmainMenuState@@UAEPAXI@Z 0041b780 f i mainMenuState.obj
+ 0001:0001a780       ??_GmainMenuState@@UAEPAXI@Z 0041b780 f i mainMenuState.obj
  0001:0001a7c0       ??$use_facet@V?$ctype@D@std@@@std@@YAABV?$ctype@D@0@ABVlocale@0@@Z 0041b7c0 f i gameState.obj
  0001:0001a910       ??0?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QAE@$$QAV01@@Z 0041b910 f i gameState.obj
  0001:0001a950       ??0?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QAE@ABV01@@Z 0041b950 f i gameState.obj
@@ -909,6 +1014,7 @@
  0001:0001c4e0       ?_Getstate@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@CAHH@Z 0041d4e0 f i gameState.obj
  0001:0001c550       ?_Init@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IAEXPAU_iobuf@@W4_Initfl@12@@Z 0041d550 f i gameState.obj
  0001:0001c650       ?_Init@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IAEXPBDIH@Z 0041d650 f i gameState.obj
+ 0001:0001c770       ??$?0U?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@std@@$0A@@?$unique_ptr@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@U?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@2@@std@@QAE@$$QAV01@@Z 0041d770 f i gameSetupState.obj
  0001:0001c7c0       ?_Initcvt@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IAEXABV?$codecvt@DDU_Mbstatet@@@2@@Z 0041d7c0 f i gameState.obj
  0001:0001c820       ?_Is_constant_evaluated@std@@YA_NXZ 0041d820 f i gameState.obj
  0001:0001c830       ?_Lock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEXXZ 0041d830 f i gameState.obj
@@ -949,7 +1055,10 @@
  0001:0001d290       ?notifyObjectsAboutKeys@BaseEngine@@QAEX_N@Z 0041e290 f i gameState.obj
  0001:0001d2b0       ?open@?$basic_filebuf@DU?$char_traits@D@std@@@std@@QAEPAV12@PBDHH@Z 0041e2b0 f i gameState.obj
  0001:0001d3a0       ?overflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHH@Z 0041e3a0 f i gameState.obj
+ 0001:0001d580       ??$?0P8gameSetupState@@AEXXZPAV0@$0A@@?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@QAE@$$QAP8gameSetupState@@AEXXZ$$QAPAV2@@Z 0041e580 f i gameSetupState.obj
  0001:0001d5f0       ?overflow@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAEHH@Z 0041e5f0 f i gameState.obj
+ 0001:0001d7f0       ?_Get_first@?$_Compressed_pair@V?$allocator@PAVDrawingSurface@@@std@@V?$_Vector_val@U?$_Simple_types@PAVDrawingSurface@@@std@@@2@$00@std@@QAEAAV?$allocator@PAVDrawingSurface@@@2@XZ 0041e7f0 f i gameSetupState.obj
+ 0001:0001d800       ?join@thread@std@@QAEXXZ   0041e800 f i gameSetupState.obj
  0001:0001d870       ?pause@BaseEngine@@QAEXXZ  0041e870 f i gameState.obj
  0001:0001d8a0       ?pbackfail@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHH@Z 0041e8a0 f i gameState.obj
  0001:0001da40       ?pbackfail@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAEHH@Z 0041ea40 f i gameState.obj
@@ -959,6 +1068,8 @@
  0001:0001dc40       ?release@?$unique_ptr@V_Facet_base@std@@U?$default_delete@V_Facet_base@std@@@2@@std@@QAEPAV_Facet_base@2@XZ 0041ec40 f i gameState.obj
  0001:0001dc70       ?seekoff@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@_JHH@Z 0041ec70 f i gameState.obj
  0001:0001dd80       ?seekoff@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@_JHH@Z 0041ed80 f i gameState.obj
+ 0001:0001e000       ?_Xlength@?$vector@MV?$allocator@M@std@@@std@@CAXXZ 0041f000 f i gameSetupState.obj
+ 0001:0001e010       ?deallocate@?$allocator@M@std@@QAEXQAMI@Z 0041f010 f i gameSetupState.obj
  0001:0001e090       ?seekpos@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@V32@H@Z 0041f090 f i gameState.obj
  0001:0001e160       ?seekpos@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@V32@H@Z 0041f160 f i gameState.obj
  0001:0001e390       ?setAllObjectsVisible@DisplayableObjectContainer@@QBEX_N@Z 0041f390 f i gameState.obj
@@ -971,6 +1082,7 @@
  0001:0001e790       ?to_char_type@?$_Narrow_char_traits@DH@std@@SADH@Z 0041f790 f i gameState.obj
  0001:0001e7a0       ?to_int_type@?$_Narrow_char_traits@DH@std@@SAHD@Z 0041f7a0 f i gameState.obj
  0001:0001e7b0       ?uflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHXZ 0041f7b0 f i gameState.obj
+ 0001:0001ea30       ?_Tidy@?$vector@MV?$allocator@M@std@@@std@@AAEXXZ 0041fa30 f i gameSetupState.obj
  0001:0001ead0       ?underflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHXZ 0041fad0 f i gameState.obj
  0001:0001eb90       ?underflow@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAEHXZ 0041fb90 f i gameState.obj
  0001:0001eca0       ?xsgetn@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE_JPAD_J@Z 0041fca0 f i gameState.obj
@@ -980,6 +1092,8 @@
  0001:0001f440       ?virtKeyDown@ImageMappingDemo@@UAEXH@Z 00420440 f   ImageMappingDemo.obj
  0001:0001f470       ?virtMainLoopDoBeforeUpdate@ImageMappingDemo@@UAEXXZ 00420470 f   ImageMappingDemo.obj
  0001:0001f500       ?mapCoordinates@ImageMappingDemo@@UAE_NAAN0ABVSimpleImage@@@Z 00420500 f   ImageMappingDemo.obj
+ 0001:0001f780       ??$_Construct_n@$$V@?$vector@MV?$allocator@M@std@@@std@@AAEXI@Z 00420780 f i gameSetupState.obj
+ 0001:0001f860       ??$_Construct_n@ABQAMABQAM@?$vector@MV?$allocator@M@std@@@std@@AAEXIABQAM0@Z 00420860 f i gameSetupState.obj
  0001:0001f970       ??0MappableImageObject@@QAE@PAVImagePixelMapping@@HHPAVBaseEngine@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N3@Z 00420970 f i ImageMappingDemo.obj
  0001:0001fa30       ??1MappableImageObject@@UAE@XZ 00420a30 f i ImageMappingDemo.obj
  0001:0001fa50       ??_EMappableImageObject@@UAEPAXI@Z 00420a50 f i ImageMappingDemo.obj
@@ -1008,13 +1122,22 @@
  0001:000203a0       ?setLives@MainCharacter@@QAEXH@Z 004213a0 f   MainCharacter.obj
  0001:000203c0       ?virtPostMoveLogic@MainCharacter@@UAEXXZ 004213c0 f   MainCharacter.obj
  0001:00020460       ?virtHandleDeath@MainCharacter@@UAEXXZ 00421460 f   MainCharacter.obj
+ 0001:000204a0       ??$_Construct_n@ABV?$vector@MV?$allocator@M@std@@@std@@@?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@AAEXIABV?$vector@MV?$allocator@M@std@@@1@@Z 004214a0 f i gameSetupState.obj
+ 0001:00020580       ??$_Uninitialized_copy@PAMPAMV?$allocator@M@std@@@std@@YAPAMPAM00AAV?$allocator@M@0@@Z 00421580 f i gameSetupState.obj
  0001:00020700       ??$?0VSimpleImage@@@?$allocator@U_Container_proxy@std@@@std@@QAE@ABV?$allocator@VSimpleImage@@@1@@Z 00421700 f i MainCharacter.obj
+ 0001:00020710       ?_Change_array@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEXQAPAVDrawingSurface@@II@Z 00421710 f i gameSetupState.obj
  0001:00020810       ??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@QBD$$QAV10@@Z 00421810 f i MainCharacter.obj
  0001:000208b0       ??$_Allocate_at_least_helper@V?$allocator@VSimpleImage@@@std@@@std@@YAPAVSimpleImage@@AAV?$allocator@VSimpleImage@@@0@AAI@Z 004218b0 f i MainCharacter.obj
+ 0001:000208d0       ?deallocate@?$allocator@PAVDrawingSurface@@@std@@QAEXQAPAVDrawingSurface@@I@Z 004218d0 f i gameSetupState.obj
  0001:00020950       ??$_Construct_in_place@VSimpleImage@@ABV1@@std@@YAXAAVSimpleImage@@ABV1@@Z 00421950 f i MainCharacter.obj
+ 0001:00020990       ??$_Emplace_reallocate@ABQAVDrawingSurface@@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEPAPAVDrawingSurface@@QAPAV2@ABQAV2@@Z 00421990 f i gameSetupState.obj
  0001:00020ba0       ??$_Emplace_back@VSimpleImage@@@?$_Uninitialized_backout_al@V?$allocator@VSimpleImage@@@std@@@std@@QAEX$$QAVSimpleImage@@@Z 00421ba0 f i MainCharacter.obj
+ 0001:00020bf0       ?deallocate@?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@QAEXQAV?$vector@MV?$allocator@M@std@@@2@I@Z 00421bf0 f i gameSetupState.obj
  0001:00020c80       ??$_Emplace_one_at_back@ABVSimpleImage@@@?$vector@VSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@AAEAAVSimpleImage@@ABV2@@Z 00421c80 f i MainCharacter.obj
+ 0001:00020ce0       ?_Tidy@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEXXZ 00421ce0 f i gameSetupState.obj
  0001:00020d80       ??$_Get_size_of_n@$0BA@@std@@YAII@Z 00421d80 f i MainCharacter.obj
+ 0001:00020db0       ?_Tidy@?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@AAEXXZ 00421db0 f i gameSetupState.obj
+ 0001:00020e50       ?setMapSize@TileManager@@QAEXHH@Z 00421e50 f i gameSetupState.obj
  0001:00020fd0       ??$_Get_unwrapped@AAPAD@std@@YA?A_TAAPAD@Z 00421fd0 f i MainCharacter.obj
  0001:00021010       ??$_Get_unwrapped@ABQAVSimpleImage@@@std@@YA?A_TABQAVSimpleImage@@@Z 00422010 f i MainCharacter.obj
  0001:00021100       ??$_Reallocate_grow_by@V<lambda_ab246b20b9526e2ef7792587e4298a77>@@PBDI@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEAAV01@IV<lambda_ab246b20b9526e2ef7792587e4298a77>@@PBDI@Z 00422100 f i MainCharacter.obj
@@ -1186,8 +1309,7 @@
  0001:00027230       ??0?$allocator@PAVDrawingSurface@@@std@@QAE@XZ 00428230 f i mainMenuState.obj
  0001:00027250       ??0?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QAE@XZ 00428250 f i mainMenuState.obj
  0001:000272e0       ??0gameSetupState@@QAE@PAVPsyeb10Engine@@@Z 004282e0 f i mainMenuState.obj
- 0001:000273b0       ??_EmainMenuState@@UAEPAXI@Z 004283b0 f i mainMenuState.obj
- 0001:000273b0       ??_GmainMenuState@@UAEPAXI@Z 004283b0 f i mainMenuState.obj
+ 0001:000273b0       ??0thread@std@@QAE@XZ      004283b0 f i mainMenuState.obj
  0001:000273f0       ?virtDrawTileAt@menuTileManager@@UBEXPAVBaseEngine@@PAVDrawingSurface@@HHHH@Z 004283f0 f   menuTileManager.obj
  0001:000277b0       ?tileSelected@menuTileManager@@QAEXPAVBaseEngine@@PAVDrawingSurface@@HH@Z 004287b0 f   menuTileManager.obj
  0001:000277f0       ?drawTileBox@menuTileManager@@QBEXPAVBaseEngine@@PAVDrawingSurface@@HH_N@Z 004287f0 f   menuTileManager.obj
@@ -1627,10 +1749,8 @@
  0001:00033020       ?virtKeyDown@Psyeb10Engine@@UAEXH@Z 00434020 f   Psyeb10Engine.obj
  0001:00033050       ?setBackgroundSurface@Psyeb10Engine@@QAEXPAVDrawingSurface@@@Z 00434050 f   Psyeb10Engine.obj
  0001:00033070       ?virtKeyUp@Psyeb10Engine@@UAEXH@Z 00434070 f   Psyeb10Engine.obj
- 0001:000331f0       ??_EPsyeb10Engine@@UAEPAXI@Z 004341f0 f i Psyeb10Engine.obj
- 0001:000331f0       ??_GPsyeb10Engine@@UAEPAXI@Z 004341f0 f i Psyeb10Engine.obj
- 0001:00033230       ?clear@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAEXXZ 00434230 f i Psyeb10Engine.obj
- 0001:000332b0       ?clearContents@DisplayableObjectContainer@@QAEXXZ 004342b0 f i Psyeb10Engine.obj
+ 0001:00033230       ??_EPsyeb10Engine@@UAEPAXI@Z 00434230 f i Psyeb10Engine.obj
+ 0001:00033230       ??_GPsyeb10Engine@@UAEPAXI@Z 00434230 f i Psyeb10Engine.obj
  0001:000332f0       ?enter@Psyeb10States@@UAEXXZ 004342f0 f   Psyeb10States.obj
  0001:00033300       ?reEntry@Psyeb10States@@UAEXXZ 00434300 f   Psyeb10States.obj
  0001:00033310       ?foreGroundStrings@Psyeb10States@@UAEXXZ 00434310 f   Psyeb10States.obj
@@ -2216,6 +2336,16 @@
  0001:0007e800       __is_c_termination_complete 0047f800 f   MSVCRTD:ucrt_stubs.obj
  0001:0007e810       __filter_x86_sse2_floating_point_exception 0047f810 f   MSVCRTD:x86_exception_filter.obj
  0001:0007e810       __filter_x86_sse2_floating_point_exception_default 0047f810 f   MSVCRTD:x86_exception_filter.obj
+ 0001:0007e950       ?enter@gameSetupState@@UAEXXZ 0047f950 f   gameSetupState.obj
+ 0001:0007eb30       ?foreGroundStrings@gameSetupState@@UAEXXZ 0047fb30 f   gameSetupState.obj
+ 0001:0007eb90       ?initObjects@gameSetupState@@UAEXXZ 0047fb90 f   gameSetupState.obj
+ 0001:0007eba0       ?reset@gameSetupState@@UAEXXZ 0047fba0 f   gameSetupState.obj
+ 0001:0007ebb0       ?mouseDown@gameSetupState@@UAEXHHH@Z 0047fbb0 f   gameSetupState.obj
+ 0001:0007ee90       ?mainLoopPreUpdate@gameSetupState@@UAEXXZ 0047fe90 f   gameSetupState.obj
+ 0001:0007efc0       ?reEntry@gameSetupState@@UAEXXZ 0047ffc0 f   gameSetupState.obj
+ 0001:0007efd0       ?keyPressed@gameSetupState@@UAEXH@Z 0047ffd0 f   gameSetupState.obj
+ 0001:0007efe0       ??1gameSetupState@@UAE@XZ  0047ffe0 f   gameSetupState.obj
+ 0001:0007f0e0       ?generateAnimationFrames@gameSetupState@@AAEXXZ 004800e0 f   gameSetupState.obj
  0002:00000000       ___xc_a                    00488000     MSVCRTD:initializers.obj
  0002:0000030c       ___xc_z                    0048830c     MSVCRTD:initializers.obj
  0002:00000410       ___xi_a                    00488410     MSVCRTD:initializers.obj
@@ -2224,6 +2354,8 @@
  0002:00000924       ___xp_z                    00488924     MSVCRTD:initializers.obj
  0002:00000a28       ___xt_a                    00488a28     MSVCRTD:initializers.obj
  0002:00000b2c       ___xt_z                    00488b2c     MSVCRTD:initializers.obj
+ 0002:00000fbc       __real@41f00000            00488fbc     gameSetupState.obj
+ 0002:00000fc0       __real@3fe6666666666666    00488fc0     gameSetupState.obj
  0002:00001074       ??_7exception@std@@6B@     00489074     DraggingDemo.obj
  0002:00001080       ??_C@_0BC@EOODALEL@Unknown?5exception@ 00489080     DraggingDemo.obj
  0002:0000109c       ??_7bad_alloc@std@@6B@     0048909c     DraggingDemo.obj
@@ -2293,10 +2425,8 @@
  0002:00002e80       ??_7Psyeb10States@@6B@     0048ae80     gameSetupState.obj
  0002:00002ebc       ??_7gameSetupState@@6B@    0048aebc     gameSetupState.obj
  0002:00002ef8       ??_7gameState@@6B@         0048aef8     gameSetupState.obj
- 0002:00002f30       __real@3fc999999999999a    0048af30     gameSetupState.obj
- 0002:00002f40       __real@3fe6666666666666    0048af40     gameSetupState.obj
- 0002:00002f4c       __real@40c90fd0            0048af4c     gameSetupState.obj
- 0002:00002f50       __real@41f00000            0048af50     gameSetupState.obj
+ 0002:00002f4c       __real@3e4ccccd            0048af4c     gameSetupState.obj
+ 0002:00002f50       __real@40c90fd0            0048af50     gameSetupState.obj
  0002:000034a4       ??_7bad_cast@std@@6B@      0048b4a4     gameState.obj
  0002:000034b0       ??_C@_08EPJLHIJG@bad?5cast@ 0048b4b0     gameState.obj
  0002:000034bc       ??_C@_0BG@HGEDEDEC@invalid?5stoi?5argument@ 0048b4bc     gameState.obj
@@ -2880,7 +3010,11 @@
  0004:000001bc       __imp_?_Init@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAPAD0PAH001@Z 004a01bc     msvcprtd:MSVCP140D.dll
  0004:000001c0       __imp_?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JPAD_J@Z 004a01c0     msvcprtd:MSVCP140D.dll
  0004:000001c4       __imp_?uflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEHXZ 004a01c4     msvcprtd:MSVCP140D.dll
- 0004:000001c8       \177MSVCP140D_NULL_THUNK_DATA 004a01c8     msvcprtd:MSVCP140D.dll
+ 0004:000001c8       __imp_?_Throw_Cpp_error@std@@YAXH@Z 004a01c8     msvcprtd:MSVCP140D.dll
+ 0004:000001cc       __imp___Cnd_do_broadcast_at_thread_exit 004a01cc     msvcprtd:MSVCP140D.dll
+ 0004:000001d0       __imp___Thrd_id            004a01d0     msvcprtd:MSVCP140D.dll
+ 0004:000001d4       __imp___Thrd_join          004a01d4     msvcprtd:MSVCP140D.dll
+ 0004:000001d8       \177MSVCP140D_NULL_THUNK_DATA 004a01d8     msvcprtd:MSVCP140D.dll
  0004:00000234       __imp__SDL_SetClipRect     004a0234     SDL2:SDL2.dll
  0004:00000238       __imp__SDL_InitSubSystem   004a0238     SDL2:SDL2.dll
  0004:0000023c       __imp__SDL_CloseAudioDevice 004a023c     SDL2:SDL2.dll
@@ -3006,7 +3140,8 @@
  0004:000004e4       __imp___CrtDbgReport       004a04e4     ucrtd:ucrtbased.dll
  0004:000004e8       __imp___invalid_parameter  004a04e8     ucrtd:ucrtbased.dll
  0004:000004ec       __imp___configure_narrow_argv 004a04ec     ucrtd:ucrtbased.dll
- 0004:000004f0       \177ucrtbased_NULL_THUNK_DATA 004a04f0     ucrtd:ucrtbased.dll
+ 0004:000004f0       __imp___beginthreadex      004a04f0     ucrtd:ucrtbased.dll
+ 0004:000004f4       \177ucrtbased_NULL_THUNK_DATA 004a04f4     ucrtd:ucrtbased.dll
  0004:00000550       __IMPORT_DESCRIPTOR_SDL2   004a0550     SDL2:SDL2.dll
  0004:00000564       __IMPORT_DESCRIPTOR_SDL2_image 004a0564     SDL2_image:SDL2_image.dll
  0004:00000578       __IMPORT_DESCRIPTOR_SDL2_ttf 004a0578     SDL2_ttf:SDL2_ttf.dll
@@ -3787,6 +3922,17 @@
  0000:00000000       _volmd                     00400000     gameSetupState.obj
  0000:00000000       _volmd                     00400000     gameSetupState.obj
  0000:00000000       _volmd                     00400000     gameSetupState.obj
+ 0000:00000000       _volmd                     00400000     gameSetupState.obj
+ 0000:00000000       _volmd                     00400000     gameSetupState.obj
+ 0000:00000000       _volmd                     00400000     gameSetupState.obj
+ 0000:00000000       _volmd                     00400000     gameSetupState.obj
+ 0000:00000000       _volmd                     00400000     gameSetupState.obj
+ 0000:00000000       _volmd                     00400000     gameSetupState.obj
+ 0000:00000000       _volmd                     00400000     gameSetupState.obj
+ 0000:00000000       _volmd                     00400000     gameSetupState.obj
+ 0000:00000000       _volmd                     00400000     gameSetupState.obj
+ 0000:00000000       _volmd                     00400000     gameSetupState.obj
+ 0000:00000000       _volmd                     00400000     gameSetupState.obj
  0002:fff78000       __catchsym$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$3 00400000     gameState.obj
  0002:fff78000       __catchsym$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z$3 00400000     gameState.obj
  0002:fff78000       __ehfuncinfo$??$_Deallocate@$07@std@@YAXPAXI@Z 00400000     gameState.obj
@@ -4244,6 +4390,7 @@
  0000:fff5b000       .debug$S                   00400000     ucrtd:ucrtbased.dll
  0000:fff5b000       .debug$S                   00400000     ucrtd:ucrtbased.dll
  0000:fff5b000       .debug$S                   00400000     ucrtd:ucrtbased.dll
+ 0000:fff5b000       .debug$S                   00400000     ucrtd:ucrtbased.dll
  0000:fff5b000       .debug$S                   00400000     kernel32:KERNEL32.dll
  0000:fff5b000       .debug$S                   00400000     kernel32:KERNEL32.dll
  0000:fff5b000       .debug$S                   00400000     kernel32:KERNEL32.dll
@@ -4393,6 +4540,10 @@
  0000:00000000       _volmd                     00400000     msvcprtd:vector_algorithms.obj
  0000:00000000       _volmd                     00400000     msvcprtd:vector_algorithms.obj
  0000:00000000       _volmd                     00400000     msvcprtd:vector_algorithms.obj
+ 0000:fff5b000       .debug$S                   00400000     msvcprtd:MSVCP140D.dll
+ 0000:fff5b000       .debug$S                   00400000     msvcprtd:MSVCP140D.dll
+ 0000:fff5b000       .debug$S                   00400000     msvcprtd:MSVCP140D.dll
+ 0000:fff5b000       .debug$S                   00400000     msvcprtd:MSVCP140D.dll
  0000:fff5b000       .debug$S                   00400000     msvcprtd:MSVCP140D.dll
  0000:fff5b000       .debug$S                   00400000     msvcprtd:MSVCP140D.dll
  0000:fff5b000       .debug$S                   00400000     msvcprtd:MSVCP140D.dll
@@ -4994,6 +5145,7 @@
  0001:fffff018       __unwindfunclet$?getImagePtrbyURL@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@_N1@Z$10 00400018 f   Psyeb10Enemy.obj
  0001:fffff018       __unwindfunclet$??0DragableImageObject@@QAE@HHPAVBaseEngine@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N2@Z$3 00400018 f   ZoomingDemo.obj
  0001:fffff018       __unwindfunclet$?getImagePtrbyURL@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@_N1@Z$10 00400018 f   ZoomingDemo.obj
+ 0000:00000018       _volmd                     00400018     gameSetupState.obj
  0001:fffff018       __unwindfunclet$?getImagePtrbyURL@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@_N1@Z$10 00400018 f   gameState.obj
  0000:00000018       _volmd                     00400018     gameState.obj
  0001:fffff018       __unwindfunclet$?getImagePtrbyURL@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@_N1@Z$10 00400018 f   mainMenuState.obj
@@ -5054,6 +5206,7 @@
  0002:fff78024       __unwindtable$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z 00400024     ZoomingDemo.obj
  0002:fff78024       __unwindtable$?getImagePtrbyURL@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@_N1@Z 00400024     ZoomingDemo.obj
  0002:fff78024       __unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00400024     gameSetupState.obj
+ 0000:00000024       _volmd                     00400024     gameSetupState.obj
  0002:fff78024       __unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00400024     gameState.obj
  0002:fff78024       __unwindtable$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z 00400024     gameState.obj
  0002:fff78024       __unwindtable$?getImagePtrbyURL@ImageManager@@QAE?AV?$shared_ptr@VRawImageData@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@_N1@Z 00400024     gameState.obj
@@ -6357,17 +6510,20 @@
  0001:00081cb8       __unwindfunclet$??0FlashingDemo@@QAE@XZ$1 00482cb8 f   FlashingDemo.obj
  0001:00081cc6       __unwindfunclet$??0FlashingDemo@@QAE@XZ$2 00482cc6 f   FlashingDemo.obj
  0001:00081cd9       __ehhandler$??0FlashingDemo@@QAE@XZ 00482cd9 f   FlashingDemo.obj
- 0001:00081d10       __unwindfunclet$?enter@gameSetupState@@UAEXXZ$0 00482d10 f   gameSetupState.obj
- 0001:00081d24       __ehhandler$?enter@gameSetupState@@UAEXXZ 00482d24 f   gameSetupState.obj
- 0001:00081d41       __unwindfunclet$?mouseDown@gameSetupState@@UAEXHHH@Z$0 00482d41 f   gameSetupState.obj
- 0001:00081d50       __unwindfunclet$?mouseDown@gameSetupState@@UAEXHHH@Z$1 00482d50 f   gameSetupState.obj
- 0001:00081d64       __ehhandler$?mouseDown@gameSetupState@@UAEXHHH@Z 00482d64 f   gameSetupState.obj
- 0001:00081da0       __unwindfunclet$??$_Emplace_reallocate@ABQAVDrawingSurface@@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEPAPAVDrawingSurface@@QAPAV2@ABQAV2@@Z$0 00482da0 f   gameSetupState.obj
- 0001:00081dad       __ehhandler$??$_Emplace_reallocate@ABQAVDrawingSurface@@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEPAPAVDrawingSurface@@QAPAV2@ABQAV2@@Z 00482dad f   gameSetupState.obj
- 0001:00081de0       __unwindfunclet$??$_Uninitialized_move@PAPAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@YAPAPAVDrawingSurface@@QAPAV1@0PAPAV1@AAV?$allocator@PAVDrawingSurface@@@0@@Z$0 00482de0 f   gameSetupState.obj
- 0001:00081ded       __ehhandler$??$_Uninitialized_move@PAPAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@YAPAPAVDrawingSurface@@QAPAV1@0PAPAV1@AAV?$allocator@PAVDrawingSurface@@@0@@Z 00482ded f   gameSetupState.obj
- 0001:00081e20       __unwindfunclet$?_Orphan_range_locked@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEXPAPAVDrawingSurface@@0@Z$0 00482e20 f   gameSetupState.obj
- 0001:00081e2e       __ehhandler$?_Orphan_range_locked@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEXPAPAVDrawingSurface@@0@Z 00482e2e f   gameSetupState.obj
+ 0001:00081d00       __unwindfunclet$??$_Construct_n@ABV?$vector@MV?$allocator@M@std@@@std@@@?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@AAEXIABV?$vector@MV?$allocator@M@std@@@1@@Z$0 00482d00 f   gameSetupState.obj
+ 0001:00081d08       __unwindfunclet$??$_Construct_n@ABV?$vector@MV?$allocator@M@std@@@std@@@?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@AAEXIABV?$vector@MV?$allocator@M@std@@@1@@Z$1 00482d08 f   gameSetupState.obj
+ 0001:00081d15       __ehhandler$??$_Construct_n@ABV?$vector@MV?$allocator@M@std@@@std@@@?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@AAEXIABV?$vector@MV?$allocator@M@std@@@1@@Z 00482d15 f   gameSetupState.obj
+ 0001:00081d40       __unwindfunclet$??$_Uninitialized_move@PAPAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@YAPAPAVDrawingSurface@@QAPAV1@0PAPAV1@AAV?$allocator@PAVDrawingSurface@@@0@@Z$0 00482d40 f   gameSetupState.obj
+ 0001:00081d4d       __ehhandler$??$_Uninitialized_move@PAPAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@YAPAPAVDrawingSurface@@QAPAV1@0PAPAV1@AAV?$allocator@PAVDrawingSurface@@@0@@Z 00482d4d f   gameSetupState.obj
+ 0001:00081d70       __unwindfunclet$??$_Uninitialized_value_construct_n@V?$allocator@M@std@@@std@@YAPAMPAMIAAV?$allocator@M@0@@Z$0 00482d70 f   gameSetupState.obj
+ 0001:00081d7d       __ehhandler$??$_Uninitialized_value_construct_n@V?$allocator@M@std@@@std@@YAPAMPAMIAAV?$allocator@M@0@@Z 00482d7d f   gameSetupState.obj
+ 0001:00081da0       __ehhandler$??$?0P8gameSetupState@@AEXXZPAV0@$0A@@?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@QAE@$$QAP8gameSetupState@@AEXXZ$$QAPAV2@@Z 00482da0 f   gameSetupState.obj
+ 0001:00081de0       __unwindfunclet$??$_Construct_n@$$V@?$vector@MV?$allocator@M@std@@@std@@AAEXI@Z$0 00482de0 f   gameSetupState.obj
+ 0001:00081de8       __unwindfunclet$??$_Construct_n@$$V@?$vector@MV?$allocator@M@std@@@std@@AAEXI@Z$1 00482de8 f   gameSetupState.obj
+ 0001:00081df5       __ehhandler$??$_Construct_n@$$V@?$vector@MV?$allocator@M@std@@@std@@AAEXI@Z 00482df5 f   gameSetupState.obj
+ 0001:00081e20       __unwindfunclet$??$_Construct_n@ABQAMABQAM@?$vector@MV?$allocator@M@std@@@std@@AAEXIABQAM0@Z$0 00482e20 f   gameSetupState.obj
+ 0001:00081e28       __unwindfunclet$??$_Construct_n@ABQAMABQAM@?$vector@MV?$allocator@M@std@@@std@@AAEXIABQAM0@Z$1 00482e28 f   gameSetupState.obj
+ 0001:00081e35       __ehhandler$??$_Construct_n@ABQAMABQAM@?$vector@MV?$allocator@M@std@@@std@@AAEXIABQAM0@Z 00482e35 f   gameSetupState.obj
  0001:00081e60       __unwindfunclet$?foreGroundStrings@gameState@@UAEXXZ$0 00482e60 f   gameState.obj
  0001:00081e6b       __unwindfunclet$?foreGroundStrings@gameState@@UAEXXZ$1 00482e6b f   gameState.obj
  0001:00081e76       __unwindfunclet$?foreGroundStrings@gameState@@UAEXXZ$2 00482e76 f   gameState.obj
@@ -6386,6 +6542,7 @@
  0001:00081f6e       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$4 00482f6e f   gameState.obj
  0001:00081f79       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$5 00482f79 f   gameState.obj
  0001:00081f86       __ehhandler$?loadGame@gameState@@QAE_NXZ 00482f86 f   gameState.obj
+ 0001:00081fd0       __ehhandler$??$_Destroy_range@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@YAXPAV?$vector@MV?$allocator@M@std@@@0@QAV10@AAV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@0@@Z 00482fd0 f   gameSetupState.obj
  0001:00082010       __unwindfunclet$??$?5DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z$2 00483010 f   gameState.obj
  0001:00082018       __unwindfunclet$??$?5DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z$3 00483018 f   gameState.obj
  0001:00082025       __ehhandler$??$?5DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z 00483025 f   gameState.obj
@@ -6455,6 +6612,8 @@
  0001:000827ad       __ehhandler$??$_Uninitialized_move@PAVSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@YAPAVSimpleImage@@QAV1@0PAV1@AAV?$allocator@VSimpleImage@@@0@@Z 004837ad f   MainCharacter.obj
  0001:000827e0       __unwindfunclet$?_Orphan_range_locked@?$vector@VSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@ABEXPAVSimpleImage@@0@Z$0 004837e0 f   MainCharacter.obj
  0001:000827ee       __ehhandler$?_Orphan_range_locked@?$vector@VSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@ABEXPAVSimpleImage@@0@Z 004837ee f   MainCharacter.obj
+ 0001:00082810       __unwindfunclet$??$_Emplace_reallocate@ABQAVDrawingSurface@@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEPAPAVDrawingSurface@@QAPAV2@ABQAV2@@Z$0 00483810 f   gameSetupState.obj
+ 0001:0008281d       __ehhandler$??$_Emplace_reallocate@ABQAVDrawingSurface@@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEPAPAVDrawingSurface@@QAPAV2@ABQAV2@@Z 0048381d f   gameSetupState.obj
  0001:00082850       __unwindfunclet$?doProgram@@YAHHQAPAD@Z$0 00483850 f   mainfunction.obj
  0001:00082860       __ehhandler$?doProgram@@YAHHQAPAD@Z 00483860 f   mainfunction.obj
  0001:000828a0       __ehhandler$??$_Freenode@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@PAU01@@Z 004838a0 f   mainfunction.obj
@@ -6468,6 +6627,7 @@
  0001:00082948       __unwindfunclet$?updateAllObjects@BaseEngine@@UAEXH@Z$0 00483948 f   BaseEngine.obj
  0001:00082950       __unwindfunclet$?updateAllObjects@BaseEngine@@UAEXH@Z$3 00483950 f   BaseEngine.obj
  0001:0008295d       __ehhandler$?updateAllObjects@BaseEngine@@UAEXH@Z 0048395d f   BaseEngine.obj
+ 0001:00082980       __ehhandler$??$_Invoke@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@$0A@$00@thread@std@@CGIPAX@Z 00483980 f   gameSetupState.obj
  0001:000829b0       __unwindfunclet$??$_Construct_n@$$V@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEXI@Z$0 004839b0 f   BaseEngine.obj
  0001:000829b8       __unwindfunclet$??$_Construct_n@$$V@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEXI@Z$1 004839b8 f   BaseEngine.obj
  0001:000829c5       __ehhandler$??$_Construct_n@$$V@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEXI@Z 004839c5 f   BaseEngine.obj
@@ -6516,6 +6676,16 @@
  0001:00082e60       __unwindfunclet$??0Psyeb10Bike@@QAE@HHPAVBaseEngine@@HHH@Z$0 00483e60 f   Psyeb10Bike.obj
  0001:00082e68       __unwindfunclet$??0Psyeb10Bike@@QAE@HHPAVBaseEngine@@HHH@Z$1 00483e68 f   Psyeb10Bike.obj
  0001:00082e78       __ehhandler$??0Psyeb10Bike@@QAE@HHPAVBaseEngine@@HHH@Z 00483e78 f   Psyeb10Bike.obj
+ 0001:00082ea0       __unwindfunclet$??$_Reallocate@$0A@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEXAAI@Z$0 00483ea0 f   gameSetupState.obj
+ 0001:00082ead       __ehhandler$??$_Reallocate@$0A@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEXAAI@Z 00483ead f   gameSetupState.obj
+ 0001:00082ed0       __unwindfunclet$??$_Start@P8gameSetupState@@AEXXZPAV1@@thread@std@@AAEX$$QAP8gameSetupState@@AEXXZ$$QAPAV2@@Z$1 00483ed0 f   gameSetupState.obj
+ 0001:00082edd       __ehhandler$??$_Start@P8gameSetupState@@AEXXZPAV1@@thread@std@@AAEX$$QAP8gameSetupState@@AEXXZ$$QAPAV2@@Z 00483edd f   gameSetupState.obj
+ 0001:00082f00       __unwindfunclet$??$_Uninitialized_copy@PAMPAMV?$allocator@M@std@@@std@@YAPAMPAM00AAV?$allocator@M@0@@Z$0 00483f00 f   gameSetupState.obj
+ 0001:00082f0d       __ehhandler$??$_Uninitialized_copy@PAMPAMV?$allocator@M@std@@@std@@YAPAMPAM00AAV?$allocator@M@0@@Z 00483f0d f   gameSetupState.obj
+ 0001:00082f30       __unwindfunclet$??$_Uninitialized_fill_n@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@YAPAV?$vector@MV?$allocator@M@std@@@0@PAV10@IABV10@AAV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@0@@Z$0 00483f30 f   gameSetupState.obj
+ 0001:00082f3d       __ehhandler$??$_Uninitialized_fill_n@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@YAPAV?$vector@MV?$allocator@M@std@@@0@PAV10@IABV10@AAV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@0@@Z 00483f3d f   gameSetupState.obj
+ 0001:00082f60       __unwindfunclet$?_Orphan_range_locked@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEXPAPAVDrawingSurface@@0@Z$0 00483f60 f   gameSetupState.obj
+ 0001:00082f6e       __ehhandler$?_Orphan_range_locked@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEXPAPAVDrawingSurface@@0@Z 00483f6e f   gameSetupState.obj
  0001:00082fd0       __unwindfunclet$??$?0U?$pair@HH@std@@@?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@HH@std@@PAX@1@$$QAU?$pair@HH@1@@Z$0 00483fd0 f   Psyeb10Enemy.obj
  0001:00082fdd       __ehhandler$??$?0U?$pair@HH@std@@@?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@HH@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@HH@std@@PAX@1@$$QAU?$pair@HH@1@@Z 00483fdd f   Psyeb10Enemy.obj
  0001:00083010       __unwindfunclet$??$_Construct_n@ABH@?$vector@HV?$allocator@H@std@@@std@@AAEXIABH@Z$0 00484010 f   Psyeb10Enemy.obj
@@ -6662,6 +6832,16 @@
  0001:00084322       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$3 00485322 f   Psyeb10Enemy.obj
  0001:0008432d       __unwindfunclet$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z$4 0048532d f   Psyeb10Enemy.obj
  0001:0008433d       __ehhandler$?floodFill@Psyeb10Enemy@@AAEHHHHHHH@Z 0048533d f   Psyeb10Enemy.obj
+ 0001:00084370       __unwindfunclet$?enter@gameSetupState@@UAEXXZ$0 00485370 f   gameSetupState.obj
+ 0001:00084384       __ehhandler$?enter@gameSetupState@@UAEXXZ 00485384 f   gameSetupState.obj
+ 0001:000843a1       __unwindfunclet$?mouseDown@gameSetupState@@UAEXHHH@Z$0 004853a1 f   gameSetupState.obj
+ 0001:000843b0       __unwindfunclet$?mouseDown@gameSetupState@@UAEXHHH@Z$1 004853b0 f   gameSetupState.obj
+ 0001:000843c4       __ehhandler$?mouseDown@gameSetupState@@UAEXHHH@Z 004853c4 f   gameSetupState.obj
+ 0001:000843e1       __ehhandler$??1gameSetupState@@UAE@XZ 004853e1 f   gameSetupState.obj
+ 0001:000843fe       __unwindfunclet$?generateAnimationFrames@gameSetupState@@AAEXXZ$0 004853fe f   gameSetupState.obj
+ 0001:00084409       __unwindfunclet$?generateAnimationFrames@gameSetupState@@AAEXXZ$1 00485409 f   gameSetupState.obj
+ 0001:00084414       __unwindfunclet$?generateAnimationFrames@gameSetupState@@AAEXXZ$2 00485414 f   gameSetupState.obj
+ 0001:00084428       __ehhandler$?generateAnimationFrames@gameSetupState@@AAEXXZ 00485428 f   gameSetupState.obj
  0001:00085410       ??__F_Fac_tidy_reg@std@@YAXXZ 00486410 f   msvcprtd:locale0_implib.obj
  0002:00000104       ?pre_cpp_initializer@@3P6AXXZA 00488104     MSVCRTD:exe_main.obj
  0002:00000208       ?_Fac_tidy_reg$initializer$@std@@3P6AXXZA 00488208     msvcprtd:locale0_implib.obj
@@ -6708,26 +6888,26 @@
  0002:00002728       $SG103536                  0048a728     FlashingDemo.obj
  0002:000027f0       $SG103537                  0048a7f0     FlashingDemo.obj
  0002:000027f4       $SG103538                  0048a7f4     FlashingDemo.obj
- 0002:000029a8       $SG93811                   0048a9a8     gameSetupState.obj
- 0002:000029b4       $SG93854                   0048a9b4     gameSetupState.obj
- 0002:000029c4       $SG93856                   0048a9c4     gameSetupState.obj
- 0002:000029d4       $SG93857                   0048a9d4     gameSetupState.obj
- 0002:000029f0       $SG93860                   0048a9f0     gameSetupState.obj
- 0002:00002a04       $SG93861                   0048aa04     gameSetupState.obj
- 0002:00002a18       $SG93863                   0048aa18     gameSetupState.obj
- 0002:00002a2c       $SG105440                  0048aa2c     gameSetupState.obj
- 0002:00002a40       $SG105441                  0048aa40     gameSetupState.obj
- 0002:00002a48       $SG105442                  0048aa48     gameSetupState.obj
- 0002:00002ab0       $SG105443                  0048aab0     gameSetupState.obj
- 0002:00002b74       $SG105444                  0048ab74     gameSetupState.obj
- 0002:00002b78       $SG105445                  0048ab78     gameSetupState.obj
- 0002:00002ba0       $SG105505                  0048aba0     gameSetupState.obj
- 0002:00002c04       $SG105879                  0048ac04     gameSetupState.obj
- 0002:00002c20       $SG105880                  0048ac20     gameSetupState.obj
- 0002:00002c28       $SG105881                  0048ac28     gameSetupState.obj
- 0002:00002c90       $SG105882                  0048ac90     gameSetupState.obj
- 0002:00002d58       $SG105883                  0048ad58     gameSetupState.obj
- 0002:00002d5c       $SG105884                  0048ad5c     gameSetupState.obj
+ 0002:000029a8       $SG109269                  0048a9a8     gameSetupState.obj
+ 0002:000029bc       $SG109270                  0048a9bc     gameSetupState.obj
+ 0002:000029c0       $SG109271                  0048a9c0     gameSetupState.obj
+ 0002:00002a28       $SG109272                  0048aa28     gameSetupState.obj
+ 0002:00002aec       $SG109273                  0048aaec     gameSetupState.obj
+ 0002:00002af0       $SG109274                  0048aaf0     gameSetupState.obj
+ 0002:00002b18       $SG109330                  0048ab18     gameSetupState.obj
+ 0002:00002b7c       $SG110582                  0048ab7c     gameSetupState.obj
+ 0002:00002b98       $SG110583                  0048ab98     gameSetupState.obj
+ 0002:00002ba0       $SG110584                  0048aba0     gameSetupState.obj
+ 0002:00002c08       $SG110585                  0048ac08     gameSetupState.obj
+ 0002:00002cd0       $SG110586                  0048acd0     gameSetupState.obj
+ 0002:00002cd4       $SG110587                  0048acd4     gameSetupState.obj
+ 0002:00002d0c       $SG95158                   0048ad0c     gameSetupState.obj
+ 0002:00002d18       $SG95201                   0048ad18     gameSetupState.obj
+ 0002:00002d28       $SG95203                   0048ad28     gameSetupState.obj
+ 0002:00002d38       $SG95204                   0048ad38     gameSetupState.obj
+ 0002:00002d54       $SG95207                   0048ad54     gameSetupState.obj
+ 0002:00002d68       $SG95208                   0048ad68     gameSetupState.obj
+ 0002:00002d7c       $SG95210                   0048ad7c     gameSetupState.obj
  0002:00002f58       $SG106929                  0048af58     gameState.obj
  0002:00002f6c       $SG106930                  0048af6c     gameState.obj
  0002:00002f70       $SG106931                  0048af70     gameState.obj
@@ -6846,27 +7026,27 @@
  0002:000059e8       $SG86162                   0048d9e8     FontManager.obj
  0002:00005a10       $SG78376                   0048da10     FontManager.obj
  0002:00005a2c       $SG78380                   0048da2c     FontManager.obj
- 0002:00005ac8       $SG93826                   0048dac8     mainMenuState.obj
- 0002:00005ad8       $SG93842                   0048dad8     mainMenuState.obj
- 0002:00005ae4       $SG93843                   0048dae4     mainMenuState.obj
- 0002:00005afc       $SG93891                   0048dafc     mainMenuState.obj
- 0002:00005b20       $SG93893                   0048db20     mainMenuState.obj
- 0002:00005b24       $SG93894                   0048db24     mainMenuState.obj
- 0002:00005b40       $SG93896                   0048db40     mainMenuState.obj
- 0002:00005b60       $SG93898                   0048db60     mainMenuState.obj
- 0002:00005b78       $SG105245                  0048db78     mainMenuState.obj
- 0002:00005b8c       $SG105246                  0048db8c     mainMenuState.obj
- 0002:00005b90       $SG105247                  0048db90     mainMenuState.obj
- 0002:00005bf8       $SG105248                  0048dbf8     mainMenuState.obj
- 0002:00005cbc       $SG105249                  0048dcbc     mainMenuState.obj
- 0002:00005cc0       $SG105250                  0048dcc0     mainMenuState.obj
- 0002:00005ce8       $SG105310                  0048dce8     mainMenuState.obj
- 0002:00005d4c       $SG105552                  0048dd4c     mainMenuState.obj
- 0002:00005d68       $SG105553                  0048dd68     mainMenuState.obj
- 0002:00005d70       $SG105554                  0048dd70     mainMenuState.obj
- 0002:00005dd8       $SG105555                  0048ddd8     mainMenuState.obj
- 0002:00005ea0       $SG105556                  0048dea0     mainMenuState.obj
- 0002:00005ea4       $SG105557                  0048dea4     mainMenuState.obj
+ 0002:00005ac8       $SG106640                  0048dac8     mainMenuState.obj
+ 0002:00005adc       $SG106641                  0048dadc     mainMenuState.obj
+ 0002:00005ae0       $SG106642                  0048dae0     mainMenuState.obj
+ 0002:00005b48       $SG106643                  0048db48     mainMenuState.obj
+ 0002:00005c0c       $SG106644                  0048dc0c     mainMenuState.obj
+ 0002:00005c10       $SG106645                  0048dc10     mainMenuState.obj
+ 0002:00005c38       $SG106705                  0048dc38     mainMenuState.obj
+ 0002:00005c9c       $SG106947                  0048dc9c     mainMenuState.obj
+ 0002:00005cb8       $SG106948                  0048dcb8     mainMenuState.obj
+ 0002:00005cc0       $SG106949                  0048dcc0     mainMenuState.obj
+ 0002:00005d28       $SG106950                  0048dd28     mainMenuState.obj
+ 0002:00005df0       $SG106951                  0048ddf0     mainMenuState.obj
+ 0002:00005df4       $SG106952                  0048ddf4     mainMenuState.obj
+ 0002:00005e2c       $SG95192                   0048de2c     mainMenuState.obj
+ 0002:00005e3c       $SG95208                   0048de3c     mainMenuState.obj
+ 0002:00005e48       $SG95209                   0048de48     mainMenuState.obj
+ 0002:00005e60       $SG95257                   0048de60     mainMenuState.obj
+ 0002:00005e84       $SG95259                   0048de84     mainMenuState.obj
+ 0002:00005e88       $SG95260                   0048de88     mainMenuState.obj
+ 0002:00005ea4       $SG95262                   0048dea4     mainMenuState.obj
+ 0002:00005ec4       $SG95264                   0048dec4     mainMenuState.obj
  0002:00005fe8       $SG92113                   0048dfe8     menuTileManager.obj
  0002:00005ff4       $SG92115                   0048dff4     menuTileManager.obj
  0002:00006004       $SG92117                   0048e004     menuTileManager.obj
@@ -7022,19 +7202,19 @@
  0002:00008078       $SG97622                   00490078     Psyeb10Enemy.obj
  0002:000080b8       $SG97624                   004900b8     Psyeb10Enemy.obj
  0002:000080c8       $SG97625                   004900c8     Psyeb10Enemy.obj
- 0002:00008a48       $SG105708                  00490a48     Psyeb10Engine.obj
- 0002:00008a5c       $SG105709                  00490a5c     Psyeb10Engine.obj
- 0002:00008a60       $SG105710                  00490a60     Psyeb10Engine.obj
- 0002:00008ac8       $SG105711                  00490ac8     Psyeb10Engine.obj
- 0002:00008b8c       $SG105712                  00490b8c     Psyeb10Engine.obj
- 0002:00008b90       $SG105713                  00490b90     Psyeb10Engine.obj
- 0002:00008bb8       $SG105773                  00490bb8     Psyeb10Engine.obj
- 0002:00008c1c       $SG106015                  00490c1c     Psyeb10Engine.obj
- 0002:00008c38       $SG106016                  00490c38     Psyeb10Engine.obj
- 0002:00008c40       $SG106017                  00490c40     Psyeb10Engine.obj
- 0002:00008ca8       $SG106018                  00490ca8     Psyeb10Engine.obj
- 0002:00008d70       $SG106019                  00490d70     Psyeb10Engine.obj
- 0002:00008d74       $SG106020                  00490d74     Psyeb10Engine.obj
+ 0002:00008a48       $SG107103                  00490a48     Psyeb10Engine.obj
+ 0002:00008a5c       $SG107104                  00490a5c     Psyeb10Engine.obj
+ 0002:00008a60       $SG107105                  00490a60     Psyeb10Engine.obj
+ 0002:00008ac8       $SG107106                  00490ac8     Psyeb10Engine.obj
+ 0002:00008b8c       $SG107107                  00490b8c     Psyeb10Engine.obj
+ 0002:00008b90       $SG107108                  00490b90     Psyeb10Engine.obj
+ 0002:00008bb8       $SG107168                  00490bb8     Psyeb10Engine.obj
+ 0002:00008c1c       $SG107410                  00490c1c     Psyeb10Engine.obj
+ 0002:00008c38       $SG107411                  00490c38     Psyeb10Engine.obj
+ 0002:00008c40       $SG107412                  00490c40     Psyeb10Engine.obj
+ 0002:00008ca8       $SG107413                  00490ca8     Psyeb10Engine.obj
+ 0002:00008d70       $SG107414                  00490d70     Psyeb10Engine.obj
+ 0002:00008d74       $SG107415                  00490d74     Psyeb10Engine.obj
  0002:00008f28       $SG103427                  00490f28     Psyeb10States.obj
  0002:00008f3c       $SG103428                  00490f3c     Psyeb10States.obj
  0002:00008f40       $SG103429                  00490f40     Psyeb10States.obj
@@ -7330,16 +7510,15 @@
  0002:00013058       __ehfuncinfo$??$?0U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@?$_Tree_temp_node@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAE@AAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@1@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@1@@Z 0049b058     DraggingDemo.obj
  0002:00013108       __unwindtable$??0FlashingDemo@@QAE@XZ 0049b108     FlashingDemo.obj
  0002:00013120       __ehfuncinfo$??0FlashingDemo@@QAE@XZ 0049b120     FlashingDemo.obj
- 0002:0001314c       __unwindtable$?enter@gameSetupState@@UAEXXZ 0049b14c     gameSetupState.obj
- 0002:00013154       __unwindtable$?mouseDown@gameSetupState@@UAEXHHH@Z 0049b154     gameSetupState.obj
- 0002:00013164       __ehfuncinfo$?mouseDown@gameSetupState@@UAEXHHH@Z 0049b164     gameSetupState.obj
- 0002:00013188       __ehfuncinfo$?enter@gameSetupState@@UAEXXZ 0049b188     gameSetupState.obj
+ 0002:00013144       __unwindtable$??$_Construct_n@ABV?$vector@MV?$allocator@M@std@@@std@@@?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@AAEXIABV?$vector@MV?$allocator@M@std@@@1@@Z 0049b144     gameSetupState.obj
+ 0002:00013154       __ehfuncinfo$??$_Construct_n@ABV?$vector@MV?$allocator@M@std@@@std@@@?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@AAEXIABV?$vector@MV?$allocator@M@std@@@1@@Z 0049b154     gameSetupState.obj
+ 0002:00013178       __unwindtable$??$_Construct_n@$$V@?$vector@MV?$allocator@M@std@@@std@@AAEXI@Z 0049b178     gameSetupState.obj
+ 0002:00013188       __ehfuncinfo$??$_Construct_n@$$V@?$vector@MV?$allocator@M@std@@@std@@AAEXI@Z 0049b188     gameSetupState.obj
  0002:000131b8       __unwindtable$?_Orphan_range_locked@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEXPAPAVDrawingSurface@@0@Z 0049b1b8     gameSetupState.obj
  0002:000131c0       __ehfuncinfo$?_Orphan_range_locked@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEXPAPAVDrawingSurface@@0@Z 0049b1c0     gameSetupState.obj
- 0002:000131e8       __unwindtable$??$_Emplace_reallocate@ABQAVDrawingSurface@@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEPAPAVDrawingSurface@@QAPAV2@ABQAV2@@Z 0049b1e8     gameSetupState.obj
- 0002:000131f0       __ehfuncinfo$??$_Emplace_reallocate@ABQAVDrawingSurface@@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEPAPAVDrawingSurface@@QAPAV2@ABQAV2@@Z 0049b1f0     gameSetupState.obj
- 0002:00013218       __unwindtable$??$_Uninitialized_move@PAPAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@YAPAPAVDrawingSurface@@QAPAV1@0PAPAV1@AAV?$allocator@PAVDrawingSurface@@@0@@Z 0049b218     gameSetupState.obj
- 0002:00013220       __ehfuncinfo$??$_Uninitialized_move@PAPAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@YAPAPAVDrawingSurface@@QAPAV1@0PAPAV1@AAV?$allocator@PAVDrawingSurface@@@0@@Z 0049b220     gameSetupState.obj
+ 0002:000131e4       __unwindtable$??$_Reallocate@$0A@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEXAAI@Z 0049b1e4     gameSetupState.obj
+ 0002:000131ec       __ehfuncinfo$??$_Reallocate@$0A@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEXAAI@Z 0049b1ec     gameSetupState.obj
+ 0002:00013210       __ehfuncinfo$??$_Destroy_range@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@YAXPAV?$vector@MV?$allocator@M@std@@@0@QAV10@AAV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@0@@Z 0049b210     gameSetupState.obj
  0002:00013248       __ehfuncinfo$??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ 0049b248     gameState.obj
  0002:00013270       __ehfuncinfo$??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@ABV?$allocator@D@1@@Z 0049b270     gameState.obj
  0002:00013298       __unwindtable$??$use_facet@V?$ctype@D@std@@@std@@YAABV?$ctype@D@0@ABVlocale@0@@Z 0049b298     gameState.obj
@@ -7407,6 +7586,8 @@
  0002:000139e0       __ehfuncinfo$??$_Construct@$00PAD@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXQADI@Z 0049b9e0     MainCharacter.obj
  0002:00013a08       __unwindtable$??$_Uninitialized_move@PAVSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@YAPAVSimpleImage@@QAV1@0PAV1@AAV?$allocator@VSimpleImage@@@0@@Z 0049ba08     MainCharacter.obj
  0002:00013a10       __ehfuncinfo$??$_Uninitialized_move@PAVSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@YAPAVSimpleImage@@QAV1@0PAV1@AAV?$allocator@VSimpleImage@@@0@@Z 0049ba10     MainCharacter.obj
+ 0002:00013a34       __unwindtable$??$_Start@P8gameSetupState@@AEXXZPAV1@@thread@std@@AAEX$$QAP8gameSetupState@@AEXXZ$$QAPAV2@@Z 0049ba34     gameSetupState.obj
+ 0002:00013a3c       __ehfuncinfo$??$_Start@P8gameSetupState@@AEXXZPAV1@@thread@std@@AAEX$$QAP8gameSetupState@@AEXXZ$$QAPAV2@@Z 0049ba3c     gameSetupState.obj
  0002:00013a68       __unwindtable$?doProgram@@YAHHQAPAD@Z 0049ba68     mainfunction.obj
  0002:00013a70       __ehfuncinfo$?doProgram@@YAHHQAPAD@Z 0049ba70     mainfunction.obj
  0002:00013a98       __ehfuncinfo$??$_Freenode@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@SAXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@1@PAU01@@Z 0049ba98     mainfunction.obj
@@ -7451,6 +7632,11 @@
  0002:00013f18       __ehfuncinfo$??0?$basic_ofstream@DU?$char_traits@D@std@@@std@@QAE@PBDHH@Z 0049bf18     pauseState.obj
  0002:00013f3c       __unwindtable$??0Psyeb10Bike@@QAE@HHPAVBaseEngine@@HHH@Z 0049bf3c     Psyeb10Bike.obj
  0002:00013f4c       __ehfuncinfo$??0Psyeb10Bike@@QAE@HHPAVBaseEngine@@HHH@Z 0049bf4c     Psyeb10Bike.obj
+ 0002:00013f70       __ehfuncinfo$??$?0P8gameSetupState@@AEXXZPAV0@$0A@@?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@QAE@$$QAP8gameSetupState@@AEXXZ$$QAPAV2@@Z 0049bf70     gameSetupState.obj
+ 0002:00013f94       __unwindtable$??$_Construct_n@ABQAMABQAM@?$vector@MV?$allocator@M@std@@@std@@AAEXIABQAM0@Z 0049bf94     gameSetupState.obj
+ 0002:00013fa4       __ehfuncinfo$??$_Construct_n@ABQAMABQAM@?$vector@MV?$allocator@M@std@@@std@@AAEXIABQAM0@Z 0049bfa4     gameSetupState.obj
+ 0002:00013fe8       __unwindtable$??$_Uninitialized_fill_n@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@YAPAV?$vector@MV?$allocator@M@std@@@0@PAV10@IABV10@AAV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@0@@Z 0049bfe8     gameSetupState.obj
+ 0002:00013ff0       __ehfuncinfo$??$_Uninitialized_fill_n@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@YAPAV?$vector@MV?$allocator@M@std@@@0@PAV10@IABV10@AAV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@0@@Z 0049bff0     gameSetupState.obj
  0002:0001403c       __unwindtable$??0?$_Vb_val@V?$allocator@_N@std@@@std@@QAE@IAB_NABV?$allocator@_N@1@@Z 0049c03c     Psyeb10Enemy.obj
  0002:00014044       __ehfuncinfo$??0?$_Vb_val@V?$allocator@_N@std@@@std@@QAE@IAB_NABV?$allocator@_N@1@@Z 0049c044     Psyeb10Enemy.obj
  0002:0001406c       __ehfuncinfo$?erase@?$vector@IV?$allocator@I@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@I@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@I@std@@@std@@@2@0@Z 0049c06c     Psyeb10Enemy.obj
@@ -7569,6 +7755,22 @@
  0002:00014f7c       __ehfuncinfo$?decideStrategicDirection@Psyeb10Enemy@@AAEXHH@Z 0049cf7c     Psyeb10Enemy.obj
  0002:00014fa0       __ehfuncinfo$??0Psyeb10Enemy@@QAE@PAVBaseEngine@@@Z 0049cfa0     Psyeb10Enemy.obj
  0002:00014fc4       __unwindtable$??0Psyeb10Enemy@@QAE@PAVBaseEngine@@@Z 0049cfc4     Psyeb10Enemy.obj
+ 0002:00014ffc       __unwindtable$??$_Uninitialized_value_construct_n@V?$allocator@M@std@@@std@@YAPAMPAMIAAV?$allocator@M@0@@Z 0049cffc     gameSetupState.obj
+ 0002:00015004       __ehfuncinfo$??$_Uninitialized_value_construct_n@V?$allocator@M@std@@@std@@YAPAMPAMIAAV?$allocator@M@0@@Z 0049d004     gameSetupState.obj
+ 0002:00015028       __unwindtable$??$_Uninitialized_move@PAPAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@YAPAPAVDrawingSurface@@QAPAV1@0PAPAV1@AAV?$allocator@PAVDrawingSurface@@@0@@Z 0049d028     gameSetupState.obj
+ 0002:00015030       __ehfuncinfo$??$_Uninitialized_move@PAPAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@YAPAPAVDrawingSurface@@QAPAV1@0PAPAV1@AAV?$allocator@PAVDrawingSurface@@@0@@Z 0049d030     gameSetupState.obj
+ 0002:00015054       __unwindtable$??$_Emplace_reallocate@ABQAVDrawingSurface@@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEPAPAVDrawingSurface@@QAPAV2@ABQAV2@@Z 0049d054     gameSetupState.obj
+ 0002:0001505c       __ehfuncinfo$??$_Emplace_reallocate@ABQAVDrawingSurface@@@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@AAEPAPAVDrawingSurface@@QAPAV2@ABQAV2@@Z 0049d05c     gameSetupState.obj
+ 0002:00015088       __ehfuncinfo$??$_Invoke@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@$0A@$00@thread@std@@CGIPAX@Z 0049d088     gameSetupState.obj
+ 0002:000150b4       __unwindtable$?enter@gameSetupState@@UAEXXZ 0049d0b4     gameSetupState.obj
+ 0002:000150bc       __unwindtable$?mouseDown@gameSetupState@@UAEXHHH@Z 0049d0bc     gameSetupState.obj
+ 0002:000150cc       __unwindtable$?generateAnimationFrames@gameSetupState@@AAEXXZ 0049d0cc     gameSetupState.obj
+ 0002:000150ec       __ehfuncinfo$?generateAnimationFrames@gameSetupState@@AAEXXZ 0049d0ec     gameSetupState.obj
+ 0002:00015110       __ehfuncinfo$??1gameSetupState@@UAE@XZ 0049d110     gameSetupState.obj
+ 0002:00015134       __ehfuncinfo$?mouseDown@gameSetupState@@UAEXHHH@Z 0049d134     gameSetupState.obj
+ 0002:00015158       __ehfuncinfo$?enter@gameSetupState@@UAEXXZ 0049d158     gameSetupState.obj
+ 0002:0001517c       __unwindtable$??$_Uninitialized_copy@PAMPAMV?$allocator@M@std@@@std@@YAPAMPAM00AAV?$allocator@M@0@@Z 0049d17c     gameSetupState.obj
+ 0002:00015184       __ehfuncinfo$??$_Uninitialized_copy@PAMPAMV?$allocator@M@std@@@std@@YAPAMPAM00AAV?$allocator@M@0@@Z 0049d184     gameSetupState.obj
  0003:00000000       ?firstClick@?1??handleEvent@BaseEngine@@QAE_NPATSDL_Event@@@Z@4_NA 0049e000     BaseEngine.obj
  0003:00000004       ?nullMapping@@3VCroppedImagePixelMapping@@A 0049e004     SimpleImage.obj
  0003:00000d88       ?strategicCoolDown@?1??virtPostMoveLogic@Psyeb10Enemy@@UAEXXZ@4HA 0049ed88     Psyeb10Enemy.obj
