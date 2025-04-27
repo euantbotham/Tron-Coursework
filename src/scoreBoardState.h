@@ -2,6 +2,7 @@
 #include "Psyeb10Engine.h"
 #include "Psyeb10States.h"
 #include <string>
+#include "scoreBoardFilterPoints.h"
 class scoreBoardState :
     public Psyeb10States
 {
@@ -16,6 +17,7 @@ public:
 
 private:
 	std::string inputName;
+	scoreBoardFilterPoints filter;
 
 };
 

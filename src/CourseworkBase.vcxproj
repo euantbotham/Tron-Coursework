@@ -98,6 +98,7 @@
     <ClInclude Include="gameSetupState.h" />
     <ClInclude Include="gameState.h" />
     <ClInclude Include="ImageMappingDemo.h" />
+    <ClInclude Include="ImagePixelMappingRotate90.h" />
     <ClInclude Include="MainCharacter.h" />
     <ClInclude Include="mainMenuState.h" />
     <ClInclude Include="menuTileManager.h" />
@@ -148,6 +149,7 @@
     <ClCompile Include="gameSetupState.cpp" />
     <ClCompile Include="gameState.cpp" />
     <ClCompile Include="ImageMappingDemo.cpp" />
+    <ClCompile Include="ImagePixelMappingRotate90.cpp" />
     <ClCompile Include="MainCharacter.cpp" />
     <ClCompile Include="mainfunction.cpp" />
     <ClCompile Include="BaseEngine.cpp" />

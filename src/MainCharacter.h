@@ -3,7 +3,8 @@
 #include "Psyeb10Bike.h"
 #include "DisplayableObject.h"
 #include "Psyeb10Engine.h"
-
+#include "ImageManager.h"
+#include "ImagePixelMappingRotate90.h"
 
 class Psyeb10Engine;
 
@@ -21,5 +22,7 @@ public:
     void virtHandleDeath() override;
 protected:
     int lives;
+	SimpleImage image;
+    ImagePixelMappingRotate90 rotation;
 };
 
