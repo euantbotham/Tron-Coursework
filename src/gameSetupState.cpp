@@ -187,10 +187,14 @@ void gameSetupState::mainLoopPreUpdate()
 
 
     // Only change frame when the tick count is high enough
-   //TODO add a safety check to ensure it does not access an invalid surface
     if (animationDelay == 0) {
         animationDelay = 2;
-        currentFrame = (currentFrame + 1) % surfaces.size(); // Toggle between 0 and 1
+		int nextFrame = (currentFrame + 1) % surfaces.size(); // Toggle between 0 and 1
+        
+        // Small if statement to stop invalid index access
+        if (nextFrame < surfaces.size()) {
+            currentFrame = nextFrame;
+        }
         engine->setBackgroundSurface(surfaces[currentFrame]);
         engine->redrawDisplay();
     }

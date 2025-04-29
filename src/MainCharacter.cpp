@@ -10,8 +10,6 @@ MainCharacter::MainCharacter(BaseEngine* pEngine) : Psyeb10Bike(650, 400, pEngin
 	speedX = 0;
 	speedY = -1;
 	lives = 3;
-	//image = ImageManager::loadImage("MainChar.png", true);
-	//image.setTransparencyColour(0);
 	for (int i = 1; i <= 6; ++i) {
 		std::string imageName = "MainChar" + std::to_string(i) + ".png";
 		SimpleImage image = ImageManager::loadImage(imageName, false);

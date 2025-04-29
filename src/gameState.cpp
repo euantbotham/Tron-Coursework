@@ -57,13 +57,15 @@ void gameState::reset()
 	engine->unlockBackgroundForDrawing();
 	engine->redrawDisplay();
 
-	//Reset bikes to start positions
+	//Reset bikes to start positions and directions
 	DisplayableObject* bike1 = engine->getDisplayableObject(0);
 	bike1->setPosition(650, 400);
+	dynamic_cast<Psyeb10Bike*>(bike1)->changeDirection(0);
 
+	// Reset Bike startPositions and directions
 	DisplayableObject* bike2 = engine->getDisplayableObject(1);
 	bike2->setPosition(500, 150);
-	//TODO add death reset for AI
+	dynamic_cast<Psyeb10Bike*>(bike2)->changeDirection(2);
 }
 
 void gameState::mouseDown(int iButton, int iX, int iY) {
@@ -203,7 +205,6 @@ bool gameState::loadGame() {
 			statsFile >> lineKey >> speedX >> speedY;
 			statsFile >> lineKey >> lives;
 			statsFile >> lineKey >> lastX >> lastY;
-			std::cout << lastX << " " << lastY << std::endl;
 
 			mainChar->setPosition(x - mainChar->getDrawWidth()/2, y - mainChar->getDrawHeight()/2);
 			mainChar->setSpeed(speedX, speedY);

@@ -5,7 +5,6 @@
 #include "Psyeb10TileManager.h"
 #include "ImageManager.h"
 #include "ImagePixelMappingRotate90.h"
-//Ignore this class it will be used in my part 2 of the CW as for now I left it in so the code runs but no object is created from this class.
 class Psyeb10Engine;
 
 class Psyeb10Bike:

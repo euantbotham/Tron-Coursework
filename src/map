@@ -1,6 +1,6 @@
  CourseworkBase2020
 
- Timestamp is 6810ab8e (Tue Apr 29 11:35:58 2025)
+ Timestamp is 6810c240 (Tue Apr 29 13:12:48 2025)
 
  Preferred load address is 00400000
 
@@ -659,10 +659,10 @@
  0001:00016ae0       ?reset@gameSetupState@@UAEXXZ 00417ae0 f   gameSetupState.obj
  0001:00016af0       ?mouseDown@gameSetupState@@UAEXHHH@Z 00417af0 f   gameSetupState.obj
  0001:00016dd0       ?mainLoopPreUpdate@gameSetupState@@UAEXXZ 00417dd0 f   gameSetupState.obj
- 0001:00016f00       ?reEntry@gameSetupState@@UAEXXZ 00417f00 f   gameSetupState.obj
- 0001:00016f10       ?keyPressed@gameSetupState@@UAEXH@Z 00417f10 f   gameSetupState.obj
- 0001:00016f20       ??1gameSetupState@@UAE@XZ  00417f20 f   gameSetupState.obj
- 0001:00017020       ?generateAnimationFrames@gameSetupState@@AAEXXZ 00418020 f   gameSetupState.obj
+ 0001:00016f10       ?reEntry@gameSetupState@@UAEXXZ 00417f10 f   gameSetupState.obj
+ 0001:00016f20       ?keyPressed@gameSetupState@@UAEXH@Z 00417f20 f   gameSetupState.obj
+ 0001:00016f30       ??1gameSetupState@@UAE@XZ  00417f30 f   gameSetupState.obj
+ 0001:00017030       ?generateAnimationFrames@gameSetupState@@AAEXXZ 00418030 f   gameSetupState.obj
  0001:00017730       ??$?0AAPAV?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@?$_Compressed_pair@U?$default_delete@V?$tuple@P8gameSetupState@@AEXXZPAV1@@std@@@std@@PAV?$tuple@P8gameSetupState@@AEXXZPAV1@@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@AAPAV?$tuple@P8gameSetupState@@AEXXZPAV1@@1@@Z 00418730 f i gameSetupState.obj
  0001:00017760       ??$?0ABV?$allocator@M@std@@$$V@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABV?$allocator@M@1@@Z 00418760 f i gameSetupState.obj
  0001:00017790       ??$?0ABV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@$$V@?$_Compressed_pair@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@V?$_Vector_val@U?$_Simple_types@V?$vector@MV?$allocator@M@std@@@std@@@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@1@@Z 00418790 f i gameSetupState.obj
@@ -874,15 +874,15 @@
  0001:0001b320       ?foreGroundStrings@gameState@@UAEXXZ 0041c320 f   gameState.obj
  0001:0001b490       ?initObjects@gameState@@UAEXXZ 0041c490 f   gameState.obj
  0001:0001b5d0       ?reset@gameState@@UAEXXZ   0041c5d0 f   gameState.obj
- 0001:0001b660       ?mouseDown@gameState@@UAEXHHH@Z 0041c660 f   gameState.obj
- 0001:0001b730       ?mainLoopPreUpdate@gameState@@UAEXXZ 0041c730 f   gameState.obj
- 0001:0001b780       ?reEntry@gameState@@UAEXXZ 0041c780 f   gameState.obj
- 0001:0001b810       ?drawBackground@gameState@@QAEXXZ 0041c810 f   gameState.obj
- 0001:0001b9e0       ??1gameState@@UAE@XZ       0041c9e0 f   gameState.obj
- 0001:0001ba60       ?getmainChar@gameState@@QBEPAVMainCharacter@@XZ 0041ca60 f   gameState.obj
- 0001:0001ba80       ?getEnemy@gameState@@QBEPAVPsyeb10Enemy@@XZ 0041ca80 f   gameState.obj
- 0001:0001baa0       ?getGameScore@gameState@@QBEHXZ 0041caa0 f   gameState.obj
- 0001:0001bac0       ?loadGame@gameState@@QAE_NXZ 0041cac0 f   gameState.obj
+ 0001:0001b6a0       ?mouseDown@gameState@@UAEXHHH@Z 0041c6a0 f   gameState.obj
+ 0001:0001b770       ?mainLoopPreUpdate@gameState@@UAEXXZ 0041c770 f   gameState.obj
+ 0001:0001b7c0       ?reEntry@gameState@@UAEXXZ 0041c7c0 f   gameState.obj
+ 0001:0001b850       ?drawBackground@gameState@@QAEXXZ 0041c850 f   gameState.obj
+ 0001:0001ba20       ??1gameState@@UAE@XZ       0041ca20 f   gameState.obj
+ 0001:0001baa0       ?getmainChar@gameState@@QBEPAVMainCharacter@@XZ 0041caa0 f   gameState.obj
+ 0001:0001bac0       ?getEnemy@gameState@@QBEPAVPsyeb10Enemy@@XZ 0041cac0 f   gameState.obj
+ 0001:0001bae0       ?getGameScore@gameState@@QBEHXZ 0041cae0 f   gameState.obj
+ 0001:0001bb00       ?loadGame@gameState@@QAE_NXZ 0041cb00 f   gameState.obj
  0001:0001c4f0       ??$?0AAPAV_Facet_base@std@@@?$_Compressed_pair@U?$default_delete@V_Facet_base@std@@@std@@PAV_Facet_base@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@AAPAV_Facet_base@1@@Z 0041d4f0 f i gameState.obj
  0001:0001c520       ??$?0ABV?$allocator@D@std@@$$V@?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABV?$allocator@D@1@@Z 0041d520 f i gameState.obj
  0001:0001c550       ??$?0U?$default_delete@V_Facet_base@std@@@std@@$0A@@?$unique_ptr@V_Facet_base@std@@U?$default_delete@V_Facet_base@std@@@2@@std@@QAE@PAV_Facet_base@1@@Z 0041d550 f i gameState.obj
@@ -2845,6 +2845,7 @@
  0003:00000220       ??_R0?AVbad_alloc@std@@@8  004a1220     DraggingDemo.obj
  0003:00000244       ??_R0?AVbad_cast@std@@@8   004a1244     gameState.obj
  0003:00000264       ??_R0?AVPsyeb10Engine@@@8  004a1264     Psyeb10Bike.obj
+ 0003:00000280       ??_R0?AVPsyeb10Bike@@@8    004a1280     gameState.obj
  0003:00000390       ??_R0?AV_Ref_count_base@std@@@8 004a1390     DraggingDemo.obj
  0003:000003b8       ??_R0?AVDragableBaseClassObject@@@8 004a13b8     DraggingDemo.obj
  0003:000003e8       ??_R0?AVDisplayableObject@@@8 004a13e8     DraggingDemo.obj
@@ -2878,7 +2879,6 @@
  0003:00000958       ??_R0?AVImagePixelMapping@@@8 004a1958     ImagePixelMappingRotate90.obj
  0003:00000980       ??_R0?AVImagePixelMappingRotate90@@@8 004a1980     ImagePixelMappingRotate90.obj
  0003:000009b0       ??_R0?AVMainCharacter@@@8  004a19b0     MainCharacter.obj
- 0003:000009d4       ??_R0?AVPsyeb10Bike@@@8    004a19d4     MainCharacter.obj
  0003:000009f4       ??_R0?AVmainMenuState@@@8  004a19f4     mainMenuState.obj
  0003:00000a18       ??_R0?AVMyObjectB@@@8      004a1a18     MyDemoA.obj
  0003:00000a34       ??_R0?AV?$basic_ofstream@DU?$char_traits@D@std@@@std@@@8 004a1a34     pauseState.obj
@@ -6889,19 +6889,19 @@
  0002:00002728       $SG103536                  0048d728     FlashingDemo.obj
  0002:000027f0       $SG103537                  0048d7f0     FlashingDemo.obj
  0002:000027f4       $SG103538                  0048d7f4     FlashingDemo.obj
- 0002:000029a8       $SG109299                  0048d9a8     gameSetupState.obj
- 0002:000029bc       $SG109300                  0048d9bc     gameSetupState.obj
- 0002:000029c0       $SG109301                  0048d9c0     gameSetupState.obj
- 0002:00002a28       $SG109302                  0048da28     gameSetupState.obj
- 0002:00002aec       $SG109303                  0048daec     gameSetupState.obj
- 0002:00002af0       $SG109304                  0048daf0     gameSetupState.obj
- 0002:00002b18       $SG109360                  0048db18     gameSetupState.obj
- 0002:00002b7c       $SG110612                  0048db7c     gameSetupState.obj
- 0002:00002b98       $SG110613                  0048db98     gameSetupState.obj
- 0002:00002ba0       $SG110614                  0048dba0     gameSetupState.obj
- 0002:00002c08       $SG110615                  0048dc08     gameSetupState.obj
- 0002:00002cd0       $SG110616                  0048dcd0     gameSetupState.obj
- 0002:00002cd4       $SG110617                  0048dcd4     gameSetupState.obj
+ 0002:000029a8       $SG109301                  0048d9a8     gameSetupState.obj
+ 0002:000029bc       $SG109302                  0048d9bc     gameSetupState.obj
+ 0002:000029c0       $SG109303                  0048d9c0     gameSetupState.obj
+ 0002:00002a28       $SG109304                  0048da28     gameSetupState.obj
+ 0002:00002aec       $SG109305                  0048daec     gameSetupState.obj
+ 0002:00002af0       $SG109306                  0048daf0     gameSetupState.obj
+ 0002:00002b18       $SG109362                  0048db18     gameSetupState.obj
+ 0002:00002b7c       $SG110614                  0048db7c     gameSetupState.obj
+ 0002:00002b98       $SG110615                  0048db98     gameSetupState.obj
+ 0002:00002ba0       $SG110616                  0048dba0     gameSetupState.obj
+ 0002:00002c08       $SG110617                  0048dc08     gameSetupState.obj
+ 0002:00002cd0       $SG110618                  0048dcd0     gameSetupState.obj
+ 0002:00002cd4       $SG110619                  0048dcd4     gameSetupState.obj
  0002:00002d0c       $SG95188                   0048dd0c     gameSetupState.obj
  0002:00002d18       $SG95231                   0048dd18     gameSetupState.obj
  0002:00002d28       $SG95233                   0048dd28     gameSetupState.obj
@@ -6909,32 +6909,31 @@
  0002:00002d54       $SG95237                   0048dd54     gameSetupState.obj
  0002:00002d68       $SG95238                   0048dd68     gameSetupState.obj
  0002:00002d7c       $SG95240                   0048dd7c     gameSetupState.obj
- 0002:00002f58       $SG106929                  0048df58     gameState.obj
- 0002:00002f6c       $SG106930                  0048df6c     gameState.obj
- 0002:00002f70       $SG106931                  0048df70     gameState.obj
- 0002:00002fd8       $SG106932                  0048dfd8     gameState.obj
- 0002:0000309c       $SG106933                  0048e09c     gameState.obj
- 0002:000030a0       $SG106934                  0048e0a0     gameState.obj
- 0002:000030c8       $SG106995                  0048e0c8     gameState.obj
- 0002:0000312c       $SG107242                  0048e12c     gameState.obj
- 0002:00003148       $SG107243                  0048e148     gameState.obj
- 0002:00003150       $SG107244                  0048e150     gameState.obj
- 0002:000031b8       $SG107245                  0048e1b8     gameState.obj
- 0002:00003280       $SG107246                  0048e280     gameState.obj
- 0002:00003284       $SG107247                  0048e284     gameState.obj
+ 0002:00002f58       $SG106928                  0048df58     gameState.obj
+ 0002:00002f6c       $SG106929                  0048df6c     gameState.obj
+ 0002:00002f70       $SG106930                  0048df70     gameState.obj
+ 0002:00002fd8       $SG106931                  0048dfd8     gameState.obj
+ 0002:0000309c       $SG106932                  0048e09c     gameState.obj
+ 0002:000030a0       $SG106933                  0048e0a0     gameState.obj
+ 0002:000030c8       $SG106994                  0048e0c8     gameState.obj
+ 0002:0000312c       $SG107241                  0048e12c     gameState.obj
+ 0002:00003148       $SG107242                  0048e148     gameState.obj
+ 0002:00003150       $SG107243                  0048e150     gameState.obj
+ 0002:000031b8       $SG107244                  0048e1b8     gameState.obj
+ 0002:00003280       $SG107245                  0048e280     gameState.obj
+ 0002:00003284       $SG107246                  0048e284     gameState.obj
  0002:000032bc       $SG94141                   0048e2bc     gameState.obj
  0002:000032c8       $SG94142                   0048e2c8     gameState.obj
- 0002:000032d4       $SG94191                   0048e2d4     gameState.obj
- 0002:000032d8       $SG94192                   0048e2d8     gameState.obj
+ 0002:000032d4       $SG94195                   0048e2d4     gameState.obj
+ 0002:000032d8       $SG94196                   0048e2d8     gameState.obj
  0002:000032ec       $SG94511                   0048e2ec     gameState.obj
  0002:000032fc       $SG94513                   0048e2fc     gameState.obj
  0002:00003330       $SG94515                   0048e330     gameState.obj
  0002:00003340       $SG94517                   0048e340     gameState.obj
  0002:00003374       $SG94521                   0048e374     gameState.obj
- 0002:00003388       $SG94522                   0048e388     gameState.obj
- 0002:0000338c       $SG94525                   0048e38c     gameState.obj
- 0002:00003394       $SG94527                   0048e394     gameState.obj
- 0002:000033a4       $SG94528                   0048e3a4     gameState.obj
+ 0002:00003388       $SG94524                   0048e388     gameState.obj
+ 0002:00003390       $SG94526                   0048e390     gameState.obj
+ 0002:000033a0       $SG94527                   0048e3a0     gameState.obj
  0002:00003ca8       $SG92627                   0048eca8     ImageMappingDemo.obj
  0002:00003cb4       $SG92629                   0048ecb4     ImageMappingDemo.obj
  0002:00003cc0       $SG92631                   0048ecc0     ImageMappingDemo.obj
