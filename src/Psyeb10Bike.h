@@ -26,6 +26,7 @@ public:
 	int getLastTileX() const;
 	int getLastTileY() const;
 	void setLastTiles(int x, int y);   
+	void changeDirection(int direction);
 protected:
     int speedX;
     int speedY;

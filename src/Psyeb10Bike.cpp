@@ -1,6 +1,7 @@
 #include "header.h"
 #include "Psyeb10Bike.h"
 #include "Psyeb10Engine.h"
+#include "ImagePixelMappingRotate90.h"
 Psyeb10Bike::Psyeb10Bike(int xStart, int yStart,
 	BaseEngine* pEngine, int iWidth, int iHeight, int bikeVal) : DisplayableObject(xStart, yStart, pEngine, iWidth, iHeight, true) {
 	// Set last tiles to -1
@@ -113,4 +114,32 @@ int Psyeb10Bike::getLastTileY() const {
 void Psyeb10Bike::setLastTiles(int x, int y) {
 	this->lastTileX = x;
 	this->lastTileY = y;
+}
+
+
+// Helper to change direction based on a direction code
+void Psyeb10Bike::changeDirection(int direction)
+{
+	switch (direction) {
+	case 0: // Up
+		rotation << rotation.Up;
+		speedX = 0;
+		speedY = -1;
+		break;
+	case 1: // Right
+		rotation << rotation.Right;
+		speedX = 1;
+		speedY = 0;
+		break;
+	case 2: // Down
+		rotation << rotation.Down;
+		speedX = 0;
+		speedY = 1;
+		break;
+	case 3: // Left
+		rotation << rotation.Left;
+		speedX = -1;
+		speedY = 0;
+		break;
+	}
 }

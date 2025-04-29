@@ -10,9 +10,7 @@
 #include <vector>
 Psyeb10Enemy::Psyeb10Enemy(BaseEngine* pEngine) : Psyeb10Bike(500,150,pEngine, 20,20, 2)
 {
-	speedX = 0;
-	speedY = 1;
-	rotation << rotation.Down;
+	changeDirection(2); // Start moving down
 
     for (int i = 1; i <= 6; ++i) {
         std::string imageName = "enemy" + std::to_string(i) + ".png";
@@ -31,8 +29,8 @@ void Psyeb10Enemy::virtHandleDeath()
 	// Make a new function for subclasses and get this to just call them, make it virt.
 	//Add logic to increase score
 	engine->resetGame();
-	speedX = 0;
-	speedY = 1;
+	//Set direction to down
+    changeDirection(2);
 }
 
 
@@ -376,33 +374,6 @@ int Psyeb10Enemy::floodFill(int startMapX, int startMapY, int dirX, int dirY, in
     return std::max(1, weightedScore); // Ensure we return at least 1 if path is valid
 }
 
-
-// Helper to change direction based on a direction code
-void Psyeb10Enemy::changeDirection(int direction)
-{
-    switch (direction) {
-    case 0: // Up
-        rotation << rotation.Up;
-        speedX = 0;
-        speedY = -1;
-        break;
-    case 1: // Right
-		rotation << rotation.Right;
-        speedX = 1;
-        speedY = 0;
-        break;
-    case 2: // Down
-		rotation << rotation.Down;
-        speedX = 0;
-        speedY = 1;
-        break;
-    case 3: // Left
-		rotation << rotation.Left;
-        speedX = -1;
-        speedY = 0;
-        break;
-    }
-}
 
 // Update the isValidMove function to work with 5x5 tiles
 bool Psyeb10Enemy::isValidMove(int x, int y) {

@@ -8,7 +8,7 @@ void gameSetupState::enter()
     currentFrame = 0;
 
     // Set a very high animation delay (will be used as-is)
-    animationDelay = 30; // Try with a reasonable value that won't be overwritten
+    animationDelay = 2; // Try with a reasonable value that won't be overwritten
 
     // Fill the background with black
     engine->fillBackground(0x000000);
@@ -187,6 +187,7 @@ void gameSetupState::mainLoopPreUpdate()
 
 
     // Only change frame when the tick count is high enough
+   //TODO add a safety check to ensure it does not access an invalid surface
     if (animationDelay == 0) {
         animationDelay = 2;
         currentFrame = (currentFrame + 1) % surfaces.size(); // Toggle between 0 and 1
@@ -244,7 +245,7 @@ void gameSetupState::generateAnimationFrames() {
     
     
     // Create and initialize frames for animation
-    for (int i = 0; i < 30; ++i) { // More frames for smoother animation
+    for (int i = 1; i < 30; ++i) { // More frames for smoother animation
         DrawingSurface* surface = new DrawingSurface(engine);
         surface->createSurface(screenWidth, screenHeight);
         surface->mySDLLockSurface();

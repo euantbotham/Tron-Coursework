@@ -32,24 +32,16 @@ void MainCharacter::virtKeyDown(int iKeyCode)
 {
 	switch (iKeyCode) {
 	case SDLK_w:
-		rotation << rotation.Up;
-		speedY = -1;
-		speedX = 0;
+		changeDirection(0);
 		break;
 	case SDLK_s:
-		rotation << rotation.Down;
-		speedY = 1;
-		speedX = 0;
+		changeDirection(2);
 		break;
 	case SDLK_d:
-		rotation << rotation.Right;
-		speedY = 0;
-		speedX = 1;
+		changeDirection(1);
 		break;
 	case SDLK_a:
-		rotation << rotation.Left;
-		speedY = 0;
-		speedX = -1;
+		changeDirection(3);
 		break;
 	default:
 		break;
@@ -85,6 +77,5 @@ void MainCharacter::virtHandleDeath()
 	engine->resetGame();
 
 	//TODO Change this as does not work when both die
-	speedX = 0;
-	speedY = -1;
+	changeDirection(0);
 }
