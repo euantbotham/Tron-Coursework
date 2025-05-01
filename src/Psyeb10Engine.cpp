@@ -6,7 +6,6 @@
 #include "Psyeb10TileManager.h"
 #include <sstream>
 #include <string>
-#include "Psyeb10Enemy.h"
 #include "SimpleImage.h"
 #include "ImageManager.h"
 #include "Psyeb10States.h"
@@ -143,4 +142,8 @@ void Psyeb10Engine::setBackgroundSurface(DrawingSurface* surface) {
 void Psyeb10Engine::virtKeyUp(int iKeyCode)
 {
 	currentState->keyUp(iKeyCode);
+}
+
+void Psyeb10Engine::notifyState(int code) {
+	currentState->recieveUpdate(code);
 }

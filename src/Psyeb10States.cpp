@@ -47,3 +47,7 @@ void Psyeb10States::keyPressed(int iKeyCode)
 void Psyeb10States::keyUp(int iKeyCode) {
 	// Handle event when key up
 }
+
+void Psyeb10States::recieveUpdate(int code) {
+	//Empty implementation
+}

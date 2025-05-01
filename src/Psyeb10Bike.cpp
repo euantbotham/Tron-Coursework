@@ -4,6 +4,10 @@
 #include "ImagePixelMappingRotate90.h"
 Psyeb10Bike::Psyeb10Bike(int xStart, int yStart,
 	BaseEngine* pEngine, int iWidth, int iHeight, int bikeVal) : DisplayableObject(xStart, yStart, pEngine, iWidth, iHeight, true) {
+	// Set the start position
+	this->startposX = xStart;
+	this->startPosY = yStart;
+	
 	// Set last tiles to -1
 	lastTileX = -1;
 	lastTileY = -1;
@@ -148,3 +152,9 @@ int Psyeb10Bike::getBikeValue() const {
 	return bikeValue;
 }
 
+void Psyeb10Bike::resetPos() {
+	m_iCurrentScreenX = startposX;
+	m_iCurrentScreenY = startPosY;
+	lastTileX = -1;
+	lastTileY = -1;
+}

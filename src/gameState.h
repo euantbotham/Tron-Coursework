@@ -28,12 +28,13 @@ public:
 	void mainLoopPreUpdate() override;
 	void reEntry()override;
 	void drawBackground();
+	void recieveUpdate(int code)override;
 	~gameState();
 	MainCharacter* getmainChar() const;
-	Psyeb10Enemy* getEnemy() const;
 	int getGameScore() const;
 	bool loadGame();
 	void saveGame();
+	void cleanTileManager(int code);
 protected:
 	const int gridstartX = 350;
 	const int gridstartY = 100;

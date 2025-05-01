@@ -60,6 +60,7 @@ void MainCharacter::setLives(int newLives)
 
 void MainCharacter::virtPostMoveLogic()
 {
+	/*
 	//Check object collisions if so reset the game and don't decrement lives as is a crash
 	DisplayableObject* enemy = engine->getDisplayableObject(1);
 	// Both objects are 20 by 20 rectangles so + and - 10 used to find bounds 
@@ -67,6 +68,7 @@ void MainCharacter::virtPostMoveLogic()
 		enemy->getXCentre() - 10, enemy->getXCentre() + 10, enemy->getYCentre() - 10, enemy->getYCentre() + 10)) {
 		engine->resetGame();
 	}
+	*/
 }
 
 void MainCharacter::virtHandleDeath()

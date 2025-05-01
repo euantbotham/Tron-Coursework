@@ -27,6 +27,7 @@ public:
 	void setLastTiles(int x, int y);   
 	void changeDirection(int direction);
 	int getBikeValue() const;
+    void resetPos();
 protected:
     int speedX;
     int speedY;
@@ -34,6 +35,10 @@ protected:
     //Stores last tile so bike can't kill itself the second it paints
     int lastTileX;
     int lastTileY;
+
+    //save the start positions for restarts
+    int startposX;
+	int startPosY;
 
     //Pointer to Subclass to access the tile manager
     Psyeb10Engine* engine;

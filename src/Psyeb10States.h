@@ -20,6 +20,8 @@ public:
 	virtual void keyPressed(int iKeyCode);
 	Psyeb10TileManager* getTileManager();
 	virtual void keyUp(int iKeyCode);
+	//Method to recieve an integer from the engine, is virtual so implementation can be overidden
+	virtual void recieveUpdate(int code);
 	
 	// Maybe rewrite this better later
 	virtual void copyAllBackgroundBuffer();

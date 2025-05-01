@@ -47,7 +47,11 @@ void gameState::initObjects()
 	engine->storeObjectInArray(0, mainChar);
 	this->enemyVec.push_back(new Psyeb10Enemy(engine, 500, 150, 2));
 	engine->appendObjectToArray(enemyVec[0]);
+
+	this->enemyVec.push_back(new Psyeb10Enemy(engine, 650, 150, 3));
+	engine->appendObjectToArray(enemyVec[1]);
 	engine->setAllObjectsVisible(true);
+	currentEnemies = 2; // Set the number of enemies to 2
 }
 
 void gameState::reset()
@@ -58,14 +62,14 @@ void gameState::reset()
 	engine->redrawDisplay();
 
 	//Reset bikes to start positions and directions
-	DisplayableObject* bike1 = engine->getDisplayableObject(0);
-	bike1->setPosition(650, 400);
-	dynamic_cast<Psyeb10Bike*>(bike1)->changeDirection(0);
+	mainChar->resetPos();
+	mainChar->changeDirection(0);
 
 	// Reset Bike startPositions and directions
-	DisplayableObject* bike2 = engine->getDisplayableObject(1);
-	bike2->setPosition(500, 150);
-	dynamic_cast<Psyeb10Bike*>(bike2)->changeDirection(2);
+	for (auto& bike : enemyVec) {
+		bike->resetPos();
+		bike->changeDirection(2);
+	}
 }
 
 void gameState::mouseDown(int iButton, int iX, int iY) {
@@ -98,9 +102,9 @@ void gameState::reEntry()
 	drawBackground();
 	engine->createObjectArray(1);
 	engine->storeObjectInArray(0, mainChar);
-	engine->appendObjectToArray(enemyVec[0]);
 	mainChar->setPaused(false);
 	for (auto& enemy : enemyVec) {
+		engine->appendObjectToArray(enemy);
 		enemy->setPaused(false);
 	}
 	tm.drawAllTiles(engine, engine->getBackgroundSurface());
@@ -156,14 +160,50 @@ MainCharacter* gameState::getmainChar()const {
 	return mainChar;
 }
 
-Psyeb10Enemy* gameState::getEnemy() const{
-	return enemyVec[0];
-}
-
 int gameState::getGameScore()const {
 	return gameScore;
 }
 
+
+void gameState::recieveUpdate(int code) {
+	// Destroy Bike that has been deleted and remove from vectors
+	Psyeb10Enemy* toDelete = nullptr;
+	if (currentEnemies > 1) {
+		for (auto& enemy : enemyVec) {
+			if (enemy->getBikeValue() == code) {
+				// Only seemed to work when passed a DisplayableObject pointer
+				engine->removeDisplayableObject(enemy);
+				enemy->setVisible(false);
+				enemy->setPaused(true);
+
+
+				//enemyVec.erase(std::remove(enemyVec.begin(), enemyVec.end(), enemy), enemyVec.end());
+				//delete enemy;
+				
+				currentEnemies--;
+				cleanTileManager(code);
+
+				engine->lockBackgroundForDrawing();
+				drawBackground();
+				tm.drawAllTiles(engine, engine->getBackgroundSurface());
+				engine->unlockBackgroundForDrawing();
+				engine->redrawDisplay();
+
+				std::cout << "Enemy " << code << " destroyed!" << std::endl;
+				break;
+			}
+
+		}
+		if (toDelete != nullptr) {
+			// Erase the exact pointer from the vector
+			enemyVec.erase(std::remove(enemyVec.begin(), enemyVec.end(), toDelete), enemyVec.end());
+			delete toDelete;  // Free memory after erase
+		}
+	}
+	else {
+		reset();
+	}
+}
 
 bool gameState::loadGame() {
 	engine->notifyObjectsAboutKeys(true);
@@ -225,7 +265,6 @@ bool gameState::loadGame() {
 			engine->appendObjectToArray(mainChar);
 		}
 		else if (line.find("# Enemy") != std::string::npos) {
-			std::cout << "!!!!Loading enemy..." << std::endl;
 			// Read enemy stats
 			int x, y, speedX, speedY, lastX, lastY, bikeVal;
 			statsFile >> lineKey >> x >> y;
@@ -328,4 +367,13 @@ void gameState::saveGame()
 
 	statsFile.close();
 	std::cout << "Game stats saved to game_stats.txt!" << std::endl;
+}
+
+//Allows certian tiles to be removed from the tile manager
+void gameState::cleanTileManager(int code) {
+	for (int i = 0; i < tm.getMapWidth(); i++)
+		for (int j = 0; j < tm.getMapHeight(); j++)
+			// If the tile is the one we want to remove, set it to 0
+			if (tm.getMapValue(i, j) == code)
+				tm.setMapValue(i, j, 0);
 }

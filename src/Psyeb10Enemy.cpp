@@ -14,7 +14,7 @@ Psyeb10Enemy::Psyeb10Enemy(BaseEngine* pEngine, int xPos, int yPos, int gridVal)
 
     for (int i = 1; i <= 6; ++i) {
         std::string imageName = "enemy" + std::to_string(i) + ".png";
-        SimpleImage image = ImageManager::loadImage(imageName, false);
+        SimpleImage image = ImageManager::loadImage(imageName, true);
         image.setTransparencyColour(0); // Set transparency color if needed
         animationImages.push_back(image); // Add the image to the vector
 
@@ -25,12 +25,8 @@ Psyeb10Enemy::Psyeb10Enemy(BaseEngine* pEngine, int xPos, int yPos, int gridVal)
 
 void Psyeb10Enemy::virtHandleDeath() 
 {
-	//TODO add death logic for enemy, Eventually make class so they both a sub of it 
-	// Make a new function for subclasses and get this to just call them, make it virt.
-	//Add logic to increase score
-	engine->resetGame();
-	//Set direction to down
-    changeDirection(2);
+	//Tell the State that the enemy has died
+	engine->notifyState(bikeValue); 
 }
 
 
