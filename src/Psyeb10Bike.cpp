@@ -143,3 +143,8 @@ void Psyeb10Bike::changeDirection(int direction)
 		break;
 	}
 }
+
+int Psyeb10Bike::getBikeValue() const {
+	return bikeValue;
+}
+

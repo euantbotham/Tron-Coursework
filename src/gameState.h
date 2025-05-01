@@ -7,8 +7,6 @@
 #include "Psyeb10Enemy.h"
 
 class Psyeb10Engine;
-//class MainCharacter;
-//class Psyeb10Enemy;
 
 class gameState : public Psyeb10States
 {
@@ -19,8 +17,8 @@ public:
 		gameScore = 0;
 		lastTick = -1;
 		mainChar = nullptr;
-		enemy = nullptr;
 		isDisplayed = false;
+		currentEnemies = 0;
 	}
 	void enter() override;
 	void foreGroundStrings() override;
@@ -35,6 +33,7 @@ public:
 	Psyeb10Enemy* getEnemy() const;
 	int getGameScore() const;
 	bool loadGame();
+	void saveGame();
 protected:
 	const int gridstartX = 350;
 	const int gridstartY = 100;
@@ -43,7 +42,8 @@ protected:
 	int gameScore;
 	int lastTick;
 	MainCharacter* mainChar;
-	Psyeb10Enemy* enemy;
+	std::vector<Psyeb10Enemy*> enemyVec;
 	bool isDisplayed;
+	int currentEnemies;
 };
 

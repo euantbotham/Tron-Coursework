@@ -8,7 +8,7 @@
 #include <set>
 #include <utility>  // for std::pair
 #include <vector>
-Psyeb10Enemy::Psyeb10Enemy(BaseEngine* pEngine) : Psyeb10Bike(500,150,pEngine, 20,20, 2)
+Psyeb10Enemy::Psyeb10Enemy(BaseEngine* pEngine, int xPos, int yPos, int gridVal) : Psyeb10Bike(xPos,yPos,pEngine, 20,20, gridVal)
 {
 	changeDirection(2); // Start moving down
 

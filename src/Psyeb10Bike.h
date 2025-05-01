@@ -26,6 +26,7 @@ public:
 	int getLastTileY() const;
 	void setLastTiles(int x, int y);   
 	void changeDirection(int direction);
+	int getBikeValue() const;
 protected:
     int speedX;
     int speedY;

@@ -67,7 +67,8 @@ void pauseState::mouseDown(int iButton, int iX, int iY)
 			}
 			else if (tm.getMapValue(x, y) == 2)
 			{
-				saveGame();
+				gameState* game = dynamic_cast<gameState*>(engine->getState(1));
+				game->saveGame();
 				engine->setExitWithCode(0);
 			}
 			else if (tm.getMapValue(x, y) == 4)

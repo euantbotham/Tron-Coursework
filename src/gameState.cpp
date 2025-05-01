@@ -45,8 +45,8 @@ void gameState::initObjects()
 	engine->createObjectArray(1);
 	this->mainChar = new MainCharacter(engine);
 	engine->storeObjectInArray(0, mainChar);
-	this->enemy = new Psyeb10Enemy(engine);
-	engine->appendObjectToArray(enemy);
+	this->enemyVec.push_back(new Psyeb10Enemy(engine, 500, 150, 2));
+	engine->appendObjectToArray(enemyVec[0]);
 	engine->setAllObjectsVisible(true);
 }
 
@@ -73,10 +73,13 @@ void gameState::mouseDown(int iButton, int iX, int iY) {
 	{
 		engine->pause();
 		this->mainChar->setPaused(true);
-		this->enemy->setPaused(true);
+		//Pause all active enemies
+		for (auto& enemy : enemyVec) {
+			enemy->setPaused(true);
+		}
 		this->isDisplayed = false;
 		engine->setState(new pauseState(engine), true , true);
-	
+		
 	}
 }
 
@@ -95,9 +98,11 @@ void gameState::reEntry()
 	drawBackground();
 	engine->createObjectArray(1);
 	engine->storeObjectInArray(0, mainChar);
-	engine->appendObjectToArray(enemy);
+	engine->appendObjectToArray(enemyVec[0]);
 	mainChar->setPaused(false);
-	enemy->setPaused(false);
+	for (auto& enemy : enemyVec) {
+		enemy->setPaused(false);
+	}
 	tm.drawAllTiles(engine, engine->getBackgroundSurface());
 	this->isDisplayed = true;
 }
@@ -141,7 +146,9 @@ gameState::~gameState()
 	// delete mainchar and enemy if not currently helf in displayable object container
 	if (!(this->isDisplayed)) {
 		delete mainChar;
-		delete enemy;
+		for (auto& enemy : enemyVec) {
+			delete enemy;
+		}
 	}
 }
 
@@ -150,7 +157,7 @@ MainCharacter* gameState::getmainChar()const {
 }
 
 Psyeb10Enemy* gameState::getEnemy() const{
-	return enemy;
+	return enemyVec[0];
 }
 
 int gameState::getGameScore()const {
@@ -159,6 +166,9 @@ int gameState::getGameScore()const {
 
 
 bool gameState::loadGame() {
+	engine->notifyObjectsAboutKeys(true);
+	engine->drawableObjectsChanged();
+	engine->destroyOldObjects(true);
 	// Open the tile data file
 	std::ifstream tileFile("tile_data.csv");
 	if (!tileFile.is_open()) {
@@ -205,22 +215,33 @@ bool gameState::loadGame() {
 			statsFile >> lineKey >> speedX >> speedY;
 			statsFile >> lineKey >> lives;
 			statsFile >> lineKey >> lastX >> lastY;
-
+			// Dynamic allocation due to number of objects
+			this->mainChar = new MainCharacter(engine);
 			mainChar->setPosition(x - mainChar->getDrawWidth()/2, y - mainChar->getDrawHeight()/2);
 			mainChar->setSpeed(speedX, speedY);
 			mainChar->setLives(lives);
 			mainChar->setLastTiles(lastX, lastY);
+			mainChar->setPaused(false);
+			engine->appendObjectToArray(mainChar);
 		}
 		else if (line.find("# Enemy") != std::string::npos) {
+			std::cout << "!!!!Loading enemy..." << std::endl;
 			// Read enemy stats
-			int x, y, speedX, speedY, lastX, lastY;
+			int x, y, speedX, speedY, lastX, lastY, bikeVal;
 			statsFile >> lineKey >> x >> y;
 			statsFile >> lineKey >> speedX >> speedY;
 			statsFile >> lineKey >> lastX >> lastY;
+			statsFile >> lineKey >> bikeVal;
+
+			Psyeb10Enemy* enemy = new Psyeb10Enemy(engine, x, y, bikeVal);
 			// Have to reverse engineer this so they are drawn in the right place
-			enemy->setPosition(x - enemy->getDrawWidth()/2, y- enemy->getDrawHeight()/2);
+			enemy->setPosition(x - enemy->getDrawWidth() / 2, y - enemy->getDrawHeight() / 2);
 			enemy->setSpeed(speedX, speedY);
 			enemy->setLastTiles(lastX, lastY);
+			enemyVec.push_back(enemy);
+			engine->appendObjectToArray(enemy);
+			enemy->setPaused(false);
+			currentEnemies++;
 		}
 		else if (line.find("# Game State") != std::string::npos) {
 			// Read game state stats
@@ -231,12 +252,80 @@ bool gameState::loadGame() {
 	}
 	statsFile.close();
 
+	
 	// Redraw the tiles to the background
+	
 	drawBackground();
 	tm.setTopLeftPositionOnScreen(350, 100);
 	tm.drawAllTiles(engine, engine->getBackgroundSurface());
 	this->isDisplayed = true;
 
 	std::cout << "Game loaded successfully!" << std::endl;
+	
 	return true;
+}
+
+
+
+void gameState::saveGame()
+{
+	
+
+	std::ofstream outFile("tile_data.csv");
+	if (!outFile.is_open()) {
+		std::cerr << "Error: Could not open file for writing!" << std::endl;
+		return;
+	}
+
+	const int width = tm.getMapWidth();
+	const int height = tm.getMapHeight();
+
+	for (int y = 0; y < height; ++y) {
+		for (int x = 0; x < width; ++x) {
+			outFile << tm.getMapValue(x, y);
+			if (x < width - 1) {
+				outFile << ",";
+			}
+		}
+		outFile << "\n";
+	}
+	outFile.close();
+	std::cout << "Game saved to tile_data.csv!" << std::endl;
+
+	// Save game stats to game_stats.txt
+	std::ofstream statsFile("game_stats.txt");
+	if (!statsFile.is_open()) {
+		std::cerr << "Error: Could not open game_stats.txt for writing!" << std::endl;
+		return;
+	}
+
+	
+
+	// Save main character stats
+	if (mainChar) {
+		statsFile << "# Main Character\n";
+		statsFile << "Position: " << mainChar->getXCentre() << " " << mainChar->getYCentre() << "\n";
+		statsFile << "Speed: " << mainChar->getSpeedX() << " " << mainChar->getSpeedY() << "\n";
+		statsFile << "Lives: " << mainChar->getLives() << "\n";
+		// Can't have spaces due to how the file is read
+		statsFile << "LastTiles: " << mainChar->getLastTileX() << " " << mainChar->getLastTileY() << "\n";
+	}
+
+	// Save all enemy stats
+	for (auto& enemy : enemyVec) {
+		statsFile << "# Enemy\n";
+		statsFile << "Position: " << enemy->getXCentre() << " " << enemy->getYCentre() << "\n";
+		statsFile << "Speed: " << enemy->getSpeedX() << " " << enemy->getSpeedY() << "\n";
+		// Can't have spaces due to how the file is read
+		statsFile << "LastTiles: " << enemy->getLastTileX() << " " << enemy->getLastTileY() << "\n";
+		statsFile << "bikeVal: " << enemy->getBikeValue() << "\n";
+	}
+
+
+	// Save game state stats
+	statsFile << "# Game State\n";
+	statsFile << "Score: " << this->getGameScore() << "\n";
+
+	statsFile.close();
+	std::cout << "Game stats saved to game_stats.txt!" << std::endl;
 }

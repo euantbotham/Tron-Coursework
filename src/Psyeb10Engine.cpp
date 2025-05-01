@@ -87,6 +87,7 @@ void Psyeb10Engine::setState(Psyeb10States* state , bool keepOldState, bool init
 	this->currentState = state;
 	if (initState) {
 		clearContents();
+		drawableObjectsChanged();
 		lockBackgroundForDrawing();
 		this->currentState->initObjects();
 		this->currentState->enter();

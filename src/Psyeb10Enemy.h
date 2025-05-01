@@ -10,7 +10,7 @@ class Psyeb10Enemy: public Psyeb10Bike
 {
 public:
     
-    Psyeb10Enemy(BaseEngine* engine);
+    Psyeb10Enemy(BaseEngine* pEngine, int xPos, int yPos, int gridVal);
     bool isValidMove(int x, int y);
     void virtHandleDeath()override;
     void virtPostMoveLogic()override;

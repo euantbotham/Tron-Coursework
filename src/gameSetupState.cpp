@@ -144,7 +144,7 @@ void gameSetupState::mouseDown(int iButton, int iX, int iY)
                 gameState* game = new gameState(engine);
 				std::cout << "Loading game..." << std::endl;
                 engine->lockBackgroundForDrawing();
-                game->initObjects();
+                //game->initObjects();
 				std::cout << "Game objects initialized!" << std::endl;
                 if (game->loadGame()){
                     engine->unlockBackgroundForDrawing();
