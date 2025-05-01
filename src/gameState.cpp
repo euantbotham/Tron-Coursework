@@ -308,9 +308,11 @@ bool gameState::loadGame() {
 		}
 		else if (line.find("# Game State") != std::string::npos) {
 			// Read game state stats
-			int score;
+			int score, level;
 			statsFile >> lineKey >> score;
+			statsFile >> lineKey >> level;
 			gameScore = score;
+			currentLevel = level;
 		}
 	}
 	statsFile.close();

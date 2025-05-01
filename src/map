@@ -1,6 +1,6 @@
  CourseworkBase2020
 
- Timestamp is 68140743 (Fri May  2 00:44:03 2025)
+ Timestamp is 681407ae (Fri May  2 00:45:50 2025)
 
  Preferred load address is 00400000
 
@@ -2442,8 +2442,8 @@
  0001:000849b0       ?getmainChar@gameState@@QBEPAVMainCharacter@@XZ 004859b0 f   gameState.obj
  0001:000849d0       ?getGameScore@gameState@@QBEHXZ 004859d0 f   gameState.obj
  0001:000849f0       ?loadGame@gameState@@QAE_NXZ 004859f0 f   gameState.obj
- 0001:000851a0       ?saveGame@gameState@@QAEXXZ 004861a0 f   gameState.obj
- 0001:00085710       ?cleanTileManager@gameState@@QAEXH@Z 00486710 f   gameState.obj
+ 0001:000851d0       ?saveGame@gameState@@QAEXXZ 004861d0 f   gameState.obj
+ 0001:00085770       ?cleanTileManager@gameState@@QAEXH@Z 00486770 f   gameState.obj
  0002:00000000       ___xc_a                    0048d000     MSVCRTD:initializers.obj
  0002:0000030c       ___xc_z                    0048d30c     MSVCRTD:initializers.obj
  0002:00000410       ___xi_a                    0048d410     MSVCRTD:initializers.obj
@@ -7014,68 +7014,70 @@
  0002:00002d54       $SG95781                   0048fd54     gameSetupState.obj
  0002:00002d68       $SG95782                   0048fd68     gameSetupState.obj
  0002:00002d7c       $SG95784                   0048fd7c     gameSetupState.obj
- 0002:00002f68       $SG108746                  0048ff68     gameState.obj
- 0002:00002f7c       $SG108747                  0048ff7c     gameState.obj
- 0002:00002f80       $SG108748                  0048ff80     gameState.obj
- 0002:00002fe8       $SG108749                  0048ffe8     gameState.obj
- 0002:000030ac       $SG108750                  004900ac     gameState.obj
- 0002:000030b0       $SG108751                  004900b0     gameState.obj
- 0002:000030d8       $SG108812                  004900d8     gameState.obj
- 0002:0000313c       $SG109153                  0049013c     gameState.obj
- 0002:00003158       $SG109154                  00490158     gameState.obj
- 0002:00003160       $SG109155                  00490160     gameState.obj
- 0002:000031c8       $SG109156                  004901c8     gameState.obj
- 0002:00003290       $SG109157                  00490290     gameState.obj
- 0002:00003294       $SG109158                  00490294     gameState.obj
+ 0002:00002f68       $SG108755                  0048ff68     gameState.obj
+ 0002:00002f7c       $SG108756                  0048ff7c     gameState.obj
+ 0002:00002f80       $SG108757                  0048ff80     gameState.obj
+ 0002:00002fe8       $SG108758                  0048ffe8     gameState.obj
+ 0002:000030ac       $SG108759                  004900ac     gameState.obj
+ 0002:000030b0       $SG108760                  004900b0     gameState.obj
+ 0002:000030d8       $SG108821                  004900d8     gameState.obj
+ 0002:0000313c       $SG109162                  0049013c     gameState.obj
+ 0002:00003158       $SG109163                  00490158     gameState.obj
+ 0002:00003160       $SG109164                  00490160     gameState.obj
+ 0002:000031c8       $SG109165                  004901c8     gameState.obj
+ 0002:00003290       $SG109166                  00490290     gameState.obj
+ 0002:00003294       $SG109167                  00490294     gameState.obj
  0002:000032cc       $SG94685                   004902cc     gameState.obj
  0002:000032d8       $SG94686                   004902d8     gameState.obj
  0002:000032e4       $SG94757                   004902e4     gameState.obj
  0002:000032e8       $SG94758                   004902e8     gameState.obj
  0002:000032fc       $SG94964                   004902fc     gameState.obj
  0002:00003308       $SG94965                   00490308     gameState.obj
- 0002:00003310       $SG95293                   00490310     gameState.obj
- 0002:00003320       $SG95295                   00490320     gameState.obj
- 0002:00003354       $SG95297                   00490354     gameState.obj
- 0002:00003364       $SG95299                   00490364     gameState.obj
- 0002:00003398       $SG95303                   00490398     gameState.obj
- 0002:000033ac       $SG95307                   004903ac     gameState.obj
- 0002:000033b4       $SG95310                   004903b4     gameState.obj
- 0002:000033c4       $SG95311                   004903c4     gameState.obj
- 0002:000033e0       $SG95501                   004903e0     gameState.obj
- 0002:000033f0       $SG95503                   004903f0     gameState.obj
- 0002:00003418       $SG95505                   00490418     gameState.obj
- 0002:0000341c       $SG95506                   0049041c     gameState.obj
- 0002:00003420       $SG95507                   00490420     gameState.obj
- 0002:00003440       $SG95508                   00490440     gameState.obj
- 0002:00003450       $SG95510                   00490450     gameState.obj
- 0002:00003484       $SG95512                   00490484     gameState.obj
- 0002:00003498       $SG95513                   00490498     gameState.obj
- 0002:0000349c       $SG95514                   0049049c     gameState.obj
- 0002:000034a0       $SG95515                   004904a0     gameState.obj
- 0002:000034ac       $SG95516                   004904ac     gameState.obj
- 0002:000034b0       $SG95517                   004904b0     gameState.obj
- 0002:000034b4       $SG95518                   004904b4     gameState.obj
- 0002:000034bc       $SG95519                   004904bc     gameState.obj
- 0002:000034c0       $SG95520                   004904c0     gameState.obj
- 0002:000034c8       $SG95521                   004904c8     gameState.obj
- 0002:000034cc       $SG95522                   004904cc     gameState.obj
- 0002:000034d0       $SG95523                   004904d0     gameState.obj
- 0002:000034dc       $SG95524                   004904dc     gameState.obj
- 0002:000034e8       $SG95525                   004904e8     gameState.obj
- 0002:000034ec       $SG95526                   004904ec     gameState.obj
- 0002:000034f0       $SG95527                   004904f0     gameState.obj
- 0002:000034fc       $SG95528                   004904fc     gameState.obj
- 0002:00003500       $SG95529                   00490500     gameState.obj
- 0002:00003504       $SG95530                   00490504     gameState.obj
- 0002:0000350c       $SG95531                   0049050c     gameState.obj
- 0002:00003510       $SG95532                   00490510     gameState.obj
- 0002:00003514       $SG95533                   00490514     gameState.obj
- 0002:00003520       $SG95534                   00490520     gameState.obj
- 0002:00003524       $SG95535                   00490524     gameState.obj
- 0002:00003530       $SG95536                   00490530     gameState.obj
- 0002:00003540       $SG95537                   00490540     gameState.obj
- 0002:00003544       $SG95538                   00490544     gameState.obj
- 0002:0000354c       $SG95539                   0049054c     gameState.obj
+ 0002:00003310       $SG95294                   00490310     gameState.obj
+ 0002:00003320       $SG95296                   00490320     gameState.obj
+ 0002:00003354       $SG95298                   00490354     gameState.obj
+ 0002:00003364       $SG95300                   00490364     gameState.obj
+ 0002:00003398       $SG95304                   00490398     gameState.obj
+ 0002:000033ac       $SG95308                   004903ac     gameState.obj
+ 0002:000033b4       $SG95311                   004903b4     gameState.obj
+ 0002:000033c4       $SG95312                   004903c4     gameState.obj
+ 0002:000033e0       $SG95508                   004903e0     gameState.obj
+ 0002:000033f0       $SG95510                   004903f0     gameState.obj
+ 0002:00003418       $SG95512                   00490418     gameState.obj
+ 0002:0000341c       $SG95513                   0049041c     gameState.obj
+ 0002:00003420       $SG95514                   00490420     gameState.obj
+ 0002:00003440       $SG95515                   00490440     gameState.obj
+ 0002:00003450       $SG95517                   00490450     gameState.obj
+ 0002:00003484       $SG95519                   00490484     gameState.obj
+ 0002:00003498       $SG95520                   00490498     gameState.obj
+ 0002:0000349c       $SG95521                   0049049c     gameState.obj
+ 0002:000034a0       $SG95522                   004904a0     gameState.obj
+ 0002:000034ac       $SG95523                   004904ac     gameState.obj
+ 0002:000034b0       $SG95524                   004904b0     gameState.obj
+ 0002:000034b4       $SG95525                   004904b4     gameState.obj
+ 0002:000034bc       $SG95526                   004904bc     gameState.obj
+ 0002:000034c0       $SG95527                   004904c0     gameState.obj
+ 0002:000034c8       $SG95528                   004904c8     gameState.obj
+ 0002:000034cc       $SG95529                   004904cc     gameState.obj
+ 0002:000034d0       $SG95530                   004904d0     gameState.obj
+ 0002:000034dc       $SG95531                   004904dc     gameState.obj
+ 0002:000034e8       $SG95532                   004904e8     gameState.obj
+ 0002:000034ec       $SG95533                   004904ec     gameState.obj
+ 0002:000034f0       $SG95534                   004904f0     gameState.obj
+ 0002:000034fc       $SG95535                   004904fc     gameState.obj
+ 0002:00003500       $SG95536                   00490500     gameState.obj
+ 0002:00003504       $SG95537                   00490504     gameState.obj
+ 0002:0000350c       $SG95538                   0049050c     gameState.obj
+ 0002:00003510       $SG95539                   00490510     gameState.obj
+ 0002:00003514       $SG95540                   00490514     gameState.obj
+ 0002:00003520       $SG95541                   00490520     gameState.obj
+ 0002:00003524       $SG95542                   00490524     gameState.obj
+ 0002:00003530       $SG95543                   00490530     gameState.obj
+ 0002:00003540       $SG95544                   00490540     gameState.obj
+ 0002:00003544       $SG95545                   00490544     gameState.obj
+ 0002:0000354c       $SG95546                   0049054c     gameState.obj
+ 0002:00003550       $SG95547                   00490550     gameState.obj
+ 0002:00003558       $SG95548                   00490558     gameState.obj
  0002:000040b0       $SG92627                   004910b0     ImageMappingDemo.obj
  0002:000040bc       $SG92629                   004910bc     ImageMappingDemo.obj
  0002:000040c8       $SG92631                   004910c8     ImageMappingDemo.obj
