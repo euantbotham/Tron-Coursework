@@ -9,8 +9,8 @@ Psyeb10Bike::Psyeb10Bike(int xStart, int yStart,
 	this->startPosY = yStart;
 	
 	// Set last tiles to -1
-	lastTileX = -1;
-	lastTileY = -1;
+	lastTileX = xStart;
+	lastTileY = yStart;
 
 	speedX = 0;
 	speedY = 0;

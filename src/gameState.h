@@ -19,6 +19,7 @@ public:
 		mainChar = nullptr;
 		isDisplayed = false;
 		currentEnemies = 0;
+		currentLevel = 1;
 	}
 	void enter() override;
 	void foreGroundStrings() override;
@@ -46,5 +47,6 @@ protected:
 	std::vector<Psyeb10Enemy*> enemyVec;
 	bool isDisplayed;
 	int currentEnemies;
+	int currentLevel;
 };
 

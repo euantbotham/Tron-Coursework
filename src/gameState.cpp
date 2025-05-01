@@ -47,11 +47,8 @@ void gameState::initObjects()
 	engine->storeObjectInArray(0, mainChar);
 	this->enemyVec.push_back(new Psyeb10Enemy(engine, 500, 150, 2));
 	engine->appendObjectToArray(enemyVec[0]);
-
-	this->enemyVec.push_back(new Psyeb10Enemy(engine, 650, 150, 3));
-	engine->appendObjectToArray(enemyVec[1]);
 	engine->setAllObjectsVisible(true);
-	currentEnemies = 2; // Set the number of enemies to 2
+	currentEnemies = 1; // Set the number of enemies to 1
 }
 
 void gameState::reset()
@@ -84,6 +81,10 @@ void gameState::mouseDown(int iButton, int iX, int iY) {
 		this->isDisplayed = false;
 		engine->setState(new pauseState(engine), true , true);
 		
+	}
+	else if (iButton == SDL_BUTTON_LEFT)
+	{
+		recieveUpdate(enemyVec[0]->getBikeValue());
 	}
 }
 
@@ -168,7 +169,7 @@ int gameState::getGameScore()const {
 void gameState::recieveUpdate(int code) {
 	// Destroy Bike that has been deleted and remove from vectors
 	Psyeb10Enemy* toDelete = nullptr;
-	if (currentEnemies > 1) {
+	if (currentEnemies > 0) {
 		for (auto& enemy : enemyVec) {
 			if (enemy->getBikeValue() == code) {
 				// Only seemed to work when passed a DisplayableObject pointer
@@ -179,7 +180,8 @@ void gameState::recieveUpdate(int code) {
 
 				//enemyVec.erase(std::remove(enemyVec.begin(), enemyVec.end(), enemy), enemyVec.end());
 				//delete enemy;
-				
+				toDelete = enemy;
+
 				currentEnemies--;
 				cleanTileManager(code);
 
@@ -200,8 +202,30 @@ void gameState::recieveUpdate(int code) {
 			delete toDelete;  // Free memory after erase
 		}
 	}
-	else {
-		reset();
+	if (currentEnemies == 0) {
+		if (currentLevel < 2) {
+			Psyeb10Enemy* enemy = new Psyeb10Enemy(engine, 500, 150, 2);
+			reset();
+			enemyVec.push_back(enemy);
+			engine->appendObjectToArray(enemy);
+			currentEnemies = 1;
+		}
+		else if (currentLevel < 5) {
+			reset();
+			Psyeb10Enemy* enemy = new Psyeb10Enemy(engine, 500, 150, 2);
+			enemyVec.push_back(enemy);
+			engine->appendObjectToArray(enemy);
+
+			enemy = new Psyeb10Enemy(engine, 650, 150, 3);
+			this->enemyVec.push_back(enemy);
+			engine->appendObjectToArray(enemy);
+			currentEnemies = 2;
+		}
+		
+		else {
+			engine->setExitWithCode(0);
+		}
+		currentLevel++;
 	}
 }
 
@@ -364,6 +388,7 @@ void gameState::saveGame()
 	// Save game state stats
 	statsFile << "# Game State\n";
 	statsFile << "Score: " << this->getGameScore() << "\n";
+	statsFile << "Level: " << currentLevel << "\n";
 
 	statsFile.close();
 	std::cout << "Game stats saved to game_stats.txt!" << std::endl;
