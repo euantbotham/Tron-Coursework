@@ -93,6 +93,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="bouncingLogo.h" />
     <ClInclude Include="DraggingDemo.h" />
     <ClInclude Include="FlashingDemo.h" />
     <ClInclude Include="gameSetupState.h" />
@@ -143,6 +144,7 @@
     <ClInclude Include="ZoomingDemo.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="bouncingLogo.cpp" />
     <ClCompile Include="DraggingDemo.cpp" />
     <ClCompile Include="DrawingSurface.cpp" />
     <ClCompile Include="FlashingDemo.cpp" />

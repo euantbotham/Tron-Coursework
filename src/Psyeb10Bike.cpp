@@ -53,6 +53,7 @@ void Psyeb10Bike::virtDoUpdate(int iCurrentTime)
 		else if (value != 0 && !(mapX == lastTileX && mapY == lastTileY)) {
 			virtHandleDeath();
 			//Extremley Important, without this game crashes
+
 			return;
 		}
 	}

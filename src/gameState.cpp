@@ -141,7 +141,7 @@ void gameState::drawBackground()
 
 
 	// Background Image used as game logo
-	SimpleImage image = ImageManager::loadImage("MainCharacter.png", true);
+	SimpleImage image = ImageManager::loadImage("tronLogo.png", true);
 	image.renderImageWithMask(engine->getBackgroundSurface(), 0, 0, 575, 20, image.getWidth(), image.getHeight());
 }
 

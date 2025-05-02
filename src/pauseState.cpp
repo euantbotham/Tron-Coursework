@@ -7,17 +7,29 @@
 #include "gameState.h"
 #include "Psyeb10Bike.h"
 #include "MainCharacter.h"
+#include "BouncingLogo.h"
 
 void pauseState::enter()
 {
 	//engine->fillBackground(0x00FF00);
 	
-	engine->drawBackgroundRectangle(475, 150, 825, 575, 0x000000);
-	engine->drawBackgroundString(525, 200, "Game Paused", 0x57E2F9, 0);
+	//engine->drawBackgroundRectangle(475, 150, 825, 575, 0x000000);
+	//engine->drawBackgroundString(525, 200, "Game Paused", 0x57E2F9, 0);
 }
 
 void pauseState::foreGroundStrings()
 {
+	//Draw the black rectangle
+	engine->drawForegroundRectangle(475, 150, 825, 575, 0x000000);
+
+	// Draw Tron blue lines around the rectangle
+	engine->drawForegroundLine(475, 150, 825, 150, engine->tronBlue); // Top edge
+	engine->drawForegroundLine(475, 575, 825, 575, engine->tronBlue); // Bottom edge
+	engine->drawForegroundLine(475, 150, 475, 575, engine->tronBlue); // Left edge
+	engine->drawForegroundLine(825, 150, 825, 575, engine->tronBlue); // Right edge
+
+
+	engine->drawForegroundString(525, 200, "Game Paused", 0x57E2F9, 0);
 	tm.setTopLeftPositionOnScreen(525, 250);
 	//Resume game
 	tm.setMapValue(0, 0, 1);
@@ -30,6 +42,8 @@ void pauseState::foreGroundStrings()
 
 void pauseState::initObjects()
 {
+	bouncingLogo* logo = new bouncingLogo(100, 100, engine, 2, 2);
+	engine->appendObjectToArray(logo);
 }
 
 

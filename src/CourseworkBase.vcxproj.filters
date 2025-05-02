@@ -189,6 +189,9 @@
     <ClInclude Include="ImagePixelMappingRotate90.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="bouncingLogo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mainfunction.cpp">
@@ -294,6 +297,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ImagePixelMappingRotate90.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bouncingLogo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
