@@ -1,18 +1,18 @@
 # Main Character
-Position: 742 307
-Speed: 1 0
+Position: 920 356
+Speed: 0 -1
 Lives: 3
-LastTiles: 78 41
+LastTiles: 114 51
 # Enemy
-Position: 510 345
-Speed: 0 1
-LastTiles: 32 48
+Position: 870 422
+Speed: 0 -1
+LastTiles: 104 64
 bikeVal: 2
 # Enemy
-Position: 710 295
+Position: 911 315
 Speed: 1 0
-LastTiles: 71 39
+LastTiles: 112 43
 bikeVal: 3
 # Game State
-Score: 60
+Score: 140
 Level: 3

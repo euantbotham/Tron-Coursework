@@ -84,7 +84,7 @@ void gameState::mouseDown(int iButton, int iX, int iY) {
 	}
 	else if (iButton == SDL_BUTTON_LEFT)
 	{
-		recieveUpdate(enemyVec[0]->getBikeValue());
+		recieveUpdate(enemyVec.back()->getBikeValue());
 	}
 }
 
@@ -168,17 +168,20 @@ int gameState::getGameScore()const {
 
 void gameState::recieveUpdate(int code) {
 	// Destroy Bike that has been deleted and remove from vectors
+	Psyeb10Enemy* toDelete = nullptr;
 	if (currentEnemies > 0) {
 		for (Psyeb10Enemy* enemy : enemyVec) {
 			if (enemy->getBikeValue() == code) {
 				// Only seemed to work when passed a DisplayableObject pointer
+				engine->drawableObjectsChanged();
 				engine->removeDisplayableObject(enemy);
 				enemy->setVisible(false);
 				enemy->setPaused(true);
 
 
-				enemyVec.erase(std::remove(enemyVec.begin(), enemyVec.end(), enemy), enemyVec.end());
-				delete enemy;
+				//enemyVec.erase(std::remove(enemyVec.begin(), enemyVec.end(), enemy), enemyVec.end());
+				//delete enemy;
+				toDelete = enemy;
 
 				currentEnemies--;
 				cleanTileManager(code);
@@ -187,12 +190,17 @@ void gameState::recieveUpdate(int code) {
 				drawBackground();
 				tm.drawAllTiles(engine, engine->getBackgroundSurface());
 				engine->unlockBackgroundForDrawing();
-				engine->redrawDisplay();
+				//engine->redrawDisplay();
 
 				std::cout << "Enemy " << code << " destroyed!" << std::endl;
 				break;
 			}
 
+		}
+		if (toDelete != nullptr) {
+			// Erase the exact pointer from the vector
+			enemyVec.erase(std::remove(enemyVec.begin(), enemyVec.end(), toDelete), enemyVec.end());
+			delete toDelete;  // Free memory after erase
 		}
 	}
 	if (currentEnemies == 0) {
