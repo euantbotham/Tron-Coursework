@@ -25,6 +25,7 @@ public:
 	
 	// Maybe rewrite this better later
 	virtual void copyAllBackgroundBuffer();
+	virtual void mouseWheelScrolled(int x, int y, int which, int timestamp);
 protected:
 	Psyeb10Engine* engine;
 	Psyeb10TileManager tm;

@@ -51,3 +51,7 @@ void Psyeb10States::keyUp(int iKeyCode) {
 void Psyeb10States::recieveUpdate(int code) {
 	//Empty implementation
 }
+
+void Psyeb10States::mouseWheelScrolled(int x, int y, int which, int timestamp) {
+	// Handle mouse wheel scroll events here in override
+}

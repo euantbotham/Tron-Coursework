@@ -30,6 +30,7 @@ public:
 	void virtKeyUp(int iKeyCode) override;
     //Function to send an update to the state
     void notifyState(int code);
+    void virtMouseWheel(int x, int y, int which, int timestamp) override;
 protected:
     Psyeb10States* currentState;
     // Used to store a second state if needed

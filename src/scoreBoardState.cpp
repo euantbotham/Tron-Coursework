@@ -43,10 +43,33 @@ void scoreBoardState::keyPressed(int iKeyCode) {
 			inputName.pop_back();
 		}
 	}
-	else if (iKeyCode == SDLK_0) { // Press '0' to zoom
-		// Example: zoom in by 10%, scroll a bit
-		filter.setZoom(2); // Zoom in 10%
-		filter.scroll(0, 0); // Scroll 5px right, 5px down
+	else if (iKeyCode == SDLK_LEFT || iKeyCode == SDLK_RIGHT || iKeyCode == SDLK_UP || iKeyCode == SDLK_DOWN) {
+		// Handle scrolling with arrow keys
+		filter.handleKeyPress(iKeyCode);
 	}
+	engine->redrawDisplay();
+}
+
+void scoreBoardState::mouseWheelScrolled(int x, int y, int which, int timestamp) {
+	// Get the center of the screen before zoom
+	int iOldCentreX = engine->convertClickedToVirtualPixelXPosition(engine->getWindowWidth() / 2);
+	int iOldCentreY = engine->convertClickedToVirtualPixelYPosition(engine->getWindowHeight() / 2);
+
+	// Adjust zoom level based on mouse wheel direction
+	if (y < 0) {
+		filter.compress(); // Zoom out
+	}
+	else if (y > 0) {
+		filter.stretch(); // Zoom in
+	}
+
+	// Get the center of the screen after zoom
+	int iNewCentreX = engine->convertClickedToVirtualPixelXPosition(engine->getWindowWidth() / 2);
+	int iNewCentreY = engine->convertClickedToVirtualPixelYPosition(engine->getWindowHeight() / 2);
+
+	// Adjust the offset to keep the zoom centered
+	//filter.changeOffset(iNewCentreX - iOldCentreX, iNewCentreY - iOldCentreY);
+
+	// Redraw the display
 	engine->redrawDisplay();
 }

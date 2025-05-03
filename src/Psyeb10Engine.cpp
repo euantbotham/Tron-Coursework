@@ -18,7 +18,7 @@
 Psyeb10Engine::Psyeb10Engine()
 {
 	// Could potentially make this a smart pointer
-	currentState = new mainMenuState(this);
+	currentState = new scoreBoardState(this);
 	secondState = nullptr;
 }
 
@@ -146,4 +146,8 @@ void Psyeb10Engine::virtKeyUp(int iKeyCode)
 
 void Psyeb10Engine::notifyState(int code) {
 	currentState->recieveUpdate(code);
+}
+
+void Psyeb10Engine::virtMouseWheel(int x, int y, int which, int timestamp) {
+	currentState->mouseWheelScrolled(x, y, which, timestamp);
 }

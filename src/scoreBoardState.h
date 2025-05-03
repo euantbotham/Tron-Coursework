@@ -14,6 +14,7 @@ public:
     void enter() override;
 	void foreGroundStrings() override;
 	void keyPressed(int iKeyCode) override;
+	void mouseWheelScrolled(int x, int y, int which, int timestamp) override;
 
 private:
 	std::string inputName;
