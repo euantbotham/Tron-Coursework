@@ -25,8 +25,18 @@ scoreBoardState::scoreBoardState(Psyeb10Engine* engine, int score)
 
     // initialise outside the top 10
     playerPos = 11;
+    animationComplete = true;
+	finishTime = 0;
+
 	// Load the scores from the file
 	loadScore();
+
+    //Set zoom for animation if shown
+    if (playerPos != 11) {
+        animationComplete = false;
+		m_filterScaling.setStretch(3.0, 3.0); 
+        m_filterTranslation.setOffset(-380, -500);
+    }
 }
 
 void scoreBoardState::enter() 
@@ -99,6 +109,36 @@ void scoreBoardState::foreGroundStrings()
         char formattedScore[5];
         sprintf(formattedScore, "%04d", scoreBoardScores[i]);
         engine->drawForegroundString(startX + 300, startY + 50 + i * entryHeight, formattedScore, colour);
+    }
+}
+
+
+void scoreBoardState::mainLoopPreUpdate() {
+    if (!animationComplete) {
+        int targetOffsetY = -500 + (9 -playerPos) * 40;
+        int currentOffsetY = m_filterTranslation.getYOffset();
+        int currentOffsetX = m_filterTranslation.getXOffset();
+        //std::cout << currentOffsetY << " " << currentOffsetX << std::endl;
+
+        if (finishTime != 0) {
+            // Check if the animation is complete
+            if (engine->getModifiedTime() / 1000 > finishTime + 2) {
+                animationComplete = true;
+                m_filterScaling.resetZoom();
+                m_filterTranslation.setOffset(0, 0);
+                engine->redrawDisplay();
+            }
+        }else 
+        if (currentOffsetY < targetOffsetY) {
+            m_filterTranslation.changeOffset(0, 1); // scroll up towards score
+            engine->redrawDisplay();
+        }
+        else {
+            // Stop once reached score
+			finishTime = engine->getModifiedTime() / 1000;
+			std::cout << "Animation complete" << std::endl;
+        }
+        
     }
 }
 

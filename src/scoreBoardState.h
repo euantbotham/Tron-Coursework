@@ -12,6 +12,7 @@ public:
     void foreGroundStrings() override;
     void keyPressed(int iKeyCode) override;
     void mouseWheelScrolled(int x, int y, int which, int timestamp) override;
+    void mainLoopPreUpdate() override;
 private:
     std::string inputName;
     ScoreBoardScaling m_filterScaling;           // For zooming with limits
@@ -21,6 +22,11 @@ private:
     int playerscore;
     int playerPos;
     bool nameSaved;
+    // has shown animation
+    bool animationComplete;
     void loadScore();
     void saveScore();
+
+
+    int finishTime;
 };
