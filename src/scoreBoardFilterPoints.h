@@ -1,334 +1,378 @@
 #pragma once
 #include "FilterPoints.h"
+#include "DrawingSurface.h"
 
-class ScoreBoardFilterPoints : public FilterPoints {
-private:
-    int xStretch = 1, yStretch = 1;        // Stretch factors
-    int xCompress = 1, yCompress = 1;      // Compress factors
-    int xOffset = 0, yOffset = 0;          // Translation offsets
-    FilterPoints* pNextFilter = nullptr;    // Chain to next filter
-
+// ScoreBoardScaling - Scaling filter with zoom limits
+class ScoreBoardScaling : public FilterPoints
+{
 public:
-    // Default constructor
-    ScoreBoardFilterPoints(FilterPoints* pNextFilter = nullptr)
-        : pNextFilter(pNextFilter) {
+    // Constructor with pointer to next filter
+    ScoreBoardScaling(FilterPoints* pNextFilter = nullptr)
+        : pNextFilter(pNextFilter), xStretch(1), yStretch(1), xCompress(1), yCompress(1)
+    {
     }
 
-    // Constructor with scaling
-    ScoreBoardFilterPoints(int xFactor, int yFactor, FilterPoints* pNextFilter = nullptr)
-        : pNextFilter(pNextFilter)
+    // Constructor with initial stretch factors
+    ScoreBoardScaling(int xFactor, int yFactor, FilterPoints* pNextFilter = nullptr)
+        : pNextFilter(pNextFilter), xStretch(1), yStretch(1), xCompress(1), yCompress(1)
     {
         setStretch(xFactor, yFactor);
     }
 
-    // Constructor with translation
-    ScoreBoardFilterPoints(int xTranslation, int yTranslation, bool isTranslation, FilterPoints* pNextFilter = nullptr)
-        : xOffset(xTranslation), yOffset(yTranslation), pNextFilter(pNextFilter) {
-    }
-
-    // Constructor with both scaling and translation
-    ScoreBoardFilterPoints(int xFactor, int yFactor, int xTranslation, int yTranslation, FilterPoints* pNextFilter = nullptr)
-        : xOffset(xTranslation), yOffset(yTranslation), pNextFilter(pNextFilter)
+    // Filter implementation
+    virtual bool filter(DrawingSurface* surface, int& xVirtual, int& yVirtual, unsigned int& uiColour, bool setting) override
     {
-        setStretch(xFactor, yFactor);
+        if (setting)
+            handleXthenY(surface, xVirtual, yVirtual, uiColour);
+        return false; // We already colored the pixel
     }
 
-    // Transform the coordinates based on scaling and translation
-    bool filter(DrawingSurface* surface, int& x, int& y, unsigned int& uiColour, bool setting) override {
-        if (setting) {
-            // First apply scaling, then translation, then any chained filters
-            handleXthenY(surface, x, y, uiColour);
-            return false; // We already handled the pixel drawing
+    // Convert from virtual to real X position
+    virtual int filterConvertVirtualToRealXPosition(int xVirtual) override
+    {
+        if (xStretch > 1)
+        {
+            if (pNextFilter)
+                return pNextFilter->filterConvertVirtualToRealXPosition(xVirtual * xStretch);
+            else
+                return xVirtual * xStretch;
         }
-
-        // Apply scaling
-        if (xStretch > 1) {
-            x = x * xStretch;
+        else
+        {
+            if (pNextFilter)
+                return pNextFilter->filterConvertVirtualToRealXPosition(xVirtual / xCompress);
+            else
+                return xVirtual / xCompress;
         }
-        else {
-            x = x / xCompress;
-        }
-
-        if (yStretch > 1) {
-            y = y * yStretch;
-        }
-        else {
-            y = y / yCompress;
-        }
-
-        // Apply translation
-        x += xOffset;
-        y += yOffset;
-
-        // Apply chained filter if it exists
-        return (pNextFilter == nullptr) || pNextFilter->filter(surface, x, y, uiColour, setting);
     }
 
-    // Convert virtual to real X position
-    int filterConvertVirtualToRealXPosition(int xVirtual) override {
-        // Apply scaling
-        if (xStretch > 1) {
-            xVirtual = xVirtual * xStretch;
+    // Convert from virtual to real Y position
+    virtual int filterConvertVirtualToRealYPosition(int yVirtual) override
+    {
+        if (yStretch > 1)
+        {
+            if (pNextFilter)
+                return pNextFilter->filterConvertVirtualToRealYPosition(yVirtual * yStretch);
+            else
+                return yVirtual * yStretch;
         }
-        else {
-            xVirtual = xVirtual / xCompress;
+        else
+        {
+            if (pNextFilter)
+                return pNextFilter->filterConvertVirtualToRealYPosition(yVirtual / yCompress);
+            else
+                return yVirtual / yCompress;
         }
-
-        // Apply translation
-        xVirtual += xOffset;
-
-        // Apply next filter if exists
-        if (pNextFilter) {
-            return pNextFilter->filterConvertVirtualToRealXPosition(xVirtual);
-        }
-        return xVirtual;
     }
 
-    // Convert virtual to real Y position
-    int filterConvertVirtualToRealYPosition(int yVirtual) override {
-        // Apply scaling
-        if (yStretch > 1) {
-            yVirtual = yVirtual * yStretch;
-        }
-        else {
-            yVirtual = yVirtual / yCompress;
-        }
-
-        // Apply translation
-        yVirtual += yOffset;
-
-        // Apply next filter if exists
-        if (pNextFilter) {
-            return pNextFilter->filterConvertVirtualToRealYPosition(yVirtual);
-        }
-        return yVirtual;
-    }
-
-    // Convert real to virtual X position
-    int filterConvertRealToVirtualXPosition(int xReal) override {
-        // Apply other filter first if it exists (since we are reversing the order)
-        if (pNextFilter) {
+    // Convert from real to virtual X position
+    virtual int filterConvertRealToVirtualXPosition(int xReal) override
+    {
+        // Apply other filter first if it exists
+        if (pNextFilter)
             xReal = pNextFilter->filterConvertRealToVirtualXPosition(xReal);
-        }
 
-        // Remove translation first
-        xReal = xReal - xOffset;
-
-        // Then remove scaling
-        if (xStretch > 1) {
+        // Apply our transformation in reverse
+        if (xStretch > 1)
             return xReal / xStretch;
-        }
-        else {
+        else
             return xReal * xCompress;
-        }
     }
 
-    // Convert real to virtual Y position
-    int filterConvertRealToVirtualYPosition(int yReal) override {
-        // Apply other filter first if it exists (since we are reversing the order)
-        if (pNextFilter) {
+    // Convert from real to virtual Y position
+    virtual int filterConvertRealToVirtualYPosition(int yReal) override
+    {
+        // Apply other filter first if it exists
+        if (pNextFilter)
             yReal = pNextFilter->filterConvertRealToVirtualYPosition(yReal);
-        }
 
-        // Remove translation first
-        yReal = yReal - yOffset;
-
-        // Then remove scaling
-        if (yStretch > 1) {
+        // Apply our transformation in reverse
+        if (yStretch > 1)
             return yReal / yStretch;
-        }
-        else {
+        else
             return yReal * yCompress;
-        }
     }
 
-    // Stretch in X direction
-    void stretchX() {
+    // Stretch X dimension with maximum limit of 3x
+    void stretchX()
+    {
         if (xCompress > 1)
             --xCompress;
-        else
+        else if (xStretch < 3)  // Maximum zoom of 3x
             ++xStretch;
     }
 
-    // Stretch in Y direction
-    void stretchY() {
+    // Stretch Y dimension with maximum limit of 3x
+    void stretchY()
+    {
         if (yCompress > 1)
             --yCompress;
-        else
+        else if (yStretch < 3)  // Maximum zoom of 3x
             ++yStretch;
     }
 
-    // Compress in X direction
-    void compressX() {
+    // Compress X dimension with minimum limit of 1x
+    void compressX()
+    {
         if (xStretch > 1)
             --xStretch;
-        else
-            ++xCompress;
+        else if (xCompress == 1)  // Minimum zoom of 1x (no smaller)
+            xCompress = 1;
     }
 
-    // Compress in Y direction
-    void compressY() {
+    // Compress Y dimension with minimum limit of 1x
+    void compressY()
+    {
         if (yStretch > 1)
             --yStretch;
-        else
-            ++yCompress;
+        else if (yCompress == 1)  // Minimum zoom of 1x (no smaller)
+            yCompress = 1;
+    }
+
+    // Stretch both X and Y
+    void stretch()
+    {
+        stretchX();
+        stretchY();
     }
 
     // Compress both X and Y
-    void compress() { compressX(); compressY(); }
-
-    // Stretch both X and Y
-    void stretch() { stretchX(); stretchY(); }
-
-    // Set stretch/compress factors
-    void setStretch(int xFactor, int yFactor) {
-        if (xFactor == 0) { xStretch = 1; xCompress = 1; }
-        else if (xFactor < 0) { xStretch = 1; xCompress = 1 - xFactor; }
-        else if (xFactor > 0) { xStretch = 1 + xFactor; xCompress = 1; }
-
-        if (yFactor == 0) { yStretch = 1; yCompress = 1; }
-        else if (yFactor < 0) { yStretch = 1; yCompress = 1 - yFactor; }
-        else if (yFactor > 0) { yStretch = 1 + yFactor; yCompress = 1; }
+    void compress()
+    {
+        compressX();
+        compressY();
     }
 
-    // Get zoom level for X
-    float getZoomX() {
+    // Set stretch factors with limits enforced
+    void setStretch(int xFactor, int yFactor)
+    {
+        // X-direction
+        if (xFactor == 0) {
+            xStretch = 1; xCompress = 1;
+        }
+        else if (xFactor < 0) {
+            xStretch = 1; xCompress = 1; // Minimum zoom of 1x
+        }
+        else if (xFactor > 0) {
+            xStretch = (xFactor > 2) ? 3 : xFactor + 1; // Maximum zoom of 3x
+            xCompress = 1;
+        }
+
+        // Y-direction
+        if (yFactor == 0) {
+            yStretch = 1; yCompress = 1;
+        }
+        else if (yFactor < 0) {
+            yStretch = 1; yCompress = 1; // Minimum zoom of 1x
+        }
+        else if (yFactor > 0) {
+            yStretch = (yFactor > 2) ? 3 : yFactor + 1; // Maximum zoom of 3x
+            yCompress = 1;
+        }
+    }
+
+    // Get current zoom level for X
+    float getZoomX()
+    {
         int v1 = xStretch; if (v1 < 1) v1 = 1;
         int v2 = xCompress; if (v2 < 1) v2 = 1;
-        return static_cast<float>(v1) / static_cast<float>(v2);
+        return (float)v1 / (float)v2;
     }
 
-    // Get zoom level for Y
-    float getZoomY() {
+    // Get current zoom level for Y
+    float getZoomY()
+    {
         int v1 = yStretch; if (v1 < 1) v1 = 1;
         int v2 = yCompress; if (v2 < 1) v2 = 1;
-        return static_cast<float>(v1) / static_cast<float>(v2);
+        return (float)v1 / (float)v2;
     }
 
-    // Set the offset for translation
-    void setOffset(int x, int y) {
-        xOffset = x;
-        yOffset = y;
-    }
-
-    // Change the offset for translation
-    void changeOffset(int dx, int dy) {
-        xOffset += dx;
-        yOffset += dy;
-    }
-
-    // Get current offsets
-    int getXOffset() { return xOffset; }
-    int getYOffset() { return yOffset; }
-
-    // Reset all zoom and translation settings
-    void resetView() {
+    // Reset zoom to default (1x)
+    void resetZoom()
+    {
         xStretch = 1;
         yStretch = 1;
         xCompress = 1;
         yCompress = 1;
-        xOffset = 0;
-        yOffset = 0;
-    }
-
-    // Handle arrow key scrolling - using enum or #define values for key codes
-    void handleKeyPress(int keyCode) {
-        const int scrollAmount = 10; // Amount to scroll per key press
-        switch (keyCode) {
-        case SDLK_LEFT:
-            changeOffset(-scrollAmount, 0); // Move view left
-            break;
-        case SDLK_RIGHT:
-            changeOffset(scrollAmount, 0); // Move view right
-            break;
-        case SDLK_UP:
-            changeOffset(0, -scrollAmount); // Move view up
-            break;
-        case SDLK_DOWN:
-            changeOffset(0, scrollAmount); // Move view down
-            break;
-        case SDLK_LSHIFT:
-            resetView(); // Reset all transformations
-            break;
-        }
     }
 
 private:
-    // Handle drawing with proper scaling and translation
-    void handleXthenY(DrawingSurface* surface, int xVirtual, int yVirtual, unsigned int& uiColour) {
-        // Create working copies of coordinates
-        int x = xVirtual;
-        int y = yVirtual;
+    FilterPoints* pNextFilter;
+    int xStretch, yStretch, xCompress, yCompress;
 
-        // Apply scaling for X
-        if (xStretch > 1) { // Stretch in X direction
-            x *= xStretch; // Scale the coordinate
-
-            // Apply translation
-            x += xOffset;
-
-            // Draw multiple pixels in X direction
-            for (int i = 0; i < xStretch; i++) {
-                int xPixel = x + i;
-                handleY(surface, xPixel, y, uiColour);
-            }
+    // Handle drawing in X then Y dimensions
+    void handleXthenY(DrawingSurface* surface, int xVirtual, int yVirtual, unsigned int& uiColour)
+    {
+        if (xStretch > 1) // Stretch it!
+        {
+            xVirtual *= xStretch; // First multiply the point coordinates
+            for (int i = 0; i < xStretch; i++)
+                handleY(surface, xVirtual + i, yVirtual, uiColour);
         }
-        else { // Compress in X direction
-            x /= xCompress; // Scale the coordinate
-
-            // Apply translation
-            x += xOffset;
-
-            // Draw a single pixel in X direction
-            handleY(surface, x, y, uiColour);
+        else // No stretching
+        {
+            xVirtual /= xCompress; // Shrink the coordinate by this amount
+            handleY(surface, xVirtual, yVirtual, uiColour);
         }
     }
 
-    void handleY(DrawingSurface* surface, int xPixel, int yVirtual, unsigned int& uiColour) {
-        // Apply scaling for Y
-        int y = yVirtual;
-
-        if (yStretch > 1) { // Stretch in Y direction
-            y *= yStretch; // Scale the coordinate
-
-            // Apply translation
-            y += yOffset;
-
-            // Draw multiple pixels in Y direction
-            for (int i = 0; i < yStretch; i++) {
-                int yPixel = y + i;
-
-                // Check bounds before drawing
-                if (xPixel >= 0 && xPixel < surface->getSurfaceWidth() &&
-                    yPixel >= 0 && yPixel < surface->getSurfaceHeight()) {
-
-                    // If there's a next filter, let it handle the pixel, otherwise draw directly
-                    int xTemp = xPixel;
-                    int yTemp = yPixel;
-                    if ((pNextFilter == nullptr) || pNextFilter->filter(surface, xTemp, yTemp, uiColour, true)) {
-                        surface->rawSetPixel(xPixel, yPixel, uiColour);
-                    }
-                }
+    // Handle drawing in Y dimension
+    void handleY(DrawingSurface* surface, int xVirtual, int yVirtual, unsigned int& uiColour)
+    {
+        if (yStretch > 1) // Stretch it!
+        {
+            yVirtual *= yStretch; // First multiply the point coordinates
+            for (int i = 0; i < yStretch; i++)
+            {
+                // If no following filter, or filter permits it, then color the pixel
+                int yTest = yVirtual + i;
+                if ((pNextFilter == nullptr) || pNextFilter->filter(surface, xVirtual, yTest, uiColour, true))
+                    surface->rawSetPixel(xVirtual, yTest, uiColour);
             }
         }
-        else { // Compress in Y direction
-            y /= yCompress; // Scale the coordinate
-
-            // Apply translation
-            y += yOffset;
-
-            // Draw a single pixel in Y direction
-            // Check bounds before drawing
-            if (xPixel >= 0 && xPixel < surface->getSurfaceWidth() &&
-                y >= 0 && y < surface->getSurfaceHeight()) {
-
-                // If there's a next filter, let it handle the pixel, otherwise draw directly
-                int xTemp = xPixel;
-                int yTemp = y;
-                if ((pNextFilter == nullptr) || pNextFilter->filter(surface, xTemp, yTemp, uiColour, true)) {
-                    surface->rawSetPixel(xPixel, y, uiColour);
-                }
-            }
+        else
+        {
+            yVirtual /= yCompress; // Shrink the coordinate by this amount
+            if ((pNextFilter == nullptr) || pNextFilter->filter(surface, xVirtual, yVirtual, uiColour, true))
+                surface->rawSetPixel(xVirtual, yVirtual, uiColour);
         }
+    }
+};
+
+
+// ScoreBoardTranslation - Translation filter with boundary limits
+class ScoreBoardTranslation : public FilterPoints
+{
+public:
+    // Constructor with pointer to next filter
+    ScoreBoardTranslation(int xModifier = 0, int yModifier = 0, FilterPoints* pNextFilter = nullptr)
+        : xModifier(xModifier), yModifier(yModifier), pNextFilter(pNextFilter),
+        minX(-500), maxX(500), minY(-500), maxY(500) // Default boundaries
+    {
+    }
+
+    // Filter implementation
+    virtual bool filter(DrawingSurface* surface, int& xVirtual, int& yVirtual, unsigned int& uiColour, bool setting) override
+    {
+        xVirtual += xModifier;
+        yVirtual += yModifier;
+        return (pNextFilter == nullptr) || pNextFilter->filter(surface, xVirtual, yVirtual, uiColour, setting);
+    }
+
+    // Convert from virtual to real X position
+    virtual int filterConvertVirtualToRealXPosition(int xVirtual) override
+    {
+        // Apply other filter first if it exists
+        if (pNextFilter)
+            return pNextFilter->filterConvertVirtualToRealXPosition(xVirtual + xModifier);
+        return xVirtual + xModifier;
+    }
+
+    // Convert from virtual to real Y position
+    virtual int filterConvertVirtualToRealYPosition(int yVirtual) override
+    {
+        // Apply other filter first if it exists
+        if (pNextFilter)
+            return pNextFilter->filterConvertVirtualToRealYPosition(yVirtual + yModifier);
+        return yVirtual + yModifier;
+    }
+
+    // Convert from real to virtual X position
+    virtual int filterConvertRealToVirtualXPosition(int x) override
+    {
+        // Apply other filter first if it exists
+        if (pNextFilter)
+            x = pNextFilter->filterConvertRealToVirtualXPosition(x);
+        return x - xModifier;
+    }
+
+    // Convert from real to virtual Y position
+    virtual int filterConvertRealToVirtualYPosition(int y) override
+    {
+        // Apply other filter first if it exists
+        if (pNextFilter)
+            y = pNextFilter->filterConvertRealToVirtualYPosition(y);
+        return y - yModifier;
+    }
+
+    // Set the offset with boundary checks
+    void setOffset(int offsetX, int offsetY)
+    {
+        // Apply boundary limits
+        xModifier = constrainX(offsetX);
+        yModifier = constrainY(offsetY);
+    }
+
+    // Get current X offset
+    int getXOffset() { return xModifier; }
+
+    // Get current Y offset
+    int getYOffset() { return yModifier; }
+
+    // Change the offset with boundary checks
+    void changeOffset(int offsetXIncrement, int offsetYIncrement)
+    {
+        // Apply boundary limits
+        xModifier = constrainX(xModifier + offsetXIncrement);
+        yModifier = constrainY(yModifier + offsetYIncrement);
+    }
+
+    // Set boundaries for translation
+    void setBoundaries(int minXValue, int maxXValue, int minYValue, int maxYValue)
+    {
+        minX = minXValue;
+        maxX = maxXValue;
+        minY = minYValue;
+        maxY = maxYValue;
+
+        // Ensure current offsets are within the new boundaries
+        xModifier = constrainX(xModifier);
+        yModifier = constrainY(yModifier);
+    }
+
+    // Set the boundaries based on screen dimensions and content size
+    void setBoundariesForContent(int screenWidth, int screenHeight, int contentWidth, int contentHeight)
+    {
+        // Calculate maximum translation to keep content visible
+        // Allow movement that keeps at least 1/4 of the content visible on screen
+        int marginX = screenWidth / 4;
+        int marginY = screenHeight / 4;
+
+        minX = -contentWidth + marginX;
+        maxX = screenWidth - marginX;
+        minY = -contentHeight + marginY;
+        maxY = screenHeight - marginY;
+
+        // Ensure current offsets are within the new boundaries
+        xModifier = constrainX(xModifier);
+        yModifier = constrainY(yModifier);
+    }
+
+    // Reset translation to origin
+    void resetTranslation()
+    {
+        xModifier = 0;
+        yModifier = 0;
+    }
+
+private:
+    int xModifier, yModifier;
+    int minX, maxX, minY, maxY;
+    FilterPoints* pNextFilter;
+
+    // Constrain X translation within boundaries
+    int constrainX(int x)
+    {
+        if (x < minX) return minX;
+        if (x > maxX) return maxX;
+        return x;
+    }
+
+    // Constrain Y translation within boundaries
+    int constrainY(int y)
+    {
+        if (y < minY) return minY;
+        if (y > maxY) return maxY;
+        return y;
     }
 };
