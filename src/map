@@ -1,6 +1,6 @@
  CourseworkBase2020
 
- Timestamp is 68165591 (Sat May  3 18:42:41 2025)
+ Timestamp is 681659fa (Sat May  3 19:01:30 2025)
 
  Preferred load address is 00400000
 
@@ -937,11 +937,6 @@
  0001:0001ce60       ?loadGame@gameState@@QAE_NXZ 0041de60 f   gameState.obj
  0001:0001d640       ?saveGame@gameState@@QAEXXZ 0041e640 f   gameState.obj
  0001:0001dbe0       ?cleanTileManager@gameState@@QAEXH@Z 0041ebe0 f   gameState.obj
- 0001:0001dc70       ??0scoreBoardState@@QAE@PAVPsyeb10Engine@@@Z 0041ec70 f   scoreBoardState.obj
- 0001:0001dd40       ?enter@scoreBoardState@@UAEXXZ 0041ed40 f   scoreBoardState.obj
- 0001:0001dd80       ?foreGroundStrings@scoreBoardState@@UAEXXZ 0041ed80 f   scoreBoardState.obj
- 0001:0001df80       ?keyPressed@scoreBoardState@@UAEXH@Z 0041ef80 f   scoreBoardState.obj
- 0001:0001e0a0       ?mouseWheelScrolled@scoreBoardState@@UAEXHHHH@Z 0041f0a0 f   scoreBoardState.obj
  0001:0001e360       ??$?0AAPAV_Facet_base@std@@@?$_Compressed_pair@U?$default_delete@V_Facet_base@std@@@std@@PAV_Facet_base@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@AAPAV_Facet_base@1@@Z 0041f360 f i gameState.obj
  0001:0001e390       ??$?0ABV?$allocator@D@std@@$$V@?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABV?$allocator@D@1@@Z 0041f390 f i gameState.obj
  0001:0001e3c0       ??$?0U?$default_delete@V_Facet_base@std@@@std@@$0A@@?$unique_ptr@V_Facet_base@std@@U?$default_delete@V_Facet_base@std@@@2@@std@@QAE@PAV_Facet_base@1@@Z 0041f3c0 f i gameState.obj
@@ -2482,6 +2477,11 @@
  0001:00085950       __is_c_termination_complete 00486950 f   MSVCRTD:ucrt_stubs.obj
  0001:00085960       __filter_x86_sse2_floating_point_exception 00486960 f   MSVCRTD:x86_exception_filter.obj
  0001:00085960       __filter_x86_sse2_floating_point_exception_default 00486960 f   MSVCRTD:x86_exception_filter.obj
+ 0001:00085aa0       ??0scoreBoardState@@QAE@PAVPsyeb10Engine@@@Z 00486aa0 f   scoreBoardState.obj
+ 0001:00085b70       ?enter@scoreBoardState@@UAEXXZ 00486b70 f   scoreBoardState.obj
+ 0001:00085c50       ?foreGroundStrings@scoreBoardState@@UAEXXZ 00486c50 f   scoreBoardState.obj
+ 0001:00085f00       ?keyPressed@scoreBoardState@@UAEXH@Z 00486f00 f   scoreBoardState.obj
+ 0001:000860b0       ?mouseWheelScrolled@scoreBoardState@@UAEXHHHH@Z 004870b0 f   scoreBoardState.obj
  0002:00000000       ___xc_a                    0048f000     MSVCRTD:initializers.obj
  0002:0000030c       ___xc_z                    0048f30c     MSVCRTD:initializers.obj
  0002:00000410       ___xi_a                    0048f410     MSVCRTD:initializers.obj
@@ -6754,6 +6754,8 @@
  0001:000847a0       ___get_entropy             004857a0 f   MSVCRTD:gs_support.obj
  0001:000855e0       _ParseCommandLine          004865e0 f   SDL2main:SDL_windows_main.obj
  0001:00085740       _main_getcmdline           00486740 f   SDL2main:SDL_windows_main.obj
+ 0001:00086000       $LN18                      00487000     scoreBoardState.obj
+ 0001:00086018       $LN17                      00487018     scoreBoardState.obj
  0001:00088680       __unwindfunclet$??0bouncingLogo@@QAE@HHPAVBaseEngine@@HH@Z$0 00489680 f   bouncingLogo.obj
  0001:00088688       __unwindfunclet$??0bouncingLogo@@QAE@HHPAVBaseEngine@@HH@Z$1 00489688 f   bouncingLogo.obj
  0001:00088693       __unwindfunclet$??0bouncingLogo@@QAE@HHPAVBaseEngine@@HH@Z$2 00489693 f   bouncingLogo.obj
@@ -7627,22 +7629,28 @@
  0002:00009ba8       $SG103625                  00498ba8     Psyeb10TileManager.obj
  0002:00009bac       $SG103626                  00498bac     Psyeb10TileManager.obj
  0002:00009be8       $SG92470                   00498be8     scoreBoardState.obj
- 0002:00009bec       $SG92486                   00498bec     scoreBoardState.obj
- 0002:00009bf8       $SG92487                   00498bf8     scoreBoardState.obj
- 0002:00009c20       $SG92489                   00498c20     scoreBoardState.obj
- 0002:00009c2c       $SG103884                  00498c2c     scoreBoardState.obj
- 0002:00009c40       $SG103885                  00498c40     scoreBoardState.obj
- 0002:00009c48       $SG103886                  00498c48     scoreBoardState.obj
- 0002:00009cb0       $SG103887                  00498cb0     scoreBoardState.obj
- 0002:00009d74       $SG103888                  00498d74     scoreBoardState.obj
- 0002:00009d78       $SG103889                  00498d78     scoreBoardState.obj
- 0002:00009da0       $SG103949                  00498da0     scoreBoardState.obj
- 0002:00009e04       $SG104191                  00498e04     scoreBoardState.obj
- 0002:00009e20       $SG104192                  00498e20     scoreBoardState.obj
- 0002:00009e28       $SG104193                  00498e28     scoreBoardState.obj
- 0002:00009e90       $SG104194                  00498e90     scoreBoardState.obj
- 0002:00009f58       $SG104195                  00498f58     scoreBoardState.obj
- 0002:00009f5c       $SG104196                  00498f5c     scoreBoardState.obj
+ 0002:00009bec       $SG92506                   00498bec     scoreBoardState.obj
+ 0002:00009bf8       $SG92507                   00498bf8     scoreBoardState.obj
+ 0002:00009c20       $SG92508                   00498c20     scoreBoardState.obj
+ 0002:00009c28       $SG92509                   00498c28     scoreBoardState.obj
+ 0002:00009c30       $SG92510                   00498c30     scoreBoardState.obj
+ 0002:00009c38       $SG92511                   00498c38     scoreBoardState.obj
+ 0002:00009c3c       $SG92512                   00498c3c     scoreBoardState.obj
+ 0002:00009c44       $SG92513                   00498c44     scoreBoardState.obj
+ 0002:00009c4c       $SG92514                   00498c4c     scoreBoardState.obj
+ 0002:00009c58       $SG103909                  00498c58     scoreBoardState.obj
+ 0002:00009c6c       $SG103910                  00498c6c     scoreBoardState.obj
+ 0002:00009c70       $SG103911                  00498c70     scoreBoardState.obj
+ 0002:00009cd8       $SG103912                  00498cd8     scoreBoardState.obj
+ 0002:00009d9c       $SG103913                  00498d9c     scoreBoardState.obj
+ 0002:00009da0       $SG103914                  00498da0     scoreBoardState.obj
+ 0002:00009dc8       $SG103974                  00498dc8     scoreBoardState.obj
+ 0002:00009e2c       $SG104216                  00498e2c     scoreBoardState.obj
+ 0002:00009e48       $SG104217                  00498e48     scoreBoardState.obj
+ 0002:00009e50       $SG104218                  00498e50     scoreBoardState.obj
+ 0002:00009eb8       $SG104219                  00498eb8     scoreBoardState.obj
+ 0002:00009f80       $SG104220                  00498f80     scoreBoardState.obj
+ 0002:00009f84       $SG104221                  00498f84     scoreBoardState.obj
  0002:0000a180       $SG103640                  00499180     SimpleImage.obj
  0002:0000a194       $SG103641                  00499194     SimpleImage.obj
  0002:0000a198       $SG103642                  00499198     SimpleImage.obj

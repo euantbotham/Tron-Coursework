@@ -1,5 +1,5 @@
 #include "scoreBoardState.h"
-#include <cstdio> // For sprintf
+
 
 scoreBoardState::scoreBoardState(Psyeb10Engine* engine)
     // Initialize filters - first scaling, then translation that points to scaling
@@ -13,33 +13,70 @@ scoreBoardState::scoreBoardState(Psyeb10Engine* engine)
 void scoreBoardState::enter() 
 {
     // Fill the background with black
-    engine->fillBackground(0x000000);
+    engine->fillBackground(0x000822);
+    // Screen dimensions
+    const int screenWidth = engine->getWindowWidth();
+    const int screenHeight = engine->getWindowHeight();
+
+    // Grid dimensions
+    const int tileWidth = 50;
+    const int tileHeight = 50;
+
+
+    // Draw vertical grid lines
+    for (int x = 0; x <= screenWidth; x += tileWidth) {
+        engine->drawBackgroundThickLine(x, 0, x, screenHeight, 0x000000,2);
+    }
+
+    // Draw horizontal grid lines
+    for (int y = 0; y <= screenHeight; y += tileHeight) {
+        engine->drawBackgroundThickLine(0, y, screenWidth, y, 0x000000,2);
+    }
     // Set the filter chain for drawing
     engine->getForegroundSurface()->setDrawPointsFilter(&m_filterTranslation);
 }
 
-void scoreBoardState::foreGroundStrings() 
+void scoreBoardState::foreGroundStrings()
 {
     // Set the title
-    engine->drawForegroundString(525, 200, "Score Board", engine->tronBlue);
-    engine->drawForegroundString(525, 250, "Press 'ESC' to go back to the main menu", engine->tronBlue);
-    
-    // Text input box - 30 px high 
-    engine->drawForegroundLine(520, 300, 620, 300, engine->tronBlue);
-    engine->drawForegroundLine(520, 300, 520, 330, engine->tronBlue);
-    engine->drawForegroundLine(520, 330, 620, 330, engine->tronBlue);
-    engine->drawForegroundLine(620, 300, 620, 330, engine->tronBlue);
-    
-    // Display the input name
-    if (inputName.length() > 0) {
-        engine->drawForegroundString(525, 310, inputName.c_str(), engine->tronBlue);
+    engine->drawForegroundString(500, 50, "Score Board", engine->tronBlue);
+
+    // Instructions moved to the bottom of the screen
+    engine->drawForegroundString(400, 550, "Press 'ESC' to go back to the main menu", engine->tronBlue);
+
+    // Placeholder scoreboard entries
+    const int startX = 400; // Starting X position for the scoreboard
+    const int startY = 100; // Starting Y position for the scoreboard
+    const int entryHeight = 40; // Vertical spacing between entries
+
+    // Draw column headers
+    engine->drawForegroundString(startX, startY, "Rank", engine->tronBlue);
+    engine->drawForegroundString(startX + 100, startY, "Name", engine->tronBlue);
+    engine->drawForegroundString(startX + 300, startY, "Score", engine->tronBlue);
+
+    // Draw a line under the headers
+    engine->drawForegroundLine(startX, startY + 30, startX + 400, startY + 30, engine->tronBlue);
+
+    // Draw the scoreboard entries
+    for (int i = 0; i < 10; ++i) {
+        // Entry number
+        char entryNumber[4];
+        sprintf(entryNumber, "%d.", i + 1);
+        engine->drawForegroundString(startX, startY + 50 + i * entryHeight, entryNumber, engine->tronBlue);
+
+        // Placeholder name
+        engine->drawForegroundString(startX + 100, startY + 50 + i * entryHeight, "Player", engine->tronBlue);
+
+        // Placeholder score
+        engine->drawForegroundString(startX + 300, startY + 50 + i * entryHeight, "0000", engine->tronBlue);
     }
 
-    // Display zoom information
+    // Display zoom information at the bottom right
     char zoomBuf[128];
     sprintf(zoomBuf, "Zoom: %.2fx", m_filterScaling.getZoomX());
-    engine->drawForegroundString(525, 350, zoomBuf, engine->tronBlue);
+    engine->drawForegroundString(700, 550, zoomBuf, engine->tronBlue);
 }
+
 
 void scoreBoardState::keyPressed(int iKeyCode) 
 {
@@ -58,18 +95,18 @@ void scoreBoardState::keyPressed(int iKeyCode)
         // Handle navigation with arrow keys
         switch (iKeyCode) {
         case SDLK_LEFT:
-            m_filterTranslation.changeOffset(10, 0);
-            break;
-        case SDLK_RIGHT:
             m_filterTranslation.changeOffset(-10, 0);
             break;
-        case SDLK_UP:
-            m_filterTranslation.changeOffset(0, 10);
+        case SDLK_RIGHT:
+            m_filterTranslation.changeOffset(10, 0);
             break;
-        case SDLK_DOWN:
+        case SDLK_UP:
             m_filterTranslation.changeOffset(0, -10);
             break;
-        case SDLK_SPACE: // Space resets position to origin
+        case SDLK_DOWN:
+            m_filterTranslation.changeOffset(0, 10);
+            break;
+        case SDLK_LSHIFT: // Space resets position to origin
             m_filterTranslation.setOffset(0, 0);
             break;
         }
