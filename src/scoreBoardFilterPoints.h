@@ -1,4 +1,3 @@
-
 #pragma once
 #include "FilterPoints.h"
 
@@ -101,16 +100,36 @@ public:
     }
 
     // Stretch in X direction
-    void stretchX() { if (xCompress > 1) --xCompress; else ++xStretch; }
+    void stretchX() {
+        if (xCompress > 1)
+            --xCompress;
+        else
+            ++xStretch;
+    }
 
     // Stretch in Y direction
-    void stretchY() { if (yCompress > 1) --yCompress; else ++yStretch; }
+    void stretchY() {
+        if (yCompress > 1)
+            --yCompress;
+        else
+            ++yStretch;
+    }
 
     // Compress in X direction
-    void compressX() { if (xStretch > 1) --xStretch; else ++xCompress; }
+    void compressX() {
+        if (xStretch > 1)
+            --xStretch;
+        else
+            ++xCompress;
+    }
 
     // Compress in Y direction
-    void compressY() { if (yStretch > 1) --yStretch; else ++yCompress; }
+    void compressY() {
+        if (yStretch > 1)
+            --yStretch;
+        else
+            ++yCompress;
+    }
 
     // Compress both X and Y
     void compress() { compressX(); compressY(); }
@@ -159,6 +178,16 @@ public:
     int getXOffset() { return xOffset; }
     int getYOffset() { return yOffset; }
 
+    // Reset all zoom and translation settings
+    void resetView() {
+        xStretch = 1;
+        yStretch = 1;
+        xCompress = 1;
+        yCompress = 1;
+        xOffset = 0;
+        yOffset = 0;
+    }
+
     // Handle arrow key scrolling
     void handleKeyPress(int keyCode) {
         const int scrollAmount = 10; // Amount to scroll per key press
@@ -175,8 +204,8 @@ public:
         case SDLK_DOWN:
             changeOffset(0, scrollAmount); // Move view down
             break;
-        case SDLK_SPACE:
-            setOffset(0, 0); // Reset translation
+        case SDLK_LSHIFT:
+            resetView(); // Reset translation only
             break;
         }
     }
