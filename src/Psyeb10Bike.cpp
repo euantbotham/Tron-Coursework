@@ -161,3 +161,28 @@ void Psyeb10Bike::resetPos() {
 	lastTileX = -1;
 	lastTileY = -1;
 }
+
+//return the current Image displayed
+SimpleImage Psyeb10Bike::getImage() const {
+	return animationImages[currentFrame];
+}
+
+
+/*
+0- up
+1- right
+2- down
+3- left
+*/
+int Psyeb10Bike::getDirection()  {
+	if (getSpeedX() == 0) {
+		if (getSpeedY() == -1)
+			return 0;
+		else if (getSpeedY() == 1)
+			return 2;
+	}
+	else if (getSpeedX() == 1)
+		return 1;
+	else if (getSpeedX() == -1)
+		return 3;
+}

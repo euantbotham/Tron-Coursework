@@ -28,6 +28,8 @@ public:
 	void changeDirection(int direction);
 	int getBikeValue() const;
     void resetPos();
+	SimpleImage getImage() const;
+	int getDirection() ;
 protected:
     int speedX;
     int speedY;

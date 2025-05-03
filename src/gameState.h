@@ -48,5 +48,13 @@ protected:
 	bool isDisplayed;
 	int currentEnemies;
 	int currentLevel;
+private:
+	bool checkPixelPerfectCollision(SimpleImage& bike1, int x1, int y1, int r1,
+		SimpleImage& bike2, int x2, int y2, int r2);
+	bool checkBikeCollision(SimpleImage& bike1, int x1, int y1, int r1,
+		SimpleImage& bike2, int x2, int y2, int r2);
+	void applyRotation(int& x, int& y, int width, int height, int rotation);
+
 };
+
 

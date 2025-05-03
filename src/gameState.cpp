@@ -6,6 +6,7 @@
 #include "Psyeb10Enemy.h"
 #include "pauseState.h"
 #include "scoreBoardState.h"
+#include "UtilCollisionDetection.h"
 
 void gameState::enter()
 {
@@ -100,6 +101,18 @@ void gameState::mainLoopPreUpdate() {
 	{
 		lastTick = time;
 		gameScore += 10;
+	}
+
+	//Get directions for rotations
+	int b1Dir = mainChar->getDirection();
+	int b2Dir = enemyVec[0]->getDirection();
+	
+
+	if (checkBikeCollision(mainChar->getImage(), mainChar->getXCentre() - mainChar->getDrawWidth()/2, mainChar->getYCentre() - mainChar->getDrawHeight()/2, b1Dir,
+		enemyVec[0]->getImage(), enemyVec[0]->getXCentre() - enemyVec[0]->getDrawWidth()/2, enemyVec[0]->getYCentre() - enemyVec[0]->getDrawHeight()/2 ,b2Dir)) {
+		std::cout << "Collision detected!" << std::endl;
+		reset();
+		// Handle collision (e.g., reduce lives, reset positions, etc.)
 	}
 }
 
@@ -412,4 +425,83 @@ void gameState::cleanTileManager(int code) {
 			// If the tile is the one we want to remove, set it to 0
 			if (tm.getMapValue(i, j) == code)
 				tm.setMapValue(i, j, 0);
+}
+
+
+
+bool gameState::checkPixelPerfectCollision(SimpleImage& bike1, int x1, int y1, int r1,
+	SimpleImage& bike2, int x2, int y2, int r2) {
+	// Get dimensions of the images
+	int w1 = bike1.getWidth();
+	int h1 = bike1.getHeight();
+	int w2 = bike2.getWidth();
+	int h2 = bike2.getHeight();
+
+	// Calculate the intersection rectangle
+	int xStart = std::max(x1, x2);
+	int yStart = std::max(y1, y2);
+	int xEnd = std::min(x1 + w1, x2 + w2);
+	int yEnd = std::min(y1 + h1, y2 + h2);
+
+	// Loop through the intersection region
+	for (int y = yStart; y < yEnd; ++y) {
+		for (int x = xStart; x < xEnd; ++x) {
+			// Get pixel positions relative to each bike
+			int bike1PixelX = x - x1;
+			int bike1PixelY = y - y1;
+			int bike2PixelX = x - x2;
+			int bike2PixelY = y - y2;
+
+			applyRotation(bike1PixelX, bike1PixelY, w1, h1, r1);
+			applyRotation(bike2PixelX, bike2PixelY, w2, h2, r2);
+
+
+			// Check if both pixels are opaque
+			if (bike1.getPixelColour(bike1PixelX, bike1PixelY) != 0x00000000 && // Not transparent
+				bike2.getPixelColour(bike2PixelX, bike2PixelY) != 0x00000000) { // Not transparent
+				return true; // Collision detected
+			}
+		}
+	}
+
+	return false; // No collision
+}
+
+
+bool gameState::checkBikeCollision(SimpleImage& bike1, int x1, int y1, int r1,
+	SimpleImage& bike2, int x2, int y2, int r2) {
+	//std::cout << "Checking collision between bikes" << std::endl;
+	// Bounding box dimensions
+	int w1 = bike1.getWidth();
+	int h1 = bike1.getHeight();
+	int w2 = bike2.getWidth();
+	int h2 = bike2.getHeight();
+
+	// Step 1: Bounding box collision check
+	if (!CollisionDetection::checkRectangles(x1, x1 + w1,y1, y1 + h1, x2, x2 + w2,y2, y2 + h2)) {
+		return false; // No collision
+	}
+	// Step 2: Pixel-perfect collision check
+	return checkPixelPerfectCollision(bike1, x1, y1,r1, bike2, x2, y2, r2);
+}
+
+
+void gameState::applyRotation(int& x, int& y, int width, int height, int rotation) {
+	int tempX = x, tempY = y;
+	switch (rotation) {
+	case 1: // right
+		x = height - 1 - tempY;
+		y = tempX;
+		break;
+	case 2: // down
+		x = width - 1 - tempX;
+		y = height - 1 - tempY;
+		break;
+	case 3: // left
+		x = tempY;
+		y = width - 1 - tempX;
+		break;
+	default: // No rotation
+		break;
+	}
 }

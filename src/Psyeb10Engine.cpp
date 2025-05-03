@@ -13,12 +13,11 @@
 #include "pauseState.h"
 #include "mainMenuState.h"
 #include "gameSetupState.h"
-#include "scoreBoardState.h"
 
 Psyeb10Engine::Psyeb10Engine()
 {
 	// Could potentially make this a smart pointer
-	currentState = new scoreBoardState(this, 200);
+	currentState = new mainMenuState(this);
 	secondState = nullptr;
 }
 
