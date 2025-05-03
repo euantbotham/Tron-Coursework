@@ -5,20 +5,22 @@
 void scoreBoardState::enter() {
 	// Fill the background with black
 	engine->fillBackground(0x000000);
-	// Set the title
-	engine->drawBackgroundString(525, 200, "Score Board", engine->tronBlue);
-	engine->drawBackgroundString(525, 250, "Press 'ESC' to go back to the main menu", engine->tronBlue);
-	
-	//Text input box
-	//30 px high 
-	engine->drawBackgroundLine(520, 300, 620, 300, engine->tronBlue);
-	engine->drawBackgroundLine(520, 300, 520, 330, engine->tronBlue);
-	engine->drawBackgroundLine(520, 330, 620, 330, engine->tronBlue);
-	engine->drawBackgroundLine(620, 300, 620, 330, engine->tronBlue);
 	engine->getForegroundSurface()->setDrawPointsFilter(&filter);
 }
 
 void scoreBoardState::foreGroundStrings() {
+	
+	// Set the title
+	engine->drawForegroundString(525, 200, "Score Board", engine->tronBlue);
+	engine->drawForegroundString(525, 250, "Press 'ESC' to go back to the main menu", engine->tronBlue);
+
+	//Text input box
+	//30 px high 
+	engine->drawForegroundLine(520, 300, 620, 300, engine->tronBlue);
+	engine->drawForegroundLine(520, 300, 520, 330, engine->tronBlue);
+	engine->drawForegroundLine(520, 330, 620, 330, engine->tronBlue);
+	engine->drawForegroundLine(620, 300, 620, 330, engine->tronBlue);
+	
 	
 	if (inputName.length() > 0) {
 		int x = 525;
@@ -51,11 +53,15 @@ void scoreBoardState::keyPressed(int iKeyCode) {
 }
 
 void scoreBoardState::mouseWheelScrolled(int x, int y, int which, int timestamp) {
-	// Get the center of the screen before zoom
-	int iOldCentreX = engine->convertClickedToVirtualPixelXPosition(engine->getWindowWidth() / 2);
-	int iOldCentreY = engine->convertClickedToVirtualPixelYPosition(engine->getWindowHeight() / 2);
+	// Get the center of the screen in virtual coordinates BEFORE zoom
+	int screenCenterX = engine->getWindowWidth() / 2;
+	int screenCenterY = engine->getWindowHeight() / 2;
 
-	// Adjust zoom level based on mouse wheel direction
+	// Store the virtual position of the center before zoom
+	int oldVirtualX = filter.filterConvertRealToVirtualXPosition(screenCenterX);
+	int oldVirtualY = filter.filterConvertRealToVirtualYPosition(screenCenterY);
+
+	// Apply zoom
 	if (y < 0) {
 		filter.compress(); // Zoom out
 	}
@@ -63,13 +69,15 @@ void scoreBoardState::mouseWheelScrolled(int x, int y, int which, int timestamp)
 		filter.stretch(); // Zoom in
 	}
 
-	// Get the center of the screen after zoom
-	int iNewCentreX = engine->convertClickedToVirtualPixelXPosition(engine->getWindowWidth() / 2);
-	int iNewCentreY = engine->convertClickedToVirtualPixelYPosition(engine->getWindowHeight() / 2);
+	// Get the new virtual position of the same screen center point AFTER zoom
+	int newVirtualX = filter.filterConvertRealToVirtualXPosition(screenCenterX);
+	int newVirtualY = filter.filterConvertRealToVirtualYPosition(screenCenterY);
 
-	// Adjust the offset to keep the zoom centered
-	//filter.changeOffset(iNewCentreX - iOldCentreX, iNewCentreY - iOldCentreY);
+	// Calculate the difference and adjust the offset
+	// The direction of the adjustment matters - we need to move in the correct direction
+	filter.changeOffset(newVirtualX - oldVirtualX, newVirtualY - oldVirtualY);
 
-	// Redraw the display
+	// Redraw everything
 	engine->redrawDisplay();
 }
+

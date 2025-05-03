@@ -1,3 +1,4 @@
+
 #pragma once
 #include "FilterPoints.h"
 
@@ -10,42 +11,73 @@ private:
 public:
     // Transform the coordinates based on scaling and translation
     bool filter(DrawingSurface* surface, int& x, int& y, unsigned int& uiColour, bool setting) override {
-        // Apply translation (scrolling)
-        x -= xOffset;
-        y -= yOffset;
-
-        // Apply scaling
+        // Apply scaling first then translation for drawing
         if (setting) {
-            handleXthenY(surface, x, y, uiColour);
+            // Store original coordinates since we'll modify them
+            int originalX = x;
+            int originalY = y;
+
+            // Apply scaling through our helper method instead of modifying x and y directly
+            handleXthenY(surface, originalX, originalY, uiColour);
+            return false; // We already handled the pixel drawing
         }
-        return false; // We already colored the pixel anyway
+
+        // Apply translation and scaling for non-drawing operations
+        if (xStretch > 1) {
+            x = x * xStretch;
+        }
+        else {
+            x = x / xCompress;
+        }
+
+        if (yStretch > 1) {
+            y = y * yStretch;
+        }
+        else {
+            y = y / yCompress;
+        }
+
+        // Apply translation after scaling
+        x += xOffset;
+        y += yOffset;
+
+        return true;
     }
 
     // Convert virtual to real X position
     int filterConvertVirtualToRealXPosition(int xVirtual) override {
+        // Apply scaling
         if (xStretch > 1) {
-            xVirtual *= xStretch;
+            xVirtual = xVirtual * xStretch;
         }
         else {
-            xVirtual /= xCompress;
+            xVirtual = xVirtual / xCompress;
         }
+
+        // Apply translation
         return xVirtual + xOffset;
     }
 
     // Convert virtual to real Y position
     int filterConvertVirtualToRealYPosition(int yVirtual) override {
+        // Apply scaling
         if (yStretch > 1) {
-            yVirtual *= yStretch;
+            yVirtual = yVirtual * yStretch;
         }
         else {
-            yVirtual /= yCompress;
+            yVirtual = yVirtual / yCompress;
         }
+
+        // Apply translation
         return yVirtual + yOffset;
     }
 
     // Convert real to virtual X position
     int filterConvertRealToVirtualXPosition(int xReal) override {
-        xReal -= xOffset;
+        // Remove translation first
+        xReal = xReal - xOffset;
+
+        // Then remove scaling
         if (xStretch > 1) {
             return xReal / xStretch;
         }
@@ -56,7 +88,10 @@ public:
 
     // Convert real to virtual Y position
     int filterConvertRealToVirtualYPosition(int yReal) override {
-        yReal -= yOffset;
+        // Remove translation first
+        yReal = yReal - yOffset;
+
+        // Then remove scaling
         if (yStretch > 1) {
             return yReal / yStretch;
         }
@@ -120,21 +155,25 @@ public:
         yOffset = y;
     }
 
+    // Get current offsets
+    int getXOffset() { return xOffset; }
+    int getYOffset() { return yOffset; }
+
     // Handle arrow key scrolling
     void handleKeyPress(int keyCode) {
         const int scrollAmount = 10; // Amount to scroll per key press
         switch (keyCode) {
         case SDLK_LEFT:
-            changeOffset(scrollAmount, 0); // Scroll right
+            changeOffset(-scrollAmount, 0); // Move view left
             break;
         case SDLK_RIGHT:
-            changeOffset(-scrollAmount, 0); // Scroll left
+            changeOffset(scrollAmount, 0); // Move view right
             break;
         case SDLK_UP:
-            changeOffset(0, scrollAmount); // Scroll down
+            changeOffset(0, -scrollAmount); // Move view up
             break;
         case SDLK_DOWN:
-            changeOffset(0, -scrollAmount); // Scroll up
+            changeOffset(0, scrollAmount); // Move view down
             break;
         case SDLK_SPACE:
             setOffset(0, 0); // Reset translation
@@ -144,46 +183,46 @@ public:
 
 private:
     void handleXthenY(DrawingSurface* surface, int xVirtual, int yVirtual, unsigned int& uiColour) {
+        // Apply translation first
+        int translatedX = xVirtual + xOffset;
+        int translatedY = yVirtual + yOffset;
+
         if (xStretch > 1) { // Stretch it!
-            xVirtual *= xStretch; // First multiply the point coordinates
+            int baseX = translatedX * xStretch;
             for (int i = 0; i < xStretch; i++) {
-                int xTest = xVirtual + i;
-                // Check bounds before calling handleY
-                if (xTest >= 0 && xTest < surface->getSurfaceWidth()) {
-                    handleY(surface, xTest, yVirtual, uiColour);
+                int xPixel = baseX + i;
+                // Check bounds before proceeding
+                if (xPixel >= 0 && xPixel < surface->getSurfaceWidth()) {
+                    handleY(surface, xPixel, translatedY, uiColour);
                 }
             }
         }
-        else { // Shrinking, so just convert the pixel values and skip some
-            xVirtual /= xCompress; // Shrink the coordinate by this amount
-            // Check bounds before calling handleY
-            if (xVirtual >= 0 && xVirtual < surface->getSurfaceWidth()) {
-                handleY(surface, xVirtual, yVirtual, uiColour);
+        else { // Shrinking
+            int xPixel = translatedX / xCompress;
+            // Check bounds before proceeding
+            if (xPixel >= 0 && xPixel < surface->getSurfaceWidth()) {
+                handleY(surface, xPixel, translatedY, uiColour);
             }
         }
     }
 
-
-    void handleY(DrawingSurface* surface, int xVirtual, int yVirtual, unsigned int& uiColour) {
+    void handleY(DrawingSurface* surface, int xPixel, int yVirtual, unsigned int& uiColour) {
         if (yStretch > 1) { // Stretch it!
-            yVirtual *= yStretch; // First multiply the point coordinates
+            int baseY = yVirtual * yStretch;
             for (int i = 0; i < yStretch; i++) {
-                int yTest = yVirtual + i;
+                int yPixel = baseY + i;
                 // Check bounds before setting the pixel
-                if (xVirtual >= 0 && xVirtual < surface->getSurfaceWidth() &&
-                    yTest >= 0 && yTest < surface->getSurfaceHeight()) {
-                    surface->rawSetPixel(xVirtual, yTest, uiColour); // Color this pixel now
+                if (yPixel >= 0 && yPixel < surface->getSurfaceHeight()) {
+                    surface->rawSetPixel(xPixel, yPixel, uiColour);
                 }
             }
         }
-        else {
-            yVirtual /= yCompress; // Shrink the coordinate by this amount
+        else { // Shrinking
+            int yPixel = yVirtual / yCompress;
             // Check bounds before setting the pixel
-            if (xVirtual >= 0 && xVirtual < surface->getSurfaceWidth() &&
-                yVirtual >= 0 && yVirtual < surface->getSurfaceHeight()) {
-                surface->rawSetPixel(xVirtual, yVirtual, uiColour); // Color this pixel now
+            if (yPixel >= 0 && yPixel < surface->getSurfaceHeight()) {
+                surface->rawSetPixel(xPixel, yPixel, uiColour);
             }
         }
     }
-
 };

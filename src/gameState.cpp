@@ -190,7 +190,7 @@ void gameState::recieveUpdate(int code) {
 				drawBackground();
 				tm.drawAllTiles(engine, engine->getBackgroundSurface());
 				engine->unlockBackgroundForDrawing();
-				//engine->redrawDisplay();
+				engine->redrawDisplay();
 
 				std::cout << "Enemy " << code << " destroyed!" << std::endl;
 				break;

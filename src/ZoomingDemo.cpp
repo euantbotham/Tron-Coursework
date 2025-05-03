@@ -133,7 +133,7 @@ void ZoomingDemo::virtMouseWheel(int x, int y, int which, int timestamp)
 	int iNewCentreY = convertClickedToVirtualPixelYPosition(this->getWindowHeight() / 2);
 	
 	// Apply a translation to offset so it appears to have zoomed on the centre by moving the old centre back to the centre of the screen
-	//m_filterTranslation.changeOffset(iNewCentreX - iOldCentreX, iNewCentreY - iOldCentreY);
+	m_filterTranslation.changeOffset(iNewCentreX - iOldCentreX, iNewCentreY - iOldCentreY);
 	// Uncomment the above line to zoom in on centre rather than top left
 
 	// Redraw the background
