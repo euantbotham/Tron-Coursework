@@ -1,13 +1,31 @@
 #include "scoreBoardState.h"
+#include <fstream>
+#include <sstream>
+#include <string>
 
-
-scoreBoardState::scoreBoardState(Psyeb10Engine* engine)
+scoreBoardState::scoreBoardState(Psyeb10Engine* engine, int score)
     // Initialize filters - first scaling, then translation that points to scaling
     : m_filterScaling(0, 0, engine), 
       m_filterTranslation(0, 0, &m_filterScaling)
 {
     this->engine = engine;
     inputName = "";
+
+	this->playerscore = score;
+	scoreBoardEntries.resize(10); // Placeholder for 10 entries
+	for (int i = 0; i < 10; ++i) {
+		scoreBoardEntries[i] = "Player";
+	}
+
+	scoreBoardScores.resize(10); // Placeholder for 10 scores
+	for (int i = 0; i < 10; ++i) {
+		scoreBoardScores[i] = 0;
+	}
+
+    // initialise outside the top 10
+    playerPos = 11;
+	// Load the scores from the file
+	loadScore();
 }
 
 void scoreBoardState::enter() 
@@ -59,22 +77,22 @@ void scoreBoardState::foreGroundStrings()
 
     // Draw the scoreboard entries
     for (int i = 0; i < 10; ++i) {
+        
+		// Highlight the player's entry
+        unsigned int colour = i == playerPos ? 0xFFA500 : engine->tronBlue;
         // Entry number
         char entryNumber[4];
         sprintf(entryNumber, "%d.", i + 1);
-        engine->drawForegroundString(startX, startY + 50 + i * entryHeight, entryNumber, engine->tronBlue);
+        engine->drawForegroundString(startX, startY + 50 + i * entryHeight, entryNumber, colour);
 
         // Placeholder name
-        engine->drawForegroundString(startX + 100, startY + 50 + i * entryHeight, "Player", engine->tronBlue);
+        engine->drawForegroundString(startX + 100, startY + 50 + i * entryHeight, scoreBoardEntries[i].empty() ? "Player" : scoreBoardEntries[i].c_str(), colour);
 
-        // Placeholder score
-        engine->drawForegroundString(startX + 300, startY + 50 + i * entryHeight, "0000", engine->tronBlue);
+        // Player score (formatted to 4 characters with leading zeros)
+        char formattedScore[5];
+        sprintf(formattedScore, "%04d", scoreBoardScores[i]);
+        engine->drawForegroundString(startX + 300, startY + 50 + i * entryHeight, formattedScore, colour);
     }
-
-    // Display zoom information at the bottom right
-    char zoomBuf[128];
-    sprintf(zoomBuf, "Zoom: %.2fx", m_filterScaling.getZoomX());
-    engine->drawForegroundString(700, 550, zoomBuf, engine->tronBlue);
 }
 
 
@@ -107,6 +125,7 @@ void scoreBoardState::keyPressed(int iKeyCode)
             m_filterTranslation.changeOffset(0, 10);
             break;
         case SDLK_LSHIFT: // Space resets position to origin
+			m_filterScaling.resetZoom();
             m_filterTranslation.setOffset(0, 0);
             break;
         }
@@ -137,4 +156,56 @@ void scoreBoardState::mouseWheelScrolled(int x, int y, int which, int timestamp)
     
     // Redraw everything
     engine->redrawDisplay();
+}
+
+
+void scoreBoardState::loadScore()
+{
+    bool playerDisplayed = false;
+    std::ifstream scoreFile("scores.txt");
+
+    if (!scoreFile.is_open()) {
+        std::cerr << "Error: Could not open scores.txt for reading!" << std::endl;
+        return;
+    }
+
+    // Read the scores and names from the file
+    std::string line;
+    int count = 0;
+
+    while (std::getline(scoreFile, line) && count < 10) {
+        std::istringstream lineStream(line);
+        std::string name;
+        int score;
+
+        // Attempt to read name and score from the line
+        if (!(lineStream >> name >> score)) {
+            std::cerr << "Warning: Malformed line in scores.txt: " << line << std::endl;
+            continue; // Skip malformed lines
+        }
+
+        // If the player's score is higher and hasn't been displayed yet
+        if (playerscore > score && !playerDisplayed) {
+            scoreBoardEntries[count] = inputName.empty() ? "Test" : inputName; // Use "Player" if no name is entered
+            scoreBoardScores[count] = playerscore;
+            playerDisplayed = true;
+			playerPos = count; // Store the player's position
+            count++;
+        }
+
+        // Ensure we don't exceed the bounds of the scoreboard
+        if (count < 10) {
+            scoreBoardEntries[count] = name;
+            scoreBoardScores[count] = score;
+            count++;
+        }
+    }
+
+    // If the player's score wasn't added and there's still space, add it at the end
+    if (!playerDisplayed && count < 10) {
+        scoreBoardEntries[count] = inputName;
+        scoreBoardScores[count] = playerscore;
+		playerPos = count; // Store the player's position
+    }
+    scoreFile.close();
 }

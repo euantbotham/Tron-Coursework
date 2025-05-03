@@ -18,7 +18,7 @@
 Psyeb10Engine::Psyeb10Engine()
 {
 	// Could potentially make this a smart pointer
-	currentState = new scoreBoardState(this);
+	currentState = new scoreBoardState(this, 200);
 	secondState = nullptr;
 }
 

@@ -7,14 +7,19 @@
 class scoreBoardState : public Psyeb10States
 {
 public:
-    scoreBoardState(Psyeb10Engine* engine);
+    scoreBoardState(Psyeb10Engine* engine, int score);
     void enter() override;
     void foreGroundStrings() override;
     void keyPressed(int iKeyCode) override;
     void mouseWheelScrolled(int x, int y, int which, int timestamp) override;
+    void loadScore();
 
 private:
     std::string inputName;
     ScoreBoardScaling m_filterScaling;           // For zooming with limits
     ScoreBoardTranslation m_filterTranslation;   // For panning with boundaries
+	std::vector<std::string> scoreBoardEntries; // Placeholder for actual scoreboard entries
+	std::vector<int> scoreBoardScores; // Placeholder for actual scores
+    int playerscore;
+    int playerPos;
 };
