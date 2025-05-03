@@ -2,17 +2,12 @@
 #include <iostream>
 #include "scoreBoardFilterPoints.h"
 
+
 void scoreBoardState::enter() {
     // Fill the background with black
     engine->fillBackground(0x000000);
-    engine->getForegroundSurface()->setDrawPointsFilter(&filter);
-
-    // Display instructions when entering the state
-    std::cout << "Scoreboard Navigation:" << std::endl;
-    std::cout << "  Arrow keys: Move the view" << std::endl;
-    std::cout << "  Mouse wheel: Zoom in/out centered on mouse position" << std::endl;
-    std::cout << "  Space: Reset position" << std::endl;
-    std::cout << "  R key: Reset zoom and position" << std::endl;
+    engine->getForegroundSurface()->setDrawPointsFilter(&m_filterScaling);
+	engine->getBackgroundSurface()->setDrawPointsFilter(&m_filterTranslation);
 }
 
 void scoreBoardState::foreGroundStrings() {
@@ -37,7 +32,7 @@ void scoreBoardState::foreGroundStrings() {
 
     // Display current zoom level
     char zoomText[50];
-    sprintf(zoomText, "Zoom: %.1fx", filter.getZoomX());
+    sprintf(zoomText, "Zoom: %.1fx", m_filterScaling.getZoomX());
     engine->drawForegroundString(525, 350, zoomText, engine->tronBlue);
 }
 
@@ -57,37 +52,31 @@ void scoreBoardState::keyPressed(int iKeyCode) {
         iKeyCode == SDLK_UP || iKeyCode == SDLK_DOWN ||
         iKeyCode == SDLK_LSHIFT) {
         // Handle scrolling with arrow keys and reset with 'r'
-        filter.handleKeyPress(iKeyCode);
+        //filter.handleKeyPress(iKeyCode);
     }
 
     engine->redrawDisplay();
 }
 
 void scoreBoardState::mouseWheelScrolled(int x, int y, int which, int timestamp) {
-	// Get the center of the screen in virtual coordinates BEFORE zoom
-	int screenCenterX = engine->getWindowWidth() / 2;
-	int screenCenterY = engine->getWindowHeight() / 2;
+    // We grab the position of the centre of the screen before the zoom
+    int iOldCentreX = engine->convertClickedToVirtualPixelXPosition(engine->getWindowWidth() / 2);
+    int iOldCentreY = engine->convertClickedToVirtualPixelYPosition(engine->getWindowHeight() / 2);
 
-    // Convert mouse screen coordinates to virtual coordinates before zoom
-    int oldVirtualX = filter.filterConvertRealToVirtualXPosition(screenCenterX);
-    int oldVirtualY = filter.filterConvertRealToVirtualYPosition(screenCenterY);
+    if (y < 0)
+        m_filterScaling.compress();
+    else if (y > 0)
+        m_filterScaling.stretch();
 
-	// Apply zoom
-    if (y < 0) {
-        filter.compress(); // Zoom out
-    }
-    else if (y > 0) {
-        filter.stretch(); // Zoom in
-    }
+    // Now we grab the position after the zoom
+    int iNewCentreX = engine->convertClickedToVirtualPixelXPosition(engine->getWindowWidth() / 2);
+    int iNewCentreY = engine->convertClickedToVirtualPixelYPosition(engine->getWindowHeight() / 2);
 
-	// Get the new virtual position of the same screen center point AFTER zoom
-	int newVirtualX = filter.filterConvertRealToVirtualXPosition(screenCenterX);
-	int newVirtualY = filter.filterConvertRealToVirtualYPosition(screenCenterY);
 
-	// Calculate the difference and adjust the offset
-	// The direction of the adjustment matters - we need to move in the correct direction
-	filter.changeOffset(newVirtualX - oldVirtualX, newVirtualY - oldVirtualY);
+    // Apply a translation to offset so it appears to have zoomed on the centre by moving the old centre back to the centre of the screen
+    m_filterTranslation.changeOffset(iNewCentreX - iOldCentreX, iNewCentreY - iOldCentreY);
+    // Uncomment the above line to zoom in on centre rather than top left
 
-    // Redraw everything
-    engine->redrawDisplay();
+    // Redraw the background
+    engine->redrawDisplay(); // Force total redraw
 }

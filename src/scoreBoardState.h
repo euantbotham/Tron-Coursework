@@ -3,11 +3,12 @@
 #include "Psyeb10States.h"
 #include <string>
 #include "scoreBoardFilterPoints.h"
+#include "ExampleFilterPointClasses.h"
 class scoreBoardState :
     public Psyeb10States
 {
 public:
-	scoreBoardState(Psyeb10Engine* engine) {
+	scoreBoardState(Psyeb10Engine* engine) : m_filterScaling(0, 0, engine), m_filterTranslation(0, 0, &m_filterScaling) {
 		this->engine = engine;
 		inputName = "";
 	}
@@ -18,7 +19,8 @@ public:
 
 private:
 	std::string inputName;
-	scoreBoardFilterPoints filter;
+	FilterPointsScaling m_filterScaling;
+	FilterPointsTranslation m_filterTranslation;
 
 };
 
