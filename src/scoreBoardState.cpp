@@ -57,9 +57,9 @@ void scoreBoardState::mouseWheelScrolled(int x, int y, int which, int timestamp)
 	int screenCenterX = engine->getWindowWidth() / 2;
 	int screenCenterY = engine->getWindowHeight() / 2;
 
-	// Store the virtual position of the center before zoom
-	int oldVirtualX = filter.filterConvertRealToVirtualXPosition(screenCenterX);
-	int oldVirtualY = filter.filterConvertRealToVirtualYPosition(screenCenterY);
+    // Convert mouse screen coordinates to virtual coordinates before zoom
+    int virtualX = filter.filterConvertRealToVirtualXPosition(mouseX);
+    int virtualY = filter.filterConvertRealToVirtualYPosition(mouseY);
 
 	// Apply zoom
 	if (y < 0) {
