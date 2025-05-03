@@ -5,7 +5,7 @@
 #include <fstream>
 #include "Psyeb10Enemy.h"
 #include "pauseState.h"
-
+#include "scoreBoardState.h"
 
 void gameState::enter()
 {
@@ -53,6 +53,11 @@ void gameState::initObjects()
 
 void gameState::reset()
 {
+	if (mainChar->getLives() <= 0) {
+		engine->setState(new scoreBoardState(engine, gameScore), false, true);
+		return;
+	}
+	
 	engine->lockBackgroundForDrawing();
 	enter();
 	engine->unlockBackgroundForDrawing();
@@ -224,7 +229,8 @@ void gameState::recieveUpdate(int code) {
 		}
 		
 		else {
-			engine->setExitWithCode(0);
+			engine->setState(new scoreBoardState(engine, gameScore),false, true);
+			return;
 		}
 		currentLevel++;
 	}

@@ -129,10 +129,13 @@ void scoreBoardState::keyPressed(int iKeyCode)
 	else if (iKeyCode == SDLK_ESCAPE) {
 		std::cout << "ESC key pressed" << std::endl;
         // only allow leaving if the name is saved
-        if (nameSaved) 
-			// Reset to nullptr to remove the filter
-            //engine->getForegroundSurface()->setDrawPointsFilter(nullptr);
+        if (nameSaved) {
+            // Reset to nullptr to remove the filter
+            engine->getForegroundSurface()->setDrawPointsFilter(nullptr);
             engine->setState(new mainMenuState(engine), false, true);
+            return;
+        }
+			
 	}
     else {
         // Handle navigation with arrow keys

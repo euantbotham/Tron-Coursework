@@ -1,6 +1,6 @@
  CourseworkBase2020
 
- Timestamp is 681671bc (Sat May  3 20:42:52 2025)
+ Timestamp is 6816805b (Sat May  3 21:45:15 2025)
 
  Preferred load address is 00400000
 
@@ -75,7 +75,7 @@
  0000:00000000       ___volatile_metadata       00000000     <absolute>
  0000:00000000       ___x64_code_ranges_to_entry_points 00000000     <absolute>
  0000:00000000       ___x64_code_ranges_to_entry_points_count 00000000     <absolute>
- 0000:000000e4       ___safe_se_handler_count   000000e4     <absolute>
+ 0000:000000e5       ___safe_se_handler_count   000000e5     <absolute>
  0000:00000100       ___guard_flags             00000100     <absolute>
  0000:00000000       ___ImageBase               00400000     <linker-defined>
  0001:00007a50       ??0bouncingLogo@@QAE@HHPAVBaseEngine@@HH@Z 00408a50 f   bouncingLogo.obj
@@ -968,21 +968,6 @@
  0001:0001c020       ?size@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@QBEIXZ 0041d020 f i gameSetupState.obj
  0001:0001c050       ?unlockBackgroundForDrawing@BaseEngine@@QAEXXZ 0041d050 f i gameSetupState.obj
  0001:0001c070       _sinf                      0041d070 f i gameSetupState.obj
- 0001:0001c0a0       ?enter@gameState@@UAEXXZ   0041d0a0 f   gameState.obj
- 0001:0001c140       ?foreGroundStrings@gameState@@UAEXXZ 0041d140 f   gameState.obj
- 0001:0001c2b0       ?initObjects@gameState@@UAEXXZ 0041d2b0 f   gameState.obj
- 0001:0001c420       ?reset@gameState@@UAEXXZ   0041d420 f   gameState.obj
- 0001:0001c4d0       ?mouseDown@gameState@@UAEXHHH@Z 0041d4d0 f   gameState.obj
- 0001:0001c600       ?mainLoopPreUpdate@gameState@@UAEXXZ 0041d600 f   gameState.obj
- 0001:0001c650       ?reEntry@gameState@@UAEXXZ 0041d650 f   gameState.obj
- 0001:0001c720       ?drawBackground@gameState@@QAEXXZ 0041d720 f   gameState.obj
- 0001:0001c8f0       ?recieveUpdate@gameState@@UAEXH@Z 0041d8f0 f   gameState.obj
- 0001:0001cd50       ??1gameState@@UAE@XZ       0041dd50 f   gameState.obj
- 0001:0001ce20       ?getmainChar@gameState@@QBEPAVMainCharacter@@XZ 0041de20 f   gameState.obj
- 0001:0001ce40       ?getGameScore@gameState@@QBEHXZ 0041de40 f   gameState.obj
- 0001:0001ce60       ?loadGame@gameState@@QAE_NXZ 0041de60 f   gameState.obj
- 0001:0001d640       ?saveGame@gameState@@QAEXXZ 0041e640 f   gameState.obj
- 0001:0001dbe0       ?cleanTileManager@gameState@@QAEXH@Z 0041ebe0 f   gameState.obj
  0001:0001dc70       ?compressY@ScoreBoardScaling@@QAEXXZ 0041ec70 f i scoreBoardState.obj
  0001:0001dcd0       ?constrainY@ScoreBoardTranslation@@AAEHH@Z 0041ecd0 f i scoreBoardState.obj
  0001:0001dd60       ?empty@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE_NXZ 0041ed60 f i scoreBoardState.obj
@@ -2562,9 +2547,24 @@
  0001:00085c40       ?enter@scoreBoardState@@UAEXXZ 00486c40 f   scoreBoardState.obj
  0001:00085d20       ?foreGroundStrings@scoreBoardState@@UAEXXZ 00486d20 f   scoreBoardState.obj
  0001:00085fc0       ?keyPressed@scoreBoardState@@UAEXH@Z 00486fc0 f   scoreBoardState.obj
- 0001:00086350       ?mouseWheelScrolled@scoreBoardState@@UAEXHHHH@Z 00487350 f   scoreBoardState.obj
- 0001:00086440       ?loadScore@scoreBoardState@@AAEXXZ 00487440 f   scoreBoardState.obj
- 0001:00086750       ?saveScore@scoreBoardState@@AAEXXZ 00487750 f   scoreBoardState.obj
+ 0001:00086360       ?mouseWheelScrolled@scoreBoardState@@UAEXHHHH@Z 00487360 f   scoreBoardState.obj
+ 0001:00086450       ?loadScore@scoreBoardState@@AAEXXZ 00487450 f   scoreBoardState.obj
+ 0001:00086760       ?saveScore@scoreBoardState@@AAEXXZ 00487760 f   scoreBoardState.obj
+ 0001:000868c0       ?enter@gameState@@UAEXXZ   004878c0 f   gameState.obj
+ 0001:00086960       ?foreGroundStrings@gameState@@UAEXXZ 00487960 f   gameState.obj
+ 0001:00086ad0       ?initObjects@gameState@@UAEXXZ 00487ad0 f   gameState.obj
+ 0001:00086c40       ?reset@gameState@@UAEXXZ   00487c40 f   gameState.obj
+ 0001:00086d90       ?mouseDown@gameState@@UAEXHHH@Z 00487d90 f   gameState.obj
+ 0001:00086ec0       ?mainLoopPreUpdate@gameState@@UAEXXZ 00487ec0 f   gameState.obj
+ 0001:00086f10       ?reEntry@gameState@@UAEXXZ 00487f10 f   gameState.obj
+ 0001:00086fe0       ?drawBackground@gameState@@QAEXXZ 00487fe0 f   gameState.obj
+ 0001:000871b0       ?recieveUpdate@gameState@@UAEXH@Z 004881b0 f   gameState.obj
+ 0001:00087670       ??1gameState@@UAE@XZ       00488670 f   gameState.obj
+ 0001:00087740       ?getmainChar@gameState@@QBEPAVMainCharacter@@XZ 00488740 f   gameState.obj
+ 0001:00087760       ?getGameScore@gameState@@QBEHXZ 00488760 f   gameState.obj
+ 0001:00087780       ?loadGame@gameState@@QAE_NXZ 00488780 f   gameState.obj
+ 0001:00087f60       ?saveGame@gameState@@QAEXXZ 00488f60 f   gameState.obj
+ 0001:00088500       ?cleanTileManager@gameState@@QAEXH@Z 00489500 f   gameState.obj
  0002:00000000       ___xc_a                    0048f000     MSVCRTD:initializers.obj
  0002:0000030c       ___xc_z                    0048f30c     MSVCRTD:initializers.obj
  0002:00000410       ___xi_a                    0048f410     MSVCRTD:initializers.obj
@@ -5801,14 +5801,15 @@
  0002:fff7103c       __ehfuncinfo$??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@$$QAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@D@Z 0040003c     scoreBoardState.obj
  0000:00000040       _volmd                     00400040     Psyeb10Enemy.obj
  0002:fff71044       __ehfuncinfo$??$?5DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z 00400044     scoreBoardState.obj
+ 0000:00000048       _volmd                     00400048     gameState.obj
  0000:00000048       _volmd                     00400048     scoreBoardState.obj
- 0000:0000004c       _volmd                     0040004c     gameState.obj
  0000:00000050       _volmd                     00400050     Psyeb10Enemy.obj
+ 0000:00000058       _volmd                     00400058     gameState.obj
  0000:00000058       _volmd                     00400058     scoreBoardState.obj
- 0000:0000005c       _volmd                     0040005c     gameState.obj
  0000:00000060       _volmd                     00400060     Psyeb10Enemy.obj
- 0000:0000006c       _volmd                     0040006c     gameState.obj
+ 0000:00000068       _volmd                     00400068     gameState.obj
  0000:00000070       _volmd                     00400070     Psyeb10Enemy.obj
+ 0000:00000078       _volmd                     00400078     gameState.obj
  0001:fffff16f       __catch$??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@$$QAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@D@Z$0 0040016f f   scoreBoardState.obj
  0001:fffff1df       __catch$??$?5DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z$0 004001df f   scoreBoardState.obj
  0001:fffff229       __catch$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z$0 00400229 f   DraggingDemo.obj
@@ -6966,8 +6967,8 @@
  0001:000847a0       ___get_entropy             004857a0 f   MSVCRTD:gs_support.obj
  0001:000855e0       _ParseCommandLine          004865e0 f   SDL2main:SDL_windows_main.obj
  0001:00085740       _main_getcmdline           00486740 f   SDL2main:SDL_windows_main.obj
- 0001:000862a4       $LN34                      004872a4     scoreBoardState.obj
- 0001:000862bc       $LN33                      004872bc     scoreBoardState.obj
+ 0001:000862a8       $LN34                      004872a8     scoreBoardState.obj
+ 0001:000862c0       $LN33                      004872c0     scoreBoardState.obj
  0001:00088680       __unwindfunclet$??0bouncingLogo@@QAE@HHPAVBaseEngine@@HH@Z$0 00489680 f   bouncingLogo.obj
  0001:00088688       __unwindfunclet$??0bouncingLogo@@QAE@HHPAVBaseEngine@@HH@Z$1 00489688 f   bouncingLogo.obj
  0001:00088693       __unwindfunclet$??0bouncingLogo@@QAE@HHPAVBaseEngine@@HH@Z$2 00489693 f   bouncingLogo.obj
@@ -7105,35 +7106,6 @@
  0001:00089550       __ehhandler$??0?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAE@XZ 0048a550 f   gameSetupState.obj
  0001:00089580       __unwindfunclet$?_Orphan_range_locked@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEXPAPAVDrawingSurface@@0@Z$0 0048a580 f   gameSetupState.obj
  0001:0008958e       __ehhandler$?_Orphan_range_locked@?$vector@PAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@ABEXPAPAVDrawingSurface@@0@Z 0048a58e f   gameSetupState.obj
- 0001:000895c0       __unwindfunclet$?foreGroundStrings@gameState@@UAEXXZ$0 0048a5c0 f   gameState.obj
- 0001:000895cb       __unwindfunclet$?foreGroundStrings@gameState@@UAEXXZ$1 0048a5cb f   gameState.obj
- 0001:000895d6       __unwindfunclet$?foreGroundStrings@gameState@@UAEXXZ$2 0048a5d6 f   gameState.obj
- 0001:000895e3       __ehhandler$?foreGroundStrings@gameState@@UAEXXZ 0048a5e3 f   gameState.obj
- 0001:0008960d       __unwindfunclet$?initObjects@gameState@@UAEXXZ$0 0048a60d f   gameState.obj
- 0001:0008961c       __unwindfunclet$?initObjects@gameState@@UAEXXZ$1 0048a61c f   gameState.obj
- 0001:00089630       __ehhandler$?initObjects@gameState@@UAEXXZ 0048a630 f   gameState.obj
- 0001:0008964d       __unwindfunclet$?mouseDown@gameState@@UAEXHHH@Z$0 0048a64d f   gameState.obj
- 0001:00089661       __ehhandler$?mouseDown@gameState@@UAEXHHH@Z 0048a661 f   gameState.obj
- 0001:0008967e       __unwindfunclet$?drawBackground@gameState@@QAEXXZ$1 0048a67e f   gameState.obj
- 0001:0008968b       __ehhandler$?drawBackground@gameState@@QAEXXZ 0048a68b f   gameState.obj
- 0001:000896a8       __unwindfunclet$?recieveUpdate@gameState@@UAEXH@Z$0 0048a6a8 f   gameState.obj
- 0001:000896b3       __unwindfunclet$?recieveUpdate@gameState@@UAEXH@Z$1 0048a6b3 f   gameState.obj
- 0001:000896bb       __unwindfunclet$?recieveUpdate@gameState@@UAEXH@Z$7 0048a6bb f   gameState.obj
- 0001:000896ca       __unwindfunclet$?recieveUpdate@gameState@@UAEXH@Z$8 0048a6ca f   gameState.obj
- 0001:000896d9       __unwindfunclet$?recieveUpdate@gameState@@UAEXH@Z$9 0048a6d9 f   gameState.obj
- 0001:000896ed       __ehhandler$?recieveUpdate@gameState@@UAEXH@Z 0048a6ed f   gameState.obj
- 0001:0008970d       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$0 0048a70d f   gameState.obj
- 0001:00089718       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$1 0048a718 f   gameState.obj
- 0001:00089720       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$2 0048a720 f   gameState.obj
- 0001:0008972b       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$3 0048a72b f   gameState.obj
- 0001:00089733       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$4 0048a733 f   gameState.obj
- 0001:0008973e       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$5 0048a73e f   gameState.obj
- 0001:00089746       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$6 0048a746 f   gameState.obj
- 0001:00089758       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$7 0048a758 f   gameState.obj
- 0001:0008976f       __ehhandler$?loadGame@gameState@@QAE_NXZ 0048a76f f   gameState.obj
- 0001:00089799       __unwindfunclet$?saveGame@gameState@@QAEXXZ$0 0048a799 f   gameState.obj
- 0001:000897a4       __unwindfunclet$?saveGame@gameState@@QAEXXZ$1 0048a7a4 f   gameState.obj
- 0001:000897b4       __ehhandler$?saveGame@gameState@@QAEXXZ 0048a7b4 f   gameState.obj
  0001:000897e0       __unwindfunclet$??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@AAEXIABU_Value_init_tag@1@@Z$0 0048a7e0 f   scoreBoardState.obj
  0001:000897ed       __ehhandler$??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@AAEXIABU_Value_init_tag@1@@Z 0048a7ed f   scoreBoardState.obj
  0001:00089810       __unwindfunclet$??$_Uninitialized_move@PAHV?$allocator@H@std@@@std@@YAPAHQAH0PAHAAV?$allocator@H@0@@Z$0 0048a810 f   scoreBoardState.obj
@@ -7457,6 +7429,38 @@
  0001:0008be5d       __ehhandler$?loadScore@scoreBoardState@@AAEXXZ 0048ce5d f   scoreBoardState.obj
  0001:0008be87       __unwindfunclet$?saveScore@scoreBoardState@@AAEXXZ$0 0048ce87 f   scoreBoardState.obj
  0001:0008be97       __ehhandler$?saveScore@scoreBoardState@@AAEXXZ 0048ce97 f   scoreBoardState.obj
+ 0001:0008bec0       __unwindfunclet$?foreGroundStrings@gameState@@UAEXXZ$0 0048cec0 f   gameState.obj
+ 0001:0008becb       __unwindfunclet$?foreGroundStrings@gameState@@UAEXXZ$1 0048cecb f   gameState.obj
+ 0001:0008bed6       __unwindfunclet$?foreGroundStrings@gameState@@UAEXXZ$2 0048ced6 f   gameState.obj
+ 0001:0008bee3       __ehhandler$?foreGroundStrings@gameState@@UAEXXZ 0048cee3 f   gameState.obj
+ 0001:0008bf0d       __unwindfunclet$?initObjects@gameState@@UAEXXZ$0 0048cf0d f   gameState.obj
+ 0001:0008bf1c       __unwindfunclet$?initObjects@gameState@@UAEXXZ$1 0048cf1c f   gameState.obj
+ 0001:0008bf30       __ehhandler$?initObjects@gameState@@UAEXXZ 0048cf30 f   gameState.obj
+ 0001:0008bf4d       __unwindfunclet$?reset@gameState@@UAEXXZ$0 0048cf4d f   gameState.obj
+ 0001:0008bf64       __ehhandler$?reset@gameState@@UAEXXZ 0048cf64 f   gameState.obj
+ 0001:0008bf81       __unwindfunclet$?mouseDown@gameState@@UAEXHHH@Z$0 0048cf81 f   gameState.obj
+ 0001:0008bf95       __ehhandler$?mouseDown@gameState@@UAEXHHH@Z 0048cf95 f   gameState.obj
+ 0001:0008bfb2       __unwindfunclet$?drawBackground@gameState@@QAEXXZ$1 0048cfb2 f   gameState.obj
+ 0001:0008bfbf       __ehhandler$?drawBackground@gameState@@QAEXXZ 0048cfbf f   gameState.obj
+ 0001:0008bfdc       __unwindfunclet$?recieveUpdate@gameState@@UAEXH@Z$0 0048cfdc f   gameState.obj
+ 0001:0008bfe7       __unwindfunclet$?recieveUpdate@gameState@@UAEXH@Z$1 0048cfe7 f   gameState.obj
+ 0001:0008bfef       __unwindfunclet$?recieveUpdate@gameState@@UAEXH@Z$7 0048cfef f   gameState.obj
+ 0001:0008bffe       __unwindfunclet$?recieveUpdate@gameState@@UAEXH@Z$8 0048cffe f   gameState.obj
+ 0001:0008c00d       __unwindfunclet$?recieveUpdate@gameState@@UAEXH@Z$9 0048d00d f   gameState.obj
+ 0001:0008c01c       __unwindfunclet$?recieveUpdate@gameState@@UAEXH@Z$10 0048d01c f   gameState.obj
+ 0001:0008c033       __ehhandler$?recieveUpdate@gameState@@UAEXH@Z 0048d033 f   gameState.obj
+ 0001:0008c053       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$0 0048d053 f   gameState.obj
+ 0001:0008c05e       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$1 0048d05e f   gameState.obj
+ 0001:0008c066       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$2 0048d066 f   gameState.obj
+ 0001:0008c071       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$3 0048d071 f   gameState.obj
+ 0001:0008c079       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$4 0048d079 f   gameState.obj
+ 0001:0008c084       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$5 0048d084 f   gameState.obj
+ 0001:0008c08c       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$6 0048d08c f   gameState.obj
+ 0001:0008c09e       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$7 0048d09e f   gameState.obj
+ 0001:0008c0b5       __ehhandler$?loadGame@gameState@@QAE_NXZ 0048d0b5 f   gameState.obj
+ 0001:0008c0df       __unwindfunclet$?saveGame@gameState@@QAEXXZ$0 0048d0df f   gameState.obj
+ 0001:0008c0ea       __unwindfunclet$?saveGame@gameState@@QAEXXZ$1 0048d0ea f   gameState.obj
+ 0001:0008c0fa       __ehhandler$?saveGame@gameState@@QAEXXZ 0048d0fa f   gameState.obj
  0001:0008cee0       ??__F_Fac_tidy_reg@std@@YAXXZ 0048dee0 f   msvcprtd:locale0_implib.obj
  0002:00000104       ?pre_cpp_initializer@@3P6AXXZA 0048f104     MSVCRTD:exe_main.obj
  0002:00000208       ?_Fac_tidy_reg$initializer$@std@@3P6AXXZA 0048f208     msvcprtd:locale0_implib.obj
@@ -7538,70 +7542,70 @@
  0002:000031bc       $SG95791                   004921bc     gameSetupState.obj
  0002:000031d0       $SG95792                   004921d0     gameSetupState.obj
  0002:000031e4       $SG95794                   004921e4     gameSetupState.obj
- 0002:000033d8       $SG108780                  004923d8     gameState.obj
- 0002:000033ec       $SG108781                  004923ec     gameState.obj
- 0002:000033f0       $SG108782                  004923f0     gameState.obj
- 0002:00003458       $SG108783                  00492458     gameState.obj
- 0002:0000351c       $SG108784                  0049251c     gameState.obj
- 0002:00003520       $SG108785                  00492520     gameState.obj
- 0002:00003548       $SG108846                  00492548     gameState.obj
- 0002:000035ac       $SG109187                  004925ac     gameState.obj
- 0002:000035c8       $SG109188                  004925c8     gameState.obj
- 0002:000035d0       $SG109189                  004925d0     gameState.obj
- 0002:00003638       $SG109190                  00492638     gameState.obj
- 0002:00003700       $SG109191                  00492700     gameState.obj
- 0002:00003704       $SG109192                  00492704     gameState.obj
- 0002:0000373c       $SG94695                   0049273c     gameState.obj
- 0002:00003748       $SG94696                   00492748     gameState.obj
- 0002:00003754       $SG94767                   00492754     gameState.obj
- 0002:00003758       $SG94768                   00492758     gameState.obj
- 0002:00003768       $SG94974                   00492768     gameState.obj
- 0002:00003774       $SG94975                   00492774     gameState.obj
- 0002:0000377c       $SG95304                   0049277c     gameState.obj
- 0002:0000378c       $SG95306                   0049278c     gameState.obj
- 0002:000037c0       $SG95308                   004927c0     gameState.obj
- 0002:000037d0       $SG95310                   004927d0     gameState.obj
- 0002:00003804       $SG95314                   00492804     gameState.obj
- 0002:00003818       $SG95318                   00492818     gameState.obj
- 0002:00003820       $SG95321                   00492820     gameState.obj
- 0002:00003830       $SG95322                   00492830     gameState.obj
- 0002:0000384c       $SG95518                   0049284c     gameState.obj
- 0002:0000385c       $SG95520                   0049285c     gameState.obj
- 0002:00003884       $SG95522                   00492884     gameState.obj
- 0002:00003888       $SG95523                   00492888     gameState.obj
- 0002:0000388c       $SG95524                   0049288c     gameState.obj
- 0002:000038ac       $SG95525                   004928ac     gameState.obj
- 0002:000038bc       $SG95527                   004928bc     gameState.obj
- 0002:000038f0       $SG95529                   004928f0     gameState.obj
- 0002:00003904       $SG95530                   00492904     gameState.obj
- 0002:00003908       $SG95531                   00492908     gameState.obj
- 0002:0000390c       $SG95532                   0049290c     gameState.obj
- 0002:00003918       $SG95533                   00492918     gameState.obj
- 0002:0000391c       $SG95534                   0049291c     gameState.obj
- 0002:00003920       $SG95535                   00492920     gameState.obj
- 0002:00003928       $SG95536                   00492928     gameState.obj
- 0002:0000392c       $SG95537                   0049292c     gameState.obj
- 0002:00003934       $SG95538                   00492934     gameState.obj
- 0002:00003938       $SG95539                   00492938     gameState.obj
- 0002:0000393c       $SG95540                   0049293c     gameState.obj
- 0002:00003948       $SG95541                   00492948     gameState.obj
- 0002:00003954       $SG95542                   00492954     gameState.obj
- 0002:00003958       $SG95543                   00492958     gameState.obj
- 0002:0000395c       $SG95544                   0049295c     gameState.obj
- 0002:00003968       $SG95545                   00492968     gameState.obj
- 0002:0000396c       $SG95546                   0049296c     gameState.obj
- 0002:00003970       $SG95547                   00492970     gameState.obj
- 0002:00003978       $SG95548                   00492978     gameState.obj
- 0002:0000397c       $SG95549                   0049297c     gameState.obj
- 0002:00003980       $SG95550                   00492980     gameState.obj
- 0002:0000398c       $SG95551                   0049298c     gameState.obj
- 0002:00003990       $SG95552                   00492990     gameState.obj
- 0002:0000399c       $SG95553                   0049299c     gameState.obj
- 0002:000039ac       $SG95554                   004929ac     gameState.obj
- 0002:000039b0       $SG95555                   004929b0     gameState.obj
- 0002:000039b8       $SG95556                   004929b8     gameState.obj
- 0002:000039bc       $SG95557                   004929bc     gameState.obj
- 0002:000039c4       $SG95558                   004929c4     gameState.obj
+ 0002:000033d8       $SG110136                  004923d8     gameState.obj
+ 0002:000033ec       $SG110137                  004923ec     gameState.obj
+ 0002:000033f0       $SG110138                  004923f0     gameState.obj
+ 0002:00003458       $SG110139                  00492458     gameState.obj
+ 0002:0000351c       $SG110140                  0049251c     gameState.obj
+ 0002:00003520       $SG110141                  00492520     gameState.obj
+ 0002:00003548       $SG110202                  00492548     gameState.obj
+ 0002:000035ac       $SG110543                  004925ac     gameState.obj
+ 0002:000035c8       $SG110544                  004925c8     gameState.obj
+ 0002:000035d0       $SG110545                  004925d0     gameState.obj
+ 0002:00003638       $SG110546                  00492638     gameState.obj
+ 0002:00003700       $SG110547                  00492700     gameState.obj
+ 0002:00003704       $SG110548                  00492704     gameState.obj
+ 0002:0000373c       $SG96047                   0049273c     gameState.obj
+ 0002:00003748       $SG96048                   00492748     gameState.obj
+ 0002:00003754       $SG96123                   00492754     gameState.obj
+ 0002:00003758       $SG96124                   00492758     gameState.obj
+ 0002:00003768       $SG96332                   00492768     gameState.obj
+ 0002:00003774       $SG96333                   00492774     gameState.obj
+ 0002:0000377c       $SG96663                   0049277c     gameState.obj
+ 0002:0000378c       $SG96665                   0049278c     gameState.obj
+ 0002:000037c0       $SG96667                   004927c0     gameState.obj
+ 0002:000037d0       $SG96669                   004927d0     gameState.obj
+ 0002:00003804       $SG96673                   00492804     gameState.obj
+ 0002:00003818       $SG96677                   00492818     gameState.obj
+ 0002:00003820       $SG96680                   00492820     gameState.obj
+ 0002:00003830       $SG96681                   00492830     gameState.obj
+ 0002:0000384c       $SG96877                   0049284c     gameState.obj
+ 0002:0000385c       $SG96879                   0049285c     gameState.obj
+ 0002:00003884       $SG96881                   00492884     gameState.obj
+ 0002:00003888       $SG96882                   00492888     gameState.obj
+ 0002:0000388c       $SG96883                   0049288c     gameState.obj
+ 0002:000038ac       $SG96884                   004928ac     gameState.obj
+ 0002:000038bc       $SG96886                   004928bc     gameState.obj
+ 0002:000038f0       $SG96888                   004928f0     gameState.obj
+ 0002:00003904       $SG96889                   00492904     gameState.obj
+ 0002:00003908       $SG96890                   00492908     gameState.obj
+ 0002:0000390c       $SG96891                   0049290c     gameState.obj
+ 0002:00003918       $SG96892                   00492918     gameState.obj
+ 0002:0000391c       $SG96893                   0049291c     gameState.obj
+ 0002:00003920       $SG96894                   00492920     gameState.obj
+ 0002:00003928       $SG96895                   00492928     gameState.obj
+ 0002:0000392c       $SG96896                   0049292c     gameState.obj
+ 0002:00003934       $SG96897                   00492934     gameState.obj
+ 0002:00003938       $SG96898                   00492938     gameState.obj
+ 0002:0000393c       $SG96899                   0049293c     gameState.obj
+ 0002:00003948       $SG96900                   00492948     gameState.obj
+ 0002:00003954       $SG96901                   00492954     gameState.obj
+ 0002:00003958       $SG96902                   00492958     gameState.obj
+ 0002:0000395c       $SG96903                   0049295c     gameState.obj
+ 0002:00003968       $SG96904                   00492968     gameState.obj
+ 0002:0000396c       $SG96905                   0049296c     gameState.obj
+ 0002:00003970       $SG96906                   00492970     gameState.obj
+ 0002:00003978       $SG96907                   00492978     gameState.obj
+ 0002:0000397c       $SG96908                   0049297c     gameState.obj
+ 0002:00003980       $SG96909                   00492980     gameState.obj
+ 0002:0000398c       $SG96910                   0049298c     gameState.obj
+ 0002:00003990       $SG96911                   00492990     gameState.obj
+ 0002:0000399c       $SG96912                   0049299c     gameState.obj
+ 0002:000039ac       $SG96913                   004929ac     gameState.obj
+ 0002:000039b0       $SG96914                   004929b0     gameState.obj
+ 0002:000039b8       $SG96915                   004929b8     gameState.obj
+ 0002:000039bc       $SG96916                   004929bc     gameState.obj
+ 0002:000039c4       $SG96917                   004929c4     gameState.obj
  0002:000045a0       $SG92627                   004935a0     ImageMappingDemo.obj
  0002:000045ac       $SG92629                   004935ac     ImageMappingDemo.obj
  0002:000045b8       $SG92631                   004935b8     ImageMappingDemo.obj
@@ -8205,20 +8209,6 @@
  0002:00013d18       __ehfuncinfo$?erase@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@2@@Z 004a2d18     gameState.obj
  0002:00013d40       __unwindtable$??$find@V?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@PAVDisplayableObject@@@std@@YA?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@0@V10@V10@ABQAVDisplayableObject@@@Z 004a2d40     gameState.obj
  0002:00013d50       __ehfuncinfo$??$find@V?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@PAVDisplayableObject@@@std@@YA?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@0@V10@V10@ABQAVDisplayableObject@@@Z 004a2d50     gameState.obj
- 0002:00013d7c       __unwindtable$?drawBackground@gameState@@QAEXXZ 004a2d7c     gameState.obj
- 0002:00013d84       __unwindtable$?mouseDown@gameState@@UAEXHHH@Z 004a2d84     gameState.obj
- 0002:00013d8c       __unwindtable$?saveGame@gameState@@QAEXXZ 004a2d8c     gameState.obj
- 0002:00013d9c       __unwindtable$?initObjects@gameState@@UAEXXZ 004a2d9c     gameState.obj
- 0002:00013dac       __unwindtable$?foreGroundStrings@gameState@@UAEXXZ 004a2dac     gameState.obj
- 0002:00013dc4       __ehfuncinfo$?saveGame@gameState@@QAEXXZ 004a2dc4     gameState.obj
- 0002:00013de8       __ehfuncinfo$?loadGame@gameState@@QAE_NXZ 004a2de8     gameState.obj
- 0002:00013e0c       __ehfuncinfo$?recieveUpdate@gameState@@UAEXH@Z 004a2e0c     gameState.obj
- 0002:00013e30       __ehfuncinfo$?drawBackground@gameState@@QAEXXZ 004a2e30     gameState.obj
- 0002:00013e54       __ehfuncinfo$?mouseDown@gameState@@UAEXHHH@Z 004a2e54     gameState.obj
- 0002:00013e78       __ehfuncinfo$?initObjects@gameState@@UAEXXZ 004a2e78     gameState.obj
- 0002:00013e9c       __ehfuncinfo$?foreGroundStrings@gameState@@UAEXXZ 004a2e9c     gameState.obj
- 0002:00013ec0       __unwindtable$?recieveUpdate@gameState@@UAEXH@Z 004a2ec0     gameState.obj
- 0002:00013ee8       __unwindtable$?loadGame@gameState@@QAE_NXZ 004a2ee8     gameState.obj
  0002:00013f28       __ehfuncinfo$??0?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QAE@XZ 004a2f28     scoreBoardState.obj
  0002:00013f54       __ehfuncinfo$?erase@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@2@0@Z 004a2f54     gameState.obj
  0002:00013f7c       __unwindtable$?_Orphan_range_locked@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@ABEXPAPAVPsyeb10Enemy@@0@Z 004a2f7c     gameState.obj
@@ -8470,6 +8460,22 @@
  0002:00015dd8       __ehfuncinfo$?loadScore@scoreBoardState@@AAEXXZ 004a4dd8     scoreBoardState.obj
  0002:00015dfc       __ehfuncinfo$?keyPressed@scoreBoardState@@UAEXH@Z 004a4dfc     scoreBoardState.obj
  0002:00015e20       __ehfuncinfo$??0scoreBoardState@@QAE@PAVPsyeb10Engine@@H@Z 004a4e20     scoreBoardState.obj
+ 0002:00015e44       __unwindtable$?drawBackground@gameState@@QAEXXZ 004a4e44     gameState.obj
+ 0002:00015e4c       __unwindtable$?mouseDown@gameState@@UAEXHHH@Z 004a4e4c     gameState.obj
+ 0002:00015e54       __unwindtable$?reset@gameState@@UAEXXZ 004a4e54     gameState.obj
+ 0002:00015e5c       __unwindtable$?saveGame@gameState@@QAEXXZ 004a4e5c     gameState.obj
+ 0002:00015e6c       __unwindtable$?initObjects@gameState@@UAEXXZ 004a4e6c     gameState.obj
+ 0002:00015e7c       __unwindtable$?foreGroundStrings@gameState@@UAEXXZ 004a4e7c     gameState.obj
+ 0002:00015e94       __ehfuncinfo$?saveGame@gameState@@QAEXXZ 004a4e94     gameState.obj
+ 0002:00015eb8       __ehfuncinfo$?loadGame@gameState@@QAE_NXZ 004a4eb8     gameState.obj
+ 0002:00015edc       __ehfuncinfo$?recieveUpdate@gameState@@UAEXH@Z 004a4edc     gameState.obj
+ 0002:00015f00       __ehfuncinfo$?drawBackground@gameState@@QAEXXZ 004a4f00     gameState.obj
+ 0002:00015f24       __ehfuncinfo$?mouseDown@gameState@@UAEXHHH@Z 004a4f24     gameState.obj
+ 0002:00015f48       __ehfuncinfo$?reset@gameState@@UAEXXZ 004a4f48     gameState.obj
+ 0002:00015f6c       __ehfuncinfo$?initObjects@gameState@@UAEXXZ 004a4f6c     gameState.obj
+ 0002:00015f90       __ehfuncinfo$?foreGroundStrings@gameState@@UAEXXZ 004a4f90     gameState.obj
+ 0002:00015fb4       __unwindtable$?recieveUpdate@gameState@@UAEXH@Z 004a4fb4     gameState.obj
+ 0002:00015fe4       __unwindtable$?loadGame@gameState@@QAE_NXZ 004a4fe4     gameState.obj
  0003:00000000       ?firstClick@?1??handleEvent@BaseEngine@@QAE_NPATSDL_Event@@@Z@4_NA 004a6000     BaseEngine.obj
  0003:00000004       ?nullMapping@@3VCroppedImagePixelMapping@@A 004a6004     SimpleImage.obj
  0003:00000e00       ?strategicCoolDown@?1??virtPostMoveLogic@Psyeb10Enemy@@UAEXXZ@4HA 004a6e00     Psyeb10Enemy.obj
