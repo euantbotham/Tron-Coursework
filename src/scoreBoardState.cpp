@@ -2,7 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
-
+#include "mainMenuState.h"
 scoreBoardState::scoreBoardState(Psyeb10Engine* engine, int score)
     // Initialize filters - first scaling, then translation that points to scaling
     : m_filterScaling(0, 0, engine), 
@@ -21,6 +21,7 @@ scoreBoardState::scoreBoardState(Psyeb10Engine* engine, int score)
 	for (int i = 0; i < 10; ++i) {
 		scoreBoardScores[i] = 0;
 	}
+	nameSaved = false; // Flag to check if the name has been saved
 
     // initialise outside the top 10
     playerPos = 11;
@@ -85,9 +86,15 @@ void scoreBoardState::foreGroundStrings()
         sprintf(entryNumber, "%d.", i + 1);
         engine->drawForegroundString(startX, startY + 50 + i * entryHeight, entryNumber, colour);
 
-        // Placeholder name
-        engine->drawForegroundString(startX + 100, startY + 50 + i * entryHeight, scoreBoardEntries[i].empty() ? "Player" : scoreBoardEntries[i].c_str(), colour);
-
+        // Player name
+        if (i == playerPos) {
+            // Use `inputName` for the player's entry
+            engine->drawForegroundString(startX + 100, startY + 50 + i * entryHeight, inputName.empty() ? "Player" : inputName.c_str(), colour);
+        }
+        else {
+            // Use the value from `scoreBoardEntries` for other entries
+            engine->drawForegroundString(startX + 100, startY + 50 + i * entryHeight, scoreBoardEntries[i].c_str(), colour);
+        }
         // Player score (formatted to 4 characters with leading zeros)
         char formattedScore[5];
         sprintf(formattedScore, "%04d", scoreBoardScores[i]);
@@ -98,17 +105,35 @@ void scoreBoardState::foreGroundStrings()
 
 void scoreBoardState::keyPressed(int iKeyCode) 
 {
-    if (iKeyCode >= SDLK_a && iKeyCode <= SDLK_z) {
-        inputName += static_cast<char>(iKeyCode);
+	// Limit to 10 characters
+    if (inputName.length() <= 10) {
+        if (iKeyCode >= SDLK_a && iKeyCode <= SDLK_z) {
+            inputName += static_cast<char>(iKeyCode);
+        }
+        else if (iKeyCode == SDLK_SPACE) {
+            inputName += ' ';
+        }
     }
-    else if (iKeyCode == SDLK_SPACE) {
-        inputName += ' ';
-    }
-    else if (iKeyCode == SDLK_BACKSPACE) {
+    if (iKeyCode == SDLK_BACKSPACE) {
         if (inputName.length() > 0) {
             inputName.pop_back();
         }
     }
+    else if (iKeyCode == SDLK_TAB) {
+		nameSaved = true; // Set the nameSaved flag to true
+		scoreBoardEntries[playerPos] = inputName.empty() ? "Player" : inputName; // Use "Player" if no name is entered
+		playerPos = 11; // Reset player position to outside the top 10
+
+		saveScore(); // Save the score to the file
+	}
+	else if (iKeyCode == SDLK_ESCAPE) {
+		std::cout << "ESC key pressed" << std::endl;
+        // only allow leaving if the name is saved
+        if (nameSaved) 
+			// Reset to nullptr to remove the filter
+            //engine->getForegroundSurface()->setDrawPointsFilter(nullptr);
+            engine->setState(new mainMenuState(engine), false, true);
+	}
     else {
         // Handle navigation with arrow keys
         switch (iKeyCode) {
@@ -186,7 +211,7 @@ void scoreBoardState::loadScore()
 
         // If the player's score is higher and hasn't been displayed yet
         if (playerscore > score && !playerDisplayed) {
-            scoreBoardEntries[count] = inputName.empty() ? "Test" : inputName; // Use "Player" if no name is entered
+            scoreBoardEntries[count] = inputName;//inputName.empty() ? "Test" : inputName; // Use "Player" if no name is entered
             scoreBoardScores[count] = playerscore;
             playerDisplayed = true;
 			playerPos = count; // Store the player's position
@@ -207,5 +232,27 @@ void scoreBoardState::loadScore()
         scoreBoardScores[count] = playerscore;
 		playerPos = count; // Store the player's position
     }
+	
+    // No need to change scoreboard if playerPos is 11
+	if(playerPos == 11) {
+        nameSaved = true;
+	}
     scoreFile.close();
+}
+
+void scoreBoardState::saveScore()
+{
+	std::ofstream scoreFile("scores.txt", std::ios::app); // Open in append mode
+	if (!scoreFile.is_open()) {
+		std::cerr << "Error: Could not open scores.txt for writing!" << std::endl;
+		return;
+	}
+	
+    for (int i = 0; i < 10; ++i) {
+        if (inputName == scoreBoardEntries[i]) {
+            scoreFile << scoreBoardEntries[i] << " " << scoreBoardScores[i] << std::endl;
+        }
+    }
+
+    scoreFile.close(); // Close the file after writing
 }
