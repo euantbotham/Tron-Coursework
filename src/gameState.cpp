@@ -54,6 +54,7 @@ void gameState::initObjects()
 void gameState::reset()
 {
 	if (mainChar->getLives() <= 0) {
+		isDisplayed = false;
 		engine->setState(new scoreBoardState(engine, gameScore), false, true);
 		return;
 	}
@@ -229,6 +230,7 @@ void gameState::recieveUpdate(int code) {
 		}
 		
 		else {
+			isDisplayed = false;
 			engine->setState(new scoreBoardState(engine, gameScore),false, true);
 			return;
 		}
