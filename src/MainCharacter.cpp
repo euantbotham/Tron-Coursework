@@ -5,7 +5,7 @@
 #include "UtilCollisionDetection.h"
 #include <vector>
 
-MainCharacter::MainCharacter(BaseEngine* pEngine) : Psyeb10Bike(650, 400, pEngine, 20, 20, 1)
+MainCharacter::MainCharacter(BaseEngine* pEngine) : Psyeb10Bike(650, 630, pEngine, 20, 20, 1)
 {
 	speedX = 0;
 	speedY = -1;

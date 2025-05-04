@@ -73,7 +73,7 @@ void Psyeb10Engine::virtMouseDown(int iButton, int iX, int iY)
 }
 
 void Psyeb10Engine::virtMainLoopDoBeforeUpdate()
-{
+{	
 	currentState->mainLoopPreUpdate();
 }
 

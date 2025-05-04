@@ -17,6 +17,7 @@ Psyeb10Enemy::Psyeb10Enemy(BaseEngine* pEngine, int xPos, int yPos, int gridVal)
         SimpleImage image = ImageManager::loadImage(imageName, true);
         image.setTransparencyColour(0); // Set transparency color if needed
         animationImages.push_back(image); // Add the image to the vector
+        strategicCoolDown = 0;
 
     }
 }
@@ -32,10 +33,9 @@ void Psyeb10Enemy::virtHandleDeath()
 
 void Psyeb10Enemy::virtPostMoveLogic()
 {
-    static int strategicCoolDown = 0; // cooldown counter so doesn't update every tile.
 
     // Get player position
-    DisplayableObject* pPlayerObject = engine->getDisplayableObject(0); // Assuming player is the first object
+    DisplayableObject* pPlayerObject = engine->getDisplayableObject(0); 
     int playerX = pPlayerObject->getXCentre();
     int playerY = pPlayerObject->getYCentre();
 
@@ -70,11 +70,8 @@ void Psyeb10Enemy::virtPostMoveLogic()
 void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
 {
     // Current direction
-    int currentDirection = -1;
-    if (speedX == 0 && speedY == -1) currentDirection = 0; // Up
-    if (speedX == 1 && speedY == 0) currentDirection = 1;  // Right
-    if (speedX == 0 && speedY == 1) currentDirection = 2;  // Down
-    if (speedX == -1 && speedY == 0) currentDirection = 3; // Left
+    int currentDirection = this->getDirection();
+    
 
     // Check current path space
     int currentMapX = engine->getTileManager()->getMapXForScreenX(getXCentre() + 5 * speedX);
@@ -106,6 +103,7 @@ void Psyeb10Enemy::decideStrategicDirection(int playerX, int playerY)
     for (int i = 0; i < 4; i++) {
         // Skip reverse direction (prevents immediate backward movement)
         if (i == (currentDirection + 2) % 4) continue;
+        if (i == currentDirection) continue; // Already computed
 
         // Check if this move is valid
         int testX = getXCentre() + 5 * directions[i].first;
@@ -174,11 +172,8 @@ int Psyeb10Enemy::findBestDirection()
     double bestScore = -1.0;
 
     // Get current direction
-    int currentDirection = -1;
-    if (speedX == 0 && speedY == -1) currentDirection = 0; // Up
-    if (speedX == 1 && speedY == 0) currentDirection = 1;  // Right
-    if (speedX == 0 && speedY == 1) currentDirection = 2;  // Down
-    if (speedX == -1 && speedY == 0) currentDirection = 3; // Left
+    int currentDirection = this->getDirection();
+   
 
     // Player position
     DisplayableObject* pPlayerObject = engine->getDisplayableObject(0);

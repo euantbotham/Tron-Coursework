@@ -160,7 +160,7 @@ void scoreBoardState::keyPressed(int iKeyCode)
             inputName += ' ';
         }
     }
-    if (iKeyCode == SDLK_BACKSPACE) {
+    if (iKeyCode == SDLK_BACKSPACE || iKeyCode == SDLK_DELETE) {
         if (inputName.length() > 0) {
             inputName.pop_back();
         }

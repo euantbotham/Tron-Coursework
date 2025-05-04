@@ -46,7 +46,7 @@ void gameState::initObjects()
 	engine->createObjectArray(1);
 	this->mainChar = new MainCharacter(engine);
 	engine->storeObjectInArray(0, mainChar);
-	this->enemyVec.push_back(new Psyeb10Enemy(engine, 500, 150, 2));
+	this->enemyVec.push_back(new Psyeb10Enemy(engine, 650, 170, 2));
 	engine->appendObjectToArray(enemyVec[0]);
 	engine->setAllObjectsVisible(true);
 	currentEnemies = 1; // Set the number of enemies to 1
@@ -253,7 +253,7 @@ void gameState::recieveUpdate(int code) {
 	}
 	if (currentEnemies == 0) {
 		if (currentLevel < 2) {
-			Psyeb10Enemy* enemy = new Psyeb10Enemy(engine, 500, 150, 2);
+			Psyeb10Enemy* enemy = new Psyeb10Enemy(engine, 650, 170, 2);
 			reset();
 			enemyVec.push_back(enemy);
 			engine->appendObjectToArray(enemy);
@@ -261,11 +261,11 @@ void gameState::recieveUpdate(int code) {
 		}
 		else if (currentLevel < 5) {
 			reset();
-			Psyeb10Enemy* enemy = new Psyeb10Enemy(engine, 500, 150, 2);
+			Psyeb10Enemy* enemy = new Psyeb10Enemy(engine, 600, 170, 2);
 			enemyVec.push_back(enemy);
 			engine->appendObjectToArray(enemy);
 
-			enemy = new Psyeb10Enemy(engine, 650, 150, 3);
+			enemy = new Psyeb10Enemy(engine, 700, 170, 3);
 			this->enemyVec.push_back(enemy);
 			engine->appendObjectToArray(enemy);
 			currentEnemies = 2;

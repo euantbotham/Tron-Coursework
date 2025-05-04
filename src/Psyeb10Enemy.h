@@ -18,5 +18,6 @@ private:
     void decideStrategicDirection(int playerX, int playerY);
     int findBestDirection();
     int floodFill(int startMapX, int startMapY, int dirX, int dirY, int maxScope, int maxTiles);
+    int strategicCoolDown;
 };
 

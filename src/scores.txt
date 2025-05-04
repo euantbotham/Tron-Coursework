@@ -1,4 +1,6 @@
 Player 1660
+Player 500
+Player 320
 bob 290
 Player 170
 sam 110
@@ -6,5 +8,3 @@ s 60
 bobby 50
 Player 40
 Player 40
-Player 30
-josh 20
