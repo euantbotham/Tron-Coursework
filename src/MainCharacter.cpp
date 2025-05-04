@@ -30,16 +30,20 @@ void MainCharacter::virtKeyDown(int iKeyCode)
 {
 	switch (iKeyCode) {
 	case SDLK_w:
-		changeDirection(0);
+		if (getDirection() != 2)
+			changeDirection(0);
 		break;
 	case SDLK_s:
-		changeDirection(2);
+		if (getDirection() != 0)
+			changeDirection(2);
 		break;
 	case SDLK_d:
-		changeDirection(1);
+		if (getDirection() != 3)
+			changeDirection(1);
 		break;
 	case SDLK_a:
-		changeDirection(3);
+		if (getDirection() != 1)
+			changeDirection(3);
 		break;
 	default:
 		break;

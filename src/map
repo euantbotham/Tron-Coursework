@@ -1,6 +1,6 @@
  CourseworkBase2020
 
- Timestamp is 681760d2 (Sun May  4 13:42:58 2025)
+ Timestamp is 68176169 (Sun May  4 13:45:29 2025)
 
  Preferred load address is 00400000
 
@@ -1267,10 +1267,10 @@
  0001:000282f0       ?changePixelColour@ImagePixelMapping@@UAE_NHHAAHPAVDrawingSurface@@@Z 004292f0 f i ImagePixelMappingRotate90.obj
  0001:00028310       ??0MainCharacter@@QAE@PAVBaseEngine@@@Z 00429310 f   MainCharacter.obj
  0001:000284b0       ?virtKeyDown@MainCharacter@@UAEXH@Z 004294b0 f   MainCharacter.obj
- 0001:00028550       ?getLives@MainCharacter@@QAEHXZ 00429550 f   MainCharacter.obj
- 0001:00028570       ?setLives@MainCharacter@@QAEXH@Z 00429570 f   MainCharacter.obj
- 0001:00028590       ?virtPostMoveLogic@MainCharacter@@UAEXXZ 00429590 f   MainCharacter.obj
- 0001:000285a0       ?virtHandleDeath@MainCharacter@@UAEXXZ 004295a0 f   MainCharacter.obj
+ 0001:00028580       ?getLives@MainCharacter@@QAEHXZ 00429580 f   MainCharacter.obj
+ 0001:000285a0       ?setLives@MainCharacter@@QAEXH@Z 004295a0 f   MainCharacter.obj
+ 0001:000285c0       ?virtPostMoveLogic@MainCharacter@@UAEXXZ 004295c0 f   MainCharacter.obj
+ 0001:000285d0       ?virtHandleDeath@MainCharacter@@UAEXXZ 004295d0 f   MainCharacter.obj
  0001:00028680       ??$?0PAD$0A@@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PAD0ABV?$allocator@D@1@@Z 00429680 f i MainCharacter.obj
  0001:00028770       ??$?0VSimpleImage@@@?$allocator@U_Container_proxy@std@@@std@@QAE@ABV?$allocator@VSimpleImage@@@1@@Z 00429770 f i MainCharacter.obj
  0001:00028790       ??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@$$QAV10@QBD@Z 00429790 f i MainCharacter.obj
@@ -5869,8 +5869,8 @@
  0001:0001f2bf       __catch$??$?5DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z$0 004202bf f i gameState.obj
  0001:00020f2f       __catch$??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@$$QAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@D@Z$0 00421f2f f i gameState.obj
  0001:00027350       $LN15                      00428350     ImageMappingDemo.obj
- 0001:00028518       $LN11                      00429518     MainCharacter.obj
- 0001:0002852c       $LN10                      0042952c     MainCharacter.obj
+ 0001:0002854c       $LN15                      0042954c     MainCharacter.obj
+ 0001:00028560       $LN14                      00429560     MainCharacter.obj
  0001:0002a150       _time                      0042b150 f   mainfunction.obj
  0001:0002b870       $LN46                      0042c870     BaseEngine.obj
  0001:0002bd00       ??R<lambda_fc8dd791f88d4728d8634e8f76ffd231>@@QBE@PAVDisplayableObject@@@Z 0042cd00 f   BaseEngine.obj
@@ -7663,19 +7663,19 @@
  0002:00004c78       $SG89622                   00498c78     ImagePixelMappingRotate90.obj
  0002:00004d20       $SG93165                   00498d20     MainCharacter.obj
  0002:00004d28       $SG93166                   00498d28     MainCharacter.obj
- 0002:00004d34       $SG104816                  00498d34     MainCharacter.obj
- 0002:00004d48       $SG104817                  00498d48     MainCharacter.obj
- 0002:00004d50       $SG104818                  00498d50     MainCharacter.obj
- 0002:00004db8       $SG104819                  00498db8     MainCharacter.obj
- 0002:00004e7c       $SG104820                  00498e7c     MainCharacter.obj
- 0002:00004e80       $SG104821                  00498e80     MainCharacter.obj
- 0002:00004ea8       $SG104895                  00498ea8     MainCharacter.obj
- 0002:00004f0c       $SG105273                  00498f0c     MainCharacter.obj
- 0002:00004f28       $SG105274                  00498f28     MainCharacter.obj
- 0002:00004f30       $SG105275                  00498f30     MainCharacter.obj
- 0002:00004f98       $SG105276                  00498f98     MainCharacter.obj
- 0002:00005060       $SG105277                  00499060     MainCharacter.obj
- 0002:00005064       $SG105278                  00499064     MainCharacter.obj
+ 0002:00004d34       $SG104820                  00498d34     MainCharacter.obj
+ 0002:00004d48       $SG104821                  00498d48     MainCharacter.obj
+ 0002:00004d50       $SG104822                  00498d50     MainCharacter.obj
+ 0002:00004db8       $SG104823                  00498db8     MainCharacter.obj
+ 0002:00004e7c       $SG104824                  00498e7c     MainCharacter.obj
+ 0002:00004e80       $SG104825                  00498e80     MainCharacter.obj
+ 0002:00004ea8       $SG104899                  00498ea8     MainCharacter.obj
+ 0002:00004f0c       $SG105277                  00498f0c     MainCharacter.obj
+ 0002:00004f28       $SG105278                  00498f28     MainCharacter.obj
+ 0002:00004f30       $SG105279                  00498f30     MainCharacter.obj
+ 0002:00004f98       $SG105280                  00498f98     MainCharacter.obj
+ 0002:00005060       $SG105281                  00499060     MainCharacter.obj
+ 0002:00005064       $SG105282                  00499064     MainCharacter.obj
  0002:00005200       $SG93385                   00499200     mainfunction.obj
  0002:00005230       $SG93386                   00499230     mainfunction.obj
  0002:00005248       $SG104634                  00499248     mainfunction.obj
