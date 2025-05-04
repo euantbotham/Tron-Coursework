@@ -7,7 +7,6 @@
 #include "gameState.h"
 #include "Psyeb10Bike.h"
 #include "MainCharacter.h"
-#include "BouncingLogo.h"
 
 void pauseState::enter()
 {
@@ -42,7 +41,7 @@ void pauseState::foreGroundStrings()
 
 void pauseState::initObjects()
 {
-	bouncingLogo* logo = new bouncingLogo(100, 100, engine, 2, 2);
+	logo = new bouncingLogo(100, 100, engine, 2, 2);
 	engine->appendObjectToArray(logo);
 }
 
@@ -110,4 +109,9 @@ void pauseState::reset()
 
 void pauseState::reEntry()
 {
+}
+
+pauseState::~pauseState()
+{
+	delete this->logo;
 }

@@ -118,26 +118,13 @@ void gameState::mainLoopPreUpdate() {
 					bike2->getImage(), bX2, bY2, bike2->getDirection())) {
 					std::cout << "Collision detected!" << std::endl;
 					reset();
+					return;
 					// Handle collision (e.g., reduce lives, reset positions, etc.)
 				}
 			}
 		}
 		
 	}
-
-	//Get directions for rotations
-	/*
-	int b1Dir = mainChar->getDirection();
-	int b2Dir = enemyVec[0]->getDirection();
-	
-
-	if (checkBikeCollision(mainChar->getImage(), mainChar->getXCentre() - mainChar->getDrawWidth()/2, mainChar->getYCentre() - mainChar->getDrawHeight()/2, b1Dir,
-		enemyVec[0]->getImage(), enemyVec[0]->getXCentre() - enemyVec[0]->getDrawWidth()/2, enemyVec[0]->getYCentre() - enemyVec[0]->getDrawHeight()/2 ,b2Dir)) {
-		std::cout << "Collision detected!" << std::endl;
-		reset();
-		// Handle collision (e.g., reduce lives, reset positions, etc.)
-	}
-	*/
 }
 
 
@@ -197,6 +184,9 @@ gameState::~gameState()
 		for (auto& enemy : enemyVec) {
 			delete enemy;
 		}
+	}
+	else {
+		std::cout << "DESTRUCTOR CALLED" << std::endl;
 	}
 }
 

@@ -1,6 +1,6 @@
  CourseworkBase2020
 
- Timestamp is 6816ac25 (Sun May  4 00:52:05 2025)
+ Timestamp is 6816b537 (Sun May  4 01:30:47 2025)
 
  Preferred load address is 00400000
 
@@ -75,7 +75,7 @@
  0000:00000000       ___volatile_metadata       00000000     <absolute>
  0000:00000000       ___x64_code_ranges_to_entry_points 00000000     <absolute>
  0000:00000000       ___x64_code_ranges_to_entry_points_count 00000000     <absolute>
- 0000:000000e6       ___safe_se_handler_count   000000e6     <absolute>
+ 0000:000000e7       ___safe_se_handler_count   000000e7     <absolute>
  0000:00000100       ___guard_flags             00000100     <absolute>
  0000:00000000       ___ImageBase               00400000     <linker-defined>
  0001:00007ed0       ??0bouncingLogo@@QAE@HHPAVBaseEngine@@HH@Z 00408ed0 f   bouncingLogo.obj
@@ -376,9 +376,9 @@
  0001:0000d080       ?_Adopt_locked@_Iterator_base12@std@@AAEXPBU_Container_base12@2@@Z 0040e080 f i bouncingLogo.obj
  0001:0000d0c0       ?_Adopt_unlocked@_Iterator_base12@std@@AAEXPBU_Container_base12@2@@Z 0040e0c0 f i bouncingLogo.obj
  0001:0000d140       ?_Alloc_sentinel_and_proxy@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IAEXXZ 0040e140 f i bouncingLogo.obj
- 0001:0000d1e0       ?_Unlock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEXXZ 0040e1e0 f i gameState.obj
+ 0001:0000d1e0       ?_Unwrapped@?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QBEPAPAVDisplayableObject@@XZ 0040e1e0 f i gameState.obj
  0001:0000d210       ?_Alloc_sentinel_and_proxy@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@2@$0A@@std@@@std@@IAEXXZ 0040e210 f i bouncingLogo.obj
- 0001:0000d2b0       ?imbue@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEXABVlocale@2@@Z 0040e2b0 f i gameState.obj
+ 0001:0000d2b0       ?is_open@?$basic_filebuf@DU?$char_traits@D@std@@@std@@QBE_NXZ 0040e2b0 f i gameState.obj
  0001:0000d2e0       ?_Allocate@?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAEXXZ 0040e2e0 f i bouncingLogo.obj
  0001:0000d310       ?_Allocate@?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAEXXZ 0040e310 f i bouncingLogo.obj
  0001:0000d340       ?_Allocate@_Default_allocate_traits@std@@SAPAXI@Z 0040e340 f i bouncingLogo.obj
@@ -441,12 +441,13 @@
  0001:0000e800       ?_Orphan_all_unlocked_v3@_Container_base12@std@@AAEXXZ 0040f800 f i bouncingLogo.obj
  0001:0000e870       ?_Orphan_me_locked_v3@_Iterator_base12@std@@AAEXXZ 0040f870 f i bouncingLogo.obj
  0001:0000e8b0       ?_Orphan_me_unlocked_v3@_Iterator_base12@std@@AAEXXZ 0040f8b0 f i bouncingLogo.obj
- 0001:0000e960       ?is_open@?$basic_filebuf@DU?$char_traits@D@std@@@std@@QBE_NXZ 0040f960 f i gameState.obj
+ 0001:0000e960       ?is_open@?$basic_ifstream@DU?$char_traits@D@std@@@std@@QBE_NXZ 0040f960 f i gameState.obj
  0001:0000e990       ?_Orphan_ptr@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEXQAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@2@@Z 0040f990 f i bouncingLogo.obj
  0001:0000ea40       ?_Release@?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAEPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@2@XZ 0040fa40 f i bouncingLogo.obj
  0001:0000ea70       ?_Release@?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@std@@@std@@@std@@QAEPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@2@XZ 0040fa70 f i bouncingLogo.obj
  0001:0000eaa0       ?_Release@_Basic_container_proxy_ptr12@std@@QAEXXZ 0040faa0 f i bouncingLogo.obj
  0001:0000eac0       ?_Rrotate@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEXPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$shared_ptr@VRawImageData@@@2@@std@@PAX@2@@Z 0040fac0 f i bouncingLogo.obj
+ 0001:0000eb60       ?getXCentre@DisplayableObject@@QBEHXZ 0040fb60 f i gameState.obj
  0001:0000eb90       ?_Rrotate@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@@std@@@std@@QAEXPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$weak_ptr@VRawImageData@@@2@@std@@PAX@2@@Z 0040fb90 f i bouncingLogo.obj
  0001:0000ec60       ?_Swap@?$_Ptr_base@VRawImageData@@@std@@IAEXAAV12@@Z 0040fc60 f i bouncingLogo.obj
  0001:0000eca0       ?_Swap_proxy_and_iterators@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXAAV12@@Z 0040fca0 f i bouncingLogo.obj
@@ -765,7 +766,7 @@
  0001:00018d20       ??$_Construct_n@$$V@?$vector@MV?$allocator@M@std@@@std@@AAEXI@Z 00419d20 f i gameSetupState.obj
  0001:00018e30       ??$_Construct_n@ABQAMABQAM@?$vector@MV?$allocator@M@std@@@std@@AAEXIABQAM0@Z 00419e30 f i gameSetupState.obj
  0001:00018f60       ??$_Construct_n@ABV?$vector@MV?$allocator@M@std@@@std@@@?$vector@V?$vector@MV?$allocator@M@std@@@std@@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@2@@std@@AAEXIABV?$vector@MV?$allocator@M@std@@@1@@Z 00419f60 f i gameSetupState.obj
- 0001:00019040       ??9?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QBE_NABV01@@Z 0041a040 f i gameState.obj
+ 0001:00019040       ?_Myptr@?$_String_val@U?$_Simple_types@D@std@@@std@@QAEPADXZ 0041a040 f i gameState.obj
  0001:00019080       ??$_Copy_memmove@PAMPAM@std@@YAPAMPAM00@Z 0041a080 f i gameSetupState.obj
  0001:00019110       ??$_Copy_memmove@PAPAVDrawingSurface@@PAPAV1@@std@@YAPAPAVDrawingSurface@@PAPAV1@00@Z 0041a110 f i gameSetupState.obj
  0001:000191a0       ??$_Copy_memmove_tail@PAM@std@@YAPAMQBDQAMII@Z 0041a1a0 f i gameSetupState.obj
@@ -794,10 +795,10 @@
  0001:00019b50       ??$_Unfancy@V?$vector@MV?$allocator@M@std@@@std@@@std@@YAPAV?$vector@MV?$allocator@M@std@@@0@PAV10@@Z 0041ab50 f i gameSetupState.obj
  0001:00019b60       ??$_Unfancy_maybe_null@PAVDrawingSurface@@@std@@YAPAPAVDrawingSurface@@PAPAV1@@Z 0041ab60 f i gameSetupState.obj
  0001:00019b70       ??$_Uninitialized_copy@PAMPAMV?$allocator@M@std@@@std@@YAPAMPAM00AAV?$allocator@M@0@@Z 0041ab70 f i gameSetupState.obj
- 0001:00019c80       ??R<lambda_9366063389c5f42a00a5088cf24e69de>@@QBE@QADIQBD@Z 0041ac80 f i gameState.obj
+ 0001:00019c80       ??R?$default_delete@V_Facet_base@std@@@std@@QBEXPAV_Facet_base@1@@Z 0041ac80 f i gameState.obj
  0001:00019cc0       ??$_Uninitialized_fill_n@V?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@std@@@std@@YAPAV?$vector@MV?$allocator@M@std@@@0@PAV10@IABV10@AAV?$allocator@V?$vector@MV?$allocator@M@std@@@std@@@0@@Z 0041acc0 f i gameSetupState.obj
  0001:00019d70       ??$_Uninitialized_move@PAPAVDrawingSurface@@V?$allocator@PAVDrawingSurface@@@std@@@std@@YAPAPAVDrawingSurface@@QAPAV1@0PAPAV1@AAV?$allocator@PAVDrawingSurface@@@0@@Z 0041ad70 f i gameSetupState.obj
- 0001:00019e50       ??R?$default_delete@V_Facet_base@std@@@std@@QBEXPAV_Facet_base@1@@Z 0041ae50 f i gameState.obj
+ 0001:00019e50       ??Y?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@D@Z 0041ae50 f i gameState.obj
  0001:00019e90       ??$_Uninitialized_value_construct_n@V?$allocator@M@std@@@std@@YAPAMPAMIAAV?$allocator@M@0@@Z 0041ae90 f i gameSetupState.obj
  0001:00019f80       ??$_Zero_range@PAM@std@@YAPAMQAM0@Z 0041af80 f i gameSetupState.obj
  0001:00019fd0       ??$addressof@PAVDrawingSurface@@@std@@YAPAPAVDrawingSurface@@AAPAV1@@Z 0041afd0 f i gameSetupState.obj
@@ -972,46 +973,53 @@
  0001:0001cef0       ??1_Reallocation_guard@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAE@XZ 0041def0 f i gameState.obj
  0001:0001cf40       ??1_Sentry_base@?$basic_istream@DU?$char_traits@D@std@@@std@@QAE@XZ 0041df40 f i gameState.obj
  0001:0001cfb0       ??1locale@std@@QAE@XZ      0041dfb0 f i gameState.obj
- 0001:0001d000       ??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@$$QAV01@@Z 0041e000 f i gameState.obj
- 0001:0001d070       ??A?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAEAAPAVPsyeb10Enemy@@I@Z 0041e070 f i gameState.obj
- 0001:0001d100       ??E?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QAEAAV01@XZ 0041e100 f i gameState.obj
- 0001:0001d230       ??R<lambda_15711c68e099a15a58f4d77303cb286d>@@QBE@QADQBDID@Z 0041e230 f i gameState.obj
- 0001:0001d290       ?_Calculate_growth@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@ABEII@Z 0041e290 f i gameState.obj
- 0001:0001d2f0       ?_Change_array@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@AAEXQAPAVPsyeb10Enemy@@II@Z 0041e2f0 f i gameState.obj
- 0001:0001d3a0       ?_Construct_empty@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXXZ 0041e3a0 f i gameState.obj
- 0001:0001d410       ?_Endwrite@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IAE_NXZ 0041e410 f i gameState.obj
- 0001:0001d520       ?_Erase_noexcept@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEAAV12@II@Z 0041e520 f i gameState.obj
- 0001:0001d5a0       ?_Get_buffer_view@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AU_Buffer_view@12@XZ 0041e5a0 f i gameState.obj
- 0001:0001d680       ?_Init@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IAEXPAU_iobuf@@W4_Initfl@12@@Z 0041e680 f i gameState.obj
- 0001:0001d750       ?_Init@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IAEXPBDIH@Z 0041e750 f i gameState.obj
- 0001:0001d870       ?_Initcvt@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IAEXABV?$codecvt@DDU_Mbstatet@@@2@@Z 0041e870 f i gameState.obj
- 0001:0001d8c0       ?_Orphan_range_locked@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@ABEXPAPAVPsyeb10Enemy@@0@Z 0041e8c0 f i gameState.obj
- 0001:0001d930       ?_Orphan_range_unlocked@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@ABEXPAPAVPsyeb10Enemy@@0@Z 0041e930 f i gameState.obj
- 0001:0001d9a0       ?_Reset_back@?$basic_filebuf@DU?$char_traits@D@std@@@std@@AAEXXZ 0041e9a0 f i gameState.obj
- 0001:0001d9e0       ?_Tidy@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IAEXXZ 0041e9e0 f i gameState.obj
- 0001:0001da90       ?_Tidy@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@AAEXXZ 0041ea90 f i gameState.obj
- 0001:0001db30       ?_Verify_range@std@@YAXABV?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@1@0@Z 0041eb30 f i gameState.obj
- 0001:0001dc00       ?_Verify_range@std@@YAXABV?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@1@0@Z 0041ec00 f i gameState.obj
- 0001:0001dcd0       ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@QBDI@Z 0041ecd0 f i gameState.obj
- 0001:0001dd50       ?back@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAEAAPAVPsyeb10Enemy@@XZ 0041ed50 f i gameState.obj
- 0001:0001ddd0       ?begin@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@2@XZ 0041edd0 f i gameState.obj
- 0001:0001de10       ?deallocate@?$allocator@PAVPsyeb10Enemy@@@std@@QAEXQAPAVPsyeb10Enemy@@I@Z 0041ee10 f i gameState.obj
- 0001:0001de90       ?drawBackgroundThickLine@BaseEngine@@QAEXHHHHIH@Z 0041ee90 f i gameState.obj
- 0001:0001def0       ?erase@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@2@@Z 0041eef0 f i gameState.obj
- 0001:0001e050       ?erase@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@2@0@Z 0041f050 f i gameState.obj
+ 0001:0001d000       ??8?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QBE_NABV01@@Z 0041e000 f i gameState.obj
+ 0001:0001d070       ??B?$fpos@U_Mbstatet@@@std@@QBE_JXZ 0041e070 f i gameState.obj
+ 0001:0001d0a0       ?_Set_back@?$basic_filebuf@DU?$char_traits@D@std@@@std@@AAEXXZ 0041e0a0 f i gameState.obj
+ 0001:0001d100       ??R<lambda_15711c68e099a15a58f4d77303cb286d>@@QBE@QADQBDID@Z 0041e100 f i gameState.obj
+ 0001:0001d160       ?_Change_array@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@AAEXQAPAVPsyeb10Enemy@@II@Z 0041e160 f i gameState.obj
+ 0001:0001d230       ??R<lambda_9366063389c5f42a00a5088cf24e69de>@@QBE@QADIQBD@Z 0041e230 f i gameState.obj
+ 0001:0001d270       ?_Erase_noexcept@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEAAV12@II@Z 0041e270 f i gameState.obj
+ 0001:0001d2f0       ?_Check_offset@?$_String_val@U?$_Simple_types@D@std@@@std@@QBEXI@Z 0041e2f0 f i gameState.obj
+ 0001:0001d310       ?_Get_buffer_view@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AU_Buffer_view@12@XZ 0041e310 f i gameState.obj
+ 0001:0001d410       ?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXI@Z 0041e410 f i gameState.obj
+ 0001:0001d450       ?_Getfacet@locale@std@@QBEPBVfacet@12@I@Z 0041e450 f i gameState.obj
+ 0001:0001d4d0       ?_Init@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IAEXPAU_iobuf@@W4_Initfl@12@@Z 0041e4d0 f i gameState.obj
+ 0001:0001d5a0       ?_Get_first@?$_Compressed_pair@U?$default_delete@V_Facet_base@std@@@std@@PAV_Facet_base@2@$00@std@@QAEAAU?$default_delete@V_Facet_base@std@@@2@XZ 0041e5a0 f i gameState.obj
+ 0001:0001d5b0       ?_Init@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IAEXPBDIH@Z 0041e5b0 f i gameState.obj
+ 0001:0001d6d0       ?close@?$basic_filebuf@DU?$char_traits@D@std@@@std@@QAEPAV12@XZ 0041e6d0 f i gameState.obj
+ 0001:0001d750       ?_Initcvt@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IAEXABV?$codecvt@DDU_Mbstatet@@@2@@Z 0041e750 f i gameState.obj
+ 0001:0001d7a0       ?front@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAADXZ 0041e7a0 f i gameState.obj
+ 0001:0001d870       ?_Is_constant_evaluated@std@@YA_NXZ 0041e870 f i gameState.obj
+ 0001:0001d8c0       ?_Orphan_range_unlocked@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@ABEXPAPAVPsyeb10Enemy@@0@Z 0041e8c0 f i gameState.obj
+ 0001:0001d930       ?_Release@?$_Uninitialized_backout_al@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAEPAPAVPsyeb10Enemy@@XZ 0041e930 f i gameState.obj
+ 0001:0001d9a0       ?_Seek_to@?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QAEXPBQAVDisplayableObject@@@Z 0041e9a0 f i gameState.obj
+ 0001:0001d9e0       ?_Tidy@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@AAEXXZ 0041e9e0 f i gameState.obj
+ 0001:0001da90       ?_Unchecked_begin@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAEPAPAVPsyeb10Enemy@@XZ 0041ea90 f i gameState.obj
+ 0001:0001db30       ?_Verify_range@std@@YAXABV?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@1@0@Z 0041eb30 f i gameState.obj
+ 0001:0001dc00       ?_Xlength@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@CAXXZ 0041ec00 f i gameState.obj
+ 0001:0001dc10       ?open@?$basic_filebuf@DU?$char_traits@D@std@@@std@@QAEPAV12@PBDHH@Z 0041ec10 f i gameState.obj
+ 0001:0001dcd0       ?back@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAEAAPAVPsyeb10Enemy@@XZ 0041ecd0 f i gameState.obj
+ 0001:0001dd50       ?begin@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@2@XZ 0041ed50 f i gameState.obj
+ 0001:0001ddd0       ?begin@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@2@XZ 0041edd0 f i gameState.obj
+ 0001:0001de10       ?drawBackgroundRectangle@BaseEngine@@QAEXHHHHI@Z 0041ee10 f i gameState.obj
+ 0001:0001de90       ?end@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@2@XZ 0041ee90 f i gameState.obj
+ 0001:0001ded0       ?pbackfail@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHH@Z 0041eed0 f i gameState.obj
+ 0001:0001e050       ?find@?$_Narrow_char_traits@DH@std@@SAPBDQBDIABD@Z 0041f050 f i gameState.obj
+ 0001:0001e070       ?push_back@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXD@Z 0041f070 f i gameState.obj
+ 0001:0001e100       ?removeDisplayableObject@DisplayableObjectContainer@@QAE_NPAVDisplayableObject@@@Z 0041f100 f i gameState.obj
  0001:0001e1f0       ?_Verify_offset@?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@I@std@@@std@@@std@@QBEXH@Z 0041f1f0 f i Psyeb10Enemy.obj
  0001:0001e390       ?deallocate@?$allocator@I@std@@QAEXQAII@Z 0041f390 f i Psyeb10Enemy.obj
  0001:0001e410       ?erase@?$vector@IV?$allocator@I@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@I@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@I@std@@@std@@@2@0@Z 0041f410 f i Psyeb10Enemy.obj
  0001:0001e5a0       ?pop_back@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEXXZ 0041f5a0 f i Psyeb10Enemy.obj
  0001:0001e6c0       ?pop_front@?$deque@U?$pair@HH@std@@V?$allocator@U?$pair@HH@std@@@2@@std@@QAEXXZ 0041f6c0 f i Psyeb10Enemy.obj
  0001:0001e7f0       ??A?$vector@VSimpleImage@@V?$allocator@VSimpleImage@@@std@@@std@@QBEABVSimpleImage@@I@Z 0041f7f0 f i Psyeb10Bike.obj
- 0001:0001e880       ?find@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEIQBDI@Z 0041f880 f i gameState.obj
- 0001:0001e8c0       ?max_size@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QBEIXZ 0041f8c0 f i gameState.obj
+ 0001:0001e8c0       ?move@?$_Char_traits@DH@std@@SAPADQADQBDI@Z 0041f8c0 f i gameState.obj
  0001:0001e920       ??$?0AAPAV_Facet_base@std@@@?$_Compressed_pair@U?$default_delete@V_Facet_base@std@@@std@@PAV_Facet_base@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@AAPAV_Facet_base@1@@Z 0041f920 f i gameState.obj
  0001:0001e950       ??$?0ABV?$allocator@D@std@@$$V@?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABV?$allocator@D@1@@Z 0041f950 f i gameState.obj
  0001:0001e980       ??$?0U?$default_delete@V_Facet_base@std@@@std@@$0A@@?$unique_ptr@V_Facet_base@std@@U?$default_delete@V_Facet_base@std@@@2@@std@@QAE@PAV_Facet_base@1@@Z 0041f980 f i gameState.obj
  0001:0001e9b0       ??$?5DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z 0041f9b0 f i gameState.obj
- 0001:0001ec30       ?front@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAADXZ 0041fc30 f i gameState.obj
+ 0001:0001ec30       ?getDrawHeight@DisplayableObject@@QBEHXZ 0041fc30 f i gameState.obj
  0001:0001ecd0       ??$_Adl_verify_range@V?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@V12@@std@@YAXABV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@0@0@Z 0041fcd0 f i gameState.obj
  0001:0001ecf0       ??$_Adl_verify_range@V?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@std@@V12@@std@@YAXABV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@0@0@Z 0041fcf0 f i gameState.obj
  0001:0001ed10       ??$_Allocate_at_least_helper@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@YAPAPAVPsyeb10Enemy@@AAV?$allocator@PAVPsyeb10Enemy@@@0@AAI@Z 0041fd10 f i gameState.obj
@@ -1031,9 +1039,8 @@
  0001:0001f190       ??$_Emplace_one_at_back@ABQAVPsyeb10Enemy@@@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@AAEAAPAVPsyeb10Enemy@@ABQAV2@@Z 00420190 f i gameState.obj
  0001:0001f210       ??$_Emplace_one_at_back@PAVPsyeb10Enemy@@@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@AAEAAPAVPsyeb10Enemy@@$$QAPAV2@@Z 00420210 f i gameState.obj
  0001:0001f290       ??$_Emplace_reallocate@ABQAVDisplayableObject@@@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@AAEPAPAVDisplayableObject@@QAPAV2@ABQAV2@@Z 00420290 f i gameState.obj
- 0001:0001f460       ?stoi@std@@YAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@PAIH@Z 00420460 f i gameState.obj
  0001:0001f4e0       ??$_Emplace_reallocate@ABQAVPsyeb10Enemy@@@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@AAEPAPAVPsyeb10Enemy@@QAPAV2@ABQAV2@@Z 004204e0 f i gameState.obj
- 0001:0001f6b0       ?str@?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ 004206b0 f i gameState.obj
+ 0001:0001f6b0       ?sync@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHXZ 004206b0 f i gameState.obj
  0001:0001f730       ??$_Emplace_reallocate@PAVPsyeb10Enemy@@@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@AAEPAPAVPsyeb10Enemy@@QAPAV2@$$QAPAV2@@Z 00420730 f i gameState.obj
  0001:0001f980       ??$_Fgetc@D@std@@YA_NAADPAU_iobuf@@@Z 00420980 f i gameState.obj
  0001:0001f9c0       ??$_Find_unchecked@PAPAVDisplayableObject@@PAV1@@std@@YAPAPAVDisplayableObject@@PAPAV1@QAPAV1@ABQAV1@@Z 004209c0 f i gameState.obj
@@ -1094,11 +1101,12 @@
  0001:00020980       ??$max@H@std@@YAABHABH0@Z  00421980 f i gameState.obj
  0001:000209e0       ??$move@AAPAPAVPsyeb10Enemy@@@std@@YA$$QAPAPAVPsyeb10Enemy@@AAPAPAV1@@Z 004219e0 f i gameState.obj
  0001:000209f0       ??$move@AAPAVPsyeb10Enemy@@@std@@YA$$QAPAVPsyeb10Enemy@@AAPAV1@@Z 004219f0 f i gameState.obj
- 0001:00020a00       ?open@?$basic_filebuf@DU?$char_traits@D@std@@@std@@QAEPAV12@PBDHH@Z 00421a00 f i gameState.obj
- 0001:00020ac0       ?pbackfail@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAEHH@Z 00421ac0 f i gameState.obj
+ 0001:00020a00       ?str@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ 00421a00 f i gameState.obj
+ 0001:00020ac0       ?pointer_to@?$pointer_traits@PAD@std@@SAPADAAD@Z 00421ac0 f i gameState.obj
  0001:00020bf0       ??$move@AAV?$basic_istream@DU?$char_traits@D@std@@@std@@@std@@YA$$QAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@@Z 00421bf0 f i gameState.obj
- 0001:00020c00       ?overflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHH@Z 00421c00 f i gameState.obj
- 0001:00020de0       ?push_back@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXD@Z 00421de0 f i gameState.obj
+ 0001:00020c00       ?seekpos@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@V32@H@Z 00421c00 f i gameState.obj
+ 0001:00020de0       ?push_back@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAEXABQAVDisplayableObject@@@Z 00421de0 f i gameState.obj
+ 0001:00020e70       ??A?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAEAAPAVPsyeb10Enemy@@I@Z 00421e70 f i gameState.obj
  0001:00020f10       ??0?$_Uninitialized_backout_al@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAE@PAPAVPsyeb10Enemy@@AAV?$allocator@PAVPsyeb10Enemy@@@1@@Z 00421f10 f i gameState.obj
  0001:00020f50       ??0?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QAE@$$QAV01@@Z 00421f50 f i gameState.obj
  0001:00020f90       ??0?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QAE@ABV01@@Z 00421f90 f i gameState.obj
@@ -1109,136 +1117,127 @@
  0001:000210a0       ??0?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QAE@PAPAVDisplayableObject@@PBU_Container_base12@1@@Z 004220a0 f i gameState.obj
  0001:000210d0       ??0?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@std@@QAE@$$QAV01@@Z 004220d0 f i gameState.obj
  0001:00021110       ??0?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@std@@QAE@PAPAVPsyeb10Enemy@@PBU_Container_base12@1@@Z 00422110 f i gameState.obj
- 0001:00021140       ?removeDisplayableObject@DisplayableObjectContainer@@QAE_NPAVDisplayableObject@@@Z 00422140 f i gameState.obj
+ 0001:00021140       ?seekoff@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@_JHH@Z 00422140 f i gameState.obj
  0001:00021260       ??0?$basic_filebuf@DU?$char_traits@D@std@@@std@@QAE@XZ 00422260 f i gameState.obj
- 0001:00021290       ?overflow@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAEHH@Z 00422290 f i gameState.obj
+ 0001:00021290       ?pause@BaseEngine@@QAEXXZ  00422290 f i gameState.obj
  0001:000214a0       ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@ABV?$allocator@D@1@@Z 004224a0 f i gameState.obj
  0001:00021560       ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ 00422560 f i gameState.obj
  0001:000215c0       ??0?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@H@Z 004225c0 f i gameState.obj
  0001:000216e0       ??0?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@H@Z 004226e0 f i gameState.obj
- 0001:00021730       ?pbackfail@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHH@Z 00422730 f i gameState.obj
+ 0001:00021730       ?pbackfail@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAEHH@Z 00422730 f i gameState.obj
  0001:000218a0       ??0?$fpos@U_Mbstatet@@@std@@QAE@U_Mbstatet@@_J@Z 004228a0 f i gameState.obj
  0001:00021960       ??0bad_cast@std@@QAE@ABV01@@Z 00422960 f i gameState.obj
  0001:000219c0       ??0bad_cast@std@@QAE@XZ    004229c0 f i gameState.obj
  0001:00021a60       ??0menuTileManager@@QAE@HHHH@Z 00422a60 f i gameState.obj
- 0001:00021ab0       ?str@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ 00422ab0 f i gameState.obj
+ 0001:00021ab0       ?str@?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ 00422ab0 f i gameState.obj
  0001:00021b60       ??1?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QAE@XZ 00422b60 f i gameState.obj
  0001:00021b80       ??1?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@std@@QAE@XZ 00422b80 f i gameState.obj
  0001:00021ba0       ??1?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QAE@XZ 00422ba0 f i gameState.obj
  0001:00021c30       ??1?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@std@@QAE@XZ 00422c30 f i gameState.obj
- 0001:00021c50       ?setAllObjectsVisible@DisplayableObjectContainer@@QBEX_N@Z 00422c50 f i gameState.obj
+ 0001:00021c50       ?setbuf@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@PAD_J@Z 00422c50 f i gameState.obj
  0001:00021d40       ??1?$basic_ofstream@DU?$char_traits@D@std@@@std@@UAE@XZ 00422d40 f i gameState.obj
  0001:00021db0       ??1?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UAE@XZ 00422db0 f i gameState.obj
  0001:00021df0       ??1?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UAE@XZ 00422df0 f i gameState.obj
  0001:00021e60       ??1?$unique_ptr@V_Facet_base@std@@U?$default_delete@V_Facet_base@std@@@2@@std@@QAE@XZ 00422e60 f i gameState.obj
  0001:00021ec0       ??1?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAE@XZ 00422ec0 f i gameState.obj
  0001:00021fd0       ??1bad_cast@std@@UAE@XZ    00422fd0 f i gameState.obj
- 0001:00022020       ??1pauseState@@UAE@XZ      00423020 f i gameState.obj
- 0001:000220b0       ??1sentry@?$basic_istream@DU?$char_traits@D@std@@@std@@QAE@XZ 004230b0 f i gameState.obj
- 0001:00022150       ??8?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QBE_NABV01@@Z 00423150 f i gameState.obj
- 0001:00022250       ??B?$fpos@U_Mbstatet@@@std@@QBE_JXZ 00423250 f i gameState.obj
- 0001:00022280       ?underflow@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAEHXZ 00423280 f i gameState.obj
- 0001:000223c0       ??Bsentry@?$basic_istream@DU?$char_traits@D@std@@@std@@QBE_NXZ 004233c0 f i gameState.obj
- 0001:00022410       ??D?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QBEABQAVDisplayableObject@@XZ 00423410 f i gameState.obj
- 0001:00022580       ??E?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QAE?AV01@H@Z 00423580 f i gameState.obj
- 0001:000225c0       ?xsputn@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE_JPBD_J@Z 004235c0 f i gameState.obj
- 0001:000226f0       ??Y?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@D@Z 004236f0 f i gameState.obj
- 0001:00022720       ??_D?$basic_ifstream@DU?$char_traits@D@std@@@std@@QAEXXZ 00423720 f i gameState.obj
+ 0001:00022020       ??1sentry@?$basic_istream@DU?$char_traits@D@std@@@std@@QAE@XZ 00423020 f i gameState.obj
+ 0001:000220b0       ??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@$$QAV01@@Z 004230b0 f i gameState.obj
+ 0001:00022150       ??9?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QBE_NABV01@@Z 00423150 f i gameState.obj
+ 0001:00022250       ??Bsentry@?$basic_istream@DU?$char_traits@D@std@@@std@@QBE_NXZ 00423250 f i gameState.obj
+ 0001:00022280       ?xsgetn@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE_JPAD_J@Z 00423280 f i gameState.obj
+ 0001:00022410       ??E?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QAE?AV01@H@Z 00423410 f i gameState.obj
+ 0001:00022450       ??E?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QAEAAV01@XZ 00423450 f i gameState.obj
+ 0001:000226f0       ??_D?$basic_ifstream@DU?$char_traits@D@std@@@std@@QAEXXZ 004236f0 f i gameState.obj
+ 0001:00022720       ??_D?$basic_ofstream@DU?$char_traits@D@std@@@std@@QAEXXZ 00423720 f i gameState.obj
  0001:0002274b       ??_E?$basic_ifstream@DU?$char_traits@D@std@@@std@@$4PPPPPPPM@A@AEPAXI@Z 0042374b f i gameState.obj
  0001:00022755       ??_E?$basic_ofstream@DU?$char_traits@D@std@@@std@@$4PPPPPPPM@A@AEPAXI@Z 00423755 f i gameState.obj
  0001:0002275f       ??_E?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@$4PPPPPPPM@A@AEPAXI@Z 0042375f f i gameState.obj
- 0001:00022770       ??_D?$basic_ofstream@DU?$char_traits@D@std@@@std@@QAEXXZ 00423770 f i gameState.obj
- 0001:000227b0       ??_D?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXXZ 004237b0 f i gameState.obj
- 0001:00022800       ??_E?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 00423800 f i gameState.obj
- 0001:00022800       ??_G?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 00423800 f i gameState.obj
- 0001:00022850       ??_E?$basic_ifstream@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 00423850 f i gameState.obj
- 0001:00022850       ??_G?$basic_ifstream@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 00423850 f i gameState.obj
- 0001:00022890       ??_E?$basic_ofstream@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 00423890 f i gameState.obj
- 0001:00022890       ??_G?$basic_ofstream@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 00423890 f i gameState.obj
- 0001:000228e0       ??_E?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UAEPAXI@Z 004238e0 f i gameState.obj
- 0001:000228e0       ??_G?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UAEPAXI@Z 004238e0 f i gameState.obj
- 0001:00022920       ??_E?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UAEPAXI@Z 00423920 f i gameState.obj
- 0001:00022920       ??_G?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UAEPAXI@Z 00423920 f i gameState.obj
- 0001:00022960       ??_Ebad_cast@std@@UAEPAXI@Z 00423960 f i gameState.obj
- 0001:00022960       ??_Gbad_cast@std@@UAEPAXI@Z 00423960 f i gameState.obj
- 0001:000229a0       ??_EmenuTileManager@@UAEPAXI@Z 004239a0 f i gameState.obj
- 0001:000229a0       ??_GmenuTileManager@@UAEPAXI@Z 004239a0 f i gameState.obj
- 0001:000229e0       ??_EpauseState@@UAEPAXI@Z  004239e0 f i gameState.obj
- 0001:000229e0       ??_GpauseState@@UAEPAXI@Z  004239e0 f i gameState.obj
- 0001:00022a50       ?_Calculate_growth@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABEII@Z 00423a50 f i gameState.obj
- 0001:00022b90       ?_Check_offset@?$_String_val@U?$_Simple_types@D@std@@@std@@QBEXI@Z 00423b90 f i gameState.obj
- 0001:00022c30       ?_Clamp_suffix_size@?$_String_val@U?$_Simple_types@D@std@@@std@@QBEIII@Z 00423c30 f i gameState.obj
- 0001:00022cc0       ?_Compat@?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QBEXABV12@@Z 00423cc0 f i gameState.obj
- 0001:00022d40       ?xsgetn@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE_JPAD_J@Z 00423d40 f i gameState.obj
- 0001:00022ef0       ?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXI@Z 00423ef0 f i gameState.obj
- 0001:00023050       ?_Get_first@?$_Compressed_pair@U?$default_delete@V_Facet_base@std@@@std@@PAV_Facet_base@2@$00@std@@QAEAAU?$default_delete@V_Facet_base@std@@@2@XZ 00424050 f i gameState.obj
- 0001:00023070       ?_Get_first@?$_Compressed_pair@V?$allocator@PAVPsyeb10Enemy@@@std@@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@2@$00@std@@QBEABV?$allocator@PAVPsyeb10Enemy@@@2@XZ 00424070 f i gameState.obj
- 0001:00023110       ?_Getal@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@ABEABV?$allocator@PAVPsyeb10Enemy@@@2@XZ 00424110 f i gameState.obj
- 0001:00023180       ?_Getfacet@locale@std@@QBEPBVfacet@12@I@Z 00424180 f i gameState.obj
- 0001:00023280       ?_Getstate@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@CAHH@Z 00424280 f i gameState.obj
- 0001:00023490       ?_Is_constant_evaluated@std@@YA_NXZ 00424490 f i gameState.obj
- 0001:000234e0       ?_Lock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEXXZ 004244e0 f i gameState.obj
- 0001:00023510       ?_Myptr@?$_String_val@U?$_Simple_types@D@std@@@std@@QAEPADXZ 00424510 f i gameState.obj
- 0001:000235a0       ?_Orphan_range@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@ABEXPAPAVPsyeb10Enemy@@0@Z 004245a0 f i gameState.obj
- 0001:000236a0       ?_Release@?$_Uninitialized_backout_al@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAEPAPAVPsyeb10Enemy@@XZ 004246a0 f i gameState.obj
- 0001:00023700       ?_Seek_to@?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QAEXPBQAVDisplayableObject@@@Z 00424700 f i gameState.obj
- 0001:00023780       ?_Seek_to@?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@std@@QAEXPBQAVPsyeb10Enemy@@@Z 00424780 f i gameState.obj
- 0001:000237b0       ?_Set_back@?$basic_filebuf@DU?$char_traits@D@std@@@std@@AAEXXZ 004247b0 f i gameState.obj
- 0001:00023880       ?_Throw_bad_cast@std@@YAXXZ 00424880 f i gameState.obj
- 0001:00023980       ?_Unchecked_begin@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAEPAPAVPsyeb10Enemy@@XZ 00424980 f i gameState.obj
- 0001:000239b0       ?_Unchecked_end@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAEPAPAVPsyeb10Enemy@@XZ 004249b0 f i gameState.obj
- 0001:000239f0       ?_Unwrapped@?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QBEPAPAVDisplayableObject@@XZ 004249f0 f i gameState.obj
- 0001:00023af0       ?_Unwrapped@?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@std@@QBEPAPAVPsyeb10Enemy@@XZ 00424af0 f i gameState.obj
- 0001:00023c30       ?_Xlength@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@CAXXZ 00424c30 f i gameState.obj
- 0001:00023c60       ?_Xran@?$_String_val@U?$_Simple_types@D@std@@@std@@SAXXZ 00424c60 f i gameState.obj
- 0001:00023ca0       ?allocate@?$allocator@PAVPsyeb10Enemy@@@std@@QAEPAPAVPsyeb10Enemy@@I@Z 00424ca0 f i gameState.obj
- 0001:00023d40       ?appendObjectToArray@DisplayableObjectContainer@@QAEXPAVDisplayableObject@@@Z 00424d40 f i gameState.obj
- 0001:00023e80       ?begin@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@2@XZ 00424e80 f i gameState.obj
- 0001:00023f00       ?begin@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@2@XZ 00424f00 f i gameState.obj
- 0001:00023f90       ?capacity@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QBEIXZ 00424f90 f i gameState.obj
- 0001:00023fd0       ?checkRectangles@CollisionDetection@@SA_NHHHHHHHH@Z 00424fd0 f i gameState.obj
- 0001:00024010       ?close@?$basic_filebuf@DU?$char_traits@D@std@@@std@@QAEPAV12@XZ 00425010 f i gameState.obj
- 0001:000240b0       ?close@?$basic_ifstream@DU?$char_traits@D@std@@@std@@QAEXXZ 004250b0 f i gameState.obj
- 0001:000240f0       ?close@?$basic_ofstream@DU?$char_traits@D@std@@@std@@QAEXXZ 004250f0 f i gameState.obj
- 0001:000241a0       ?drawBackgroundRectangle@BaseEngine@@QAEXHHHHI@Z 004251a0 f i gameState.obj
- 0001:000241f0       ?drawBackgroundString@BaseEngine@@QAEXHHPBDIPAVFont@@@Z 004251f0 f i gameState.obj
- 0001:00024290       ?end@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@2@XZ 00425290 f i gameState.obj
- 0001:000242d0       ?end@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@2@XZ 004252d0 f i gameState.obj
- 0001:00024310       ?end@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@2@XZ 00425310 f i gameState.obj
- 0001:00024350       ?eq@?$_Narrow_char_traits@DH@std@@SA_NDD@Z 00425350 f i gameState.obj
- 0001:00024500       ?erase@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@I@Z 00425500 f i gameState.obj
- 0001:00024530       ?seekpos@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@V32@H@Z 00425530 f i gameState.obj
- 0001:000246f0       ?erase@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@II@Z 004256f0 f i gameState.obj
- 0001:00024810       ?find@?$_Narrow_char_traits@DH@std@@SAPBDQBDIABD@Z 00425810 f i gameState.obj
- 0001:00024870       ?getDrawHeight@DisplayableObject@@QBEHXZ 00425870 f i gameState.obj
- 0001:00024890       ?getDrawWidth@DisplayableObject@@QBEHXZ 00425890 f i gameState.obj
- 0001:000248c0       ?getMapHeight@TileManager@@QBEHXZ 004258c0 f i gameState.obj
- 0001:000248f0       ?getMapWidth@TileManager@@QBEHXZ 004258f0 f i gameState.obj
- 0001:00024910       ?getXCentre@DisplayableObject@@QBEHXZ 00425910 f i gameState.obj
- 0001:00024940       ?getYCentre@DisplayableObject@@QBEHXZ 00425940 f i gameState.obj
- 0001:00024970       ?get_allocator@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$allocator@D@2@XZ 00425970 f i gameState.obj
- 0001:000249c0       ?is_open@?$basic_ifstream@DU?$char_traits@D@std@@@std@@QBE_NXZ 004259c0 f i gameState.obj
- 0001:00024a10       ?is_open@?$basic_ofstream@DU?$char_traits@D@std@@@std@@QBE_NXZ 00425a10 f i gameState.obj
- 0001:00024a40       ?max_size@?$_Default_allocator_traits@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@SAIABV?$allocator@PAVPsyeb10Enemy@@@2@@Z 00425a40 f i gameState.obj
- 0001:00024ab0       ?move@?$_Char_traits@DH@std@@SAPADQADQBDI@Z 00425ab0 f i gameState.obj
- 0001:00024ba0       ?not_eof@?$_Narrow_char_traits@DH@std@@SAHH@Z 00425ba0 f i gameState.obj
- 0001:00024df0       ?notifyObjectsAboutKeys@BaseEngine@@QAEX_N@Z 00425df0 f i gameState.obj
- 0001:00024e10       ?seekoff@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@_JHH@Z 00425e10 f i gameState.obj
- 0001:00025090       ?uflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHXZ 00426090 f i gameState.obj
- 0001:00025350       ?pause@BaseEngine@@QAEXXZ  00426350 f i gameState.obj
- 0001:00025440       ?pointer_to@?$pointer_traits@PAD@std@@SAPADAAD@Z 00426440 f i gameState.obj
- 0001:00025490       ?push_back@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAEXABQAVDisplayableObject@@@Z 00426490 f i gameState.obj
- 0001:000254c0       ?push_back@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAEX$$QAPAVPsyeb10Enemy@@@Z 004264c0 f i gameState.obj
- 0001:000255d0       ?push_back@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAEXABQAVPsyeb10Enemy@@@Z 004265d0 f i gameState.obj
- 0001:000256e0       ?release@?$unique_ptr@V_Facet_base@std@@U?$default_delete@V_Facet_base@std@@@2@@std@@QAEPAV_Facet_base@2@XZ 004266e0 f i gameState.obj
- 0001:00025ac0       ?seekoff@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@_JHH@Z 00426ac0 f i gameState.obj
- 0001:00025df0       ?seekpos@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@V32@H@Z 00426df0 f i gameState.obj
- 0001:00025f60       ?setbuf@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@PAD_J@Z 00426f60 f i gameState.obj
- 0001:00026040       ?state@?$fpos@U_Mbstatet@@@std@@QBE?AU_Mbstatet@@XZ 00427040 f i gameState.obj
- 0001:00026110       ?sync@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHXZ 00427110 f i gameState.obj
- 0001:00026430       ?to_char_type@?$_Narrow_char_traits@DH@std@@SADH@Z 00427430 f i gameState.obj
- 0001:000264f0       ?to_int_type@?$_Narrow_char_traits@DH@std@@SAHD@Z 004274f0 f i gameState.obj
- 0001:000267c0       ?underflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHXZ 004277c0 f i gameState.obj
+ 0001:00022770       ??_D?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXXZ 00423770 f i gameState.obj
+ 0001:000227b0       ??_E?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 004237b0 f i gameState.obj
+ 0001:000227b0       ??_G?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 004237b0 f i gameState.obj
+ 0001:00022800       ??_E?$basic_ifstream@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 00423800 f i gameState.obj
+ 0001:00022800       ??_G?$basic_ifstream@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 00423800 f i gameState.obj
+ 0001:00022850       ??_E?$basic_ofstream@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 00423850 f i gameState.obj
+ 0001:00022850       ??_G?$basic_ofstream@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 00423850 f i gameState.obj
+ 0001:00022890       ??_E?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UAEPAXI@Z 00423890 f i gameState.obj
+ 0001:00022890       ??_G?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UAEPAXI@Z 00423890 f i gameState.obj
+ 0001:000228e0       ??_E?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UAEPAXI@Z 004238e0 f i gameState.obj
+ 0001:000228e0       ??_G?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UAEPAXI@Z 004238e0 f i gameState.obj
+ 0001:00022920       ??_Ebad_cast@std@@UAEPAXI@Z 00423920 f i gameState.obj
+ 0001:00022920       ??_Gbad_cast@std@@UAEPAXI@Z 00423920 f i gameState.obj
+ 0001:00022960       ??_EmenuTileManager@@UAEPAXI@Z 00423960 f i gameState.obj
+ 0001:00022960       ??_GmenuTileManager@@UAEPAXI@Z 00423960 f i gameState.obj
+ 0001:000229a0       ??_EpauseState@@UAEPAXI@Z  004239a0 f i gameState.obj
+ 0001:000229a0       ??_GpauseState@@UAEPAXI@Z  004239a0 f i gameState.obj
+ 0001:000229e0       ?_Calculate_growth@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABEII@Z 004239e0 f i gameState.obj
+ 0001:00022a50       ?_Calculate_growth@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@ABEII@Z 00423a50 f i gameState.obj
+ 0001:00022b90       ?_Clamp_suffix_size@?$_String_val@U?$_Simple_types@D@std@@@std@@QBEIII@Z 00423b90 f i gameState.obj
+ 0001:00022c30       ?_Compat@?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QBEXABV12@@Z 00423c30 f i gameState.obj
+ 0001:00022cc0       ?_Construct_empty@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXXZ 00423cc0 f i gameState.obj
+ 0001:00022d40       ?xsputn@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE_JPBD_J@Z 00423d40 f i gameState.obj
+ 0001:00022f30       ?_Endwrite@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IAE_NXZ 00423f30 f i gameState.obj
+ 0001:00023050       ?_Get_first@?$_Compressed_pair@V?$allocator@PAVPsyeb10Enemy@@@std@@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@2@$00@std@@QBEABV?$allocator@PAVPsyeb10Enemy@@@2@XZ 00424050 f i gameState.obj
+ 0001:00023070       ?_Getal@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@ABEABV?$allocator@PAVPsyeb10Enemy@@@2@XZ 00424070 f i gameState.obj
+ 0001:00023180       ?_Getstate@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@CAHH@Z 00424180 f i gameState.obj
+ 0001:000232e0       ??D?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@QBEABQAVDisplayableObject@@XZ 004242e0 f i gameState.obj
+ 0001:00023490       ?_Lock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEXXZ 00424490 f i gameState.obj
+ 0001:00023510       ?_Orphan_range@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@ABEXPAPAVPsyeb10Enemy@@0@Z 00424510 f i gameState.obj
+ 0001:000235a0       ?_Orphan_range_locked@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@ABEXPAPAVPsyeb10Enemy@@0@Z 004245a0 f i gameState.obj
+ 0001:000236a0       ?_Reset_back@?$basic_filebuf@DU?$char_traits@D@std@@@std@@AAEXXZ 004246a0 f i gameState.obj
+ 0001:00023700       ?_Seek_to@?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@std@@QAEXPBQAVPsyeb10Enemy@@@Z 00424700 f i gameState.obj
+ 0001:000237b0       ?_Throw_bad_cast@std@@YAXXZ 004247b0 f i gameState.obj
+ 0001:00023880       ?_Tidy@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IAEXXZ 00424880 f i gameState.obj
+ 0001:00023980       ?_Unchecked_end@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAEPAPAVPsyeb10Enemy@@XZ 00424980 f i gameState.obj
+ 0001:000239b0       ?_Unlock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEXXZ 004249b0 f i gameState.obj
+ 0001:000239f0       ?_Unwrapped@?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@std@@QBEPAPAVPsyeb10Enemy@@XZ 004249f0 f i gameState.obj
+ 0001:00023af0       ?_Verify_range@std@@YAXABV?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@1@0@Z 00424af0 f i gameState.obj
+ 0001:00023c30       ?_Xran@?$_String_val@U?$_Simple_types@D@std@@@std@@SAXXZ 00424c30 f i gameState.obj
+ 0001:00023c60       ?allocate@?$allocator@PAVPsyeb10Enemy@@@std@@QAEPAPAVPsyeb10Enemy@@I@Z 00424c60 f i gameState.obj
+ 0001:00023ca0       ?appendObjectToArray@DisplayableObjectContainer@@QAEXPAVDisplayableObject@@@Z 00424ca0 f i gameState.obj
+ 0001:00023d40       ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@QBDI@Z 00424d40 f i gameState.obj
+ 0001:00023e80       ?begin@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@2@XZ 00424e80 f i gameState.obj
+ 0001:00023f00       ?capacity@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QBEIXZ 00424f00 f i gameState.obj
+ 0001:00023f90       ?checkRectangles@CollisionDetection@@SA_NHHHHHHHH@Z 00424f90 f i gameState.obj
+ 0001:00024010       ?close@?$basic_ifstream@DU?$char_traits@D@std@@@std@@QAEXXZ 00425010 f i gameState.obj
+ 0001:000240b0       ?close@?$basic_ofstream@DU?$char_traits@D@std@@@std@@QAEXXZ 004250b0 f i gameState.obj
+ 0001:000240f0       ?deallocate@?$allocator@PAVPsyeb10Enemy@@@std@@QAEXQAPAVPsyeb10Enemy@@I@Z 004250f0 f i gameState.obj
+ 0001:000241a0       ?drawBackgroundString@BaseEngine@@QAEXHHPBDIPAVFont@@@Z 004251a0 f i gameState.obj
+ 0001:000241f0       ?drawBackgroundThickLine@BaseEngine@@QAEXHHHHIH@Z 004251f0 f i gameState.obj
+ 0001:00024290       ?end@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@2@XZ 00425290 f i gameState.obj
+ 0001:000242d0       ?end@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@2@XZ 004252d0 f i gameState.obj
+ 0001:00024310       ?eq@?$_Narrow_char_traits@DH@std@@SA_NDD@Z 00425310 f i gameState.obj
+ 0001:00024350       ?erase@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@I@Z 00425350 f i gameState.obj
+ 0001:00024380       ?erase@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@2@@Z 00425380 f i gameState.obj
+ 0001:00024500       ?erase@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@II@Z 00425500 f i gameState.obj
+ 0001:00024530       ?setAllObjectsVisible@DisplayableObjectContainer@@QBEX_N@Z 00425530 f i gameState.obj
+ 0001:00024810       ?find@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEIQBDI@Z 00425810 f i gameState.obj
+ 0001:00024870       ?getDrawWidth@DisplayableObject@@QBEHXZ 00425870 f i gameState.obj
+ 0001:00024890       ?getMapHeight@TileManager@@QBEHXZ 00425890 f i gameState.obj
+ 0001:000248c0       ?getMapWidth@TileManager@@QBEHXZ 004258c0 f i gameState.obj
+ 0001:00024910       ?getYCentre@DisplayableObject@@QBEHXZ 00425910 f i gameState.obj
+ 0001:00024940       ?get_allocator@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$allocator@D@2@XZ 00425940 f i gameState.obj
+ 0001:00024970       ?imbue@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEXABVlocale@2@@Z 00425970 f i gameState.obj
+ 0001:000249c0       ?is_open@?$basic_ofstream@DU?$char_traits@D@std@@@std@@QBE_NXZ 004259c0 f i gameState.obj
+ 0001:00024a10       ?max_size@?$_Default_allocator_traits@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@SAIABV?$allocator@PAVPsyeb10Enemy@@@2@@Z 00425a10 f i gameState.obj
+ 0001:00024a40       ?max_size@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QBEIXZ 00425a40 f i gameState.obj
+ 0001:00024ab0       ?not_eof@?$_Narrow_char_traits@DH@std@@SAHH@Z 00425ab0 f i gameState.obj
+ 0001:00024ba0       ?notifyObjectsAboutKeys@BaseEngine@@QAEX_N@Z 00425ba0 f i gameState.obj
+ 0001:00024be0       ?erase@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@2@0@Z 00425be0 f i gameState.obj
+ 0001:00024e10       ?seekpos@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@V32@H@Z 00425e10 f i gameState.obj
+ 0001:00025090       ?underflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHXZ 00426090 f i gameState.obj
+ 0001:00025490       ?push_back@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAEX$$QAPAVPsyeb10Enemy@@@Z 00426490 f i gameState.obj
+ 0001:000254c0       ?push_back@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAEXABQAVPsyeb10Enemy@@@Z 004264c0 f i gameState.obj
+ 0001:000255d0       ?release@?$unique_ptr@V_Facet_base@std@@U?$default_delete@V_Facet_base@std@@@2@@std@@QAEPAV_Facet_base@2@XZ 004265d0 f i gameState.obj
+ 0001:00025710       ?overflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHH@Z 00426710 f i gameState.obj
+ 0001:000258f0       ?seekoff@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@_JHH@Z 004268f0 f i gameState.obj
+ 0001:00025ba0       ?overflow@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAEHH@Z 00426ba0 f i gameState.obj
+ 0001:00025f60       ?state@?$fpos@U_Mbstatet@@@std@@QBE?AU_Mbstatet@@XZ 00426f60 f i gameState.obj
+ 0001:00026040       ?stoi@std@@YAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@PAIH@Z 00427040 f i gameState.obj
+ 0001:00026110       ?to_char_type@?$_Narrow_char_traits@DH@std@@SADH@Z 00427110 f i gameState.obj
+ 0001:00026430       ?to_int_type@?$_Narrow_char_traits@DH@std@@SAHD@Z 00427430 f i gameState.obj
+ 0001:000264f0       ?uflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHXZ 004274f0 f i gameState.obj
+ 0001:000267c0       ?underflow@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAEHXZ 004277c0 f i gameState.obj
  0001:00026920       ?virtSetupBackgroundBuffer@ImageMappingDemo@@UAEXXZ 00427920 f   ImageMappingDemo.obj
  0001:00026a20       ?virtInitialiseObjects@ImageMappingDemo@@UAEHXZ 00427a20 f   ImageMappingDemo.obj
  0001:00026da0       ?virtKeyDown@ImageMappingDemo@@UAEXH@Z 00427da0 f   ImageMappingDemo.obj
@@ -1483,6 +1482,7 @@
  0001:0002f9e0       ?mouseDown@pauseState@@UAEXHHH@Z 004309e0 f   pauseState.obj
  0001:0002fb30       ?mainLoopPreUpdate@pauseState@@UAEXXZ 00430b30 f   pauseState.obj
  0001:0002fbf0       ?reEntry@pauseState@@UAEXXZ 00430bf0 f   pauseState.obj
+ 0001:0002fc00       ??1pauseState@@UAE@XZ      00430c00 f   pauseState.obj
  0001:0002fd10       ?drawForegroundLine@BaseEngine@@QAEXHHHHI@Z 00430d10 f i pauseState.obj
  0001:0002fd80       ?unpause@BaseEngine@@QAEXXZ 00430d80 f i pauseState.obj
  0001:0002fdd0       ??0Psyeb10Bike@@QAE@HHPAVBaseEngine@@HHH@Z 00430dd0 f   Psyeb10Bike.obj
@@ -2567,14 +2567,14 @@
  0001:00089bd0       ?drawBackground@gameState@@QAEXXZ 0048abd0 f   gameState.obj
  0001:00089da0       ?recieveUpdate@gameState@@UAEXH@Z 0048ada0 f   gameState.obj
  0001:0008a260       ??1gameState@@UAE@XZ       0048b260 f   gameState.obj
- 0001:0008a330       ?getmainChar@gameState@@QBEPAVMainCharacter@@XZ 0048b330 f   gameState.obj
- 0001:0008a350       ?getGameScore@gameState@@QBEHXZ 0048b350 f   gameState.obj
- 0001:0008a370       ?loadGame@gameState@@QAE_NXZ 0048b370 f   gameState.obj
- 0001:0008ab50       ?saveGame@gameState@@QAEXXZ 0048bb50 f   gameState.obj
- 0001:0008b0f0       ?cleanTileManager@gameState@@QAEXH@Z 0048c0f0 f   gameState.obj
- 0001:0008b180       ?checkPixelPerfectCollision@gameState@@AAE_NAAVSimpleImage@@HHH0HHH@Z 0048c180 f   gameState.obj
- 0001:0008b310       ?checkBikeCollision@gameState@@AAE_NAAVSimpleImage@@HHH0HHH@Z 0048c310 f   gameState.obj
- 0001:0008b3c0       ?applyRotation@gameState@@AAEXAAH0HHH@Z 0048c3c0 f   gameState.obj
+ 0001:0008a380       ?getmainChar@gameState@@QBEPAVMainCharacter@@XZ 0048b380 f   gameState.obj
+ 0001:0008a3a0       ?getGameScore@gameState@@QBEHXZ 0048b3a0 f   gameState.obj
+ 0001:0008a3c0       ?loadGame@gameState@@QAE_NXZ 0048b3c0 f   gameState.obj
+ 0001:0008aba0       ?saveGame@gameState@@QAEXXZ 0048bba0 f   gameState.obj
+ 0001:0008b140       ?cleanTileManager@gameState@@QAEXH@Z 0048c140 f   gameState.obj
+ 0001:0008b1d0       ?checkPixelPerfectCollision@gameState@@AAE_NAAVSimpleImage@@HHH0HHH@Z 0048c1d0 f   gameState.obj
+ 0001:0008b360       ?checkBikeCollision@gameState@@AAE_NAAVSimpleImage@@HHH0HHH@Z 0048c360 f   gameState.obj
+ 0001:0008b410       ?applyRotation@gameState@@AAEXAAH0HHH@Z 0048c410 f   gameState.obj
  0002:00000000       ___xc_a                    00493000     MSVCRTD:initializers.obj
  0002:0000030c       ___xc_z                    0049330c     MSVCRTD:initializers.obj
  0002:00000410       ___xi_a                    00493410     MSVCRTD:initializers.obj
@@ -5817,10 +5817,11 @@
  0000:00000054       _volmd                     00400054     gameState.obj
  0000:00000058       _volmd                     00400058     scoreBoardState.obj
  0000:00000060       _volmd                     00400060     Psyeb10Enemy.obj
- 0000:00000064       _volmd                     00400064     gameState.obj
+ 0000:00000060       _volmd                     00400060     gameState.obj
  0000:00000070       _volmd                     00400070     Psyeb10Enemy.obj
- 0000:00000074       _volmd                     00400074     gameState.obj
- 0000:00000084       _volmd                     00400084     gameState.obj
+ 0000:00000070       _volmd                     00400070     gameState.obj
+ 0000:00000080       _volmd                     00400080     gameState.obj
+ 0000:00000090       _volmd                     00400090     gameState.obj
  0001:fffff16f       __catch$??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@$$QAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@D@Z$0 0040016f f   scoreBoardState.obj
  0001:fffff1df       __catch$??$?5DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z$0 004001df f   scoreBoardState.obj
  0001:fffff229       __catch$??$_Insert_string@DU?$char_traits@D@std@@I@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@QBDI@Z$0 00400229 f   DraggingDemo.obj
@@ -7137,18 +7138,19 @@
  0001:0008cfef       __unwindfunclet$?recieveUpdate@gameState@@UAEXH@Z$9 0048dfef f   gameState.obj
  0001:0008cffe       __unwindfunclet$?recieveUpdate@gameState@@UAEXH@Z$10 0048dffe f   gameState.obj
  0001:0008d015       __ehhandler$?recieveUpdate@gameState@@UAEXH@Z 0048e015 f   gameState.obj
- 0001:0008d035       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$0 0048e035 f   gameState.obj
- 0001:0008d040       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$1 0048e040 f   gameState.obj
- 0001:0008d048       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$2 0048e048 f   gameState.obj
- 0001:0008d053       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$3 0048e053 f   gameState.obj
- 0001:0008d05b       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$4 0048e05b f   gameState.obj
- 0001:0008d066       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$5 0048e066 f   gameState.obj
- 0001:0008d06e       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$6 0048e06e f   gameState.obj
- 0001:0008d080       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$7 0048e080 f   gameState.obj
- 0001:0008d097       __ehhandler$?loadGame@gameState@@QAE_NXZ 0048e097 f   gameState.obj
- 0001:0008d0c1       __unwindfunclet$?saveGame@gameState@@QAEXXZ$0 0048e0c1 f   gameState.obj
- 0001:0008d0cc       __unwindfunclet$?saveGame@gameState@@QAEXXZ$1 0048e0cc f   gameState.obj
- 0001:0008d0dc       __ehhandler$?saveGame@gameState@@QAEXXZ 0048e0dc f   gameState.obj
+ 0001:0008d035       __ehhandler$??1gameState@@UAE@XZ 0048e035 f   gameState.obj
+ 0001:0008d052       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$0 0048e052 f   gameState.obj
+ 0001:0008d05d       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$1 0048e05d f   gameState.obj
+ 0001:0008d065       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$2 0048e065 f   gameState.obj
+ 0001:0008d070       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$3 0048e070 f   gameState.obj
+ 0001:0008d078       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$4 0048e078 f   gameState.obj
+ 0001:0008d083       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$5 0048e083 f   gameState.obj
+ 0001:0008d08b       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$6 0048e08b f   gameState.obj
+ 0001:0008d09d       __unwindfunclet$?loadGame@gameState@@QAE_NXZ$7 0048e09d f   gameState.obj
+ 0001:0008d0b4       __ehhandler$?loadGame@gameState@@QAE_NXZ 0048e0b4 f   gameState.obj
+ 0001:0008d0de       __unwindfunclet$?saveGame@gameState@@QAEXXZ$0 0048e0de f   gameState.obj
+ 0001:0008d0e9       __unwindfunclet$?saveGame@gameState@@QAEXXZ$1 0048e0e9 f   gameState.obj
+ 0001:0008d0f9       __ehhandler$?saveGame@gameState@@QAEXXZ 0048e0f9 f   gameState.obj
  0001:0008d160       __unwindfunclet$??$?5DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z$2 0048e160 f   gameState.obj
  0001:0008d168       __unwindfunclet$??$?5DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z$3 0048e168 f   gameState.obj
  0001:0008d175       __ehhandler$??$?5DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z 0048e175 f   gameState.obj
@@ -7556,71 +7558,72 @@
  0002:000031bc       $SG95817                   004961bc     gameSetupState.obj
  0002:000031d0       $SG95818                   004961d0     gameSetupState.obj
  0002:000031e4       $SG95820                   004961e4     gameSetupState.obj
- 0002:000033d8       $SG110297                  004963d8     gameState.obj
- 0002:000033ec       $SG110298                  004963ec     gameState.obj
- 0002:000033f0       $SG110299                  004963f0     gameState.obj
- 0002:00003458       $SG110300                  00496458     gameState.obj
- 0002:0000351c       $SG110301                  0049651c     gameState.obj
- 0002:00003520       $SG110302                  00496520     gameState.obj
- 0002:00003548       $SG110363                  00496548     gameState.obj
- 0002:000035ac       $SG110704                  004965ac     gameState.obj
- 0002:000035c8       $SG110705                  004965c8     gameState.obj
- 0002:000035d0       $SG110706                  004965d0     gameState.obj
- 0002:00003638       $SG110707                  00496638     gameState.obj
- 0002:00003700       $SG110708                  00496700     gameState.obj
- 0002:00003704       $SG110709                  00496704     gameState.obj
- 0002:0000373c       $SG96105                   0049673c     gameState.obj
- 0002:00003748       $SG96106                   00496748     gameState.obj
- 0002:00003754       $SG96182                   00496754     gameState.obj
- 0002:00003768       $SG96207                   00496768     gameState.obj
- 0002:0000376c       $SG96208                   0049676c     gameState.obj
- 0002:0000377c       $SG96416                   0049677c     gameState.obj
- 0002:00003788       $SG96417                   00496788     gameState.obj
- 0002:00003790       $SG96747                   00496790     gameState.obj
- 0002:000037a0       $SG96749                   004967a0     gameState.obj
- 0002:000037d4       $SG96751                   004967d4     gameState.obj
- 0002:000037e4       $SG96753                   004967e4     gameState.obj
- 0002:00003818       $SG96757                   00496818     gameState.obj
- 0002:0000382c       $SG96761                   0049682c     gameState.obj
- 0002:00003834       $SG96764                   00496834     gameState.obj
- 0002:00003844       $SG96765                   00496844     gameState.obj
- 0002:00003860       $SG96961                   00496860     gameState.obj
- 0002:00003870       $SG96963                   00496870     gameState.obj
- 0002:00003898       $SG96965                   00496898     gameState.obj
- 0002:0000389c       $SG96966                   0049689c     gameState.obj
- 0002:000038a0       $SG96967                   004968a0     gameState.obj
- 0002:000038c0       $SG96968                   004968c0     gameState.obj
- 0002:000038d0       $SG96970                   004968d0     gameState.obj
- 0002:00003904       $SG96972                   00496904     gameState.obj
- 0002:00003918       $SG96973                   00496918     gameState.obj
- 0002:0000391c       $SG96974                   0049691c     gameState.obj
- 0002:00003920       $SG96975                   00496920     gameState.obj
- 0002:0000392c       $SG96976                   0049692c     gameState.obj
- 0002:00003930       $SG96977                   00496930     gameState.obj
- 0002:00003934       $SG96978                   00496934     gameState.obj
- 0002:0000393c       $SG96979                   0049693c     gameState.obj
- 0002:00003940       $SG96980                   00496940     gameState.obj
- 0002:00003948       $SG96981                   00496948     gameState.obj
- 0002:0000394c       $SG96982                   0049694c     gameState.obj
- 0002:00003950       $SG96983                   00496950     gameState.obj
- 0002:0000395c       $SG96984                   0049695c     gameState.obj
- 0002:00003968       $SG96985                   00496968     gameState.obj
- 0002:0000396c       $SG96986                   0049696c     gameState.obj
- 0002:00003970       $SG96987                   00496970     gameState.obj
- 0002:0000397c       $SG96988                   0049697c     gameState.obj
- 0002:00003980       $SG96989                   00496980     gameState.obj
- 0002:00003984       $SG96990                   00496984     gameState.obj
- 0002:0000398c       $SG96991                   0049698c     gameState.obj
- 0002:00003990       $SG96992                   00496990     gameState.obj
- 0002:00003994       $SG96993                   00496994     gameState.obj
- 0002:000039a0       $SG96994                   004969a0     gameState.obj
- 0002:000039a4       $SG96995                   004969a4     gameState.obj
- 0002:000039b0       $SG96996                   004969b0     gameState.obj
- 0002:000039c0       $SG96997                   004969c0     gameState.obj
- 0002:000039c4       $SG96998                   004969c4     gameState.obj
- 0002:000039cc       $SG96999                   004969cc     gameState.obj
- 0002:000039d0       $SG97000                   004969d0     gameState.obj
- 0002:000039d8       $SG97001                   004969d8     gameState.obj
+ 0002:000033d8       $SG110326                  004963d8     gameState.obj
+ 0002:000033ec       $SG110327                  004963ec     gameState.obj
+ 0002:000033f0       $SG110328                  004963f0     gameState.obj
+ 0002:00003458       $SG110329                  00496458     gameState.obj
+ 0002:0000351c       $SG110330                  0049651c     gameState.obj
+ 0002:00003520       $SG110331                  00496520     gameState.obj
+ 0002:00003548       $SG110392                  00496548     gameState.obj
+ 0002:000035ac       $SG110733                  004965ac     gameState.obj
+ 0002:000035c8       $SG110734                  004965c8     gameState.obj
+ 0002:000035d0       $SG110735                  004965d0     gameState.obj
+ 0002:00003638       $SG110736                  00496638     gameState.obj
+ 0002:00003700       $SG110737                  00496700     gameState.obj
+ 0002:00003704       $SG110738                  00496704     gameState.obj
+ 0002:0000373c       $SG96130                   0049673c     gameState.obj
+ 0002:00003748       $SG96131                   00496748     gameState.obj
+ 0002:00003754       $SG96207                   00496754     gameState.obj
+ 0002:00003768       $SG96232                   00496768     gameState.obj
+ 0002:0000376c       $SG96233                   0049676c     gameState.obj
+ 0002:0000377c       $SG96250                   0049677c     gameState.obj
+ 0002:00003790       $SG96445                   00496790     gameState.obj
+ 0002:0000379c       $SG96446                   0049679c     gameState.obj
+ 0002:000037a4       $SG96776                   004967a4     gameState.obj
+ 0002:000037b4       $SG96778                   004967b4     gameState.obj
+ 0002:000037e8       $SG96780                   004967e8     gameState.obj
+ 0002:000037f8       $SG96782                   004967f8     gameState.obj
+ 0002:0000382c       $SG96786                   0049682c     gameState.obj
+ 0002:00003840       $SG96790                   00496840     gameState.obj
+ 0002:00003848       $SG96793                   00496848     gameState.obj
+ 0002:00003858       $SG96794                   00496858     gameState.obj
+ 0002:00003874       $SG96990                   00496874     gameState.obj
+ 0002:00003884       $SG96992                   00496884     gameState.obj
+ 0002:000038ac       $SG96994                   004968ac     gameState.obj
+ 0002:000038b0       $SG96995                   004968b0     gameState.obj
+ 0002:000038b4       $SG96996                   004968b4     gameState.obj
+ 0002:000038d4       $SG96997                   004968d4     gameState.obj
+ 0002:000038e4       $SG96999                   004968e4     gameState.obj
+ 0002:00003918       $SG97001                   00496918     gameState.obj
+ 0002:0000392c       $SG97002                   0049692c     gameState.obj
+ 0002:00003930       $SG97003                   00496930     gameState.obj
+ 0002:00003934       $SG97004                   00496934     gameState.obj
+ 0002:00003940       $SG97005                   00496940     gameState.obj
+ 0002:00003944       $SG97006                   00496944     gameState.obj
+ 0002:00003948       $SG97007                   00496948     gameState.obj
+ 0002:00003950       $SG97008                   00496950     gameState.obj
+ 0002:00003954       $SG97009                   00496954     gameState.obj
+ 0002:0000395c       $SG97010                   0049695c     gameState.obj
+ 0002:00003960       $SG97011                   00496960     gameState.obj
+ 0002:00003964       $SG97012                   00496964     gameState.obj
+ 0002:00003970       $SG97013                   00496970     gameState.obj
+ 0002:0000397c       $SG97014                   0049697c     gameState.obj
+ 0002:00003980       $SG97015                   00496980     gameState.obj
+ 0002:00003984       $SG97016                   00496984     gameState.obj
+ 0002:00003990       $SG97017                   00496990     gameState.obj
+ 0002:00003994       $SG97018                   00496994     gameState.obj
+ 0002:00003998       $SG97019                   00496998     gameState.obj
+ 0002:000039a0       $SG97020                   004969a0     gameState.obj
+ 0002:000039a4       $SG97021                   004969a4     gameState.obj
+ 0002:000039a8       $SG97022                   004969a8     gameState.obj
+ 0002:000039b4       $SG97023                   004969b4     gameState.obj
+ 0002:000039b8       $SG97024                   004969b8     gameState.obj
+ 0002:000039c4       $SG97025                   004969c4     gameState.obj
+ 0002:000039d4       $SG97026                   004969d4     gameState.obj
+ 0002:000039d8       $SG97027                   004969d8     gameState.obj
+ 0002:000039e0       $SG97028                   004969e0     gameState.obj
+ 0002:000039e4       $SG97029                   004969e4     gameState.obj
+ 0002:000039ec       $SG97030                   004969ec     gameState.obj
  0002:000045a0       $SG92627                   004975a0     ImageMappingDemo.obj
  0002:000045ac       $SG92629                   004975ac     ImageMappingDemo.obj
  0002:000045b8       $SG92631                   004975b8     ImageMappingDemo.obj
@@ -7802,21 +7805,21 @@
  0002:000077a0       $SG103624                  0049a7a0     MyTileManager.obj
  0002:00007868       $SG103625                  0049a868     MyTileManager.obj
  0002:0000786c       $SG103626                  0049a86c     MyTileManager.obj
- 0002:00007958       $SG94333                   0049a958     pauseState.obj
- 0002:00007964       $SG94372                   0049a964     pauseState.obj
- 0002:00007970       $SG105719                  0049a970     pauseState.obj
- 0002:00007984       $SG105720                  0049a984     pauseState.obj
- 0002:00007988       $SG105721                  0049a988     pauseState.obj
- 0002:000079f0       $SG105722                  0049a9f0     pauseState.obj
- 0002:00007ab4       $SG105723                  0049aab4     pauseState.obj
- 0002:00007ab8       $SG105724                  0049aab8     pauseState.obj
- 0002:00007ae0       $SG105784                  0049aae0     pauseState.obj
- 0002:00007b44       $SG106026                  0049ab44     pauseState.obj
- 0002:00007b60       $SG106027                  0049ab60     pauseState.obj
- 0002:00007b68       $SG106028                  0049ab68     pauseState.obj
- 0002:00007bd0       $SG106029                  0049abd0     pauseState.obj
- 0002:00007c98       $SG106030                  0049ac98     pauseState.obj
- 0002:00007c9c       $SG106031                  0049ac9c     pauseState.obj
+ 0002:00007958       $SG94327                   0049a958     pauseState.obj
+ 0002:00007964       $SG94365                   0049a964     pauseState.obj
+ 0002:00007970       $SG105716                  0049a970     pauseState.obj
+ 0002:00007984       $SG105717                  0049a984     pauseState.obj
+ 0002:00007988       $SG105718                  0049a988     pauseState.obj
+ 0002:000079f0       $SG105719                  0049a9f0     pauseState.obj
+ 0002:00007ab4       $SG105720                  0049aab4     pauseState.obj
+ 0002:00007ab8       $SG105721                  0049aab8     pauseState.obj
+ 0002:00007ae0       $SG105781                  0049aae0     pauseState.obj
+ 0002:00007b44       $SG106023                  0049ab44     pauseState.obj
+ 0002:00007b60       $SG106024                  0049ab60     pauseState.obj
+ 0002:00007b68       $SG106025                  0049ab68     pauseState.obj
+ 0002:00007bd0       $SG106026                  0049abd0     pauseState.obj
+ 0002:00007c98       $SG106027                  0049ac98     pauseState.obj
+ 0002:00007c9c       $SG106028                  0049ac9c     pauseState.obj
  0002:00007d88       $SG104555                  0049ad88     Psyeb10Bike.obj
  0002:00007d9c       $SG104556                  0049ad9c     Psyeb10Bike.obj
  0002:00007da0       $SG104557                  0049ada0     Psyeb10Bike.obj
@@ -7854,19 +7857,19 @@
  0002:000085e0       $SG97648                   0049b5e0     Psyeb10Enemy.obj
  0002:00008620       $SG97650                   0049b620     Psyeb10Enemy.obj
  0002:00008630       $SG97651                   0049b630     Psyeb10Enemy.obj
- 0002:00008f28       $SG107620                  0049bf28     Psyeb10Engine.obj
- 0002:00008f3c       $SG107621                  0049bf3c     Psyeb10Engine.obj
- 0002:00008f40       $SG107622                  0049bf40     Psyeb10Engine.obj
- 0002:00008fa8       $SG107623                  0049bfa8     Psyeb10Engine.obj
- 0002:0000906c       $SG107624                  0049c06c     Psyeb10Engine.obj
- 0002:00009070       $SG107625                  0049c070     Psyeb10Engine.obj
- 0002:00009098       $SG107685                  0049c098     Psyeb10Engine.obj
- 0002:000090fc       $SG107927                  0049c0fc     Psyeb10Engine.obj
- 0002:00009118       $SG107928                  0049c118     Psyeb10Engine.obj
- 0002:00009120       $SG107929                  0049c120     Psyeb10Engine.obj
- 0002:00009188       $SG107930                  0049c188     Psyeb10Engine.obj
- 0002:00009250       $SG107931                  0049c250     Psyeb10Engine.obj
- 0002:00009254       $SG107932                  0049c254     Psyeb10Engine.obj
+ 0002:00008f28       $SG107645                  0049bf28     Psyeb10Engine.obj
+ 0002:00008f3c       $SG107646                  0049bf3c     Psyeb10Engine.obj
+ 0002:00008f40       $SG107647                  0049bf40     Psyeb10Engine.obj
+ 0002:00008fa8       $SG107648                  0049bfa8     Psyeb10Engine.obj
+ 0002:0000906c       $SG107649                  0049c06c     Psyeb10Engine.obj
+ 0002:00009070       $SG107650                  0049c070     Psyeb10Engine.obj
+ 0002:00009098       $SG107710                  0049c098     Psyeb10Engine.obj
+ 0002:000090fc       $SG107952                  0049c0fc     Psyeb10Engine.obj
+ 0002:00009118       $SG107953                  0049c118     Psyeb10Engine.obj
+ 0002:00009120       $SG107954                  0049c120     Psyeb10Engine.obj
+ 0002:00009188       $SG107955                  0049c188     Psyeb10Engine.obj
+ 0002:00009250       $SG107956                  0049c250     Psyeb10Engine.obj
+ 0002:00009254       $SG107957                  0049c254     Psyeb10Engine.obj
  0002:00009408       $SG103452                  0049c408     Psyeb10States.obj
  0002:0000941c       $SG103453                  0049c41c     Psyeb10States.obj
  0002:00009420       $SG103454                  0049c420     Psyeb10States.obj
@@ -8225,24 +8228,6 @@
  0002:00013f70       __ehfuncinfo$?erase@?$vector@PAVDisplayableObject@@V?$allocator@PAVDisplayableObject@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@2@@Z 004a6f70     gameState.obj
  0002:00013f98       __unwindtable$??$find@V?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@PAVDisplayableObject@@@std@@YA?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@0@V10@V10@ABQAVDisplayableObject@@@Z 004a6f98     gameState.obj
  0002:00013fa8       __ehfuncinfo$??$find@V?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@std@@PAVDisplayableObject@@@std@@YA?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVDisplayableObject@@@std@@@std@@@0@V10@V10@ABQAVDisplayableObject@@@Z 004a6fa8     gameState.obj
- 0002:00013fcc       __unwindtable$?drawBackground@gameState@@QAEXXZ 004a6fcc     gameState.obj
- 0002:00013fd4       __unwindtable$?mouseDown@gameState@@UAEXHHH@Z 004a6fd4     gameState.obj
- 0002:00013fdc       __unwindtable$?reset@gameState@@UAEXXZ 004a6fdc     gameState.obj
- 0002:00013fe4       __unwindtable$?saveGame@gameState@@QAEXXZ 004a6fe4     gameState.obj
- 0002:00013ff4       __unwindtable$?mainLoopPreUpdate@gameState@@UAEXXZ 004a6ff4     gameState.obj
- 0002:00014004       __unwindtable$?initObjects@gameState@@UAEXXZ 004a7004     gameState.obj
- 0002:00014014       __unwindtable$?foreGroundStrings@gameState@@UAEXXZ 004a7014     gameState.obj
- 0002:0001402c       __ehfuncinfo$?saveGame@gameState@@QAEXXZ 004a702c     gameState.obj
- 0002:00014050       __ehfuncinfo$?loadGame@gameState@@QAE_NXZ 004a7050     gameState.obj
- 0002:00014074       __ehfuncinfo$?recieveUpdate@gameState@@UAEXH@Z 004a7074     gameState.obj
- 0002:00014098       __ehfuncinfo$?drawBackground@gameState@@QAEXXZ 004a7098     gameState.obj
- 0002:000140bc       __ehfuncinfo$?mainLoopPreUpdate@gameState@@UAEXXZ 004a70bc     gameState.obj
- 0002:000140e0       __ehfuncinfo$?mouseDown@gameState@@UAEXHHH@Z 004a70e0     gameState.obj
- 0002:00014104       __ehfuncinfo$?reset@gameState@@UAEXXZ 004a7104     gameState.obj
- 0002:00014128       __ehfuncinfo$?initObjects@gameState@@UAEXXZ 004a7128     gameState.obj
- 0002:0001414c       __ehfuncinfo$?foreGroundStrings@gameState@@UAEXXZ 004a714c     gameState.obj
- 0002:00014170       __unwindtable$?recieveUpdate@gameState@@UAEXH@Z 004a7170     gameState.obj
- 0002:000141a0       __unwindtable$?loadGame@gameState@@QAE_NXZ 004a71a0     gameState.obj
  0002:000141e4       __ehfuncinfo$?erase@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVPsyeb10Enemy@@@std@@@std@@@2@0@Z 004a71e4     gameState.obj
  0002:0001420c       __unwindtable$?_Orphan_range_locked@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@ABEXPAPAVPsyeb10Enemy@@0@Z 004a720c     gameState.obj
  0002:00014214       __ehfuncinfo$?_Orphan_range_locked@?$vector@PAVPsyeb10Enemy@@V?$allocator@PAVPsyeb10Enemy@@@std@@@std@@ABEXPAPAVPsyeb10Enemy@@0@Z 004a7214     gameState.obj
@@ -8494,6 +8479,25 @@
  0002:00016060       __ehfuncinfo$?_Facet_Register@std@@YAXPAV_Facet_base@1@@Z 004a9060     msvcprtd:locale0_implib.obj
  0002:00016088       __sehtable$?__scrt_common_main_seh@@YAHXZ 004a9088     MSVCRTD:exe_main.obj
  0002:000160a8       __sehtable$___scrt_is_nonwritable_in_current_image 004a90a8     MSVCRTD:utility.obj
+ 0002:000160e8       __unwindtable$?drawBackground@gameState@@QAEXXZ 004a90e8     gameState.obj
+ 0002:000160f0       __unwindtable$?mouseDown@gameState@@UAEXHHH@Z 004a90f0     gameState.obj
+ 0002:000160f8       __unwindtable$?reset@gameState@@UAEXXZ 004a90f8     gameState.obj
+ 0002:00016100       __unwindtable$?saveGame@gameState@@QAEXXZ 004a9100     gameState.obj
+ 0002:00016110       __unwindtable$?mainLoopPreUpdate@gameState@@UAEXXZ 004a9110     gameState.obj
+ 0002:00016120       __unwindtable$?initObjects@gameState@@UAEXXZ 004a9120     gameState.obj
+ 0002:00016130       __unwindtable$?foreGroundStrings@gameState@@UAEXXZ 004a9130     gameState.obj
+ 0002:00016148       __ehfuncinfo$?saveGame@gameState@@QAEXXZ 004a9148     gameState.obj
+ 0002:0001616c       __ehfuncinfo$?loadGame@gameState@@QAE_NXZ 004a916c     gameState.obj
+ 0002:00016190       __ehfuncinfo$??1gameState@@UAE@XZ 004a9190     gameState.obj
+ 0002:000161b4       __ehfuncinfo$?recieveUpdate@gameState@@UAEXH@Z 004a91b4     gameState.obj
+ 0002:000161d8       __ehfuncinfo$?drawBackground@gameState@@QAEXXZ 004a91d8     gameState.obj
+ 0002:000161fc       __ehfuncinfo$?mainLoopPreUpdate@gameState@@UAEXXZ 004a91fc     gameState.obj
+ 0002:00016220       __ehfuncinfo$?mouseDown@gameState@@UAEXHHH@Z 004a9220     gameState.obj
+ 0002:00016244       __ehfuncinfo$?reset@gameState@@UAEXXZ 004a9244     gameState.obj
+ 0002:00016268       __ehfuncinfo$?initObjects@gameState@@UAEXXZ 004a9268     gameState.obj
+ 0002:0001628c       __ehfuncinfo$?foreGroundStrings@gameState@@UAEXXZ 004a928c     gameState.obj
+ 0002:000162b0       __unwindtable$?recieveUpdate@gameState@@UAEXH@Z 004a92b0     gameState.obj
+ 0002:000162e0       __unwindtable$?loadGame@gameState@@QAE_NXZ 004a92e0     gameState.obj
  0003:00000000       ?firstClick@?1??handleEvent@BaseEngine@@QAE_NPATSDL_Event@@@Z@4_NA 004aa000     BaseEngine.obj
  0003:00000004       ?nullMapping@@3VCroppedImagePixelMapping@@A 004aa004     SimpleImage.obj
  0003:00000e90       ?strategicCoolDown@?1??virtPostMoveLogic@Psyeb10Enemy@@UAEXXZ@4HA 004aae90     Psyeb10Enemy.obj

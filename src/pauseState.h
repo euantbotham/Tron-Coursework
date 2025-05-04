@@ -2,7 +2,7 @@
 #include "header.h"
 #include "Psyeb10States.h"
 #include "menuTileManager.h"
-
+#include "bouncingLogo.h"
 
 class pauseState :
     public Psyeb10States
@@ -19,10 +19,10 @@ public:
 	void mouseDown(int iButton, int iX, int iY) override;
 	void mainLoopPreUpdate() override;
 	void reEntry() override;
+	~pauseState() override;
 protected:
 	menuTileManager tm;
+	bouncingLogo* logo;
 
-private:
-	void saveGame();
 };
 
