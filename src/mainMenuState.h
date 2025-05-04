@@ -9,13 +9,7 @@ public:
 		this->engine = engineParam;
 		screenOffsetX = 0;
 
-		// Initialize audio members
-		wavBuffer = nullptr;
-		wavLength = 0;
-		audioDevice = 0;  // 0 is an invalid device ID in SDL
-		audioLoaded = false;
 
-		wavSpec = {};
 	}
 	~mainMenuState();
 	void enter() override;
@@ -27,15 +21,8 @@ public:
 	void reEntry() override;
 	void copyAllBackgroundBuffer() override;
 	void keyPressed(int iKeyCode) override;
-	void loadAndPlayMusic(const char* filename);
-	void cleanupAudio();
 
 private:
 	int screenOffsetX;
-	SDL_AudioSpec wavSpec;
-	Uint32 wavLength;
-	Uint8* wavBuffer;
-	SDL_AudioDeviceID audioDevice;
-	bool audioLoaded;
 };
 

@@ -19,6 +19,14 @@ Psyeb10Engine::Psyeb10Engine()
 	// Could potentially make this a smart pointer
 	currentState = new mainMenuState(this);
 	secondState = nullptr;
+	
+	// Initialize audio members
+	wavBuffer = nullptr;
+	wavLength = 0;
+	audioDevice = 0;  // 0 is an invalid device ID in SDL
+	audioLoaded = false;
+
+	wavSpec = {};
 }
 
 
@@ -169,4 +177,72 @@ void Psyeb10Engine::notifyState(int code) {
 
 void Psyeb10Engine::virtMouseWheel(int x, int y, int which, int timestamp) {
 	currentState->mouseWheelScrolled(x, y, which, timestamp);
+}
+
+
+void Psyeb10Engine::loadAndPlayMusic(const char* filename) {
+	// Initialize audio subsystem if not already done
+	if (SDL_GetCurrentAudioDriver() == NULL) {
+		if (SDL_InitSubSystem(SDL_INIT_AUDIO) < 0) {
+			std::cerr << "SDL audio initialization failed: " << SDL_GetError() << std::endl;
+			audioLoaded = false;
+			return;
+		}
+	}
+	
+	
+	
+	// Load the WAV file
+	if (SDL_LoadWAV(filename, &wavSpec, &wavBuffer, &wavLength) == nullptr) {
+		std::cerr << "Failed to load audio file: " << SDL_GetError() << std::endl;
+		return;
+	}
+
+	// Open the audio device
+	audioDevice = SDL_OpenAudioDevice(nullptr, 0, &wavSpec, nullptr, 0);
+	if (audioDevice == 0) {
+		std::cerr << "Failed to open audio device: " << SDL_GetError() << std::endl;
+		SDL_FreeWAV(wavBuffer);
+		return;
+	}
+
+	// Queue the audio data
+	if (SDL_QueueAudio(audioDevice, wavBuffer, wavLength) < 0) {
+		std::cerr << "Failed to queue audio: " << SDL_GetError() << std::endl;
+		SDL_CloseAudioDevice(audioDevice);
+		SDL_FreeWAV(wavBuffer);
+		return;
+	}
+
+	// Start playing the audio
+	SDL_PauseAudioDevice(audioDevice, 0);
+	audioLoaded = true;
+}
+
+void Psyeb10Engine::cleanupAudio() {
+	if (audioLoaded) {
+		SDL_PauseAudioDevice(audioDevice, 1); // Pause the audio device
+		SDL_CloseAudioDevice(audioDevice);
+		SDL_FreeWAV(wavBuffer);
+		audioLoaded = false;
+	}
+}
+
+
+void Psyeb10Engine::pauseMusic() {
+	if (audioLoaded && audioDevice != 0) {
+		SDL_PauseAudioDevice(audioDevice, 1); // Pause the audio device
+	}
+}
+
+void Psyeb10Engine::resumeMusic() {
+	if (audioLoaded && audioDevice != 0) {
+		SDL_PauseAudioDevice(audioDevice, 0); // Resume the audio device
+	}
+}
+
+// Destructor to clean up audio resources
+Psyeb10Engine::~Psyeb10Engine() {
+	cleanupAudio();
+	IMG_Quit(); // Clean up SDL_image
 }

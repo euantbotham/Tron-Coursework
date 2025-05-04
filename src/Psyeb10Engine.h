@@ -12,6 +12,7 @@ class Psyeb10Engine :
 {
 public:
     Psyeb10Engine();
+    ~Psyeb10Engine();
     void virtSetupBackgroundBuffer() override;
     void virtDrawStringsOnTop() override;
     int virtInitialiseObjects() override;
@@ -32,9 +33,20 @@ public:
     void notifyState(int code);
     void virtMouseWheel(int x, int y, int which, int timestamp) override;
     int virtInitialise()override;
+   // Music class functions
+    void loadAndPlayMusic(const char* filename);
+    void cleanupAudio();
+    void pauseMusic();
+    void resumeMusic();
 protected:
     Psyeb10States* currentState;
     // Used to store a second state if needed
     Psyeb10States* secondState;
+private:
+    SDL_AudioSpec wavSpec;
+    Uint32 wavLength;
+    Uint8* wavBuffer;
+    SDL_AudioDeviceID audioDevice;
+    bool audioLoaded;
 };
 
