@@ -50,7 +50,7 @@ int doProgram(int argc, char *argv[])
 	char buf[1024];
 	// Screen caption can be set on following line...
 	sprintf(buf, "C++ Coursework Framework Program : Size %d x %d", BaseScreenWidth, BaseScreenHeight);
-	iResult = oMainDemoObject.initialise(buf, BaseScreenWidth, BaseScreenHeight, "Cornerstone Regular.ttf", 24);
+	iResult = oMainDemoObject.initialise(buf, BaseScreenWidth, BaseScreenHeight, "gameFont.ttf", 16);
 
 	iResult = oMainDemoObject.mainLoop();
 	oMainDemoObject.deinitialise();

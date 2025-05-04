@@ -34,7 +34,7 @@ scoreBoardState::scoreBoardState(Psyeb10Engine* engine, int score)
     //Set zoom for animation if shown
     if (playerPos != 11) {
         animationComplete = false;
-		m_filterScaling.setStretch(3.0, 3.0); 
+		m_filterScaling.setStretch(3, 3); 
         m_filterTranslation.setOffset(-380, -500);
     }
 }

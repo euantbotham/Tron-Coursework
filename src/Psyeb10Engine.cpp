@@ -13,7 +13,7 @@
 #include "pauseState.h"
 #include "mainMenuState.h"
 #include "gameSetupState.h"
-
+#include <SDL.h>
 Psyeb10Engine::Psyeb10Engine()
 {
 	// Could potentially make this a smart pointer
@@ -33,6 +33,26 @@ void Psyeb10Engine::virtDrawStringsOnTop()
 	currentState->foreGroundStrings();
 }
 
+
+int Psyeb10Engine::virtInitialise() {
+	// Initialize SDL_image for PNG support
+	if (!(IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG)) {
+		std::cerr << "Failed to initialize SDL_image: " << IMG_GetError() << std::endl;
+		return -1; // Return an error code
+	}
+	std::cout << "here" << std::endl;
+	// Load the PNG icon
+	SDL_Surface* iconSurface = IMG_Load("disk1.png");
+	if (iconSurface != nullptr) {
+		// Set the window icon
+		SDL_SetWindowIcon(SDL_GetWindowFromID(1), iconSurface);
+		SDL_FreeSurface(iconSurface); // Free the surface after setting the icon
+	}
+	else {
+		std::cerr << "Failed to load icon: " << IMG_GetError() << std::endl;
+	}
+	return BaseEngine::virtInitialise();
+}
 
 int Psyeb10Engine::virtInitialiseObjects()
 {

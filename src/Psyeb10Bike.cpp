@@ -187,6 +187,9 @@ int Psyeb10Bike::getDirection()  {
 		return 1;
 	else if (getSpeedX() == -1)
 		return 3;
+	else
+		//default to up
+		return 0;
 }
 
 void Psyeb10Bike::setStartPos(int x, int y) {
