@@ -103,7 +103,30 @@ void gameState::mainLoopPreUpdate() {
 		gameScore += 10;
 	}
 
+	for (int i = 0; i < currentEnemies +1; i++) {
+		for (int j = i + 1; j < currentEnemies + 1; j++) {
+			if (i != j) {
+				Psyeb10Bike* bike1 = dynamic_cast<Psyeb10Bike*>(engine->getDisplayableObject(i));
+				Psyeb10Bike* bike2 = dynamic_cast<Psyeb10Bike*>(engine->getDisplayableObject(j));
+				int bX1, bY1, bX2, bY2;
+				bX1 = bike1->getXCentre() - bike1->getDrawWidth() / 2;
+				bY1 = bike1->getYCentre() - bike1->getDrawHeight() / 2;
+				bX2 = bike2->getXCentre() - bike2->getDrawWidth() / 2;
+				bY2 = bike2->getYCentre() - bike2->getDrawHeight() / 2;
+				
+				if (checkBikeCollision(bike1->getImage(), bX1, bY1, bike1->getDirection(),
+					bike2->getImage(), bX2, bY2, bike2->getDirection())) {
+					std::cout << "Collision detected!" << std::endl;
+					reset();
+					// Handle collision (e.g., reduce lives, reset positions, etc.)
+				}
+			}
+		}
+		
+	}
+
 	//Get directions for rotations
+	/*
 	int b1Dir = mainChar->getDirection();
 	int b2Dir = enemyVec[0]->getDirection();
 	
@@ -114,6 +137,7 @@ void gameState::mainLoopPreUpdate() {
 		reset();
 		// Handle collision (e.g., reduce lives, reset positions, etc.)
 	}
+	*/
 }
 
 
