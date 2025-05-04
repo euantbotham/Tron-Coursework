@@ -71,7 +71,12 @@ void scoreBoardState::foreGroundStrings()
     engine->drawForegroundString(500, 50, "Score Board", engine->tronBlue);
 
     // Instructions moved to the bottom of the screen
-    engine->drawForegroundString(400, 550, "Press 'ESC' to go back to the main menu", engine->tronBlue);
+    if (animationComplete) {
+        if (nameSaved)
+            engine->drawForegroundString(400, 550, "Press 'ESC' to go back to the main menu", engine->tronBlue);
+        else
+            engine->drawForegroundString(400, 550, "enter your name and press 'TAB' to save", engine->tronBlue);
+    }
 
     // Placeholder scoreboard entries
     const int startX = 400; // Starting X position for the scoreboard
