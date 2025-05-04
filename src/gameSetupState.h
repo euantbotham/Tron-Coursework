@@ -10,6 +10,8 @@ class gameSetupState :
 public:
 	gameSetupState(Psyeb10Engine* engineParam) :tm(50, 250, 1, 3) {
 		this->engine = engineParam;
+		settings = false;
+		collisionsEnabled = true;
 	}
 	void enter() override;
 	void foreGroundStrings() override;
@@ -32,5 +34,10 @@ private:
 
 	// Private method for the thread to use
 	void generateAnimationFrames();
+
+	// controls display of settings menu
+	bool settings;
+
+	bool collisionsEnabled;
 };
 

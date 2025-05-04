@@ -93,6 +93,12 @@ void menuTileManager::virtDrawTileAt(
 	case 8:
 		text = "Quit";
 		break;
+	case 9:
+		text = "Back";
+        break;
+    case 10:
+		text = "collisions";
+        break;
     default:
         text = "Not Ready";
         break;
@@ -147,6 +153,16 @@ void menuTileManager::virtDrawTileAt(
             iStartPositionScreenY + 7,
             saveGameImage.getWidth(), saveGameImage.getHeight() // Width and height of the image to render
         );
+    }
+    else if (iMapValue == 10) {
+        // Draw the text with normal color
+        pEngine->drawForegroundString(
+            iStartPositionScreenX + 190, // Add a small offset for better appearance
+            iStartPositionScreenY + (getTileHeight() / 2) - 6, // Center text vertically
+            collisions ? "ON" : "OFF",
+            isSelected ? 0xFFA500 : 0x57E2F9, // Use regular cyan color for text
+            NULL);
+        
     }
 }
 

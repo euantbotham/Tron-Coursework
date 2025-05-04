@@ -20,6 +20,7 @@ public:
 		isDisplayed = false;
 		currentEnemies = 0;
 		currentLevel = 1;
+		collisionsEnabled = true;
 	}
 	void enter() override;
 	void foreGroundStrings() override;
@@ -36,6 +37,7 @@ public:
 	bool loadGame();
 	void saveGame();
 	void cleanTileManager(int code);
+	void setCollisions(bool collision);
 protected:
 	const int gridstartX = 350;
 	const int gridstartY = 100;
@@ -54,6 +56,8 @@ private:
 	bool checkBikeCollision(SimpleImage& bike1, int x1, int y1, int r1,
 		SimpleImage& bike2, int x2, int y2, int r2);
 	void applyRotation(int& x, int& y, int width, int height, int rotation);
+
+	bool collisionsEnabled;
 
 };
 

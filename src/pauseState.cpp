@@ -10,6 +10,7 @@
 
 void pauseState::enter()
 {
+	this->isdisplayed = true;
 	//engine->fillBackground(0x00FF00);
 	
 	//engine->drawBackgroundRectangle(475, 150, 825, 575, 0x000000);
@@ -75,6 +76,7 @@ void pauseState::mouseDown(int iButton, int iX, int iY)
 			y = tm.getMapYForScreenY(iY);
 			if (tm.getMapValue(x, y) == 1)
 			{
+				this->isdisplayed = false;
 				engine->unpause();
 				engine->setState();
 			}
@@ -113,5 +115,6 @@ void pauseState::reEntry()
 
 pauseState::~pauseState()
 {
-	delete this->logo;
+	if(!isdisplayed)
+		delete this->logo;
 }

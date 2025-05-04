@@ -32,8 +32,13 @@ public:
         int iStartPositionScreenX, int iStartPositionScreenY,
         bool isHighlighted) const;
 
+	void setCollisions(bool collision)
+	{
+		collisions = collision;
+	}
 protected:
     // x and y map for selected tile
     int selectedX, selectedY;
+    bool collisions = true;
 };
 

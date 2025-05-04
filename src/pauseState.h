@@ -10,7 +10,7 @@ class pauseState :
 public:
 	pauseState(Psyeb10Engine* engineParam) : tm(50,250,1,5) {
 		this->engine = engineParam;
-		
+		isdisplayed = false;
 	}
 	void enter() override;
 	void foreGroundStrings() override;
@@ -23,6 +23,7 @@ public:
 protected:
 	menuTileManager tm;
 	bouncingLogo* logo;
+	bool isdisplayed;
 
 };
 

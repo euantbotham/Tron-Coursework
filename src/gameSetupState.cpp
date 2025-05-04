@@ -100,10 +100,15 @@ void gameSetupState::enter()
 
 void gameSetupState::foreGroundStrings()
 {
-    engine->drawForegroundString(525, 200, "Game Setup", engine->tronBlue);
+    if (!settings) {
+        // Draw the foreground strings
+        engine->drawForegroundString(525, 200, "Game Setup", engine->tronBlue);
+	}
+    else {
+        // Draw the settings menu
+        engine->drawForegroundString(525, 200, "Settings", engine->tronBlue);
+    }
     tm.drawAllTiles(engine, engine->getForegroundSurface());
-
-
 
 }
 
@@ -131,22 +136,24 @@ void gameSetupState::mouseDown(int iButton, int iX, int iY)
                     engine->setBackgroundSurface(previousSurface);
                 }
                 // New Game
-                engine->setState(new gameState(engine), false, true);
-
+                gameState* game = new gameState(engine);
+                game->setCollisions(collisionsEnabled);
+                engine->setState(game, false, true);
+                
             }
             else if (selectedOption == 5) {
-				//Set previous surface to the current background
+                //Set previous surface to the current background
                 if (previousSurface != nullptr) {
                     engine->setBackgroundSurface(previousSurface);
                 }
                 // Load Game
-				std::cout << "button clicked" << std::endl;
+                std::cout << "button clicked" << std::endl;
                 gameState* game = new gameState(engine);
-				std::cout << "Loading game..." << std::endl;
+                std::cout << "Loading game..." << std::endl;
                 engine->lockBackgroundForDrawing();
                 //game->initObjects();
-				std::cout << "Game objects initialized!" << std::endl;
-                if (game->loadGame()){
+                std::cout << "Game objects initialized!" << std::endl;
+                if (game->loadGame()) {
                     engine->unlockBackgroundForDrawing();
                     engine->setState(game, false, false);
                 }
@@ -155,14 +162,29 @@ void gameSetupState::mouseDown(int iButton, int iX, int iY)
                     delete game;
                     std::cerr << "Error Loading game" << std::endl;
                 }
-          
-                std::cout << "Load Game selected!" << std::endl;
-                // Add load game logic here
+
             }
             else if (selectedOption == 6) {
                 // Settings
+                tm.setMapSize(1, 2);
+
+                tm.setMapValue(0, 0, 10); //Collisions
+                tm.setMapValue(0, 1, 9); //Back
                 std::cout << "Settings selected!" << std::endl;
-                // Add settings logic here
+
+            }
+            else if (selectedOption == 9) {
+                // Back to main menu
+                tm.setMapSize(1, 3);
+                tm.setMapValue(0, 0, 7); // New Game
+                tm.setMapValue(0, 1, 5); // Load Game
+                tm.setMapValue(0, 2, 6); // Settings
+                std::cout << "Back to main menu!" << std::endl;
+            }
+            else if (selectedOption == 10) {
+                // Toggle collisions
+                tm.setCollisions(!collisionsEnabled);
+				collisionsEnabled = !collisionsEnabled;
             }
         }
     }

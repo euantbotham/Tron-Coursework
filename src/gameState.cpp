@@ -52,6 +52,11 @@ void gameState::initObjects()
 	currentEnemies = 1; // Set the number of enemies to 1
 }
 
+
+void gameState::setCollisions(bool collision) {
+	collisionsEnabled = collision;
+}
+
 void gameState::reset()
 {
 	if (mainChar->getLives() <= 0) {
@@ -103,27 +108,37 @@ void gameState::mainLoopPreUpdate() {
 		gameScore += 10;
 	}
 
-	for (int i = 0; i < currentEnemies +1; i++) {
-		for (int j = i + 1; j < currentEnemies + 1; j++) {
-			if (i != j) {
-				Psyeb10Bike* bike1 = dynamic_cast<Psyeb10Bike*>(engine->getDisplayableObject(i));
-				Psyeb10Bike* bike2 = dynamic_cast<Psyeb10Bike*>(engine->getDisplayableObject(j));
-				int bX1, bY1, bX2, bY2;
-				bX1 = bike1->getXCentre() - bike1->getDrawWidth() / 2;
-				bY1 = bike1->getYCentre() - bike1->getDrawHeight() / 2;
-				bX2 = bike2->getXCentre() - bike2->getDrawWidth() / 2;
-				bY2 = bike2->getYCentre() - bike2->getDrawHeight() / 2;
-				
-				if (checkBikeCollision(bike1->getImage(), bX1, bY1, bike1->getDirection(),
-					bike2->getImage(), bX2, bY2, bike2->getDirection())) {
-					std::cout << "Collision detected!" << std::endl;
-					reset();
-					return;
-					// Handle collision (e.g., reduce lives, reset positions, etc.)
+	// Only check if collisions are enabled
+	if (collisionsEnabled) {
+		for (int i = 0; i < currentEnemies + 1; i++) {
+			for (int j = i + 1; j < currentEnemies + 1; j++) {
+				if (i != j) {
+					Psyeb10Bike* bike1 = dynamic_cast<Psyeb10Bike*>(engine->getDisplayableObject(i));
+					Psyeb10Bike* bike2 = dynamic_cast<Psyeb10Bike*>(engine->getDisplayableObject(j));
+					int bX1, bY1, bX2, bY2;
+					bX1 = bike1->getXCentre() - bike1->getDrawWidth() / 2;
+					bY1 = bike1->getYCentre() - bike1->getDrawHeight() / 2;
+					bX2 = bike2->getXCentre() - bike2->getDrawWidth() / 2;
+					bY2 = bike2->getYCentre() - bike2->getDrawHeight() / 2;
+
+					if (checkBikeCollision(bike1->getImage(), bX1, bY1, bike1->getDirection(),
+						bike2->getImage(), bX2, bY2, bike2->getDirection())) {
+						std::cout << "Collision detected!" << std::endl;
+						// If player involved
+						if (bike1->getBikeValue() == 1 || bike2->getBikeValue() == 1) {
+							reset();
+						}
+						else {
+							bike1->virtHandleDeath();
+							bike2->virtHandleDeath();
+						}
+						return;
+						// Handle collision (e.g., reduce lives, reset positions, etc.)
+					}
 				}
 			}
+
 		}
-		
 	}
 }
 
