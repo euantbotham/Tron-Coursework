@@ -7,7 +7,7 @@
 #include "gameState.h"
 #include "Psyeb10Bike.h"
 #include "MainCharacter.h"
-
+#include "mainMenuState.h"
 void pauseState::enter()
 {
 	this->isdisplayed = true;
@@ -37,6 +37,7 @@ void pauseState::foreGroundStrings()
 	tm.setMapValue(0, 1, 2);
 	// Quit game
 	tm.setMapValue(0, 2, 4);
+	tm.setMapValue(0, 3, 3);
 	tm.drawAllTiles(engine, engine->getForegroundSurface());
 }
 
@@ -85,6 +86,10 @@ void pauseState::mouseDown(int iButton, int iX, int iY)
 				gameState* game = dynamic_cast<gameState*>(engine->getState(1));
 				game->saveGame();
 				engine->setExitWithCode(0);
+			}
+			else if (tm.getMapValue(x,y) == 3) {
+				this->isdisplayed = false;
+				engine->setState(new mainMenuState(engine), false, true);
 			}
 			else if (tm.getMapValue(x, y) == 4)
 			{

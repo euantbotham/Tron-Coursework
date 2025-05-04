@@ -325,26 +325,29 @@ bool gameState::loadGame() {
 	while (std::getline(statsFile, line)) {
 		if (line.find("# Main Character") != std::string::npos) {
 			// Read main character stats
-			int x, y, speedX, speedY, lives, lastX, lastY;
+			int x, y, speedX, speedY, lives, lastX, lastY, startX, startY;
 			statsFile >> lineKey >> x >> y;
 			statsFile >> lineKey >> speedX >> speedY;
 			statsFile >> lineKey >> lives;
 			statsFile >> lineKey >> lastX >> lastY;
+			statsFile >> lineKey >> startX >> startY;
 			// Dynamic allocation due to number of objects
 			this->mainChar = new MainCharacter(engine);
 			mainChar->setPosition(x - mainChar->getDrawWidth()/2, y - mainChar->getDrawHeight()/2);
 			mainChar->setSpeed(speedX, speedY);
 			mainChar->setLives(lives);
 			mainChar->setLastTiles(lastX, lastY);
+			mainChar->setStartPos(startX, startY);
 			mainChar->setPaused(false);
 			engine->appendObjectToArray(mainChar);
 		}
 		else if (line.find("# Enemy") != std::string::npos) {
 			// Read enemy stats
-			int x, y, speedX, speedY, lastX, lastY, bikeVal;
+			int x, y, speedX, speedY, lastX, lastY, bikeVal, startX, startY;
 			statsFile >> lineKey >> x >> y;
 			statsFile >> lineKey >> speedX >> speedY;
 			statsFile >> lineKey >> lastX >> lastY;
+			statsFile >> lineKey >> startX >> startY;
 			statsFile >> lineKey >> bikeVal;
 
 			Psyeb10Enemy* enemy = new Psyeb10Enemy(engine, x, y, bikeVal);
@@ -352,6 +355,7 @@ bool gameState::loadGame() {
 			enemy->setPosition(x - enemy->getDrawWidth() / 2, y - enemy->getDrawHeight() / 2);
 			enemy->setSpeed(speedX, speedY);
 			enemy->setLastTiles(lastX, lastY);
+			enemy->setStartPos(startX, startY);
 			enemyVec.push_back(enemy);
 			engine->appendObjectToArray(enemy);
 			enemy->setPaused(false);
@@ -425,6 +429,7 @@ void gameState::saveGame()
 		statsFile << "Lives: " << mainChar->getLives() << "\n";
 		// Can't have spaces due to how the file is read
 		statsFile << "LastTiles: " << mainChar->getLastTileX() << " " << mainChar->getLastTileY() << "\n";
+		statsFile << "StartPos: " << mainChar->getStartPosX() << " " << mainChar->getStartPosY() << "\n";
 	}
 
 	// Save all enemy stats
@@ -434,6 +439,7 @@ void gameState::saveGame()
 		statsFile << "Speed: " << enemy->getSpeedX() << " " << enemy->getSpeedY() << "\n";
 		// Can't have spaces due to how the file is read
 		statsFile << "LastTiles: " << enemy->getLastTileX() << " " << enemy->getLastTileY() << "\n";
+		statsFile << "StartPos: " << enemy->getStartPosX() << " " << enemy->getStartPosY() << "\n";
 		statsFile << "bikeVal: " << enemy->getBikeValue() << "\n";
 	}
 

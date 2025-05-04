@@ -30,6 +30,9 @@ public:
     void resetPos();
 	SimpleImage getImage() const;
 	int getDirection() ;
+    void setStartPos(int x, int y);
+    int getStartPosX();
+    int getStartPosY();
 protected:
     int speedX;
     int speedY;

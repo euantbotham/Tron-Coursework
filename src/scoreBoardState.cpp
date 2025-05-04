@@ -14,7 +14,7 @@ scoreBoardState::scoreBoardState(Psyeb10Engine* engine, int score)
 	this->playerscore = score;
 	scoreBoardEntries.resize(10); // Placeholder for 10 entries
 	for (int i = 0; i < 10; ++i) {
-		scoreBoardEntries[i] = "Player";
+		scoreBoardEntries[i] = "";
 	}
 
 	scoreBoardScores.resize(10); // Placeholder for 10 scores
@@ -103,7 +103,8 @@ void scoreBoardState::foreGroundStrings()
         }
         else {
             // Use the value from `scoreBoardEntries` for other entries
-            engine->drawForegroundString(startX + 100, startY + 50 + i * entryHeight, scoreBoardEntries[i].c_str(), colour);
+            if (scoreBoardEntries[i].length()>0)
+                engine->drawForegroundString(startX + 100, startY + 50 + i * entryHeight, scoreBoardEntries[i].c_str(), colour);
         }
         // Player score (formatted to 4 characters with leading zeros)
         char formattedScore[5];
@@ -285,16 +286,15 @@ void scoreBoardState::loadScore()
 
 void scoreBoardState::saveScore()
 {
-	std::ofstream scoreFile("scores.txt", std::ios::app); // Open in append mode
+	std::ofstream scoreFile("scores.txt"); // Open in write
 	if (!scoreFile.is_open()) {
 		std::cerr << "Error: Could not open scores.txt for writing!" << std::endl;
 		return;
 	}
 	
     for (int i = 0; i < 10; ++i) {
-        if (inputName == scoreBoardEntries[i]) {
+        if (scoreBoardEntries[i].length() > 0)
             scoreFile << scoreBoardEntries[i] << " " << scoreBoardScores[i] << std::endl;
-        }
     }
 
     scoreFile.close(); // Close the file after writing

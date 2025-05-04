@@ -108,6 +108,8 @@ int Psyeb10Bike::getSpeedY() {
 void Psyeb10Bike::setSpeed(int x, int y) {
 	this->speedX = x;
 	this->speedY = y;
+	// Update Image
+	this->changeDirection(this->getDirection());
 }
 
 int Psyeb10Bike::getLastTileX() const {
@@ -185,4 +187,17 @@ int Psyeb10Bike::getDirection()  {
 		return 1;
 	else if (getSpeedX() == -1)
 		return 3;
+}
+
+void Psyeb10Bike::setStartPos(int x, int y) {
+	this->startposX = x;
+	this->startPosY = y;
+}
+
+int Psyeb10Bike::getStartPosX() {
+	return this->startposX;
+}
+
+int Psyeb10Bike::getStartPosY() {
+	return this->startPosY;
 }

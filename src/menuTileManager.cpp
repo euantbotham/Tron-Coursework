@@ -76,7 +76,7 @@ void menuTileManager::virtDrawTileAt(
         text = "Save and Quit";
         break;
     case 3:
-        text = "Save and Main Menu";
+        text = "Main Menu";
         break;
     case 4:
         text = "Quit Game";
