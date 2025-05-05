@@ -54,4 +54,8 @@ ImagePixelMappingRotate90& ImagePixelMappingRotate90::operator<<(Direction newDi
 	return *this;
 }
 
+void ImagePixelMappingRotate90::setDirection(Direction d)
+{
+	direction = d;
+}
 
