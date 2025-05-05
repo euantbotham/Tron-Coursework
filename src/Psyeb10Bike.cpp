@@ -80,11 +80,17 @@ void Psyeb10Bike::virtDoUpdate(int iCurrentTime)
 				virtPostMoveLogic();
 			}
 			else if (value != 0 && !(mapX == lastTileX && mapY == lastTileY)) {
+				engine->loadAndPlayMusic("bikedeath.wav");
 				virtHandleDeath();
 				//Extremley Important, without this game crashes
-
 				return;
 			}
+		}
+		else {
+			// If the bike is out of bounds, handle the death state
+			engine->loadAndPlayMusic("bikedeath.wav");
+			virtHandleDeath();
+			return;
 		}
 
 		m_iCurrentScreenX += speedX;
@@ -218,13 +224,18 @@ int Psyeb10Bike::getDirection()  {
 		else if (getSpeedY() == 1)
 			return 2;
 	}
-	else if (getSpeedX() == 1)
+	else if (getSpeedX() == 1) {
 		return 1;
-	else if (getSpeedX() == -1)
+	}
+		
+	else if (getSpeedX() == -1) {
 		return 3;
-	else
-		//default to up
-		return 0;
+	}	
+	
+	//default to up
+	return 0;
+	
+		
 }
 
 void Psyeb10Bike::setStartPos(int x, int y) {

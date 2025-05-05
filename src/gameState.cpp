@@ -133,7 +133,6 @@ void gameState::mainLoopPreUpdate() {
 							bike2->virtHandleDeath();
 						}
 						return;
-						// Handle collision (e.g., reduce lives, reset positions, etc.)
 					}
 				}
 			}

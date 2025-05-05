@@ -3,6 +3,9 @@
 #include "SimpleImage.h"
 #include "ImagePixelMapping.h"
 #include <iostream>
+class drawingSurface;
+class ImagePixelMapping;
+
 class ImagePixelMappingRotate90 :
     public ImagePixelMapping
 {

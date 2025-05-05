@@ -6,7 +6,7 @@
 #include "ImageManager.h"
 #include "ImagePixelMappingRotate90.h"
 class Psyeb10Engine;
-
+class imagePixelMappingRotate90;
 class Psyeb10Bike:
     public DisplayableObject
 {
