@@ -4,7 +4,6 @@
 #include "Psyeb10States.h"
 #include "Psyeb10TileManager.h"
 
-
 class Psyeb10States;
 
 class Psyeb10Engine :
@@ -33,16 +32,19 @@ public:
     void notifyState(int code);
     void virtMouseWheel(int x, int y, int which, int timestamp) override;
     int virtInitialise()override;
-   // Music class functions
+   
+    // Music class functions
     void loadAndPlayMusic(const char* filename);
     void cleanupAudio();
     void pauseMusic();
     void resumeMusic();
+
 protected:
     Psyeb10States* currentState;
     // Used to store a second state if needed
     Psyeb10States* secondState;
 private:
+    //Music management
     SDL_AudioSpec wavSpec;
     Uint32 wavLength;
     Uint8* wavBuffer;

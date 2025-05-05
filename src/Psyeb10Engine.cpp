@@ -48,7 +48,6 @@ int Psyeb10Engine::virtInitialise() {
 		std::cerr << "Failed to initialize SDL_image: " << IMG_GetError() << std::endl;
 		return -1; // Return an error code
 	}
-	std::cout << "here" << std::endl;
 	// Load the PNG icon
 	SDL_Surface* iconSurface = IMG_Load("disk1.png");
 	if (iconSurface != nullptr) {
@@ -189,27 +188,30 @@ void Psyeb10Engine::loadAndPlayMusic(const char* filename) {
 			return;
 		}
 	}
-	
-	
-	
+
 	// Load the WAV file
 	if (SDL_LoadWAV(filename, &wavSpec, &wavBuffer, &wavLength) == nullptr) {
 		std::cerr << "Failed to load audio file: " << SDL_GetError() << std::endl;
 		return;
 	}
 
-	// Open the audio device
-	audioDevice = SDL_OpenAudioDevice(nullptr, 0, &wavSpec, nullptr, 0);
+	// Open the audio device if not already opened
 	if (audioDevice == 0) {
-		std::cerr << "Failed to open audio device: " << SDL_GetError() << std::endl;
-		SDL_FreeWAV(wavBuffer);
-		return;
+		audioDevice = SDL_OpenAudioDevice(nullptr, 0, &wavSpec, nullptr, 0);
+		if (audioDevice == 0) {
+			std::cerr << "Failed to open audio device: " << SDL_GetError() << std::endl;
+			SDL_FreeWAV(wavBuffer);
+			return;
+		}
+	}
+	else {
+		// Clear the existing audio queue
+		SDL_ClearQueuedAudio(audioDevice);
 	}
 
 	// Queue the audio data
 	if (SDL_QueueAudio(audioDevice, wavBuffer, wavLength) < 0) {
 		std::cerr << "Failed to queue audio: " << SDL_GetError() << std::endl;
-		SDL_CloseAudioDevice(audioDevice);
 		SDL_FreeWAV(wavBuffer);
 		return;
 	}
@@ -219,11 +221,14 @@ void Psyeb10Engine::loadAndPlayMusic(const char* filename) {
 	audioLoaded = true;
 }
 
+
 void Psyeb10Engine::cleanupAudio() {
 	if (audioLoaded) {
 		SDL_PauseAudioDevice(audioDevice, 1); // Pause the audio device
-		SDL_CloseAudioDevice(audioDevice);
-		SDL_FreeWAV(wavBuffer);
+		SDL_CloseAudioDevice(audioDevice);    // Close the audio device
+		SDL_FreeWAV(wavBuffer);               // Free the WAV buffer
+		audioDevice = 0;                      // Reset the audio device ID
+		wavBuffer = nullptr;                  // Reset the buffer pointer
 		audioLoaded = false;
 	}
 }
@@ -245,4 +250,5 @@ void Psyeb10Engine::resumeMusic() {
 Psyeb10Engine::~Psyeb10Engine() {
 	cleanupAudio();
 	IMG_Quit(); // Clean up SDL_image
+	SDL_QuitSubSystem(SDL_INIT_AUDIO);
 }

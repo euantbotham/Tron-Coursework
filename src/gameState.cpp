@@ -216,7 +216,6 @@ int gameState::getGameScore()const {
 
 void gameState::recieveUpdate(int code) {
 	// Destroy Bike that has been deleted and remove from vectors
-	Psyeb10Enemy* toDelete = nullptr;
 	if (currentEnemies > 0) {
 		for (Psyeb10Enemy* enemy : enemyVec) {
 			if (enemy->getBikeValue() == code) {
@@ -227,9 +226,8 @@ void gameState::recieveUpdate(int code) {
 				enemy->setPaused(true);
 
 
-				//enemyVec.erase(std::remove(enemyVec.begin(), enemyVec.end(), enemy), enemyVec.end());
-				//delete enemy;
-				toDelete = enemy;
+				enemyVec.erase(std::remove(enemyVec.begin(), enemyVec.end(), enemy), enemyVec.end());
+				delete enemy;
 
 				currentEnemies--;
 				cleanTileManager(code);
@@ -244,11 +242,6 @@ void gameState::recieveUpdate(int code) {
 				break;
 			}
 
-		}
-		if (toDelete != nullptr) {
-			// Erase the exact pointer from the vector
-			enemyVec.erase(std::remove(enemyVec.begin(), enemyVec.end(), toDelete), enemyVec.end());
-			delete toDelete;  // Free memory after erase
 		}
 	}
 	if (currentEnemies == 0) {
@@ -277,6 +270,7 @@ void gameState::recieveUpdate(int code) {
 			return;
 		}
 		currentLevel++;
+		engine->loadAndPlayMusic("levelUp.wav");
 	}
 }
 

@@ -136,6 +136,7 @@ void gameSetupState::mouseDown(int iButton, int iX, int iY)
                     engine->setBackgroundSurface(previousSurface);
                 }
                 // New Game
+                engine->pauseMusic();
                 gameState* game = new gameState(engine);
                 game->setCollisions(collisionsEnabled);
                 engine->setState(game, false, true);
@@ -154,6 +155,8 @@ void gameSetupState::mouseDown(int iButton, int iX, int iY)
                 //game->initObjects();
                 std::cout << "Game objects initialized!" << std::endl;
                 if (game->loadGame()) {
+                    engine->pauseMusic();
+                    game->setCollisions(collisionsEnabled);
                     engine->unlockBackgroundForDrawing();
                     engine->setState(game, false, false);
                 }
