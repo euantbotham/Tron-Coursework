@@ -15,7 +15,12 @@ MainCharacter::MainCharacter(BaseEngine* pEngine) : Psyeb10Bike(650, 630, pEngin
 		SimpleImage image = ImageManager::loadImage(imageName, false);
 		image.setTransparencyColour(0); // Set transparency color if needed
 		animationImages.push_back(image); // Add the image to the vector
-		
+	}
+	for (int i = 1; i <= 3; ++i) {
+		std::string imageName = "mainCharDeath" + std::to_string(i) + ".png";
+		SimpleImage image = ImageManager::loadImage(imageName, false);
+		image.setTransparencyColour(0); // Set transparency color if needed
+		deathAnimationFrames.push_back(image); // Add the image to the vector
 	}
 }
 
@@ -28,6 +33,9 @@ MainCharacter::MainCharacter(BaseEngine* pEngine) : Psyeb10Bike(650, 630, pEngin
 
 void MainCharacter::virtKeyDown(int iKeyCode)
 {
+	if (isDying) {
+		return; // Ignore key presses if the character is dying
+	}
 	switch (iKeyCode) {
 	case SDLK_w:
 		if (getDirection() != 2)
@@ -68,6 +76,19 @@ void MainCharacter::virtPostMoveLogic()
 
 void MainCharacter::virtHandleDeath()
 {
-	lives--;
-	engine->resetGame();
+	if (!isDead) {
+		isDead = true; // Set the dead flag to true
+		isDying = true;
+		deathCurrentFrame = 0;
+		deathLastFrameTime = getEngine()->getModifiedTime();
+		speedX = 0;
+		speedY = 0;
+	}
+	//Death animation finished
+	if (!isDying) {
+		lives--;
+		isDead = false;
+		engine->resetGame();
+	}
+	
 }

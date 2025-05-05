@@ -24,6 +24,11 @@ Psyeb10Bike::Psyeb10Bike(int xStart, int yStart,
 
 	currentFrame = 0;
 	lastFrameTime = 0;
+
+	deathCurrentFrame = 0;
+	deathLastFrameTime = 0;
+	isDying = false;
+	isDead = false;
 }
 
 
@@ -34,40 +39,70 @@ void Psyeb10Bike::virtDoUpdate(int iCurrentTime)
 	{
 		return;
 	}
+	if (isDead) {
+		if (isDying) {
+			// Update the death animation
+			if (iCurrentTime - deathLastFrameTime > 150) {
+				deathCurrentFrame++;
+				deathLastFrameTime = iCurrentTime;
 
-	// TODO update code so no longer needs to be a friend class
-	if (engine->getTileManager()->isValidTilePosition(getXCentre(), getYCentre()))
-	{
-		int mapX = engine->getTileManager()->getMapXForScreenX(getXCentre()); // Which column?
-		int mapY = engine->getTileManager()->getMapYForScreenY(getYCentre()); // Which row?
-		int value = engine->getTileManager()->getMapValue(mapX, mapY); // Current value?
-		// If square has not been painted on
-		if (value == 0 && !(mapX == lastTileX && mapY == lastTileY))
-		{
-			// Update this so it can be fixed later
-			engine->getTileManager()->setAndRedrawMapValueAt(mapX, mapY, this->bikeValue, engine, engine->getBackgroundSurface());
-			lastTileX = mapX;
-			lastTileY = mapY;
-			virtPostMoveLogic();
-		}
-		else if (value != 0 && !(mapX == lastTileX && mapY == lastTileY)) {
-			virtHandleDeath();
-			//Extremley Important, without this game crashes
+				if (deathCurrentFrame >= deathAnimationFrames.size()) {
+					// Death animation finished
+					isDying = false;
 
+				}
+			}
+			this->redrawDisplay();
 			return;
 		}
+		else {
+			// Handle the death state
+			// go to subclass logic after isdying has ended
+			virtHandleDeath();
+			return;
+		}
+
 	}
 
-	m_iCurrentScreenX += speedX;
-	m_iCurrentScreenY += speedY;
 
-	// Ensure that the objects get redrawn on the display
-	this->redrawDisplay();
+		if (engine->getTileManager()->isValidTilePosition(getXCentre(), getYCentre()))
+		{
+			int mapX = engine->getTileManager()->getMapXForScreenX(getXCentre()); // Which column?
+			int mapY = engine->getTileManager()->getMapYForScreenY(getYCentre()); // Which row?
+			int value = engine->getTileManager()->getMapValue(mapX, mapY); // Current value?
+			// If square has not been painted on
+			if (value == 0 && !(mapX == lastTileX && mapY == lastTileY))
+			{
+				// Update this so it can be fixed later
+				engine->getTileManager()->setAndRedrawMapValueAt(mapX, mapY, this->bikeValue, engine, engine->getBackgroundSurface());
+				lastTileX = mapX;
+				lastTileY = mapY;
+				virtPostMoveLogic();
+			}
+			else if (value != 0 && !(mapX == lastTileX && mapY == lastTileY)) {
+				virtHandleDeath();
+				//Extremley Important, without this game crashes
 
-}
+				return;
+			}
+		}
+
+		m_iCurrentScreenX += speedX;
+		m_iCurrentScreenY += speedY;
+
+		// Ensure that the objects get redrawn on the display
+		this->redrawDisplay();
+
+	}
 
 void Psyeb10Bike::virtDraw()
 {
+	if (isDying) {
+		// Draw the current frame of the death animation
+		deathAnimationFrames[deathCurrentFrame].renderImageApplyingMapping(getEngine(), getEngine()->getForegroundSurface(), m_iCurrentScreenX - 20,
+			m_iCurrentScreenY - 20, animationImages[currentFrame].getWidth(), animationImages[currentFrame].getHeight(), &rotation);
+		return;
+	}
 	// cycle through the images in the vector
 	if (engine->getModifiedTime() - lastFrameTime > 150)
 	{

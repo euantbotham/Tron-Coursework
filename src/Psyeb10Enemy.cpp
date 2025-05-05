@@ -18,21 +18,41 @@ Psyeb10Enemy::Psyeb10Enemy(BaseEngine* pEngine, int xPos, int yPos, int gridVal)
         image.setTransparencyColour(0); // Set transparency color if needed
         animationImages.push_back(image); // Add the image to the vector
         strategicCoolDown = 0;
-
     }
+	for (int i = 1; i <= 3; ++i) {
+		std::string imageName = "enemyDeath" + std::to_string(i) + ".png";
+		SimpleImage image = ImageManager::loadImage(imageName, true);
+		image.setTransparencyColour(0); // Set transparency color if needed
+		deathAnimationFrames.push_back(image); // Add the image to the vector
+	}
 }
 
 
 
 void Psyeb10Enemy::virtHandleDeath() 
 {
-	//Tell the State that the enemy has died
-	engine->notifyState(bikeValue); 
+
+    if (!isDead) {
+        isDead = true; // Set the dead flag to true
+        isDying = true;
+        deathCurrentFrame = 0;
+        deathLastFrameTime = getEngine()->getModifiedTime();
+        speedX = 0;
+        speedY = 0;
+    }
+    if (!isDying) {
+        //Tell the State that the enemy has died
+        engine->notifyState(bikeValue);
+    }
 }
 
 
 void Psyeb10Enemy::virtPostMoveLogic()
 {
+
+	if (isDying) {
+		return; // Ignore movement if the enemy is dying
+	}
 
     // Get player position
     DisplayableObject* pPlayerObject = engine->getDisplayableObject(0); 

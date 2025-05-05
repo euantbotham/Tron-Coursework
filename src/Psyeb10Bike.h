@@ -58,6 +58,13 @@ protected:
     std::vector<SimpleImage> animationImages;
     int lastFrameTime;
     int currentFrame;
+
+    std::vector<SimpleImage> deathAnimationFrames; // Frames for the death animation
+    int deathCurrentFrame;                         // Current frame of the death animation
+    int deathLastFrameTime;                        // Last time the frame was updated
+    bool isDying;                                  // Flag to indicate if the bike is in the death animation state
+	bool isDead;                                  // Flag to indicate if the bike is dead
+
 };
 
 
